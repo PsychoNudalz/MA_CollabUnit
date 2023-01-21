@@ -12,11 +12,14 @@ public class LauncherScript : MonoBehaviour
 
     [SerializeField]
     private float speed = 200;
+    
+    [SerializeField]
+    float fireDelay = 1f;
 
 
     private void Start()
     {
-        Fire();
+        StartCoroutine(FireDelay());
     }
 
     [ContextMenu("Fire")]
@@ -25,5 +28,11 @@ public class LauncherScript : MonoBehaviour
         Rigidbody rb = GameObject.Instantiate(launchGO,transform.position,Quaternion.identity).GetComponent<Rigidbody>();
         rb.velocity = (transform.forward * speed);
         Destroy(rb.gameObject, 10f);
+    }
+
+    IEnumerator FireDelay()
+    {
+        yield return new WaitForSeconds(fireDelay);
+        Fire();
     }
 }

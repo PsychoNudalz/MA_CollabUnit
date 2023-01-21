@@ -34,6 +34,21 @@ public struct PartDistance
         this.breakForceLimit = breakForceLimit;
         this.dir = dir;
     }
+
+    public override bool Equals(object obj)
+    {
+        if(obj is  BreakablePart other)
+        {
+            other.Equals(part);
+            return true;
+        }
+        return base.Equals(obj);
+    }
+
+    public override int GetHashCode()
+    {
+        return base.GetHashCode();
+    }
 }
 [Serializable]
 public enum BreakableState
@@ -49,7 +64,7 @@ public class BreakablePart : MonoBehaviour
     private Rigidbody selfRB;
 
     [SerializeField]
-    private PartDistance[] connectedParts;
+    private List<PartDistance> connectedParts;
 
     [SerializeField]
     private BreakableState breakableState = BreakableState.Hold;
@@ -61,18 +76,24 @@ public class BreakablePart : MonoBehaviour
     private float forceTransfer = .5f;
     [SerializeField]
     private float affectiveRange = 10f;
-
+    [SerializeField]
+    private LayerMask castLayer;
 
 
 
     [Header("Debug")]
-
+    [SerializeField]
+    private bool isDebug = true;
 
     [SerializeField]
-    private LayerMask castLayer;
+    private Renderer renderer;
+
+
 
     [SerializeField]
     private Transform parent;
+
+    private Material rendererMaterial;
 
     public float BreakingForce
     {
@@ -107,13 +128,26 @@ public class BreakablePart : MonoBehaviour
 
     public BreakableState BreakableState => breakableState;
 
+
+    private void Awake()
+    {
+        if (isDebug)
+        {
+            rendererMaterial = renderer?.material;
+
+        }
+    }
+
     private void OnDrawGizmosSelected()
     {
-        if (connectedParts?.Length > 0)
+        if (breakableState == BreakableState.Hold)
         {
-            foreach (PartDistance connectedPart in connectedParts)
+            if (connectedParts?.Count > 0)
             {
-                Gizmos.DrawLine(transform.position, connectedPart.Part.transform.position);
+                foreach (PartDistance connectedPart in connectedParts)
+                {
+                    Gizmos.DrawLine(transform.position, connectedPart.Part.transform.position);
+                }
             }
         }
     }
@@ -124,8 +158,10 @@ public class BreakablePart : MonoBehaviour
         {
             // if (!RBInConnected(rb))
             // {
-                Collision(rb);
+            //     Collision(rb);
             // }
+            Collision(rb);
+
         }
     }
 
@@ -156,7 +192,23 @@ public class BreakablePart : MonoBehaviour
             selfRB = GetComponent<Rigidbody>();
         }
 
-        connectedParts = new PartDistance[]{};
+        if (isDebug)
+        {
+            if (!renderer)
+            {
+                renderer = GetComponent<Renderer>();
+            }
+
+        }
+
+        // var tempParts = InitialiseClosest();
+        //
+    }
+
+    public List<PartDistance> InitialiseClosest()
+    {
+        connectedParts = new List<PartDistance>();
+
         RaycastHit[] hits = Physics.SphereCastAll(transform.position, affectiveRange, transform.up, castLayer);
         List<PartDistance> tempParts = new List<PartDistance>();
         foreach (RaycastHit currentHit in hits)
@@ -164,14 +216,19 @@ public class BreakablePart : MonoBehaviour
             BreakablePart current;
             if (currentHit.collider.TryGetComponent(out current))
             {
-                if (current.parent.Equals(parent)&&!current.Equals(this))
+                if (current.parent.Equals(parent) && !current.Equals(this))
                 {
-                    tempParts.Add(CalculatePartDistance(current));
+                    PartDistance item = CalculatePartDistance(current);
+                    if (!tempParts.Contains(item))
+                    {
+                        tempParts.Add(item);
+                    }
                 }
             }
         }
+        connectedParts = tempParts;
 
-        connectedParts = tempParts.ToArray();
+        return tempParts;
     }
 
     public PartDistance CalculatePartDistance(BreakablePart bp)
@@ -182,26 +239,58 @@ public class BreakablePart : MonoBehaviour
         return new PartDistance(bp, d, f,(bp.transform.position-transform.position).normalized);
     }
 
-    public void Break_Recursive(Vector3 force,Vector3 originalForce)
+    
+    /// <summary>
+    /// Recurssively break
+    ///
+    /// No fking idea what the break will call back to the previous broken piece and cause a loop
+    /// </summary>
+    /// <param name="force"></param>
+    /// <param name="originalForce"></param>
+    /// <param name="???"></param>
+    public void Break_Recursive(Vector3 force,Vector3 originalForce, List<BreakablePart> breakHistory = null)
     {
+        if (breakableState == BreakableState.Broke)
+        {
+            return;
+        }
+        if (breakHistory == null)
+        {
+            breakHistory = new List<BreakablePart>();
+        }
+
+        if (breakHistory.Contains(this))
+        {
+            Debug.LogWarning($"Loop back error: {this}");
+            return;
+        }
+        
+        breakHistory.Add(this);
+        
         Break_Single(force,originalForce);
+
         force *= forceTransfer;
         // print($"{this} Force: {force}");
         Vector3 newForce = force;
         foreach (PartDistance connectedPart in connectedParts)
         {
             float recursiveThreshold = 2f;
-            newForce = (connectedPart.Dir + force).normalized * force.magnitude;
-            if (force.magnitude > connectedPart.BreakForceLimit/(1-forceTransfer))
+            float LerpForce = .8f;
+            newForce = Vector3.Lerp(connectedPart.Dir, force.normalized,LerpForce) * force.magnitude*Mathf.Abs(Vector3.Dot(connectedPart.Dir, force.normalized));
+            if (force.magnitude > connectedPart.BreakForceLimit)
             {
-                
-                connectedPart.Part.Break_Recursive(newForce,originalForce);
-            }else if(force.magnitude > connectedPart.BreakForceLimit)
-            {
-                connectedPart.Part.Break_Single(newForce,originalForce);
+                // print($"{this} recursive to: {connectedPart.Part}");
+                connectedPart.Part.Break_Recursive(newForce,originalForce,breakHistory);
             }
+            // else if(force.magnitude > connectedPart.BreakForceLimit)
+            // {
+            //     connectedPart.Part.Break_Single(newForce,originalForce);
+            // }
         }
         
+        ApplyForce(newForce);
+
+        print(string.Join(", ",breakHistory));
     }
 
     public void Break_Single(Vector3 force,Vector3 originalForce)
@@ -210,16 +299,37 @@ public class BreakablePart : MonoBehaviour
         {
             return;
         }
+        print($"Breaking with {force.magnitude}");
+
+        foreach (PartDistance connectedPart in connectedParts)
+        {
+            connectedPart.Part.RemovePart(this);
+        }
 
         breakableState = BreakableState.Broke;
         selfRB.isKinematic = false;
         selfRB.useGravity = true;
-        selfRB.AddForce(force.normalized*originalForce.magnitude*selfRB.mass);
+
+        if (isDebug)
+        {
+            rendererMaterial.color = Color.red;
+        }
+    }
+
+    private void ApplyForce(Vector3 f)
+    {
+        float multiplier = 1f;
+        Vector3 addForce = f * selfRB.mass * multiplier * forceTransfer;
+        if (!float.IsNaN(addForce.x))
+        {
+            selfRB.AddForce(addForce);
+        }
     }
 
     public void Collision(Rigidbody rb)
-    
+
     {
+        Vector3 originalSpeed = rb.velocity;
         if (breakableState == BreakableState.Broke)
         {
             return;
@@ -233,6 +343,26 @@ public class BreakablePart : MonoBehaviour
         if (force > breakingForce)
         {
             Break_Recursive(rb.velocity.normalized * force,rb.velocity.normalized * force);
+        }
+        
+        //have original object to keep flying
+        if (!RBInConnected(rb))
+        {
+            rb.velocity = originalSpeed * (1 - forceTransfer);
+        }
+    }
+
+    public void RemovePart(BreakablePart part)
+    {
+        for (int i = 0; i < connectedParts.Count; i++)
+        {
+            PartDistance current = connectedParts[i];
+            if (current.Part.Equals(part))
+            {
+                print($"{this} remove connection: {part}");
+                connectedParts.RemoveAt(i);
+                return;
+            }
         }
     }
 }
