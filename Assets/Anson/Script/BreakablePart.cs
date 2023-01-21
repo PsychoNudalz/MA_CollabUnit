@@ -16,17 +16,23 @@ public struct PartDistance
     [SerializeField]
     private float breakForceLimit;
 
+    [SerializeField]
+    private Vector3 dir;
+
     public BreakablePart Part => part;
 
     public float Distance => distance;
 
     public float BreakForceLimit => breakForceLimit;
 
-    public PartDistance(BreakablePart part, float distance, float breakForceLimit)
+    public Vector3 Dir => dir;
+
+    public PartDistance(BreakablePart part, float distance, float breakForceLimit, Vector3 dir)
     {
         this.part = part;
         this.distance = distance;
         this.breakForceLimit = breakForceLimit;
+        this.dir = dir;
     }
 }
 [Serializable]
@@ -45,24 +51,28 @@ public class BreakablePart : MonoBehaviour
     [SerializeField]
     private PartDistance[] connectedParts;
 
+    [SerializeField]
+    private BreakableState breakableState = BreakableState.Hold;
     [Header("Stats")]
     [SerializeField]
     private float breakingForce;
     [SerializeField]
     [Range(0f,1f)]
     private float forceTransfer = .5f;
-
     [SerializeField]
-    private BreakableState breakableState = BreakableState.Hold;
+    private float affectiveRange = 10f;
+
+
 
 
     [Header("Debug")]
-    [SerializeField]
-    private float affectiveRange = 10f;
+
 
     [SerializeField]
     private LayerMask castLayer;
 
+    [SerializeField]
+    private Transform parent;
 
     public float BreakingForce
     {
@@ -88,6 +98,12 @@ public class BreakablePart : MonoBehaviour
         set => forceTransfer = value;
     }
 
+
+    public Transform Parent
+    {
+        get => parent;
+        set => parent = value;
+    }
 
     public BreakableState BreakableState => breakableState;
 
@@ -126,6 +142,12 @@ public class BreakablePart : MonoBehaviour
         return false;
     }
 
+    public void Initialise(Transform p)
+    {
+        parent = p;
+        Initialise();
+    }
+
     [ContextMenu("Initialise")]
     public void Initialise()
     {
@@ -142,7 +164,7 @@ public class BreakablePart : MonoBehaviour
             BreakablePart current;
             if (currentHit.collider.TryGetComponent(out current))
             {
-                if (!current.Equals(this))
+                if (current.parent.Equals(parent)&&!current.Equals(this))
                 {
                     tempParts.Add(CalculatePartDistance(current));
                 }
@@ -157,7 +179,7 @@ public class BreakablePart : MonoBehaviour
         float d = Mathf.Abs((bp.transform.position - transform.position).magnitude);
         // float f = Mathf.Lerp(breakingForce, bp.breakingForce, d / affectiveRange);
         float f = bp.breakingForce;
-        return new PartDistance(bp, d, f);
+        return new PartDistance(bp, d, f,(bp.transform.position-transform.position).normalized);
     }
 
     public void Break_Recursive(Vector3 force,Vector3 originalForce)
@@ -165,15 +187,18 @@ public class BreakablePart : MonoBehaviour
         Break_Single(force,originalForce);
         force *= forceTransfer;
         // print($"{this} Force: {force}");
+        Vector3 newForce = force;
         foreach (PartDistance connectedPart in connectedParts)
         {
             float recursiveThreshold = 2f;
+            newForce = (connectedPart.Dir + force).normalized * force.magnitude;
             if (force.magnitude > connectedPart.BreakForceLimit/(1-forceTransfer))
             {
-                connectedPart.Part.Break_Recursive(force,originalForce);
+                
+                connectedPart.Part.Break_Recursive(newForce,originalForce);
             }else if(force.magnitude > connectedPart.BreakForceLimit)
             {
-                connectedPart.Part.Break_Single(force,originalForce);
+                connectedPart.Part.Break_Single(newForce,originalForce);
             }
         }
         
@@ -189,7 +214,7 @@ public class BreakablePart : MonoBehaviour
         breakableState = BreakableState.Broke;
         selfRB.isKinematic = false;
         selfRB.useGravity = true;
-        selfRB.AddForce(originalForce*selfRB.mass*10f);
+        selfRB.AddForce(force.normalized*originalForce.magnitude*selfRB.mass);
     }
 
     public void Collision(Rigidbody rb)

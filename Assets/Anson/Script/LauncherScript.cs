@@ -11,7 +11,7 @@ public class LauncherScript : MonoBehaviour
     private GameObject launchGO;
 
     [SerializeField]
-    private float force = 200;
+    private float speed = 200;
 
 
     private void Start()
@@ -23,7 +23,7 @@ public class LauncherScript : MonoBehaviour
     public void Fire()
     {
         Rigidbody rb = GameObject.Instantiate(launchGO,transform.position,Quaternion.identity).GetComponent<Rigidbody>();
-        rb.AddForce(transform.forward * force * rb.mass);
+        rb.velocity = (transform.forward * speed);
         Destroy(rb.gameObject, 10f);
     }
 }

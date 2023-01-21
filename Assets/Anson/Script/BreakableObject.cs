@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class BreakableBits : MonoBehaviour
+public class BreakableObject : MonoBehaviour
 {
 
     [SerializeField]
@@ -72,7 +72,7 @@ public class BreakableBits : MonoBehaviour
         {
             if (c.TryGetComponent(out bp))
             {
-                bp.Initialise();
+                bp.Initialise(transform);
             }
         }
     }
