@@ -32,6 +32,9 @@ public class BreakableObject : MonoBehaviour
     [SerializeField]
     [Range(0f,1f)]
     private float forceTransfer = .5f;
+    [SerializeField]
+    private AnimationCurve transferToDot;
+
 
     [SerializeField]
     private LayerMask bpLayer;
@@ -46,10 +49,10 @@ public class BreakableObject : MonoBehaviour
 
     private void Awake()
     {
-        foreach (BreakablePart breakablePart in breakableParts)
-        {
-            SetBP(breakablePart);
-        }
+        // foreach (BreakablePart breakablePart in breakableParts)
+        // {
+        //     SetBP(breakablePart);
+        // }
     }
 
     public void AddRigidBodyToColliders()
@@ -66,12 +69,7 @@ public class BreakableObject : MonoBehaviour
                 rb = c.AddComponent<Rigidbody>();
             }
             
-            rb.mass = mass;
-            rb.drag = drag;
-            rb.angularDrag = drag;
-            rb.isKinematic = true;
-            rb.useGravity = false;
-            rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
+
 
             if (!c.TryGetComponent(out bp))
             {
@@ -82,25 +80,30 @@ public class BreakableObject : MonoBehaviour
         }
 
         breakableParts = tempBPs.ToArray();
-        foreach (BreakablePart breakablePart in breakableParts)
-        {
-            SetBP(breakablePart);
-        }
 
+
+    }
+
+    private void SetBreakPoints()
+    {
         foreach (BreakablePart breakablePart in breakableParts)
         {
             breakablePart.InitialiseClosest();
         }
+    }
 
+    private void InitialiseBreakPoints()
+    {
+        foreach (BreakablePart breakablePart in breakableParts)
+        {
+            SetBP(breakablePart);
+        }
     }
 
     private void SetBP(BreakablePart bp)
     {
-        bp.AffectiveRange = affectedRange;
-        bp.BreakingForce = breakForce;
-        bp.ForceTransfer = forceTransfer;
-        bp.CastLayer = bpLayer;
-        bp.Initialise(transform);
+
+        bp.Initialise(transform, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer,transferToDot);
 
     }
     
@@ -111,6 +114,9 @@ public class BreakableObject : MonoBehaviour
     {
         GetAllColliders();
         AddRigidBodyToColliders();
+        InitialiseBreakPoints();
+        SetBreakPoints();
+
     }
     
 }
