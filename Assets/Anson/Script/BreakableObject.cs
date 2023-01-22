@@ -68,7 +68,10 @@ public class BreakableObject : MonoBehaviour
             {
                 rb = c.AddComponent<Rigidbody>();
             }
-            
+            if (!c.TryGetComponent(out MoveableObject mo))
+            {
+                mo = c.AddComponent<MoveableObject>();
+            }
 
 
             if (!c.TryGetComponent(out bp))

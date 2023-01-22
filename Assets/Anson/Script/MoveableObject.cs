@@ -9,10 +9,8 @@ public class MoveableObject : MonoBehaviour
     [SerializeField]
     private Rigidbody rb;
 
-    [SerializeField]
     private Vector3 previousPosition;
 
-    [SerializeField]
     private Vector3 velocity;
 
     public Vector3 Velocity => (transform.position - previousPosition)/Time.deltaTime;

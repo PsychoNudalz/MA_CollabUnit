@@ -12,14 +12,20 @@ public class LauncherScript : MonoBehaviour
 
     [SerializeField]
     private float speed = 200;
-    
+
+    [SerializeField]
+    private bool fireOnAwake = true;
     [SerializeField]
     float fireDelay = 1f;
+    
 
 
     private void Start()
     {
-        StartCoroutine(FireDelay());
+        if (fireOnAwake)
+        {
+            StartCoroutine(FireDelay());
+        }
     }
 
     [ContextMenu("Fire")]

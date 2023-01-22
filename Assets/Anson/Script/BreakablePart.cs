@@ -425,7 +425,7 @@ public class BreakablePart : MonoBehaviour
         
         if (force > breakingForce * .7f)
         {
-            print($"Collided with {rb} with force: {force}  Against: {breakingForce}");
+            // print($"Collided with {rb} with force: {force}  Against: {breakingForce}");
         }
 
         if (force > breakingForce)
