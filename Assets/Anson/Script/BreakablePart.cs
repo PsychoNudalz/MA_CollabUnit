@@ -246,7 +246,7 @@ public class BreakablePart : MonoBehaviour
         connectedParts = new List<PartDistance>();
 
         meshSize = meshFilter.sharedMesh.bounds.size.magnitude * transform.lossyScale.x;
-        print($"{this} mesh size: {meshSize}");
+        // print($"{this} mesh size: {meshSize}");
         // var tempParts = InitialiseClosest();
         //
     }
