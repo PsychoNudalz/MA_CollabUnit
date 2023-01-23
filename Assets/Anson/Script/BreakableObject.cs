@@ -28,17 +28,16 @@ public class BreakableObject : MonoBehaviour
     private float affectedRange = 20f;
     [SerializeField]
     private float breakForce = 200f;
-
     [SerializeField]
     [Range(0f,1f)]
     private float forceTransfer = .5f;
     [SerializeField]
     private AnimationCurve transferToDot;
-
-
     [SerializeField]
     private LayerMask bpLayer;
-    
+
+    [SerializeField]
+    private float minimumPartSize = 2f;
 
 
     [ContextMenu("FindAllColliders")]
@@ -106,14 +105,23 @@ public class BreakableObject : MonoBehaviour
     private void SetBP(BreakablePart bp)
     {
 
-        bp.Initialise(transform, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer,transferToDot);
+        bp.Initialise(gameObject, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer,transferToDot,minimumPartSize);
 
     }
-    
-    
 
-    [ContextMenu("InitialiseBuilding")]
+    [ContextMenu("initialise")]
     public void Initialise()
+    {
+        AddRigidBodyToColliders();
+        GetAllColliders();
+        AddRigidBodyToColliders();
+        InitialiseBreakPoints();
+        SetBreakPoints();
+
+    }
+
+    [ContextMenu("Update Building")]
+    public void UpdateValues()
     {
         GetAllColliders();
         AddRigidBodyToColliders();

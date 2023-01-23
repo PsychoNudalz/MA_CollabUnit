@@ -57,7 +57,8 @@ public struct PartDistance
 public enum BreakableState
 {
     Hold,
-    Broke
+    InitialBreak,
+    FullBreak
 }
 
 [Serializable]
@@ -68,6 +69,9 @@ public class BreakablePart : MonoBehaviour
 
     [SerializeField]
     private List<PartDistance> connectedParts;
+
+    [SerializeField]
+    private List<PartDistance> otherConnectedParts;
 
     [SerializeField]
     private BreakableState breakableState = BreakableState.Hold;
@@ -103,7 +107,12 @@ public class BreakablePart : MonoBehaviour
     private float meshSize = 0f;
 
     [SerializeField]
+    private float minimumPartSize = 2f;
+
+    [SerializeField]
     private float finalBrokeForce = 0f;
+
+    private float fullBreakTime = 1f;
 
     [Space(10)]
     [SerializeField]
@@ -114,7 +123,7 @@ public class BreakablePart : MonoBehaviour
 
 
     [SerializeField]
-    private Transform parent;
+    private GameObject parent;
 
     private Material rendererMaterial;
 
@@ -144,7 +153,7 @@ public class BreakablePart : MonoBehaviour
     }
 
 
-    public Transform Parent
+    public GameObject Parent
     {
         get => parent;
         set => parent = value;
@@ -169,6 +178,17 @@ public class BreakablePart : MonoBehaviour
             {
                 foreach (PartDistance connectedPart in connectedParts)
                 {
+                    Gizmos.color = Color.white;
+
+                    Gizmos.DrawLine(transform.position, connectedPart.Part.transform.position);
+                }
+            }
+
+            if (otherConnectedParts?.Count > 0)
+            {
+                foreach (PartDistance connectedPart in otherConnectedParts)
+                {
+                    Gizmos.color = Color.magenta;
                     Gizmos.DrawLine(transform.position, connectedPart.Part.transform.position);
                 }
             }
@@ -177,12 +197,15 @@ public class BreakablePart : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.TryGetComponent(out Rigidbody rb))
+        if (collision.gameObject.TryGetComponent(out BreakablePart bp))
         {
-            // if (!RBInConnected(rb))
-            // {
-            //     Collision(rb);
-            // }
+            if (!bp.Parent.Equals(parent) || bp.BreakableState == BreakableState.FullBreak)
+            {
+                Collision(bp.selfRB);
+            }
+        }
+        else if (collision.gameObject.TryGetComponent(out Rigidbody rb))
+        {
             Collision(rb);
         }
     }
@@ -200,8 +223,8 @@ public class BreakablePart : MonoBehaviour
         return false;
     }
 
-    public void Initialise(Transform p, float mass, float drag, float affectedRange, float breakForce,
-        float forceTransfer, LayerMask bpLayer,AnimationCurve transferToDot)
+    public void Initialise(GameObject p, float mass, float drag, float affectedRange, float breakForce,
+        float forceTransfer, LayerMask bpLayer, AnimationCurve transferToDot, float minSize)
     {
         parent = p;
 
@@ -211,6 +234,7 @@ public class BreakablePart : MonoBehaviour
         this.BreakingForce = breakForce * meshSize;
         this.ForceTransfer = forceTransfer;
         this.CastLayer = bpLayer;
+        minimumPartSize = minSize;
         selfRB.mass = mass * meshSize;
         selfRB.drag = drag;
         selfRB.angularDrag = drag;
@@ -244,6 +268,7 @@ public class BreakablePart : MonoBehaviour
         }
 
         connectedParts = new List<PartDistance>();
+        otherConnectedParts = new List<PartDistance>();
 
         meshSize = meshFilter.sharedMesh.bounds.size.magnitude * transform.lossyScale.x;
         // print($"{this} mesh size: {meshSize}");
@@ -253,9 +278,10 @@ public class BreakablePart : MonoBehaviour
 
     public List<PartDistance> InitialiseClosest()
     {
-        float CastSizeMultiplier = .5f;
-        RaycastHit[] hits = Physics.SphereCastAll(transform.position, affectiveRange + meshSize * CastSizeMultiplier,
-            transform.up, castLayer);
+        float CastSizeMultiplier = .25f;
+        float range = affectiveRange + meshSize * CastSizeMultiplier;
+        RaycastHit[] hits = Physics.SphereCastAll(transform.position, range,
+            Vector3.up, 0, castLayer);
         // List<PartDistance> tempParts = new List<PartDistance>();
         foreach (RaycastHit currentHit in hits)
         {
@@ -266,7 +292,7 @@ public class BreakablePart : MonoBehaviour
                     AddPart(current);
 
                     //adding for other
-                    current.AddPart(this);
+                    current.AddOtherPart(this);
                 }
             }
         }
@@ -293,7 +319,7 @@ public class BreakablePart : MonoBehaviour
     /// <param name="???"></param>
     public void Break_Recursive(Vector3 force, Vector3 originalForce, List<BreakablePart> breakHistory = null)
     {
-        if (breakableState == BreakableState.Broke)
+        if (IsBroken())
         {
             return;
         }
@@ -323,7 +349,8 @@ public class BreakablePart : MonoBehaviour
             float LerpForce = .5f;
             float dotValue = Mathf.Abs(Vector3.Dot(connectedPart.Dir, newForce.normalized));
             // print(dotValue);
-            newForce = Vector3.Lerp(connectedPart.Dir, newForce.normalized, LerpForce) * newForce.magnitude *transferToDot.Evaluate(dotValue) ;
+            newForce = Vector3.Lerp(connectedPart.Dir, newForce.normalized, LerpForce) * newForce.magnitude *
+                       transferToDot.Evaluate(dotValue);
             connectedPart.Part.RemovePart(this);
 
             if (isDebug)
@@ -333,7 +360,7 @@ public class BreakablePart : MonoBehaviour
 
             if (newForce.magnitude > connectedPart.BreakForceLimit)
             {
-                print($"{this} recursive to: {connectedPart.Part}");
+                // print($"{this} recursive to: {connectedPart.Part}");
                 connectedPart.Part.Break_Recursive(newForce, originalForce, breakHistory);
             }
             // else if(force.magnitude > connectedPart.BreakForceLimit)
@@ -349,31 +376,55 @@ public class BreakablePart : MonoBehaviour
 
     public void Break_Single(Vector3 force, Vector3 originalForce)
     {
-        if (breakableState == BreakableState.Broke)
+        if (IsBroken())
         {
             return;
         }
+
         if (isDebug)
         {
             // Debug.DrawRay(transform.position,force,Color.blue,5f);
         }
 
         finalBrokeForce = force.magnitude;
-        if (finalBrokeForce < breakingForce)
+        foreach (PartDistance part in otherConnectedParts)
         {
-            Debug.LogWarning($"{this} break force {finalBrokeForce} not reaching limit.");
+            part.Part.RemovePart(this);
+        }
+
+        //if piece is too small
+        if (meshSize < minimumPartSize)
+        {
+            gameObject.SetActive(false);
+            
+            breakableState = BreakableState.FullBreak;
+
             return;
         }
-        // print($"{this} Breaking with {finalBrokeForce}");
-
-        breakableState = BreakableState.Broke;
-        selfRB.isKinematic = false;
-        selfRB.useGravity = true;
-
-        if (isDebug)
+        else
         {
-            rendererMaterial.color = Color.red;
+            if (finalBrokeForce < breakingForce)
+            {
+                Debug.LogWarning($"{this} break force {finalBrokeForce} not reaching limit.");
+                return;
+            }
+            // print($"{this} Breaking with {finalBrokeForce}");
+
+            breakableState = BreakableState.InitialBreak;
+            StartCoroutine(DelayToFullBreak());
+            selfRB.isKinematic = false;
+            selfRB.useGravity = true;
+
+            if (isDebug)
+            {
+                rendererMaterial.color = Color.red;
+            }
         }
+    }
+
+    private bool IsBroken()
+    {
+        return breakableState is BreakableState.InitialBreak or BreakableState.FullBreak;
     }
 
     private void ApplyForce(Vector3 f)
@@ -389,10 +440,11 @@ public class BreakablePart : MonoBehaviour
     public void Collision(Rigidbody rb)
 
     {
-        if (breakableState == BreakableState.Broke)
+        if (IsBroken())
         {
             return;
         }
+
 
         float force = 0f;
         Vector3 originalSpeed = new Vector3();
@@ -402,30 +454,24 @@ public class BreakablePart : MonoBehaviour
             originalSpeed = moveableObject.Velocity;
             force = originalSpeed.magnitude * rb.mass;
             forceDir = originalSpeed.normalized;
-
         }
         else
         {
             originalSpeed = rb.velocity;
             force = rb.velocity.magnitude * rb.mass;
-            forceDir = (transform.position-rb.transform.position).normalized;
-
+            forceDir = (transform.position - rb.transform.position).normalized;
         }
 
-        
-        
 
-        
         if (isDebug)
         {
             // Debug.DrawRay(transform.position, forceDir * force, Color.cyan, 10f);
         }
 
-        
-        
+
         if (force > breakingForce * .7f)
         {
-            // print($"Collided with {rb} with force: {force}  Against: {breakingForce}");
+            print($"Collided with {rb} with force: {force}  Against: {breakingForce}");
         }
 
         if (force > breakingForce)
@@ -436,7 +482,7 @@ public class BreakablePart : MonoBehaviour
         //have original object to keep flying
         if (!RBInConnected(rb))
         {
-            rb.velocity = originalSpeed*forceTransfer;
+            rb.velocity = originalSpeed * forceTransfer;
         }
     }
 
@@ -452,6 +498,16 @@ public class BreakablePart : MonoBehaviour
                 return;
             }
         }
+        for (int i = 0; i < otherConnectedParts.Count; i++)
+        {
+            PartDistance current = otherConnectedParts[i];
+            if (current.Part.Equals(part))
+            {
+                // print($"{this} remove connection: {part}");
+                otherConnectedParts.RemoveAt(i);
+                return;
+            }
+        }
     }
 
     public void AddPart(BreakablePart current)
@@ -462,5 +518,21 @@ public class BreakablePart : MonoBehaviour
         {
             connectedParts.Add(item);
         }
+    }
+
+    public void AddOtherPart(BreakablePart current)
+    {
+        PartDistance item = CalculatePartDistance(current);
+
+        if (!otherConnectedParts.Contains(item) && !connectedParts.Contains(item))
+        {
+            otherConnectedParts.Add(item);
+        }
+    }
+
+    IEnumerator DelayToFullBreak()
+    {
+        yield return new WaitForSeconds(fullBreakTime);
+        breakableState = BreakableState.FullBreak;
     }
 }

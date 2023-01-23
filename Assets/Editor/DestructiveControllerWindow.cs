@@ -31,7 +31,7 @@ public class DestructiveControllerWindow : EditorWindow
         {
             controlledBreakableObject = DestructiveController.GetActiveBreakableObjects();
         }
-        
+
         if (GUILayout.Button("Refresh ALL Breakable Objects"))
         {
             controlledBreakableObject = DestructiveController.GetActiveBreakableObjects(true);
@@ -39,14 +39,22 @@ public class DestructiveControllerWindow : EditorWindow
 
         GUILayout.Label($"Number of Breakable Objects:{controlledBreakableObject.Length}", EditorStyles.boldLabel);
 
+
+        if (GUILayout.Button("Initialise All Breakable Objects"))
+        {
+            DestructiveController.Initialise(controlledBreakableObject);
+        }
         
         if (GUILayout.Button("Update All Breakable Objects"))
         {
-            DestructiveController.InitialiseObjects(controlledBreakableObject);
+            DestructiveController.UpdateObjects(controlledBreakableObject);
         }
 
+        if (GUILayout.Button("Count All Breakable Parts"))
+        {
+            Debug.Log($"Number of Parts: {FindObjectsOfType<BreakablePart>().Length}");
+        }
 
-        
 
         GUILayout.EndScrollView();
         GUILayout.EndVertical();
@@ -84,13 +92,15 @@ public class DestructiveController
         return temp;
     }
 
-    public static void InitialiseObjects(BreakableObject[] breakableObjects)
+    public static void UpdateObjects(BreakableObject[] breakableObjects)
     {
         foreach (BreakableObject breakableObject in breakableObjects)
         {
             try
             {
-                breakableObject.Initialise();
+                breakableObject.UpdateValues();
+                EditorUtility.SetDirty(breakableObject.gameObject);
+
                 Debug.Log($"{breakableObject} initialise COMPLETE");
             }
             catch (Exception e)
@@ -98,8 +108,30 @@ public class DestructiveController
                 Debug.LogError($"{breakableObject} initialise FAILEd");
                 Debug.LogError(e);
             }
-            
         }
+        EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
+
+    }
+
+    public static void Initialise(BreakableObject[] breakableObjects)
+    {
+        foreach (BreakableObject breakableObject in breakableObjects)
+        {
+            try
+            {
+                breakableObject.Initialise();
+                EditorUtility.SetDirty(breakableObject.gameObject);
+
+                Debug.Log($"{breakableObject} initialise COMPLETE");
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"{breakableObject} initialise FAILEd");
+                Debug.LogError(e);
+            }
+        }
+        EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
+
     }
 }
 
