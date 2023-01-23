@@ -15,7 +15,9 @@ public struct PartDistance
     private float distance;
 
     [SerializeField]
-    private float breakForceLimit;
+    [Tooltip("Min, Max")]
+    private Vector2 breakForceLimit;
+
 
     [SerializeField]
     private Vector3 dir;
@@ -24,11 +26,11 @@ public struct PartDistance
 
     public float Distance => distance;
 
-    public float BreakForceLimit => breakForceLimit;
+    public Vector2 BreakForceLimit => breakForceLimit;
 
     public Vector3 Dir => dir;
 
-    public PartDistance(BreakablePart part, float distance, float breakForceLimit, Vector3 dir)
+    public PartDistance(BreakablePart part, float distance, Vector2 breakForceLimit, Vector3 dir)
     {
         this.part = part;
         this.distance = distance;
@@ -78,7 +80,8 @@ public class BreakablePart : MonoBehaviour
 
     [Header("Stats")]
     [SerializeField]
-    private float breakingForce;
+    [Tooltip("Min, Max")]
+    private Vector2 breakingForce;
 
     [SerializeField]
     [Range(0f, 1f)]
@@ -86,6 +89,9 @@ public class BreakablePart : MonoBehaviour
 
     [SerializeField]
     private AnimationCurve transferToDot;
+
+    [SerializeField]
+    private float breakDelay = .5f;
 
     [SerializeField]
     private float affectiveRange = 10f;
@@ -112,7 +118,7 @@ public class BreakablePart : MonoBehaviour
     [SerializeField]
     private float finalBrokeForce = 0f;
 
-    private float fullBreakTime = 1f;
+    private float fullBreakTime = .5f;
 
     [Space(10)]
     [SerializeField]
@@ -128,7 +134,7 @@ public class BreakablePart : MonoBehaviour
     private Material rendererMaterial;
 
 
-    public float BreakingForce
+    public Vector2 BreakingForce
     {
         get => breakingForce;
         set => breakingForce = value;
@@ -223,8 +229,8 @@ public class BreakablePart : MonoBehaviour
         return false;
     }
 
-    public void Initialise(GameObject p, float mass, float drag, float affectedRange, float breakForce,
-        float forceTransfer, LayerMask bpLayer, AnimationCurve transferToDot, float minSize)
+    public void Initialise(GameObject p, float mass, float drag, float affectedRange, Vector2 breakForce,
+        float forceTransfer, LayerMask bpLayer, AnimationCurve transferToDot, float minSize, float breakDelay)
     {
         parent = p;
 
@@ -235,6 +241,7 @@ public class BreakablePart : MonoBehaviour
         this.ForceTransfer = forceTransfer;
         this.CastLayer = bpLayer;
         minimumPartSize = minSize;
+        this.breakDelay = breakDelay;
         selfRB.mass = mass * meshSize;
         selfRB.drag = drag;
         selfRB.angularDrag = drag;
@@ -304,10 +311,23 @@ public class BreakablePart : MonoBehaviour
     {
         float d = Mathf.Abs((bp.transform.position - transform.position).magnitude);
         // float f = Mathf.Lerp(breakingForce, bp.breakingForce, d / affectiveRange);
-        float f = bp.breakingForce;
+        Vector2 f = bp.breakingForce;
         return new PartDistance(bp, d, f, (bp.transform.position - transform.position).normalized);
     }
 
+
+    public void Break(Vector3 force, Vector3 originalForce, List<BreakablePart> breakHistory = null,
+        float breakDelay = 0f)
+    {
+        if (breakDelay == 0f)
+        {
+            Break_Recursive(force, originalForce, breakHistory, breakDelay);
+        }
+        else
+        {
+            StartCoroutine(DelayBreak_Recursive(force, originalForce, breakHistory, breakDelay));
+        }
+    }
 
     /// <summary>
     /// Recurssively break
@@ -317,7 +337,8 @@ public class BreakablePart : MonoBehaviour
     /// <param name="force"></param>
     /// <param name="originalForce"></param>
     /// <param name="???"></param>
-    public void Break_Recursive(Vector3 force, Vector3 originalForce, List<BreakablePart> breakHistory = null)
+    public void Break_Recursive(Vector3 force, Vector3 originalForce, List<BreakablePart> breakHistory = null,
+        float breakDelay = 0f)
     {
         if (IsBroken())
         {
@@ -344,35 +365,21 @@ public class BreakablePart : MonoBehaviour
         PartDistance[] tempPD = connectedParts.ToArray();
         foreach (PartDistance connectedPart in tempPD)
         {
-            newForce = force * forceTransfer;
-
-            float LerpForce = .5f;
-            float dotValue = Mathf.Abs(Vector3.Dot(connectedPart.Dir, newForce.normalized));
-            // print(dotValue);
-            newForce = Vector3.Lerp(connectedPart.Dir, newForce.normalized, LerpForce) * newForce.magnitude *
-                       transferToDot.Evaluate(dotValue);
-            connectedPart.Part.RemovePart(this);
-
-            if (isDebug)
-            {
-                // Debug.DrawRay(transform.position,newForce,new Color(1-dotValue,dotValue,0),10f);
-            }
-
-            if (newForce.magnitude > connectedPart.BreakForceLimit)
-            {
-                // print($"{this} recursive to: {connectedPart.Part}");
-                connectedPart.Part.Break_Recursive(newForce, originalForce, breakHistory);
-            }
-            // else if(force.magnitude > connectedPart.BreakForceLimit)
-            // {
-            //     connectedPart.Part.Break_Single(newForce,originalForce);
-            // }
+            connectedPart.Part.EvaluateBreak(connectedPart, force, this, breakHistory);
         }
 
         ApplyForce(force);
+    }
 
+    private IEnumerator DelayBreak_Recursive(Vector3 force, Vector3 originalForce, List<BreakablePart> breakHistory,
+        float breakDelay = 0f)
+    {
+        yield return new WaitForSeconds(breakDelay);
+
+        Break_Recursive(force, originalForce, breakHistory, breakDelay);
         // print(string.Join(", ",breakHistory));
     }
+
 
     public void Break_Single(Vector3 force, Vector3 originalForce)
     {
@@ -396,14 +403,14 @@ public class BreakablePart : MonoBehaviour
         if (meshSize < minimumPartSize)
         {
             gameObject.SetActive(false);
-            
+
             breakableState = BreakableState.FullBreak;
 
             return;
         }
         else
         {
-            if (finalBrokeForce < breakingForce)
+            if (finalBrokeForce < breakingForce.x)
             {
                 Debug.LogWarning($"{this} break force {finalBrokeForce} not reaching limit.");
                 return;
@@ -420,6 +427,44 @@ public class BreakablePart : MonoBehaviour
                 rendererMaterial.color = Color.red;
             }
         }
+    }
+
+    /// <summary>
+    /// to determine what to do after the force is applied
+    /// </summary>
+    /// <param name="pd"></param>
+    /// <param name="force"></param>
+    public void EvaluateBreak(PartDistance pd, Vector3 force, BreakablePart originalPart,
+        List<BreakablePart> breakHistory)
+    {
+        Vector3 newForce = force * forceTransfer;
+
+        float LerpForce = .5f;
+        float dotValue = Mathf.Abs(Vector3.Dot(pd.Dir, newForce.normalized));
+        // print(dotValue);
+        newForce = Vector3.Lerp(pd.Dir, newForce.normalized, LerpForce) *
+                   (newForce.magnitude * transferToDot.Evaluate(dotValue));
+        RemovePart(originalPart);
+
+        if (isDebug)
+        {
+            // Debug.DrawRay(transform.position,newForce,new Color(1-dotValue,dotValue,0),10f);
+        }
+
+        if (newForce.magnitude > breakingForce.y)
+        {
+            // print($"{this} recursive to: {connectedPart.Part}");
+            Break(newForce, force, breakHistory);
+        }
+        else if (newForce.magnitude > breakingForce.x)
+        {
+            // print($"{this} recursive to: {connectedPart.Part}");
+            Break(newForce, force, breakHistory, this.breakDelay);
+        }
+        // else if(force.magnitude > connectedPart.BreakForceLimit)
+        // {
+        //     connectedPart.Part.Break_Single(newForce,originalForce);
+        // }
     }
 
     private bool IsBroken()
@@ -449,9 +494,9 @@ public class BreakablePart : MonoBehaviour
         float force = 0f;
         Vector3 originalSpeed = new Vector3();
         Vector3 forceDir = new Vector3();
-        if (rb.TryGetComponent(out MoveableObject moveableObject))
+        if (rb.TryGetComponent(out MovableObject movableObject))
         {
-            originalSpeed = moveableObject.Velocity;
+            originalSpeed = movableObject.Velocity;
             force = originalSpeed.magnitude * rb.mass;
             forceDir = originalSpeed.normalized;
         }
@@ -469,14 +514,14 @@ public class BreakablePart : MonoBehaviour
         }
 
 
-        if (force > breakingForce * .7f)
+        if (force > breakingForce.x * .7f)
         {
             print($"Collided with {rb} with force: {force}  Against: {breakingForce}");
         }
 
-        if (force > breakingForce)
+        if (force > breakingForce.x)
         {
-            Break_Recursive(forceDir * force, forceDir * force);
+            Break(forceDir * force, forceDir * force);
         }
 
         //have original object to keep flying
@@ -498,6 +543,7 @@ public class BreakablePart : MonoBehaviour
                 return;
             }
         }
+
         for (int i = 0; i < otherConnectedParts.Count; i++)
         {
             PartDistance current = otherConnectedParts[i];

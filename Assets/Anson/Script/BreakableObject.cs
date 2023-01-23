@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class BreakableObject : MonoBehaviour
 {
-
     [SerializeField]
     private Collider[] allColliders;
 
@@ -26,18 +25,25 @@ public class BreakableObject : MonoBehaviour
     [Header("Break Part")]
     [SerializeField]
     private float affectedRange = 20f;
+
     [SerializeField]
-    private float breakForce = 200f;
+    private Vector2 breakForce = new Vector2(100f,150f);
+
     [SerializeField]
-    [Range(0f,1f)]
+    [Range(0f, 1f)]
     private float forceTransfer = .5f;
+
     [SerializeField]
     private AnimationCurve transferToDot;
+
     [SerializeField]
     private LayerMask bpLayer;
 
     [SerializeField]
     private float minimumPartSize = 2f;
+
+    [SerializeField]
+    private float breakDelay;
 
 
     [ContextMenu("FindAllColliders")]
@@ -58,7 +64,7 @@ public class BreakableObject : MonoBehaviour
     {
         Rigidbody rb;
         BreakablePart bp;
-        List<BreakablePart> tempBPs =new List<BreakablePart>();
+        List<BreakablePart> tempBPs = new List<BreakablePart>();
         foreach (Collider c in allColliders)
         {
             ((MeshCollider) c).convex = true;
@@ -67,9 +73,10 @@ public class BreakableObject : MonoBehaviour
             {
                 rb = c.AddComponent<Rigidbody>();
             }
-            if (!c.TryGetComponent(out MoveableObject mo))
+
+            if (!c.TryGetComponent(out MovableObject mo))
             {
-                mo = c.AddComponent<MoveableObject>();
+                mo = c.AddComponent<MovableObject>();
             }
 
 
@@ -77,13 +84,11 @@ public class BreakableObject : MonoBehaviour
             {
                 bp = c.AddComponent<BreakablePart>();
             }
-            tempBPs.Add(bp);
 
+            tempBPs.Add(bp);
         }
 
         breakableParts = tempBPs.ToArray();
-
-
     }
 
     private void SetBreakPoints()
@@ -104,9 +109,8 @@ public class BreakableObject : MonoBehaviour
 
     private void SetBP(BreakablePart bp)
     {
-
-        bp.Initialise(gameObject, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer,transferToDot,minimumPartSize);
-
+        bp.Initialise(gameObject, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot,
+            minimumPartSize, breakDelay);
     }
 
     [ContextMenu("initialise")]
@@ -117,7 +121,6 @@ public class BreakableObject : MonoBehaviour
         AddRigidBodyToColliders();
         InitialiseBreakPoints();
         SetBreakPoints();
-
     }
 
     [ContextMenu("Update Building")]
@@ -127,7 +130,5 @@ public class BreakableObject : MonoBehaviour
         AddRigidBodyToColliders();
         InitialiseBreakPoints();
         SetBreakPoints();
-
     }
-    
 }

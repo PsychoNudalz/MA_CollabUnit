@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class MoveableObject : MonoBehaviour
+public class MovableObject : MonoBehaviour
 {
     [SerializeField]
     private Rigidbody rb;
