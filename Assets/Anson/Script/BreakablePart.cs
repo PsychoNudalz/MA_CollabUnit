@@ -94,6 +94,10 @@ public class BreakablePart : MonoBehaviour
     private float breakDelay = .5f;
 
     [SerializeField]
+    private float minBottomAngle = 80f;
+    
+    [Header("Connection")]
+    [SerializeField]
     private float affectiveRange = 10f;
 
     [SerializeField]
@@ -230,7 +234,7 @@ public class BreakablePart : MonoBehaviour
     }
 
     public void Initialise(GameObject p, float mass, float drag, float affectedRange, Vector2 breakForce,
-        float forceTransfer, LayerMask bpLayer, AnimationCurve transferToDot, float minSize, float breakDelay)
+        float forceTransfer, LayerMask bpLayer, AnimationCurve transferToDot, float minSize, float breakDelay,float bottomAngle)
     {
         parent = p;
 
@@ -242,6 +246,7 @@ public class BreakablePart : MonoBehaviour
         this.CastLayer = bpLayer;
         minimumPartSize = minSize;
         this.breakDelay = breakDelay;
+        minBottomAngle = bottomAngle;
         selfRB.mass = mass * meshSize;
         selfRB.drag = drag;
         selfRB.angularDrag = drag;
@@ -461,6 +466,10 @@ public class BreakablePart : MonoBehaviour
             // print($"{this} recursive to: {connectedPart.Part}");
             Break(newForce, force, breakHistory, this.breakDelay);
         }
+        else
+        {
+            StartCoroutine(DelayBreakBottom());
+        }
         // else if(force.magnitude > connectedPart.BreakForceLimit)
         // {
         //     connectedPart.Part.Break_Single(newForce,originalForce);
@@ -580,5 +589,34 @@ public class BreakablePart : MonoBehaviour
     {
         yield return new WaitForSeconds(fullBreakTime);
         breakableState = BreakableState.FullBreak;
+    }
+
+    IEnumerator DelayBreakBottom()
+    {
+        yield return new WaitForSeconds(breakDelay);
+
+        if (!HasBottomPart())
+        {
+        
+            Debug.Log($"{this} break bottom.");
+            Break(Vector3.down*breakingForce.y/forceTransfer*100f, Vector3.down*breakingForce.y*1.1f);
+        }
+    }
+
+    bool HasBottomPart()
+    {
+        double cos = Math.Cos(minBottomAngle*Mathf.Deg2Rad);
+
+        foreach (PartDistance connectedPart in connectedParts)
+        {
+            float dot = Vector3.Dot(Vector3.down, connectedPart.Dir);
+            
+            if(dot<cos)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

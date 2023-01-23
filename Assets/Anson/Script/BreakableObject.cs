@@ -45,6 +45,8 @@ public class BreakableObject : MonoBehaviour
     [SerializeField]
     private float breakDelay;
 
+    [SerializeField]
+    private float minBottomAngle;
 
     [ContextMenu("FindAllColliders")]
     public void GetAllColliders()
@@ -110,7 +112,7 @@ public class BreakableObject : MonoBehaviour
     private void SetBP(BreakablePart bp)
     {
         bp.Initialise(gameObject, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot,
-            minimumPartSize, breakDelay);
+            minimumPartSize, breakDelay,minBottomAngle);
     }
 
     [ContextMenu("initialise")]
