@@ -105,8 +105,7 @@ public class BreakablePart : MonoBehaviour
 
 
     [Header("Debug")]
-    [SerializeField]
-    private bool isDebug = true;
+    private bool isDebug = false;
 
 
     [SerializeField]
