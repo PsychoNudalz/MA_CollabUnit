@@ -100,12 +100,13 @@ public class DestructiveController
             {
                 breakableObject.UpdateValues();
                 EditorUtility.SetDirty(breakableObject.gameObject);
+                MarkBreakablePartDirty(breakableObject.BreakableParts);
 
-                Debug.Log($"{breakableObject} initialise COMPLETE");
+                Debug.Log($"{breakableObject} update COMPLETE");
             }
             catch (Exception e)
             {
-                Debug.LogError($"{breakableObject} initialise FAILEd");
+                Debug.LogError($"{breakableObject} update FAILED");
                 Debug.LogError(e);
             }
         }
@@ -121,17 +122,25 @@ public class DestructiveController
             {
                 breakableObject.Initialise();
                 EditorUtility.SetDirty(breakableObject.gameObject);
-
+                MarkBreakablePartDirty(breakableObject.BreakableParts);
                 Debug.Log($"{breakableObject} initialise COMPLETE");
             }
             catch (Exception e)
             {
-                Debug.LogError($"{breakableObject} initialise FAILEd");
+                Debug.LogError($"{breakableObject} initialise FAILED");
                 Debug.LogError(e);
             }
         }
         EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
 
+    }
+
+    public static void MarkBreakablePartDirty(BreakablePart[] breakableParts)
+    {
+        foreach (BreakablePart breakablePart in breakableParts)
+        {
+            EditorUtility.SetDirty(breakablePart.gameObject);
+        }
     }
 }
 

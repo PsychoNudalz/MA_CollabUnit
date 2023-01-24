@@ -105,7 +105,7 @@ public class BreakablePart : MonoBehaviour
 
 
     [Header("Debug")]
-    private bool isDebug = false;
+    private bool isDebug = true;
 
 
     [SerializeField]
@@ -622,7 +622,7 @@ public class BreakablePart : MonoBehaviour
         if (!IsBroken()&&!HasBottomPart())
         {
         
-            Debug.Log($"{this} break bottom.");
+            // Debug.Log($"{this} break bottom.");
             Break(new Vector3(), new Vector3());
             if (isDebug)
             {

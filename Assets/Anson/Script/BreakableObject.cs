@@ -48,6 +48,8 @@ public class BreakableObject : MonoBehaviour
     [SerializeField]
     private float minBottomAngle;
 
+    public BreakablePart[] BreakableParts => breakableParts;
+
     [ContextMenu("FindAllColliders")]
     public void GetAllColliders()
     {
