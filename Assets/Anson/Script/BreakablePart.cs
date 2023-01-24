@@ -14,9 +14,9 @@ public struct PartDistance
     [SerializeField]
     private float distance;
 
-    [SerializeField]
-    [Tooltip("Min, Max")]
-    private Vector2 breakForceLimit;
+    // [SerializeField]
+    // [Tooltip("Min, Max")]
+    // private Vector2 breakForceLimit;
 
 
     [SerializeField]
@@ -26,7 +26,7 @@ public struct PartDistance
 
     public float Distance => distance;
 
-    public Vector2 BreakForceLimit => breakForceLimit;
+    // public Vector2 BreakForceLimit => breakForceLimit;
 
     public Vector3 Dir => dir;
 
@@ -34,7 +34,7 @@ public struct PartDistance
     {
         this.part = part;
         this.distance = distance;
-        this.breakForceLimit = breakForceLimit;
+        // this.breakForceLimit = breakForceLimit;
         this.dir = dir;
     }
 
@@ -184,6 +184,14 @@ public class BreakablePart : MonoBehaviour
     {
         if (breakableState == BreakableState.Hold || forceShowConnection)
         {
+            if (otherConnectedParts?.Count > 0)
+            {
+                foreach (PartDistance connectedPart in otherConnectedParts)
+                {
+                    Gizmos.color = Color.magenta;
+                    Gizmos.DrawLine(transform.position, connectedPart.Part.transform.position);
+                }
+            }
             if (connectedParts?.Count > 0)
             {
                 foreach (PartDistance connectedPart in connectedParts)
@@ -194,14 +202,7 @@ public class BreakablePart : MonoBehaviour
                 }
             }
 
-            if (otherConnectedParts?.Count > 0)
-            {
-                foreach (PartDistance connectedPart in otherConnectedParts)
-                {
-                    Gizmos.color = Color.magenta;
-                    Gizmos.DrawLine(transform.position, connectedPart.Part.transform.position);
-                }
-            }
+            
         }
     }
 
@@ -322,11 +323,11 @@ public class BreakablePart : MonoBehaviour
 
 
     public void Break(Vector3 force, Vector3 originalForce, List<BreakablePart> breakHistory = null,
-        float breakDelay = 0f)
+        float breakDelay = 0f, bool forceBreak = false)
     {
         if (breakDelay == 0f)
         {
-            Break_Recursive(force, originalForce, breakHistory, breakDelay);
+            Break_Recursive(force, originalForce, breakHistory, breakDelay,forceBreak);
         }
         else
         {
@@ -343,7 +344,7 @@ public class BreakablePart : MonoBehaviour
     /// <param name="originalForce"></param>
     /// <param name="???"></param>
     public void Break_Recursive(Vector3 force, Vector3 originalForce, List<BreakablePart> breakHistory = null,
-        float breakDelay = 0f)
+        float breakDelay = 0f, bool forceBreak = false)
     {
         if (IsBroken())
         {
@@ -371,6 +372,12 @@ public class BreakablePart : MonoBehaviour
         foreach (PartDistance connectedPart in tempPD)
         {
             connectedPart.Part.EvaluateBreak(connectedPart, force, this, breakHistory);
+        }
+
+        tempPD = otherConnectedParts.ToArray();
+        foreach (PartDistance partDistance in tempPD)
+        {
+            partDistance.Part.EvaluateFall();
         }
 
         ApplyForce(force);
@@ -415,11 +422,11 @@ public class BreakablePart : MonoBehaviour
         }
         else
         {
-            if (finalBrokeForce < breakingForce.x)
-            {
-                Debug.LogWarning($"{this} break force {finalBrokeForce} not reaching limit.");
-                return;
-            }
+            // if (finalBrokeForce < breakingForce.x)
+            // {
+            //     Debug.LogWarning($"{this} break force {finalBrokeForce} not reaching limit.");
+            //     return;
+            // }
             // print($"{this} Breaking with {finalBrokeForce}");
 
             breakableState = BreakableState.InitialBreak;
@@ -442,6 +449,12 @@ public class BreakablePart : MonoBehaviour
     public void EvaluateBreak(PartDistance pd, Vector3 force, BreakablePart originalPart,
         List<BreakablePart> breakHistory)
     {
+        if (!gameObject.activeSelf)
+        {
+            print($"{this} not active");
+            return;
+        }
+
         Vector3 newForce = force * forceTransfer;
 
         float LerpForce = .5f;
@@ -468,13 +481,19 @@ public class BreakablePart : MonoBehaviour
         }
         else
         {
+            EvaluateFall();
+        }
+        
+    }
+
+    public void EvaluateFall()
+    {
+        if (gameObject.activeSelf)
+        {
             StartCoroutine(DelayBreakBottom());
         }
-        // else if(force.magnitude > connectedPart.BreakForceLimit)
-        // {
-        //     connectedPart.Part.Break_Single(newForce,originalForce);
-        // }
     }
+
 
     private bool IsBroken()
     {
@@ -531,6 +550,10 @@ public class BreakablePart : MonoBehaviour
         if (force > breakingForce.x)
         {
             Break(forceDir * force, forceDir * force);
+        }
+        else
+        {
+            breakingForce -= new Vector2(force, force);
         }
 
         //have original object to keep flying
@@ -593,25 +616,42 @@ public class BreakablePart : MonoBehaviour
 
     IEnumerator DelayBreakBottom()
     {
+        // Debug.Log($"{this} bottom break start.");
+
         yield return new WaitForSeconds(breakDelay);
 
-        if (!HasBottomPart())
+        if (!IsBroken()&&!HasBottomPart())
         {
         
             Debug.Log($"{this} break bottom.");
-            Break(Vector3.down*breakingForce.y/forceTransfer*100f, Vector3.down*breakingForce.y*1.1f);
+            Break(new Vector3(), new Vector3());
+            if (isDebug)
+            {
+                rendererMaterial.color = Color.blue;
+            }
         }
     }
 
     bool HasBottomPart()
     {
-        double cos = Math.Cos(minBottomAngle*Mathf.Deg2Rad);
+
+        if (connectedParts.Count == 0)
+        {
+            return false;
+        }
+        // double cos = Math.Cos(minBottomAngle*Mathf.Deg2Rad);
 
         foreach (PartDistance connectedPart in connectedParts)
         {
-            float dot = Vector3.Dot(Vector3.down, connectedPart.Dir);
+            // float dot = Vector3.Dot(Vector3.up, connectedPart.Dir);
+            //
+            // if(dot>cos)
+            // {
+            //     return true;
+            // }
             
-            if(dot<cos)
+            //sht makes no sense but it's dotting the other way
+            if (Vector3.Angle(Vector3.up, connectedPart.Dir) > minBottomAngle)
             {
                 return true;
             }
