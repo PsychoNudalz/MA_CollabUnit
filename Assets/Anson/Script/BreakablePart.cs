@@ -5,55 +5,6 @@ using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 
-[Serializable]
-public struct PartDistance
-{
-    [SerializeField]
-    private BreakablePart part;
-
-    [SerializeField]
-    private float distance;
-
-    // [SerializeField]
-    // [Tooltip("Min, Max")]
-    // private Vector2 breakForceLimit;
-
-
-    [SerializeField]
-    private Vector3 dir;
-
-    public BreakablePart Part => part;
-
-    public float Distance => distance;
-
-    // public Vector2 BreakForceLimit => breakForceLimit;
-
-    public Vector3 Dir => dir;
-
-    public PartDistance(BreakablePart part, float distance, Vector2 breakForceLimit, Vector3 dir)
-    {
-        this.part = part;
-        this.distance = distance;
-        // this.breakForceLimit = breakForceLimit;
-        this.dir = dir;
-    }
-
-    public override bool Equals(object obj)
-    {
-        if (obj is BreakablePart other)
-        {
-            other.Equals(part);
-            return true;
-        }
-
-        return base.Equals(obj);
-    }
-
-    public override int GetHashCode()
-    {
-        return base.GetHashCode();
-    }
-}
 
 [Serializable]
 public enum BreakableState
@@ -64,113 +15,8 @@ public enum BreakableState
 }
 
 [Serializable]
-public class BreakablePart : MonoBehaviour
+public class BreakablePart : BreakableComponent
 {
-    [SerializeField]
-    private Rigidbody selfRB;
-
-    [SerializeField]
-    private List<PartDistance> connectedParts;
-
-    [SerializeField]
-    private List<PartDistance> otherConnectedParts;
-
-    [SerializeField]
-    private BreakableState breakableState = BreakableState.Hold;
-
-    [Header("Stats")]
-    [SerializeField]
-    [Tooltip("Min, Max")]
-    private Vector2 breakingForce;
-
-    [SerializeField]
-    [Range(0f, 1f)]
-    private float forceTransfer = .5f;
-
-    [SerializeField]
-    private AnimationCurve transferToDot;
-
-    [SerializeField]
-    private float breakDelay = .5f;
-
-    [SerializeField]
-    private float minBottomAngle = 80f;
-    
-    [Header("Connection")]
-    [SerializeField]
-    private float affectiveRange = 10f;
-
-    [SerializeField]
-    private LayerMask castLayer;
-
-
-    [Header("Debug")]
-    private bool isDebug = true;
-
-
-    [SerializeField]
-    private bool forceShowConnection = false;
-
-    [Space(10)]
-    [SerializeField]
-    private float meshSize = 0f;
-
-    [SerializeField]
-    private float minimumPartSize = 2f;
-
-    [SerializeField]
-    private float finalBrokeForce = 0f;
-
-    private float fullBreakTime = .5f;
-
-    [Space(10)]
-    [SerializeField]
-    private Renderer renderer;
-
-    [SerializeField]
-    private MeshFilter meshFilter;
-
-
-    [SerializeField]
-    private GameObject parent;
-
-    private Material rendererMaterial;
-
-
-    public Vector2 BreakingForce
-    {
-        get => breakingForce;
-        set => breakingForce = value;
-    }
-
-    public float AffectiveRange
-    {
-        get => affectiveRange;
-        set => affectiveRange = value;
-    }
-
-    public LayerMask CastLayer
-    {
-        get => castLayer;
-        set => castLayer = value;
-    }
-
-    public float ForceTransfer
-    {
-        get => forceTransfer;
-        set => forceTransfer = value;
-    }
-
-
-    public GameObject Parent
-    {
-        get => parent;
-        set => parent = value;
-    }
-
-    public BreakableState BreakableState => breakableState;
-
-
     private void Awake()
     {
         if (isDebug)
@@ -181,27 +27,33 @@ public class BreakablePart : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        if (breakableState == BreakableState.Hold || forceShowConnection)
+        try
         {
-            if (otherConnectedParts?.Count > 0)
+            if (breakableState == BreakableState.Hold || forceShowConnection)
             {
-                foreach (PartDistance connectedPart in otherConnectedParts)
+                if (otherConnectedParts?.Count > 0)
                 {
-                    Gizmos.color = Color.magenta;
-                    Gizmos.DrawLine(transform.position, connectedPart.Part.transform.position);
+                    foreach (BreakableData connectedPart in otherConnectedParts)
+                    {
+                        Gizmos.color = Color.magenta;
+                        Gizmos.DrawLine(transform.position, connectedPart.Component.transform.position);
+                    }
+                }
+
+                if (connectedParts?.Count > 0)
+                {
+                    foreach (BreakableData connectedPart in connectedParts)
+                    {
+                        Gizmos.color = Color.white;
+
+                        Gizmos.DrawLine(transform.position, connectedPart.Component.transform.position);
+                    }
                 }
             }
-            if (connectedParts?.Count > 0)
-            {
-                foreach (PartDistance connectedPart in connectedParts)
-                {
-                    Gizmos.color = Color.white;
-
-                    Gizmos.DrawLine(transform.position, connectedPart.Part.transform.position);
-                }
-            }
-
-            
+        }
+        catch (NullReferenceException e)
+        {
+            // Debug.LogWarning("Debug line is null");
         }
     }
 
@@ -211,20 +63,20 @@ public class BreakablePart : MonoBehaviour
         {
             if (!bp.Parent.Equals(parent) || bp.BreakableState == BreakableState.FullBreak)
             {
-                Collision(bp.selfRB);
+                CollisionBreak(bp.selfRB);
             }
         }
         else if (collision.gameObject.TryGetComponent(out Rigidbody rb))
         {
-            Collision(rb);
+            CollisionBreak(rb);
         }
     }
 
     bool RBInConnected(Rigidbody rb)
     {
-        foreach (PartDistance connectedPart in connectedParts)
+        foreach (BreakableData connectedPart in connectedParts)
         {
-            if (connectedPart.Part.selfRB.Equals(rb))
+            if (connectedPart.Component.SelfRb.Equals(rb))
             {
                 return true;
             }
@@ -233,100 +85,13 @@ public class BreakablePart : MonoBehaviour
         return false;
     }
 
-    public void Initialise(GameObject p, float mass, float drag, float affectedRange, Vector2 breakForce,
-        float forceTransfer, LayerMask bpLayer, AnimationCurve transferToDot, float minSize, float breakDelay,float bottomAngle)
-    {
-        parent = p;
-
-
-        Initialise();
-        this.AffectiveRange = affectedRange;
-        this.BreakingForce = breakForce * meshSize;
-        this.ForceTransfer = forceTransfer;
-        this.CastLayer = bpLayer;
-        minimumPartSize = minSize;
-        this.breakDelay = breakDelay;
-        minBottomAngle = bottomAngle;
-        selfRB.mass = mass * meshSize;
-        selfRB.drag = drag;
-        selfRB.angularDrag = drag;
-        selfRB.isKinematic = true;
-        selfRB.useGravity = false;
-        selfRB.collisionDetectionMode = CollisionDetectionMode.Continuous;
-        this.transferToDot = transferToDot;
-    }
-
-    // [ContextMenu("Reset")]
-
-    [ContextMenu("Initialise")]
-    public void Initialise()
-    {
-        if (!selfRB)
-        {
-            selfRB = GetComponent<Rigidbody>();
-        }
-
-        if (!meshFilter)
-        {
-            meshFilter = GetComponent<MeshFilter>();
-        }
-
-        if (isDebug)
-        {
-            if (!renderer)
-            {
-                renderer = GetComponent<Renderer>();
-            }
-        }
-
-        connectedParts = new List<PartDistance>();
-        otherConnectedParts = new List<PartDistance>();
-
-        meshSize = meshFilter.sharedMesh.bounds.size.magnitude * transform.lossyScale.x;
-        // print($"{this} mesh size: {meshSize}");
-        // var tempParts = InitialiseClosest();
-        //
-    }
-
-    public List<PartDistance> InitialiseClosest()
-    {
-        float CastSizeMultiplier = .25f;
-        float range = affectiveRange + meshSize * CastSizeMultiplier;
-        RaycastHit[] hits = Physics.SphereCastAll(transform.position, range,
-            Vector3.up, 0, castLayer);
-        // List<PartDistance> tempParts = new List<PartDistance>();
-        foreach (RaycastHit currentHit in hits)
-        {
-            if (currentHit.collider.TryGetComponent(out BreakablePart current))
-            {
-                if (current.parent.Equals(parent) && !current.Equals(this))
-                {
-                    AddPart(current);
-
-                    //adding for other
-                    current.AddOtherPart(this);
-                }
-            }
-        }
-
-        return connectedParts;
-    }
-
-    public PartDistance CalculatePartDistance(BreakablePart bp)
-    {
-        float d = Mathf.Abs((bp.transform.position - transform.position).magnitude);
-        // float f = Mathf.Lerp(breakingForce, bp.breakingForce, d / affectiveRange);
-        Vector2 f = bp.breakingForce;
-        return new PartDistance(bp, d, f, (bp.transform.position - transform.position).normalized);
-    }
-
-
-    public void Break(Vector3 force, Vector3 originalForce, List<BreakablePart> breakHistory = null,
+    
+    public override void Break(Vector3 force, Vector3 originalForce, List<BreakableComponent> breakHistory = null,
         float breakDelay = 0f, bool forceBreak = false)
     {
         if (breakDelay == 0f)
         {
-            Break_Recursive(force, originalForce, breakHistory, breakDelay,forceBreak);
+            Break_Recursive(force, originalForce, breakHistory, breakDelay, forceBreak);
         }
         else
         {
@@ -342,7 +107,7 @@ public class BreakablePart : MonoBehaviour
     /// <param name="force"></param>
     /// <param name="originalForce"></param>
     /// <param name="???"></param>
-    public void Break_Recursive(Vector3 force, Vector3 originalForce, List<BreakablePart> breakHistory = null,
+    public void Break_Recursive(Vector3 force, Vector3 originalForce, List<BreakableComponent> breakHistory = null,
         float breakDelay = 0f, bool forceBreak = false)
     {
         if (IsBroken())
@@ -352,7 +117,7 @@ public class BreakablePart : MonoBehaviour
 
         if (breakHistory == null)
         {
-            breakHistory = new List<BreakablePart>();
+            breakHistory = new List<BreakableComponent>();
         }
 
         if (breakHistory.Contains(this))
@@ -367,22 +132,24 @@ public class BreakablePart : MonoBehaviour
 
         // print($"{this} Force: {force}");
         Vector3 newForce = force * forceTransfer;
-        PartDistance[] tempPD = connectedParts.ToArray();
-        foreach (PartDistance connectedPart in tempPD)
+        BreakableData[] tempPD = connectedParts.ToArray();
+        foreach (BreakableData connectedPart in tempPD)
         {
-            connectedPart.Part.EvaluateBreak(connectedPart, force, this, breakHistory);
+
+            connectedPart.Component.EvaluateBreak(connectedPart, force, this, breakHistory);
         }
 
         tempPD = otherConnectedParts.ToArray();
-        foreach (PartDistance partDistance in tempPD)
+        foreach (BreakableData partDistance in tempPD)
         {
-            partDistance.Part.EvaluateFall();
+
+            partDistance.Component.EvaluateFall();
         }
 
         ApplyForce(force);
     }
 
-    private IEnumerator DelayBreak_Recursive(Vector3 force, Vector3 originalForce, List<BreakablePart> breakHistory,
+    private IEnumerator DelayBreak_Recursive(Vector3 force, Vector3 originalForce, List<BreakableComponent> breakHistory,
         float breakDelay = 0f)
     {
         yield return new WaitForSeconds(breakDelay);
@@ -405,9 +172,9 @@ public class BreakablePart : MonoBehaviour
         }
 
         finalBrokeForce = force.magnitude;
-        foreach (PartDistance part in otherConnectedParts)
+        foreach (BreakableData part in otherConnectedParts)
         {
-            part.Part.RemovePart(this);
+            part.Component.RemovePart(this);
         }
 
         //if piece is too small
@@ -445,8 +212,8 @@ public class BreakablePart : MonoBehaviour
     /// </summary>
     /// <param name="pd"></param>
     /// <param name="force"></param>
-    public void EvaluateBreak(PartDistance pd, Vector3 force, BreakablePart originalPart,
-        List<BreakablePart> breakHistory)
+    public override void EvaluateBreak(BreakableData pd, Vector3 force, BreakableComponent originalPart,
+        List<BreakableComponent> breakHistory)
     {
         if (!gameObject.activeSelf)
         {
@@ -482,10 +249,9 @@ public class BreakablePart : MonoBehaviour
         {
             EvaluateFall();
         }
-        
     }
 
-    public void EvaluateFall()
+    public override void EvaluateFall()
     {
         if (gameObject.activeSelf)
         {
@@ -494,22 +260,17 @@ public class BreakablePart : MonoBehaviour
     }
 
 
-    private bool IsBroken()
-    {
-        return breakableState is BreakableState.InitialBreak or BreakableState.FullBreak;
-    }
-
     private void ApplyForce(Vector3 f)
     {
         float multiplier = 1f;
-        Vector3 addForce = f * selfRB.mass * multiplier * forceTransfer;
+        Vector3 addForce = f * multiplier * forceTransfer;
         if (!float.IsNaN(addForce.x))
         {
             selfRB.AddForce(addForce);
         }
     }
 
-    public void Collision(Rigidbody rb)
+    public override void CollisionBreak(Rigidbody rb, Collision collision = null)
 
     {
         if (IsBroken())
@@ -541,10 +302,10 @@ public class BreakablePart : MonoBehaviour
         }
 
 
-        if (force > breakingForce.x * .7f)
-        {
-            print($"Collided with {rb} with force: {force}  Against: {breakingForce}");
-        }
+        // if (force > breakingForce.x * .7f)
+        // {
+        //     print($"Collided with {rb} with force: {force}  Against: {breakingForce}");
+        // }
 
         if (force > breakingForce.x)
         {
@@ -562,66 +323,14 @@ public class BreakablePart : MonoBehaviour
         }
     }
 
-    public void RemovePart(BreakablePart part)
-    {
-        for (int i = 0; i < connectedParts.Count; i++)
-        {
-            PartDistance current = connectedParts[i];
-            if (current.Part.Equals(part))
-            {
-                // print($"{this} remove connection: {part}");
-                connectedParts.RemoveAt(i);
-                return;
-            }
-        }
-
-        for (int i = 0; i < otherConnectedParts.Count; i++)
-        {
-            PartDistance current = otherConnectedParts[i];
-            if (current.Part.Equals(part))
-            {
-                // print($"{this} remove connection: {part}");
-                otherConnectedParts.RemoveAt(i);
-                return;
-            }
-        }
-    }
-
-    public void AddPart(BreakablePart current)
-    {
-        PartDistance item = CalculatePartDistance(current);
-
-        if (!connectedParts.Contains(item))
-        {
-            connectedParts.Add(item);
-        }
-    }
-
-    public void AddOtherPart(BreakablePart current)
-    {
-        PartDistance item = CalculatePartDistance(current);
-
-        if (!otherConnectedParts.Contains(item) && !connectedParts.Contains(item))
-        {
-            otherConnectedParts.Add(item);
-        }
-    }
-
-    IEnumerator DelayToFullBreak()
-    {
-        yield return new WaitForSeconds(fullBreakTime);
-        breakableState = BreakableState.FullBreak;
-    }
-
     IEnumerator DelayBreakBottom()
     {
         // Debug.Log($"{this} bottom break start.");
 
         yield return new WaitForSeconds(breakDelay);
 
-        if (!IsBroken()&&!HasBottomPart())
+        if (!IsBroken() && !HasBottomPart())
         {
-        
             // Debug.Log($"{this} break bottom.");
             Break(new Vector3(), new Vector3());
             if (isDebug)
@@ -631,31 +340,16 @@ public class BreakablePart : MonoBehaviour
         }
     }
 
-    bool HasBottomPart()
+    protected override void AddDetectedPart(BreakableComponent current)
     {
-
-        if (connectedParts.Count == 0)
+        if (current is BreakablePart bp)
         {
-            return false;
+            AddPart(bp);
+            bp.AddOtherPart(this);
         }
-        // double cos = Math.Cos(minBottomAngle*Mathf.Deg2Rad);
-
-        foreach (PartDistance connectedPart in connectedParts)
+        else
         {
-            // float dot = Vector3.Dot(Vector3.up, connectedPart.Dir);
-            //
-            // if(dot>cos)
-            // {
-            //     return true;
-            // }
-            
-            //sht makes no sense but it's dotting the other way
-            if (Vector3.Angle(Vector3.up, connectedPart.Dir) > minBottomAngle)
-            {
-                return true;
-            }
+            base.AddDetectedPart(current);
         }
-
-        return false;
     }
 }
