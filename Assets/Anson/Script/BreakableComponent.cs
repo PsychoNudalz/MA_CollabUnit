@@ -181,6 +181,10 @@ public class BreakableComponent : MonoBehaviour
         if (parent && !parent.TryGetComponent(out BreakableCollective _))
         {
             parent = p;
+        }else if (!parent)
+        {
+            parent = p;
+
         }
 
 

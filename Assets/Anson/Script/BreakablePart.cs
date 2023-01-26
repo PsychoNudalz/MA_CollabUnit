@@ -211,7 +211,7 @@ public class BreakablePart : BreakableComponent
     }
 
     /// <summary>
-    /// to determine what to do after the force is applied
+    /// to determine what to do after the force from other breakable is applied
     /// </summary>
     /// <param name="pd"></param>
     /// <param name="force"></param>

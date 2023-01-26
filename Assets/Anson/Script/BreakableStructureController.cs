@@ -146,6 +146,15 @@ public class BreakableStructureController : MonoBehaviour
         }
     }
 
+    
+    private void SetBreakConnections_Collectives()
+    {
+        foreach (BreakableCollective collective in breakableCollectives)
+        {
+            collective.InitialiseClosest();
+        }
+    }
+
     private void Initialise_BreakParts()
     {
         foreach (BreakablePart part in breakableParts)
@@ -197,6 +206,7 @@ public class BreakableStructureController : MonoBehaviour
         Initialise_BreakCollective();
         Initialise_BreakParts();
         SetBreakConnections_Parts();
+        SetBreakConnections_Collectives();
     }
 
     [ContextMenu("Reset collider names")]

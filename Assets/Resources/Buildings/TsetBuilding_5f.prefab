@@ -83,47 +83,12 @@ MonoBehaviour:
   - {fileID: 7602359420036731300}
   - {fileID: 6845710563880681990}
   - {fileID: 2115724672602395138}
-  breakableComponents:
-  - {fileID: 4406032887305206324}
-  - {fileID: 5570893332306850997}
-  - {fileID: 64698397482136131}
-  - {fileID: 8820808441100627337}
-  - {fileID: 3685559054528520654}
-  - {fileID: 7105740265926069476}
-  - {fileID: 4581373715066324470}
-  - {fileID: 5824577764089355878}
-  - {fileID: 1571013572169215952}
-  - {fileID: 2660775233742894455}
-  - {fileID: 1190581872442092109}
-  - {fileID: 178473390391078821}
-  - {fileID: 840999756871535614}
-  - {fileID: 6996887287974144376}
-  - {fileID: 4340576682821578151}
-  - {fileID: 8451635670621802163}
-  - {fileID: 6864767218217690670}
-  - {fileID: 5579363856913466618}
-  - {fileID: 3409569725822489093}
-  - {fileID: 3357547427939848895}
-  - {fileID: 901927233275536642}
-  - {fileID: 3220537788501688600}
-  - {fileID: 8653444040748842563}
-  - {fileID: 5650561442479268419}
-  - {fileID: 3761983654995495390}
-  - {fileID: 6775977392495571518}
-  - {fileID: 4100773902711459169}
-  - {fileID: 8036789764888680206}
-  - {fileID: 3195066331171614886}
-  - {fileID: 8385330634617802555}
-  - {fileID: 2495646486146827087}
-  - {fileID: 1757990097626943421}
-  - {fileID: 6676932790136858613}
-  - {fileID: 5794612661520784952}
-  - {fileID: 3303650115289639941}
-  - {fileID: 2245212136521436337}
-  - {fileID: 546651509397917505}
+  allBreakableComponents: []
+  breakableParts: []
+  breakableCollectives: []
   mass: 1
   drag: 0
-  physicMaterial: {fileID: 0}
+  physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   affectedRange: 0.5
   breakForce: {x: 100, y: 150}
   forceTransfer: 0.5
@@ -843,6 +808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 5845483986537664120}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 901927233275536642}
     distance: 2.7423751
@@ -978,13 +944,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1657369601663890053}
+  physicMaterial: {fileID: 0}
   connectedParts:
-  - component: {fileID: 2660775233742894455}
-    distance: 3.5630255
-    dir: {x: 0.9406469, y: -0.33107466, z: 0.07465212}
   - component: {fileID: 901927233275536642}
     distance: 3.3307643
     dir: {x: -0.45291698, y: -0.82640517, z: 0.3345455}
+  - component: {fileID: 2660775233742894455}
+    distance: 3.5630255
+    dir: {x: 0.9406469, y: -0.33107466, z: 0.07465212}
   - component: {fileID: 1571013572169215952}
     distance: 4.890484
     dir: {x: -0.60041654, y: 0.75912446, z: -0.25145572}
@@ -1094,6 +1061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 8717600858520874198}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 2660775233742894455}
     distance: 7.3640623
@@ -1113,18 +1081,18 @@ MonoBehaviour:
   - component: {fileID: 840999756871535614}
     distance: 5.794376
     dir: {x: 0.55351895, y: 0.65179354, z: 0.5184419}
+  - component: {fileID: 4581373715066324470}
+    distance: 5.8410487
+    dir: {x: -0.8564794, y: 0.10827379, z: -0.5046977}
+  - component: {fileID: 7105740265926069476}
+    distance: 4.829712
+    dir: {x: -0.6717497, y: -0.74066824, z: 0.012763807}
   - component: {fileID: 3685559054528520654}
     distance: 4.4758444
     dir: {x: 0.73177296, y: -0.2624659, z: -0.6289833}
   - component: {fileID: 3409569725822489093}
     distance: 6.071678
     dir: {x: -0.033535514, y: 0.6365576, z: -0.77049977}
-  - component: {fileID: 7105740265926069476}
-    distance: 4.829712
-    dir: {x: -0.6717497, y: -0.74066824, z: 0.012763807}
-  - component: {fileID: 4581373715066324470}
-    distance: 5.8410487
-    dir: {x: -0.8564794, y: 0.10827379, z: -0.5046977}
   otherConnectedParts:
   - component: {fileID: 5570893332306850997}
     distance: 9.547286
@@ -1153,6 +1121,15 @@ MonoBehaviour:
   - component: {fileID: 8451635670621802163}
     distance: 8.962439
     dir: {x: -0.5855759, y: 0.7889025, z: 0.18637004}
+  - component: {fileID: 3409569725822489093}
+    distance: 6.071678
+    dir: {x: -0.033535514, y: 0.6365576, z: -0.77049977}
+  - component: {fileID: 8036789764888680206}
+    distance: 5.118244
+    dir: {x: 0.79275304, y: -0.39372975, z: 0.46531644}
+  - component: {fileID: 2495646486146827087}
+    distance: 4.846824
+    dir: {x: 0.5994644, y: -0.16637075, z: 0.78291965}
   - component: {fileID: 3303650115289639941}
     distance: 6.099974
     dir: {x: -0.0665645, y: 0.9976469, z: -0.016427657}
@@ -1293,13 +1270,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 457662936205386109}
+  physicMaterial: {fileID: 0}
   connectedParts:
-  - component: {fileID: 6996887287974144376}
-    distance: 3.8814347
-    dir: {x: 0.35619038, y: -0.9341641, z: 0.021583403}
   - component: {fileID: 901927233275536642}
     distance: 3.9001575
     dir: {x: 0.66580176, y: -0.4384165, z: 0.60373753}
+  - component: {fileID: 6996887287974144376}
+    distance: 3.8814347
+    dir: {x: 0.35619038, y: -0.9341641, z: 0.021583403}
   - component: {fileID: 4406032887305206324}
     distance: 3.957007
     dir: {x: 0.40087548, y: 0.31533822, z: 0.8601515}
@@ -1309,12 +1287,12 @@ MonoBehaviour:
   - component: {fileID: 1571013572169215952}
     distance: 4.896741
     dir: {x: 0.23872285, y: 0.9710853, z: 0.0021727085}
-  - component: {fileID: 6864767218217690670}
-    distance: 6.5680866
-    dir: {x: 0.029395085, y: -0.22290358, z: -0.9743972}
   - component: {fileID: 7105740265926069476}
     distance: 6.6363726
     dir: {x: 0.6319526, y: -0.09117856, z: -0.7696248}
+  - component: {fileID: 6864767218217690670}
+    distance: 6.5680866
+    dir: {x: 0.029395085, y: -0.22290358, z: -0.9743972}
   otherConnectedParts:
   - component: {fileID: 4406032887305206324}
     distance: 3.957007
@@ -1331,6 +1309,12 @@ MonoBehaviour:
   - component: {fileID: 6864767218217690670}
     distance: 6.5680866
     dir: {x: 0.029395085, y: -0.22290358, z: -0.9743972}
+  - component: {fileID: 901927233275536642}
+    distance: 3.9001575
+    dir: {x: 0.66580176, y: -0.4384165, z: 0.60373753}
+  - component: {fileID: 6775977392495571518}
+    distance: 2.175652
+    dir: {x: 0.5720351, y: 0.26692358, z: 0.7755822}
   breakableState: 0
   breakingForce: {x: 1158.0029, y: 1737.0044}
   forceTransfer: 0.5
@@ -1428,22 +1412,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 4060800131172129523}
+  physicMaterial: {fileID: 0}
   connectedParts:
-  - component: {fileID: 178473390391078821}
-    distance: 6.452795
-    dir: {x: 0.99860686, y: 0.01671987, z: 0.05004784}
   - component: {fileID: 901927233275536642}
     distance: 3.209724
     dir: {x: 0.3782886, y: 0.5969371, z: 0.70750535}
   - component: {fileID: 3357547427939848895}
     distance: 3.8814347
     dir: {x: -0.35619038, y: 0.9341641, z: -0.021583403}
-  - component: {fileID: 6864767218217690670}
-    distance: 6.9373455
-    dir: {x: -0.17145756, y: 0.3116245, z: -0.93460816}
+  - component: {fileID: 178473390391078821}
+    distance: 6.452795
+    dir: {x: 0.99860686, y: 0.01671987, z: 0.05004784}
   - component: {fileID: 7105740265926069476}
     distance: 6.631622
     dir: {x: 0.42392996, y: 0.45551482, z: -0.7828088}
+  - component: {fileID: 6864767218217690670}
+    distance: 6.9373455
+    dir: {x: -0.17145756, y: 0.3116245, z: -0.93460816}
   otherConnectedParts:
   - component: {fileID: 7105740265926069476}
     distance: 6.631622
@@ -1451,6 +1436,12 @@ MonoBehaviour:
   - component: {fileID: 178473390391078821}
     distance: 6.452795
     dir: {x: 0.99860686, y: 0.01671987, z: 0.05004784}
+  - component: {fileID: 3357547427939848895}
+    distance: 3.8814347
+    dir: {x: -0.35619038, y: 0.9341641, z: -0.021583403}
+  - component: {fileID: 901927233275536642}
+    distance: 3.209724
+    dir: {x: 0.3782886, y: 0.5969371, z: 0.70750535}
   breakableState: 0
   breakingForce: {x: 1036.2124, y: 1554.3185}
   forceTransfer: 0.5
@@ -1541,16 +1532,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 6034527594459135373}
+  physicMaterial: {fileID: 0}
   connectedParts:
-  - component: {fileID: 2660775233742894455}
-    distance: 5.1782618
-    dir: {x: 0.93855983, y: 0.30375704, z: -0.16382037}
-  - component: {fileID: 178473390391078821}
-    distance: 5.866219
-    dir: {x: 0.89147764, y: -0.3082247, z: -0.332062}
   - component: {fileID: 6996887287974144376}
     distance: 3.209724
     dir: {x: -0.3782886, y: -0.5969371, z: -0.70750535}
+  - component: {fileID: 4100773902711459169}
+    distance: 3.3307643
+    dir: {x: 0.45291698, y: 0.82640517, z: -0.3345455}
+  - component: {fileID: 2660775233742894455}
+    distance: 5.1782618
+    dir: {x: 0.93855983, y: 0.30375704, z: -0.16382037}
   - component: {fileID: 4406032887305206324}
     distance: 3.2968574
     dir: {x: -0.30649328, y: 0.89712375, z: 0.31816784}
@@ -1560,9 +1552,9 @@ MonoBehaviour:
   - component: {fileID: 3357547427939848895}
     distance: 3.9001575
     dir: {x: -0.66580176, y: 0.4384165, z: -0.60373753}
-  - component: {fileID: 4100773902711459169}
-    distance: 3.3307643
-    dir: {x: 0.45291698, y: 0.82640517, z: -0.3345455}
+  - component: {fileID: 178473390391078821}
+    distance: 5.866219
+    dir: {x: 0.89147764, y: -0.3082247, z: -0.332062}
   otherConnectedParts:
   - component: {fileID: 4406032887305206324}
     distance: 3.2968574
@@ -1582,6 +1574,12 @@ MonoBehaviour:
   - component: {fileID: 3357547427939848895}
     distance: 3.9001575
     dir: {x: -0.66580176, y: 0.4384165, z: -0.60373753}
+  - component: {fileID: 6775977392495571518}
+    distance: 2.7423751
+    dir: {x: -0.4930698, y: 0.83527094, z: -0.24331991}
+  - component: {fileID: 4100773902711459169}
+    distance: 3.3307643
+    dir: {x: 0.45291698, y: 0.82640517, z: -0.3345455}
   breakableState: 0
   breakingForce: {x: 891.14215, y: 1336.7133}
   forceTransfer: 0.5
@@ -1740,7 +1738,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 4426676336346428367}
+  physicMaterial: {fileID: 0}
   connectedParts:
+  - component: {fileID: 840999756871535614}
+    distance: 7.6410675
+    dir: {x: -0.008899946, y: 0.6480107, z: 0.7615793}
+  - component: {fileID: 4581373715066324470}
+    distance: 8.474049
+    dir: {x: -0.9768695, y: 0.21326157, z: -0.015663397}
+  - component: {fileID: 7105740265926069476}
+    distance: 7.5202518
+    dir: {x: -0.866947, y: -0.31946507, z: 0.3825506}
+  - component: {fileID: 5579363856913466618}
+    distance: 4.4758444
+    dir: {x: -0.73177296, y: 0.2624659, z: 0.6289833}
+  - component: {fileID: 3409569725822489093}
+    distance: 6.400976
+    dir: {x: -0.5434981, y: 0.7873376, z: -0.2910486}
+  otherConnectedParts:
+  - component: {fileID: 8820808441100627337}
+    distance: 8.312385
+    dir: {x: 0.12552737, y: -0.22224145, z: 0.9668773}
+  - component: {fileID: 7105740265926069476}
+    distance: 7.5202518
+    dir: {x: -0.866947, y: -0.31946507, z: 0.3825506}
   - component: {fileID: 840999756871535614}
     distance: 7.6410675
     dir: {x: -0.008899946, y: 0.6480107, z: 0.7615793}
@@ -1750,16 +1771,6 @@ MonoBehaviour:
   - component: {fileID: 3409569725822489093}
     distance: 6.400976
     dir: {x: -0.5434981, y: 0.7873376, z: -0.2910486}
-  - component: {fileID: 7105740265926069476}
-    distance: 7.5202518
-    dir: {x: -0.866947, y: -0.31946507, z: 0.3825506}
-  - component: {fileID: 4581373715066324470}
-    distance: 8.474049
-    dir: {x: -0.9768695, y: 0.21326157, z: -0.015663397}
-  otherConnectedParts:
-  - component: {fileID: 8820808441100627337}
-    distance: 8.312385
-    dir: {x: 0.12552737, y: -0.22224145, z: 0.9668773}
   - component: {fileID: 5650561442479268419}
     distance: 9.347618
     dir: {x: 0.05832062, y: 0.99027085, z: -0.12634191}
@@ -1940,6 +1951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 3166247961429103875}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 2660775233742894455}
     distance: 4.540032
@@ -1962,16 +1974,40 @@ MonoBehaviour:
   - component: {fileID: 840999756871535614}
     distance: 7.2372775
     dir: {x: -0.15357113, y: 0.9394209, z: -0.30643806}
-  - component: {fileID: 3685559054528520654}
-    distance: 8.312385
-    dir: {x: -0.12552737, y: 0.22224145, z: -0.9668773}
-  - component: {fileID: 5579363856913466618}
-    distance: 7.4197087
-    dir: {x: -0.5820624, y: 0.40730882, z: -0.70377755}
   - component: {fileID: 7105740265926069476}
     distance: 9.1725645
     dir: {x: -0.824534, y: -0.06051758, z: -0.5625667}
-  otherConnectedParts: []
+  - component: {fileID: 5579363856913466618}
+    distance: 7.4197087
+    dir: {x: -0.5820624, y: 0.40730882, z: -0.70377755}
+  - component: {fileID: 3685559054528520654}
+    distance: 8.312385
+    dir: {x: -0.12552737, y: 0.22224145, z: -0.9668773}
+  otherConnectedParts:
+  - component: {fileID: 2660775233742894455}
+    distance: 4.540032
+    dir: {x: -0.94715726, y: -0.019155486, z: 0.32019705}
+  - component: {fileID: 1190581872442092109}
+    distance: 6.652017
+    dir: {x: -0.6591736, y: 0.7260609, z: 0.1957694}
+  - component: {fileID: 178473390391078821}
+    distance: 5.2537913
+    dir: {x: -0.748151, y: -0.6600973, z: 0.067391545}
+  - component: {fileID: 840999756871535614}
+    distance: 7.2372775
+    dir: {x: -0.15357113, y: 0.9394209, z: -0.30643806}
+  - component: {fileID: 5579363856913466618}
+    distance: 7.4197087
+    dir: {x: -0.5820624, y: 0.40730882, z: -0.70377755}
+  - component: {fileID: 8036789764888680206}
+    distance: 3.0247252
+    dir: {x: -0.086364865, y: 0.33289236, z: -0.93900144}
+  - component: {fileID: 8385330634617802555}
+    distance: 2.558986
+    dir: {x: -0.53813374, y: 0.7075773, z: 0.45798084}
+  - component: {fileID: 2495646486146827087}
+    distance: 2.9905703
+    dir: {x: -0.47256377, y: 0.7409099, z: -0.4772169}
   breakableState: 0
   breakingForce: {x: 1495.8066, y: 2243.71}
   forceTransfer: 0.5
@@ -2088,40 +2124,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 5462738443971131801}
+  physicMaterial: {fileID: 0}
   connectedParts:
-  - component: {fileID: 2660775233742894455}
-    distance: 7.3898287
-    dir: {x: 0.44154844, y: 0.06334855, z: 0.89499825}
-  - component: {fileID: 178473390391078821}
-    distance: 7.2171106
-    dir: {x: 0.5033125, y: -0.40361196, z: 0.76405096}
-  - component: {fileID: 6996887287974144376}
-    distance: 6.631622
-    dir: {x: -0.42392996, y: -0.45551482, z: 0.7828088}
   - component: {fileID: 901927233275536642}
     distance: 7.7107525
     dir: {x: -0.2071317, y: -0.14328025, z: 0.967764}
+  - component: {fileID: 6996887287974144376}
+    distance: 6.631622
+    dir: {x: -0.42392996, y: -0.45551482, z: 0.7828088}
+  - component: {fileID: 2660775233742894455}
+    distance: 7.3898287
+    dir: {x: 0.44154844, y: 0.06334855, z: 0.89499825}
   - component: {fileID: 3357547427939848895}
     distance: 6.6363726
     dir: {x: -0.6319526, y: 0.09117856, z: 0.7696248}
   - component: {fileID: 1571013572169215952}
     distance: 8.004865
     dir: {x: -0.37788385, y: 0.6696238, z: 0.63938075}
+  - component: {fileID: 178473390391078821}
+    distance: 7.2171106
+    dir: {x: 0.5033125, y: -0.40361196, z: 0.76405096}
   - component: {fileID: 1190581872442092109}
     distance: 8.9922905
     dir: {x: 0.3534424, y: 0.59883195, z: 0.7186646}
-  - component: {fileID: 3685559054528520654}
-    distance: 7.5202518
-    dir: {x: 0.866947, y: 0.31946507, z: -0.3825506}
-  - component: {fileID: 5579363856913466618}
-    distance: 4.829712
-    dir: {x: 0.6717497, y: 0.74066824, z: -0.012763807}
-  - component: {fileID: 6864767218217690670}
-    distance: 4.291218
-    dir: {x: -0.9323236, y: -0.20016582, z: -0.30117512}
   - component: {fileID: 4581373715066324470}
     distance: 5.4654164
     dir: {x: -0.32172853, y: 0.77023345, z: -0.5506642}
+  - component: {fileID: 6864767218217690670}
+    distance: 4.291218
+    dir: {x: -0.9323236, y: -0.20016582, z: -0.30117512}
+  - component: {fileID: 5579363856913466618}
+    distance: 4.829712
+    dir: {x: 0.6717497, y: 0.74066824, z: -0.012763807}
+  - component: {fileID: 3685559054528520654}
+    distance: 7.5202518
+    dir: {x: 0.866947, y: 0.31946507, z: -0.3825506}
   otherConnectedParts:
   - component: {fileID: 8820808441100627337}
     distance: 9.1725645
@@ -2129,6 +2166,33 @@ MonoBehaviour:
   - component: {fileID: 3685559054528520654}
     distance: 7.5202518
     dir: {x: 0.866947, y: 0.31946507, z: -0.3825506}
+  - component: {fileID: 4581373715066324470}
+    distance: 5.4654164
+    dir: {x: -0.32172853, y: 0.77023345, z: -0.5506642}
+  - component: {fileID: 1571013572169215952}
+    distance: 8.004865
+    dir: {x: -0.37788385, y: 0.6696238, z: 0.63938075}
+  - component: {fileID: 2660775233742894455}
+    distance: 7.3898287
+    dir: {x: 0.44154844, y: 0.06334855, z: 0.89499825}
+  - component: {fileID: 1190581872442092109}
+    distance: 8.9922905
+    dir: {x: 0.3534424, y: 0.59883195, z: 0.7186646}
+  - component: {fileID: 178473390391078821}
+    distance: 7.2171106
+    dir: {x: 0.5033125, y: -0.40361196, z: 0.76405096}
+  - component: {fileID: 6996887287974144376}
+    distance: 6.631622
+    dir: {x: -0.42392996, y: -0.45551482, z: 0.7828088}
+  - component: {fileID: 6864767218217690670}
+    distance: 4.291218
+    dir: {x: -0.9323236, y: -0.20016582, z: -0.30117512}
+  - component: {fileID: 5579363856913466618}
+    distance: 4.829712
+    dir: {x: 0.6717497, y: 0.74066824, z: -0.012763807}
+  - component: {fileID: 3357547427939848895}
+    distance: 6.6363726
+    dir: {x: -0.6319526, y: 0.09117856, z: 0.7696248}
   - component: {fileID: 3195066331171614886}
     distance: 6.48361
     dir: {x: -0.35386577, y: 0.87157446, z: 0.33931842}
@@ -2282,6 +2346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 3293642940323572061}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 840999756871535614}
     distance: 4.530638
@@ -2402,6 +2467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 5157998933459363201}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 3357547427939848895}
     distance: 4.896741
@@ -2412,12 +2478,12 @@ MonoBehaviour:
   - component: {fileID: 1190581872442092109}
     distance: 6.3472023
     dir: {x: 0.97730714, y: 0.0038793338, z: 0.21179159}
-  - component: {fileID: 5579363856913466618}
-    distance: 8.325459
-    dir: {x: 0.75302356, y: -0.21416645, z: -0.6221642}
   - component: {fileID: 7105740265926069476}
     distance: 8.004865
     dir: {x: 0.37788385, y: -0.6696238, z: -0.63938075}
+  - component: {fileID: 5579363856913466618}
+    distance: 8.325459
+    dir: {x: 0.75302356, y: -0.21416645, z: -0.6221642}
   - component: {fileID: 8451635670621802163}
     distance: 6.4277673
     dir: {x: 0.15885432, y: 0.82259613, z: -0.5459862}
@@ -2431,12 +2497,27 @@ MonoBehaviour:
   - component: {fileID: 7105740265926069476}
     distance: 8.004865
     dir: {x: 0.37788385, y: -0.6696238, z: -0.63938075}
+  - component: {fileID: 1190581872442092109}
+    distance: 6.3472023
+    dir: {x: 0.97730714, y: 0.0038793338, z: 0.21179159}
+  - component: {fileID: 8451635670621802163}
+    distance: 6.4277673
+    dir: {x: 0.15885432, y: 0.82259613, z: -0.5459862}
+  - component: {fileID: 3357547427939848895}
+    distance: 4.896741
+    dir: {x: -0.23872285, y: -0.9710853, z: -0.0021727085}
+  - component: {fileID: 3761983654995495390}
+    distance: 6.703871
+    dir: {x: 0.4872499, y: 0.8643143, z: 0.12469304}
   - component: {fileID: 6775977392495571518}
     distance: 4.4992237
     dir: {x: 0.016799645, y: -0.927809, z: 0.37267715}
   - component: {fileID: 4100773902711459169}
     distance: 4.890484
     dir: {x: 0.60041654, y: -0.75912446, z: 0.25145572}
+  - component: {fileID: 3195066331171614886}
+    distance: 3.022225
+    dir: {x: 0.24173623, y: 0.09618772, z: -0.9655628}
   breakableState: 0
   breakingForce: {x: 1223.6377, y: 1835.4565}
   forceTransfer: 0.5
@@ -2553,6 +2634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 3618439964137475455}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 8820808441100627337}
     distance: 3.0247252
@@ -2560,12 +2642,12 @@ MonoBehaviour:
   - component: {fileID: 840999756871535614}
     distance: 5.887009
     dir: {x: -0.14442085, y: 0.9838513, z: 0.105731815}
-  - component: {fileID: 3685559054528520654}
-    distance: 5.32215
-    dir: {x: -0.146971, y: 0.15791519, z: -0.97645396}
   - component: {fileID: 5579363856913466618}
     distance: 5.118244
     dir: {x: -0.79275304, y: 0.39372975, z: -0.46531644}
+  - component: {fileID: 3685559054528520654}
+    distance: 5.32215
+    dir: {x: -0.146971, y: 0.15791519, z: -0.97645396}
   otherConnectedParts:
   - component: {fileID: 8820808441100627337}
     distance: 3.0247252
@@ -2673,43 +2755,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1274850546110964669}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 840999756871535614}
     distance: 8.405917
     dir: {x: 0.40577528, y: -0.010496874, z: 0.91391265}
-  - component: {fileID: 3685559054528520654}
-    distance: 6.400976
-    dir: {x: 0.5434981, y: -0.7873376, z: 0.2910486}
+  - component: {fileID: 4581373715066324470}
+    distance: 6.039428
+    dir: {x: -0.7946317, y: -0.53523946, z: 0.28649446}
   - component: {fileID: 5579363856913466618}
     distance: 6.071678
     dir: {x: 0.033535514, y: -0.6365576, z: 0.77049977}
+  - component: {fileID: 3685559054528520654}
+    distance: 6.400976
+    dir: {x: 0.5434981, y: -0.7873376, z: 0.2910486}
+  - component: {fileID: 8451635670621802163}
+    distance: 8.719358
+    dir: {x: -0.57854843, y: 0.3676323, z: 0.72809905}
+  - component: {fileID: 64698397482136131}
+    distance: 6.543741
+    dir: {x: -0.823024, y: 0.545313, z: 0.15895045}
+  - component: {fileID: 3220537788501688600}
+    distance: 6.4073153
+    dir: {x: -0.33217818, y: 0.9288937, z: 0.16375063}
+  - component: {fileID: 2245212136521436337}
+    distance: 4.348644
+    dir: {x: -0.5233888, y: 0.7445067, z: 0.4144562}
+  - component: {fileID: 3303650115289639941}
+    distance: 5.0922003
+    dir: {x: -0.039751947, y: 0.4360881, z: 0.89902556}
   - component: {fileID: 546651509397917505}
     distance: 4.2128835
     dir: {x: 0.0150862355, y: 0.47232133, z: 0.8812973}
   - component: {fileID: 5650561442479268419}
     distance: 5.868641
     dir: {x: 0.68569154, y: 0.71855557, z: 0.11621076}
-  - component: {fileID: 4581373715066324470}
-    distance: 6.039428
-    dir: {x: -0.7946317, y: -0.53523946, z: 0.28649446}
-  - component: {fileID: 8451635670621802163}
-    distance: 8.719358
-    dir: {x: -0.57854843, y: 0.3676323, z: 0.72809905}
-  - component: {fileID: 3303650115289639941}
-    distance: 5.0922003
-    dir: {x: -0.039751947, y: 0.4360881, z: 0.89902556}
   - component: {fileID: 5570893332306850997}
     distance: 7.3359203
     dir: {x: 0.12910876, y: 0.7705643, z: 0.62414867}
-  - component: {fileID: 64698397482136131}
-    distance: 6.543741
-    dir: {x: -0.823024, y: 0.545313, z: 0.15895045}
-  - component: {fileID: 2245212136521436337}
-    distance: 4.348644
-    dir: {x: -0.5233888, y: 0.7445067, z: 0.4144562}
-  - component: {fileID: 3220537788501688600}
-    distance: 6.4073153
-    dir: {x: -0.33217818, y: 0.9288937, z: 0.16375063}
   otherConnectedParts:
   - component: {fileID: 5570893332306850997}
     distance: 7.3359203
@@ -2726,6 +2809,15 @@ MonoBehaviour:
   - component: {fileID: 5579363856913466618}
     distance: 6.071678
     dir: {x: 0.033535514, y: -0.6365576, z: 0.77049977}
+  - component: {fileID: 3220537788501688600}
+    distance: 6.4073153
+    dir: {x: -0.33217818, y: 0.9288937, z: 0.16375063}
+  - component: {fileID: 5650561442479268419}
+    distance: 5.868641
+    dir: {x: 0.68569154, y: 0.71855557, z: 0.11621076}
+  - component: {fileID: 2245212136521436337}
+    distance: 4.348644
+    dir: {x: -0.5233888, y: 0.7445067, z: 0.4144562}
   breakableState: 0
   breakingForce: {x: 1573.0543, y: 2359.5815}
   forceTransfer: 0.5
@@ -2834,28 +2926,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 7615130778663474828}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 2660775233742894455}
     distance: 4.9197974
     dir: {x: 0.01721831, y: -0.9993778, z: 0.030782463}
+  - component: {fileID: 1571013572169215952}
+    distance: 6.3472023
+    dir: {x: -0.97730714, y: -0.0038793338, z: -0.21179159}
   - component: {fileID: 8820808441100627337}
     distance: 6.652017
     dir: {x: 0.6591736, y: -0.7260609, z: -0.1957694}
   - component: {fileID: 8385330634617802555}
     distance: 4.263623
     dir: {x: 0.7054465, y: -0.70810413, z: -0.030559642}
-  - component: {fileID: 1571013572169215952}
-    distance: 6.3472023
-    dir: {x: -0.97730714, y: -0.0038793338, z: -0.21179159}
   - component: {fileID: 840999756871535614}
     distance: 5.1945243
     dir: {x: 0.63016313, y: 0.3790684, z: -0.6776441}
-  - component: {fileID: 5579363856913466618}
-    distance: 6.770206
-    dir: {x: 0.009763507, y: -0.26700175, z: -0.9636466}
   - component: {fileID: 7105740265926069476}
     distance: 8.9922905
     dir: {x: -0.3534424, y: -0.59883195, z: -0.7186646}
+  - component: {fileID: 5579363856913466618}
+    distance: 6.770206
+    dir: {x: 0.009763507, y: -0.26700175, z: -0.9636466}
   - component: {fileID: 3761983654995495390}
     distance: 6.493942
     dir: {x: -0.45222232, y: 0.88846326, z: -0.07828189}
@@ -2872,9 +2965,21 @@ MonoBehaviour:
   - component: {fileID: 2660775233742894455}
     distance: 4.9197974
     dir: {x: 0.01721831, y: -0.9993778, z: 0.030782463}
+  - component: {fileID: 840999756871535614}
+    distance: 5.1945243
+    dir: {x: 0.63016313, y: 0.3790684, z: -0.6776441}
+  - component: {fileID: 5579363856913466618}
+    distance: 6.770206
+    dir: {x: 0.009763507, y: -0.26700175, z: -0.9636466}
+  - component: {fileID: 3761983654995495390}
+    distance: 6.493942
+    dir: {x: -0.45222232, y: 0.88846326, z: -0.07828189}
   - component: {fileID: 4100773902711459169}
     distance: 4.965011
     dir: {x: -0.657972, y: -0.7526889, z: -0.023070224}
+  - component: {fileID: 8385330634617802555}
+    distance: 4.263623
+    dir: {x: 0.7054465, y: -0.70810413, z: -0.030559642}
   breakableState: 0
   breakingForce: {x: 1412.8163, y: 2119.2246}
   forceTransfer: 0.5
@@ -3009,6 +3114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 6625784068709642853}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 840999756871535614}
     distance: 8.241019
@@ -3019,15 +3125,15 @@ MonoBehaviour:
   - component: {fileID: 3409569725822489093}
     distance: 5.868641
     dir: {x: -0.68569154, y: -0.71855557, z: -0.11621076}
+  - component: {fileID: 3220537788501688600}
+    distance: 6.40288
+    dir: {x: -0.96088755, y: 0.27093586, z: 0.057349622}
   - component: {fileID: 5570893332306850997}
     distance: 5.168519
     dir: {x: -0.5953245, y: 0.27780762, z: 0.7539308}
   - component: {fileID: 4340576682821578151}
     distance: 5.9241223
     dir: {x: 0.033636447, y: 0.08647252, z: 0.99568623}
-  - component: {fileID: 3220537788501688600}
-    distance: 6.40288
-    dir: {x: -0.96088755, y: 0.27093586, z: 0.057349622}
   otherConnectedParts:
   - component: {fileID: 5570893332306850997}
     distance: 5.168519
@@ -3134,25 +3240,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 2992239207978336199}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 3409569725822489093}
     distance: 6.4073153
     dir: {x: 0.33217818, y: -0.9288937, z: -0.16375063}
-  - component: {fileID: 5650561442479268419}
-    distance: 6.40288
-    dir: {x: 0.96088755, y: -0.27093586, z: -0.057349622}
   - component: {fileID: 8451635670621802163}
     distance: 6.642965
     dir: {x: -0.4389909, y: -0.41339925, z: 0.7977394}
-  - component: {fileID: 5570893332306850997}
-    distance: 4.690997
-    dir: {x: 0.6556179, y: -0.06372118, z: 0.75239927}
   - component: {fileID: 64698397482136131}
     distance: 4.036117
     dir: {x: -0.8070345, y: -0.5905001, z: -0.0022475438}
   - component: {fileID: 2245212136521436337}
     distance: 2.8205392
     dir: {x: -0.05235212, y: -0.96226984, z: 0.26701292}
+  - component: {fileID: 5650561442479268419}
+    distance: 6.40288
+    dir: {x: 0.96088755, y: -0.27093586, z: -0.057349622}
+  - component: {fileID: 5570893332306850997}
+    distance: 4.690997
+    dir: {x: 0.6556179, y: -0.06372118, z: 0.75239927}
   otherConnectedParts:
   - component: {fileID: 5570893332306850997}
     distance: 4.690997
@@ -3163,6 +3270,12 @@ MonoBehaviour:
   - component: {fileID: 3409569725822489093}
     distance: 6.4073153
     dir: {x: 0.33217818, y: -0.9288937, z: -0.16375063}
+  - component: {fileID: 5650561442479268419}
+    distance: 6.40288
+    dir: {x: 0.96088755, y: -0.27093586, z: -0.057349622}
+  - component: {fileID: 2245212136521436337}
+    distance: 2.8205392
+    dir: {x: -0.05235212, y: -0.96226984, z: 0.26701292}
   breakableState: 0
   breakingForce: {x: 1290.794, y: 1936.1908}
   forceTransfer: 0.5
@@ -3350,6 +3463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 6053299336949705057}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 4581373715066324470}
     distance: 6.686824
@@ -3473,6 +3587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1763053236397786332}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 840999756871535614}
     distance: 5.2937284
@@ -3493,6 +3608,9 @@ MonoBehaviour:
   - component: {fileID: 3409569725822489093}
     distance: 5.0922003
     dir: {x: 0.039751947, y: -0.4360881, z: -0.89902556}
+  - component: {fileID: 546651509397917505}
+    distance: 0.9341404
+    dir: {x: 0.2847339, y: -0.24708602, z: -0.92621547}
   breakableState: 0
   breakingForce: {x: 178.1647, y: 267.24707}
   forceTransfer: 0.5
@@ -3590,6 +3708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 2134182287227778711}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 8820808441100627337}
     distance: 7.2372775
@@ -3603,27 +3722,27 @@ MonoBehaviour:
   - component: {fileID: 1190581872442092109}
     distance: 5.1945243
     dir: {x: -0.63016313, y: -0.3790684, z: 0.6776441}
-  - component: {fileID: 3685559054528520654}
-    distance: 7.6410675
-    dir: {x: 0.008899946, y: -0.6480107, z: -0.7615793}
   - component: {fileID: 5579363856913466618}
     distance: 5.794376
     dir: {x: -0.55351895, y: -0.65179354, z: -0.5184419}
-  - component: {fileID: 6676932790136858613}
-    distance: 4.7921176
-    dir: {x: -0.46932417, y: 0.65801656, z: -0.58885396}
-  - component: {fileID: 4340576682821578151}
-    distance: 5.00816
-    dir: {x: 0.16222133, y: 0.961921, z: -0.21998248}
-  - component: {fileID: 1757990097626943421}
-    distance: 4.530638
-    dir: {x: 0.11096195, y: 0.7405225, z: 0.6628075}
-  - component: {fileID: 5794612661520784952}
-    distance: 4.845932
-    dir: {x: -0.4333673, y: 0.702281, z: 0.5647957}
+  - component: {fileID: 3685559054528520654}
+    distance: 7.6410675
+    dir: {x: 0.008899946, y: -0.6480107, z: -0.7615793}
   - component: {fileID: 3761983654995495390}
     distance: 7.8790717
     dir: {x: -0.788177, y: 0.48235995, z: 0.382238}
+  - component: {fileID: 6676932790136858613}
+    distance: 4.7921176
+    dir: {x: -0.46932417, y: 0.65801656, z: -0.58885396}
+  - component: {fileID: 1757990097626943421}
+    distance: 4.530638
+    dir: {x: 0.11096195, y: 0.7405225, z: 0.6628075}
+  - component: {fileID: 4340576682821578151}
+    distance: 5.00816
+    dir: {x: 0.16222133, y: 0.961921, z: -0.21998248}
+  - component: {fileID: 5794612661520784952}
+    distance: 4.845932
+    dir: {x: -0.4333673, y: 0.702281, z: 0.5647957}
   otherConnectedParts:
   - component: {fileID: 5570893332306850997}
     distance: 6.975804
@@ -3640,12 +3759,36 @@ MonoBehaviour:
   - component: {fileID: 1190581872442092109}
     distance: 5.1945243
     dir: {x: -0.63016313, y: -0.3790684, z: 0.6776441}
+  - component: {fileID: 4340576682821578151}
+    distance: 5.00816
+    dir: {x: 0.16222133, y: 0.961921, z: -0.21998248}
+  - component: {fileID: 5579363856913466618}
+    distance: 5.794376
+    dir: {x: -0.55351895, y: -0.65179354, z: -0.5184419}
   - component: {fileID: 3409569725822489093}
     distance: 8.405917
     dir: {x: -0.40577528, y: 0.010496874, z: -0.91391265}
   - component: {fileID: 5650561442479268419}
     distance: 8.241019
     dir: {x: 0.0744039, y: 0.5224087, z: -0.84944284}
+  - component: {fileID: 3761983654995495390}
+    distance: 7.8790717
+    dir: {x: -0.788177, y: 0.48235995, z: 0.382238}
+  - component: {fileID: 8036789764888680206}
+    distance: 5.887009
+    dir: {x: 0.14442085, y: -0.9838513, z: -0.105731815}
+  - component: {fileID: 2495646486146827087}
+    distance: 4.6605835
+    dir: {x: -0.064755484, y: -0.98337615, z: 0.1696411}
+  - component: {fileID: 1757990097626943421}
+    distance: 4.530638
+    dir: {x: 0.11096195, y: 0.7405225, z: 0.6628075}
+  - component: {fileID: 6676932790136858613}
+    distance: 4.7921176
+    dir: {x: -0.46932417, y: 0.65801656, z: -0.58885396}
+  - component: {fileID: 5794612661520784952}
+    distance: 4.845932
+    dir: {x: -0.4333673, y: 0.702281, z: 0.5647957}
   - component: {fileID: 3303650115289639941}
     distance: 5.2937284
     dir: {x: -0.6825697, y: 0.43615454, z: -0.58640254}
@@ -3755,6 +3898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 754461206201908804}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 8820808441100627337}
     distance: 2.9905703
@@ -3921,19 +4065,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 4962146153703898760}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 840999756871535614}
     distance: 4.845932
     dir: {x: 0.4333673, y: -0.702281, z: -0.5647957}
+  - component: {fileID: 3761983654995495390}
+    distance: 4.138325
+    dir: {x: -0.9931637, y: 0.096015334, z: 0.06638416}
   - component: {fileID: 5824577764089355878}
     distance: 2.8847046
     dir: {x: 0.6674731, y: 0.6938828, z: 0.27019683}
   - component: {fileID: 4340576682821578151}
     distance: 5.021765
     dir: {x: 0.5799751, y: 0.28162378, z: -0.76440626}
-  - component: {fileID: 3761983654995495390}
-    distance: 4.138325
-    dir: {x: -0.9931637, y: 0.096015334, z: 0.06638416}
   otherConnectedParts:
   - component: {fileID: 5824577764089355878}
     distance: 2.8847046
@@ -4028,6 +4173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 2342014809328418255}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 1571013572169215952}
     distance: 3.022225
@@ -4176,6 +4322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 7765512290837854678}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 840999756871535614}
     distance: 4.7921176
@@ -4286,6 +4433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 6583689778640172462}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 1571013572169215952}
     distance: 6.703871
@@ -4330,6 +4478,9 @@ MonoBehaviour:
   - component: {fileID: 8451635670621802163}
     distance: 4.9174247
     dir: {x: -0.45661744, y: -0.10306104, z: -0.8836735}
+  - component: {fileID: 5794612661520784952}
+    distance: 4.138325
+    dir: {x: 0.9931637, y: -0.096015334, z: -0.06638416}
   breakableState: 0
   breakingForce: {x: 1529.1672, y: 2293.7507}
   forceTransfer: 0.5
@@ -4427,19 +4578,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 2826472365864191485}
+  physicMaterial: {fileID: 0}
   connectedParts:
-  - component: {fileID: 8820808441100627337}
-    distance: 4.540032
-    dir: {x: 0.94715726, y: 0.019155486, z: -0.32019705}
-  - component: {fileID: 178473390391078821}
-    distance: 3.574524
-    dir: {x: 0.10336892, y: -0.9458734, z: -0.3076336}
   - component: {fileID: 901927233275536642}
     distance: 5.1782618
     dir: {x: -0.93855983, y: -0.30375704, z: 0.16382037}
   - component: {fileID: 4100773902711459169}
     distance: 3.5630255
     dir: {x: -0.9406469, y: 0.33107466, z: -0.07465212}
+  - component: {fileID: 8820808441100627337}
+    distance: 4.540032
+    dir: {x: 0.94715726, y: 0.019155486, z: -0.32019705}
+  - component: {fileID: 178473390391078821}
+    distance: 3.574524
+    dir: {x: 0.10336892, y: -0.9458734, z: -0.3076336}
   - component: {fileID: 1190581872442092109}
     distance: 4.9197974
     dir: {x: -0.01721831, y: 0.9993778, z: -0.030782463}
@@ -4453,9 +4605,21 @@ MonoBehaviour:
   - component: {fileID: 7105740265926069476}
     distance: 7.3898287
     dir: {x: -0.44154844, y: -0.06334855, z: -0.89499825}
+  - component: {fileID: 1190581872442092109}
+    distance: 4.9197974
+    dir: {x: -0.01721831, y: 0.9993778, z: -0.030782463}
+  - component: {fileID: 178473390391078821}
+    distance: 3.574524
+    dir: {x: 0.10336892, y: -0.9458734, z: -0.3076336}
   - component: {fileID: 5579363856913466618}
     distance: 7.3640623
     dir: {x: -0.0025270893, y: 0.42219624, z: -0.90650094}
+  - component: {fileID: 901927233275536642}
+    distance: 5.1782618
+    dir: {x: -0.93855983, y: -0.30375704, z: 0.16382037}
+  - component: {fileID: 4100773902711459169}
+    distance: 3.5630255
+    dir: {x: -0.9406469, y: 0.33107466, z: -0.07465212}
   - component: {fileID: 8385330634617802555}
     distance: 3.496376
     dir: {x: 0.836022, y: 0.5427468, z: -0.080580086}
@@ -4574,19 +4738,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1388511186790727013}
+  physicMaterial: {fileID: 0}
   connectedParts:
+  - component: {fileID: 901927233275536642}
+    distance: 5.866219
+    dir: {x: -0.89147764, y: 0.3082247, z: 0.332062}
+  - component: {fileID: 6996887287974144376}
+    distance: 6.452795
+    dir: {x: -0.99860686, y: -0.01671987, z: -0.05004784}
   - component: {fileID: 2660775233742894455}
     distance: 3.574524
     dir: {x: -0.10336892, y: 0.9458734, z: 0.3076336}
   - component: {fileID: 8820808441100627337}
     distance: 5.2537913
     dir: {x: 0.748151, y: 0.6600973, z: -0.067391545}
-  - component: {fileID: 6996887287974144376}
-    distance: 6.452795
-    dir: {x: -0.99860686, y: -0.01671987, z: -0.05004784}
-  - component: {fileID: 901927233275536642}
-    distance: 5.866219
-    dir: {x: -0.89147764, y: 0.3082247, z: 0.332062}
   - component: {fileID: 7105740265926069476}
     distance: 7.2171106
     dir: {x: -0.5033125, y: 0.40361196, z: -0.76405096}
@@ -4600,6 +4765,12 @@ MonoBehaviour:
   - component: {fileID: 2660775233742894455}
     distance: 3.574524
     dir: {x: -0.10336892, y: 0.9458734, z: 0.3076336}
+  - component: {fileID: 6996887287974144376}
+    distance: 6.452795
+    dir: {x: -0.99860686, y: -0.01671987, z: -0.05004784}
+  - component: {fileID: 901927233275536642}
+    distance: 5.866219
+    dir: {x: -0.89147764, y: 0.3082247, z: 0.332062}
   breakableState: 0
   breakingForce: {x: 1268.5928, y: 1902.8892}
   forceTransfer: 0.5
@@ -4716,16 +4887,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 4875148188183927915}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 3357547427939848895}
     distance: 6.5680866
     dir: {x: -0.029395085, y: 0.22290358, z: 0.9743972}
-  - component: {fileID: 7105740265926069476}
-    distance: 4.291218
-    dir: {x: 0.9323236, y: 0.20016582, z: 0.30117512}
   - component: {fileID: 4581373715066324470}
     distance: 5.80241
     dir: {x: 0.38646406, y: 0.87353384, z: -0.2959462}
+  - component: {fileID: 7105740265926069476}
+    distance: 4.291218
+    dir: {x: 0.9323236, y: 0.20016582, z: 0.30117512}
   otherConnectedParts:
   - component: {fileID: 7105740265926069476}
     distance: 4.291218
@@ -4736,6 +4908,9 @@ MonoBehaviour:
   - component: {fileID: 6996887287974144376}
     distance: 6.9373455
     dir: {x: 0.17145756, y: -0.3116245, z: 0.93460816}
+  - component: {fileID: 3357547427939848895}
+    distance: 6.5680866
+    dir: {x: -0.029395085, y: 0.22290358, z: 0.9743972}
   breakableState: 0
   breakingForce: {x: 1320.3759, y: 1980.5637}
   forceTransfer: 0.5
@@ -4838,6 +5013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 4072543996613688141}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 3409569725822489093}
     distance: 4.348644
@@ -4977,16 +5153,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 8561359487799719656}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 840999756871535614}
     distance: 5.00816
     dir: {x: -0.16222133, y: -0.961921, z: 0.21998248}
-  - component: {fileID: 5570893332306850997}
-    distance: 3.9489262
-    dir: {x: -0.8296464, y: 0.23388134, z: -0.5069382}
   - component: {fileID: 6676932790136858613}
     distance: 3.8860073
     dir: {x: -0.78782326, y: -0.42824462, z: -0.4426523}
+  - component: {fileID: 5570893332306850997}
+    distance: 3.9489262
+    dir: {x: -0.8296464, y: 0.23388134, z: -0.5069382}
   - component: {fileID: 5824577764089355878}
     distance: 4.758801
     dir: {x: -0.2074128, y: 0.12343414, z: 0.97043496}
@@ -5009,6 +5186,9 @@ MonoBehaviour:
   - component: {fileID: 1757990097626943421}
     distance: 4.3683763
     dir: {x: -0.07089635, y: -0.33477306, z: 0.939628}
+  - component: {fileID: 6676932790136858613}
+    distance: 3.8860073
+    dir: {x: -0.78782326, y: -0.42824462, z: -0.4426523}
   - component: {fileID: 5794612661520784952}
     distance: 5.021765
     dir: {x: -0.5799751, y: -0.28162378, z: 0.76440626}
@@ -5157,25 +5337,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 6110848186549279349}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 1571013572169215952}
     distance: 6.4277673
     dir: {x: -0.15885432, y: -0.82259613, z: 0.5459862}
-  - component: {fileID: 5579363856913466618}
-    distance: 8.962439
-    dir: {x: 0.5855759, y: -0.7889025, z: -0.18637004}
   - component: {fileID: 4581373715066324470}
     distance: 7.927009
     dir: {x: 0.030963762, y: -0.81216735, z: -0.5826023}
+  - component: {fileID: 5579363856913466618}
+    distance: 8.962439
+    dir: {x: 0.5855759, y: -0.7889025, z: -0.18637004}
+  - component: {fileID: 8653444040748842563}
+    distance: 5.171494
+    dir: {x: -0.59378046, y: -0.12642418, z: -0.79463303}
   - component: {fileID: 3761983654995495390}
     distance: 4.9174247
     dir: {x: 0.45661744, y: 0.10306104, z: 0.8836735}
   - component: {fileID: 64698397482136131}
     distance: 5.331735
     dir: {x: -0.06397251, y: 0.06805838, z: -0.99562824}
-  - component: {fileID: 8653444040748842563}
-    distance: 5.171494
-    dir: {x: -0.59378046, y: -0.12642418, z: -0.79463303}
   otherConnectedParts:
   - component: {fileID: 5570893332306850997}
     distance: 6.7098484
@@ -5195,6 +5376,12 @@ MonoBehaviour:
   - component: {fileID: 3220537788501688600}
     distance: 6.642965
     dir: {x: 0.4389909, y: 0.41339925, z: -0.7977394}
+  - component: {fileID: 8653444040748842563}
+    distance: 5.171494
+    dir: {x: -0.59378046, y: -0.12642418, z: -0.79463303}
+  - component: {fileID: 3761983654995495390}
+    distance: 4.9174247
+    dir: {x: 0.45661744, y: 0.10306104, z: 0.8836735}
   - component: {fileID: 3195066331171614886}
     distance: 5.040002
     dir: {x: -0.057638332, y: -0.9914194, z: 0.11732612}
@@ -5298,6 +5485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 2831840230563373750}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 840999756871535614}
     distance: 6.975804
@@ -5308,34 +5496,58 @@ MonoBehaviour:
   - component: {fileID: 3409569725822489093}
     distance: 7.3359203
     dir: {x: -0.12910876, y: -0.7705643, z: -0.62414867}
-  - component: {fileID: 546651509397917505}
-    distance: 3.8662379
-    dir: {x: -0.22853611, y: -0.9474233, z: -0.22396499}
-  - component: {fileID: 5650561442479268419}
-    distance: 5.168519
-    dir: {x: 0.5953245, y: -0.27780762, z: -0.7539308}
   - component: {fileID: 8451635670621802163}
     distance: 6.7098484
     dir: {x: -0.89297146, y: -0.36472967, z: 0.26376924}
-  - component: {fileID: 3303650115289639941}
-    distance: 3.6195498
-    dir: {x: -0.31759652, y: -0.9482259, z: -0.00018970467}
-  - component: {fileID: 6676932790136858613}
-    distance: 2.6118722
-    dir: {x: 0.08221133, y: -0.9907613, z: 0.1078581}
-  - component: {fileID: 5824577764089355878}
-    distance: 7.012655
-    dir: {x: 0.32643503, y: -0.047939282, z: 0.94400316}
-  - component: {fileID: 4340576682821578151}
-    distance: 3.9489262
-    dir: {x: 0.8296464, y: -0.23388134, z: 0.5069382}
   - component: {fileID: 3761983654995495390}
     distance: 7.429447
     dir: {x: -0.504253, y: -0.26118848, z: 0.8231096}
   - component: {fileID: 3220537788501688600}
     distance: 4.690997
     dir: {x: -0.6556179, y: 0.06372118, z: -0.75239927}
-  otherConnectedParts: []
+  - component: {fileID: 3303650115289639941}
+    distance: 3.6195498
+    dir: {x: -0.31759652, y: -0.9482259, z: -0.00018970467}
+  - component: {fileID: 546651509397917505}
+    distance: 3.8662379
+    dir: {x: -0.22853611, y: -0.9474233, z: -0.22396499}
+  - component: {fileID: 6676932790136858613}
+    distance: 2.6118722
+    dir: {x: 0.08221133, y: -0.9907613, z: 0.1078581}
+  - component: {fileID: 5650561442479268419}
+    distance: 5.168519
+    dir: {x: 0.5953245, y: -0.27780762, z: -0.7539308}
+  - component: {fileID: 5824577764089355878}
+    distance: 7.012655
+    dir: {x: 0.32643503, y: -0.047939282, z: 0.94400316}
+  - component: {fileID: 4340576682821578151}
+    distance: 3.9489262
+    dir: {x: 0.8296464, y: -0.23388134, z: 0.5069382}
+  otherConnectedParts:
+  - component: {fileID: 4340576682821578151}
+    distance: 3.9489262
+    dir: {x: 0.8296464, y: -0.23388134, z: 0.5069382}
+  - component: {fileID: 3409569725822489093}
+    distance: 7.3359203
+    dir: {x: -0.12910876, y: -0.7705643, z: -0.62414867}
+  - component: {fileID: 3220537788501688600}
+    distance: 4.690997
+    dir: {x: -0.6556179, y: 0.06372118, z: -0.75239927}
+  - component: {fileID: 5650561442479268419}
+    distance: 5.168519
+    dir: {x: 0.5953245, y: -0.27780762, z: -0.7539308}
+  - component: {fileID: 3761983654995495390}
+    distance: 7.429447
+    dir: {x: -0.504253, y: -0.26118848, z: 0.8231096}
+  - component: {fileID: 6676932790136858613}
+    distance: 2.6118722
+    dir: {x: 0.08221133, y: -0.9907613, z: 0.1078581}
+  - component: {fileID: 3303650115289639941}
+    distance: 3.6195498
+    dir: {x: -0.31759652, y: -0.9482259, z: -0.00018970467}
+  - component: {fileID: 546651509397917505}
+    distance: 3.8662379
+    dir: {x: -0.22853611, y: -0.9474233, z: -0.22396499}
   breakableState: 0
   breakingForce: {x: 1511.3148, y: 2266.9722}
   forceTransfer: 0.5
@@ -5433,6 +5645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 5222461336149612126}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 2660775233742894455}
     distance: 3.496376
@@ -5552,6 +5765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 8516172871859357634}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 840999756871535614}
     distance: 5.5928416
@@ -5685,28 +5899,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 4380594625128146126}
+  physicMaterial: {fileID: 0}
   connectedParts:
+  - component: {fileID: 7105740265926069476}
+    distance: 5.4654164
+    dir: {x: 0.32172853, y: -0.77023345, z: 0.5506642}
+  - component: {fileID: 6864767218217690670}
+    distance: 5.80241
+    dir: {x: -0.38646406, y: -0.87353384, z: 0.2959462}
   - component: {fileID: 5579363856913466618}
     distance: 5.8410487
     dir: {x: 0.8564794, y: -0.10827379, z: 0.5046977}
   - component: {fileID: 3409569725822489093}
     distance: 6.039428
     dir: {x: 0.7946317, y: 0.53523946, z: -0.28649446}
-  - component: {fileID: 6864767218217690670}
-    distance: 5.80241
-    dir: {x: -0.38646406, y: -0.87353384, z: 0.2959462}
-  - component: {fileID: 7105740265926069476}
-    distance: 5.4654164
-    dir: {x: 0.32172853, y: -0.77023345, z: 0.5506642}
   - component: {fileID: 8451635670621802163}
     distance: 7.927009
     dir: {x: -0.030963762, y: 0.81216735, z: 0.5826023}
-  - component: {fileID: 64698397482136131}
-    distance: 6.8609705
-    dir: {x: -0.085488565, y: 0.99124855, z: -0.10058812}
   - component: {fileID: 8653444040748842563}
     distance: 6.686824
     dir: {x: -0.49592784, y: 0.86502296, z: 0.076097995}
+  - component: {fileID: 64698397482136131}
+    distance: 6.8609705
+    dir: {x: -0.085488565, y: 0.99124855, z: -0.10058812}
   otherConnectedParts:
   - component: {fileID: 64698397482136131}
     distance: 6.8609705
@@ -5717,6 +5932,21 @@ MonoBehaviour:
   - component: {fileID: 7105740265926069476}
     distance: 5.4654164
     dir: {x: 0.32172853, y: -0.77023345, z: 0.5506642}
+  - component: {fileID: 8451635670621802163}
+    distance: 7.927009
+    dir: {x: -0.030963762, y: 0.81216735, z: 0.5826023}
+  - component: {fileID: 6864767218217690670}
+    distance: 5.80241
+    dir: {x: -0.38646406, y: -0.87353384, z: 0.2959462}
+  - component: {fileID: 5579363856913466618}
+    distance: 5.8410487
+    dir: {x: 0.8564794, y: -0.10827379, z: 0.5046977}
+  - component: {fileID: 3409569725822489093}
+    distance: 6.039428
+    dir: {x: 0.7946317, y: 0.53523946, z: -0.28649446}
+  - component: {fileID: 8653444040748842563}
+    distance: 6.686824
+    dir: {x: -0.49592784, y: 0.86502296, z: 0.076097995}
   breakableState: 0
   breakingForce: {x: 1573.5505, y: 2360.3257}
   forceTransfer: 0.5
@@ -5820,6 +6050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 365588506664109348}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 901927233275536642}
     distance: 3.2968574
@@ -5833,7 +6064,13 @@ MonoBehaviour:
   - component: {fileID: 1571013572169215952}
     distance: 4.8977604
     dir: {x: -0.085202836, y: 0.7161146, z: -0.6927628}
-  otherConnectedParts: []
+  otherConnectedParts:
+  - component: {fileID: 3357547427939848895}
+    distance: 3.957007
+    dir: {x: -0.40087548, y: -0.31533822, z: -0.8601515}
+  - component: {fileID: 901927233275536642}
+    distance: 3.2968574
+    dir: {x: 0.30649328, y: -0.89712375, z: -0.31816784}
   breakableState: 0
   breakingForce: {x: 729.00836, y: 1093.5126}
   forceTransfer: 0.5
@@ -5931,26 +6168,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 2653116776365634498}
+  physicMaterial: {fileID: 0}
   connectedParts:
   - component: {fileID: 840999756871535614}
     distance: 6.450425
     dir: {x: 0.027068889, y: -0.8379065, z: -0.5451423}
+  - component: {fileID: 3761983654995495390}
+    distance: 6.265442
+    dir: {x: -0.9632995, y: -0.25605604, z: -0.080555975}
+  - component: {fileID: 1757990097626943421}
+    distance: 2.2190437
+    dir: {x: 0.30523703, y: -0.9237372, z: -0.23138717}
   - component: {fileID: 4340576682821578151}
     distance: 4.758801
     dir: {x: 0.2074128, y: -0.12343414, z: -0.97043496}
+  - component: {fileID: 5794612661520784952}
+    distance: 2.8847046
+    dir: {x: -0.6674731, y: -0.6938828, z: -0.27019683}
+  otherConnectedParts:
+  - component: {fileID: 5570893332306850997}
+    distance: 7.012655
+    dir: {x: -0.32643503, y: 0.047939282, z: -0.94400316}
+  - component: {fileID: 4340576682821578151}
+    distance: 4.758801
+    dir: {x: 0.2074128, y: -0.12343414, z: -0.97043496}
+  - component: {fileID: 3761983654995495390}
+    distance: 6.265442
+    dir: {x: -0.9632995, y: -0.25605604, z: -0.080555975}
   - component: {fileID: 1757990097626943421}
     distance: 2.2190437
     dir: {x: 0.30523703, y: -0.9237372, z: -0.23138717}
   - component: {fileID: 5794612661520784952}
     distance: 2.8847046
     dir: {x: -0.6674731, y: -0.6938828, z: -0.27019683}
-  - component: {fileID: 3761983654995495390}
-    distance: 6.265442
-    dir: {x: -0.9632995, y: -0.25605604, z: -0.080555975}
-  otherConnectedParts:
-  - component: {fileID: 5570893332306850997}
-    distance: 7.012655
-    dir: {x: -0.32643503, y: 0.047939282, z: -0.94400316}
   breakableState: 0
   breakingForce: {x: 1184.4738, y: 1776.7106}
   forceTransfer: 0.5
@@ -6047,26 +6297,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 3030837894385809401}
+  physicMaterial: {fileID: 0}
   connectedParts:
-  - component: {fileID: 3409569725822489093}
-    distance: 6.543741
-    dir: {x: 0.823024, y: -0.545313, z: -0.15895045}
   - component: {fileID: 4581373715066324470}
     distance: 6.8609705
     dir: {x: 0.085488565, y: -0.99124855, z: 0.10058812}
+  - component: {fileID: 3409569725822489093}
+    distance: 6.543741
+    dir: {x: 0.823024, y: -0.545313, z: -0.15895045}
   - component: {fileID: 8451635670621802163}
     distance: 5.331735
     dir: {x: 0.06397251, y: -0.06805838, z: 0.99562824}
   - component: {fileID: 8653444040748842563}
     distance: 3.1499467
     dir: {x: -0.86656946, y: -0.32275823, z: 0.38063693}
-  - component: {fileID: 2245212136521436337}
-    distance: 3.2187147
-    dir: {x: 0.9661075, y: -0.10277159, z: 0.23680004}
   - component: {fileID: 3220537788501688600}
     distance: 4.036117
     dir: {x: 0.8070345, y: 0.5905001, z: 0.0022475438}
-  otherConnectedParts: []
+  - component: {fileID: 2245212136521436337}
+    distance: 3.2187147
+    dir: {x: 0.9661075, y: -0.10277159, z: 0.23680004}
+  otherConnectedParts:
+  - component: {fileID: 4581373715066324470}
+    distance: 6.8609705
+    dir: {x: 0.085488565, y: -0.99124855, z: 0.10058812}
+  - component: {fileID: 8451635670621802163}
+    distance: 5.331735
+    dir: {x: 0.06397251, y: -0.06805838, z: 0.99562824}
+  - component: {fileID: 3409569725822489093}
+    distance: 6.543741
+    dir: {x: 0.823024, y: -0.545313, z: -0.15895045}
+  - component: {fileID: 3220537788501688600}
+    distance: 4.036117
+    dir: {x: 0.8070345, y: 0.5905001, z: 0.0022475438}
+  - component: {fileID: 8653444040748842563}
+    distance: 3.1499467
+    dir: {x: -0.86656946, y: -0.32275823, z: 0.38063693}
+  - component: {fileID: 2245212136521436337}
+    distance: 3.2187147
+    dir: {x: 0.9661075, y: -0.10277159, z: 0.23680004}
   breakableState: 0
   breakingForce: {x: 1183.2709, y: 1774.9064}
   forceTransfer: 0.5

@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[Serializable]
 public class BreakableCollective : BreakableComponent
 {
     [Header("Collective")]
@@ -16,25 +18,28 @@ public class BreakableCollective : BreakableComponent
     private BreakableComponent[] breakableComponents;
 
     [SerializeField]
+    private float contactCastRadius = 0.5f;
+
+    [SerializeField]
     private bool onlyConnectToCollectives = true;
 
-    
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.TryGetComponent(out BreakablePart bp))
         {
             if (!bp.Parent.Equals(parent) || bp.BreakableState == BreakableState.FullBreak)
             {
-                CollisionBreak(bp.SelfRb);
+                CollisionBreak(bp.SelfRb,collision);
             }
         }
         else if (collision.gameObject.TryGetComponent(out Rigidbody rb))
         {
-            CollisionBreak(rb);
+            CollisionBreak(rb,collision);
         }
     }
-    
-    
+
+
     public override void ResetConnections()
     {
         base.ResetConnections();
@@ -136,7 +141,49 @@ public class BreakableCollective : BreakableComponent
 
         var force = CalculateForce(rb, out var originalSpeed, out var forceDir);
 
-        Break(forceDir * force, forceDir * force);
+        if (force <= breakingForce.x)
+        {
+            return;
+        }
+        Break(new Vector3(),new Vector3());
+        foreach (BreakableComponent breakableComponent in FindBreakablesFromCollision(collision))
+        {
+            breakableComponent.CollisionBreak(rb,collision);
+        }
+    }
+
+    BreakableComponent[] FindBreakablesFromCollision(Collision collision)
+    {
+        List<ContactPoint> temp = new List<ContactPoint>();
+        collision.GetContacts(temp);
+        // for (int i = 0; i < collision.GetContacts(temp); i++)
+        // {
+        //     temp.Add(collision.GetContact(i));
+        // }
+        List<BreakableComponent> breakableComponents = new List<BreakableComponent>();
+        RaycastHit[] hits;
+        foreach (ContactPoint contactPoint in temp)
+        {
+            hits = Physics.SphereCastAll(contactPoint.point, contactCastRadius,
+                Vector3.up, 0, castLayer);
+
+            foreach (RaycastHit hit in hits)
+            {
+                if (hit.collider.TryGetComponent(out BreakableComponent breakableComponent))
+                {
+                    if (!breakableComponents.Contains(breakableComponent))
+                    {
+                        breakableComponents.Add(breakableComponent);
+                    }
+                }
+            }
+        }
+
+        if (isDebug)
+        {
+            Debug.Log($"{this} contacts found {breakableComponents.Count} breakable");
+        }
+        return breakableComponents.ToArray();
     }
 
     public override void RemovePart(BreakableComponent part)
@@ -146,6 +193,14 @@ public class BreakableCollective : BreakableComponent
 
     public override List<BreakableData> InitialiseClosest()
     {
+        fractureParent.SetActive(true);
+        foreach (BreakableComponent breakableComponent in breakableComponents)
+        {
+            breakableComponent.InitialiseClosest();
+        }
+        
+        fractureParent.SetActive(false);
+
         return base.InitialiseClosest();
     }
 
