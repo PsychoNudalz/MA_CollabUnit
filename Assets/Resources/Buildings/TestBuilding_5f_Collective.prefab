@@ -88,7 +88,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786462407973920957}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
   breakableParts: []
   breakableCollectives:
   - {fileID: 1786462408421033221}
-  mass: 1
+  mass: 10
   drag: 0
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   affectedRange: 0.5
@@ -311,7 +311,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786462408421033223}
   serializedVersion: 2
-  m_Mass: 0.45276922
+  m_Mass: 4.5276923
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -1190,7 +1190,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24944616015355033}
   serializedVersion: 2
-  m_Mass: 2.5881228
+  m_Mass: 25.88123
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -1198,6 +1198,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462408337037493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24944616015355033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462408337037495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1278,19 +1291,6 @@ MonoBehaviour:
   renderer: {fileID: 8819113579998402133}
   meshFilter: {fileID: 7566388480929261458}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462408337037493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 24944616015355033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!33 &33557317708891456 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: 1782847297928891014, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -1323,7 +1323,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129015880623240886}
   serializedVersion: 2
-  m_Mass: 12.236377
+  m_Mass: 122.36377
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -1331,6 +1331,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462407048768649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129015880623240886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462407048768651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1346,21 +1359,21 @@ MonoBehaviour:
   selfRB: {fileID: 1786462407048768650}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462407214014032}
-    distance: 4.896741
-    dir: {x: -0.23872274, y: -0.9710853, z: -0.002172465}
-  - component: {fileID: 1786462406697348960}
-    distance: 6.3472023
-    dir: {x: 0.97730714, y: 0.0038793338, z: 0.2117917}
-  - component: {fileID: 1786462408591574995}
-    distance: 3.0222235
-    dir: {x: 0.24173635, y: 0.09618776, z: -0.96556276}
-  - component: {fileID: 1786462408050357061}
-    distance: 8.004865
-    dir: {x: 0.37788385, y: -0.6696238, z: -0.6393807}
   - component: {fileID: 1786462406976918515}
     distance: 8.325459
     dir: {x: 0.75302356, y: -0.21416645, z: -0.6221642}
+  - component: {fileID: 1786462406697348960}
+    distance: 6.3472023
+    dir: {x: 0.97730714, y: 0.0038793338, z: 0.2117917}
+  - component: {fileID: 1786462408050357061}
+    distance: 8.004865
+    dir: {x: 0.37788385, y: -0.6696238, z: -0.6393807}
+  - component: {fileID: 1786462407214014032}
+    distance: 4.896741
+    dir: {x: -0.23872274, y: -0.9710853, z: -0.002172465}
+  - component: {fileID: 1786462408591574995}
+    distance: 3.0222235
+    dir: {x: 0.24173635, y: 0.09618776, z: -0.96556276}
   - component: {fileID: 1786462407613284640}
     distance: 6.4277663
     dir: {x: 0.15885438, y: 0.82259625, z: -0.54598594}
@@ -1444,19 +1457,6 @@ MonoBehaviour:
   renderer: {fileID: 4015780118236159270}
   meshFilter: {fileID: 2917987010969745434}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462407048768649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129015880623240886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!33 &405623148118900214 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: -7103344282433801680, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -1501,7 +1501,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888845904823402913}
   serializedVersion: 2
-  m_Mass: 14.958067
+  m_Mass: 149.58067
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -1509,6 +1509,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462406775818269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888845904823402913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462406775818271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1524,9 +1537,18 @@ MonoBehaviour:
   selfRB: {fileID: 1786462406775818270}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
+  - component: {fileID: 1786462406976918515}
+    distance: 7.41971
+    dir: {x: -0.5820623, y: 0.40730876, z: -0.7037777}
+  - component: {fileID: 1786462407720118821}
+    distance: 8.312385
+    dir: {x: -0.12552737, y: 0.22224145, z: -0.9668773}
   - component: {fileID: 1786462408375570204}
     distance: 5.2537913
     dir: {x: -0.748151, y: -0.6600973, z: 0.06739128}
+  - component: {fileID: 1786462407606996316}
+    distance: 4.5400314
+    dir: {x: -0.9471574, y: -0.019155487, z: 0.320197}
   - component: {fileID: 1786462407689320162}
     distance: 3.0247252
     dir: {x: -0.086364865, y: 0.33289236, z: -0.93900144}
@@ -1536,9 +1558,6 @@ MonoBehaviour:
   - component: {fileID: 1786462407963490851}
     distance: 2.9905708
     dir: {x: -0.47256368, y: 0.74090976, z: -0.47721732}
-  - component: {fileID: 1786462407606996316}
-    distance: 4.5400314
-    dir: {x: -0.9471574, y: -0.019155487, z: 0.320197}
   - component: {fileID: 1786462406697348960}
     distance: 6.6520166
     dir: {x: -0.65917367, y: 0.726061, z: 0.19576919}
@@ -1548,12 +1567,6 @@ MonoBehaviour:
   - component: {fileID: 1786462408050357061}
     distance: 9.172565
     dir: {x: -0.82453394, y: -0.060517572, z: -0.5625668}
-  - component: {fileID: 1786462406976918515}
-    distance: 7.41971
-    dir: {x: -0.5820623, y: 0.40730876, z: -0.7037777}
-  - component: {fileID: 1786462407720118821}
-    distance: 8.312385
-    dir: {x: -0.12552737, y: 0.22224145, z: -0.9668773}
   otherConnectedParts:
   - component: {fileID: 1786462407606996316}
     distance: 4.5400314
@@ -1628,19 +1641,6 @@ MonoBehaviour:
   renderer: {fileID: 1202763062549125741}
   meshFilter: {fileID: 3755667111079372438}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462406775818269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 888845904823402913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!23 &889260969620681090 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 1485484446863490628, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -1667,7 +1667,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1016973995263876826}
   serializedVersion: 2
-  m_Mass: 19.48264
+  m_Mass: 194.82639
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -1690,15 +1690,12 @@ MonoBehaviour:
   selfRB: {fileID: 1786462408050357060}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462407048382320}
-    distance: 6.6316237
-    dir: {x: -0.42392984, y: -0.4555147, z: 0.7828089}
-  - component: {fileID: 1786462407259265026}
-    distance: 7.710755
-    dir: {x: -0.20713164, y: -0.14328021, z: 0.9677641}
-  - component: {fileID: 1786462407214014032}
-    distance: 6.636373
-    dir: {x: -0.63195246, y: 0.09117856, z: 0.76962495}
+  - component: {fileID: 1786462406976918515}
+    distance: 4.829712
+    dir: {x: 0.6717497, y: 0.74066824, z: -0.012763856}
+  - component: {fileID: 1786462407720118821}
+    distance: 7.520251
+    dir: {x: 0.8669471, y: 0.3194651, z: -0.3825504}
   - component: {fileID: 1786462408375570204}
     distance: 7.2171106
     dir: {x: 0.5033125, y: -0.40361196, z: 0.764051}
@@ -1708,21 +1705,24 @@ MonoBehaviour:
   - component: {fileID: 1786462406697348960}
     distance: 8.9922905
     dir: {x: 0.3534424, y: 0.59883195, z: 0.7186646}
-  - component: {fileID: 1786462407048768651}
-    distance: 8.004865
-    dir: {x: -0.37788385, y: 0.6696238, z: 0.6393807}
   - component: {fileID: 1786462406818277718}
     distance: 5.465415
     dir: {x: -0.32172862, y: 0.7702337, z: -0.550664}
+  - component: {fileID: 1786462407048768651}
+    distance: 8.004865
+    dir: {x: -0.37788385, y: 0.6696238, z: 0.6393807}
   - component: {fileID: 1786462407591087989}
     distance: 4.291217
     dir: {x: -0.93232363, y: -0.20016587, z: -0.30117488}
-  - component: {fileID: 1786462406976918515}
-    distance: 4.829712
-    dir: {x: 0.6717497, y: 0.74066824, z: -0.012763856}
-  - component: {fileID: 1786462407720118821}
-    distance: 7.520251
-    dir: {x: 0.8669471, y: 0.3194651, z: -0.3825504}
+  - component: {fileID: 1786462407214014032}
+    distance: 6.636373
+    dir: {x: -0.63195246, y: 0.09117856, z: 0.76962495}
+  - component: {fileID: 1786462407048382320}
+    distance: 6.6316237
+    dir: {x: -0.42392984, y: -0.4555147, z: 0.7828089}
+  - component: {fileID: 1786462407259265026}
+    distance: 7.710755
+    dir: {x: -0.20713164, y: -0.14328021, z: 0.9677641}
   otherConnectedParts:
   - component: {fileID: 1786462406775818271}
     distance: 9.172565
@@ -1848,7 +1848,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338963364141194175}
   serializedVersion: 2
-  m_Mass: 11.750271
+  m_Mass: 117.50271
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -1856,6 +1856,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462407630979324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338963364141194175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462407630979326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1871,24 +1884,24 @@ MonoBehaviour:
   selfRB: {fileID: 1786462407630979325}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462406707107365}
-    distance: 8.241018
-    dir: {x: -0.074403904, y: -0.5224088, z: 0.8494427}
-  - component: {fileID: 1786462406774861216}
-    distance: 5.868641
-    dir: {x: -0.68569154, y: -0.71855557, z: -0.116210595}
   - component: {fileID: 1786462407720118821}
     distance: 9.347618
     dir: {x: -0.05832062, y: -0.99027085, z: 0.12634197}
-  - component: {fileID: 1786462406976777200}
-    distance: 6.40288
-    dir: {x: -0.96088755, y: 0.27093586, z: 0.057349473}
+  - component: {fileID: 1786462406774861216}
+    distance: 5.868641
+    dir: {x: -0.68569154, y: -0.71855557, z: -0.116210595}
   - component: {fileID: 1786462406890772500}
     distance: 5.1685185
     dir: {x: -0.5953246, y: 0.27780765, z: 0.75393075}
+  - component: {fileID: 1786462406707107365}
+    distance: 8.241018
+    dir: {x: -0.074403904, y: -0.5224088, z: 0.8494427}
   - component: {fileID: 1786462406645892008}
     distance: 5.924123
     dir: {x: 0.033636447, y: 0.08647251, z: 0.99568623}
+  - component: {fileID: 1786462406976777200}
+    distance: 6.40288
+    dir: {x: -0.96088755, y: 0.27093586, z: 0.057349473}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 5.1685185
@@ -1948,19 +1961,6 @@ MonoBehaviour:
   renderer: {fileID: 7316913022393552557}
   meshFilter: {fileID: 7841837355676262836}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462407630979324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1338963364141194175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!1 &1461987480532495476 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 900948375107756978, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -1975,7 +1975,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461987480532495476}
   serializedVersion: 2
-  m_Mass: 14.128163
+  m_Mass: 141.28163
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -1998,27 +1998,27 @@ MonoBehaviour:
   selfRB: {fileID: 1786462406697348967}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462408340813305}
-    distance: 4.263623
-    dir: {x: 0.7054465, y: -0.70810413, z: -0.030559754}
-  - component: {fileID: 1786462407606996316}
-    distance: 4.9197974
-    dir: {x: 0.01721831, y: -0.9993778, z: 0.030782657}
-  - component: {fileID: 1786462406707107365}
-    distance: 5.1945243
-    dir: {x: 0.63016313, y: 0.3790684, z: -0.6776442}
-  - component: {fileID: 1786462407048768651}
-    distance: 6.3472023
-    dir: {x: -0.97730714, y: -0.0038793338, z: -0.2117917}
-  - component: {fileID: 1786462408050357061}
-    distance: 8.9922905
-    dir: {x: -0.3534424, y: -0.59883195, z: -0.7186646}
   - component: {fileID: 1786462406976918515}
     distance: 6.7702065
     dir: {x: 0.009763506, y: -0.26700172, z: -0.9636466}
   - component: {fileID: 1786462406775818271}
     distance: 6.6520166
     dir: {x: 0.65917367, y: -0.726061, z: -0.19576919}
+  - component: {fileID: 1786462407606996316}
+    distance: 4.9197974
+    dir: {x: 0.01721831, y: -0.9993778, z: 0.030782657}
+  - component: {fileID: 1786462408340813305}
+    distance: 4.263623
+    dir: {x: 0.7054465, y: -0.70810413, z: -0.030559754}
+  - component: {fileID: 1786462406707107365}
+    distance: 5.1945243
+    dir: {x: 0.63016313, y: 0.3790684, z: -0.6776442}
+  - component: {fileID: 1786462408050357061}
+    distance: 8.9922905
+    dir: {x: -0.3534424, y: -0.59883195, z: -0.7186646}
+  - component: {fileID: 1786462407048768651}
+    distance: 6.3472023
+    dir: {x: -0.97730714, y: -0.0038793338, z: -0.2117917}
   - component: {fileID: 1786462407930885275}
     distance: 6.4939413
     dir: {x: -0.45222235, y: 0.8884633, z: -0.07828145}
@@ -2156,7 +2156,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2181394372646776710}
   serializedVersion: 2
-  m_Mass: 3.169246
+  m_Mass: 31.69246
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -2164,6 +2164,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462407689320160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2181394372646776710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462407689320162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2179,18 +2192,18 @@ MonoBehaviour:
   selfRB: {fileID: 1786462407689320161}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462406707107365}
-    distance: 5.887009
-    dir: {x: -0.14442085, y: 0.9838513, z: 0.10573148}
   - component: {fileID: 1786462406976918515}
     distance: 5.1182446
     dir: {x: -0.792753, y: 0.3937297, z: -0.46531677}
-  - component: {fileID: 1786462406775818271}
-    distance: 3.0247252
-    dir: {x: 0.086364865, y: -0.33289236, z: 0.93900144}
   - component: {fileID: 1786462407720118821}
     distance: 5.32215
     dir: {x: -0.146971, y: 0.15791519, z: -0.97645396}
+  - component: {fileID: 1786462406775818271}
+    distance: 3.0247252
+    dir: {x: 0.086364865, y: -0.33289236, z: 0.93900144}
+  - component: {fileID: 1786462406707107365}
+    distance: 5.887009
+    dir: {x: -0.14442085, y: 0.9838513, z: 0.10573148}
   otherConnectedParts:
   - component: {fileID: 1786462406775818271}
     distance: 3.0247252
@@ -2250,19 +2263,6 @@ MonoBehaviour:
   renderer: {fileID: 1677035715270409812}
   meshFilter: {fileID: 4721199202771554220}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462407689320160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2181394372646776710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!4 &2251926693307164717 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -2283,7 +2283,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2304060458230497913}
   serializedVersion: 2
-  m_Mass: 15.730543
+  m_Mass: 157.30544
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -2306,42 +2306,42 @@ MonoBehaviour:
   selfRB: {fileID: 1786462406774861223}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462406707107365}
-    distance: 8.405915
-    dir: {x: 0.40577537, y: -0.010496876, z: 0.91391253}
-  - component: {fileID: 1786462406818277718}
-    distance: 6.0394278
-    dir: {x: -0.7946318, y: -0.53523946, z: 0.2864944}
   - component: {fileID: 1786462406976918515}
     distance: 6.0716763
     dir: {x: 0.033535525, y: -0.63655776, z: 0.7704996}
   - component: {fileID: 1786462407720118821}
     distance: 6.400976
     dir: {x: 0.5434981, y: -0.7873376, z: 0.29104853}
-  - component: {fileID: 1786462407613284640}
-    distance: 8.7193575
-    dir: {x: -0.5785485, y: 0.36763233, z: 0.728099}
-  - component: {fileID: 1786462408066108373}
-    distance: 6.5437407
-    dir: {x: -0.82302403, y: 0.545313, z: 0.15895016}
-  - component: {fileID: 1786462406976777200}
-    distance: 6.407315
-    dir: {x: -0.33217818, y: 0.92889374, z: 0.16375035}
-  - component: {fileID: 1786462407638898833}
-    distance: 4.3486433
-    dir: {x: -0.52338886, y: 0.74450684, z: 0.4144558}
   - component: {fileID: 1786462407630979326}
     distance: 5.868641
     dir: {x: 0.68569154, y: 0.71855557, z: 0.116210595}
   - component: {fileID: 1786462408368650072}
     distance: 4.212883
     dir: {x: 0.015086237, y: 0.4723214, z: 0.8812973}
-  - component: {fileID: 1786462408092026957}
-    distance: 5.0921984
-    dir: {x: -0.03975196, y: 0.43608823, z: 0.8990255}
   - component: {fileID: 1786462406890772500}
     distance: 7.3359194
     dir: {x: 0.12910877, y: 0.77056444, z: 0.6241485}
+  - component: {fileID: 1786462408092026957}
+    distance: 5.0921984
+    dir: {x: -0.03975196, y: 0.43608823, z: 0.8990255}
+  - component: {fileID: 1786462406707107365}
+    distance: 8.405915
+    dir: {x: 0.40577537, y: -0.010496876, z: 0.91391253}
+  - component: {fileID: 1786462406818277718}
+    distance: 6.0394278
+    dir: {x: -0.7946318, y: -0.53523946, z: 0.2864944}
+  - component: {fileID: 1786462408066108373}
+    distance: 6.5437407
+    dir: {x: -0.82302403, y: 0.545313, z: 0.15895016}
+  - component: {fileID: 1786462406976777200}
+    distance: 6.407315
+    dir: {x: -0.33217818, y: 0.92889374, z: 0.16375035}
+  - component: {fileID: 1786462407613284640}
+    distance: 8.7193575
+    dir: {x: -0.5785485, y: 0.36763233, z: 0.728099}
+  - component: {fileID: 1786462407638898833}
+    distance: 4.3486433
+    dir: {x: -0.52338886, y: 0.74450684, z: 0.4144558}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 7.3359194
@@ -2443,7 +2443,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2461204822530001645}
   serializedVersion: 2
-  m_Mass: 8.911422
+  m_Mass: 89.11422
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -2451,6 +2451,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462407259265024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2461204822530001645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462407259265026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2466,18 +2479,6 @@ MonoBehaviour:
   selfRB: {fileID: 1786462407259265025}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462407048382320}
-    distance: 3.2097244
-    dir: {x: -0.37828854, y: -0.59693706, z: -0.7075054}
-  - component: {fileID: 1786462407404348235}
-    distance: 2.7423756
-    dir: {x: -0.49306974, y: 0.8352708, z: -0.24332057}
-  - component: {fileID: 1786462407214014032}
-    distance: 3.9001584
-    dir: {x: -0.66580147, y: 0.43841642, z: -0.6037379}
-  - component: {fileID: 1786462406908659285}
-    distance: 3.3307648
-    dir: {x: 0.45291698, y: 0.82640505, z: -0.33454585}
   - component: {fileID: 1786462408375570204}
     distance: 5.86622
     dir: {x: 0.8914775, y: -0.30822465, z: -0.33206236}
@@ -2487,6 +2488,18 @@ MonoBehaviour:
   - component: {fileID: 1786462406775818268}
     distance: 3.2968564
     dir: {x: -0.30649337, y: 0.897124, z: 0.3181672}
+  - component: {fileID: 1786462407214014032}
+    distance: 3.9001584
+    dir: {x: -0.66580147, y: 0.43841642, z: -0.6037379}
+  - component: {fileID: 1786462407048382320}
+    distance: 3.2097244
+    dir: {x: -0.37828854, y: -0.59693706, z: -0.7075054}
+  - component: {fileID: 1786462407404348235}
+    distance: 2.7423756
+    dir: {x: -0.49306974, y: 0.8352708, z: -0.24332057}
+  - component: {fileID: 1786462406908659285}
+    distance: 3.3307648
+    dir: {x: 0.45291698, y: 0.82640505, z: -0.33454585}
   otherConnectedParts:
   - component: {fileID: 1786462406775818268}
     distance: 3.2968564
@@ -2561,19 +2574,6 @@ MonoBehaviour:
   renderer: {fileID: 6724908264891582703}
   meshFilter: {fileID: 7588233344766676514}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462407259265024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2461204822530001645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!23 &2501062939312625615 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 4215164080411498505, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -2594,7 +2594,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2517743324511007044}
   serializedVersion: 2
-  m_Mass: 10.3621235
+  m_Mass: 103.62123
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -2617,12 +2617,6 @@ MonoBehaviour:
   selfRB: {fileID: 1786462407048382327}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462407259265026}
-    distance: 3.2097244
-    dir: {x: 0.37828854, y: 0.59693706, z: 0.7075054}
-  - component: {fileID: 1786462407214014032}
-    distance: 3.8814344
-    dir: {x: -0.3561903, y: 0.93416417, z: -0.021583773}
   - component: {fileID: 1786462408375570204}
     distance: 6.4527946
     dir: {x: 0.9986069, y: 0.01671987, z: 0.05004755}
@@ -2632,6 +2626,12 @@ MonoBehaviour:
   - component: {fileID: 1786462407591087989}
     distance: 6.937346
     dir: {x: -0.17145747, y: 0.3116245, z: -0.9346082}
+  - component: {fileID: 1786462407214014032}
+    distance: 3.8814344
+    dir: {x: -0.3561903, y: 0.93416417, z: -0.021583773}
+  - component: {fileID: 1786462407259265026}
+    distance: 3.2097244
+    dir: {x: 0.37828854, y: 0.59693706, z: 0.7075054}
   otherConnectedParts:
   - component: {fileID: 1786462408050357061}
     distance: 6.6316237
@@ -2733,7 +2733,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2790939818584434176}
   serializedVersion: 2
-  m_Mass: 11.5800295
+  m_Mass: 115.80029
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -2756,6 +2756,18 @@ MonoBehaviour:
   selfRB: {fileID: 1786462407214014039}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
+  - component: {fileID: 1786462408050357061}
+    distance: 6.636373
+    dir: {x: 0.63195246, y: -0.09117856, z: -0.76962495}
+  - component: {fileID: 1786462407048768651}
+    distance: 4.896741
+    dir: {x: 0.23872274, y: 0.9710853, z: 0.002172465}
+  - component: {fileID: 1786462406775818268}
+    distance: 3.9570062
+    dir: {x: 0.40087542, y: 0.31533828, z: 0.8601515}
+  - component: {fileID: 1786462407591087989}
+    distance: 6.568086
+    dir: {x: 0.029395087, y: -0.2229036, z: -0.9743972}
   - component: {fileID: 1786462407048382320}
     distance: 3.8814344
     dir: {x: 0.3561903, y: -0.93416417, z: 0.021583773}
@@ -2765,18 +2777,6 @@ MonoBehaviour:
   - component: {fileID: 1786462407404348235}
     distance: 2.1756518
     dir: {x: 0.5720349, y: 0.2669236, z: 0.7755823}
-  - component: {fileID: 1786462407048768651}
-    distance: 4.896741
-    dir: {x: 0.23872274, y: 0.9710853, z: 0.002172465}
-  - component: {fileID: 1786462408050357061}
-    distance: 6.636373
-    dir: {x: 0.63195246, y: -0.09117856, z: -0.76962495}
-  - component: {fileID: 1786462407591087989}
-    distance: 6.568086
-    dir: {x: 0.029395087, y: -0.2229036, z: -0.9743972}
-  - component: {fileID: 1786462406775818268}
-    distance: 3.9570062
-    dir: {x: 0.40087542, y: 0.31533828, z: 0.8601515}
   otherConnectedParts:
   - component: {fileID: 1786462406775818268}
     distance: 3.9570062
@@ -2875,7 +2875,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2901074389608616653}
   serializedVersion: 2
-  m_Mass: 17.363111
+  m_Mass: 173.63112
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -2883,6 +2883,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462406976918513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2901074389608616653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462406976918515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2898,36 +2911,36 @@ MonoBehaviour:
   selfRB: {fileID: 1786462406976918514}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
+  - component: {fileID: 1786462407720118821}
+    distance: 4.4758434
+    dir: {x: 0.73177314, y: -0.26246595, z: -0.628983}
+  - component: {fileID: 1786462406775818271}
+    distance: 7.41971
+    dir: {x: 0.5820623, y: -0.40730876, z: 0.7037777}
+  - component: {fileID: 1786462407606996316}
+    distance: 7.3640637
+    dir: {x: 0.0025270889, y: -0.42219615, z: 0.906501}
   - component: {fileID: 1786462407689320162}
     distance: 5.1182446
     dir: {x: 0.792753, y: -0.3937297, z: 0.46531677}
   - component: {fileID: 1786462407963490851}
     distance: 4.8468246
     dir: {x: 0.59946436, y: -0.16637073, z: 0.7829197}
-  - component: {fileID: 1786462407606996316}
-    distance: 7.3640637
-    dir: {x: 0.0025270889, y: -0.42219615, z: 0.906501}
   - component: {fileID: 1786462406697348960}
     distance: 6.7702065
     dir: {x: -0.009763506, y: 0.26700172, z: 0.9636466}
-  - component: {fileID: 1786462406707107365}
-    distance: 5.794376
-    dir: {x: 0.55351895, y: 0.65179354, z: 0.5184419}
   - component: {fileID: 1786462406774861216}
     distance: 6.0716763
     dir: {x: -0.033535525, y: 0.63655776, z: -0.7704996}
-  - component: {fileID: 1786462406818277718}
-    distance: 5.841048
-    dir: {x: -0.8564796, y: 0.108273804, z: -0.50469744}
+  - component: {fileID: 1786462406707107365}
+    distance: 5.794376
+    dir: {x: 0.55351895, y: 0.65179354, z: 0.5184419}
   - component: {fileID: 1786462408050357061}
     distance: 4.829712
     dir: {x: -0.6717497, y: -0.74066824, z: 0.012763856}
-  - component: {fileID: 1786462406775818271}
-    distance: 7.41971
-    dir: {x: 0.5820623, y: -0.40730876, z: 0.7037777}
-  - component: {fileID: 1786462407720118821}
-    distance: 4.4758434
-    dir: {x: 0.73177314, y: -0.26246595, z: -0.628983}
+  - component: {fileID: 1786462406818277718}
+    distance: 5.841048
+    dir: {x: -0.8564796, y: 0.108273804, z: -0.50469744}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 9.547286
@@ -3020,19 +3033,6 @@ MonoBehaviour:
   renderer: {fileID: 3366455782400952502}
   meshFilter: {fileID: 1530665216267047814}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462406976918513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2901074389608616653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!33 &2917987010969745434 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: -5713924838893520932, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -3053,7 +3053,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2922145890403593971}
   serializedVersion: 2
-  m_Mass: 3.6548336
+  m_Mass: 36.548336
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -3061,6 +3061,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462406908659275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2922145890403593971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462406908659285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3076,9 +3089,6 @@ MonoBehaviour:
   selfRB: {fileID: 1786462406908659284}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462407259265026}
-    distance: 3.3307648
-    dir: {x: -0.45291698, y: -0.82640505, z: 0.33454585}
   - component: {fileID: 1786462407606996316}
     distance: 3.5630252
     dir: {x: 0.9406469, y: -0.33107468, z: 0.07465212}
@@ -3088,6 +3098,9 @@ MonoBehaviour:
   - component: {fileID: 1786462407048768651}
     distance: 4.8904843
     dir: {x: -0.60041654, y: 0.75912434, z: -0.25145605}
+  - component: {fileID: 1786462407259265026}
+    distance: 3.3307648
+    dir: {x: -0.45291698, y: -0.82640505, z: 0.33454585}
   otherConnectedParts:
   - component: {fileID: 1786462407606996316}
     distance: 3.5630252
@@ -3144,19 +3157,6 @@ MonoBehaviour:
   renderer: {fileID: 889260969620681090}
   meshFilter: {fileID: 485556319213411884}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462406908659275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2922145890403593971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!23 &3092203780817710974 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 3612868681563119800, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -3177,7 +3177,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3238204402251679411}
   serializedVersion: 2
-  m_Mass: 3.0597281
+  m_Mass: 30.597282
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -3185,6 +3185,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462407404348233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238204402251679411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462407404348235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3200,15 +3213,15 @@ MonoBehaviour:
   selfRB: {fileID: 1786462407404348234}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462407259265026}
-    distance: 2.7423756
-    dir: {x: 0.49306974, y: -0.8352708, z: 0.24332057}
-  - component: {fileID: 1786462407214014032}
-    distance: 2.1756518
-    dir: {x: -0.5720349, y: -0.2669236, z: -0.7755823}
   - component: {fileID: 1786462407048768651}
     distance: 4.499224
     dir: {x: -0.016799644, y: 0.92780894, z: -0.37267736}
+  - component: {fileID: 1786462407214014032}
+    distance: 2.1756518
+    dir: {x: -0.5720349, y: -0.2669236, z: -0.7755823}
+  - component: {fileID: 1786462407259265026}
+    distance: 2.7423756
+    dir: {x: 0.49306974, y: -0.8352708, z: 0.24332057}
   otherConnectedParts:
   - component: {fileID: 1786462406775818268}
     distance: 1.8727473
@@ -3268,19 +3281,6 @@ MonoBehaviour:
   renderer: {fileID: 3092203780817710974}
   meshFilter: {fileID: 3706600214791605486}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462407404348233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3238204402251679411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!33 &3311746261180765829 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: -5386474798771726013, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -3379,7 +3379,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4498441343822768621}
   serializedVersion: 2
-  m_Mass: 17.057987
+  m_Mass: 170.57986
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -3387,6 +3387,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462407720118811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4498441343822768621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462407720118821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3402,21 +3415,21 @@ MonoBehaviour:
   selfRB: {fileID: 1786462407720118820}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462406707107365}
-    distance: 7.641066
-    dir: {x: -0.008899948, y: 0.6480108, z: 0.76157916}
-  - component: {fileID: 1786462406774861216}
-    distance: 6.400976
-    dir: {x: -0.5434981, y: 0.7873376, z: -0.29104853}
-  - component: {fileID: 1786462406818277718}
-    distance: 8.474049
-    dir: {x: -0.9768695, y: 0.21326157, z: -0.015663397}
-  - component: {fileID: 1786462408050357061}
-    distance: 7.520251
-    dir: {x: -0.8669471, y: -0.3194651, z: 0.3825504}
   - component: {fileID: 1786462406976918515}
     distance: 4.4758434
     dir: {x: -0.73177314, y: 0.26246595, z: 0.628983}
+  - component: {fileID: 1786462406774861216}
+    distance: 6.400976
+    dir: {x: -0.5434981, y: 0.7873376, z: -0.29104853}
+  - component: {fileID: 1786462406707107365}
+    distance: 7.641066
+    dir: {x: -0.008899948, y: 0.6480108, z: 0.76157916}
+  - component: {fileID: 1786462408050357061}
+    distance: 7.520251
+    dir: {x: -0.8669471, y: -0.3194651, z: 0.3825504}
+  - component: {fileID: 1786462406818277718}
+    distance: 8.474049
+    dir: {x: -0.9768695, y: 0.21326157, z: -0.015663397}
   otherConnectedParts:
   - component: {fileID: 1786462406775818271}
     distance: 8.312385
@@ -3488,19 +3501,6 @@ MonoBehaviour:
   renderer: {fileID: 6147064921450022309}
   meshFilter: {fileID: 48706244607747870}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462407720118811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4498441343822768621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!23 &4534773751387266375 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -6475038633282612607, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -3533,7 +3533,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4805994625000160008}
   serializedVersion: 2
-  m_Mass: 14.590931
+  m_Mass: 145.9093
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -3556,15 +3556,15 @@ MonoBehaviour:
   selfRB: {fileID: 1786462407613284647}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462407048768651}
-    distance: 6.4277663
-    dir: {x: -0.15885438, y: -0.82259625, z: 0.54598594}
-  - component: {fileID: 1786462406818277718}
-    distance: 7.9270086
-    dir: {x: 0.030963734, y: -0.8121674, z: -0.58260226}
   - component: {fileID: 1786462406976918515}
     distance: 8.96244
     dir: {x: 0.5855758, y: -0.78890246, z: -0.18637021}
+  - component: {fileID: 1786462406818277718}
+    distance: 7.9270086
+    dir: {x: 0.030963734, y: -0.8121674, z: -0.58260226}
+  - component: {fileID: 1786462407048768651}
+    distance: 6.4277663
+    dir: {x: -0.15885438, y: -0.82259625, z: 0.54598594}
   - component: {fileID: 1786462408066108373}
     distance: 5.331736
     dir: {x: -0.06397254, y: 0.06805837, z: -0.99562824}
@@ -3681,7 +3681,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4896519761112691770}
   serializedVersion: 2
-  m_Mass: 15.113148
+  m_Mass: 151.13147
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -3689,6 +3689,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462406890772490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4896519761112691770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462406890772500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3704,42 +3717,42 @@ MonoBehaviour:
   selfRB: {fileID: 1786462406890772491}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462406707107365}
-    distance: 6.9758034
-    dir: {x: 0.35318974, y: -0.82299256, z: 0.44490474}
-  - component: {fileID: 1786462406774861216}
-    distance: 7.3359194
-    dir: {x: -0.12910877, y: -0.77056444, z: -0.6241485}
   - component: {fileID: 1786462406976918515}
     distance: 9.547286
     dir: {x: -0.07787707, y: -0.99690855, z: 0.010423989}
-  - component: {fileID: 1786462407613284640}
-    distance: 6.709848
-    dir: {x: -0.89297146, y: -0.3647297, z: 0.2637694}
-  - component: {fileID: 1786462406976777200}
-    distance: 4.690997
-    dir: {x: -0.65561783, y: 0.06372118, z: -0.7523993}
-  - component: {fileID: 1786462407930885275}
-    distance: 7.4294496
-    dir: {x: -0.50425285, y: -0.2611884, z: 0.82310975}
+  - component: {fileID: 1786462406774861216}
+    distance: 7.3359194
+    dir: {x: -0.12910877, y: -0.77056444, z: -0.6241485}
   - component: {fileID: 1786462407630979326}
     distance: 5.1685185
     dir: {x: 0.5953246, y: -0.27780765, z: -0.75393075}
   - component: {fileID: 1786462408368650072}
     distance: 3.8662376
     dir: {x: -0.22853613, y: -0.94742334, z: -0.2239647}
-  - component: {fileID: 1786462408092026957}
-    distance: 3.6195498
-    dir: {x: -0.31759652, y: -0.9482259, z: -0.0001897376}
   - component: {fileID: 1786462408083473025}
     distance: 2.6118722
     dir: {x: 0.08221133, y: -0.9907613, z: 0.107858375}
+  - component: {fileID: 1786462408092026957}
+    distance: 3.6195498
+    dir: {x: -0.31759652, y: -0.9482259, z: -0.0001897376}
+  - component: {fileID: 1786462406707107365}
+    distance: 6.9758034
+    dir: {x: 0.35318974, y: -0.82299256, z: 0.44490474}
   - component: {fileID: 1786462407042156103}
     distance: 7.0126567
     dir: {x: 0.32643494, y: -0.04793927, z: 0.9440032}
   - component: {fileID: 1786462406645892008}
     distance: 3.9489267
     dir: {x: 0.8296463, y: -0.23388131, z: 0.5069384}
+  - component: {fileID: 1786462406976777200}
+    distance: 4.690997
+    dir: {x: -0.65561783, y: 0.06372118, z: -0.7523993}
+  - component: {fileID: 1786462407613284640}
+    distance: 6.709848
+    dir: {x: -0.89297146, y: -0.3647297, z: 0.2637694}
+  - component: {fileID: 1786462407930885275}
+    distance: 7.4294496
+    dir: {x: -0.50425285, y: -0.2611884, z: 0.82310975}
   otherConnectedParts:
   - component: {fileID: 1786462406645892008}
     distance: 3.9489267
@@ -3814,19 +3827,6 @@ MonoBehaviour:
   renderer: {fileID: 4534773751387266375}
   meshFilter: {fileID: 683248414661947373}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462406890772490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4896519761112691770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!33 &5377603191057690159 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: -3284285744092913175, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -3847,7 +3847,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5397738619959688105}
   serializedVersion: 2
-  m_Mass: 12.341693
+  m_Mass: 123.41693
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -3870,15 +3870,15 @@ MonoBehaviour:
   selfRB: {fileID: 1786462406645892015}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462406707107365}
-    distance: 5.0081596
-    dir: {x: -0.16222134, y: -0.9619211, z: 0.21998212}
   - component: {fileID: 1786462406890772500}
     distance: 3.9489267
     dir: {x: -0.8296463, y: 0.23388131, z: -0.5069384}
   - component: {fileID: 1786462408083473025}
     distance: 3.8860075
     dir: {x: -0.7878232, y: -0.4282446, z: -0.44265234}
+  - component: {fileID: 1786462406707107365}
+    distance: 5.0081596
+    dir: {x: -0.16222134, y: -0.9619211, z: 0.21998212}
   - component: {fileID: 1786462407042156103}
     distance: 4.7588015
     dir: {x: -0.20741278, y: 0.123434134, z: 0.97043496}
@@ -3989,7 +3989,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5520677201399549067}
   serializedVersion: 2
-  m_Mass: 12.685927
+  m_Mass: 126.859276
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -3997,6 +3997,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462408375570194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5520677201399549067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462408375570204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4012,21 +4025,21 @@ MonoBehaviour:
   selfRB: {fileID: 1786462408375570195}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462407048382320}
-    distance: 6.4527946
-    dir: {x: -0.9986069, y: -0.01671987, z: -0.05004755}
-  - component: {fileID: 1786462407259265026}
-    distance: 5.86622
-    dir: {x: -0.8914775, y: 0.30822465, z: 0.33206236}
+  - component: {fileID: 1786462406775818271}
+    distance: 5.2537913
+    dir: {x: 0.748151, y: 0.6600973, z: -0.06739128}
   - component: {fileID: 1786462407606996316}
     distance: 3.5745242
     dir: {x: -0.103368916, y: 0.9458733, z: 0.30763385}
   - component: {fileID: 1786462408050357061}
     distance: 7.2171106
     dir: {x: -0.5033125, y: 0.40361196, z: -0.764051}
-  - component: {fileID: 1786462406775818271}
-    distance: 5.2537913
-    dir: {x: 0.748151, y: 0.6600973, z: -0.06739128}
+  - component: {fileID: 1786462407048382320}
+    distance: 6.4527946
+    dir: {x: -0.9986069, y: -0.01671987, z: -0.05004755}
+  - component: {fileID: 1786462407259265026}
+    distance: 5.86622
+    dir: {x: -0.8914775, y: 0.30822465, z: 0.33206236}
   otherConnectedParts:
   - component: {fileID: 1786462406775818271}
     distance: 5.2537913
@@ -4092,19 +4105,6 @@ MonoBehaviour:
   renderer: {fileID: 9071751351482129925}
   meshFilter: {fileID: 1731365386248532186}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462408375570194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5520677201399549067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!33 &5564574869164970921 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: -3029905206846251921, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -4125,7 +4125,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5565376891417825203}
   serializedVersion: 2
-  m_Mass: 13.203758
+  m_Mass: 132.03758
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -4133,6 +4133,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462407591087979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5565376891417825203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462407591087989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4148,15 +4161,15 @@ MonoBehaviour:
   selfRB: {fileID: 1786462407591087988}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462407214014032}
-    distance: 6.568086
-    dir: {x: -0.029395087, y: 0.2229036, z: 0.9743972}
-  - component: {fileID: 1786462406818277718}
-    distance: 5.8024096
-    dir: {x: 0.38646403, y: 0.8735339, z: -0.29594615}
   - component: {fileID: 1786462408050357061}
     distance: 4.291217
     dir: {x: 0.93232363, y: 0.20016587, z: 0.30117488}
+  - component: {fileID: 1786462406818277718}
+    distance: 5.8024096
+    dir: {x: 0.38646403, y: 0.8735339, z: -0.29594615}
+  - component: {fileID: 1786462407214014032}
+    distance: 6.568086
+    dir: {x: -0.029395087, y: 0.2229036, z: 0.9743972}
   otherConnectedParts:
   - component: {fileID: 1786462408050357061}
     distance: 4.291217
@@ -4219,19 +4232,6 @@ MonoBehaviour:
   renderer: {fileID: 4364161703552103752}
   meshFilter: {fileID: 6915300790154140142}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462407591087979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5565376891417825203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!1 &5633207607601002003 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2961144925327738411, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -4246,7 +4246,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5633207607601002003}
   serializedVersion: 2
-  m_Mass: 2.6703377
+  m_Mass: 26.703377
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -4272,15 +4272,15 @@ MonoBehaviour:
   - component: {fileID: 1786462406774861216}
     distance: 4.3486433
     dir: {x: 0.52338886, y: -0.74450684, z: -0.4144558}
-  - component: {fileID: 1786462407613284640}
-    distance: 5.322978
-    dir: {x: -0.520111, y: -0.006026107, z: 0.8540774}
   - component: {fileID: 1786462408066108373}
     distance: 3.2187147
     dir: {x: -0.9661075, y: 0.10277159, z: -0.23680004}
   - component: {fileID: 1786462406976777200}
     distance: 2.8205392
     dir: {x: 0.052352164, y: 0.96226984, z: -0.26701292}
+  - component: {fileID: 1786462407613284640}
+    distance: 5.322978
+    dir: {x: -0.520111, y: -0.006026107, z: 0.8540774}
   otherConnectedParts:
   - component: {fileID: 1786462408066108373}
     distance: 3.2187147
@@ -4391,7 +4391,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6073174975508371807}
   serializedVersion: 2
-  m_Mass: 11.832709
+  m_Mass: 118.327095
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -4399,6 +4399,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462408066108363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6073174975508371807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462408066108373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4420,15 +4433,15 @@ MonoBehaviour:
   - component: {fileID: 1786462406818277718}
     distance: 6.8609705
     dir: {x: 0.085488565, y: -0.99124855, z: 0.10058833}
-  - component: {fileID: 1786462407613284640}
-    distance: 5.331736
-    dir: {x: 0.06397254, y: -0.06805837, z: 0.99562824}
   - component: {fileID: 1786462406976777200}
     distance: 4.036117
     dir: {x: 0.8070345, y: 0.5905001, z: 0.0022475438}
   - component: {fileID: 1786462408054100199}
     distance: 3.1499476
     dir: {x: -0.86656934, y: -0.3227581, z: 0.3806372}
+  - component: {fileID: 1786462407613284640}
+    distance: 5.331736
+    dir: {x: 0.06397254, y: -0.06805837, z: 0.99562824}
   - component: {fileID: 1786462407638898833}
     distance: 3.2187147
     dir: {x: 0.9661075, y: -0.10277159, z: 0.23680004}
@@ -4500,19 +4513,6 @@ MonoBehaviour:
   renderer: {fileID: 7674123891792089616}
   meshFilter: {fileID: 5495899197089166441}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462408066108363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6073174975508371807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!33 &6101301975657104478 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: 5505342449647094680, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -4551,7 +4551,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6435802005050839118}
   serializedVersion: 2
-  m_Mass: 15.735505
+  m_Mass: 157.35506
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -4559,6 +4559,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462406818277716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6435802005050839118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462406818277718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4574,27 +4587,27 @@ MonoBehaviour:
   selfRB: {fileID: 1786462406818277717}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
+  - component: {fileID: 1786462406976918515}
+    distance: 5.841048
+    dir: {x: 0.8564796, y: -0.108273804, z: 0.50469744}
   - component: {fileID: 1786462406774861216}
     distance: 6.0394278
     dir: {x: 0.7946318, y: 0.53523946, z: -0.2864944}
   - component: {fileID: 1786462408050357061}
     distance: 5.465415
     dir: {x: 0.32172862, y: -0.7702337, z: 0.550664}
-  - component: {fileID: 1786462407591087989}
-    distance: 5.8024096
-    dir: {x: -0.38646403, y: -0.8735339, z: 0.29594615}
-  - component: {fileID: 1786462406976918515}
-    distance: 5.841048
-    dir: {x: 0.8564796, y: -0.108273804, z: 0.50469744}
-  - component: {fileID: 1786462407613284640}
-    distance: 7.9270086
-    dir: {x: -0.030963734, y: 0.8121674, z: 0.58260226}
   - component: {fileID: 1786462408066108373}
     distance: 6.8609705
     dir: {x: -0.085488565, y: 0.99124855, z: -0.10058833}
+  - component: {fileID: 1786462407591087989}
+    distance: 5.8024096
+    dir: {x: -0.38646403, y: -0.8735339, z: 0.29594615}
   - component: {fileID: 1786462408054100199}
     distance: 6.6868243
     dir: {x: -0.49592787, y: 0.8650229, z: 0.07609796}
+  - component: {fileID: 1786462407613284640}
+    distance: 7.9270086
+    dir: {x: -0.030963734, y: 0.8121674, z: 0.58260226}
   otherConnectedParts:
   - component: {fileID: 1786462408066108373}
     distance: 6.8609705
@@ -4669,19 +4682,6 @@ MonoBehaviour:
   renderer: {fileID: 7469143069767194218}
   meshFilter: {fileID: 3311746261180765829}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462406818277716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6435802005050839118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!1 &6533817812077863005 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4438857398858076261, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -4696,7 +4696,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6533817812077863005}
   serializedVersion: 2
-  m_Mass: 7.290084
+  m_Mass: 72.90084
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -4704,6 +4704,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462406775818258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6533817812077863005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462406775818268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4719,18 +4732,18 @@ MonoBehaviour:
   selfRB: {fileID: 1786462406775818259}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
+  - component: {fileID: 1786462407048768651}
+    distance: 4.897761
+    dir: {x: -0.08520283, y: 0.7161145, z: -0.6927629}
+  - component: {fileID: 1786462407214014032}
+    distance: 3.9570062
+    dir: {x: -0.40087542, y: -0.31533828, z: -0.8601515}
   - component: {fileID: 1786462407259265026}
     distance: 3.2968564
     dir: {x: 0.30649337, y: -0.897124, z: -0.3181672}
   - component: {fileID: 1786462407404348235}
     distance: 1.8727473
     dir: {x: -0.18246868, y: -0.35619476, z: -0.9164226}
-  - component: {fileID: 1786462407214014032}
-    distance: 3.9570062
-    dir: {x: -0.40087542, y: -0.31533828, z: -0.8601515}
-  - component: {fileID: 1786462407048768651}
-    distance: 4.897761
-    dir: {x: -0.08520283, y: 0.7161145, z: -0.6927629}
   otherConnectedParts:
   - component: {fileID: 1786462407214014032}
     distance: 3.9570062
@@ -4787,19 +4800,6 @@ MonoBehaviour:
   renderer: {fileID: 6017685633135530857}
   meshFilter: {fileID: 4440914537755711011}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462406775818258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6533817812077863005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!1 &6567176021571296734 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4329786818681761256, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -4814,7 +4814,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6567176021571296734}
   serializedVersion: 2
-  m_Mass: 11.844737
+  m_Mass: 118.44737
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -4822,6 +4822,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462407042156101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6567176021571296734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462407042156103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4840,9 +4853,6 @@ MonoBehaviour:
   - component: {fileID: 1786462406707107365}
     distance: 6.4504266
     dir: {x: 0.027068883, y: -0.83790624, z: -0.54514253}
-  - component: {fileID: 1786462407930885275}
-    distance: 6.2654414
-    dir: {x: -0.9632996, y: -0.25605607, z: -0.08055583}
   - component: {fileID: 1786462406645892008}
     distance: 4.7588015
     dir: {x: 0.20741278, y: -0.123434134, z: -0.97043496}
@@ -4852,6 +4862,9 @@ MonoBehaviour:
   - component: {fileID: 1786462407629668419}
     distance: 2.8847048
     dir: {x: -0.667473, y: -0.69388276, z: -0.27019697}
+  - component: {fileID: 1786462407930885275}
+    distance: 6.2654414
+    dir: {x: -0.9632996, y: -0.25605607, z: -0.08055583}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 7.0126567
@@ -4917,19 +4930,6 @@ MonoBehaviour:
   renderer: {fileID: 5902094102008144763}
   meshFilter: {fileID: 5663819133101127013}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462407042156101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6567176021571296734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!33 &6670709176069054868 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: -4298170452007801262, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -4950,7 +4950,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6675832524279241908}
   serializedVersion: 2
-  m_Mass: 2.6181352
+  m_Mass: 26.181353
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -4973,15 +4973,15 @@ MonoBehaviour:
   selfRB: {fileID: 1786462408340813304}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
+  - component: {fileID: 1786462406775818271}
+    distance: 2.558985
+    dir: {x: 0.5381339, y: -0.7075776, z: -0.45798028}
   - component: {fileID: 1786462407606996316}
     distance: 3.4963763
     dir: {x: -0.83602196, y: -0.5427468, z: 0.08058049}
   - component: {fileID: 1786462406697348960}
     distance: 4.263623
     dir: {x: -0.7054465, y: 0.70810413, z: 0.030559754}
-  - component: {fileID: 1786462406775818271}
-    distance: 2.558985
-    dir: {x: 0.5381339, y: -0.7075776, z: -0.45798028}
   otherConnectedParts:
   - component: {fileID: 1786462406775818271}
     distance: 2.558985
@@ -5071,7 +5071,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6892581293352190088}
   serializedVersion: 2
-  m_Mass: 1.7740117
+  m_Mass: 17.740118
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -5094,18 +5094,18 @@ MonoBehaviour:
   selfRB: {fileID: 1786462408368650078}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462406707107365}
-    distance: 5.59284
-    dir: {x: 0.5985075, y: -0.37155908, z: 0.7097412}
   - component: {fileID: 1786462406976918515}
     distance: 5.935522
     dir: {x: 0.023596965, y: -0.98640144, z: 0.1626515}
-  - component: {fileID: 1786462408092026957}
-    distance: 0.9341392
-    dir: {x: -0.28473428, y: 0.24708633, z: 0.9262153}
   - component: {fileID: 1786462406890772500}
     distance: 3.8662376
     dir: {x: 0.22853613, y: 0.94742334, z: 0.2239647}
+  - component: {fileID: 1786462408092026957}
+    distance: 0.9341392
+    dir: {x: -0.28473428, y: 0.24708633, z: 0.9262153}
+  - component: {fileID: 1786462406707107365}
+    distance: 5.59284
+    dir: {x: 0.5985075, y: -0.37155908, z: 0.7097412}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 3.8662376
@@ -5198,7 +5198,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6976147879646189568}
   serializedVersion: 2
-  m_Mass: 1.7816471
+  m_Mass: 17.816471
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -5206,6 +5206,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462408092026947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6976147879646189568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462408092026957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5221,9 +5234,6 @@ MonoBehaviour:
   selfRB: {fileID: 1786462408092026956}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462406707107365}
-    distance: 5.2937284
-    dir: {x: 0.6825697, y: -0.43615454, z: 0.5864024}
   - component: {fileID: 1786462406976918515}
     distance: 6.099974
     dir: {x: 0.0665645, y: -0.9976469, z: 0.01642754}
@@ -5233,6 +5243,9 @@ MonoBehaviour:
   - component: {fileID: 1786462406890772500}
     distance: 3.6195498
     dir: {x: 0.31759652, y: 0.9482259, z: 0.0001897376}
+  - component: {fileID: 1786462406707107365}
+    distance: 5.2937284
+    dir: {x: 0.6825697, y: -0.43615454, z: 0.5864024}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 3.6195498
@@ -5292,19 +5305,6 @@ MonoBehaviour:
   renderer: {fileID: 3932155116477417991}
   meshFilter: {fileID: 819287204573945032}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462408092026947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6976147879646189568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!1 &7023242256891147848 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8772268285605722510, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -5319,7 +5319,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7023242256891147848}
   serializedVersion: 2
-  m_Mass: 16.0396
+  m_Mass: 160.396
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -5327,6 +5327,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462406707107355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7023242256891147848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462406707107365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5342,6 +5355,15 @@ MonoBehaviour:
   selfRB: {fileID: 1786462406707107364}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
+  - component: {fileID: 1786462406976918515}
+    distance: 5.794376
+    dir: {x: -0.55351895, y: -0.65179354, z: -0.5184419}
+  - component: {fileID: 1786462407720118821}
+    distance: 7.641066
+    dir: {x: 0.008899948, y: -0.6480108, z: -0.76157916}
+  - component: {fileID: 1786462406775818271}
+    distance: 7.237278
+    dir: {x: 0.15357111, y: -0.9394208, z: 0.3064383}
   - component: {fileID: 1786462407689320162}
     distance: 5.887009
     dir: {x: 0.14442085, y: -0.9838513, z: -0.10573148}
@@ -5351,18 +5373,6 @@ MonoBehaviour:
   - component: {fileID: 1786462406697348960}
     distance: 5.1945243
     dir: {x: -0.63016313, y: -0.3790684, z: 0.6776442}
-  - component: {fileID: 1786462406976918515}
-    distance: 5.794376
-    dir: {x: -0.55351895, y: -0.65179354, z: -0.5184419}
-  - component: {fileID: 1786462406775818271}
-    distance: 7.237278
-    dir: {x: 0.15357111, y: -0.9394208, z: 0.3064383}
-  - component: {fileID: 1786462407720118821}
-    distance: 7.641066
-    dir: {x: 0.008899948, y: -0.6480108, z: -0.76157916}
-  - component: {fileID: 1786462407930885275}
-    distance: 7.8790727
-    dir: {x: -0.7881769, y: 0.4823599, z: 0.3822384}
   - component: {fileID: 1786462408083473025}
     distance: 4.7921166
     dir: {x: -0.46932426, y: 0.6580167, z: -0.5888538}
@@ -5375,6 +5385,9 @@ MonoBehaviour:
   - component: {fileID: 1786462407629668419}
     distance: 4.845933
     dir: {x: -0.43336722, y: 0.7022808, z: 0.564796}
+  - component: {fileID: 1786462407930885275}
+    distance: 7.8790727
+    dir: {x: -0.7881769, y: 0.4823599, z: 0.3822384}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 6.9758034
@@ -5476,19 +5489,6 @@ MonoBehaviour:
   renderer: {fileID: 103329164747524912}
   meshFilter: {fileID: 898535794864287150}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462406707107355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7023242256891147848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!1 &7076752712340705292 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -360456191338356790, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -5503,7 +5503,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7076752712340705292}
   serializedVersion: 2
-  m_Mass: 0.498679
+  m_Mass: 4.98679
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -5511,6 +5511,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462407963490849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7076752712340705292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462407963490851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5526,15 +5539,15 @@ MonoBehaviour:
   selfRB: {fileID: 1786462407963490850}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462406707107365}
-    distance: 4.6605835
-    dir: {x: 0.064755484, y: 0.98337615, z: -0.16964123}
   - component: {fileID: 1786462406976918515}
     distance: 4.8468246
     dir: {x: -0.59946436, y: 0.16637073, z: -0.7829197}
   - component: {fileID: 1786462406775818271}
     distance: 2.9905708
     dir: {x: 0.47256368, y: -0.74090976, z: 0.47721732}
+  - component: {fileID: 1786462406707107365}
+    distance: 4.6605835
+    dir: {x: 0.064755484, y: 0.98337615, z: -0.16964123}
   otherConnectedParts:
   - component: {fileID: 1786462406775818271}
     distance: 2.9905708
@@ -5594,19 +5607,6 @@ MonoBehaviour:
   renderer: {fileID: 434358125422219304}
   meshFilter: {fileID: 6101301975657104478}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462407963490849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7076752712340705292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!33 &7118226266079289991 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: -431273492123177663, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -5639,7 +5639,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7467437138199925545}
   serializedVersion: 2
-  m_Mass: 11.567683
+  m_Mass: 115.676834
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -5647,6 +5647,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462408054100197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7467437138199925545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462408054100199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5665,12 +5678,12 @@ MonoBehaviour:
   - component: {fileID: 1786462406818277718}
     distance: 6.6868243
     dir: {x: 0.49592787, y: -0.8650229, z: -0.07609796}
-  - component: {fileID: 1786462407613284640}
-    distance: 5.1714945
-    dir: {x: 0.5937806, y: 0.12642418, z: 0.7946329}
   - component: {fileID: 1786462408066108373}
     distance: 3.1499476
     dir: {x: 0.86656934, y: 0.3227581, z: -0.3806372}
+  - component: {fileID: 1786462407613284640}
+    distance: 5.1714945
+    dir: {x: 0.5937806, y: 0.12642418, z: 0.7946329}
   otherConnectedParts:
   - component: {fileID: 1786462408066108373}
     distance: 3.1499476
@@ -5730,19 +5743,6 @@ MonoBehaviour:
   renderer: {fileID: 7247188193802442459}
   meshFilter: {fileID: 7879683888809777899}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462408054100197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7467437138199925545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!23 &7469143069767194218 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -41253588454008404, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -5811,7 +5811,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7919090507072808446}
   serializedVersion: 2
-  m_Mass: 12.907939
+  m_Mass: 129.07939
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -5837,21 +5837,21 @@ MonoBehaviour:
   - component: {fileID: 1786462406774861216}
     distance: 6.407315
     dir: {x: 0.33217818, y: -0.92889374, z: -0.16375035}
-  - component: {fileID: 1786462407613284640}
-    distance: 6.642966
-    dir: {x: -0.43899083, y: -0.4133992, z: 0.7977394}
-  - component: {fileID: 1786462408066108373}
-    distance: 4.036117
-    dir: {x: -0.8070345, y: -0.5905001, z: -0.0022475438}
-  - component: {fileID: 1786462407638898833}
-    distance: 2.8205392
-    dir: {x: -0.052352164, y: -0.96226984, z: 0.26701292}
   - component: {fileID: 1786462407630979326}
     distance: 6.40288
     dir: {x: 0.96088755, y: -0.27093586, z: -0.057349473}
   - component: {fileID: 1786462406890772500}
     distance: 4.690997
     dir: {x: 0.65561783, y: -0.06372118, z: 0.7523993}
+  - component: {fileID: 1786462408066108373}
+    distance: 4.036117
+    dir: {x: -0.8070345, y: -0.5905001, z: -0.0022475438}
+  - component: {fileID: 1786462407613284640}
+    distance: 6.642966
+    dir: {x: -0.43899083, y: -0.4133992, z: 0.7977394}
+  - component: {fileID: 1786462407638898833}
+    distance: 2.8205392
+    dir: {x: -0.052352164, y: -0.96226984, z: 0.26701292}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 4.690997
@@ -5950,7 +5950,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8127073714926749604}
   serializedVersion: 2
-  m_Mass: 15.291672
+  m_Mass: 152.91672
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -5958,6 +5958,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462407930885273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8127073714926749604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462407930885275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5976,18 +5989,12 @@ MonoBehaviour:
   - component: {fileID: 1786462406697348960}
     distance: 6.4939413
     dir: {x: 0.45222235, y: -0.8884633, z: 0.07828145}
-  - component: {fileID: 1786462406707107365}
-    distance: 7.8790727
-    dir: {x: 0.7881769, y: -0.4823599, z: -0.3822384}
-  - component: {fileID: 1786462407048768651}
-    distance: 6.7038713
-    dir: {x: -0.48724988, y: -0.86431426, z: -0.12469357}
-  - component: {fileID: 1786462407613284640}
-    distance: 4.917426
-    dir: {x: -0.45661727, y: -0.10306101, z: -0.88367367}
   - component: {fileID: 1786462406890772500}
     distance: 7.4294496
     dir: {x: 0.50425285, y: 0.2611884, z: -0.82310975}
+  - component: {fileID: 1786462406707107365}
+    distance: 7.8790727
+    dir: {x: 0.7881769, y: -0.4823599, z: -0.3822384}
   - component: {fileID: 1786462407042156103}
     distance: 6.2654414
     dir: {x: 0.9632996, y: 0.25605607, z: 0.08055583}
@@ -5997,6 +6004,12 @@ MonoBehaviour:
   - component: {fileID: 1786462407629668419}
     distance: 4.138325
     dir: {x: 0.9931637, y: -0.096015334, z: -0.0663845}
+  - component: {fileID: 1786462407048768651}
+    distance: 6.7038713
+    dir: {x: -0.48724988, y: -0.86431426, z: -0.12469357}
+  - component: {fileID: 1786462407613284640}
+    distance: 4.917426
+    dir: {x: -0.45661727, y: -0.10306101, z: -0.88367367}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 7.4294496
@@ -6068,19 +6081,6 @@ MonoBehaviour:
   renderer: {fileID: 2501062939312625615}
   meshFilter: {fileID: 5564574869164970921}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462407930885273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8127073714926749604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!1 &8127761272737440181 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7494361176785514099, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -6095,7 +6095,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8127761272737440181}
   serializedVersion: 2
-  m_Mass: 9.997457
+  m_Mass: 99.97456
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -6103,6 +6103,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462407606996306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8127761272737440181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462407606996316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6118,24 +6131,24 @@ MonoBehaviour:
   selfRB: {fileID: 1786462407606996307}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462407259265026}
-    distance: 5.1782618
-    dir: {x: -0.93855983, y: -0.30375704, z: 0.16382064}
-  - component: {fileID: 1786462406908659285}
-    distance: 3.5630252
-    dir: {x: -0.9406469, y: 0.33107468, z: -0.07465212}
   - component: {fileID: 1786462408375570204}
     distance: 3.5745242
     dir: {x: 0.103368916, y: -0.9458733, z: -0.30763385}
+  - component: {fileID: 1786462406775818271}
+    distance: 4.5400314
+    dir: {x: 0.9471574, y: 0.019155487, z: -0.320197}
   - component: {fileID: 1786462406697348960}
     distance: 4.9197974
     dir: {x: -0.01721831, y: 0.9993778, z: -0.030782657}
   - component: {fileID: 1786462408050357061}
     distance: 7.38983
     dir: {x: -0.44154835, y: -0.06334853, z: -0.8949983}
-  - component: {fileID: 1786462406775818271}
-    distance: 4.5400314
-    dir: {x: 0.9471574, y: 0.019155487, z: -0.320197}
+  - component: {fileID: 1786462407259265026}
+    distance: 5.1782618
+    dir: {x: -0.93855983, y: -0.30375704, z: 0.16382064}
+  - component: {fileID: 1786462406908659285}
+    distance: 3.5630252
+    dir: {x: -0.9406469, y: 0.33107468, z: -0.07465212}
   otherConnectedParts:
   - component: {fileID: 1786462406775818271}
     distance: 4.5400314
@@ -6210,19 +6223,6 @@ MonoBehaviour:
   renderer: {fileID: 2530579417363623662}
   meshFilter: {fileID: 5377603191057690159}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462407606996306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8127761272737440181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!1 &8432083549843576945 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7912276199443863479, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -6237,7 +6237,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8432083549843576945}
   serializedVersion: 2
-  m_Mass: 1.9726803
+  m_Mass: 19.726803
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -6260,12 +6260,12 @@ MonoBehaviour:
   selfRB: {fileID: 1786462408083473024}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462406707107365}
-    distance: 4.7921166
-    dir: {x: 0.46932426, y: -0.6580167, z: 0.5888538}
   - component: {fileID: 1786462406890772500}
     distance: 2.6118722
     dir: {x: -0.08221133, y: 0.9907613, z: -0.107858375}
+  - component: {fileID: 1786462406707107365}
+    distance: 4.7921166
+    dir: {x: 0.46932426, y: -0.6580167, z: 0.5888538}
   - component: {fileID: 1786462406645892008}
     distance: 3.8860075
     dir: {x: 0.7878232, y: 0.4282446, z: 0.44265234}
@@ -6361,7 +6361,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8778519383004701476}
   serializedVersion: 2
-  m_Mass: 1.6079621
+  m_Mass: 16.07962
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -6369,6 +6369,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462407629668417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8778519383004701476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462407629668419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6387,15 +6400,15 @@ MonoBehaviour:
   - component: {fileID: 1786462406707107365}
     distance: 4.845933
     dir: {x: 0.43336722, y: -0.7022808, z: -0.564796}
-  - component: {fileID: 1786462407930885275}
-    distance: 4.138325
-    dir: {x: -0.9931637, y: 0.096015334, z: 0.0663845}
   - component: {fileID: 1786462407042156103}
     distance: 2.8847048
     dir: {x: 0.667473, y: 0.69388276, z: 0.27019697}
   - component: {fileID: 1786462406645892008}
     distance: 5.0217657
     dir: {x: 0.57997507, y: 0.28162375, z: -0.76440626}
+  - component: {fileID: 1786462407930885275}
+    distance: 4.138325
+    dir: {x: -0.9931637, y: 0.096015334, z: 0.0663845}
   otherConnectedParts:
   - component: {fileID: 1786462407042156103}
     distance: 2.8847048
@@ -6455,19 +6468,6 @@ MonoBehaviour:
   renderer: {fileID: 6181178635102230813}
   meshFilter: {fileID: 8072916826788899}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462407629668417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8778519383004701476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!33 &8816999839355192219 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: 7104020200114555997, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -6494,7 +6494,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8850027744703848920}
   serializedVersion: 2
-  m_Mass: 1.4050925
+  m_Mass: 14.050924
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -6502,6 +6502,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1786462408591574993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8850027744703848920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &1786462408591574995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6517,12 +6530,12 @@ MonoBehaviour:
   selfRB: {fileID: 1786462408591574994}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462407048768651}
-    distance: 3.0222235
-    dir: {x: -0.24173635, y: -0.09618776, z: 0.96556276}
   - component: {fileID: 1786462408050357061}
     distance: 6.4836106
     dir: {x: 0.35386574, y: -0.8715744, z: -0.33931863}
+  - component: {fileID: 1786462407048768651}
+    distance: 3.0222235
+    dir: {x: -0.24173635, y: -0.09618776, z: 0.96556276}
   - component: {fileID: 1786462407613284640}
     distance: 5.040002
     dir: {x: 0.05763838, y: 0.9914194, z: -0.117326096}
@@ -6579,19 +6592,6 @@ MonoBehaviour:
   renderer: {fileID: 5674582187377071153}
   meshFilter: {fileID: 4000295273557733487}
   parent: {fileID: 1786462408421033223}
---- !u!114 &1786462408591574993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8850027744703848920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!33 &8890113774420063557 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: 7181778472307210883, guid: 009d84d3b740dab47ba04d6163e0887b,

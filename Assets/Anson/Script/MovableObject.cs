@@ -34,6 +34,7 @@ public class MovableObject : MonoBehaviour
     }
     private void LateUpdate()
     {
-        StartCoroutine(DelayUpdateVelocity());
+        previousPosition = transform.position;
+
     }
 }
