@@ -12,7 +12,7 @@ public class DestructiveControllerWindow : EditorWindow
 {
     Vector2 scrollPos;
 
-    private BreakableStructure[] controlledbreakableStructure = Array.Empty<BreakableStructure>();
+    private BreakableStructureController[] controlledbreakableStructure = Array.Empty<BreakableStructureController>();
 
 
     [MenuItem("Window/Destructive Controller")]
@@ -87,27 +87,27 @@ public class DestructiveControllerWindow : EditorWindow
 
 public class DestructiveController
 {
-    public static BreakableStructure[] GetActivebreakableStructures(bool includeInactive = false)
+    public static BreakableStructureController[] GetActivebreakableStructures(bool includeInactive = false)
     {
         // List<breakableStructure> temp = new List<breakableStructure>();
         // foreach (GameObject g in GameObject.FindObjectsOfType<breakableStructure>(false))
         // {
         //     temp.Add(g.GetComponent<breakableStructure>());
         // }
-        BreakableStructure[] temp = GameObject.FindObjectsOfType<BreakableStructure>(includeInactive);
+        BreakableStructureController[] temp = GameObject.FindObjectsOfType<BreakableStructureController>(includeInactive);
         Debug.Log($"Window hooked to {temp.Length} objects");
         return temp;
     }
 
-    public static void UpdateObjects(BreakableStructure[] breakableStructures)
+    public static void UpdateObjects(BreakableStructureController[] breakableStructures)
     {
-        foreach (BreakableStructure breakableStructure in breakableStructures)
+        foreach (BreakableStructureController breakableStructure in breakableStructures)
         {
             try
             {
                 breakableStructure.UpdateValues();
                 EditorUtility.SetDirty(breakableStructure.gameObject);
-                MarkBreakablePartDirty(breakableStructure.BreakableComponents);
+                MarkBreakablePartDirty(breakableStructure.AllBreakableComponents);
 
                 Debug.Log($"{breakableStructure} update COMPLETE");
             }
@@ -121,15 +121,15 @@ public class DestructiveController
 
     }
 
-    public static void Initialise(BreakableStructure[] breakableStructures)
+    public static void Initialise(BreakableStructureController[] breakableStructures)
     {
-        foreach (BreakableStructure breakableStructure in breakableStructures)
+        foreach (BreakableStructureController breakableStructure in breakableStructures)
         {
             try
             {
                 breakableStructure.Initialise();
                 EditorUtility.SetDirty(breakableStructure.gameObject);
-                MarkBreakablePartDirty(breakableStructure.BreakableComponents);
+                MarkBreakablePartDirty(breakableStructure.AllBreakableComponents);
                 Debug.Log($"{breakableStructure} initialise COMPLETE");
             }
             catch (Exception e)
@@ -142,9 +142,9 @@ public class DestructiveController
 
     }
 
-    public static void ResetConnections(BreakableStructure[] breakableStructures)
+    public static void ResetConnections(BreakableStructureController[] breakableStructures)
     {
-        foreach (BreakableStructure breakableStructure in breakableStructures)
+        foreach (BreakableStructureController breakableStructure in breakableStructures)
         {
             try
             {
@@ -152,7 +152,7 @@ public class DestructiveController
                 EditorUtility.SetDirty(breakableStructure.gameObject);
                 PrefabUtility.RecordPrefabInstancePropertyModifications(breakableStructure.gameObject);
 
-                MarkBreakablePartDirty(breakableStructure.BreakableComponents);
+                MarkBreakablePartDirty(breakableStructure.AllBreakableComponents);
                 Debug.Log($"{breakableStructure} initialise COMPLETE");
             }
             catch (Exception e)

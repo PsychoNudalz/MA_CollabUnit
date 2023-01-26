@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [Serializable]
@@ -59,6 +60,9 @@ public class BreakableComponent : MonoBehaviour
 {
     [SerializeField]
     protected Rigidbody selfRB;
+
+    [SerializeField]
+    private PhysicMaterial physicMaterial;
 
     [SerializeField]
     protected List<BreakableData> connectedParts;
@@ -172,12 +176,26 @@ public class BreakableComponent : MonoBehaviour
 
     public virtual void Initialise(GameObject p, float mass, float drag, float affectedRange, Vector2 breakForce,
         float forceTransfer, LayerMask bpLayer, AnimationCurve transferToDot, float minSize, float breakDelay,
-        float bottomAngle)
+        float bottomAngle, PhysicMaterial pm)
     {
-        parent = p;
+        if (parent && !parent.TryGetComponent(out BreakableCollective _))
+        {
+            parent = p;
+        }
 
 
         Initialise();
+        InitialiseValues(mass, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot, minSize,
+            breakDelay, bottomAngle, pm);
+    }
+
+    protected virtual void InitialiseValues(float mass, float drag, float affectedRange, Vector2 breakForce,
+        float forceTransfer,
+        LayerMask bpLayer, AnimationCurve transferToDot, float minSize, float breakDelay, float bottomAngle,
+        PhysicMaterial pm)
+    {
+        physicMaterial = pm;
+        meshSize = meshFilter.sharedMesh.bounds.size.magnitude * transform.lossyScale.x;
         this.AffectiveRange = affectedRange;
         this.BreakingForce = breakForce * meshSize;
         this.ForceTransfer = forceTransfer;
@@ -193,6 +211,7 @@ public class BreakableComponent : MonoBehaviour
         selfRB.collisionDetectionMode = CollisionDetectionMode.Continuous;
         this.transferToDot = transferToDot;
     }
+
     public virtual void Initialise()
     {
         if (!selfRB)
@@ -216,15 +235,14 @@ public class BreakableComponent : MonoBehaviour
         connectedParts = new List<BreakableData>();
         otherConnectedParts = new List<BreakableData>();
 
-        meshSize = meshFilter.sharedMesh.bounds.size.magnitude * transform.lossyScale.x;
         // print($"{this} mesh size: {meshSize}");
         // var tempParts = InitialiseClosest();
         //
     }
 
-    
+
     public virtual void Break(Vector3 force, Vector3 originalForce, List<BreakableComponent> breakHistory = null,
-        float breakDelay = 0f, bool forceBreak = false)
+        float breakDelay = 0f, bool forceBreak = false, Vector3 originPoint = default)
     {
     }
 
@@ -289,6 +307,7 @@ public class BreakableComponent : MonoBehaviour
         Vector2 f = bp.breakingForce;
         return new BreakableData(bp, d, f, (bp.transform.position - transform.position).normalized);
     }
+
     public virtual List<BreakableData> InitialiseClosest()
     {
         float CastSizeMultiplier = .25f;
@@ -311,7 +330,6 @@ public class BreakableComponent : MonoBehaviour
                     }
                 }
             }
-            
         }
 
         return connectedParts;
@@ -360,11 +378,66 @@ public class BreakableComponent : MonoBehaviour
     public virtual void EvaluateBreak(BreakableData pd, Vector3 force, BreakableComponent originalPart,
         List<BreakableComponent> breakHistory)
     {
-        
     }
 
     public virtual void EvaluateFall()
     {
-        
+    }
+
+    protected virtual float CalculateForce(Rigidbody rb, out Vector3 originalSpeed, out Vector3 forceDir)
+    {
+        float force = 0f;
+        originalSpeed = new Vector3();
+        forceDir = new Vector3();
+        if (rb.TryGetComponent(out MovableObject movableObject))
+        {
+            originalSpeed = movableObject.Velocity;
+            force = originalSpeed.magnitude * rb.mass;
+            forceDir = originalSpeed.normalized;
+        }
+        else
+        {
+            originalSpeed = rb.velocity;
+            force = rb.velocity.magnitude * rb.mass;
+            forceDir = (transform.position - rb.transform.position).normalized;
+        }
+
+        return force;
+    }
+
+    public virtual BreakableComponent AddComponents(PhysicMaterial physicMaterial)
+    {
+        Rigidbody rb;
+        BreakablePart bp;
+        BreakableComponent bc;
+        if (TryGetComponent(out Collider c))
+        {
+            if (c is MeshCollider mc)
+            {
+                mc.convex = true;
+            }
+
+            c.material = physicMaterial;
+
+        }
+
+        if (!TryGetComponent(out rb))
+        {
+            rb = gameObject.AddComponent<Rigidbody>();
+        }
+
+        if (!TryGetComponent(out MovableObject mo))
+        {
+            mo = gameObject.AddComponent<MovableObject>();
+        }
+
+        if (!TryGetComponent(out bc))
+        {
+            bp = gameObject.AddComponent<BreakablePart>();
+            bc = bp;
+
+        }
+
+        return bc;
     }
 }

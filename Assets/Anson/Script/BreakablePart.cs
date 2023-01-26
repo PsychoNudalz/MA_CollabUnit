@@ -72,6 +72,9 @@ public class BreakablePart : BreakableComponent
         }
     }
 
+
+    
+
     bool RBInConnected(Rigidbody rb)
     {
         foreach (BreakableData connectedPart in connectedParts)
@@ -87,7 +90,7 @@ public class BreakablePart : BreakableComponent
 
     
     public override void Break(Vector3 force, Vector3 originalForce, List<BreakableComponent> breakHistory = null,
-        float breakDelay = 0f, bool forceBreak = false)
+        float breakDelay = 0f, bool forceBreak = false, Vector3 originPoint = default)
     {
         if (breakDelay == 0f)
         {
@@ -279,21 +282,7 @@ public class BreakablePart : BreakableComponent
         }
 
 
-        float force = 0f;
-        Vector3 originalSpeed = new Vector3();
-        Vector3 forceDir = new Vector3();
-        if (rb.TryGetComponent(out MovableObject movableObject))
-        {
-            originalSpeed = movableObject.Velocity;
-            force = originalSpeed.magnitude * rb.mass;
-            forceDir = originalSpeed.normalized;
-        }
-        else
-        {
-            originalSpeed = rb.velocity;
-            force = rb.velocity.magnitude * rb.mass;
-            forceDir = (transform.position - rb.transform.position).normalized;
-        }
+        var force = CalculateForce(rb, out var originalSpeed, out var forceDir);
 
 
         if (isDebug)
@@ -322,6 +311,8 @@ public class BreakablePart : BreakableComponent
             rb.velocity = originalSpeed * forceTransfer;
         }
     }
+
+
 
     IEnumerator DelayBreakBottom()
     {
