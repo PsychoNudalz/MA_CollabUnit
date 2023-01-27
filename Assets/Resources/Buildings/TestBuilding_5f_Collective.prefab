@@ -159,8 +159,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   minimumPartSize: 5
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
 --- !u!1 &1786462408421033223
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,8 +248,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -466,6 +466,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: -6438064401339980245, guid: 009d84d3b740dab47ba04d6163e0887b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -6239050872796381211, guid: 009d84d3b740dab47ba04d6163e0887b,
         type: 3}
       propertyPath: m_Convex
@@ -559,6 +564,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: -3710250935373424999, guid: 009d84d3b740dab47ba04d6163e0887b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -3429985562941595292, guid: 009d84d3b740dab47ba04d6163e0887b,
         type: 3}
       propertyPath: m_Convex
@@ -631,6 +641,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -2650046362636567556, guid: 009d84d3b740dab47ba04d6163e0887b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -2470257702517998525, guid: 009d84d3b740dab47ba04d6163e0887b,
         type: 3}
@@ -841,6 +856,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1485935797507526247, guid: 009d84d3b740dab47ba04d6163e0887b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1646011160366223644, guid: 009d84d3b740dab47ba04d6163e0887b,
         type: 3}
       propertyPath: m_Name
@@ -850,6 +870,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1646011160366223644, guid: 009d84d3b740dab47ba04d6163e0887b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1801599669073672560, guid: 009d84d3b740dab47ba04d6163e0887b,
         type: 3}
@@ -1278,8 +1303,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -1365,9 +1390,6 @@ MonoBehaviour:
   - component: {fileID: 1786462406697348960}
     distance: 6.3472023
     dir: {x: 0.97730714, y: 0.0038793338, z: 0.2117917}
-  - component: {fileID: 1786462408050357061}
-    distance: 8.004865
-    dir: {x: 0.37788385, y: -0.6696238, z: -0.6393807}
   - component: {fileID: 1786462407214014032}
     distance: 4.896741
     dir: {x: -0.23872274, y: -0.9710853, z: -0.002172465}
@@ -1380,6 +1402,9 @@ MonoBehaviour:
   - component: {fileID: 1786462407930885275}
     distance: 6.7038713
     dir: {x: 0.48724988, y: 0.86431426, z: 0.12469357}
+  - component: {fileID: 1786462408050357061}
+    distance: 8.004865
+    dir: {x: 0.37788385, y: -0.6696238, z: -0.6393807}
   otherConnectedParts:
   - component: {fileID: 1786462406775818268}
     distance: 4.897761
@@ -1444,8 +1469,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -1628,8 +1653,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -1705,12 +1730,6 @@ MonoBehaviour:
   - component: {fileID: 1786462406697348960}
     distance: 8.9922905
     dir: {x: 0.3534424, y: 0.59883195, z: 0.7186646}
-  - component: {fileID: 1786462406818277718}
-    distance: 5.465415
-    dir: {x: -0.32172862, y: 0.7702337, z: -0.550664}
-  - component: {fileID: 1786462407048768651}
-    distance: 8.004865
-    dir: {x: -0.37788385, y: 0.6696238, z: 0.6393807}
   - component: {fileID: 1786462407591087989}
     distance: 4.291217
     dir: {x: -0.93232363, y: -0.20016587, z: -0.30117488}
@@ -1723,6 +1742,12 @@ MonoBehaviour:
   - component: {fileID: 1786462407259265026}
     distance: 7.710755
     dir: {x: -0.20713164, y: -0.14328021, z: 0.9677641}
+  - component: {fileID: 1786462406818277718}
+    distance: 5.465415
+    dir: {x: -0.32172862, y: 0.7702337, z: -0.550664}
+  - component: {fileID: 1786462407048768651}
+    distance: 8.004865
+    dir: {x: -0.37788385, y: 0.6696238, z: 0.6393807}
   otherConnectedParts:
   - component: {fileID: 1786462406775818271}
     distance: 9.172565
@@ -1796,8 +1821,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -1948,8 +1973,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -2013,15 +2038,15 @@ MonoBehaviour:
   - component: {fileID: 1786462406707107365}
     distance: 5.1945243
     dir: {x: 0.63016313, y: 0.3790684, z: -0.6776442}
+  - component: {fileID: 1786462407930885275}
+    distance: 6.4939413
+    dir: {x: -0.45222235, y: 0.8884633, z: -0.07828145}
   - component: {fileID: 1786462408050357061}
     distance: 8.9922905
     dir: {x: -0.3534424, y: -0.59883195, z: -0.7186646}
   - component: {fileID: 1786462407048768651}
     distance: 6.3472023
     dir: {x: -0.97730714, y: -0.0038793338, z: -0.2117917}
-  - component: {fileID: 1786462407930885275}
-    distance: 6.4939413
-    dir: {x: -0.45222235, y: 0.8884633, z: -0.07828145}
   otherConnectedParts:
   - component: {fileID: 1786462406775818271}
     distance: 6.6520166
@@ -2086,8 +2111,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -2250,8 +2275,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -2327,12 +2352,6 @@ MonoBehaviour:
   - component: {fileID: 1786462406707107365}
     distance: 8.405915
     dir: {x: 0.40577537, y: -0.010496876, z: 0.91391253}
-  - component: {fileID: 1786462406818277718}
-    distance: 6.0394278
-    dir: {x: -0.7946318, y: -0.53523946, z: 0.2864944}
-  - component: {fileID: 1786462408066108373}
-    distance: 6.5437407
-    dir: {x: -0.82302403, y: 0.545313, z: 0.15895016}
   - component: {fileID: 1786462406976777200}
     distance: 6.407315
     dir: {x: -0.33217818, y: 0.92889374, z: 0.16375035}
@@ -2342,6 +2361,12 @@ MonoBehaviour:
   - component: {fileID: 1786462407638898833}
     distance: 4.3486433
     dir: {x: -0.52338886, y: 0.74450684, z: 0.4144558}
+  - component: {fileID: 1786462408066108373}
+    distance: 6.5437407
+    dir: {x: -0.82302403, y: 0.545313, z: 0.15895016}
+  - component: {fileID: 1786462406818277718}
+    distance: 6.0394278
+    dir: {x: -0.7946318, y: -0.53523946, z: 0.2864944}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 7.3359194
@@ -2403,8 +2428,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -2485,9 +2510,6 @@ MonoBehaviour:
   - component: {fileID: 1786462407606996316}
     distance: 5.1782618
     dir: {x: 0.93855983, y: 0.30375704, z: -0.16382064}
-  - component: {fileID: 1786462406775818268}
-    distance: 3.2968564
-    dir: {x: -0.30649337, y: 0.897124, z: 0.3181672}
   - component: {fileID: 1786462407214014032}
     distance: 3.9001584
     dir: {x: -0.66580147, y: 0.43841642, z: -0.6037379}
@@ -2500,6 +2522,9 @@ MonoBehaviour:
   - component: {fileID: 1786462406908659285}
     distance: 3.3307648
     dir: {x: 0.45291698, y: 0.82640505, z: -0.33454585}
+  - component: {fileID: 1786462406775818268}
+    distance: 3.2968564
+    dir: {x: -0.30649337, y: 0.897124, z: 0.3181672}
   otherConnectedParts:
   - component: {fileID: 1786462406775818268}
     distance: 3.2968564
@@ -2561,8 +2586,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -2620,9 +2645,6 @@ MonoBehaviour:
   - component: {fileID: 1786462408375570204}
     distance: 6.4527946
     dir: {x: 0.9986069, y: 0.01671987, z: 0.05004755}
-  - component: {fileID: 1786462408050357061}
-    distance: 6.6316237
-    dir: {x: 0.42392984, y: 0.4555147, z: -0.7828089}
   - component: {fileID: 1786462407591087989}
     distance: 6.937346
     dir: {x: -0.17145747, y: 0.3116245, z: -0.9346082}
@@ -2632,6 +2654,9 @@ MonoBehaviour:
   - component: {fileID: 1786462407259265026}
     distance: 3.2097244
     dir: {x: 0.37828854, y: 0.59693706, z: 0.7075054}
+  - component: {fileID: 1786462408050357061}
+    distance: 6.6316237
+    dir: {x: 0.42392984, y: 0.4555147, z: -0.7828089}
   otherConnectedParts:
   - component: {fileID: 1786462408050357061}
     distance: 6.6316237
@@ -2681,8 +2706,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -2756,15 +2781,6 @@ MonoBehaviour:
   selfRB: {fileID: 1786462407214014039}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462408050357061}
-    distance: 6.636373
-    dir: {x: 0.63195246, y: -0.09117856, z: -0.76962495}
-  - component: {fileID: 1786462407048768651}
-    distance: 4.896741
-    dir: {x: 0.23872274, y: 0.9710853, z: 0.002172465}
-  - component: {fileID: 1786462406775818268}
-    distance: 3.9570062
-    dir: {x: 0.40087542, y: 0.31533828, z: 0.8601515}
   - component: {fileID: 1786462407591087989}
     distance: 6.568086
     dir: {x: 0.029395087, y: -0.2229036, z: -0.9743972}
@@ -2777,6 +2793,15 @@ MonoBehaviour:
   - component: {fileID: 1786462407404348235}
     distance: 2.1756518
     dir: {x: 0.5720349, y: 0.2669236, z: 0.7755823}
+  - component: {fileID: 1786462408050357061}
+    distance: 6.636373
+    dir: {x: 0.63195246, y: -0.09117856, z: -0.76962495}
+  - component: {fileID: 1786462407048768651}
+    distance: 4.896741
+    dir: {x: 0.23872274, y: 0.9710853, z: 0.002172465}
+  - component: {fileID: 1786462406775818268}
+    distance: 3.9570062
+    dir: {x: 0.40087542, y: 0.31533828, z: 0.8601515}
   otherConnectedParts:
   - component: {fileID: 1786462406775818268}
     distance: 3.9570062
@@ -2835,8 +2860,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -3020,8 +3045,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -3095,12 +3120,12 @@ MonoBehaviour:
   - component: {fileID: 1786462406697348960}
     distance: 4.9650106
     dir: {x: 0.65797204, y: 0.75268894, z: 0.023070034}
-  - component: {fileID: 1786462407048768651}
-    distance: 4.8904843
-    dir: {x: -0.60041654, y: 0.75912434, z: -0.25145605}
   - component: {fileID: 1786462407259265026}
     distance: 3.3307648
     dir: {x: -0.45291698, y: -0.82640505, z: 0.33454585}
+  - component: {fileID: 1786462407048768651}
+    distance: 4.8904843
+    dir: {x: -0.60041654, y: 0.75912434, z: -0.25145605}
   otherConnectedParts:
   - component: {fileID: 1786462407606996316}
     distance: 3.5630252
@@ -3144,8 +3169,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -3213,15 +3238,15 @@ MonoBehaviour:
   selfRB: {fileID: 1786462407404348234}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462407048768651}
-    distance: 4.499224
-    dir: {x: -0.016799644, y: 0.92780894, z: -0.37267736}
   - component: {fileID: 1786462407214014032}
     distance: 2.1756518
     dir: {x: -0.5720349, y: -0.2669236, z: -0.7755823}
   - component: {fileID: 1786462407259265026}
     distance: 2.7423756
     dir: {x: 0.49306974, y: -0.8352708, z: 0.24332057}
+  - component: {fileID: 1786462407048768651}
+    distance: 4.499224
+    dir: {x: -0.016799644, y: 0.92780894, z: -0.37267736}
   otherConnectedParts:
   - component: {fileID: 1786462406775818268}
     distance: 1.8727473
@@ -3268,8 +3293,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -3488,8 +3513,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -3559,21 +3584,21 @@ MonoBehaviour:
   - component: {fileID: 1786462406976918515}
     distance: 8.96244
     dir: {x: 0.5855758, y: -0.78890246, z: -0.18637021}
-  - component: {fileID: 1786462406818277718}
-    distance: 7.9270086
-    dir: {x: 0.030963734, y: -0.8121674, z: -0.58260226}
-  - component: {fileID: 1786462407048768651}
-    distance: 6.4277663
-    dir: {x: -0.15885438, y: -0.82259625, z: 0.54598594}
-  - component: {fileID: 1786462408066108373}
-    distance: 5.331736
-    dir: {x: -0.06397254, y: 0.06805837, z: -0.99562824}
   - component: {fileID: 1786462408054100199}
     distance: 5.1714945
     dir: {x: -0.5937806, y: -0.12642418, z: -0.7946329}
   - component: {fileID: 1786462407930885275}
     distance: 4.917426
     dir: {x: 0.45661727, y: 0.10306101, z: 0.88367367}
+  - component: {fileID: 1786462408066108373}
+    distance: 5.331736
+    dir: {x: -0.06397254, y: 0.06805837, z: -0.99562824}
+  - component: {fileID: 1786462406818277718}
+    distance: 7.9270086
+    dir: {x: 0.030963734, y: -0.8121674, z: -0.58260226}
+  - component: {fileID: 1786462407048768651}
+    distance: 6.4277663
+    dir: {x: -0.15885438, y: -0.82259625, z: 0.54598594}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 6.709848
@@ -3641,8 +3666,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -3814,8 +3839,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -3943,8 +3968,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -4031,15 +4056,15 @@ MonoBehaviour:
   - component: {fileID: 1786462407606996316}
     distance: 3.5745242
     dir: {x: -0.103368916, y: 0.9458733, z: 0.30763385}
-  - component: {fileID: 1786462408050357061}
-    distance: 7.2171106
-    dir: {x: -0.5033125, y: 0.40361196, z: -0.764051}
   - component: {fileID: 1786462407048382320}
     distance: 6.4527946
     dir: {x: -0.9986069, y: -0.01671987, z: -0.05004755}
   - component: {fileID: 1786462407259265026}
     distance: 5.86622
     dir: {x: -0.8914775, y: 0.30822465, z: 0.33206236}
+  - component: {fileID: 1786462408050357061}
+    distance: 7.2171106
+    dir: {x: -0.5033125, y: 0.40361196, z: -0.764051}
   otherConnectedParts:
   - component: {fileID: 1786462406775818271}
     distance: 5.2537913
@@ -4092,8 +4117,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -4161,15 +4186,15 @@ MonoBehaviour:
   selfRB: {fileID: 1786462407591087988}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
+  - component: {fileID: 1786462407214014032}
+    distance: 6.568086
+    dir: {x: -0.029395087, y: 0.2229036, z: 0.9743972}
   - component: {fileID: 1786462408050357061}
     distance: 4.291217
     dir: {x: 0.93232363, y: 0.20016587, z: 0.30117488}
   - component: {fileID: 1786462406818277718}
     distance: 5.8024096
     dir: {x: 0.38646403, y: 0.8735339, z: -0.29594615}
-  - component: {fileID: 1786462407214014032}
-    distance: 6.568086
-    dir: {x: -0.029395087, y: 0.2229036, z: 0.9743972}
   otherConnectedParts:
   - component: {fileID: 1786462408050357061}
     distance: 4.291217
@@ -4219,8 +4244,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -4272,15 +4297,15 @@ MonoBehaviour:
   - component: {fileID: 1786462406774861216}
     distance: 4.3486433
     dir: {x: 0.52338886, y: -0.74450684, z: -0.4144558}
-  - component: {fileID: 1786462408066108373}
-    distance: 3.2187147
-    dir: {x: -0.9661075, y: 0.10277159, z: -0.23680004}
   - component: {fileID: 1786462406976777200}
     distance: 2.8205392
     dir: {x: 0.052352164, y: 0.96226984, z: -0.26701292}
   - component: {fileID: 1786462407613284640}
     distance: 5.322978
     dir: {x: -0.520111, y: -0.006026107, z: 0.8540774}
+  - component: {fileID: 1786462408066108373}
+    distance: 3.2187147
+    dir: {x: -0.9661075, y: 0.10277159, z: -0.23680004}
   otherConnectedParts:
   - component: {fileID: 1786462408066108373}
     distance: 3.2187147
@@ -4327,8 +4352,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -4430,9 +4455,6 @@ MonoBehaviour:
   - component: {fileID: 1786462406774861216}
     distance: 6.5437407
     dir: {x: 0.82302403, y: -0.545313, z: -0.15895016}
-  - component: {fileID: 1786462406818277718}
-    distance: 6.8609705
-    dir: {x: 0.085488565, y: -0.99124855, z: 0.10058833}
   - component: {fileID: 1786462406976777200}
     distance: 4.036117
     dir: {x: 0.8070345, y: 0.5905001, z: 0.0022475438}
@@ -4445,6 +4467,9 @@ MonoBehaviour:
   - component: {fileID: 1786462407638898833}
     distance: 3.2187147
     dir: {x: 0.9661075, y: -0.10277159, z: 0.23680004}
+  - component: {fileID: 1786462406818277718}
+    distance: 6.8609705
+    dir: {x: 0.085488565, y: -0.99124855, z: 0.10058833}
   otherConnectedParts:
   - component: {fileID: 1786462406818277718}
     distance: 6.8609705
@@ -4500,8 +4525,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -4593,12 +4618,6 @@ MonoBehaviour:
   - component: {fileID: 1786462406774861216}
     distance: 6.0394278
     dir: {x: 0.7946318, y: 0.53523946, z: -0.2864944}
-  - component: {fileID: 1786462408050357061}
-    distance: 5.465415
-    dir: {x: 0.32172862, y: -0.7702337, z: 0.550664}
-  - component: {fileID: 1786462408066108373}
-    distance: 6.8609705
-    dir: {x: -0.085488565, y: 0.99124855, z: -0.10058833}
   - component: {fileID: 1786462407591087989}
     distance: 5.8024096
     dir: {x: -0.38646403, y: -0.8735339, z: 0.29594615}
@@ -4608,6 +4627,12 @@ MonoBehaviour:
   - component: {fileID: 1786462407613284640}
     distance: 7.9270086
     dir: {x: -0.030963734, y: 0.8121674, z: 0.58260226}
+  - component: {fileID: 1786462408066108373}
+    distance: 6.8609705
+    dir: {x: -0.085488565, y: 0.99124855, z: -0.10058833}
+  - component: {fileID: 1786462408050357061}
+    distance: 5.465415
+    dir: {x: 0.32172862, y: -0.7702337, z: 0.550664}
   otherConnectedParts:
   - component: {fileID: 1786462408066108373}
     distance: 6.8609705
@@ -4669,8 +4694,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -4732,9 +4757,6 @@ MonoBehaviour:
   selfRB: {fileID: 1786462406775818259}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462407048768651}
-    distance: 4.897761
-    dir: {x: -0.08520283, y: 0.7161145, z: -0.6927629}
   - component: {fileID: 1786462407214014032}
     distance: 3.9570062
     dir: {x: -0.40087542, y: -0.31533828, z: -0.8601515}
@@ -4744,6 +4766,9 @@ MonoBehaviour:
   - component: {fileID: 1786462407404348235}
     distance: 1.8727473
     dir: {x: -0.18246868, y: -0.35619476, z: -0.9164226}
+  - component: {fileID: 1786462407048768651}
+    distance: 4.897761
+    dir: {x: -0.08520283, y: 0.7161145, z: -0.6927629}
   otherConnectedParts:
   - component: {fileID: 1786462407214014032}
     distance: 3.9570062
@@ -4787,8 +4812,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -4917,8 +4942,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -5025,8 +5050,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -5152,8 +5177,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -5292,8 +5317,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -5476,8 +5501,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -5594,8 +5619,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -5675,15 +5700,15 @@ MonoBehaviour:
   selfRB: {fileID: 1786462408054100198}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
-  - component: {fileID: 1786462406818277718}
-    distance: 6.6868243
-    dir: {x: 0.49592787, y: -0.8650229, z: -0.07609796}
-  - component: {fileID: 1786462408066108373}
-    distance: 3.1499476
-    dir: {x: 0.86656934, y: 0.3227581, z: -0.3806372}
   - component: {fileID: 1786462407613284640}
     distance: 5.1714945
     dir: {x: 0.5937806, y: 0.12642418, z: 0.7946329}
+  - component: {fileID: 1786462408066108373}
+    distance: 3.1499476
+    dir: {x: 0.86656934, y: 0.3227581, z: -0.3806372}
+  - component: {fileID: 1786462406818277718}
+    distance: 6.6868243
+    dir: {x: 0.49592787, y: -0.8650229, z: -0.07609796}
   otherConnectedParts:
   - component: {fileID: 1786462408066108373}
     distance: 3.1499476
@@ -5730,8 +5755,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -5843,15 +5868,15 @@ MonoBehaviour:
   - component: {fileID: 1786462406890772500}
     distance: 4.690997
     dir: {x: 0.65561783, y: -0.06372118, z: 0.7523993}
-  - component: {fileID: 1786462408066108373}
-    distance: 4.036117
-    dir: {x: -0.8070345, y: -0.5905001, z: -0.0022475438}
   - component: {fileID: 1786462407613284640}
     distance: 6.642966
     dir: {x: -0.43899083, y: -0.4133992, z: 0.7977394}
   - component: {fileID: 1786462407638898833}
     distance: 2.8205392
     dir: {x: -0.052352164, y: -0.96226984, z: 0.26701292}
+  - component: {fileID: 1786462408066108373}
+    distance: 4.036117
+    dir: {x: -0.8070345, y: -0.5905001, z: -0.0022475438}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 4.690997
@@ -5904,8 +5929,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -6004,12 +6029,12 @@ MonoBehaviour:
   - component: {fileID: 1786462407629668419}
     distance: 4.138325
     dir: {x: 0.9931637, y: -0.096015334, z: -0.0663845}
-  - component: {fileID: 1786462407048768651}
-    distance: 6.7038713
-    dir: {x: -0.48724988, y: -0.86431426, z: -0.12469357}
   - component: {fileID: 1786462407613284640}
     distance: 4.917426
     dir: {x: -0.45661727, y: -0.10306101, z: -0.88367367}
+  - component: {fileID: 1786462407048768651}
+    distance: 6.7038713
+    dir: {x: -0.48724988, y: -0.86431426, z: -0.12469357}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 7.4294496
@@ -6068,8 +6093,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -6140,15 +6165,15 @@ MonoBehaviour:
   - component: {fileID: 1786462406697348960}
     distance: 4.9197974
     dir: {x: -0.01721831, y: 0.9993778, z: -0.030782657}
-  - component: {fileID: 1786462408050357061}
-    distance: 7.38983
-    dir: {x: -0.44154835, y: -0.06334853, z: -0.8949983}
   - component: {fileID: 1786462407259265026}
     distance: 5.1782618
     dir: {x: -0.93855983, y: -0.30375704, z: 0.16382064}
   - component: {fileID: 1786462406908659285}
     distance: 3.5630252
     dir: {x: -0.9406469, y: 0.33107468, z: -0.07465212}
+  - component: {fileID: 1786462408050357061}
+    distance: 7.38983
+    dir: {x: -0.44154835, y: -0.06334853, z: -0.8949983}
   otherConnectedParts:
   - component: {fileID: 1786462406775818271}
     distance: 4.5400314
@@ -6210,8 +6235,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -6315,8 +6340,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -6455,8 +6480,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -6530,15 +6555,15 @@ MonoBehaviour:
   selfRB: {fileID: 1786462408591574994}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   connectedParts:
+  - component: {fileID: 1786462407613284640}
+    distance: 5.040002
+    dir: {x: 0.05763838, y: 0.9914194, z: -0.117326096}
   - component: {fileID: 1786462408050357061}
     distance: 6.4836106
     dir: {x: 0.35386574, y: -0.8715744, z: -0.33931863}
   - component: {fileID: 1786462407048768651}
     distance: 3.0222235
     dir: {x: -0.24173635, y: -0.09618776, z: 0.96556276}
-  - component: {fileID: 1786462407613284640}
-    distance: 5.040002
-    dir: {x: 0.05763838, y: 0.9914194, z: -0.117326096}
   otherConnectedParts:
   - component: {fileID: 1786462407048768651}
     distance: 3.0222235
@@ -6579,8 +6604,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0
-  minBottomAngle: 0
+  breakDelay: 1
+  minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
