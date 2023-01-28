@@ -33,6 +33,10 @@ public class BreakableCollective : BreakableComponent
                 CollisionBreak(bp.SelfRb,collision);
             }
         }
+        else if (collision.gameObject.TryGetComponent(out MovableObject mo))
+        {
+            CollisionBreak(mo.Rb,collision);
+        }
         else if (collision.gameObject.TryGetComponent(out Rigidbody rb))
         {
             CollisionBreak(rb,collision);

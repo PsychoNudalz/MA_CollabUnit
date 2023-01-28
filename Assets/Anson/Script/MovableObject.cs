@@ -13,6 +13,8 @@ public class MovableObject : MonoBehaviour
 
     private Vector3 velocity;
 
+    public Rigidbody Rb => rb;
+
     public Vector3 Velocity => (transform.position - previousPosition)/Time.deltaTime;
 
     // Start is called before the first frame update

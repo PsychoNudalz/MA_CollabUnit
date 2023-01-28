@@ -66,14 +66,16 @@ public class BreakablePart : BreakableComponent
                 CollisionBreak(bp.selfRB);
             }
         }
+        else if (collision.gameObject.TryGetComponent(out MovableObject mo))
+        {
+            CollisionBreak(mo.Rb);
+        }
         else if (collision.gameObject.TryGetComponent(out Rigidbody rb))
         {
             CollisionBreak(rb);
         }
     }
 
-
-    
 
     bool RBInConnected(Rigidbody rb)
     {
@@ -88,7 +90,7 @@ public class BreakablePart : BreakableComponent
         return false;
     }
 
-    
+
     public override void Break(Vector3 force, Vector3 originalForce, List<BreakableComponent> breakHistory = null,
         float breakDelay = 0f, bool forceBreak = false, Vector3 originPoint = default)
     {
@@ -138,21 +140,20 @@ public class BreakablePart : BreakableComponent
         BreakableData[] tempPD = connectedParts.ToArray();
         foreach (BreakableData connectedPart in tempPD)
         {
-
             connectedPart.Component.EvaluateBreak(connectedPart, force, this, breakHistory);
         }
 
         tempPD = otherConnectedParts.ToArray();
         foreach (BreakableData partDistance in tempPD)
         {
-
             partDistance.Component.EvaluateFall();
         }
 
         ApplyForce(force);
     }
 
-    private IEnumerator DelayBreak_Recursive(Vector3 force, Vector3 originalForce, List<BreakableComponent> breakHistory,
+    private IEnumerator DelayBreak_Recursive(Vector3 force, Vector3 originalForce,
+        List<BreakableComponent> breakHistory,
         float breakDelay = 0f)
     {
         yield return new WaitForSeconds(breakDelay);
@@ -311,7 +312,6 @@ public class BreakablePart : BreakableComponent
             rb.velocity = originalSpeed * forceTransfer;
         }
     }
-
 
 
     IEnumerator DelayBreakBottom()
