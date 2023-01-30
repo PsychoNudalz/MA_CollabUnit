@@ -34,6 +34,7 @@ public class MenuManager : MonoBehaviour
     {
         introMenu.SetActive(false);
         mainMenu.SetActive(true);
+        LeanTween.scale(mainMenu, new Vector3(1, 1, 1), 0.3f).setEase(LeanTweenType.easeInBounce);
     }
     
     

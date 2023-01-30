@@ -13,15 +13,12 @@ public class UIHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     private LTRect ltRect;
     
-    private void Start()
-    {
-        
-    }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         //LeanTween.scale(ltRect, new Vector2(1.3f,1.3f), 0.3f);
         rectTransform.sizeDelta = new Vector2(xSizeNew, ySizeNew);
+        Debug.Log(gameObject.name + " hovered");
     }
 
     public void OnPointerExit(PointerEventData eventData)
