@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 
 public class MenuManager : MonoBehaviour
@@ -15,31 +16,17 @@ public class MenuManager : MonoBehaviour
     private bool introMenuActive;
     [SerializeField] public GameObject introMenu, mainMenu;
 
-    private float timeToNewMenuCurrent;
-    private float timeToNewMenuMax = 5f;
-
-    private bool timerActive = true;
-    
     private void Start()
     {
-        introMenuActive = true;
-        timerActive = true;
-        
         introMenu.SetActive(true);
         mainMenu.SetActive(false);
     }
 
     private void Update()
     {
-        if (timerActive)
-        {
-            timeToNewMenuCurrent += Time.deltaTime;
-        }
-
-        if (timeToNewMenuCurrent >= timeToNewMenuMax)
+        if (Keyboard.current.anyKey.wasPressedThisFrame || Mouse.current.leftButton.wasPressedThisFrame || Mouse.current.rightButton.wasPressedThisFrame)
         {
             ChangeMenu();
-            timerActive = false;
         }
     }
 
