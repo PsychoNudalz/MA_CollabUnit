@@ -3,24 +3,59 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 
 public class MainMenuButtons : MonoBehaviour
 {
-    
-    // TO DO:
-    // MERGE THIS SCRIPT WITH THE MENU MANAGER SO IT'S ALL TOGETHER
-    // THIS IS A WASTE OF CODE TO PUT IT HERE
-    
-    
+  
     [SerializeField] private float delayTimer;
-    [SerializeField] private GameObject menuFrame;
-    [SerializeField] private float menuLeaveTimer;
-    
     [SerializeField] public GameObject[] menuButtons;
     [SerializeField] public GameObject optionsMenu;
-
+    private bool introMenuActive;
+    [SerializeField] public GameObject introMenu, mainMenu, gameLogo;
     
+
+    private bool canStartMenu;
+
+    private void Start()
+    {
+        introMenu.SetActive(true);
+        mainMenu.SetActive(false);
+
+        canStartMenu = false;
+        StartCoroutine(IntroStart());
+
+        LeanTween.scale(gameLogo, new Vector3(1, 1, 1), 1.5f).setEase(LeanTweenType.easeInBounce);
+    }
+
+    private void Update()
+    {
+        if (Keyboard.current.anyKey.wasPressedThisFrame || Mouse.current.leftButton.wasPressedThisFrame || Mouse.current.rightButton.wasPressedThisFrame)
+        {
+            if(canStartMenu)
+                ChangeMenu();
+        }
+    }
+
+    private IEnumerator IntroStart()
+    {
+        yield return new WaitForSeconds(2f);
+        canStartMenu = true;
+        introMenu.SetActive(true);
+    }
+
+    private void ChangeMenu()
+    {
+        introMenu.SetActive(false);
+        mainMenu.SetActive(true);
+
+        foreach (GameObject button in menuButtons)
+        {
+            LeanTween.scale(button, new Vector3(1, 1, 1), 0.3f).setEase(LeanTweenType.easeInCubic);
+        }
+        
+    }
     public void PlayGame(string sceneName)
     {
         if (sceneName == null)
