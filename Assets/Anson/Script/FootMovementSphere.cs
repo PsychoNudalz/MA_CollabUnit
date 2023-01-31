@@ -14,6 +14,7 @@ public class FootMovementSphere : MonoBehaviour
 
     [SerializeField]
     private FootState footState = FootState.Idle;
+
     [SerializeField]
     private QuadrupedMovementController quadrupedMovementController;
 
@@ -21,20 +22,24 @@ public class FootMovementSphere : MonoBehaviour
     private Rigidbody rb;
 
     [SerializeField]
+    private float footAnchorRange = 10f;
+
+    [SerializeField]
     private float launchCollisionIgnoreTime = 0.5f;
-    private float launchCollisionIgnoreTime_Set =0f;
-    
-    
+
+    private float launchCollisionIgnoreTime_Set = 0f;
+
+
     private Vector3 worldPosition = new Vector3();
     private Vector3 lastPosition = new Vector3();
     public Rigidbody Rb => rb;
 
     public Vector3 position
     {
-        get =>transform.position;
+        get => transform.position;
         set => worldPosition = value;
     }
-        
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -52,7 +57,7 @@ public class FootMovementSphere : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawSphere(position,.3f);
+        Gizmos.DrawSphere(position, .3f);
     }
 
     // Update is called once per frame
@@ -68,7 +73,6 @@ public class FootMovementSphere : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
-
     }
 
     private void FixedUpdate()
@@ -78,7 +82,8 @@ public class FootMovementSphere : MonoBehaviour
             case FootState.Idle:
                 break;
             case FootState.Flying:
-                if (lastPosition.Equals(position))
+                if (Time.time - launchCollisionIgnoreTime_Set > 4 * launchCollisionIgnoreTime &&
+                    lastPosition.Equals(position))
                 {
                     SetFootIdle();
                 }
@@ -86,6 +91,7 @@ public class FootMovementSphere : MonoBehaviour
                 {
                     lastPosition = position;
                 }
+
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
@@ -99,15 +105,22 @@ public class FootMovementSphere : MonoBehaviour
 
     public void Launch(Vector3 force)
     {
-        ChangeState( FootState.Flying);
-        rb.AddForce(force*rb.mass);
-        launchCollisionIgnoreTime_Set = Time.time;
+        if (footState == FootState.Idle)
+        {
+            ChangeState(FootState.Flying);
+            rb.AddForce(force * rb.mass);
+            launchCollisionIgnoreTime_Set = Time.time;
+        }
     }
 
     public void SetVelocity(Vector3 velocity)
     {
-        ChangeState( FootState.Flying);
-        rb.velocity = velocity;
+        if (footState == FootState.Idle)
+        {
+            ChangeState(FootState.Flying);
+            rb.velocity = velocity;
+            launchCollisionIgnoreTime_Set = Time.time;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -143,8 +156,7 @@ public class FootMovementSphere : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException(nameof(fs), fs, null);
         }
-        
+
         footState = fs;
-        
     }
 }
