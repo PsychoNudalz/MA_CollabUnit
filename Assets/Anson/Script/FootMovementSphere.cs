@@ -47,6 +47,7 @@ public class FootMovementSphere : MonoBehaviour
     private void Start()
     {
         ChangeState(FootState.Idle);
+        transform.parent = null;
     }
 
     private void OnDrawGizmosSelected()
@@ -101,6 +102,12 @@ public class FootMovementSphere : MonoBehaviour
         ChangeState( FootState.Flying);
         rb.AddForce(force*rb.mass);
         launchCollisionIgnoreTime_Set = Time.time;
+    }
+
+    public void SetVelocity(Vector3 velocity)
+    {
+        ChangeState( FootState.Flying);
+        rb.velocity = velocity;
     }
 
     private void OnCollisionEnter(Collision collision)
