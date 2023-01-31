@@ -44,6 +44,17 @@ public class QuadrupedMovementController : MonoBehaviour
     [SerializeField]
     private Vector2 inputDir;
 
+    [Space(20)]
+    [Header("Cat Model")]
+    [SerializeField]
+    private GameObject catModel;
+
+    [SerializeField]
+    private float modelLerpSpeed;
+
+    // [SerializeField]
+    // private Transform[] catModelFeet;
+
 
     private float lastMoveTime = 0f;
 
@@ -82,6 +93,7 @@ public class QuadrupedMovementController : MonoBehaviour
         // {
         UpdateTransformRotation();
         // }
+        MoveModel();
     }
 
     private void FixedUpdate()
@@ -128,7 +140,7 @@ public class QuadrupedMovementController : MonoBehaviour
     {
         Vector3 targetPos = FindLegTarget(legCastPoint);
         Vector3 moveAmount = targetPos - currentFoot.position;
-        float t = timeBetweenFoot * 4f;
+        float t = timeBetweenFoot * 2f;
         // float signedAngle = Vector3.SignedAngle(transform.forward, moveAmount.normalized, transform.up) * Mathf.Deg2Rad;
         float signedAngle = Mathf.Atan(feetMoveHeight / moveAmount.magnitude);
         float horizontal = (moveAmount.magnitude / t);
@@ -217,5 +229,11 @@ public class QuadrupedMovementController : MonoBehaviour
     void UpdateBody()
     {
         body.position = AverageFeetPosition() + new Vector3(0, bodyHeight, 0);
+    }
+
+    void MoveModel()
+    {
+        catModel.transform.position =
+            Vector3.Lerp(catModel.transform.position, body.position, modelLerpSpeed * Time.deltaTime);
     }
 }
