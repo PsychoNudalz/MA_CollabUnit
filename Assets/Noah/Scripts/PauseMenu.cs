@@ -29,7 +29,6 @@ public class PauseMenu : MonoBehaviour
             else if (confirmBoxOpen)
             {
                 CloseConfirmBox();
-                Resume();
             }
             else
             {

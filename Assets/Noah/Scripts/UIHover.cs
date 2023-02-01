@@ -9,22 +9,26 @@ public class UIHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     [SerializeField]
     public RectTransform rectTransform;
     [SerializeField]
-    public float xSizeDefault, ySizeDefault, xSizeNew, ySizeNew;
+    public float xSizeNew, ySizeNew;
+
+    private float xSizeDefault, ySizeDefault;
 
     private LTRect ltRect;
-    
+
+    private void Start()
+    {
+        xSizeDefault = rectTransform.sizeDelta.x;
+        ySizeDefault = rectTransform.sizeDelta.y;
+    }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        //LeanTween.scale(ltRect, new Vector2(1.3f,1.3f), 0.3f);
         rectTransform.sizeDelta = new Vector2(xSizeNew, ySizeNew);
         Debug.Log(gameObject.name + " hovered");
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        //LeanTween.scale(ltRect, new Vector2(1,1), 0.3f);
         rectTransform.sizeDelta = new Vector2(xSizeDefault, ySizeDefault);
-
     }
 }

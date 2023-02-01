@@ -13,7 +13,7 @@ public class MainMenuButtons : MonoBehaviour
     [SerializeField] public GameObject[] menuButtons;
     [SerializeField] public GameObject optionsMenu;
     private bool introMenuActive;
-    [SerializeField] public GameObject introMenu, mainMenu, gameLogo;
+    [SerializeField] public GameObject introMenu, mainMenu, gameLogo, menuFrame;
     
 
     private bool canStartMenu;
@@ -26,7 +26,7 @@ public class MainMenuButtons : MonoBehaviour
         canStartMenu = false;
         StartCoroutine(IntroStart());
 
-        LeanTween.scale(gameLogo, new Vector3(1, 1, 1), 1.5f).setEase(LeanTweenType.easeInBounce);
+        LeanTween.scale(gameLogo, new Vector3(1, 1, 1), 1.5f).setEase(LeanTweenType.easeInOutCubic);
     }
 
     private void Update()
@@ -50,6 +50,7 @@ public class MainMenuButtons : MonoBehaviour
         introMenu.SetActive(false);
         mainMenu.SetActive(true);
 
+        LeanTween.scale(menuFrame, new Vector3(1, 1, 1), 0.3f).setEase(LeanTweenType.easeInCubic);
         foreach (GameObject button in menuButtons)
         {
             LeanTween.scale(button, new Vector3(1, 1, 1), 0.3f).setEase(LeanTweenType.easeInCubic);
@@ -95,7 +96,6 @@ public class MainMenuButtons : MonoBehaviour
 
     private IEnumerator QuitGameDelay()
     {
-        // Quick animation mockup
         LeanTween.scale(gameObject, new Vector3(0, 0, 0), 0.3f).setEase(LeanTweenType.easeInOutCubic);
         yield return new WaitForSeconds(delayTimer);
         Application.Quit();
