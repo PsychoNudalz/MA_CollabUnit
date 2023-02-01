@@ -22,10 +22,21 @@ public class FootMovementSphere : MonoBehaviour
     private Rigidbody rb;
 
     [SerializeField]
+    private float gravityMultiplier = 1f;
+
+    private float gravityExtra = 0;
+    private Vector3 gravityExtra_Vector;
+
+    [SerializeField]
     private float footAnchorRange = 10f;
 
     [SerializeField]
     private float launchCollisionIgnoreTime = 0.5f;
+
+
+    [Space(10)]
+    [SerializeField]
+    private bool isDebug = false;
 
     private float launchCollisionIgnoreTime_Set = 0f;
 
@@ -33,6 +44,11 @@ public class FootMovementSphere : MonoBehaviour
     private Vector3 worldPosition = new Vector3();
     private Vector3 lastPosition = new Vector3();
     public Rigidbody Rb => rb;
+
+    public float GravityExtra => gravityExtra;
+    // public float GravityAccel => gravityExtra / rb.mass;
+    public bool IsIdle => footState == FootState.Idle;
+
 
     public Vector3 position
     {
@@ -52,7 +68,14 @@ public class FootMovementSphere : MonoBehaviour
     private void Start()
     {
         ChangeState(FootState.Idle);
+        if (isDebug)
+        {
+            ChangeState(FootState.Flying);
+        }
+
         transform.parent = null;
+        gravityExtra = Physics.gravity.magnitude * gravityMultiplier;
+        gravityExtra_Vector = new Vector3(0, -gravityExtra*rb.mass , 0);
     }
 
     private void OnDrawGizmosSelected()
@@ -92,15 +115,19 @@ public class FootMovementSphere : MonoBehaviour
                     lastPosition = position;
                 }
 
+                rb.AddForce(gravityExtra_Vector);
+
+
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
     }
 
-    public void Initialize(QuadrupedMovementController qmc)
+    public void Initialize(QuadrupedMovementController qmc, float g)
     {
         quadrupedMovementController = qmc;
+        gravityMultiplier = g;
     }
 
     public void Launch(Vector3 force)
@@ -147,11 +174,11 @@ public class FootMovementSphere : MonoBehaviour
         {
             case FootState.Idle:
                 rb.isKinematic = true;
-                rb.useGravity = false;
+                // rb.useGravity = false;
                 break;
             case FootState.Flying:
                 rb.isKinematic = false;
-                rb.useGravity = true;
+                // rb.useGravity = true;
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(fs), fs, null);

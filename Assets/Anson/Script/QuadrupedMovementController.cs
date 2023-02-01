@@ -23,8 +23,11 @@ public class QuadrupedMovementController : MonoBehaviour
     [SerializeField]
     private float feetMoveAngle = 15f;
 
+    // [SerializeField]
+    // private float feetMoveHeight = 2f;
+
     [SerializeField]
-    private float feetMoveHeight = 2f;
+    private float gravityMultiplier = 1f;
 
     [Header("Cast Points")]
     [SerializeField]
@@ -50,6 +53,7 @@ public class QuadrupedMovementController : MonoBehaviour
 
     [SerializeField]
     private float timeBetweenFoot = .5f;
+
     [SerializeField]
     private float footMoveTime = .1f;
 
@@ -70,14 +74,18 @@ public class QuadrupedMovementController : MonoBehaviour
 
     private float lastMoveTime = 0f;
 
-    // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
         foreach (FootMovementSphere footMovementSphere in feet)
         {
-            footMovementSphere.Initialize(this);
+            footMovementSphere.Initialize(this, gravityMultiplier);
         }
+    }
 
+    // Start is called before the first frame update
+    void Start()
+    {
         if (feet.Length != feetCastPoints.Length)
         {
             Debug.LogError($"{this} feet array length mismatch.");
@@ -155,6 +163,7 @@ public class QuadrupedMovementController : MonoBehaviour
         // Vector3 trajectory = GetFootLaunchTrajectory(currentFoot,feetCastPoints[footIndex]);
 
         // currentFoot.Launch(transform.up * 100f);
+        
         currentFoot.SetVelocity(trajectory);
     }
 
@@ -185,26 +194,24 @@ public class QuadrupedMovementController : MonoBehaviour
     Vector3 FindTrajectoryToTarget(FootMovementSphere currentFoot, Transform legCastPoint)
     {
         Vector3 targetPos = FindLegTarget(legCastPoint);
+        if (targetPos.Equals(new Vector3()))
+        {
+            return targetPos;
+        }
         Vector3 moveAmount = targetPos - currentFoot.position;
         float t = footMoveTime;
-        // float signedAngle = Vector3.SignedAngle(transform.forward, moveAmount.normalized, transform.up) * Mathf.Deg2Rad;
-        float signedAngle = Mathf.Atan(feetMoveHeight / moveAmount.magnitude);
         float horizontal = (moveAmount.magnitude / t);
-        // float y = 0;
-        // float y = (feetMoveHeight - Physics.gravity.magnitude * -.5f * Mathf.Pow(t,2)) / (t);
-        float y = Physics.gravity.magnitude * t / 2f + moveAmount.y;
+        float gravityMagnitude = currentFoot.GravityExtra;
+        float y = gravityMagnitude * t / 2f + moveAmount.y;
         Vector3 velocity = new Vector3(horizontal * moveAmount.normalized.x, y, horizontal * moveAmount.normalized.z);
-        // Vector3 velocity = new Vector3(0, y, 0);
-        // force /= Time.deltaTime;
-        // velocity.x *= velocity.x;
-        // velocity.y *= velocity.y;
-        // velocity.z *= velocity.z;
+
         Debug.Log($"Calculated Velocity: {velocity}, {velocity.magnitude}");
 
 
         return velocity;
     }
 
+    
     Vector3 FindLegTarget(Transform legCastPoint)
     {
         RaycastHit hit;
@@ -263,13 +270,33 @@ public class QuadrupedMovementController : MonoBehaviour
     Vector3 AverageFeetPosition()
     {
         Vector3 avg = new Vector3();
+        int i = 0;
+        // foreach (FootMovementSphere footMovementSphere in feet)
+        // {
+        //     if (footMovementSphere.IsIdle)
+        //     {
+        //         avg += footMovementSphere.position;
+        //         i++;
+        //     }
+        // }
+        //
+        // if (i > 0)
+        // {
+        //     avg /= i;
+        //     return avg;
+        //
+        // }
+        // else
+        // {
+        //     return body.position;
+        // }
+
         foreach (FootMovementSphere footMovementSphere in feet)
         {
             avg += footMovementSphere.position;
         }
 
-        avg /= feet.Length;
-        return avg;
+        return avg / feet.Length;
     }
 
     void UpdateBody()
