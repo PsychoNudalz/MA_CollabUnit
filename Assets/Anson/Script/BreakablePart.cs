@@ -90,7 +90,15 @@ public class BreakablePart : BreakableComponent
         return false;
     }
 
-
+    /// <summary>
+    /// Breaks the Part and will break connected Parts
+    /// </summary>
+    /// <param name="force"></param>
+    /// <param name="originalForce"></param>
+    /// <param name="breakHistory"> list of pass breaks to avoid loop</param>
+    /// <param name="breakDelay"></param>
+    /// <param name="forceBreak"></param>
+    /// <param name="originPoint"></param>
     public override void Break(Vector3 force, Vector3 originalForce, List<BreakableComponent> breakHistory = null,
         float breakDelay = 0f, bool forceBreak = false, Vector3 originPoint = default)
     {
@@ -104,14 +112,19 @@ public class BreakablePart : BreakableComponent
         }
     }
 
+
     /// <summary>
-    /// Recurssively break
+    /// Recursively break connected componenets
     ///
-    /// No fking idea what the break will call back to the previous broken piece and cause a loop
+    /// No fking idea what the break will call back to the previous broken piece
+    /// and cause a loop
+    ///
     /// </summary>
     /// <param name="force"></param>
     /// <param name="originalForce"></param>
-    /// <param name="???"></param>
+    /// <param name="breakHistory"></param>
+    /// <param name="breakDelay"></param>
+    /// <param name="forceBreak"></param>
     public void Break_Recursive(Vector3 force, Vector3 originalForce, List<BreakableComponent> breakHistory = null,
         float breakDelay = 0f, bool forceBreak = false)
     {

@@ -6,6 +6,13 @@ using UnityEngine.InputSystem;
 
 public class QuadrupedMovementController : MonoBehaviour
 {
+    enum MovementPattern
+    {
+        OneAtATime,
+        EveryOtherOne,
+        TwoInARow
+    }
+
     [Header("Feet")]
     [SerializeField]
     private FootMovementSphere[] feet;
@@ -39,7 +46,12 @@ public class QuadrupedMovementController : MonoBehaviour
     [Space(10)]
     [Header("Movement Control")]
     [SerializeField]
+    private MovementPattern movementPattern;
+
+    [SerializeField]
     private float timeBetweenFoot = .5f;
+    [SerializeField]
+    private float footMoveTime = .1f;
 
     [SerializeField]
     private Vector2 inputDir;
@@ -83,33 +95,67 @@ public class QuadrupedMovementController : MonoBehaviour
         {
             if (Time.time - lastMoveTime > timeBetweenFoot)
             {
-                lastMoveTime = Time.time;
-                LaunchCurrentFoot();
+                MoveCatFeet();
             }
         }
 
         UpdateTransformPosition();
-        // if (footIndex%2 == 0)
-        // {
         UpdateTransformRotation();
-        // }
         MoveModel();
+    }
+
+    private void MoveCatFeet()
+    {
+        lastMoveTime = Time.time;
+        int oddIndex = footIndex % 2;
+
+        switch (movementPattern)
+        {
+            case MovementPattern.OneAtATime:
+                LaunchCurrentFoot();
+                footIndex = (footIndex + 1) % feet.Length;
+                break;
+            case MovementPattern.EveryOtherOne:
+                for (int i = oddIndex; i < feet.Length; i += 2)
+                {
+                    footIndex = i;
+                    LaunchCurrentFoot();
+                }
+
+                footIndex = (footIndex + 1) % feet.Length;
+
+                break;
+            case MovementPattern.TwoInARow:
+                for (int i = 0; i < feet.Length; i += 4)
+                {
+                    LaunchCurrentFoot((footIndex + i) % feet.Length);
+                    LaunchCurrentFoot((footIndex + i + 1) % feet.Length);
+                }
+
+                footIndex = (footIndex + 2) % feet.Length;
+
+                break;
+        }
     }
 
     private void FixedUpdate()
     {
     }
 
-    void LaunchCurrentFoot()
+    void LaunchCurrentFoot(int index = -1)
     {
-        FootMovementSphere currentFoot = feet[footIndex];
+        if (index < 0)
+        {
+            index = footIndex;
+        }
 
-        Vector3 trajectory = FindTrajectoryToTarget(currentFoot, feetCastPoints[footIndex]);
+        FootMovementSphere currentFoot = feet[index];
+
+        Vector3 trajectory = FindTrajectoryToTarget(currentFoot, feetCastPoints[index]);
         // Vector3 trajectory = GetFootLaunchTrajectory(currentFoot,feetCastPoints[footIndex]);
 
         // currentFoot.Launch(transform.up * 100f);
         currentFoot.SetVelocity(trajectory);
-        footIndex = (footIndex + 1) % feet.Length;
     }
 
     [ContextMenu("Force Update Feet")]
@@ -140,7 +186,7 @@ public class QuadrupedMovementController : MonoBehaviour
     {
         Vector3 targetPos = FindLegTarget(legCastPoint);
         Vector3 moveAmount = targetPos - currentFoot.position;
-        float t = timeBetweenFoot * 2f;
+        float t = footMoveTime;
         // float signedAngle = Vector3.SignedAngle(transform.forward, moveAmount.normalized, transform.up) * Mathf.Deg2Rad;
         float signedAngle = Mathf.Atan(feetMoveHeight / moveAmount.magnitude);
         float horizontal = (moveAmount.magnitude / t);
