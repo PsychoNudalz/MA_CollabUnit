@@ -204,15 +204,15 @@ public class QuadrupedMovementController : MonoBehaviour
 
     private void MoveCatFeet_OppositeCorners(int oddIndex)
     {
-        LaunchCurrentFoot(frontFeet[oddIndex], 180f);
-        LaunchCurrentFoot(backFeet[1 - oddIndex]);
+        LaunchCurrentFoot(frontFeet[oddIndex]);
+        LaunchCurrentFoot(backFeet[1 - oddIndex],true);
     }
 
     private void FixedUpdate()
     {
     }
 
-    void LaunchCurrentFoot(int index = -1, float castOffsetAngle = 0)
+    void LaunchCurrentFoot(int index = -1, bool flipYAngles = false)
     {
         if (index < 0)
         {
@@ -221,13 +221,13 @@ public class QuadrupedMovementController : MonoBehaviour
 
         FootCastPair currentFoot = feet[index];
 
-        Vector3 trajectory = FindTrajectoryToTarget(currentFoot.Foot, currentFoot.RaycastPoint, castOffsetAngle);
+        Vector3 trajectory = FindTrajectoryToTarget(currentFoot.Foot, currentFoot.RaycastPoint, flipYAngles);
         currentFoot.Foot.SetVelocity(trajectory);
     }
 
-    void LaunchCurrentFoot(FootCastPair footCastPair, float castOffsetAngle = 0)
+    void LaunchCurrentFoot(FootCastPair footCastPair, bool flipYAngles = false)
     {
-        Vector3 trajectory = FindTrajectoryToTarget(footCastPair.Foot, footCastPair.RaycastPoint, castOffsetAngle);
+        Vector3 trajectory = FindTrajectoryToTarget(footCastPair.Foot, footCastPair.RaycastPoint, flipYAngles);
         footCastPair.Foot.SetVelocity(trajectory);
     }
 
@@ -255,9 +255,9 @@ public class QuadrupedMovementController : MonoBehaviour
 
     //SHT NO WORK AND IDK WHY
 
-    Vector3 FindTrajectoryToTarget(FootMovementSphere currentFoot, Transform legCastPoint, float castOffsetAngle = 0)
+    Vector3 FindTrajectoryToTarget(FootMovementSphere currentFoot, Transform legCastPoint, bool flipYAngle = false)
     {
-        Vector3 targetPos = FindLegTarget(legCastPoint, castOffsetAngle);
+        Vector3 targetPos = FindLegTarget(legCastPoint, flipYAngle);
         if (targetPos.Equals(new Vector3()))
         {
             return targetPos;
@@ -277,31 +277,18 @@ public class QuadrupedMovementController : MonoBehaviour
     }
 
 
-    Vector3 FindLegTarget(Transform legCastPoint, float offset = 0)
+    Vector3 FindLegTarget(Transform legCastPoint, bool flipYAngle = false)
     {
         RaycastHit hit;
         Vector3 dir = legCastPoint.forward;
-        // float moveAngle = Mathf.Atan(inputDir.x / inputDir.y) * Mathf.Rad2Deg;
-        float moveAngle = Vector2.SignedAngle(Vector2.up,inputDir);
-
-        moveAngle += (offset * inputDir.x);
-        // if (inputDir.y < 0)
-        // {
-        //     moveAngle += 180f;
-        // }
-
-        Debug.Log($"{legCastPoint} angle: {moveAngle}");
-        // dir = Quaternion.AngleAxis(moveAngle,transform.up)*dir;
-        // if (inputDir.y < 0)
-        // {
-        //     moveAngle += 180f;
-        // }
-        // dir = Quaternion.AngleAxis(moveAngle, transform.up) *
-        //       Quaternion.AngleAxis(-feetMoveAngle * inputDir.y, transform.right) *
-        //       Quaternion.AngleAxis(-feetMoveAngle * inputDir.x, transform.forward) * dir;
-
-        dir = Quaternion.AngleAxis(moveAngle, transform.up) * Quaternion.AngleAxis(-feetMoveAngle.x, transform.right) *
-              dir;
+        float yAngle = feetMoveAngle.y;
+        if (flipYAngle)
+        {
+            yAngle *= -1f;
+        }
+        Quaternion angleAxis = Quaternion.AngleAxis(yAngle*inputDir.x, transform.forward) * Quaternion.AngleAxis(-feetMoveAngle.x*inputDir.y, transform.right);
+        dir = angleAxis * dir;
+        Debug.Log($"{legCastPoint} angle: {angleAxis.eulerAngles}");
 
 
         if (Physics.Raycast(legCastPoint.position, dir, out hit, castDistance, castLayer))
