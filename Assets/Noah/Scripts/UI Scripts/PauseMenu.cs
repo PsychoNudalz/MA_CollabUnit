@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    private bool gameIsPaused = false;
+    public bool gameIsPaused = false;
     [SerializeField] private GameObject bg;
 
     [SerializeField] private Color bgDefault, bgOn;
@@ -18,6 +18,7 @@ public class PauseMenu : MonoBehaviour
     private bool optionsOpen = false;
     [SerializeField] private GameObject confirmBox;
     private bool confirmBoxOpen = false;
+    
     public void Update()
     {
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
@@ -36,7 +37,7 @@ public class PauseMenu : MonoBehaviour
                 {
                     case false:
                         LeanTween.color(bg.GetComponent<RectTransform>(), bgOn, 0.2f);
-                        gameIsPaused = true;
+                        PauseGame();
                         LeanTween.scale(gameObject, new Vector3(1, 1, 1), 0.2f).setEase(LeanTweenType.easeInOutCubic);
                         break;
                     case true:
@@ -45,6 +46,11 @@ public class PauseMenu : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void PauseGame()
+    {
+        gameIsPaused = true;
     }
 
     public void Resume()

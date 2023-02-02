@@ -10,12 +10,12 @@ public class PlayerCamera : MonoBehaviour
 
     [SerializeField] private CinemachineFreeLook cfl;
     private float xSpeedDefault, ySpeedDefault;
+    [SerializeField] private PauseMenu pm;
     
     // Fucking change this shit & make it work from the pause menu
     // Noah you're a fucking moron
     // Comment by Noah - 01/02/2023
     
-    private bool gameIsPaused = false;
     void Start()
     {
         Cursor.visible = false;
@@ -45,15 +45,13 @@ public class PlayerCamera : MonoBehaviour
                 }
             }
 
-            switch (gameIsPaused)
+            switch (pm.gameIsPaused)
             {
                 case true:
-                    gameIsPaused = false;
                     cfl.m_XAxis.m_MaxSpeed = xSpeedDefault;
                     cfl.m_YAxis.m_MaxSpeed = ySpeedDefault;
                     break;
                 case false:
-                    gameIsPaused = true;
                     cfl.m_YAxis.m_MaxSpeed = 0;
                     cfl.m_XAxis.m_MaxSpeed = 0;
                     break;
