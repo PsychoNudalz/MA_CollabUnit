@@ -326,6 +326,44 @@ public class BreakablePart : BreakableComponent
         }
     }
 
+    public override void CollisionBreak(MovableObject mo, Collision collision = null)
+    {
+        if (IsBroken())
+        {
+            return;
+        }
+
+
+        var force = CalculateForce(mo, out var originalSpeed, out var forceDir);
+
+
+        if (isDebug)
+        {
+            // Debug.DrawRay(transform.position, forceDir * force, Color.cyan, 10f);
+        }
+
+
+        // if (force > breakingForce.x * .7f)
+        // {
+        //     print($"Collided with {rb} with force: {force}  Against: {breakingForce}");
+        // }
+
+        if (force > breakingForce.x)
+        {
+            Break(forceDir * force, forceDir * force);
+        }
+        else
+        {
+            breakingForce -= new Vector2(force, force);
+        }
+
+        //have original object to keep flying
+        if (!RBInConnected(mo.Rb))
+        {
+            mo.Rb.velocity = originalSpeed * forceTransfer;
+        }
+    }
+
 
     IEnumerator DelayBreakBottom()
     {

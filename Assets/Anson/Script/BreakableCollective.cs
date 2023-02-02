@@ -35,7 +35,7 @@ public class BreakableCollective : BreakableComponent
         }
         else if (collision.gameObject.TryGetComponent(out MovableObject mo))
         {
-            CollisionBreak(mo.Rb,collision);
+            CollisionBreak(mo,collision);
         }
         else if (collision.gameObject.TryGetComponent(out Rigidbody rb))
         {
@@ -156,6 +156,26 @@ public class BreakableCollective : BreakableComponent
         }
     }
 
+    public override void CollisionBreak(MovableObject mo, Collision collision = null)
+    {
+        if (IsBroken())
+        {
+            return;
+        }
+
+        var force = CalculateForce(mo, out var originalSpeed, out var forceDir);
+
+        if (force <= breakingForce.x)
+        {
+            return;
+        }
+        Break(new Vector3(),new Vector3());
+        foreach (BreakableComponent breakableComponent in FindBreakablesFromCollision(collision))
+        {
+            breakableComponent.CollisionBreak(mo,collision);
+        }
+    }
+
     BreakableComponent[] FindBreakablesFromCollision(Collision collision)
     {
         List<ContactPoint> temp = new List<ContactPoint>();
@@ -185,7 +205,7 @@ public class BreakableCollective : BreakableComponent
 
         if (isDebug)
         {
-            Debug.Log($"{this} contacts found {breakableComponents.Count} breakable");
+            // Debug.Log($"{this} contacts found {breakableComponents.Count} breakable");
         }
         return breakableComponents.ToArray();
     }

@@ -181,10 +181,10 @@ public class BreakableComponent : MonoBehaviour
         if (parent && !parent.TryGetComponent(out BreakableCollective _))
         {
             parent = p;
-        }else if (!parent)
+        }
+        else if (!parent)
         {
             parent = p;
-
         }
 
 
@@ -253,6 +253,10 @@ public class BreakableComponent : MonoBehaviour
     public virtual void CollisionBreak(Rigidbody rb, Collision collision = null)
     {
     }
+    public virtual void CollisionBreak(MovableObject mo, Collision collision = null)
+    {
+    }
+
 
     protected bool IsBroken()
     {
@@ -393,18 +397,21 @@ public class BreakableComponent : MonoBehaviour
         float force = 0f;
         originalSpeed = new Vector3();
         forceDir = new Vector3();
-        if (rb.TryGetComponent(out MovableObject movableObject))
-        {
-            originalSpeed = movableObject.Velocity;
-            force = originalSpeed.magnitude * rb.mass;
-            forceDir = originalSpeed.normalized;
-        }
-        else
-        {
-            originalSpeed = rb.velocity;
-            force = rb.velocity.magnitude * rb.mass;
-            forceDir = (transform.position - rb.transform.position).normalized;
-        }
+        originalSpeed = rb.velocity;
+        force = rb.velocity.magnitude * rb.mass;
+        forceDir = (transform.position - rb.transform.position).normalized;
+
+        return force;
+    }
+
+    protected virtual float CalculateForce(MovableObject movableObject, out Vector3 originalSpeed, out Vector3 forceDir)
+    {
+        float force = 0f;
+        originalSpeed = new Vector3();
+        forceDir = new Vector3();
+        originalSpeed = movableObject.Velocity;
+        force = originalSpeed.magnitude * movableObject.Rb.mass;
+        forceDir = originalSpeed.normalized;
 
         return force;
     }
@@ -422,7 +429,6 @@ public class BreakableComponent : MonoBehaviour
             }
 
             c.material = physicMaterial;
-
         }
 
         if (!TryGetComponent(out rb))
@@ -439,7 +445,6 @@ public class BreakableComponent : MonoBehaviour
         {
             bp = gameObject.AddComponent<BreakablePart>();
             bc = bp;
-
         }
 
         return bc;

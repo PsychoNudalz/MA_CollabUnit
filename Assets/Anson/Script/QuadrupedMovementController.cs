@@ -119,7 +119,7 @@ public class QuadrupedMovementController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log($"{this} grav: {Physics.gravity.magnitude}");
+        // Debug.Log($"{this} grav: {Physics.gravity.magnitude}");
         UpdateFeetToCastPosition();
     }
 
@@ -270,7 +270,7 @@ public class QuadrupedMovementController : MonoBehaviour
         float y = gravityMagnitude * t / 2f + moveAmount.y;
         Vector3 velocity = new Vector3(horizontal * moveAmount.normalized.x, y, horizontal * moveAmount.normalized.z);
 
-        Debug.Log($"Calculated Velocity: {velocity}, {velocity.magnitude}");
+        // Debug.Log($"Calculated Velocity: {velocity}, {velocity.magnitude}");
 
 
         return velocity;
@@ -288,7 +288,7 @@ public class QuadrupedMovementController : MonoBehaviour
         }
         Quaternion angleAxis = Quaternion.AngleAxis(yAngle*inputDir.x, transform.forward) * Quaternion.AngleAxis(-feetMoveAngle.x*inputDir.y, transform.right);
         dir = angleAxis * dir;
-        Debug.Log($"{legCastPoint} angle: {angleAxis.eulerAngles}");
+        // Debug.Log($"{legCastPoint} angle: {angleAxis.eulerAngles}");
 
 
         if (Physics.Raycast(legCastPoint.position, dir, out hit, castDistance, castLayer))
@@ -329,7 +329,9 @@ public class QuadrupedMovementController : MonoBehaviour
         Vector3 avg2 = (feet[2].Position + feet[3].Position) / 2f;
         Vector3 dir = avg1 - avg2;
 
-        transform.forward = dir;
+        dir.y = 0;
+
+        transform.forward = dir.normalized;
     }
 
     Vector3 AverageFeetPosition()

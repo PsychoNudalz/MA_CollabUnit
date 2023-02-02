@@ -156,7 +156,7 @@ public class FootMovementSphere : MonoBehaviour
         {
             if (Time.time - launchCollisionIgnoreTime_Set > launchCollisionIgnoreTime)
             {
-                Debug.Log($"{this} collided {collision.collider.name}");
+                // Debug.Log($"{this} collided {collision.collider.name}");
                 SetFootIdle();
             }
         }
