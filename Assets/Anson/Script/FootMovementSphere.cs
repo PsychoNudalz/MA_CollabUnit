@@ -103,6 +103,8 @@ public class FootMovementSphere : MonoBehaviour
         switch (footState)
         {
             case FootState.Idle:
+                rb.AddForce(new Vector3(0, -Physics.gravity.magnitude,0));
+
                 break;
             case FootState.Flying:
                 if (Time.time - launchCollisionIgnoreTime_Set > 4 * launchCollisionIgnoreTime &&
@@ -173,11 +175,11 @@ public class FootMovementSphere : MonoBehaviour
         switch (fs)
         {
             case FootState.Idle:
-                rb.isKinematic = true;
+                // rb.isKinematic = true;
                 // rb.useGravity = false;
                 break;
             case FootState.Flying:
-                rb.isKinematic = false;
+                // rb.isKinematic = false;
                 // rb.useGravity = true;
                 break;
             default:
