@@ -13,16 +13,25 @@ public struct FootCastPair
     [SerializeField]
     private Transform raycastPoint;
 
+    [SerializeField]
+    private Transform footMesh;
+
+    [SerializeField]
+    private float anchorRange;
+    
+
     public FootMovementSphere Foot => foot;
 
     public Transform RaycastPoint => raycastPoint;
 
     public Vector3 Position => foot.position;
 
-    public FootCastPair(FootMovementSphere foot, Transform raycastPoint)
+    public FootCastPair(FootMovementSphere foot, Transform raycastPoint, Transform footMesh, float anchorRange = 4f)
     {
         this.foot = foot;
         this.raycastPoint = raycastPoint;
+        this.footMesh = footMesh;
+        this.anchorRange = anchorRange;
     }
 }
 
@@ -61,7 +70,8 @@ public class QuadrupedMovementController : MonoBehaviour
 
     [Header("Body")]
     [SerializeField]
-    Transform body;
+    Transform bodyTarget;
+
 
     [SerializeField]
     private float bodyHeight = 2f;
@@ -72,7 +82,7 @@ public class QuadrupedMovementController : MonoBehaviour
     private MovementPattern movementPattern;
 
     [SerializeField]
-    private Vector2 feetMoveAngle = new Vector2(30,15);
+    private Vector2 feetMoveAngle = new Vector2(30, 15);
 
 
     [SerializeField]
@@ -88,16 +98,25 @@ public class QuadrupedMovementController : MonoBehaviour
     private Vector2 inputDir;
 
     [Space(20)]
+    [Header("Main Transform")]
+    [SerializeField]
+    private Transform mainTransform;
+
+    [SerializeField]
+    private float transformLerpSpeed_Position = 5f;
+
+    [SerializeField]
+    private float transformLerpSpeed_Rotation = 5f;
+
     [Header("Cat Model")]
     [SerializeField]
     private GameObject catModel;
 
     [SerializeField]
-    private float modelLerpSpeed;
+    private float modelLerpSpeed_Position;
 
-    // [SerializeField]
-    // private Transform[] catModelFeet;
-
+    [SerializeField]
+    private float modelLerpSpeed_Rotation;
 
     private float lastMoveTime = 0f;
 
@@ -105,6 +124,10 @@ public class QuadrupedMovementController : MonoBehaviour
     private void Awake()
     {
         InitialiseAllFeet();
+        if (!mainTransform)
+        {
+            mainTransform = transform;
+        }
     }
 
     private void InitialiseAllFeet()
@@ -126,7 +149,7 @@ public class QuadrupedMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateBody();
+        UpdateBodyTarget();
         if (inputDir.magnitude > 0f)
         {
             if (Time.time - lastMoveTime > timeBetweenFoot)
@@ -205,7 +228,7 @@ public class QuadrupedMovementController : MonoBehaviour
     private void MoveCatFeet_OppositeCorners(int oddIndex)
     {
         LaunchCurrentFoot(frontFeet[oddIndex]);
-        LaunchCurrentFoot(backFeet[1 - oddIndex],true);
+        LaunchCurrentFoot(backFeet[1 - oddIndex], true);
     }
 
     private void FixedUpdate()
@@ -286,7 +309,9 @@ public class QuadrupedMovementController : MonoBehaviour
         {
             yAngle *= -1f;
         }
-        Quaternion angleAxis = Quaternion.AngleAxis(yAngle*inputDir.x, transform.forward) * Quaternion.AngleAxis(-feetMoveAngle.x*inputDir.y, transform.right);
+
+        Quaternion angleAxis = Quaternion.AngleAxis(yAngle * inputDir.x, transform.forward) *
+                               Quaternion.AngleAxis(-feetMoveAngle.x * inputDir.y, transform.right);
         dir = angleAxis * dir;
         // Debug.Log($"{legCastPoint} angle: {angleAxis.eulerAngles}");
 
@@ -314,24 +339,38 @@ public class QuadrupedMovementController : MonoBehaviour
 
     void UpdateTransformPosition()
     {
-        transform.position = AverageFeetPosition();
+        Vector3 average = AverageFeetPosition();
+        mainTransform.position =
+            Vector3.Lerp(mainTransform.position, average, transformLerpSpeed_Position * Time.deltaTime);
     }
 
     void UpdateTransformRotation()
     {
-        if (feet.Length < 4)
+        // if (feet.Length < 4)
+        // {
+        //     Debug.LogError("Not enough legs to rotate");
+        //     return;
+        // }
+        //
+        // Vector3 avg1 = (feet[0].Position + feet[1].Position) / 2f;
+        // Vector3 avg2 = (feet[2].Position + feet[3].Position) / 2f;
+        // Vector3 dir = avg1 - avg2;
+        //
+        // dir.y = 0;
+        //
+        // transform.forward = dir.normalized;
+
+
+        //Probably dont need this step when the camera is implemented
+        if (inputDir.magnitude > 0)
         {
-            Debug.LogError("Not enough legs to rotate");
-            return;
+            Vector3 targetRotation =
+                Quaternion.AngleAxis(Vector3.SignedAngle(Vector3.forward, transform.forward, Vector3.up), Vector3.up) *
+                new Vector3(inputDir.x, 0, inputDir.y);
+
+            mainTransform.forward = Vector3.Lerp(mainTransform.forward, targetRotation,
+                transformLerpSpeed_Rotation * Time.deltaTime);
         }
-
-        Vector3 avg1 = (feet[0].Position + feet[1].Position) / 2f;
-        Vector3 avg2 = (feet[2].Position + feet[3].Position) / 2f;
-        Vector3 dir = avg1 - avg2;
-
-        dir.y = 0;
-
-        transform.forward = dir.normalized;
     }
 
     Vector3 AverageFeetPosition()
@@ -366,16 +405,35 @@ public class QuadrupedMovementController : MonoBehaviour
         return avg / feet.Length;
     }
 
-    void UpdateBody()
+    void UpdateBodyTarget()
     {
-        var position = body.position;
-        position = new Vector3(position.x, AverageFeetPosition().y + bodyHeight, position.z);
-        body.position = position;
+        var position = bodyTarget.position;
+        Vector3 heightOffset = new Vector3(0, bodyHeight, 0);
+        if (Physics.Raycast(transform.position + heightOffset, -transform.up, out RaycastHit hit,
+                bodyHeight * 2f, castLayer))
+        {
+            position = hit.point + heightOffset;
+        }
+        else
+        {
+            position = new Vector3(position.x, AverageFeetPosition().y + bodyHeight, position.z);
+        }
+
+        bodyTarget.position = position;
     }
 
     void MoveModel()
     {
         catModel.transform.position =
-            Vector3.Lerp(catModel.transform.position, body.position, modelLerpSpeed * Time.deltaTime);
+            Vector3.Lerp(catModel.transform.position, bodyTarget.position, modelLerpSpeed_Position * Time.deltaTime);
+
+
+        Vector3 avg1 = (frontFeet[0].Position + frontFeet[1].Position) / 2f;
+        Vector3 avg2 = (backFeet[0].Position + backFeet[1].Position) / 2f;
+        Vector3 dir = avg1 - avg2;
+
+
+        catModel.transform.forward = Vector3.Lerp(catModel.transform.forward, dir.normalized,
+            modelLerpSpeed_Rotation * Time.deltaTime);
     }
 }

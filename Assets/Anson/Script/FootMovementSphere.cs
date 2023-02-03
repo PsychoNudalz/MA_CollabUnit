@@ -46,6 +46,7 @@ public class FootMovementSphere : MonoBehaviour
     public Rigidbody Rb => rb;
 
     public float GravityExtra => gravityExtra;
+
     // public float GravityAccel => gravityExtra / rb.mass;
     public bool IsIdle => footState == FootState.Idle;
 
@@ -75,13 +76,13 @@ public class FootMovementSphere : MonoBehaviour
 
         transform.parent = null;
         gravityExtra = Physics.gravity.magnitude * gravityMultiplier;
-        gravityExtra_Vector = new Vector3(0, -gravityExtra*rb.mass , 0);
+        gravityExtra_Vector = new Vector3(0, -gravityExtra * rb.mass, 0);
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.DrawSphere(position, .3f);
-    }
+    // private void OnDrawGizmosSelected()
+    // {
+    //     Gizmos.DrawSphere(position, .3f);
+    // }
 
     // Update is called once per frame
     void Update()
@@ -89,7 +90,11 @@ public class FootMovementSphere : MonoBehaviour
         switch (footState)
         {
             case FootState.Idle:
-                transform.position = worldPosition;
+                if (Vector3.Distance(worldPosition, transform.position) > 0.001f)
+                {
+                    transform.position = worldPosition;
+                }
+
                 break;
             case FootState.Flying:
                 break;
@@ -103,7 +108,7 @@ public class FootMovementSphere : MonoBehaviour
         switch (footState)
         {
             case FootState.Idle:
-                rb.AddForce(new Vector3(0, -Physics.gravity.magnitude,0));
+                // rb.AddForce(new Vector3(0, -Physics.gravity.magnitude,0));
 
                 break;
             case FootState.Flying:
@@ -175,11 +180,11 @@ public class FootMovementSphere : MonoBehaviour
         switch (fs)
         {
             case FootState.Idle:
-                // rb.isKinematic = true;
+                rb.isKinematic = true;
                 // rb.useGravity = false;
                 break;
             case FootState.Flying:
-                // rb.isKinematic = false;
+                rb.isKinematic = false;
                 // rb.useGravity = true;
                 break;
             default:
