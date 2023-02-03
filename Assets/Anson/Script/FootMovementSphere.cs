@@ -9,7 +9,8 @@ public class FootMovementSphere : MonoBehaviour
     enum FootState
     {
         Idle,
-        Flying
+        Flying,
+        OutOfRange
     }
 
     [SerializeField]
@@ -18,6 +19,7 @@ public class FootMovementSphere : MonoBehaviour
     [SerializeField]
     private QuadrupedMovementController quadrupedMovementController;
 
+ 
     [SerializeField]
     private Rigidbody rb;
 
@@ -26,6 +28,9 @@ public class FootMovementSphere : MonoBehaviour
 
     private float gravityExtra = 0;
     private Vector3 gravityExtra_Vector;
+
+    [SerializeField]
+    private Transform anchorPoint;
 
     [SerializeField]
     private float footAnchorRange = 10f;
@@ -75,9 +80,8 @@ public class FootMovementSphere : MonoBehaviour
         }
 
         transform.parent = null;
-        gravityExtra = Physics.gravity.magnitude * gravityMultiplier;
-        gravityExtra_Vector = new Vector3(0, -gravityExtra * rb.mass, 0);
     }
+
 
     // private void OnDrawGizmosSelected()
     // {
@@ -97,9 +101,11 @@ public class FootMovementSphere : MonoBehaviour
 
                 break;
             case FootState.Flying:
+                transform.position =
+                    Vector3.ClampMagnitude(transform.position - anchorPoint.position, footAnchorRange) +
+                    anchorPoint.position;
+                
                 break;
-            default:
-                throw new ArgumentOutOfRangeException();
         }
     }
 
@@ -122,19 +128,49 @@ public class FootMovementSphere : MonoBehaviour
                     lastPosition = position;
                 }
 
+                if (Vector3.Distance(transform.position, anchorPoint.position) > footAnchorRange)
+                {
+                    // ChangeState(FootState.OutOfRange);
+                }
                 rb.AddForce(gravityExtra_Vector);
 
 
                 break;
-            default:
-                throw new ArgumentOutOfRangeException();
+            
+            case FootState.OutOfRange:
+                if (Vector3.Distance(transform.position, anchorPoint.position) <= footAnchorRange)
+                {
+                    ChangeState(FootState.Flying);
+                }
+
+                
+                break;
         }
     }
 
-    public void Initialize(QuadrupedMovementController qmc, float g)
+    /// <summary>
+    /// initialize foot
+    /// </summary>
+    /// <param name="qmc"></param>
+    /// <param name="g"></param>
+    public void Initialize(QuadrupedMovementController qmc, float g, Transform a, float anchorRange)
     {
         quadrupedMovementController = qmc;
+        anchorPoint = a;
+        footAnchorRange = anchorRange;
+        UpdateGravity(g);
+    }
+
+    /// <summary>
+    /// update gravity values
+    /// </summary>
+    /// <param name="g"></param>
+    public void UpdateGravity(float g)
+    {
         gravityMultiplier = g;
+
+        gravityExtra = Physics.gravity.magnitude * gravityMultiplier;
+        gravityExtra_Vector = new Vector3(0, -gravityExtra * rb.mass, 0);
     }
 
     public void Launch(Vector3 force)
@@ -187,8 +223,10 @@ public class FootMovementSphere : MonoBehaviour
                 rb.isKinematic = false;
                 // rb.useGravity = true;
                 break;
-            default:
-                throw new ArgumentOutOfRangeException(nameof(fs), fs, null);
+             
+            case FootState.OutOfRange:
+                
+                break;
         }
 
         footState = fs;

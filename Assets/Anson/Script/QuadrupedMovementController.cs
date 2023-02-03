@@ -18,13 +18,18 @@ public struct FootCastPair
 
     [SerializeField]
     private float anchorRange;
-    
+
 
     public FootMovementSphere Foot => foot;
 
     public Transform RaycastPoint => raycastPoint;
 
     public Vector3 Position => foot.position;
+
+
+    public Transform FootMesh => footMesh;
+
+    public float AnchorRange => anchorRange;
 
     public FootCastPair(FootMovementSphere foot, Transform raycastPoint, Transform footMesh, float anchorRange = 4f)
     {
@@ -123,7 +128,6 @@ public class QuadrupedMovementController : MonoBehaviour
 
     private void Awake()
     {
-        InitialiseAllFeet();
         if (!mainTransform)
         {
             mainTransform = transform;
@@ -135,14 +139,15 @@ public class QuadrupedMovementController : MonoBehaviour
         foreach (FootCastPair footCastPair in feet)
         {
             FootMovementSphere footMovementSphere = footCastPair.Foot;
-            footMovementSphere.Initialize(this, gravityMultiplier);
+            footMovementSphere.Initialize(this, gravityMultiplier, footCastPair.FootMesh, footCastPair.AnchorRange);
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        // Debug.Log($"{this} grav: {Physics.gravity.magnitude}");
+        InitialiseAllFeet();
+
         UpdateFeetToCastPosition();
     }
 
