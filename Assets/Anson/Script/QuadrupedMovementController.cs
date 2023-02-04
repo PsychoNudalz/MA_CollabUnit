@@ -276,9 +276,12 @@ public class QuadrupedMovementController : MonoBehaviour
         }
     }
 
-    void OnMove(InputValue inputValue)
+    public void OnMove(Vector2 moveDir)
     {
-        inputDir = inputValue.Get<Vector2>();
+        if (!moveDir.Equals(inputDir))
+        {
+            inputDir = moveDir;
+        }
     }
 
     //SHT NO WORK AND IDK WHY
@@ -323,7 +326,7 @@ public class QuadrupedMovementController : MonoBehaviour
 
         if (Physics.Raycast(legCastPoint.position, dir, out hit, castDistance, castLayer))
         {
-            Debug.DrawLine(legCastPoint.position, hit.point, Color.blue, 5f);
+            // Debug.DrawLine(legCastPoint.position, hit.point, Color.blue, 5f);
             return hit.point;
         }
         else
