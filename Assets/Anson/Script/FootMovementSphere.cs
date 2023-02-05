@@ -70,6 +70,7 @@ public class FootMovementSphere : MonoBehaviour
 
     // public float GravityAccel => gravityExtra / rb.mass;
     public bool IsIdle => footState == FootState.Idle;
+    public bool IsFalling => footState == FootState.Falling;
 
 
     public Vector3 position

@@ -81,6 +81,10 @@ public class QuadrupedMovementController : MonoBehaviour
     [SerializeField]
     private float bodyHeight = 2f;
 
+    [SerializeField]
+    [Range(0f, 1f)]
+    private float bodyToFeetLerp = .2f;
+
     [Space(10)]
     [Header("Movement Control")]
     [SerializeField]
@@ -417,35 +421,46 @@ public class QuadrupedMovementController : MonoBehaviour
     {
         Vector3 heightOffset = new Vector3(0, bodyHeight, 0);
 
-        var position = new Vector3();
-        float i = 1;
-        if (Physics.Raycast(transform.position + heightOffset, -transform.up, out RaycastHit hit,
+        var position = mainTransform.position;
+        if (Physics.Raycast(mainTransform.position + heightOffset, -Vector3.up, out RaycastHit hit,
                 bodyHeight * 2f, castLayer))
         {
-            position = hit.point;
+            position.y = hit.point.y;
         }
         else
         {
-            position = new Vector3(position.x, AverageFeetPosition().y, position.z);
+            position.y = AverageFeetPosition().y;
         }
-        
+
+        // float yMean = position.y;
+        // float i = 1;
+        //
         // foreach (FootCastPair footCastPair in feet)
         // {
         //     if (Physics.Raycast(footCastPair.RaycastPoint.position, -transform.up, out hit,
         //             bodyHeight, castLayer))
         //     {
-        //         position += hit.point;
+        //         yMean += hit.point.y;
         //         i++;
         //
         //     }
         // }
         //
-        // else
-        // {
-        //     position = new Vector3(position.x, AverageFeetPosition().y + bodyHeight, position.z);
-        // }
+        // position.y = yMean / i;
 
-        bodyTarget.position = (position / i)+heightOffset;
+        float numberOfFalling = 0;
+        foreach (FootCastPair foot in feet)
+        {
+            if (foot.Foot.IsFalling)
+            {
+                numberOfFalling++;
+            }
+        }
+
+        bodyToFeetLerp = numberOfFalling / feet.Length;
+        position.y = Mathf.Lerp(position.y, AverageFeetPosition().y, bodyToFeetLerp) + bodyHeight;
+
+        bodyTarget.position = position;
     }
 
     void MoveModel()
@@ -453,10 +468,41 @@ public class QuadrupedMovementController : MonoBehaviour
         catModel.transform.position =
             Vector3.Lerp(catModel.transform.position, bodyTarget.position, modelLerpSpeed_Position * Time.deltaTime);
 
+        
+        // MoveModel_Rotation();
+        MoveModel_Rotation_Forward();
+        // Vector3 targetRotation = catModel.transform.eulerAngles;
+        // catModel.transform.eulerAngles = Vector3.Lerp(catModel.transform.eulerAngles ,
+        //     targetRotation,
+        //     modelLerpSpeed_Rotation * Time.deltaTime);
+    }
 
+    private void MoveModel_Rotation()
+    {
+        Vector3 avg1 = (frontFeet[0].Position + frontFeet[1].Position) / 2f;
+        Vector3 avg2 = (backFeet[0].Position + backFeet[1].Position) / 2f;
+        Vector3 forwardDir = avg1 - avg2;
+        
+         avg1 = (frontFeet[0].Position + backFeet[0].Position) / 2f;
+         avg2 = (frontFeet[1].Position + backFeet[1].Position) / 2f;
+        Vector3 sideDir = avg2 - avg1;
+
+        Transform ct = catModel.transform;
+        float sideAngle= Vector3.SignedAngle(ct.right,sideDir,mainTransform.forward);
+        float forwardAngle= Vector3.SignedAngle(ct.forward,forwardDir,mainTransform.right);
+
+        Quaternion targetRotation = Quaternion.Euler(forwardAngle,0f,sideAngle)* catModel.transform.rotation;
+
+        catModel.transform.rotation = Quaternion.Lerp(catModel.transform.rotation, targetRotation,
+            modelLerpSpeed_Rotation * Time.deltaTime);
+    }
+
+    private void MoveModel_Rotation_Forward()
+    {
         Vector3 avg1 = (frontFeet[0].Position + frontFeet[1].Position) / 2f;
         Vector3 avg2 = (backFeet[0].Position + backFeet[1].Position) / 2f;
         Vector3 dir = avg1 - avg2;
+
 
 
         catModel.transform.forward = Vector3.Lerp(catModel.transform.forward, dir.normalized,
