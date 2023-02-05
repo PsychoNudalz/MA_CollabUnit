@@ -56,7 +56,7 @@ public class CatMovementController : MonoBehaviour
         cameraForward = cameraForward.normalized;
         float angle = Vector3.SignedAngle(transform.forward, cameraForward, transform.up);
         Vector2 moveDir = Quaternion.Euler(0, 0, -angle) * moveInput;
-        print($"{angle}, {moveDir}");
+        // print($"{angle}, {moveDir}");
         quadrupedMovementController.OnMove(moveDir);
     }
 }

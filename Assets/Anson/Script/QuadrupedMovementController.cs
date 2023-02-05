@@ -415,19 +415,37 @@ public class QuadrupedMovementController : MonoBehaviour
 
     void UpdateBodyTarget()
     {
-        var position = bodyTarget.position;
         Vector3 heightOffset = new Vector3(0, bodyHeight, 0);
+
+        var position = new Vector3();
+        float i = 1;
         if (Physics.Raycast(transform.position + heightOffset, -transform.up, out RaycastHit hit,
                 bodyHeight * 2f, castLayer))
         {
-            position = hit.point + heightOffset;
+            position = hit.point;
         }
         else
         {
-            position = new Vector3(position.x, AverageFeetPosition().y + bodyHeight, position.z);
+            position = new Vector3(position.x, AverageFeetPosition().y, position.z);
         }
+        
+        // foreach (FootCastPair footCastPair in feet)
+        // {
+        //     if (Physics.Raycast(footCastPair.RaycastPoint.position, -transform.up, out hit,
+        //             bodyHeight, castLayer))
+        //     {
+        //         position += hit.point;
+        //         i++;
+        //
+        //     }
+        // }
+        //
+        // else
+        // {
+        //     position = new Vector3(position.x, AverageFeetPosition().y + bodyHeight, position.z);
+        // }
 
-        bodyTarget.position = position;
+        bodyTarget.position = (position / i)+heightOffset;
     }
 
     void MoveModel()
