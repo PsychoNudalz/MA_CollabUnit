@@ -82,6 +82,11 @@ public class FootMovementSphere : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        AwakeBehaviour();
+    }
+
+    private void AwakeBehaviour()
+    {
         if (!rb)
         {
             rb = GetComponent<Rigidbody>();
@@ -207,6 +212,7 @@ public class FootMovementSphere : MonoBehaviour
     /// <param name="g"></param>
     public void Initialize(QuadrupedMovementController qmc, float g, Transform a, float anchorRange)
     {
+        AwakeBehaviour();
         quadrupedMovementController = qmc;
         anchorPoint = a;
         footAnchorRange = anchorRange;
