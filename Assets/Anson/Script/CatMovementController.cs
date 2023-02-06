@@ -48,6 +48,12 @@ public class CatMovementController : MonoBehaviour
 
     }
 
+    public void OnJump()
+    {
+        print("Jump");
+        quadrupedMovementController.Jump();
+    }
+
     private void MoveCat()
     {
         Vector3 cameraForward = cameraTransform.forward;

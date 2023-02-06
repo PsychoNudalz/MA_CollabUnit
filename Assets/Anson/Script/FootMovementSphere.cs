@@ -260,6 +260,7 @@ public class FootMovementSphere : MonoBehaviour
             {
                 // Debug.Log($"{this} collided {collision.collider.name}");
                 SetFootIdle(collision);
+                // ChangeState(FootState.Falling);
             }
         }
     }
@@ -273,6 +274,8 @@ public class FootMovementSphere : MonoBehaviour
         ChangeState(FootState.Idle);
         worldPosition = position;
     }
+
+
 
     void ChangeState(FootState fs)
     {

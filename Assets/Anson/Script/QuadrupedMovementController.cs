@@ -112,8 +112,10 @@ public class QuadrupedMovementController : MonoBehaviour
     [SerializeField]
     private float footMoveTime = .1f;
 
-    [SerializeField]
     private Vector2 inputDir;
+
+    [SerializeField]
+    private float jumpForce = 100f;
 
     [Space(10)]
     [Header("Ragdoll")]
@@ -169,7 +171,7 @@ public class QuadrupedMovementController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SwitchQuadState(quadState);
+        ChangeQuadState(quadState);
         InitialiseAllFeet();
 
         UpdateFeetToCastPosition();
@@ -223,16 +225,16 @@ public class QuadrupedMovementController : MonoBehaviour
     [ContextMenu("Upright")]
     public void SwitchQuad_Upright()
     {
-        SwitchQuadState(QuadState.Upright);
+        ChangeQuadState(QuadState.Upright);
     }
     [ContextMenu("Ragdoll")]
 
     public void SwitchQuad_Ragdoll()
     {
-        SwitchQuadState(QuadState.Ragdoll);
+        ChangeQuadState(QuadState.Ragdoll);
     }
 
-    void SwitchQuadState(QuadState qs)
+    void ChangeQuadState(QuadState qs)
     {
         switch (qs)
         {
@@ -265,14 +267,14 @@ public class QuadrupedMovementController : MonoBehaviour
         switch (movementPattern)
         {
             case MovementPattern.OneAtATime:
-                LaunchCurrentFoot();
+                LaunchFoot();
                 footIndex = (footIndex + 1) % feet.Length;
                 break;
             case MovementPattern.EveryOtherOne:
                 for (int i = oddIndex; i < feet.Length; i += 2)
                 {
                     footIndex = i;
-                    LaunchCurrentFoot();
+                    LaunchFoot();
                 }
 
                 footIndex = (footIndex + 1) % feet.Length;
@@ -281,8 +283,8 @@ public class QuadrupedMovementController : MonoBehaviour
             case MovementPattern.TwoInARow:
                 for (int i = 0; i < feet.Length; i += 4)
                 {
-                    LaunchCurrentFoot((footIndex + i) % feet.Length);
-                    LaunchCurrentFoot((footIndex + i + 1) % feet.Length);
+                    LaunchFoot((footIndex + i) % feet.Length);
+                    LaunchFoot((footIndex + i + 1) % feet.Length);
                 }
 
                 footIndex = (footIndex + 2) % feet.Length;
@@ -300,14 +302,14 @@ public class QuadrupedMovementController : MonoBehaviour
                 {
                     foreach (FootCastPair footCastPair in frontFeet)
                     {
-                        LaunchCurrentFoot(footCastPair);
+                        LaunchFoot(footCastPair);
                     }
                 }
                 else
                 {
                     foreach (FootCastPair footCastPair in backFeet)
                     {
-                        LaunchCurrentFoot(footCastPair);
+                        LaunchFoot(footCastPair);
                     }
                 }
 
@@ -321,10 +323,10 @@ public class QuadrupedMovementController : MonoBehaviour
 
     private void MoveCatFeet_OppositeCorners(int oddIndex)
     {
-        LaunchCurrentFoot(frontFeet[oddIndex]);
-        LaunchCurrentFoot(backFeet[1 - oddIndex], true);
+        LaunchFoot(frontFeet[oddIndex]);
+        LaunchFoot(backFeet[1 - oddIndex], true);
     }
-    void LaunchCurrentFoot(int index = -1, bool flipYAngles = false)
+    void LaunchFoot(int index = -1, bool flipYAngles = false)
     {
         if (index < 0)
         {
@@ -337,7 +339,7 @@ public class QuadrupedMovementController : MonoBehaviour
         currentFoot.Foot.SetVelocity(trajectory);
     }
 
-    void LaunchCurrentFoot(FootCastPair footCastPair, bool flipYAngles = false)
+    void LaunchFoot(FootCastPair footCastPair, bool flipYAngles = false)
     {
         Vector3 trajectory = FindTrajectoryToTarget(footCastPair.Foot, footCastPair.RaycastPoint, flipYAngles);
         footCastPair.Foot.SetVelocity(trajectory);
@@ -580,5 +582,16 @@ public class QuadrupedMovementController : MonoBehaviour
 
         catModel.transform.forward = Vector3.Lerp(catModel.transform.forward, dir.normalized,
             modelLerpSpeed_Rotation * Time.deltaTime);
+    }
+    
+    //********************JUMP
+    public void Jump()
+    {
+        ChangeQuadState(QuadState.Ragdoll);
+        foreach (FootCastPair footCastPair in feet)
+        {
+            footCastPair.Foot.SetVelocity(new Vector3(0,jumpForce,0));
+
+        }
     }
 }
