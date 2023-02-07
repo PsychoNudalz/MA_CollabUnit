@@ -50,7 +50,7 @@ public class CatMovementController : MonoBehaviour
 
     public void OnJump()
     {
-        print("Jump");
+        // print("Jump");
         quadrupedMovementController.Jump();
     }
 

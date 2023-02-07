@@ -225,6 +225,18 @@ public class QuadrupedMovementController : MonoBehaviour
                 Update_Upright();
                 break;
             case QuadState.Ragdoll:
+
+                break;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        switch (quadState)
+        {
+            case QuadState.Upright:
+                break;
+            case QuadState.Ragdoll:
                 Update_Ragdoll();
 
                 break;
@@ -234,6 +246,15 @@ public class QuadrupedMovementController : MonoBehaviour
     private void Update_Upright()
     {
         UpdateBodyTargetToFloor();
+        MoveCat();
+
+        UpdateTransformPosition();
+        UpdateTransformRotation();
+        MoveModel();
+    }
+
+    private void MoveCat()
+    {
         if (inputDir.magnitude > 0f)
         {
             if (Time.time - lastMoveTime > timeBetweenFoot)
@@ -241,15 +262,14 @@ public class QuadrupedMovementController : MonoBehaviour
                 MoveCatFeet();
             }
         }
-
-        UpdateTransformPosition();
-        UpdateTransformRotation();
-        MoveModel();
     }
 
     private void Update_Ragdoll()
     {
         UpdateBodyToFeet();
+        
+        MoveCat();
+
         UpdateTransformPosition();
         UpdateTransformRotation();
 
@@ -284,11 +304,15 @@ public class QuadrupedMovementController : MonoBehaviour
         switch (qs)
         {
             case QuadState.Upright:
-                // foreach (Rigidbody rb in rigidbodies)
-                // {
-                //     rb.isKinematic = true;
-                //     rb.useGravity = false;
-                // }
+                foreach (Rigidbody rb in rigidbodies)
+                {
+                    rb.isKinematic = true;
+                    rb.useGravity = false;
+                }
+
+                catModel.transform.localPosition = new Vector3();
+                catModel.transform.rotation = mainTransform.rotation;
+                
                 foreach (FootCastPair footCastPair in feet)
                 {
                     footCastPair.Foot.SetFootIdle();
@@ -297,11 +321,11 @@ public class QuadrupedMovementController : MonoBehaviour
 
                 break;
             case QuadState.Ragdoll:
-                // foreach (Rigidbody rb in rigidbodies)
-                // {
-                //     rb.isKinematic = true;
-                //     rb.useGravity = false;
-                // }
+                foreach (Rigidbody rb in rigidbodies)
+                {
+                    rb.isKinematic = false;
+                    rb.useGravity = true;
+                }
 
                 break;
         }
@@ -604,6 +628,7 @@ public class QuadrupedMovementController : MonoBehaviour
                 break;
             case QuadState.Ragdoll:
                 MoveModel_Force();
+                // MoveModel_Torque();
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
@@ -652,7 +677,16 @@ public class QuadrupedMovementController : MonoBehaviour
     void MoveModel_Force()
     {
         Vector3 dir = bodyTarget.position - catRigidbody.transform.position;
-        catRigidbody.AddForce(dir*catRigidbody.mass);
+
+        float dot = Vector3.Dot(dir.normalized, catRigidbody.velocity.normalized);
+
+        catRigidbody.AddForce(dir.normalized * (modelMoveForce_Position * dot));
+    }
+
+    void MoveModel_Torque()
+    {
+        Vector3 dif = bodyTarget.eulerAngles - catRigidbody.transform.eulerAngles;
+        catRigidbody.AddTorque(dif*modelMoveTorgue_Rotation);
     }
 
     //********************JUMP
