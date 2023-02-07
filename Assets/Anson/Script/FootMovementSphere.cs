@@ -10,7 +10,8 @@ public class FootMovementSphere : MonoBehaviour
     {
         Idle,
         Flying,
-        Falling
+        Falling,
+        Free
     }
 
     [SerializeField]
@@ -29,7 +30,9 @@ public class FootMovementSphere : MonoBehaviour
 
     [Header("Gravity")]
     [SerializeField]
-    private float gravityMultiplier = 1f;
+    private float gravityMultiplier_Move = 1f;
+    [SerializeField]
+    private float gravityMultiplier_Fall = 2f;
 
     private float gravityExtra = 0;
     private Vector3 gravityExtra_Vector;
@@ -96,7 +99,7 @@ public class FootMovementSphere : MonoBehaviour
     private void Start()
     {
         transform.position = anchorPoint.position;
-        
+
         collisionPoint = transform.position;
         worldPosition = transform.position;
         ChangeState(FootState.Idle);
@@ -140,18 +143,25 @@ public class FootMovementSphere : MonoBehaviour
 
                 break;
             case FootState.Flying:
-                transform.position =
-                    Vector3.ClampMagnitude(transform.position - anchorPoint.position, footAnchorRange) +
-                    anchorPoint.position;
+               AnchorFeet();
 
                 break;
             case FootState.Falling:
-                transform.position =
-                    Vector3.ClampMagnitude(transform.position - anchorPoint.position, footAnchorRange) +
-                    anchorPoint.position;
+                AnchorFeet();
+
+                break;
+            case  FootState.Free:
+                AnchorFeet();
 
                 break;
         }
+    }
+
+    private void AnchorFeet()
+    {
+        transform.position =
+            Vector3.ClampMagnitude(transform.position - anchorPoint.position, footAnchorRange) +
+            anchorPoint.position;
     }
 
     private bool GroundCheck()
@@ -197,10 +207,13 @@ public class FootMovementSphere : MonoBehaviour
                 // {
                 //     lastPosition = position;
                 // }
-                rb.AddForce(new Vector3(0, -Physics.gravity.magnitude*rb.mass, 0));
+                rb.AddForce(new Vector3(0, -Physics.gravity.magnitude * rb.mass, 0));
                 // rb.AddForce(gravityExtra_Vector);
+                break;
 
-                
+            case FootState.Free:
+                rb.AddForce(new Vector3(0, -Physics.gravity.magnitude * rb.mass*gravityMultiplier_Fall, 0));
+
                 break;
         }
     }
@@ -225,9 +238,9 @@ public class FootMovementSphere : MonoBehaviour
     /// <param name="g"></param>
     public void UpdateGravity(float g)
     {
-        gravityMultiplier = g;
+        gravityMultiplier_Move = g;
 
-        gravityExtra = Physics.gravity.magnitude * gravityMultiplier;
+        gravityExtra = Physics.gravity.magnitude * gravityMultiplier_Move;
         gravityExtra_Vector = new Vector3(0, -gravityExtra * rb.mass, 0);
     }
 
@@ -251,6 +264,16 @@ public class FootMovementSphere : MonoBehaviour
         }
     }
 
+    public void SetJump(Vector3 velocity)
+    {
+        if (footState is not FootState.Free)
+        {
+            SetFootFree();
+            rb.velocity = velocity;
+            launchCollisionIgnoreTime_Set = Time.time;
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         collisionPoint = collision.contacts[0].point;
@@ -265,16 +288,21 @@ public class FootMovementSphere : MonoBehaviour
         }
     }
 
-    private void SetFootIdle(Collision collision = null)
+    public void SetFootIdle(Collision collision = null)
     {
-        if (collision==null)
+        if (collision == null)
         {
             collisionPoint = transform.position;
         }
+
         ChangeState(FootState.Idle);
         worldPosition = position;
     }
 
+    public void SetFootFree()
+    {
+        ChangeState(FootState.Free);
+    }
 
 
     void ChangeState(FootState fs)
@@ -292,8 +320,12 @@ public class FootMovementSphere : MonoBehaviour
 
             case FootState.Falling:
                 rb.isKinematic = false;
+                break;
+            case FootState.Free:
+                rb.isKinematic = false;
 
                 break;
+                ;
         }
 
         footState = fs;

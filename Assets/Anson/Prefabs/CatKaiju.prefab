@@ -1943,7 +1943,7 @@ GameObject:
   m_Layer: 8
   m_Name: FeetCast_BL
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1974,7 +1974,7 @@ GameObject:
   m_Layer: 8
   m_Name: Feet
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2014,7 +2014,7 @@ GameObject:
   m_Layer: 8
   m_Name: FeetBall_BR
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2078,7 +2078,8 @@ MonoBehaviour:
   quadrupedMovementController: {fileID: 3379060419572255346}
   rb: {fileID: 3379060418498854199}
   launchCollisionIgnoreTime: 0.05
-  gravityMultiplier: 25
+  gravityMultiplier_Move: 1
+  gravityMultiplier_Fall: 2
   anchorPoint: {fileID: 1391795812554907998}
   footAnchorRange: 2
   groundLayer:
@@ -2185,7 +2186,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2214,7 +2215,7 @@ GameObject:
   m_Layer: 8
   m_Name: FeetCast_FR
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2245,7 +2246,7 @@ GameObject:
   m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2282,7 +2283,7 @@ GameObject:
   m_Layer: 8
   m_Name: FeetBall_FL
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2346,7 +2347,8 @@ MonoBehaviour:
   quadrupedMovementController: {fileID: 3379060419572255346}
   rb: {fileID: 3379060418683573838}
   launchCollisionIgnoreTime: 0.05
-  gravityMultiplier: 25
+  gravityMultiplier_Move: 1
+  gravityMultiplier_Fall: 2
   anchorPoint: {fileID: 8944841466386094420}
   footAnchorRange: 2
   groundLayer:
@@ -2422,7 +2424,7 @@ GameObject:
   m_Layer: 8
   m_Name: FeetBall_FR
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2486,7 +2488,8 @@ MonoBehaviour:
   quadrupedMovementController: {fileID: 3379060419572255346}
   rb: {fileID: 3379060418862505280}
   launchCollisionIgnoreTime: 0.05
-  gravityMultiplier: 25
+  gravityMultiplier_Move: 1
+  gravityMultiplier_Fall: 2
   anchorPoint: {fileID: 9181093551780899095}
   footAnchorRange: 2
   groundLayer:
@@ -2562,7 +2565,7 @@ GameObject:
   m_Layer: 8
   m_Name: FeetBall_BL
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2626,7 +2629,8 @@ MonoBehaviour:
   quadrupedMovementController: {fileID: 3379060419572255346}
   rb: {fileID: 3379060418938920210}
   launchCollisionIgnoreTime: 0.05
-  gravityMultiplier: 25
+  gravityMultiplier_Move: 1
+  gravityMultiplier_Fall: 2
   anchorPoint: {fileID: 1176406933356500819}
   footAnchorRange: 2
   groundLayer:
@@ -2697,7 +2701,7 @@ GameObject:
   m_Layer: 8
   m_Name: FeetCast_BR
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2731,7 +2735,7 @@ GameObject:
   m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2825,7 +2829,7 @@ GameObject:
   m_Layer: 8
   m_Name: PlayerCameraFollow
   m_TagString: Untagged
-  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2857,7 +2861,7 @@ GameObject:
   m_Layer: 8
   m_Name: QuadRig
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2897,38 +2901,31 @@ MonoBehaviour:
   - foot: {fileID: 3379060418683573825}
     raycastPoint: {fileID: 3379060419667308595}
     footMesh: {fileID: 8944841466386094420}
-    anchorRange: 2
   - foot: {fileID: 3379060418862505283}
     raycastPoint: {fileID: 3379060418671403431}
     footMesh: {fileID: 9181093551780899095}
-    anchorRange: 2
   - foot: {fileID: 3379060418938920213}
     raycastPoint: {fileID: 3379060418375009187}
     footMesh: {fileID: 1176406933356500819}
-    anchorRange: 2
   - foot: {fileID: 3379060418498854198}
     raycastPoint: {fileID: 3379060419051785605}
     footMesh: {fileID: 1391795812554907998}
-    anchorRange: 2
   frontFeet:
   - foot: {fileID: 3379060418683573825}
     raycastPoint: {fileID: 3379060419667308595}
     footMesh: {fileID: 8944841466386094420}
-    anchorRange: 2
   - foot: {fileID: 3379060418862505283}
     raycastPoint: {fileID: 3379060418671403431}
     footMesh: {fileID: 9181093551780899095}
-    anchorRange: 2
   backFeet:
   - foot: {fileID: 3379060418938920213}
     raycastPoint: {fileID: 3379060418375009187}
     footMesh: {fileID: 1176406933356500819}
-    anchorRange: 2
   - foot: {fileID: 3379060418498854198}
     raycastPoint: {fileID: 3379060419051785605}
     footMesh: {fileID: 1391795812554907998}
-    anchorRange: 2
   footIndex: 1
+  anchorRange: 3
   castDistance: 50
   castLayer:
     serializedVersion: 2
@@ -2941,7 +2938,8 @@ MonoBehaviour:
   gravityMultiplier: 25
   timeBetweenFoot: 0.3
   footMoveTime: 0.5
-  inputDir: {x: 0, y: 0}
+  jumpForce_Y: 1000
+  jumpForce_XZ: {x: 100, y: 100}
   joints:
   - {fileID: 3908928480315992403}
   - {fileID: 3827009057084956023}
@@ -2984,6 +2982,8 @@ MonoBehaviour:
   catModel: {fileID: 3379060418600436415}
   modelLerpSpeed_Position: 5
   modelLerpSpeed_Rotation: 5
+  modelMoveForce_Position: 100
+  modelMoveTorgue_Rotation: 5
 --- !u!1 &3379060419667308594
 GameObject:
   m_ObjectHideFlags: 0
@@ -2996,7 +2996,7 @@ GameObject:
   m_Layer: 8
   m_Name: FeetCast_FL
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4004,7 +4004,7 @@ MonoBehaviour:
   m_YAxis:
     Value: 0.5
     m_SpeedMode: 0
-    m_MaxSpeed: 2
+    m_MaxSpeed: 4
     m_AccelTime: 0.2
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
@@ -4375,7 +4375,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4898513063267974874}
-  m_LocalRotation: {x: -0.0014507718, y: 0.82551444, z: 0.002122051, w: 0.5643752}
+  m_LocalRotation: {x: -0.0014507718, y: 0.8255144, z: 0.002122051, w: 0.5643753}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
