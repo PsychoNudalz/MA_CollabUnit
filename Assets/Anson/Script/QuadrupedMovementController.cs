@@ -121,6 +121,7 @@ public class QuadrupedMovementController : MonoBehaviour
 
     [SerializeField]
     private Vector2 jumpForce_XZ = new Vector2(100f, 100f);
+
     [SerializeField]
     private Vector2 jumpForceRandom_XZ = new Vector2(100f, 100f);
 
@@ -131,6 +132,9 @@ public class QuadrupedMovementController : MonoBehaviour
 
     [SerializeField]
     private Rigidbody[] rigidbodies;
+
+    [SerializeField]
+    private float ragdollGravityMultiplier = 4f;
 
     [Space(10)]
     [Header("Main Transform")]
@@ -143,7 +147,6 @@ public class QuadrupedMovementController : MonoBehaviour
 
     [SerializeField]
     private float transformLerpSpeed_Rotation = 5f;
-    
 
 
     [Space(10)]
@@ -160,9 +163,13 @@ public class QuadrupedMovementController : MonoBehaviour
     [Header("Force")]
     [SerializeField]
     private Rigidbody catRigidbody;
+
     [SerializeField]
-    [Tooltip("Per unit")]
-    private float modelMoveForce_Position = 100f;
+    private float modelMoveMaxDist_Position = 100f;
+    [SerializeField]
+
+    private float modelMoveVelocityPerUnit_Position = 20f;
+
 
     [SerializeField]
     [Tooltip("Per unit")]
@@ -203,8 +210,8 @@ public class QuadrupedMovementController : MonoBehaviour
     {
         if (inputDir.magnitude > 0.1f)
         {
-            Vector2 dir = inputDir*10f;
-            Gizmos.DrawLine(transform.position,transform.position+new Vector3(dir.x,0,dir.y));
+            Vector2 dir = inputDir * 10f;
+            Gizmos.DrawLine(transform.position, transform.position + new Vector3(dir.x, 0, dir.y));
         }
     }
 
@@ -217,19 +224,11 @@ public class QuadrupedMovementController : MonoBehaviour
         UpdateFeetToCastPosition();
     }
 
-    // Update is called once per frame
-    // void Update()
-    // {
-    //     switch (quadState)
-    //     {
-    //         case QuadState.Upright:
-    //             Update_Upright();
-    //             break;
-    //         case QuadState.Ragdoll:
-    //
-    //             break;
-    //     }
-    // }
+    void Update()
+    {
+        print($"Original velocity: {catRigidbody.velocity.magnitude}");
+
+    }
 
     private void FixedUpdate()
     {
@@ -240,7 +239,7 @@ public class QuadrupedMovementController : MonoBehaviour
                 break;
             case QuadState.Ragdoll:
                 Update_Ragdoll();
-
+    
                 break;
         }
     }
@@ -248,7 +247,6 @@ public class QuadrupedMovementController : MonoBehaviour
     private void Update_Upright()
     {
         UpdateBodyTargetToFloor();
-        
         MoveCat();
 
         // UpdateTransformPosition();
@@ -270,15 +268,13 @@ public class QuadrupedMovementController : MonoBehaviour
     private void Update_Ragdoll()
     {
         UpdateBodyToFeet();
-        
+
         MoveCat();
 
         // UpdateTransformPosition();
         // UpdateTransformRotation();
 
         MoveModel();
-
-
     }
 
 
@@ -317,11 +313,12 @@ public class QuadrupedMovementController : MonoBehaviour
 
                 // catModel.transform.localPosition = new Vector3();
                 // catModel.transform.rotation = mainTransform.rotation;
-                
+
                 foreach (FootCastPair footCastPair in feet)
                 {
                     footCastPair.Foot.SetFootIdle();
                 }
+
                 UpdateFeetToCastPosition();
 
                 break;
@@ -418,13 +415,13 @@ public class QuadrupedMovementController : MonoBehaviour
         FootCastPair currentFoot = feet[index];
 
         Vector3 trajectory = FindTrajectoryToTarget(currentFoot.Foot, currentFoot.RaycastPoint, flipYAngles);
-        currentFoot.Foot.SetVelocity(trajectory);
+        currentFoot.Foot.Move_SetVelocity(trajectory);
     }
 
     void LaunchFoot(FootCastPair footCastPair, bool flipYAngles = false)
     {
         Vector3 trajectory = FindTrajectoryToTarget(footCastPair.Foot, footCastPair.RaycastPoint, flipYAngles);
-        footCastPair.Foot.SetVelocity(trajectory);
+        footCastPair.Foot.Move_SetVelocity(trajectory);
     }
 
     [ContextMenu("Force Update Feet")]
@@ -578,12 +575,12 @@ public class QuadrupedMovementController : MonoBehaviour
                 bodyHeight * 2f, castLayer))
         {
             position.y = hit.point.y;
-
         }
         else
         {
             position.y = avg.y;
         }
+
         position.y += bodyHeight;
 
         float numberOfFalling = 0;
@@ -595,7 +592,7 @@ public class QuadrupedMovementController : MonoBehaviour
             }
         }
 
-       float bodyToFeetLerp = (numberOfFalling / feet.Length)*this.bodyToFeetLerp;
+        float bodyToFeetLerp = (numberOfFalling / feet.Length) * this.bodyToFeetLerp;
         position.y = Mathf.Lerp(position.y, avg.y, bodyToFeetLerp);
 
         bodyTarget.position = position;
@@ -606,7 +603,6 @@ public class QuadrupedMovementController : MonoBehaviour
         Vector3 position = bodyTarget.position;
         position.y = AverageFeetPosition().y;
         bodyTarget.position = position;
-
     }
 
     void MoveModel()
@@ -614,7 +610,7 @@ public class QuadrupedMovementController : MonoBehaviour
         switch (quadState)
         {
             case QuadState.Upright:
-                // MoveModel_Force();
+                // MoveModel_Velocity();
 
                 MoveModel_Position();
                 MoveModel_Rotation_Forward();
@@ -625,12 +621,18 @@ public class QuadrupedMovementController : MonoBehaviour
 
                 // MoveModel_Force();
                 // MoveModel_Torque();
+
+                MoveModel_Gravity();
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
+    }
 
-
+    private void MoveModel_Gravity()
+    {
+        catRigidbody.AddForce(new Vector3(0, -Physics.gravity.magnitude * catRigidbody.mass * ragdollGravityMultiplier,
+            0));
     }
 
     private void MoveModel_Position()
@@ -670,23 +672,25 @@ public class QuadrupedMovementController : MonoBehaviour
             modelLerpSpeed_Rotation * Time.deltaTime);
     }
 
-    void MoveModel_Force()
+    void MoveModel_Velocity()
     {
-        Vector3 dir = bodyTarget.position - catRigidbody.position;
 
-        float dot =  Vector3.Dot(dir.normalized, catRigidbody.velocity.normalized);
-        dot = Mathf.Abs(dot);
-        
-        Vector3 force = dir.normalized * (modelMoveForce_Position * catRigidbody.mass);
-        print($"Move force: {force}");
-        Debug.DrawRay(catRigidbody.position,force,Color.blue);
-        catRigidbody.AddForce(force);
+        Vector3 dir = bodyTarget.position - catRigidbody.position;
+        // print(dir);
+
+        // float dot = Vector3.Dot(dir.normalized, catRigidbody.velocity.normalized);
+        // dot = Mathf.Abs(dot);
+
+        Vector3 velocity = dir.normalized * (Mathf.Min(dir.magnitude,modelMoveMaxDist_Position) * modelMoveVelocityPerUnit_Position);
+        Debug.DrawRay(catRigidbody.position, velocity, Color.blue);
+        catRigidbody.velocity=velocity;
+        print($"Move velocity: {velocity}, {velocity.magnitude}  Compared to {catRigidbody.velocity.magnitude}");
     }
 
     void MoveModel_Torque()
     {
         Vector3 dif = bodyTarget.eulerAngles - catRigidbody.transform.eulerAngles;
-        catRigidbody.AddTorque(dif*modelMoveTorgue_Rotation);
+        catRigidbody.AddTorque(dif * modelMoveTorgue_Rotation);
     }
 
     //********************JUMP
@@ -696,7 +700,8 @@ public class QuadrupedMovementController : MonoBehaviour
         {
             case QuadState.Upright:
                 ChangeQuadState(QuadState.Ragdoll);
-                Vector3 baseVelocity = (new Vector3(inputDir.x*jumpForce_XZ.x, jumpForce_Y, inputDir.y*jumpForce_XZ.y));
+                Vector3 baseVelocity =
+                    (new Vector3(inputDir.x * jumpForce_XZ.x, jumpForce_Y, inputDir.y * jumpForce_XZ.y));
                 Vector3 velocity = baseVelocity;
                 Vector3 totalVelocity = new Vector3();
                 foreach (FootCastPair footCastPair in feet)
@@ -704,14 +709,15 @@ public class QuadrupedMovementController : MonoBehaviour
                     // Vector3 velocity = (new Vector3(inputDir.x, 1, inputDir.y)).normalized;
                     // velocity *= jumpForce_Y;
                     velocity = baseVelocity;
-                    velocity += new Vector3( Random.Range(-jumpForceRandom_XZ.x,jumpForceRandom_XZ.x) , 0,  Random.Range(-jumpForceRandom_XZ.y,jumpForceRandom_XZ.y));
+                    velocity += new Vector3(Random.Range(-jumpForceRandom_XZ.x, jumpForceRandom_XZ.x), 0,
+                        Random.Range(-jumpForceRandom_XZ.y, jumpForceRandom_XZ.y));
                     velocity = transform.rotation * velocity;
                     footCastPair.Foot.SetJump(velocity);
                     totalVelocity += footCastPair.Foot.Rb.velocity;
                 }
 
-                catRigidbody.velocity = totalVelocity / 8f;
-                
+                catRigidbody.velocity = totalVelocity / 5f;
+
                 break;
             case QuadState.Ragdoll:
                 ChangeQuadState(QuadState.Upright);
@@ -720,7 +726,5 @@ public class QuadrupedMovementController : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
-        
-        
     }
 }

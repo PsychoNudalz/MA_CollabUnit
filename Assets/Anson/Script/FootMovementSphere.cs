@@ -9,7 +9,7 @@ public class FootMovementSphere : MonoBehaviour
     enum FootState
     {
         Idle,
-        Flying,
+        Move,
         Falling,
         Free
     }
@@ -26,6 +26,11 @@ public class FootMovementSphere : MonoBehaviour
 
     [SerializeField]
     private float launchCollisionIgnoreTime = 0.5f;
+
+    [SerializeField]
+    private Transform feetParent;
+    [SerializeField]
+    private bool setToWorld = true;
 
 
     [Header("Gravity")]
@@ -50,7 +55,7 @@ public class FootMovementSphere : MonoBehaviour
     private LayerMask groundLayer;
 
     [SerializeField]
-    private float groundRadius = .5f;
+    private float groundRange = .5f;
 
     [SerializeField]
     private float groundCheckTime = 1f;
@@ -98,23 +103,31 @@ public class FootMovementSphere : MonoBehaviour
 
     private void Start()
     {
-        transform.position = anchorPoint.position;
 
+
+        transform.position = anchorPoint.position;
         collisionPoint = transform.position;
         worldPosition = transform.position;
         ChangeState(FootState.Idle);
         if (isDebug)
         {
-            ChangeState(FootState.Flying);
+            ChangeState(FootState.Move);
         }
 
-        transform.parent = null;
+        if (setToWorld)
+        {
+            if (!feetParent)
+            {
+                feetParent = transform;
+            }
+            feetParent.parent = null;
+        }
     }
 
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawSphere(collisionPoint, groundRadius);
+        Gizmos.DrawSphere(collisionPoint, groundRange);
     }
 
     // Update is called once per frame
@@ -142,7 +155,7 @@ public class FootMovementSphere : MonoBehaviour
                 }
 
                 break;
-            case FootState.Flying:
+            case FootState.Move:
                AnchorFeet();
 
                 break;
@@ -166,7 +179,7 @@ public class FootMovementSphere : MonoBehaviour
 
     private bool GroundCheck()
     {
-        return Physics.CheckSphere(collisionPoint, groundRadius, groundLayer);
+        return Physics.Raycast(collisionPoint,Vector3.down, groundRange, groundLayer);
     }
 
     private void FixedUpdate()
@@ -177,7 +190,7 @@ public class FootMovementSphere : MonoBehaviour
                 // rb.AddForce(new Vector3(0, -Physics.gravity.magnitude,0));
 
                 break;
-            case FootState.Flying:
+            case FootState.Move:
                 // if (Time.time - launchCollisionIgnoreTime_Set > 4 * launchCollisionIgnoreTime &&
                 //     Vector3.Distance(lastPosition,position)>0.01f)
                 // {
@@ -244,21 +257,22 @@ public class FootMovementSphere : MonoBehaviour
         gravityExtra_Vector = new Vector3(0, -gravityExtra * rb.mass, 0);
     }
 
-    public void Launch(Vector3 force)
+    public void Move_Launch(Vector3 force)
     {
-        if (footState is FootState.Idle or FootState.Falling)
+        if (footState is not FootState.Move)
+
         {
-            ChangeState(FootState.Flying);
+            ChangeState(FootState.Move);
             rb.AddForce(force * rb.mass);
             launchCollisionIgnoreTime_Set = Time.time;
         }
     }
 
-    public void SetVelocity(Vector3 velocity)
+    public void Move_SetVelocity(Vector3 velocity)
     {
-        if (footState is FootState.Idle or FootState.Falling)
+        if (footState is not FootState.Move)
         {
-            ChangeState(FootState.Flying);
+            ChangeState(FootState.Move);
             rb.velocity = velocity;
             launchCollisionIgnoreTime_Set = Time.time;
         }
@@ -277,12 +291,19 @@ public class FootMovementSphere : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         collisionPoint = collision.contacts[0].point;
-        if (footState == FootState.Flying)
+        if (footState == FootState.Move)
         {
             if (Time.time - launchCollisionIgnoreTime_Set > launchCollisionIgnoreTime)
             {
                 // Debug.Log($"{this} collided {collision.collider.name}");
-                SetFootIdle(collision);
+                if (GroundCheck())
+                {
+                    SetFootIdle(collision);
+                }
+                else
+                {
+                    SetFootFree(collision);
+                }
                 // ChangeState(FootState.Falling);
             }
         }
@@ -299,8 +320,12 @@ public class FootMovementSphere : MonoBehaviour
         worldPosition = position;
     }
 
-    public void SetFootFree()
+    public void SetFootFree(Collision collision = null)
     {
+        if (collision == null)
+        {
+            collisionPoint = transform.position;
+        }
         ChangeState(FootState.Free);
     }
 
@@ -313,7 +338,7 @@ public class FootMovementSphere : MonoBehaviour
                 rb.isKinematic = true;
                 // rb.useGravity = false;
                 break;
-            case FootState.Flying:
+            case FootState.Move:
                 rb.isKinematic = false;
                 // rb.useGravity = true;
                 break;
