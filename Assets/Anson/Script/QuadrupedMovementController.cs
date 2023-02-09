@@ -172,8 +172,9 @@ public class QuadrupedMovementController : MonoBehaviour
 
 
     [SerializeField]
-    [Tooltip("Per unit")]
     private float modelMoveTorgue_Rotation = 5f;
+    [SerializeField]
+    private float modelMoveTorgue_Rotation_Max = 10f;
 
     private float lastMoveTime = 0f;
 
@@ -226,7 +227,6 @@ public class QuadrupedMovementController : MonoBehaviour
 
     void Update()
     {
-        print($"Original velocity: {catRigidbody.velocity.magnitude}");
 
     }
 
@@ -246,11 +246,10 @@ public class QuadrupedMovementController : MonoBehaviour
 
     private void Update_Upright()
     {
-        UpdateBodyTargetToFloor();
+        // UpdateBodyTargetToFloor();
+        
         MoveCat();
 
-        // UpdateTransformPosition();
-        // UpdateTransformRotation();
         MoveModel();
     }
 
@@ -270,9 +269,6 @@ public class QuadrupedMovementController : MonoBehaviour
         UpdateBodyToFeet();
 
         MoveCat();
-
-        // UpdateTransformPosition();
-        // UpdateTransformRotation();
 
         MoveModel();
     }
@@ -492,71 +488,14 @@ public class QuadrupedMovementController : MonoBehaviour
     }
 
 
-    //****************CAT RAGDOLL
 
 
-    //****************CAT BODY UPDATE
-
-    void UpdateTransformPosition()
-    {
-        Vector3 average = AverageFeetPosition();
-        mainTransform.position =
-            Vector3.Lerp(mainTransform.position, average, transformLerpSpeed_Position * Time.deltaTime);
-    }
-
-    void UpdateTransformRotation()
-    {
-        // if (feet.Length < 4)
-        // {
-        //     Debug.LogError("Not enough legs to rotate");
-        //     return;
-        // }
-        //
-        // Vector3 avg1 = (feet[0].Position + feet[1].Position) / 2f;
-        // Vector3 avg2 = (feet[2].Position + feet[3].Position) / 2f;
-        // Vector3 dir = avg1 - avg2;
-        //
-        // dir.y = 0;
-        //
-        // transform.forward = dir.normalized;
-
-
-        //Probably dont need this step when the camera is implemented
-        if (inputDir.magnitude > 0)
-        {
-            Vector3 targetRotation =
-                Quaternion.AngleAxis(Vector3.SignedAngle(Vector3.forward, transform.forward, Vector3.up), Vector3.up) *
-                new Vector3(inputDir.x, 0, inputDir.y);
-
-            mainTransform.forward = Vector3.Lerp(mainTransform.forward, targetRotation,
-                transformLerpSpeed_Rotation * Time.deltaTime);
-        }
-    }
-
+    //****************CAT BODY MOVE
+    
     Vector3 AverageFeetPosition()
     {
         Vector3 avg = new Vector3();
         int i = 0;
-        // foreach (FootMovementSphere footMovementSphere in feet)
-        // {
-        //     if (footMovementSphere.IsIdle)
-        //     {
-        //         avg += footMovementSphere.position;
-        //         i++;
-        //     }
-        // }
-        //
-        // if (i > 0)
-        // {
-        //     avg /= i;
-        //     return avg;
-        //
-        // }
-        // else
-        // {
-        //     return body.position;
-        // }
-
         foreach (FootCastPair footCastPair in feet)
         {
             avg += footCastPair.Position;
@@ -565,7 +504,7 @@ public class QuadrupedMovementController : MonoBehaviour
         return avg / feet.Length;
     }
 
-    void UpdateBodyTargetToFloor()
+    void UpdateBodyTargetToFloor(bool useFlat = true)
     {
         Vector3 heightOffset = new Vector3(0, bodyHeight, 0);
 
@@ -596,6 +535,11 @@ public class QuadrupedMovementController : MonoBehaviour
         position.y = Mathf.Lerp(position.y, avg.y, bodyToFeetLerp);
 
         bodyTarget.position = position;
+
+        if (useFlat)
+        {
+            bodyTarget.up = Vector3.up;
+        }
     }
 
     void UpdateBodyToFeet()
@@ -610,10 +554,12 @@ public class QuadrupedMovementController : MonoBehaviour
         switch (quadState)
         {
             case QuadState.Upright:
-                // MoveModel_Velocity();
+                MoveModel_Velocity();
+                MoveModel_Torque();
 
-                MoveModel_Position();
-                MoveModel_Rotation_Forward();
+
+                // MoveModel_Position();
+                // MoveModel_Rotation_Forward();
                 break;
             case QuadState.Ragdoll:
                 // MoveModel_Position();
@@ -676,21 +622,30 @@ public class QuadrupedMovementController : MonoBehaviour
     {
 
         Vector3 dir = bodyTarget.position - catRigidbody.position;
-        // print(dir);
-
-        // float dot = Vector3.Dot(dir.normalized, catRigidbody.velocity.normalized);
-        // dot = Mathf.Abs(dot);
 
         Vector3 velocity = dir.normalized * (Mathf.Min(dir.magnitude,modelMoveMaxDist_Position) * modelMoveVelocityPerUnit_Position);
         Debug.DrawRay(catRigidbody.position, velocity, Color.blue);
         catRigidbody.velocity=velocity;
-        print($"Move velocity: {velocity}, {velocity.magnitude}  Compared to {catRigidbody.velocity.magnitude}");
+        // print($"Move velocity: {velocity}, {velocity.magnitude}  Compared to {catRigidbody.velocity.magnitude}");
     }
 
     void MoveModel_Torque()
     {
-        Vector3 dif = bodyTarget.eulerAngles - catRigidbody.transform.eulerAngles;
-        catRigidbody.AddTorque(dif * modelMoveTorgue_Rotation);
+        //Testing 
+        
+        bodyTarget.up = Vector3.up;
+        
+        //
+        
+        
+         Quaternion dif = bodyTarget.rotation * Quaternion.Inverse(catRigidbody.rotation) ;
+        
+        
+        // Vector3 torque = -bodyTarget.localEulerAngles;
+        Vector3 torque = -dif.eulerAngles;
+        torque = Vector3.ClampMagnitude(torque * modelMoveTorgue_Rotation, modelMoveTorgue_Rotation_Max);
+        print($"{dif.eulerAngles}, {torque}");
+        catRigidbody.AddTorque(torque,ForceMode.VelocityChange);
     }
 
     //********************JUMP

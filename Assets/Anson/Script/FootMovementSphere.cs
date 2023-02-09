@@ -25,7 +25,7 @@ public class FootMovementSphere : MonoBehaviour
     private Rigidbody rb;
 
     [SerializeField]
-    private float launchCollisionIgnoreTime = 0.5f;
+    private float launchCollisionIgnoreTime = 0.05f;
 
     [SerializeField]
     private Transform feetParent;
@@ -37,17 +37,19 @@ public class FootMovementSphere : MonoBehaviour
     [SerializeField]
     private float gravityMultiplier_Move = 1f;
     [SerializeField]
-    private float gravityMultiplier_Fall = 2f;
+    private float gravityMultiplier_Fall = 5f;
 
     private float gravityExtra = 0;
     private Vector3 gravityExtra_Vector;
 
     [Header("Anchor")]
     [SerializeField]
+    private bool useAnchor = true;
+    [SerializeField]
     private Transform anchorPoint;
 
     [SerializeField]
-    private float footAnchorRange = 10f;
+    private float footAnchorRange = 3;
 
 
     [Header("GroundCheck")]
@@ -58,7 +60,7 @@ public class FootMovementSphere : MonoBehaviour
     private float groundRange = .5f;
 
     [SerializeField]
-    private float groundCheckTime = 1f;
+    private float groundCheckTime = .2f;
 
     private float groundCheckTime_Now = -1;
     private Vector3 collisionPoint = new Vector3();
@@ -138,7 +140,7 @@ public class FootMovementSphere : MonoBehaviour
             case FootState.Idle:
                 if (Vector3.Distance(worldPosition, transform.position) > 0.001f)
                 {
-                    transform.position = worldPosition;
+                    // transform.position = worldPosition;
                 }
 
                 if (groundCheckTime_Now > 0)
@@ -169,19 +171,6 @@ public class FootMovementSphere : MonoBehaviour
                 break;
         }
     }
-
-    private void AnchorFeet()
-    {
-        transform.position =
-            Vector3.ClampMagnitude(transform.position - anchorPoint.position, footAnchorRange) +
-            anchorPoint.position;
-    }
-
-    private bool GroundCheck()
-    {
-        return Physics.Raycast(collisionPoint,Vector3.down, groundRange, groundLayer);
-    }
-
     private void FixedUpdate()
     {
         switch (footState)
@@ -230,6 +219,24 @@ public class FootMovementSphere : MonoBehaviour
                 break;
         }
     }
+
+    private void AnchorFeet()
+    {
+        if (!useAnchor)
+        {
+            return;
+        }
+        transform.position =
+            Vector3.ClampMagnitude(transform.position - anchorPoint.position, footAnchorRange) +
+            anchorPoint.position;
+    }
+
+    private bool GroundCheck()
+    {
+        return Physics.Raycast(collisionPoint,Vector3.down, groundRange, groundLayer);
+    }
+
+    
 
     /// <summary>
     /// initialize foot
@@ -305,6 +312,15 @@ public class FootMovementSphere : MonoBehaviour
                     SetFootFree(collision);
                 }
                 // ChangeState(FootState.Falling);
+            }
+        }
+
+        if (footState == FootState.Falling)
+        {
+            if (GroundCheck())
+            {
+                SetFootIdle(collision);
+
             }
         }
     }
