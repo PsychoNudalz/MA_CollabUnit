@@ -112,6 +112,14 @@ public class QuadrupedMovementController : MonoBehaviour
 
     private Vector2 inputDir;
 
+
+    [Header("Ground Check")]
+    [SerializeField]
+    private float groundCheckTime = 1f;
+    
+    private float groundCheckTime_Now = 1f;
+    private bool isGrounded = false;
+
     [Space(10)]
     [Header("Force")]
     [SerializeField]
@@ -531,7 +539,18 @@ public class QuadrupedMovementController : MonoBehaviour
         {
             case QuadState.Upright:
                 // MoveModel_Velocity();
-                MoveModel_Velocity_Y();
+
+                if (GroundCheck())
+                {
+                    MoveModel_Velocity_Y();
+
+                }
+                else
+                {
+                    MoveModel_Gravity();
+
+                }
+
                 
                 MoveModel_Accel();
                 MoveModel_Torque();
@@ -542,6 +561,7 @@ public class QuadrupedMovementController : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
+    
     }
 
     private void MoveModel_Gravity()
@@ -582,12 +602,12 @@ public class QuadrupedMovementController : MonoBehaviour
     }
     void MoveModel_Accel()
     {
-        float yDif = GetTargetBodyPosition().y - catRigidbody.position.y;
+        // float yDif = GetTargetBodyPosition().y - catRigidbody.position.y;
 
         Vector3 dir = catRigidbody.rotation * new Vector3(inputDir.x, 0, inputDir.y);
         Vector3 velocity = dir.normalized * moveAccel;
 
-        velocity += new Vector3(0, yDif*2f, 0);
+        // velocity += new Vector3(0, yDif*2f, 0);
 
         Debug.DrawRay(catRigidbody.position, velocity, Color.blue);
         catRigidbody.AddForce(velocity,ForceMode.Acceleration); 
@@ -647,6 +667,19 @@ public class QuadrupedMovementController : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
+    }
+
+    bool GroundCheck()
+    {
+        foreach (FootCastPair footCastPair in feet)
+        {
+            if (footCastPair.Foot.IsIdle)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
     
     

@@ -11,7 +11,7 @@ public class FootMovementSphere : MonoBehaviour
         Idle,
         Move,
         Falling,
-        Free
+        Free //ONLY FOR RAGDOLL
     }
 
     [SerializeField]
@@ -161,7 +161,7 @@ public class FootMovementSphere : MonoBehaviour
                 break;
             case FootState.Move:
                 AnchorFeet();
-                if (Time.time - launchCollisionIgnoreTime_Set > launchCollisionIgnoreTime*10f)
+                if (Time.time - launchCollisionIgnoreTime_Set > launchCollisionIgnoreTime * 10f)
                 {
                     if (groundCheckTime_Now > 0)
                     {
@@ -179,6 +179,19 @@ public class FootMovementSphere : MonoBehaviour
 
                 break;
             case FootState.Falling:
+                if (groundCheckTime_Now > 0)
+                {
+                    groundCheckTime_Now -= Time.deltaTime;
+                }
+                else
+                {
+                    groundCheckTime_Now = groundCheckTime;
+                    if (GroundCheck())
+                    {
+                        ChangeState(FootState.Idle);
+                    }
+                }
+
                 AnchorFeet();
 
                 break;
@@ -233,7 +246,15 @@ public class FootMovementSphere : MonoBehaviour
 
     private bool GroundCheck()
     {
-        return Physics.Raycast(collisionPoint, Vector3.down, groundRange, groundLayer);
+        Debug.DrawRay(transform.position, Vector3.down * groundRange, Color.magenta, 2f);
+
+        return Physics.Raycast(transform.position, Vector3.down, groundRange, groundLayer);
+    }
+
+    private bool GroundCheck(Vector3 point)
+    {
+        Debug.DrawRay(point, Vector3.down * groundRange, Color.cyan, 2f);
+        return Physics.Raycast(point, Vector3.down, groundRange, groundLayer);
     }
 
 
@@ -297,19 +318,18 @@ public class FootMovementSphere : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        collisionPoint = collision.contacts[0].point;
         if (footState == FootState.Move)
         {
             if (Time.time - launchCollisionIgnoreTime_Set > launchCollisionIgnoreTime)
             {
                 // Debug.Log($"{this} collided {collision.collider.name}");
-                if (GroundCheck())
+                if (GroundCheck(transform.position))
                 {
                     SetFootIdle(collision);
                 }
                 else
                 {
-                    SetFootFree(collision);
+                    SetFootFall(collision);
                 }
                 // ChangeState(FootState.Falling);
             }
@@ -317,9 +337,13 @@ public class FootMovementSphere : MonoBehaviour
 
         if (footState == FootState.Falling)
         {
-            if (GroundCheck())
+            if (GroundCheck(transform.position))
             {
                 SetFootIdle(collision);
+            }
+            else
+            {
+                SetFootFall(collision);
             }
         }
     }
@@ -333,6 +357,16 @@ public class FootMovementSphere : MonoBehaviour
 
         ChangeState(FootState.Idle);
         worldPosition = position;
+    }
+
+    public void SetFootFall(Collision collision = null)
+    {
+        if (collision == null)
+        {
+            collisionPoint = transform.position;
+        }
+
+        ChangeState(FootState.Falling);
     }
 
     public void SetFootFree(Collision collision = null)
@@ -351,19 +385,20 @@ public class FootMovementSphere : MonoBehaviour
         switch (fs)
         {
             case FootState.Idle:
-                rb.isKinematic = true;
+                rb.constraints = RigidbodyConstraints.FreezePosition;
                 // rb.useGravity = false;
                 break;
             case FootState.Move:
-                rb.isKinematic = false;
+                rb.constraints = RigidbodyConstraints.None;
+
                 // rb.useGravity = true;
                 break;
 
             case FootState.Falling:
-                rb.isKinematic = false;
+                rb.constraints = RigidbodyConstraints.None;
                 break;
             case FootState.Free:
-                rb.isKinematic = false;
+                rb.constraints = RigidbodyConstraints.None;
 
                 break;
                 ;
