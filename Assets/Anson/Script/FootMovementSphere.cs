@@ -29,6 +29,7 @@ public class FootMovementSphere : MonoBehaviour
 
     [SerializeField]
     private Transform feetParent;
+
     [SerializeField]
     private bool setToWorld = true;
 
@@ -36,6 +37,7 @@ public class FootMovementSphere : MonoBehaviour
     [Header("Gravity")]
     [SerializeField]
     private float gravityMultiplier_Move = 1f;
+
     [SerializeField]
     private float gravityMultiplier_Fall = 5f;
 
@@ -45,6 +47,7 @@ public class FootMovementSphere : MonoBehaviour
     [Header("Anchor")]
     [SerializeField]
     private bool useAnchor = true;
+
     [SerializeField]
     private Transform anchorPoint;
 
@@ -105,8 +108,6 @@ public class FootMovementSphere : MonoBehaviour
 
     private void Start()
     {
-
-
         transform.position = anchorPoint.position;
         collisionPoint = transform.position;
         worldPosition = transform.position;
@@ -122,6 +123,7 @@ public class FootMovementSphere : MonoBehaviour
             {
                 feetParent = transform;
             }
+
             feetParent.parent = null;
         }
     }
@@ -158,19 +160,35 @@ public class FootMovementSphere : MonoBehaviour
 
                 break;
             case FootState.Move:
-               AnchorFeet();
+                AnchorFeet();
+                if (Time.time - launchCollisionIgnoreTime_Set > launchCollisionIgnoreTime*10f)
+                {
+                    if (groundCheckTime_Now > 0)
+                    {
+                        groundCheckTime_Now -= Time.deltaTime;
+                    }
+                    else
+                    {
+                        groundCheckTime_Now = groundCheckTime;
+                        if (!GroundCheck())
+                        {
+                            ChangeState(FootState.Falling);
+                        }
+                    }
+                }
 
                 break;
             case FootState.Falling:
                 AnchorFeet();
 
                 break;
-            case  FootState.Free:
+            case FootState.Free:
                 AnchorFeet();
 
                 break;
         }
     }
+
     private void FixedUpdate()
     {
         switch (footState)
@@ -180,16 +198,6 @@ public class FootMovementSphere : MonoBehaviour
 
                 break;
             case FootState.Move:
-                // if (Time.time - launchCollisionIgnoreTime_Set > 4 * launchCollisionIgnoreTime &&
-                //     Vector3.Distance(lastPosition,position)>0.01f)
-                // {
-                //     SetFootIdle();
-                // }
-                // else
-                // {
-                //     lastPosition = position;
-                // }
-
                 if (Vector3.Distance(transform.position, anchorPoint.position) > footAnchorRange)
                 {
                     // ChangeState(FootState.OutOfRange);
@@ -200,21 +208,12 @@ public class FootMovementSphere : MonoBehaviour
                 break;
 
             case FootState.Falling:
-                // if (Time.time - launchCollisionIgnoreTime_Set > 4 * launchCollisionIgnoreTime &&
-                //     Vector3.Distance(lastPosition,position)>0.01f)
-                // {
-                //     SetFootIdle();
-                // }
-                // else
-                // {
-                //     lastPosition = position;
-                // }
+
                 rb.AddForce(new Vector3(0, -Physics.gravity.magnitude * rb.mass, 0));
-                // rb.AddForce(gravityExtra_Vector);
                 break;
 
             case FootState.Free:
-                rb.AddForce(new Vector3(0, -Physics.gravity.magnitude * rb.mass*gravityMultiplier_Fall, 0));
+                rb.AddForce(new Vector3(0, -Physics.gravity.magnitude * rb.mass * gravityMultiplier_Fall, 0));
 
                 break;
         }
@@ -226,6 +225,7 @@ public class FootMovementSphere : MonoBehaviour
         {
             return;
         }
+
         transform.position =
             Vector3.ClampMagnitude(transform.position - anchorPoint.position, footAnchorRange) +
             anchorPoint.position;
@@ -233,10 +233,9 @@ public class FootMovementSphere : MonoBehaviour
 
     private bool GroundCheck()
     {
-        return Physics.Raycast(collisionPoint,Vector3.down, groundRange, groundLayer);
+        return Physics.Raycast(collisionPoint, Vector3.down, groundRange, groundLayer);
     }
 
-    
 
     /// <summary>
     /// initialize foot
@@ -320,7 +319,6 @@ public class FootMovementSphere : MonoBehaviour
             if (GroundCheck())
             {
                 SetFootIdle(collision);
-
             }
         }
     }
@@ -342,6 +340,7 @@ public class FootMovementSphere : MonoBehaviour
         {
             collisionPoint = transform.position;
         }
+
         ChangeState(FootState.Free);
     }
 

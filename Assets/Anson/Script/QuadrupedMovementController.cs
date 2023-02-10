@@ -86,10 +86,6 @@ public class QuadrupedMovementController : MonoBehaviour
 
     [Header("Body")]
     [SerializeField]
-    Transform bodyTarget;
-
-
-    [SerializeField]
     private float bodyHeight = 2f;
 
     [SerializeField]
@@ -104,6 +100,8 @@ public class QuadrupedMovementController : MonoBehaviour
     [SerializeField]
     private Vector2 feetMoveAngle = new Vector2(30, 15);
 
+    [SerializeField]
+    private float footMoveTime = .1f;
 
     [SerializeField]
     private float gravityMultiplier = 1f;
@@ -111,11 +109,30 @@ public class QuadrupedMovementController : MonoBehaviour
     [SerializeField]
     private float timeBetweenFoot = .5f;
 
-    [SerializeField]
-    private float footMoveTime = .1f;
 
     private Vector2 inputDir;
 
+    [Space(10)]
+    [Header("Force")]
+    [SerializeField]
+    private Rigidbody catRigidbody;
+
+
+    [SerializeField]
+    private float moveVelocity = 20f;
+
+
+    [SerializeField]
+    private float moveTorque = 5f;
+
+    [SerializeField]
+    private float moveTorqueXZ = .2f;
+
+
+    private float lastMoveTime = 0f;
+
+
+    [Header("Jump")]
     [SerializeField]
     private float jumpForce_Y = 100f;
 
@@ -128,63 +145,16 @@ public class QuadrupedMovementController : MonoBehaviour
     [Space(10)]
     [Header("Ragdoll")]
     [SerializeField]
-    private ConfigurableJoint[] joints;
-
-    [SerializeField]
     private Rigidbody[] rigidbodies;
 
     [SerializeField]
     private float ragdollGravityMultiplier = 4f;
 
-    [Space(10)]
-    [Header("Main Transform")]
-    [SerializeField]
-    private Transform mainTransform;
-
-    [Header("Lerp")]
-    [SerializeField]
-    private float transformLerpSpeed_Position = 5f;
-
-    [SerializeField]
-    private float transformLerpSpeed_Rotation = 5f;
-
-
-    [Space(10)]
-    [Header("Cat Model")]
-    [SerializeField]
-    private GameObject catModel;
-
-    [SerializeField]
-    private float modelLerpSpeed_Position;
-
-    [SerializeField]
-    private float modelLerpSpeed_Rotation;
-
-    [Header("Force")]
-    [SerializeField]
-    private Rigidbody catRigidbody;
-
-    [SerializeField]
-    private float modelMoveMaxDist_Position = 100f;
-    [SerializeField]
-
-    private float modelMoveVelocityPerUnit_Position = 20f;
-
-
-    [SerializeField]
-    private float modelMoveTorgue_Rotation = 5f;
-    [SerializeField]
-    private float modelMoveTorgue_Rotation_Max = 10f;
-
-    private float lastMoveTime = 0f;
+    private Vector3 lastInputDir = new Vector3();
 
 
     private void Awake()
     {
-        if (!mainTransform)
-        {
-            mainTransform = transform;
-        }
     }
 
     [ContextMenu("Initialise Feet")]
@@ -200,10 +170,9 @@ public class QuadrupedMovementController : MonoBehaviour
     [ContextMenu("Get RB and Joins from Model")]
     public void GetRBFromModel()
     {
-        if (catModel)
+        if (catRigidbody.transform)
         {
-            rigidbodies = catModel.GetComponentsInChildren<Rigidbody>();
-            joints = catModel.GetComponentsInChildren<ConfigurableJoint>();
+            rigidbodies = catRigidbody.transform.GetComponentsInChildren<Rigidbody>();
         }
     }
 
@@ -227,7 +196,6 @@ public class QuadrupedMovementController : MonoBehaviour
 
     void Update()
     {
-
     }
 
     private void FixedUpdate()
@@ -239,38 +207,30 @@ public class QuadrupedMovementController : MonoBehaviour
                 break;
             case QuadState.Ragdoll:
                 Update_Ragdoll();
-    
+
                 break;
         }
+
+        lastInputDir = inputDir;
     }
 
     private void Update_Upright()
     {
-        // UpdateBodyTargetToFloor();
-        
-        MoveCat();
+        MoveBody();
 
-        MoveModel();
+
+        MoveCatFeet();
     }
 
-    private void MoveCat()
-    {
-        if (inputDir.magnitude > 0f)
-        {
-            if (Time.time - lastMoveTime > timeBetweenFoot)
-            {
-                MoveCatFeet();
-            }
-        }
-    }
 
     private void Update_Ragdoll()
     {
         UpdateBodyToFeet();
 
-        MoveCat();
+        MoveCatFeet();
 
-        MoveModel();
+
+        MoveBody();
     }
 
 
@@ -305,10 +265,8 @@ public class QuadrupedMovementController : MonoBehaviour
                     rb.useGravity = false;
                 }
 
-                mainTransform.rotation = Quaternion.Euler(0, mainTransform.eulerAngles.y, 0);
-
-                // catModel.transform.localPosition = new Vector3();
-                // catModel.transform.rotation = mainTransform.rotation;
+                // catRigidbody.transform.transform.localPosition = new Vector3();
+                // catRigidbody.transform.transform.rotation = mainTransform.rotation;
 
                 foreach (FootCastPair footCastPair in feet)
                 {
@@ -335,70 +293,76 @@ public class QuadrupedMovementController : MonoBehaviour
     //****************CAT FEET MOVEMENT
     private void MoveCatFeet()
     {
-        lastMoveTime = Time.time;
-        int oddIndex = footIndex % 2;
-
-        switch (movementPattern)
+        if (inputDir.magnitude > 0f|| Mathf.Abs(inputDir.magnitude - lastInputDir.magnitude)> 0.1f)
         {
-            case MovementPattern.OneAtATime:
-                LaunchFoot();
-                footIndex = (footIndex + 1) % feet.Length;
-                break;
-            case MovementPattern.EveryOtherOne:
-                for (int i = oddIndex; i < feet.Length; i += 2)
+            if (Time.time - lastMoveTime > timeBetweenFoot)
+            {
+                lastMoveTime = Time.time;
+                int oddIndex = footIndex % 2;
+
+                switch (movementPattern)
                 {
-                    footIndex = i;
-                    LaunchFoot();
+                    case MovementPattern.OneAtATime:
+                        LaunchFoot();
+                        footIndex = (footIndex + 1) % feet.Length;
+                        break;
+                    case MovementPattern.EveryOtherOne:
+                        for (int i = oddIndex; i < feet.Length; i += 2)
+                        {
+                            footIndex = i;
+                            LaunchFoot();
+                        }
+
+                        footIndex = (footIndex + 1) % feet.Length;
+
+                        break;
+                    case MovementPattern.TwoInARow:
+                        for (int i = 0; i < feet.Length; i += 4)
+                        {
+                            LaunchFoot((footIndex + i) % feet.Length);
+                            LaunchFoot((footIndex + i + 1) % feet.Length);
+                        }
+
+                        footIndex = (footIndex + 2) % feet.Length;
+
+                        break;
+
+
+                    case MovementPattern.OppositeCorners:
+                        MoveCatFeet_OppositeCorners(oddIndex);
+                        footIndex = (footIndex + 1) % feet.Length;
+
+                        break;
+                    case MovementPattern.FrontThenBack:
+                        if (oddIndex == 0)
+                        {
+                            foreach (FootCastPair footCastPair in frontFeet)
+                            {
+                                LaunchFoot(footCastPair);
+                            }
+                        }
+                        else
+                        {
+                            foreach (FootCastPair footCastPair in backFeet)
+                            {
+                                LaunchFoot(footCastPair);
+                            }
+                        }
+
+                        footIndex = (footIndex + 1) % feet.Length;
+
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
                 }
-
-                footIndex = (footIndex + 1) % feet.Length;
-
-                break;
-            case MovementPattern.TwoInARow:
-                for (int i = 0; i < feet.Length; i += 4)
-                {
-                    LaunchFoot((footIndex + i) % feet.Length);
-                    LaunchFoot((footIndex + i + 1) % feet.Length);
-                }
-
-                footIndex = (footIndex + 2) % feet.Length;
-
-                break;
-
-
-            case MovementPattern.OppositeCorners:
-                MoveCatFeet_OppositeCorners(oddIndex);
-                footIndex = (footIndex + 1) % feet.Length;
-
-                break;
-            case MovementPattern.FrontThenBack:
-                if (oddIndex == 0)
-                {
-                    foreach (FootCastPair footCastPair in frontFeet)
-                    {
-                        LaunchFoot(footCastPair);
-                    }
-                }
-                else
-                {
-                    foreach (FootCastPair footCastPair in backFeet)
-                    {
-                        LaunchFoot(footCastPair);
-                    }
-                }
-
-                footIndex = (footIndex + 1) % feet.Length;
-
-                break;
-            default:
-                throw new ArgumentOutOfRangeException();
+            }
         }
     }
 
     private void MoveCatFeet_OppositeCorners(int oddIndex)
     {
         LaunchFoot(frontFeet[oddIndex]);
-        LaunchFoot(backFeet[1 - oddIndex], true);
+        LaunchFoot(backFeet[1 - oddIndex]);
     }
 
     void LaunchFoot(int index = -1, bool flipYAngles = false)
@@ -478,7 +442,7 @@ public class QuadrupedMovementController : MonoBehaviour
 
         if (Physics.Raycast(legCastPoint.position, dir, out hit, castDistance, castLayer))
         {
-            // Debug.DrawLine(legCastPoint.position, hit.point, Color.blue, 5f);
+            Debug.DrawLine(legCastPoint.position, hit.point, Color.blue, 2f);
             return hit.point;
         }
         else
@@ -488,10 +452,8 @@ public class QuadrupedMovementController : MonoBehaviour
     }
 
 
-
-
     //****************CAT BODY MOVE
-    
+
     Vector3 AverageFeetPosition()
     {
         Vector3 avg = new Vector3();
@@ -504,12 +466,31 @@ public class QuadrupedMovementController : MonoBehaviour
         return avg / feet.Length;
     }
 
-    void UpdateBodyTargetToFloor(bool useFlat = true)
+    Vector3 TargetRotation()
+    {
+        Vector3 rotation = new Vector3();
+
+        Vector3 forward = ((frontFeet[0].Position - backFeet[0].Position) +
+                     (frontFeet[1].Position - backFeet[1].Position)) / 2f;
+        Vector3 right = ((frontFeet[1].Position - frontFeet[0].Position) +
+                     (backFeet[1].Position - backFeet[0].Position)) / 2f;
+        rotation.x = Vector3.SignedAngle(catRigidbody.transform.forward, forward, Vector3.right);
+        rotation.z = Vector3.SignedAngle(catRigidbody.transform.right, right, Vector3.forward);
+
+        rotation.y = Vector3.SignedAngle(catRigidbody.transform.forward,  catRigidbody.rotation*new Vector3(inputDir.x, 0, inputDir.y),
+            Vector3.up);
+
+
+        print($"rotation: {rotation}");
+        return rotation;
+    }
+
+    Vector3 GetTargetBodyPosition()
     {
         Vector3 heightOffset = new Vector3(0, bodyHeight, 0);
 
         Vector3 avg = AverageFeetPosition();
-        var position = avg;
+        Vector3 position = catRigidbody.position;
         if (Physics.Raycast(avg + heightOffset, -Vector3.up, out RaycastHit hit,
                 bodyHeight * 2f, castLayer))
         {
@@ -522,52 +503,43 @@ public class QuadrupedMovementController : MonoBehaviour
 
         position.y += bodyHeight;
 
-        float numberOfFalling = 0;
-        foreach (FootCastPair foot in feet)
-        {
-            if (foot.Foot.IsFalling)
-            {
-                numberOfFalling++;
-            }
-        }
-
-        float bodyToFeetLerp = (numberOfFalling / feet.Length) * this.bodyToFeetLerp;
-        position.y = Mathf.Lerp(position.y, avg.y, bodyToFeetLerp);
-
-        bodyTarget.position = position;
-
-        if (useFlat)
-        {
-            bodyTarget.up = Vector3.up;
-        }
+        // float numberOfFalling = 0;
+        // foreach (FootCastPair foot in feet)
+        // {
+        //     if (foot.Foot.IsFalling)
+        //     {
+        //         numberOfFalling++;
+        //     }
+        // }
+        //
+        // float bodyToFeetLerp = (numberOfFalling / feet.Length) * this.bodyToFeetLerp;
+        // position.y = Mathf.Lerp(position.y, avg.y, bodyToFeetLerp);
+        return position;
     }
 
-    void UpdateBodyToFeet()
+    // void UpdateBodyTargetToDir()
+    // {
+    //     Vector3 mainTransformPosition = mainTransform.position;
+    //     bodyTarget.position = new Vector3(mainTransformPosition.x, bodyTarget.position.y, mainTransformPosition.z) +
+    //                           new Vector3(inputDir.x, 0, inputDir.y) * targetMoveAmount;
+    // }
+
+    Vector3 UpdateBodyToFeet()
     {
-        Vector3 position = bodyTarget.position;
+        Vector3 position = catRigidbody.position;
         position.y = AverageFeetPosition().y;
-        bodyTarget.position = position;
+        return position;
     }
 
-    void MoveModel()
+    void MoveBody()
     {
         switch (quadState)
         {
             case QuadState.Upright:
                 MoveModel_Velocity();
                 MoveModel_Torque();
-
-
-                // MoveModel_Position();
-                // MoveModel_Rotation_Forward();
                 break;
             case QuadState.Ragdoll:
-                // MoveModel_Position();
-                // MoveModel_Rotation_Forward();
-
-                // MoveModel_Force();
-                // MoveModel_Torque();
-
                 MoveModel_Gravity();
                 break;
             default:
@@ -581,71 +553,55 @@ public class QuadrupedMovementController : MonoBehaviour
             0));
     }
 
-    private void MoveModel_Position()
-    {
-        catModel.transform.position =
-            Vector3.Lerp(catModel.transform.position, bodyTarget.position, modelLerpSpeed_Position * Time.deltaTime);
-    }
-
-    private void MoveModel_Rotation()
-    {
-        Vector3 avg1 = (frontFeet[0].Position + frontFeet[1].Position) / 2f;
-        Vector3 avg2 = (backFeet[0].Position + backFeet[1].Position) / 2f;
-        Vector3 forwardDir = avg1 - avg2;
-
-        avg1 = (frontFeet[0].Position + backFeet[0].Position) / 2f;
-        avg2 = (frontFeet[1].Position + backFeet[1].Position) / 2f;
-        Vector3 sideDir = avg2 - avg1;
-
-        Transform ct = catModel.transform;
-        float sideAngle = Vector3.SignedAngle(ct.right, sideDir, mainTransform.forward);
-        float forwardAngle = Vector3.SignedAngle(ct.forward, forwardDir, mainTransform.right);
-
-        Quaternion targetRotation = Quaternion.Euler(forwardAngle, 0f, sideAngle) * catModel.transform.rotation;
-
-        catModel.transform.rotation = Quaternion.Lerp(catModel.transform.rotation, targetRotation,
-            modelLerpSpeed_Rotation * Time.deltaTime);
-    }
-
-    private void MoveModel_Rotation_Forward()
-    {
-        Vector3 avg1 = (frontFeet[0].Position + frontFeet[1].Position) / 2f;
-        Vector3 avg2 = (backFeet[0].Position + backFeet[1].Position) / 2f;
-        Vector3 dir = avg1 - avg2;
-
-
-        catModel.transform.forward = Vector3.Lerp(catModel.transform.forward, dir.normalized,
-            modelLerpSpeed_Rotation * Time.deltaTime);
-    }
-
     void MoveModel_Velocity()
     {
+        float yDif = GetTargetBodyPosition().y - catRigidbody.position.y;
 
-        Vector3 dir = bodyTarget.position - catRigidbody.position;
+        Vector3 dir = catRigidbody.rotation * new Vector3(inputDir.x, 0, inputDir.y);
+        Vector3 velocity = dir.normalized * moveVelocity;
 
-        Vector3 velocity = dir.normalized * (Mathf.Min(dir.magnitude,modelMoveMaxDist_Position) * modelMoveVelocityPerUnit_Position);
+        velocity += new Vector3(0, yDif*2f, 0);
+
         Debug.DrawRay(catRigidbody.position, velocity, Color.blue);
-        catRigidbody.velocity=velocity;
+        catRigidbody.velocity = velocity;
         // print($"Move velocity: {velocity}, {velocity.magnitude}  Compared to {catRigidbody.velocity.magnitude}");
     }
 
     void MoveModel_Torque()
     {
         //Testing 
-        
-        bodyTarget.up = Vector3.up;
-        
+
+        // bodyTarget.up = Vector3.up;
+        // bodyTarget.rotation = Quaternion.identity;
+
         //
-        
-        
-         Quaternion dif = bodyTarget.rotation * Quaternion.Inverse(catRigidbody.rotation) ;
-        
-        
-        // Vector3 torque = -bodyTarget.localEulerAngles;
-        Vector3 torque = -dif.eulerAngles;
-        torque = Vector3.ClampMagnitude(torque * modelMoveTorgue_Rotation, modelMoveTorgue_Rotation_Max);
-        print($"{dif.eulerAngles}, {torque}");
-        catRigidbody.AddTorque(torque,ForceMode.VelocityChange);
+
+
+        // Quaternion dif = bodyTarget.rotation * Quaternion.Inverse(catRigidbody.rotation) ;
+        // Vector3 torque = -dif.eulerAngles;
+
+
+        Vector3 targetRotation = TargetRotation();
+
+        print($"Cat rotation: {targetRotation}");
+
+        // torque = Vector3.ClampMagnitude(torque * moveTorque, moveTorque_Max);
+        // print($"{dif.eulerAngles}, {torque}");
+        catRigidbody.angularVelocity = new Vector3();
+        catRigidbody.AddTorque(new Vector3(targetRotation.x *moveTorqueXZ, targetRotation.y *moveTorque, targetRotation.z *moveTorqueXZ),ForceMode.Acceleration);
+        // catRigidbody.AddTorque(new Vector3(0, targetRotation.y *moveTorque, 0),ForceMode.Acceleration);
+    }
+
+    float ClampRotation(float r)
+    {
+        float temp = r;
+        r = r % 360;
+        if (r > 180f)
+        {
+            r = r - 360;
+        }
+
+        return r;
     }
 
     //********************JUMP
