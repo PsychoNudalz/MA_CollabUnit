@@ -280,6 +280,7 @@ public class FootMovementSphere : MonoBehaviour
         {
             ChangeState(FootState.Move);
             rb.velocity = velocity;
+            // rb.angularVelocity = new Vector3();
             launchCollisionIgnoreTime_Set = Time.time;
         }
     }

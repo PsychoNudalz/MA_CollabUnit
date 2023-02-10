@@ -54,6 +54,11 @@ public class CatMovementController : MonoBehaviour
         quadrupedMovementController.Jump();
     }
 
+    public void OnHardReset()
+    {
+        quadrupedMovementController.HardReset();
+    }
+
     private void MoveCat()
     {
         Vector3 cameraForward = cameraTransform.forward;

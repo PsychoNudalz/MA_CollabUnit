@@ -119,14 +119,13 @@ public class QuadrupedMovementController : MonoBehaviour
 
 
     [SerializeField]
-    private float moveVelocity = 20f;
+    private float moveVelocity = 10f;
+    [SerializeField]
+    private float moveAccel = 20f;
 
 
     [SerializeField]
-    private float moveTorque = 5f;
-
-    [SerializeField]
-    private float moveTorqueXZ = .2f;
+    private Vector3 moveTorque = new Vector3(.4f, 5f, .2f);
 
 
     private float lastMoveTime = 0f;
@@ -225,7 +224,7 @@ public class QuadrupedMovementController : MonoBehaviour
 
     private void Update_Ragdoll()
     {
-        UpdateBodyToFeet();
+        // UpdateBodyToFeet();
 
         MoveCatFeet();
 
@@ -259,11 +258,6 @@ public class QuadrupedMovementController : MonoBehaviour
         switch (qs)
         {
             case QuadState.Upright:
-                foreach (Rigidbody rb in rigidbodies)
-                {
-                    rb.isKinematic = true;
-                    rb.useGravity = false;
-                }
 
                 // catRigidbody.transform.transform.localPosition = new Vector3();
                 // catRigidbody.transform.transform.rotation = mainTransform.rotation;
@@ -481,7 +475,7 @@ public class QuadrupedMovementController : MonoBehaviour
             Vector3.up);
 
 
-        print($"rotation: {rotation}");
+        // print($"rotation: {rotation}");
         return rotation;
     }
 
@@ -536,7 +530,10 @@ public class QuadrupedMovementController : MonoBehaviour
         switch (quadState)
         {
             case QuadState.Upright:
-                MoveModel_Velocity();
+                // MoveModel_Velocity();
+                MoveModel_Velocity_Y();
+                
+                MoveModel_Accel();
                 MoveModel_Torque();
                 break;
             case QuadState.Ragdoll:
@@ -566,30 +563,43 @@ public class QuadrupedMovementController : MonoBehaviour
         catRigidbody.velocity = velocity;
         // print($"Move velocity: {velocity}, {velocity.magnitude}  Compared to {catRigidbody.velocity.magnitude}");
     }
+    
+    void MoveModel_Velocity_Y()
+    {
+        float yDif = GetTargetBodyPosition().y - catRigidbody.position.y;
+
+        Vector3 dir = catRigidbody.rotation * new Vector3(inputDir.x, 0, inputDir.y);
+        Vector3 velocity = dir.normalized * moveVelocity;
+
+        velocity += new Vector3(0, yDif*2f, 0);
+
+        Debug.DrawRay(catRigidbody.position, velocity, Color.blue);
+
+        Vector3 temp = catRigidbody.velocity;
+        temp.y = velocity.y;
+        catRigidbody.velocity = velocity;
+        // print($"Move velocity: {velocity}, {velocity.magnitude}  Compared to {catRigidbody.velocity.magnitude}");
+    }
+    void MoveModel_Accel()
+    {
+        float yDif = GetTargetBodyPosition().y - catRigidbody.position.y;
+
+        Vector3 dir = catRigidbody.rotation * new Vector3(inputDir.x, 0, inputDir.y);
+        Vector3 velocity = dir.normalized * moveAccel;
+
+        velocity += new Vector3(0, yDif*2f, 0);
+
+        Debug.DrawRay(catRigidbody.position, velocity, Color.blue);
+        catRigidbody.AddForce(velocity,ForceMode.Acceleration); 
+        // print($"Move velocity: {velocity}, {velocity.magnitude}  Compared to {catRigidbody.velocity.magnitude}");
+    }
 
     void MoveModel_Torque()
     {
-        //Testing 
-
-        // bodyTarget.up = Vector3.up;
-        // bodyTarget.rotation = Quaternion.identity;
-
-        //
-
-
-        // Quaternion dif = bodyTarget.rotation * Quaternion.Inverse(catRigidbody.rotation) ;
-        // Vector3 torque = -dif.eulerAngles;
-
-
         Vector3 targetRotation = TargetRotation();
 
-        print($"Cat rotation: {targetRotation}");
-
-        // torque = Vector3.ClampMagnitude(torque * moveTorque, moveTorque_Max);
-        // print($"{dif.eulerAngles}, {torque}");
         catRigidbody.angularVelocity = new Vector3();
-        catRigidbody.AddTorque(new Vector3(targetRotation.x *moveTorqueXZ, targetRotation.y *moveTorque, targetRotation.z *moveTorqueXZ),ForceMode.Acceleration);
-        // catRigidbody.AddTorque(new Vector3(0, targetRotation.y *moveTorque, 0),ForceMode.Acceleration);
+        catRigidbody.AddTorque(new Vector3(targetRotation.x *moveTorque.x, targetRotation.y *moveTorque.y, targetRotation.z *moveTorque.z),ForceMode.Acceleration);
     }
 
     float ClampRotation(float r)
@@ -636,6 +646,20 @@ public class QuadrupedMovementController : MonoBehaviour
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
+        }
+    }
+    
+    
+    //*****************RESET
+    public void HardReset()
+    {
+        Vector3 position = GetTargetBodyPosition()+new Vector3(0,bodyHeight/2f,0);
+        catRigidbody.transform.position = position;
+        catRigidbody.transform.rotation = Quaternion.identity;
+        foreach (Rigidbody rb in rigidbodies)
+        {
+            rb.velocity = new Vector3();
+            rb.angularVelocity = new Vector3();
         }
     }
 }
