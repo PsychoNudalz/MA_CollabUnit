@@ -386,6 +386,8 @@ public class FootMovementSphere : MonoBehaviour
         {
             case FootState.Idle:
                 rb.constraints = RigidbodyConstraints.FreezePosition;
+                // rb.constraints = RigidbodyConstraints.None;
+
                 // rb.useGravity = false;
                 break;
             case FootState.Move:
