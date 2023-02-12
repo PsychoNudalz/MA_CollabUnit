@@ -97,6 +97,10 @@ public class QuadrupedMovementController : MonoBehaviour
     [SerializeField]
     private MovementPattern movementPattern;
 
+
+    [SerializeField]
+    private Transform castParent;
+
     [SerializeField]
     private Vector2 feetMoveAngle = new Vector2(30, 15);
 
@@ -109,8 +113,14 @@ public class QuadrupedMovementController : MonoBehaviour
     [SerializeField]
     private float timeBetweenFoot = .5f;
 
+    [SerializeField]
+    private float footUpdateDistance = 10f;
 
-    private Vector2 inputDir;
+
+    private Vector2 inputDir_Local;
+    private Vector3 inputDir_World => InputDir_World();
+    private Vector3 inputDir_LastForward;
+    private Vector3 lastInputDir = new Vector3();
 
 
     [Header("Ground Check")]
@@ -127,10 +137,10 @@ public class QuadrupedMovementController : MonoBehaviour
 
 
     [SerializeField]
-    private float moveVelocity = 10f;
+    private float move_Y = 10f;
 
     [SerializeField]
-    private float moveAccel = 20f;
+    private float move_XZ = 20f;
 
 
     [SerializeField]
@@ -158,7 +168,8 @@ public class QuadrupedMovementController : MonoBehaviour
     [SerializeField]
     private float ragdollGravityMultiplier = 4f;
 
-    private Vector3 lastInputDir = new Vector3();
+    private Vector3 bodyTarget;
+    private float gravity;
 
 
     private void Awake()
@@ -186,10 +197,15 @@ public class QuadrupedMovementController : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        if (inputDir.magnitude > 0.1f)
+        if (inputDir_Local.magnitude > 0.1f)
         {
-            Vector2 dir = inputDir * 10f;
+            Vector2 dir = inputDir_Local * 10f;
             Gizmos.DrawLine(transform.position, transform.position + new Vector3(dir.x, 0, dir.y));
+        }
+
+        if (bodyTarget.magnitude > 0.01f)
+        {
+            Gizmos.DrawSphere(bodyTarget, 2f);
         }
     }
 
@@ -200,6 +216,10 @@ public class QuadrupedMovementController : MonoBehaviour
         InitialiseAllFeet();
 
         UpdateFeetToCastPosition();
+
+        lastInputDir = catRigidbody.transform.forward;
+        inputDir_LastForward = catRigidbody.transform.forward;
+        gravity = -Physics.gravity.magnitude * catRigidbody.mass * ragdollGravityMultiplier;
     }
 
     void Update()
@@ -219,15 +239,21 @@ public class QuadrupedMovementController : MonoBehaviour
                 break;
         }
 
-        lastInputDir = inputDir;
+        lastInputDir = inputDir_Local;
     }
 
     private void Update_Upright()
     {
         MoveBody();
 
-
         MoveCatFeet();
+        isGrounded = GroundCheck();
+        if (isGrounded && inputDir_Local.magnitude < 0.1f)
+        {
+            UpdateCatFeet();
+        }
+
+        UpdateCastParent();
     }
 
 
@@ -244,9 +270,14 @@ public class QuadrupedMovementController : MonoBehaviour
 
     public void OnMove(Vector2 moveDir)
     {
-        if (!moveDir.Equals(inputDir))
+        if (!moveDir.Equals(inputDir_Local))
         {
-            inputDir = moveDir;
+            inputDir_Local = moveDir;
+        }
+
+        if (moveDir.magnitude > 0.1f)
+        {
+            inputDir_LastForward = inputDir_World;
         }
     }
 
@@ -294,13 +325,29 @@ public class QuadrupedMovementController : MonoBehaviour
 
 
     //****************CAT FEET MOVEMENT
-    private void MoveCatFeet()
+
+    void UpdateCatFeet()
     {
-        if (inputDir.magnitude > 0f || Mathf.Abs(inputDir.magnitude - lastInputDir.magnitude) > 0.1f)
+        Vector3 targetPos = FindLegTarget(feet[footIndex].RaycastPoint);
+
+        if (Vector3.Distance(feet[footIndex].Foot.position, targetPos) > footUpdateDistance)
         {
-            if (Time.time - lastMoveTime > timeBetweenFoot)
+            MoveCatFeet(true);
+        }
+    }
+
+    private void MoveCatFeet(bool force = false)
+    {
+        if (force || inputDir_Local.magnitude > 0f ||
+            Mathf.Abs(inputDir_Local.magnitude - lastInputDir.magnitude) > 0.1f)
+        {
+            if (force || Time.time - lastMoveTime > timeBetweenFoot)
             {
-                lastMoveTime = Time.time;
+                if (!force)
+                {
+                    lastMoveTime = Time.time;
+                }
+
                 int oddIndex = footIndex % 2;
 
                 switch (movementPattern)
@@ -365,7 +412,7 @@ public class QuadrupedMovementController : MonoBehaviour
     private void MoveCatFeet_OppositeCorners(int oddIndex)
     {
         LaunchFoot(frontFeet[oddIndex]);
-        LaunchFoot(backFeet[1 - oddIndex],true);
+        LaunchFoot(backFeet[1 - oddIndex]);
     }
 
     void LaunchFoot(int index = -1, bool flipYAngles = false)
@@ -375,20 +422,16 @@ public class QuadrupedMovementController : MonoBehaviour
             index = footIndex;
         }
 
-        FootCastPair currentFoot = feet[index];
-
-        Vector3 trajectory = FindTrajectoryToTarget(currentFoot.Foot, currentFoot.RaycastPoint, flipYAngles);
-        currentFoot.Foot.Move_SetVelocity(trajectory);
+        LaunchFoot(feet[index], flipYAngles);
     }
 
     void LaunchFoot(FootCastPair footCastPair, bool flipYAngles = false)
     {
         Vector3 trajectory = FindTrajectoryToTarget(footCastPair.Foot, footCastPair.RaycastPoint, flipYAngles);
-        Vector3 dir = catRigidbody.rotation * new Vector3(inputDir.x, 0, inputDir.y);
-        Vector3 velocity = dir.normalized * moveAccel;
+        Vector3 velocity = inputDir_World * move_XZ;
 
 
-        // trajectory += velocity;
+        trajectory += velocity;
 
         footCastPair.Foot.Move_SetVelocity(trajectory);
     }
@@ -443,8 +486,8 @@ public class QuadrupedMovementController : MonoBehaviour
             yAngle *= -1f;
         }
 
-        Quaternion angleAxis = Quaternion.AngleAxis(yAngle * inputDir.x, transform.forward) *
-                               Quaternion.AngleAxis(-feetMoveAngle.x * inputDir.y, transform.right);
+        Quaternion angleAxis = Quaternion.AngleAxis(yAngle * inputDir_Local.x, transform.forward) *
+                               Quaternion.AngleAxis(-feetMoveAngle.x * inputDir_Local.y, transform.right);
         dir = angleAxis * dir;
         // Debug.Log($"{legCastPoint} angle: {angleAxis.eulerAngles}");
 
@@ -458,6 +501,18 @@ public class QuadrupedMovementController : MonoBehaviour
         {
             return new Vector3();
         }
+    }
+
+    void UpdateCastParent()
+    {
+        if (!castParent)
+        {
+            return;
+        }
+
+        // castParent.up = Vector3.up;
+        castParent.position = bodyTarget + new Vector3(0f, bodyHeight * .1f, 0);
+        castParent.forward = inputDir_LastForward;
     }
 
 
@@ -486,8 +541,7 @@ public class QuadrupedMovementController : MonoBehaviour
         rotation.x = Vector3.SignedAngle(catRigidbody.transform.forward, forward, Vector3.right);
         rotation.z = Vector3.SignedAngle(catRigidbody.transform.right, right, Vector3.forward);
 
-        rotation.y = Vector3.SignedAngle(catRigidbody.transform.forward,
-            catRigidbody.rotation * new Vector3(inputDir.x, 0, inputDir.y),
+        rotation.y = Vector3.SignedAngle(catRigidbody.transform.forward, inputDir_LastForward,
             Vector3.up);
 
 
@@ -512,16 +566,10 @@ public class QuadrupedMovementController : MonoBehaviour
         }
 
         position.y += bodyHeight;
+        bodyTarget = position;
 
         return position;
     }
-
-    // void UpdateBodyTargetToDir()
-    // {
-    //     Vector3 mainTransformPosition = mainTransform.position;
-    //     bodyTarget.position = new Vector3(mainTransformPosition.x, bodyTarget.position.y, mainTransformPosition.z) +
-    //                           new Vector3(inputDir.x, 0, inputDir.y) * targetMoveAmount;
-    // }
 
     Vector3 UpdateBodyToFeet()
     {
@@ -536,10 +584,11 @@ public class QuadrupedMovementController : MonoBehaviour
         {
             case QuadState.Upright:
                 // MoveModel_Velocity();
+                // MoveModel_Velocity_Y();
 
-                if (GroundCheck())
+                if (isGrounded)
                 {
-                    MoveModel_Velocity_Y();
+                    MoveModel_Accel_Y();
                 }
                 else
                 {
@@ -547,7 +596,7 @@ public class QuadrupedMovementController : MonoBehaviour
                 }
 
 
-                MoveModel_Accel();
+                MoveModel_Accel_XY();
                 MoveModel_Torque();
                 break;
             case QuadState.Ragdoll:
@@ -560,7 +609,7 @@ public class QuadrupedMovementController : MonoBehaviour
 
     private void MoveModel_Gravity()
     {
-        catRigidbody.AddForce(new Vector3(0, -Physics.gravity.magnitude * catRigidbody.mass * ragdollGravityMultiplier,
+        catRigidbody.AddForce(new Vector3(0, gravity,
             0));
     }
 
@@ -568,8 +617,8 @@ public class QuadrupedMovementController : MonoBehaviour
     {
         float yDif = GetTargetBodyPosition().y - catRigidbody.position.y;
 
-        Vector3 dir = catRigidbody.rotation * new Vector3(inputDir.x, 0, inputDir.y);
-        Vector3 velocity = dir.normalized * moveVelocity;
+        Vector3 dir = catRigidbody.rotation * new Vector3(inputDir_Local.x, 0, inputDir_Local.y);
+        Vector3 velocity = dir.normalized * move_Y;
 
         velocity += new Vector3(0, yDif * 2f, 0);
 
@@ -582,12 +631,14 @@ public class QuadrupedMovementController : MonoBehaviour
     {
         float yDif = GetTargetBodyPosition().y - catRigidbody.position.y;
 
-        Vector3 dir = catRigidbody.rotation * new Vector3(inputDir.x, 0, inputDir.y);
-        Vector3 velocity = dir.normalized * moveVelocity;
+
+        Vector3 velocity = new Vector3();
+        // Vector3 dir = catRigidbody.rotation * new Vector3(inputDir.x, 0, inputDir.y);
+        // velocity = dir.normalized * moveVelocity;
 
         velocity += new Vector3(0, yDif * 2f, 0);
 
-        Debug.DrawRay(catRigidbody.position, velocity, Color.blue);
+        Debug.DrawRay(catRigidbody.position, velocity, Color.cyan);
 
         Vector3 temp = catRigidbody.velocity;
         temp.y = velocity.y;
@@ -595,17 +646,44 @@ public class QuadrupedMovementController : MonoBehaviour
         // print($"Move velocity: {velocity}, {velocity.magnitude}  Compared to {catRigidbody.velocity.magnitude}");
     }
 
-    void MoveModel_Accel()
+    private void MoveModel_Accel_Y()
+    {
+        Vector3 targetBodyPosition = GetTargetBodyPosition();
+        Vector3 dif = targetBodyPosition - catRigidbody.position;
+        float yDif = dif.y;
+
+        float dot = 1;
+        float yCat = catRigidbody.velocity.y;
+        if (Mathf.Abs(yCat) > Mathf.Abs(yDif))
+        {
+            // dot =Vector3.Dot(dif.normalized, catRigidbody.velocity.normalized);
+            if (yCat * yDif > 0)
+            {
+                dot = -1;
+            }
+        }
+
+        Vector3 velocity = new Vector3(0, (yDif * move_Y * dot), 0f);
+        // Vector3 dir = catRigidbody.rotation * new Vector3(inputDir.x, 0, inputDir.y);
+        // velocity = dir.normalized * moveVelocity;
+
+
+        Debug.DrawRay(catRigidbody.position, velocity, Color.yellow);
+        catRigidbody.AddForce(velocity, ForceMode.Acceleration);
+
+        // print($"Move velocity: {velocity}, {velocity.magnitude}  Compared to {catRigidbody.velocity.magnitude}");
+    }
+
+    void MoveModel_Accel_XY()
     {
         // float yDif = GetTargetBodyPosition().y - catRigidbody.position.y;
 
-        Vector3 dir = catRigidbody.rotation * new Vector3(inputDir.x, 0, inputDir.y);
-        Vector3 velocity = dir.normalized * moveAccel;
+        Vector3 velocity = inputDir_World.normalized * move_XZ;
 
         // velocity += new Vector3(0, yDif*2f, 0);
 
-        Debug.DrawRay(catRigidbody.position, velocity, Color.blue);
-        catRigidbody.AddForce(velocity, ForceMode.Acceleration);
+        Debug.DrawRay(catRigidbody.position, velocity, Color.green);
+        catRigidbody.AddForce(velocity, ForceMode.VelocityChange);
         // print($"Move velocity: {velocity}, {velocity.magnitude}  Compared to {catRigidbody.velocity.magnitude}");
     }
 
@@ -613,9 +691,32 @@ public class QuadrupedMovementController : MonoBehaviour
     {
         Vector3 targetRotation = TargetRotation();
 
-        catRigidbody.angularVelocity = new Vector3();
-        catRigidbody.AddTorque(new Vector3(targetRotation.x * moveTorque.x, targetRotation.y * moveTorque.y,
-            targetRotation.z * moveTorque.z));
+        // catRigidbody.angularVelocity = new Vector3();
+        
+        catRigidbody.AddTorque(new Vector3(0, targetRotation.y * moveTorque.y, 0), ForceMode.Acceleration);
+
+        
+        
+        
+        ApplyTorque(catRigidbody.angularVelocity.x,targetRotation.x,new Vector3(targetRotation.x * moveTorque.x, 0, 0));
+        ApplyTorque(catRigidbody.angularVelocity.z,targetRotation.z,new Vector3( 0, 0,targetRotation.z * moveTorque.z));
+        
+
+    }
+
+    void ApplyTorque(float cat, float move, Vector3 torque)
+    {
+        if (Mathf.Abs(cat) > Mathf.Abs(move))
+        {
+            if (cat * move > 0)
+            {
+                catRigidbody.AddTorque(-torque,ForceMode.Acceleration);
+                return;
+            }
+        }
+        catRigidbody.AddTorque(torque,ForceMode.Acceleration);
+
+
     }
 
     float ClampRotation(float r)
@@ -638,7 +739,7 @@ public class QuadrupedMovementController : MonoBehaviour
             case QuadState.Upright:
                 ChangeQuadState(QuadState.Ragdoll);
                 Vector3 baseVelocity =
-                    (new Vector3(inputDir.x * jumpForce_XZ.x, jumpForce_Y, inputDir.y * jumpForce_XZ.y));
+                    (new Vector3(inputDir_Local.x * jumpForce_XZ.x, jumpForce_Y, inputDir_Local.y * jumpForce_XZ.y));
                 Vector3 velocity = baseVelocity;
                 Vector3 totalVelocity = new Vector3();
                 foreach (FootCastPair footCastPair in feet)
@@ -663,6 +764,14 @@ public class QuadrupedMovementController : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
+    }
+
+
+    Vector3 InputDir_World()
+    {
+        Vector3 world = Quaternion.Euler(0, Vector3.SignedAngle(Vector3.forward, transform.forward, Vector3.up), 0) *
+                        new Vector3(inputDir_Local.x, 0, inputDir_Local.y);
+        return world.normalized;
     }
 
     bool GroundCheck()

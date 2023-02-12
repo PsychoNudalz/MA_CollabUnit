@@ -201,17 +201,17 @@ public class FootMovementSphere : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float gravityFall = -Physics.gravity.magnitude* rb.mass* gravityMultiplier_Fall;
+        float gravityFall = -Physics.gravity.magnitude * rb.mass * gravityMultiplier_Fall;
         switch (footState)
         {
             case FootState.Idle:
-                rb.AddForce(new Vector3(0, gravityFall,0));
+                rb.AddForce(new Vector3(0, gravityFall, 0));
 
                 break;
             case FootState.Move:
-                if (Vector3.Distance(transform.position, anchorPoint.position) > footAnchorRange)
+                if (Vector3.Distance(transform.position, lastPosition) < 0.01f)
                 {
-                    // ChangeState(FootState.OutOfRange);
+                    SetFootIdle();
                 }
 
                 rb.AddForce(gravityExtra_Vector);
@@ -228,6 +228,8 @@ public class FootMovementSphere : MonoBehaviour
 
                 break;
         }
+
+        lastPosition = transform.position;
     }
 
     private void AnchorFeet()
@@ -244,14 +246,14 @@ public class FootMovementSphere : MonoBehaviour
 
     private bool GroundCheck()
     {
-        Debug.DrawRay(transform.position, Vector3.down * groundRange, Color.magenta, 2f);
+        // Debug.DrawRay(transform.position, Vector3.down * groundRange, Color.magenta, 2f);
 
         return Physics.Raycast(transform.position, Vector3.down, groundRange, groundLayer);
     }
 
     private bool GroundCheck(Vector3 point)
     {
-        Debug.DrawRay(point, Vector3.down * groundRange, Color.cyan, 2f);
+        // Debug.DrawRay(point, Vector3.down * groundRange, Color.cyan, 2f);
         return Physics.Raycast(point, Vector3.down, groundRange, groundLayer);
     }
 
@@ -295,13 +297,9 @@ public class FootMovementSphere : MonoBehaviour
 
     public void Move_SetVelocity(Vector3 velocity)
     {
-        if (footState is not FootState.Move)
-        {
-            ChangeState(FootState.Move);
-            rb.velocity = velocity;
-            // rb.angularVelocity = new Vector3();
-            launchCollisionIgnoreTime_Set = Time.time;
-        }
+        ChangeState(FootState.Move);
+        rb.velocity = velocity;
+        launchCollisionIgnoreTime_Set = Time.time;
     }
 
     public void SetJump(Vector3 velocity)
@@ -355,6 +353,8 @@ public class FootMovementSphere : MonoBehaviour
 
         ChangeState(FootState.Idle);
         worldPosition = position;
+
+        rb.velocity = new Vector3();
     }
 
     public void SetFootFall(Collision collision = null)
