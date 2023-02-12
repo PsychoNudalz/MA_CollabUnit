@@ -388,7 +388,7 @@ public class QuadrupedMovementController : MonoBehaviour
         Vector3 velocity = dir.normalized * moveAccel;
 
 
-        trajectory += velocity;
+        // trajectory += velocity;
 
         footCastPair.Foot.Move_SetVelocity(trajectory);
     }

@@ -160,7 +160,6 @@ public class FootMovementSphere : MonoBehaviour
 
                 break;
             case FootState.Move:
-                AnchorFeet();
                 if (Time.time - launchCollisionIgnoreTime_Set > launchCollisionIgnoreTime * 10f)
                 {
                     if (groundCheckTime_Now > 0)
@@ -192,11 +191,9 @@ public class FootMovementSphere : MonoBehaviour
                     }
                 }
 
-                AnchorFeet();
 
                 break;
             case FootState.Free:
-                AnchorFeet();
 
                 break;
         }
@@ -204,10 +201,11 @@ public class FootMovementSphere : MonoBehaviour
 
     private void FixedUpdate()
     {
+        float gravityFall = -Physics.gravity.magnitude* rb.mass* gravityMultiplier_Fall;
         switch (footState)
         {
             case FootState.Idle:
-                // rb.AddForce(new Vector3(0, -Physics.gravity.magnitude,0));
+                rb.AddForce(new Vector3(0, gravityFall,0));
 
                 break;
             case FootState.Move:
@@ -222,11 +220,11 @@ public class FootMovementSphere : MonoBehaviour
 
             case FootState.Falling:
 
-                rb.AddForce(new Vector3(0, -Physics.gravity.magnitude * rb.mass, 0));
+                rb.AddForce(new Vector3(0, gravityFall, 0));
                 break;
 
             case FootState.Free:
-                rb.AddForce(new Vector3(0, -Physics.gravity.magnitude * rb.mass * gravityMultiplier_Fall, 0));
+                rb.AddForce(new Vector3(0, gravityFall, 0));
 
                 break;
         }
@@ -382,26 +380,22 @@ public class FootMovementSphere : MonoBehaviour
 
     void ChangeState(FootState fs)
     {
+        rb.drag = 0f;
+        rb.constraints = RigidbodyConstraints.None;
+
         switch (fs)
         {
             case FootState.Idle:
-                rb.constraints = RigidbodyConstraints.FreezePosition;
-                // rb.constraints = RigidbodyConstraints.None;
-
+                // rb.constraints = RigidbodyConstraints.FreezePosition;
+                rb.drag = 1f;
                 // rb.useGravity = false;
                 break;
             case FootState.Move:
-                rb.constraints = RigidbodyConstraints.None;
-
-                // rb.useGravity = true;
                 break;
 
             case FootState.Falling:
-                rb.constraints = RigidbodyConstraints.None;
                 break;
             case FootState.Free:
-                rb.constraints = RigidbodyConstraints.None;
-
                 break;
                 ;
         }

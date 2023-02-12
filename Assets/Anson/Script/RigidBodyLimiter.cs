@@ -12,6 +12,8 @@ public class RigidBodyLimiter : MonoBehaviour
     [SerializeField]
     private float maxAngular = 50f;
     // Start is called before the first frame update
+
+    private const bool USELIMITER = false;
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -20,7 +22,10 @@ public class RigidBodyLimiter : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxVelocity);
-        rb.angularVelocity = Vector3.ClampMagnitude(rb.angularVelocity, maxAngular);
+        if (USELIMITER)
+        {
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxVelocity);
+            rb.angularVelocity = Vector3.ClampMagnitude(rb.angularVelocity, maxAngular);
+        }
     }
 }
