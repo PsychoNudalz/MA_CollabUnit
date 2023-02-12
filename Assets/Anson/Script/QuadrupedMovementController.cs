@@ -693,13 +693,11 @@ public class QuadrupedMovementController : MonoBehaviour
 
         // catRigidbody.angularVelocity = new Vector3();
         
-        catRigidbody.AddTorque(new Vector3(0, targetRotation.y * moveTorque.y, 0), ForceMode.Acceleration);
-
+        // ApplyTorque(catRigidbody.angularVelocity.y,targetRotation.y,new Vector3(0, targetRotation.y * moveTorque.y, 0));
         
         
-        
-        ApplyTorque(catRigidbody.angularVelocity.x,targetRotation.x,new Vector3(targetRotation.x * moveTorque.x, 0, 0));
-        ApplyTorque(catRigidbody.angularVelocity.z,targetRotation.z,new Vector3( 0, 0,targetRotation.z * moveTorque.z));
+        // ApplyTorque(catRigidbody.angularVelocity.x,targetRotation.x,new Vector3(targetRotation.x * moveTorque.x, 0, 0));
+        // ApplyTorque(catRigidbody.angularVelocity.z,targetRotation.z,new Vector3( 0, 0,targetRotation.z * moveTorque.z));
         
 
     }
