@@ -116,7 +116,7 @@ public class QuadrupedMovementController : MonoBehaviour
 
     private Vector2 inputDir_Local;
     private Vector3 inputDir_World => InputDir_World();
-    private Vector3 inputDir_LastForward;
+    private Vector3 inputDir_LastForward = Vector3.forward;
     private Vector3 lastInputDir = new Vector3();
 
 
@@ -146,6 +146,7 @@ public class QuadrupedMovementController : MonoBehaviour
 
     [SerializeField]
     private Vector2 maxRotation = new Vector2(30f, 30f);
+
     [SerializeField]
     private Vector2 maxAngular = new Vector2(3f, 3f);
 
@@ -164,6 +165,7 @@ public class QuadrupedMovementController : MonoBehaviour
 
     [SerializeField]
     private Vector2 jumpBodyMultiplier = new Vector2(.85f, 1.15f);
+
     [Space(10)]
     [Header("Ragdoll")]
     [SerializeField]
@@ -449,9 +451,11 @@ public class QuadrupedMovementController : MonoBehaviour
     {
         Vector3 trajectory = FindTrajectoryToTarget(footCastPair.Foot, footCastPair.RaycastPoint, flipYAngles);
         Vector3 velocity = inputDir_World * move_XZ;
-
-
+        
+        
         trajectory += velocity;
+
+        trajectory += catRigidbody.velocity;
 
         footCastPair.Foot.Move_SetVelocity(trajectory);
     }
@@ -510,11 +514,11 @@ public class QuadrupedMovementController : MonoBehaviour
                                Quaternion.AngleAxis(-feetMoveAngle.x * inputDir_Local.y, transform.right);
         dir = angleAxis * dir;
         // Debug.Log($"{legCastPoint} angle: {angleAxis.eulerAngles}");
+        Vector3 offset = (move_XZ * footMoveTime) * inputDir_World;
 
-
-        if (Physics.Raycast(legCastPoint.position, dir, out hit, castDistance, castLayer))
+        if (Physics.Raycast(legCastPoint.position+offset, dir, out hit, castDistance, castLayer))
         {
-            Debug.DrawLine(legCastPoint.position, hit.point, Color.blue, .5f);
+            Debug.DrawLine(legCastPoint.position+offset, hit.point, Color.blue, .5f);
             return hit.point;
         }
         else
@@ -532,6 +536,7 @@ public class QuadrupedMovementController : MonoBehaviour
 
         // castParent.up = Vector3.up;
         castParent.position = FloorPoint + new Vector3(0f, bodyHeight * 1.1f, 0);
+
         castParent.forward = inputDir_LastForward;
     }
 
@@ -564,7 +569,6 @@ public class QuadrupedMovementController : MonoBehaviour
         Vector3 pos = AverageFeetPosition();
         Debug.DrawRay(pos, forward.normalized * 10f, Color.blue);
         Debug.DrawRay(pos, right.normalized * 10f, Color.red);
-
 
 
         rotation.x = Vector3.SignedAngle(catTransform.up, up, catTransform.right);
@@ -628,6 +632,7 @@ public class QuadrupedMovementController : MonoBehaviour
 
 
                 MoveModel_Accel_XY();
+                // MoveModel_ClampAngular();
                 break;
             case QuadState.Ragdoll:
                 MoveModel_Gravity();

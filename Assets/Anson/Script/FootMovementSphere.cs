@@ -208,8 +208,8 @@ public class FootMovementSphere : MonoBehaviour
         switch (footState)
         {
             case FootState.Idle:
+                // rb.AddForce(-rb.velocity,ForceMode.VelocityChange);
                 rb.AddForce(new Vector3(0, gravityFall1, 0));
-
                 break;
             case FootState.Move:
                 if (Vector3.Distance(transform.position, lastPosition) < 0.01f)
