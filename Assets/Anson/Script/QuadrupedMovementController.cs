@@ -146,6 +146,8 @@ public class QuadrupedMovementController : MonoBehaviour
     [SerializeField]
     private Vector3 moveTorque = new Vector3(.4f, 5f, .2f);
 
+    [SerializeField]
+    private Vector2 maxRotation = new Vector2(30f, 30f);
 
     private float lastMoveTime = 0f;
 
@@ -170,6 +172,7 @@ public class QuadrupedMovementController : MonoBehaviour
 
     private Vector3 bodyTarget;
     private float gravity;
+    private Vector3 catAngles;
 
 
     private void Awake()
@@ -224,6 +227,15 @@ public class QuadrupedMovementController : MonoBehaviour
 
     void Update()
     {
+        switch (quadState)
+        {
+            case QuadState.Upright:
+                MoveModel_ClampRotation();
+                break;
+            case QuadState.Ragdoll:
+
+                break;
+        }
     }
 
     private void FixedUpdate()
@@ -231,10 +243,10 @@ public class QuadrupedMovementController : MonoBehaviour
         switch (quadState)
         {
             case QuadState.Upright:
-                Update_Upright();
+                FixedUpdate_Upright();
                 break;
             case QuadState.Ragdoll:
-                Update_Ragdoll();
+                FixedUpdate_Ragdoll();
 
                 break;
         }
@@ -242,22 +254,22 @@ public class QuadrupedMovementController : MonoBehaviour
         lastInputDir = inputDir_Local;
     }
 
-    private void Update_Upright()
+    private void FixedUpdate_Upright()
     {
+        isGrounded = GroundCheck();
         MoveBody();
 
         MoveCatFeet();
-        isGrounded = GroundCheck();
-        if (isGrounded && inputDir_Local.magnitude < 0.1f)
-        {
-            UpdateCatFeet();
-        }
+        // if (isGrounded && inputDir_Local.magnitude < 0.1f)
+        // {
+        //     UpdateCatFeet();
+        // }
 
         UpdateCastParent();
     }
 
 
-    private void Update_Ragdoll()
+    private void FixedUpdate_Ragdoll()
     {
         // UpdateBodyToFeet();
 
@@ -311,11 +323,11 @@ public class QuadrupedMovementController : MonoBehaviour
 
                 break;
             case QuadState.Ragdoll:
-                foreach (Rigidbody rb in rigidbodies)
-                {
-                    rb.isKinematic = false;
-                    rb.useGravity = true;
-                }
+                // foreach (Rigidbody rb in rigidbodies)
+                // {
+                //     rb.isKinematic = false;
+                //     rb.useGravity = true;
+                // }
 
                 break;
         }
@@ -494,7 +506,7 @@ public class QuadrupedMovementController : MonoBehaviour
 
         if (Physics.Raycast(legCastPoint.position, dir, out hit, castDistance, castLayer))
         {
-            Debug.DrawLine(legCastPoint.position, hit.point, Color.blue, 2f);
+            Debug.DrawLine(legCastPoint.position, hit.point, Color.blue,.5f);
             return hit.point;
         }
         else
@@ -530,7 +542,7 @@ public class QuadrupedMovementController : MonoBehaviour
         return avg / feet.Length;
     }
 
-    Vector3 TargetRotation()
+    Vector3 TargetLocalRotation()
     {
         Vector3 rotation = new Vector3();
 
@@ -538,14 +550,24 @@ public class QuadrupedMovementController : MonoBehaviour
                            (frontFeet[1].Position - backFeet[1].Position)) / 2f;
         Vector3 right = ((frontFeet[1].Position - frontFeet[0].Position) +
                          (backFeet[1].Position - backFeet[0].Position)) / 2f;
-        rotation.x = Vector3.SignedAngle(catRigidbody.transform.forward, forward, Vector3.right);
-        rotation.z = Vector3.SignedAngle(catRigidbody.transform.right, right, Vector3.forward);
+        Vector3 up = Vector3.Cross(forward, right);
+        
+        //DEBUG
+        Vector3 pos = AverageFeetPosition();
+        Debug.DrawRay(pos,forward.normalized*10f,Color.blue);
+        Debug.DrawRay(pos,right.normalized*10f,Color.red);
+        
+        
+        Transform catTransform = catRigidbody.transform;
 
-        rotation.y = Vector3.SignedAngle(catRigidbody.transform.forward, inputDir_LastForward,
-            Vector3.up);
+        rotation.x = Vector3.SignedAngle(catTransform.up, up, catTransform.right);
+        rotation.z = Vector3.SignedAngle(catTransform.up, up, catTransform.forward);
+
+        rotation.y = Vector3.SignedAngle(catTransform.forward, inputDir_LastForward,
+            catTransform.up);
 
 
-        // print($"rotation: {rotation}");
+        print($"rotation: {rotation}");
         return rotation;
     }
 
@@ -589,6 +611,9 @@ public class QuadrupedMovementController : MonoBehaviour
                 if (isGrounded)
                 {
                     MoveModel_Accel_Y();
+                    MoveModel_ClampRotation();
+                    MoveModel_Torque();
+
                 }
                 else
                 {
@@ -597,7 +622,6 @@ public class QuadrupedMovementController : MonoBehaviour
 
 
                 MoveModel_Accel_XY();
-                MoveModel_Torque();
                 break;
             case QuadState.Ragdoll:
                 MoveModel_Gravity();
@@ -689,16 +713,45 @@ public class QuadrupedMovementController : MonoBehaviour
 
     void MoveModel_Torque()
     {
-        Vector3 targetRotation = TargetRotation();
+        Vector3 targetRotation = TargetLocalRotation();
+
+        targetRotation = new Vector3(targetRotation.x * moveTorque.x, targetRotation.y * moveTorque.y,
+            targetRotation.z * moveTorque.z);
+        targetRotation = catRigidbody.rotation * targetRotation;
 
         // catRigidbody.angularVelocity = new Vector3();
-        
+
         // ApplyTorque(catRigidbody.angularVelocity.y,targetRotation.y,new Vector3(0, targetRotation.y * moveTorque.y, 0));
-        
-        
+
+
         // ApplyTorque(catRigidbody.angularVelocity.x,targetRotation.x,new Vector3(targetRotation.x * moveTorque.x, 0, 0));
         // ApplyTorque(catRigidbody.angularVelocity.z,targetRotation.z,new Vector3( 0, 0,targetRotation.z * moveTorque.z));
+        catRigidbody.AddTorque(targetRotation,ForceMode.Acceleration);
+
+    }
+
+    void MoveModel_ClampRotation()
+    {
+        Vector3 catRigidbodyAngularVelocity = catRigidbody.angularVelocity;
+
+        catAngles = catRigidbody.rotation.eulerAngles;
+        float signX = Vector3.SignedAngle(Vector3.up, catAngles, Vector3.right);
+        if (Mathf.Abs(signX) > maxRotation.x)
+        {
+            catRigidbodyAngularVelocity.x = 0f;
+            // catAngles.x = Mathf.Clamp(signX, -maxRotation.x, maxRotation.x);
+            
+        }
+        float signZ = Vector3.SignedAngle(Vector3.up, catAngles, Vector3.forward);
+
+        if (Mathf.Abs(signZ) > maxRotation.y)
+        {
+            catRigidbodyAngularVelocity.z = 0f;
+            // catAngles.z = Mathf.Clamp(catAngles.z, -maxRotation.y, maxRotation.y);
+
+        }
         
+        catRigidbody.rotation = Quaternion.Euler(catAngles);
 
     }
 
