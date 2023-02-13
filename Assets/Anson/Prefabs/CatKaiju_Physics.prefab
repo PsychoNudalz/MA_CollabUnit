@@ -707,7 +707,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058648665190501456}
   m_LocalRotation: {x: -0, y: 0.9150677, z: 0.40330032, w: 0}
-  m_LocalPosition: {x: -6.7099743, y: -0.2700014, z: -4.37}
+  m_LocalPosition: {x: -6.7099743, y: -0.2700014, z: -0.69999695}
   m_LocalScale: {x: 11, y: 11, z: 11}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -855,8 +855,8 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!135 &1327074770
-SphereCollider:
+--- !u!65 &1327074770
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -866,8 +866,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.15957278
-  m_Center: {x: 0.00000013411044, y: -0.00000047683716, z: -0.0000004917383}
+  m_Size: {x: 0.25, y: 0.25, z: 0.25}
+  m_Center: {x: 0.00000013411044, y: -0.00000047683716, z: -0.000000014901159}
 --- !u!1 &2948913357568498267
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,7 +892,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2948913357568498267}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 6, y: 2.33, z: -3.2599983}
+  m_LocalPosition: {x: 6, y: 2.33, z: -10.579998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -975,29 +975,29 @@ MonoBehaviour:
   - foot: {fileID: 1538215073168389884}
     raycastPoint: {fileID: 2948913357568498266}
     footMesh: {fileID: 1538215073168389761}
-  footIndex: 1
+  footIndex: 2
   anchorRange: 3
-  castDistance: 30
+  castDistance: 50
   castLayer:
     serializedVersion: 2
     m_Bits: 576
-  bodyHeight: 13
+  bodyHeight: 14
   bodyToFeetLerp: 0
   movementPattern: 3
   castParent: {fileID: 2948913358470359495}
-  feetMoveAngle: {x: 40, y: 30}
+  feetMoveAngle: {x: 50, y: 40}
   footMoveTime: 0.5
-  gravityMultiplier: 25
-  timeBetweenFoot: 0.3
-  footUpdateDistance: 15
+  gravityMultiplier: 10
+  timeBetweenFoot: 0.4
+  footUpdateDistance: 10
   groundCheckTime: 1
   catRigidbody: {fileID: 682585319747038410}
-  move_Y: 25
-  move_XZ: 0.5
+  move_Y: 20
+  move_XZ: 0.4
   maxVelocity: 50
-  moveTorque: {x: 0.4, y: 0.1, z: 0.4}
-  maxRotation: {x: 15, y: 15}
-  maxAngular: {x: 0, y: 0}
+  moveTorque: {x: 0.3, y: 0.1, z: 0.3}
+  maxRotation: {x: 30, y: 30}
+  maxAngular: {x: 3, y: 3}
   jumpForce_Y: 100
   jumpForce_XZ: {x: 50, y: 50}
   jumpForceRandom_XZ: {x: 20, y: 20}
@@ -1169,7 +1169,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2948913358045603821}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -6, y: 2.33, z: 7.2300024}
+  m_LocalPosition: {x: -6, y: 2.33, z: 11.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1398,7 +1398,7 @@ Rigidbody:
   m_Mass: 100
   m_Drag: 0.1
   m_AngularDrag: 0.1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1510,7 +1510,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2948913358801147005}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -6, y: 2.33, z: -3.26}
+  m_LocalPosition: {x: -6, y: 2.33, z: -10.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1573,7 +1573,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2948913359024666233}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 6, y: 2.33, z: 7.23}
+  m_LocalPosition: {x: 6, y: 2.33, z: 11.720001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1723,13 +1723,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3358883619636103882}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
+  m_Mass: 1
+  m_Drag: 0.4
+  m_AngularDrag: 0.1
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 64
+  m_Constraints: 0
   m_CollisionDetection: 2
 --- !u!144 &1725929295
 CharacterJoint:
@@ -1747,7 +1747,7 @@ CharacterJoint:
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
-    spring: 50
+    spring: 100
     damper: 0
   m_LowTwistLimit:
     limit: -20
@@ -1758,7 +1758,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
-    spring: 100
+    spring: 0
     damper: 0
   m_Swing1Limit:
     limit: 40
@@ -1789,8 +1789,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9488e8f914f22f46bc28829b01c6ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 1000
-  maxAngular: 1200
+  maxVelocity: 100
+  maxAngular: 50
 --- !u!1 &3423125885819831814
 GameObject:
   m_ObjectHideFlags: 0
@@ -2000,13 +2000,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3695566665725362783}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
+  m_Mass: 1
+  m_Drag: 0.4
+  m_AngularDrag: 0.1
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 64
+  m_Constraints: 0
   m_CollisionDetection: 2
 --- !u!144 &1376979461
 CharacterJoint:
@@ -2024,7 +2024,7 @@ CharacterJoint:
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
-    spring: 50
+    spring: 100
     damper: 0
   m_LowTwistLimit:
     limit: -20
@@ -2035,7 +2035,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
-    spring: 100
+    spring: 0
     damper: 0
   m_Swing1Limit:
     limit: 40
@@ -2066,8 +2066,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9488e8f914f22f46bc28829b01c6ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 1000
-  maxAngular: 1200
+  maxVelocity: 100
+  maxAngular: 50
 --- !u!1 &3756507090784153180
 GameObject:
   m_ObjectHideFlags: 0
@@ -2177,13 +2177,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3756507090784153180}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
+  m_Mass: 1
+  m_Drag: 0.4
+  m_AngularDrag: 0.1
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 64
+  m_Constraints: 0
   m_CollisionDetection: 2
 --- !u!144 &1735523611
 CharacterJoint:
@@ -2201,7 +2201,7 @@ CharacterJoint:
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
-    spring: 50
+    spring: 100
     damper: 0
   m_LowTwistLimit:
     limit: -20
@@ -2212,7 +2212,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
-    spring: 100
+    spring: 0
     damper: 0
   m_Swing1Limit:
     limit: 40
@@ -2243,8 +2243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9488e8f914f22f46bc28829b01c6ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 1000
-  maxAngular: 1200
+  maxVelocity: 100
+  maxAngular: 50
 --- !u!1 &5129710666514318618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2355,13 +2355,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5129710666514318618}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
+  m_Mass: 1
+  m_Drag: 0.4
+  m_AngularDrag: 0.1
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 64
+  m_Constraints: 0
   m_CollisionDetection: 2
 --- !u!144 &1650939623
 CharacterJoint:
@@ -2379,7 +2379,7 @@ CharacterJoint:
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
-    spring: 50
+    spring: 100
     damper: 0
   m_LowTwistLimit:
     limit: -20
@@ -2390,7 +2390,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
-    spring: 100
+    spring: 0
     damper: 0
   m_Swing1Limit:
     limit: 40
@@ -2421,8 +2421,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9488e8f914f22f46bc28829b01c6ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 1000
-  maxAngular: 1200
+  maxVelocity: 100
+  maxAngular: 50
 --- !u!1 &5546047621064757353
 GameObject:
   m_ObjectHideFlags: 0
@@ -2453,7 +2453,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5546047621064757353}
   m_LocalRotation: {x: -0.13052621, y: 0, z: -0, w: 0.9914449}
-  m_LocalPosition: {x: 0.6, y: -0.08363691, z: 0.00000004334883}
+  m_LocalPosition: {x: 0.6, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2533,13 +2533,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5546047621064757353}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
+  m_Mass: 1
+  m_Drag: 0.4
+  m_AngularDrag: 0.1
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 64
+  m_Constraints: 0
   m_CollisionDetection: 2
 --- !u!144 &2061247552
 CharacterJoint:
@@ -2557,7 +2557,7 @@ CharacterJoint:
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
-    spring: 50
+    spring: 100
     damper: 0
   m_LowTwistLimit:
     limit: -20
@@ -2568,7 +2568,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
-    spring: 100
+    spring: 0
     damper: 0
   m_Swing1Limit:
     limit: 40
@@ -2599,8 +2599,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9488e8f914f22f46bc28829b01c6ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 1000
-  maxAngular: 1200
+  maxVelocity: 100
+  maxAngular: 50
 --- !u!1 &5724941248623486810
 GameObject:
   m_ObjectHideFlags: 0
@@ -2710,13 +2710,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5724941248623486810}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
+  m_Mass: 1
+  m_Drag: 0.4
+  m_AngularDrag: 0.1
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 64
+  m_Constraints: 0
   m_CollisionDetection: 2
 --- !u!144 &1452527174
 CharacterJoint:
@@ -2734,7 +2734,7 @@ CharacterJoint:
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
-    spring: 50
+    spring: 100
     damper: 0
   m_LowTwistLimit:
     limit: -20
@@ -2745,7 +2745,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
-    spring: 100
+    spring: 0
     damper: 0
   m_Swing1Limit:
     limit: 40
@@ -2776,8 +2776,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9488e8f914f22f46bc28829b01c6ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 1000
-  maxAngular: 1200
+  maxVelocity: 100
+  maxAngular: 50
 --- !u!1 &5764952799600764374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2808,7 +2808,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5764952799600764374}
   m_LocalRotation: {x: -0.13052621, y: 0, z: -0, w: 0.9914449}
-  m_LocalPosition: {x: -0.6, y: -0.08363691, z: 0.00000004334883}
+  m_LocalPosition: {x: -0.6, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2888,13 +2888,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5764952799600764374}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
+  m_Mass: 1
+  m_Drag: 0.4
+  m_AngularDrag: 0.1
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 64
+  m_Constraints: 0
   m_CollisionDetection: 2
 --- !u!144 &1555825425
 CharacterJoint:
@@ -2912,7 +2912,7 @@ CharacterJoint:
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
-    spring: 50
+    spring: 100
     damper: 0
   m_LowTwistLimit:
     limit: -20
@@ -2923,7 +2923,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
-    spring: 100
+    spring: 0
     damper: 0
   m_Swing1Limit:
     limit: 40
@@ -2954,8 +2954,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9488e8f914f22f46bc28829b01c6ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 1000
-  maxAngular: 1200
+  maxVelocity: 100
+  maxAngular: 50
 --- !u!1 &6310691248721770158
 GameObject:
   m_ObjectHideFlags: 0
@@ -2986,7 +2986,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6310691248721770158}
   m_LocalRotation: {x: -0, y: 0.9150677, z: 0.40330032, w: 0}
-  m_LocalPosition: {x: 6.490028, y: -0.27, z: -4.3700056}
+  m_LocalPosition: {x: 6.490028, y: -0.27, z: -0.7}
   m_LocalScale: {x: 11, y: 11, z: 11}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3134,8 +3134,8 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!135 &1129599039
-SphereCollider:
+--- !u!65 &1129599039
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3145,8 +3145,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.15957278
-  m_Center: {x: 0.00000013411044, y: -8.881784e-16, z: -0.0000004917383}
+  m_Size: {x: 0.25, y: 0.25, z: 0.25}
+  m_Center: {x: 0.00000013411044, y: -8.881784e-16, z: -0.000000014901159}
 --- !u!1 &6509629173898440409
 GameObject:
   m_ObjectHideFlags: 0
@@ -3325,8 +3325,8 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!135 &1627667781
-SphereCollider:
+--- !u!65 &1627667781
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3336,8 +3336,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.15957287
-  m_Center: {x: 0.00000013411051, y: 3.996803e-15, z: -0.000000014901167}
+  m_Size: {x: 0.25, y: 0.25, z: 0.25}
+  m_Center: {x: 0.00000013411051, y: -0.00000047683716, z: -0.000000014901167}
 --- !u!1 &6855727369538146171
 GameObject:
   m_ObjectHideFlags: 0
@@ -3365,7 +3365,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6855727369538146171}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0.0000000754979}
-  m_LocalPosition: {x: -0.048506293, y: 0.732, z: 0.286}
+  m_LocalPosition: {x: -0.048506293, y: 1.023112, z: 0.29401278}
   m_LocalScale: {x: 0.3301711, y: 0.3301711, z: 0.3301711}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3431,7 +3431,7 @@ BoxCollider:
   m_GameObject: {fileID: 6855727369538146171}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.7343762, y: 1.7031256, z: 1.9687506}
   m_Center: {x: 0, y: 0, z: -0.0000009536743}
@@ -3545,13 +3545,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7089979647460407697}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
+  m_Mass: 1
+  m_Drag: 0.4
+  m_AngularDrag: 0.1
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 64
+  m_Constraints: 0
   m_CollisionDetection: 2
 --- !u!144 &1307958887
 CharacterJoint:
@@ -3569,7 +3569,7 @@ CharacterJoint:
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
-    spring: 50
+    spring: 100
     damper: 0
   m_LowTwistLimit:
     limit: -20
@@ -3580,7 +3580,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
-    spring: 100
+    spring: 0
     damper: 0
   m_Swing1Limit:
     limit: 40
@@ -3611,8 +3611,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9488e8f914f22f46bc28829b01c6ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 1000
-  maxAngular: 1200
+  maxVelocity: 100
+  maxAngular: 50
 --- !u!1 &7114897426065859169
 GameObject:
   m_ObjectHideFlags: 0
@@ -3761,8 +3761,8 @@ CharacterJoint:
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
-    spring: 200
-    damper: 10
+    spring: 0
+    damper: 0
   m_LowTwistLimit:
     limit: -20
     bounciness: 0
@@ -3791,8 +3791,8 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!135 &1562173013
-SphereCollider:
+--- !u!65 &1562173013
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3802,5 +3802,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.15957278
+  m_Size: {x: 0.25, y: 0.25, z: 0.25}
   m_Center: {x: 0.00000025331974, y: 8.881784e-16, z: -0.000000014901161}
