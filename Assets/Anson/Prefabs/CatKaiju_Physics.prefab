@@ -707,7 +707,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058648665190501456}
   m_LocalRotation: {x: -0, y: 0.9150677, z: 0.40330032, w: 0}
-  m_LocalPosition: {x: -6.7099743, y: -0.2700014, z: -0.69999695}
+  m_LocalPosition: {x: -6.7099743, y: -0.2700014, z: -4.37}
   m_LocalScale: {x: 11, y: 11, z: 11}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -994,9 +994,10 @@ MonoBehaviour:
   catRigidbody: {fileID: 682585319747038410}
   move_Y: 25
   move_XZ: 0.5
+  maxVelocity: 50
   moveTorque: {x: 0.4, y: 0.1, z: 0.4}
   maxRotation: {x: 15, y: 15}
-  maxAngular: {x: 30, y: 30}
+  maxAngular: {x: 0, y: 0}
   jumpForce_Y: 100
   jumpForce_XZ: {x: 50, y: 50}
   jumpForceRandom_XZ: {x: 20, y: 20}
@@ -1728,7 +1729,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 64
   m_CollisionDetection: 2
 --- !u!144 &1725929295
 CharacterJoint:
@@ -2005,7 +2006,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 64
   m_CollisionDetection: 2
 --- !u!144 &1376979461
 CharacterJoint:
@@ -2182,7 +2183,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 64
   m_CollisionDetection: 2
 --- !u!144 &1735523611
 CharacterJoint:
@@ -2360,7 +2361,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 64
   m_CollisionDetection: 2
 --- !u!144 &1650939623
 CharacterJoint:
@@ -2452,7 +2453,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5546047621064757353}
   m_LocalRotation: {x: -0.13052621, y: 0, z: -0, w: 0.9914449}
-  m_LocalPosition: {x: 0.6, y: 0.25, z: 0}
+  m_LocalPosition: {x: 0.6, y: -0.08363691, z: 0.00000004334883}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2538,7 +2539,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 64
   m_CollisionDetection: 2
 --- !u!144 &2061247552
 CharacterJoint:
@@ -2715,7 +2716,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 64
   m_CollisionDetection: 2
 --- !u!144 &1452527174
 CharacterJoint:
@@ -2807,7 +2808,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5764952799600764374}
   m_LocalRotation: {x: -0.13052621, y: 0, z: -0, w: 0.9914449}
-  m_LocalPosition: {x: -0.6, y: 0.25, z: 0}
+  m_LocalPosition: {x: -0.6, y: -0.08363691, z: 0.00000004334883}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2893,7 +2894,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 64
   m_CollisionDetection: 2
 --- !u!144 &1555825425
 CharacterJoint:
@@ -2985,7 +2986,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6310691248721770158}
   m_LocalRotation: {x: -0, y: 0.9150677, z: 0.40330032, w: 0}
-  m_LocalPosition: {x: 6.490028, y: -0.27, z: -0.7}
+  m_LocalPosition: {x: 6.490028, y: -0.27, z: -4.3700056}
   m_LocalScale: {x: 11, y: 11, z: 11}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3364,7 +3365,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6855727369538146171}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0.0000000754979}
-  m_LocalPosition: {x: -0.048506293, y: 0.645, z: 0.478}
+  m_LocalPosition: {x: -0.048506293, y: 0.732, z: 0.286}
   m_LocalScale: {x: 0.3301711, y: 0.3301711, z: 0.3301711}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3550,7 +3551,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 64
   m_CollisionDetection: 2
 --- !u!144 &1307958887
 CharacterJoint:

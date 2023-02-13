@@ -140,6 +140,9 @@ public class QuadrupedMovementController : MonoBehaviour
     [SerializeField]
     private float move_XZ = 20f;
 
+    [SerializeField]
+    private float maxVelocity = 5f;
+
 
     [SerializeField]
     private Vector3 moveTorque = new Vector3(.4f, 5f, .2f);
@@ -722,6 +725,7 @@ public class QuadrupedMovementController : MonoBehaviour
 
         Debug.DrawRay(catRigidbody.position, velocity, Color.green);
         catRigidbody.AddForce(velocity, ForceMode.VelocityChange);
+        catRigidbody.velocity = Vector3.ClampMagnitude(catRigidbody.velocity, maxVelocity);
         // print($"Move velocity: {velocity}, {velocity.magnitude}  Compared to {catRigidbody.velocity.magnitude}");
     }
 
