@@ -805,20 +805,20 @@ public class QuadrupedMovementController : MonoBehaviour
         switch (quadState)
         {
             case QuadState.Upright:
+                if (!GroundCheck())
+                {
+                    return;
+                }
                 ChangeQuadState(QuadState.Ragdoll);
                 Vector3 baseVelocity =
                     (new Vector3(inputDir_World.x * jumpForce_XZ.x, jumpForce_Y, inputDir_World.z * jumpForce_XZ.y));
-                Vector3 velocity = baseVelocity;
-                Vector3 totalVelocity = new Vector3();
-                // foreach (FootCastPair footCastPair in feet)
-                // {
-                //     // Vector3 velocity = (new Vector3(inputDir.x, 1, inputDir.y)).normalized;
-                //     // velocity *= jumpForce_Y;
-                //     velocity += RandomJumpVelocity();
-                //     velocity = transform.rotation * velocity;
-                //     footCastPair.Foot.SetJump(velocity);
-                //     totalVelocity += footCastPair.Foot.Rb.velocity;
-                // }
+                Vector3 velocity;
+                foreach (FootCastPair footCastPair in feet)
+                {
+                    velocity = baseVelocity+RandomJumpVelocity();
+                    // velocity = transform.rotation * velocity;
+                    footCastPair.Foot.SetJump(velocity);
+                }
 
                 catRigidbody.AddForce(
                     (baseVelocity + RandomJumpVelocity()) * Random.Range(jumpBodyMultiplier.x, jumpBodyMultiplier.y),

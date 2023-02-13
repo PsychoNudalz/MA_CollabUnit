@@ -990,7 +990,7 @@ MonoBehaviour:
   - foot: {fileID: 1538215073168389884}
     raycastPoint: {fileID: 2948913357568498266}
     footMesh: {fileID: 1538215073168389761}
-  footIndex: 2
+  footIndex: 0
   anchorRange: 3
   castDistance: 50
   castLayer:
@@ -1002,18 +1002,18 @@ MonoBehaviour:
   castParent: {fileID: 2948913358470359495}
   feetMoveAngle: {x: 50, y: 40}
   footMoveTime: 0.5
-  gravityMultiplier: 30
+  gravityMultiplier: 25
   timeBetweenFoot: 0.3
   footUpdateDistance: 10
   groundCheckTime: 1
   catRigidbody: {fileID: 682585319747038410}
-  move_Y: 20
-  move_XZ: 0.4
-  maxVelocity: 50
+  move_Y: 30
+  move_XZ: 0.6
+  maxVelocity: 60
   moveTorque: {x: 0.2, y: 0.05, z: 0.2}
   maxRotation: {x: 30, y: 30}
   maxAngular: {x: 3, y: 3}
-  jumpForce_Y: 700
+  jumpForce_Y: 500
   jumpForce_XZ: {x: 200, y: 200}
   jumpForceRandom_XZ: {x: 20, y: 20}
   jumpBodyMultiplier: {x: 0.85, y: 1.15}
