@@ -174,9 +174,10 @@ public class QuadrupedMovementController : MonoBehaviour
     [SerializeField]
     private float ragdollGravityMultiplier = 4f;
 
-    private Vector3 FloorPoint;
+    private Vector3 floorPoint;
     private float gravity;
     private Vector3 catAngles;
+    private Vector3 bodyTarget;
 
 
     private void Awake()
@@ -210,9 +211,9 @@ public class QuadrupedMovementController : MonoBehaviour
             Gizmos.DrawLine(transform.position, transform.position + new Vector3(dir.x, 0, dir.y));
         }
 
-        if (FloorPoint.magnitude > 0.01f)
+        if (floorPoint.magnitude > 0.01f)
         {
-            Gizmos.DrawSphere(FloorPoint, 2f);
+            Gizmos.DrawSphere(floorPoint, 2f);
         }
     }
 
@@ -535,7 +536,8 @@ public class QuadrupedMovementController : MonoBehaviour
         }
 
         // castParent.up = Vector3.up;
-        castParent.position = FloorPoint + new Vector3(0f, bodyHeight * 1.1f, 0);
+        // castParent.position = floorPoint + new Vector3(0f, bodyHeight * 1.1f, 0);
+        castParent.position = bodyTarget + new Vector3(0f, bodyHeight * .1f, 0);
 
         castParent.forward = inputDir_LastForward;
     }
@@ -588,7 +590,7 @@ public class QuadrupedMovementController : MonoBehaviour
 
         Vector3 avg = AverageFeetPosition();
         Vector3 position = catRigidbody.position;
-        if (Physics.Raycast(avg + heightOffset, -Vector3.up, out RaycastHit hit,
+        if (Physics.Raycast(avg, -Vector3.up, out RaycastHit hit,
                 bodyHeight * 2f, castLayer))
         {
             position.y = hit.point.y;
@@ -598,8 +600,9 @@ public class QuadrupedMovementController : MonoBehaviour
             position.y = avg.y;
         }
 
-        FloorPoint = position;
+        floorPoint = position;
         position.y += bodyHeight;
+        bodyTarget = position;
 
         return position;
     }
@@ -729,14 +732,7 @@ public class QuadrupedMovementController : MonoBehaviour
         targetRotation = new Vector3(targetRotation.x * moveTorque.x, targetRotation.y * moveTorque.y,
             targetRotation.z * moveTorque.z);
         targetRotation = catRigidbody.rotation * targetRotation;
-
-        // catRigidbody.angularVelocity = new Vector3();
-
-        // ApplyTorque(catRigidbody.angularVelocity.y,targetRotation.y,new Vector3(0, targetRotation.y * moveTorque.y, 0));
-
-
-        // ApplyTorque(catRigidbody.angularVelocity.x,targetRotation.x,new Vector3(targetRotation.x * moveTorque.x, 0, 0));
-        // ApplyTorque(catRigidbody.angularVelocity.z,targetRotation.z,new Vector3( 0, 0,targetRotation.z * moveTorque.z));
+        
         catRigidbody.AddTorque(targetRotation, ForceMode.Acceleration);
     }
 
