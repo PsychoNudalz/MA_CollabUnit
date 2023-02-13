@@ -77,6 +77,7 @@ public class FootMovementSphere : MonoBehaviour
 
     private Vector3 worldPosition = new Vector3();
     private Vector3 lastPosition = new Vector3();
+    private float gravityFall1;
     public Rigidbody Rb => rb;
 
     public float GravityExtra => gravityExtra;
@@ -126,6 +127,9 @@ public class FootMovementSphere : MonoBehaviour
 
             feetParent.parent = null;
         }
+        
+        gravityFall1 = -Physics.gravity.magnitude * rb.mass * gravityMultiplier_Fall;
+
     }
 
 
@@ -201,11 +205,10 @@ public class FootMovementSphere : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float gravityFall = -Physics.gravity.magnitude * rb.mass * gravityMultiplier_Fall;
         switch (footState)
         {
             case FootState.Idle:
-                rb.AddForce(new Vector3(0, gravityFall, 0));
+                rb.AddForce(new Vector3(0, gravityFall1, 0));
 
                 break;
             case FootState.Move:
@@ -220,11 +223,11 @@ public class FootMovementSphere : MonoBehaviour
 
             case FootState.Falling:
 
-                rb.AddForce(new Vector3(0, gravityFall, 0));
+                rb.AddForce(new Vector3(0, gravityFall1, 0));
                 break;
 
             case FootState.Free:
-                rb.AddForce(new Vector3(0, gravityFall, 0));
+                rb.AddForce(new Vector3(0, gravityFall1, 0));
 
                 break;
         }
@@ -397,7 +400,6 @@ public class FootMovementSphere : MonoBehaviour
                 break;
             case FootState.Free:
                 break;
-                ;
         }
 
         footState = fs;
