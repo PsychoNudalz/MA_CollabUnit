@@ -38,20 +38,23 @@ public class CatMovementController : MonoBehaviour
     void Update()
     {
         MoveCat();
-
     }
 
     public void OnMove(InputValue inputValue)
     {
         moveInput = inputValue.Get<Vector2>();
         // Vector3 inputDir = new Vector3(inputDir_v2.x, 0, inputDir_v2.y);
-
     }
 
     public void OnJump()
     {
         // print("Jump");
         quadrupedMovementController.Jump();
+    }
+
+    public void OnSwipe()
+    {
+        quadrupedMovementController.OnSwipe(cameraTransform.forward);
     }
 
     public void OnHardReset()
@@ -61,13 +64,25 @@ public class CatMovementController : MonoBehaviour
 
     private void MoveCat()
     {
-        Vector3 cameraForward = cameraTransform.forward;
+        Vector2 moveDir = GetAngle_Local() * moveInput;
+        quadrupedMovementController.OnMove(moveDir);
+    }
 
+    private Quaternion GetAngle_Local()
+    {
+        Vector3 cameraForward = cameraTransform.forward;
         cameraForward.y = 0;
         cameraForward = cameraForward.normalized;
         float angle = Vector3.SignedAngle(transform.forward, cameraForward, transform.up);
-        Vector2 moveDir = Quaternion.Euler(0, 0, -angle) * moveInput;
-        // print($"{angle}, {moveDir}");
-        quadrupedMovementController.OnMove(moveDir);
+        return Quaternion.Euler(0, 0, -angle);
+    }
+
+    private Quaternion GetAngle_World()
+    {
+        Vector3 cameraForward = cameraTransform.forward;
+        cameraForward.y = 0;
+        cameraForward = cameraForward.normalized;
+        float angle = Vector3.SignedAngle(Vector3.forward, cameraForward, transform.up);
+        return Quaternion.Euler(0, 0, -angle);
     }
 }

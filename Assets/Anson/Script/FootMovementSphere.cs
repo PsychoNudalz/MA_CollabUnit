@@ -11,7 +11,8 @@ public class FootMovementSphere : MonoBehaviour
         Idle,
         Move,
         Falling,
-        Free //ONLY FOR RAGDOLL
+        Free, //ONLY FOR RAGDOLL
+        Swipe
     }
 
     [SerializeField]
@@ -77,6 +78,8 @@ public class FootMovementSphere : MonoBehaviour
 
     private Vector3 worldPosition = new Vector3();
     private Vector3 lastPosition = new Vector3();
+    private Vector3 swipeForce = new Vector3();
+    
     private float gravityFall1;
     public Rigidbody Rb => rb;
 
@@ -230,6 +233,11 @@ public class FootMovementSphere : MonoBehaviour
                 rb.AddForce(new Vector3(0, gravityFall1, 0));
 
                 break;
+            case FootState.Swipe:
+                // rb.AddForce(swipeForce,ForceMode.Acceleration);
+                rb.AddForce(new Vector3(0, gravityFall1, 0));
+
+                break;
         }
 
         lastPosition = transform.position;
@@ -294,7 +302,6 @@ public class FootMovementSphere : MonoBehaviour
         {
             ChangeState(FootState.Move);
             rb.AddForce(force * rb.mass);
-            launchCollisionIgnoreTime_Set = Time.time;
         }
     }
 
@@ -302,7 +309,6 @@ public class FootMovementSphere : MonoBehaviour
     {
         ChangeState(FootState.Move);
         rb.velocity = velocity;
-        launchCollisionIgnoreTime_Set = Time.time;
     }
 
     public void SetJump(Vector3 velocity)
@@ -317,11 +323,26 @@ public class FootMovementSphere : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (footState == FootState.Move)
+        switch (footState)
         {
-            if (Time.time - launchCollisionIgnoreTime_Set > launchCollisionIgnoreTime)
+            case FootState.Move:
             {
-                // Debug.Log($"{this} collided {collision.collider.name}");
+                if (Time.time - launchCollisionIgnoreTime_Set > launchCollisionIgnoreTime)
+                {
+                    // Debug.Log($"{this} collided {collision.collider.name}");
+                    if (GroundCheck(transform.position))
+                    {
+                        SetFootIdle(collision);
+                    }
+                    else
+                    {
+                        SetFootFall(collision);
+                    }
+                }
+
+                break;
+            }
+            case FootState.Falling:
                 if (GroundCheck(transform.position))
                 {
                     SetFootIdle(collision);
@@ -330,21 +351,26 @@ public class FootMovementSphere : MonoBehaviour
                 {
                     SetFootFall(collision);
                 }
-                // ChangeState(FootState.Falling);
-            }
+                break;
+            
+            case FootState.Swipe:
+                if (Time.time - launchCollisionIgnoreTime_Set > launchCollisionIgnoreTime)
+                {
+                    // Debug.Log($"{this} collided {collision.collider.name}");
+                    if (GroundCheck(transform.position))
+                    {
+                        SetFootIdle(collision);
+                    }
+                    else
+                    {
+                        SetFootFall(collision);
+                    }
+                }
+
+                break;
         }
 
-        if (footState == FootState.Falling)
-        {
-            if (GroundCheck(transform.position))
-            {
-                SetFootIdle(collision);
-            }
-            else
-            {
-                SetFootFall(collision);
-            }
-        }
+        
     }
 
     public void SetFootIdle(Collision collision = null)
@@ -394,14 +420,30 @@ public class FootMovementSphere : MonoBehaviour
                 // rb.useGravity = false;
                 break;
             case FootState.Move:
+                launchCollisionIgnoreTime_Set = Time.time;
+
                 break;
 
             case FootState.Falling:
                 break;
             case FootState.Free:
+                
+                break;
+
+            case FootState.Swipe:
+                launchCollisionIgnoreTime_Set = Time.time;
+
                 break;
         }
 
         footState = fs;
+    }
+
+    public void Swipe(Vector3 initialForce, Vector3 sideForce)
+    {
+        ChangeState(FootState.Swipe);
+        print($"{this} Swipe: {initialForce}");
+        rb.AddForce(initialForce,ForceMode.Acceleration);
+        swipeForce = sideForce-initialForce*.1f;
     }
 }

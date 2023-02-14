@@ -18,7 +18,8 @@ public struct FootCastPair
     [SerializeField]
     private Transform footMesh;
 
-    [SerializeField] public FootMovementSphere Foot => foot;
+    [SerializeField]
+    public FootMovementSphere Foot => foot;
 
     public Transform RaycastPoint => raycastPoint;
 
@@ -181,6 +182,11 @@ public class QuadrupedMovementController : MonoBehaviour
     private float gravity;
     private Vector3 catAngles;
     private Vector3 bodyTarget;
+
+    [Space(5)]
+    [SerializeField]
+    [Tooltip("X: initial, Y: Side")]
+    private Vector2 swipeForce = new Vector2(200f, 100f);
 
 
     private void Awake()
@@ -455,8 +461,8 @@ public class QuadrupedMovementController : MonoBehaviour
     {
         Vector3 trajectory = FindTrajectoryToTarget(footCastPair.Foot, footCastPair.RaycastPoint, flipYAngles);
         Vector3 velocity = inputDir_World * move_XZ;
-        
-        
+
+
         trajectory += velocity;
 
         trajectory += catRigidbody.velocity;
@@ -520,9 +526,9 @@ public class QuadrupedMovementController : MonoBehaviour
         // Debug.Log($"{legCastPoint} angle: {angleAxis.eulerAngles}");
         Vector3 offset = (move_XZ * footMoveTime) * inputDir_World;
 
-        if (Physics.Raycast(legCastPoint.position+offset, dir, out hit, castDistance, castLayer))
+        if (Physics.Raycast(legCastPoint.position + offset, dir, out hit, castDistance, castLayer))
         {
-            Debug.DrawLine(legCastPoint.position+offset, hit.point, Color.blue, .5f);
+            Debug.DrawLine(legCastPoint.position + offset, hit.point, Color.blue, .5f);
             return hit.point;
         }
         else
@@ -736,7 +742,7 @@ public class QuadrupedMovementController : MonoBehaviour
         targetRotation = new Vector3(targetRotation.x * moveTorque.x, targetRotation.y * moveTorque.y,
             targetRotation.z * moveTorque.z);
         targetRotation = catRigidbody.rotation * targetRotation;
-        
+
         catRigidbody.AddTorque(targetRotation, ForceMode.Acceleration);
     }
 
@@ -809,13 +815,14 @@ public class QuadrupedMovementController : MonoBehaviour
                 {
                     return;
                 }
+
                 ChangeQuadState(QuadState.Ragdoll);
                 Vector3 baseVelocity =
                     (new Vector3(inputDir_World.x * jumpForce_XZ.x, jumpForce_Y, inputDir_World.z * jumpForce_XZ.y));
                 Vector3 velocity;
                 foreach (FootCastPair footCastPair in feet)
                 {
-                    velocity = baseVelocity+RandomJumpVelocity();
+                    velocity = baseVelocity + RandomJumpVelocity();
                     // velocity = transform.rotation * velocity;
                     footCastPair.Foot.SetJump(velocity);
                 }
@@ -859,6 +866,15 @@ public class QuadrupedMovementController : MonoBehaviour
         }
 
         return false;
+    }
+
+
+    //******************SWIPE
+    public void OnSwipe(Vector3 dir)
+    {
+        Quaternion angle = Quaternion.AngleAxis(Vector3.SignedAngle(Vector3.forward,dir,Vector3.up), Vector3.up);
+        dir =  angle*Quaternion.AngleAxis(-30, Vector3.right)*Vector3.forward;
+        frontFeet[0].Foot.Swipe(dir * swipeForce.x, Quaternion.AngleAxis(-90, catTransform.up) * dir * swipeForce.y);
     }
 
 
