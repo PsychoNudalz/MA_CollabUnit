@@ -9,6 +9,9 @@ public class MovableObject : MonoBehaviour
     [SerializeField]
     private Rigidbody rb;
 
+    [SerializeField]
+    private float velocityMultiplier = 1f;
+
     private Vector3 tempPosition = new Vector3();
     private Vector3 previousPosition = new Vector3();
 
@@ -24,7 +27,7 @@ public class MovableObject : MonoBehaviour
     private Vector3 GetVelocity()
     {
         Vector3 temp = (transform.position - previousPosition) / Time.deltaTime;
-        return temp;
+        return temp*velocityMultiplier;
     }
 
     // Start is called before the first frame update

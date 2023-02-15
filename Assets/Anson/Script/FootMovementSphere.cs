@@ -234,8 +234,9 @@ public class FootMovementSphere : MonoBehaviour
 
                 break;
             case FootState.Swipe:
-                // rb.AddForce(swipeForce,ForceMode.Acceleration);
+                rb.AddForce(swipeForce,ForceMode.Acceleration);
                 rb.AddForce(new Vector3(0, gravityFall1, 0));
+                Debug.DrawRay(transform.position,swipeForce,Color.blue);
 
                 break;
         }
@@ -444,6 +445,8 @@ public class FootMovementSphere : MonoBehaviour
         ChangeState(FootState.Swipe);
         print($"{this} Swipe: {initialForce}");
         rb.AddForce(initialForce,ForceMode.Acceleration);
-        swipeForce = sideForce-initialForce*.1f;
+        swipeForce = sideForce;
+        Debug.DrawRay(transform.position,initialForce,Color.green,2f);
+
     }
 }

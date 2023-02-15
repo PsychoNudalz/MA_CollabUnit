@@ -874,7 +874,8 @@ public class QuadrupedMovementController : MonoBehaviour
     {
         Quaternion angle = Quaternion.AngleAxis(Vector3.SignedAngle(Vector3.forward,dir,Vector3.up), Vector3.up);
         dir =  angle*Quaternion.AngleAxis(-30, Vector3.right)*Vector3.forward;
-        frontFeet[0].Foot.Swipe(dir * swipeForce.x, Quaternion.AngleAxis(-90, catTransform.up) * dir * swipeForce.y);
+        Vector3 sideForce = Quaternion.AngleAxis(-90, Vector3.up) * dir ;
+        frontFeet[0].Foot.Swipe(dir * swipeForce.x, sideForce* swipeForce.y);
     }
 
 
