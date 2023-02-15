@@ -69,6 +69,13 @@ public class FootMovementSphere : MonoBehaviour
     private float groundCheckTime_Now = -1;
     private Vector3 collisionPoint = new Vector3();
 
+    [Header("Swipe")]
+    [SerializeField]
+    private float swipeTime = 0.5f;
+
+    private float swipeTime_Now = 0f;
+    private Vector3 swipeForce = new Vector3();
+
     [Space(10)]
     [SerializeField]
     private bool isDebug = false;
@@ -78,7 +85,6 @@ public class FootMovementSphere : MonoBehaviour
 
     private Vector3 worldPosition = new Vector3();
     private Vector3 lastPosition = new Vector3();
-    private Vector3 swipeForce = new Vector3();
     
     private float gravityFall1;
     public Rigidbody Rb => rb;
@@ -234,7 +240,12 @@ public class FootMovementSphere : MonoBehaviour
 
                 break;
             case FootState.Swipe:
-                rb.AddForce(swipeForce,ForceMode.Acceleration);
+                if (swipeTime_Now < swipeTime)
+                {
+                    swipeTime_Now += Time.deltaTime;
+                    rb.AddForce(swipeForce,ForceMode.Acceleration);
+
+                }
                 rb.AddForce(new Vector3(0, gravityFall1, 0));
                 Debug.DrawRay(transform.position,swipeForce,Color.blue);
 
@@ -447,6 +458,6 @@ public class FootMovementSphere : MonoBehaviour
         rb.AddForce(initialForce,ForceMode.Acceleration);
         swipeForce = sideForce;
         Debug.DrawRay(transform.position,initialForce,Color.green,2f);
-
+        swipeTime_Now = 0f;
     }
 }

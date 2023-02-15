@@ -809,6 +809,7 @@ MonoBehaviour:
     m_Bits: 576
   groundRange: 3
   groundCheckTime: 0.05
+  swipeTime: 0.5
   isDebug: 0
 --- !u!144 &1327074769
 CharacterJoint:
@@ -882,6 +883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+  velocityMultiplier: 1
   isDebug: 0
 --- !u!1 &2948913357568498267
 GameObject:
@@ -1032,7 +1034,7 @@ MonoBehaviour:
   - {fileID: 1381904512272843270}
   - {fileID: 3695566665725362777}
   ragdollGravityMultiplier: 2
-  swipeForce: {x: 2000, y: 1}
+  swipeForce: {x: 600, y: 500}
 --- !u!1 &2948913357674413529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,6 +1322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+  velocityMultiplier: 1
   isDebug: 0
 --- !u!1 &2948913358393695759
 GameObject:
@@ -1446,6 +1449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 682585319747038410}
+  velocityMultiplier: 1
   isDebug: 0
 --- !u!1 &2948913358470359492
 GameObject:
@@ -1836,6 +1840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+  velocityMultiplier: 1
   isDebug: 0
 --- !u!1 &3423125885819831814
 GameObject:
@@ -2128,6 +2133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+  velocityMultiplier: 1
   isDebug: 0
 --- !u!1 &3756507090784153180
 GameObject:
@@ -2320,6 +2326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+  velocityMultiplier: 1
   isDebug: 0
 --- !u!1 &5129710666514318618
 GameObject:
@@ -2513,6 +2520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+  velocityMultiplier: 1
   isDebug: 0
 --- !u!1 &5546047621064757353
 GameObject:
@@ -2706,6 +2714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+  velocityMultiplier: 1
   isDebug: 0
 --- !u!1 &5724941248623486810
 GameObject:
@@ -2898,6 +2907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+  velocityMultiplier: 1
   isDebug: 0
 --- !u!1 &5764952799600764374
 GameObject:
@@ -3091,6 +3101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+  velocityMultiplier: 1
   isDebug: 0
 --- !u!1 &6310691248721770158
 GameObject:
@@ -3224,6 +3235,7 @@ MonoBehaviour:
     m_Bits: 576
   groundRange: 3
   groundCheckTime: 0.05
+  swipeTime: 0.5
   isDebug: 0
 --- !u!144 &1129599038
 CharacterJoint:
@@ -3297,6 +3309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+  velocityMultiplier: 1
   isDebug: 0
 --- !u!1 &6509629173898440409
 GameObject:
@@ -3430,6 +3443,7 @@ MonoBehaviour:
     m_Bits: 576
   groundRange: 3
   groundCheckTime: 0.05
+  swipeTime: 0.5
   isDebug: 0
 --- !u!144 &1627667780
 CharacterJoint:
@@ -3503,6 +3517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+  velocityMultiplier: 1
   isDebug: 0
 --- !u!1 &6855727369538146171
 GameObject:
@@ -3793,6 +3808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+  velocityMultiplier: 1
   isDebug: 0
 --- !u!1 &7114897426065859169
 GameObject:
@@ -3926,6 +3942,7 @@ MonoBehaviour:
     m_Bits: 576
   groundRange: 3
   groundCheckTime: 0.05
+  swipeTime: 0.5
   isDebug: 0
 --- !u!144 &1562173012
 CharacterJoint:
@@ -3999,4 +4016,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+  velocityMultiplier: 1
   isDebug: 0
