@@ -917,6 +917,7 @@ public class QuadrupedMovementController : MonoBehaviour
         FootMovementSphere current = null;
         foreach (FootCastPair footCastPair in feet)
         {
+            footCastPair.Foot.SetHighlight(false);
             if (!footCastPair.Foot.IsSwiping)
             {
                 float d = Vector3.Distance(footCastPair.Position, camPos);
@@ -928,6 +929,7 @@ public class QuadrupedMovementController : MonoBehaviour
                 }
             }
         }
+        current?.SetHighlight(true);
 
         return current;
     }

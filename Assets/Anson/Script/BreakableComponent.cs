@@ -250,10 +250,10 @@ public class BreakableComponent : MonoBehaviour
     {
     }
 
-    public virtual void CollisionBreak(Rigidbody rb, Collision collision = null)
+    public virtual void CollisionBreak(Rigidbody rb, Collision collision = null, Vector3 point = default)
     {
     }
-    public virtual void CollisionBreak(MovableObject mo, Collision collision = null)
+    public virtual void CollisionBreak(MovableObject mo, Collision collision = null, Vector3 point = default)
     {
     }
 

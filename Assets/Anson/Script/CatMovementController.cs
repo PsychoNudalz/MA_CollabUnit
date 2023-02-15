@@ -38,6 +38,13 @@ public class CatMovementController : MonoBehaviour
     void Update()
     {
         MoveCat();
+        
+    }
+
+    private void FixedUpdate()
+    {
+        quadrupedMovementController.GetClosestFoot(cameraTransform.forward, cameraTransform.position);
+
     }
 
     public void OnMove(InputValue inputValue)
@@ -60,6 +67,10 @@ public class CatMovementController : MonoBehaviour
     public void OnHardReset()
     {
         quadrupedMovementController.HardReset();
+    }
+
+    public void OnLook()
+    {
     }
 
     private void MoveCat()

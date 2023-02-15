@@ -60,4 +60,9 @@ public class MovableObject : MonoBehaviour
             Debug.Log($"{this} position difference: {(transform.position - previousPosition).magnitude}, {Velocity}");
         }
     }
+
+    public void CarryOnVelocity(Vector3 velocity)
+    {
+        rb.velocity = velocity / velocityMultiplier;
+    }
 }

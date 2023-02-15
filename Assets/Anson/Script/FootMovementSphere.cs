@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using HighlightPlus;
 using UnityEngine;
 
 public class FootMovementSphere : MonoBehaviour
@@ -24,6 +25,9 @@ public class FootMovementSphere : MonoBehaviour
 
     [SerializeField]
     private Rigidbody rb;
+
+    [SerializeField]
+    private MovableObject mo;
 
     [SerializeField]
     private float launchCollisionIgnoreTime = 0.05f;
@@ -60,12 +64,16 @@ public class FootMovementSphere : MonoBehaviour
     private Vector3 collisionPoint = new Vector3();
 
     [Header("Swipe")]
+    
     [SerializeField]
     private GameObject swipeCollider;
 
     [SerializeField]
-    private float swipeTime = 0.5f;
+    private float swipeTime = 1f;
 
+    [SerializeField]
+    private HighlightEffect highlight;
+    
     private float swipeTime_Now = 0f;
     private Vector3 swipeForce = new Vector3();
 
@@ -107,6 +115,16 @@ public class FootMovementSphere : MonoBehaviour
         if (!rb)
         {
             rb = GetComponent<Rigidbody>();
+        }
+
+        if (!highlight)
+        {
+            highlight = GetComponent<HighlightEffect>();
+        }
+
+        if (!mo)
+        {
+            mo = GetComponent<MovableObject>();
         }
     }
 
@@ -238,6 +256,10 @@ public class FootMovementSphere : MonoBehaviour
                     swipeTime_Now += Time.deltaTime;
                     rb.AddForce(swipeForce, ForceMode.Acceleration);
                 }
+                else
+                {
+                    SetFootFall();
+                }
 
                 rb.AddForce(new Vector3(0, gravityFall1, 0));
                 Debug.DrawRay(transform.position, swipeForce, Color.blue);
@@ -358,20 +380,43 @@ public class FootMovementSphere : MonoBehaviour
                 break;
 
             case FootState.Swipe:
-                if (Time.time - launchCollisionIgnoreTime_Set > launchCollisionIgnoreTime&&swipeTime_Now<0)
-                {
-                    // Debug.Log($"{this} collided {collision.collider.name}");
-                    if (GroundCheck(transform.position))
-                    {
-                        SetFootIdle(collision);
-                    }
-                    else
-                    {
-                        SetFootFall(collision);
-                    }
-                }
+                // if (Time.time - launchCollisionIgnoreTime_Set > launchCollisionIgnoreTime)
+                // {
+                //     // Debug.Log($"{this} collided {collision.collider.name}");
+                //     if (GroundCheck(transform.position))
+                //     {
+                //         SetFootIdle(collision);
+                //     }
+                //     else
+                //     {
+                //         SetFootFall(collision);
+                //     }
+                // }
 
                 break;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        switch (footState)
+        {
+            case FootState.Idle:
+                break;
+            case FootState.Move:
+                break;
+            case FootState.Falling:
+                break;
+            case FootState.Free:
+                break;
+            case FootState.Swipe:
+                if (other.TryGetComponent(out BreakableComponent bc))
+                {
+                    bc.CollisionBreak(mo,null, other.transform.position);
+                }
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
         }
     }
 
@@ -468,9 +513,14 @@ public class FootMovementSphere : MonoBehaviour
         rb.angularVelocity = Vector3.zero;
         
         
-        rb.AddForce(initialForce, ForceMode.Acceleration);
+        rb.AddForce(initialForce, ForceMode.VelocityChange);
         swipeForce = sideForce;
         Debug.DrawRay(transform.position, initialForce, Color.green, 2f);
         swipeTime_Now = 0f;
+    }
+
+    public void SetHighlight(bool b)
+    {
+        highlight?.SetHighlighted(b);
     }
 }

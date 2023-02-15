@@ -287,7 +287,7 @@ public class BreakablePart : BreakableComponent
         }
     }
 
-    public override void CollisionBreak(Rigidbody rb, Collision collision = null)
+    public override void CollisionBreak(Rigidbody rb, Collision collision = null, Vector3 point = default)
 
     {
         if (IsBroken())
@@ -326,7 +326,7 @@ public class BreakablePart : BreakableComponent
         }
     }
 
-    public override void CollisionBreak(MovableObject mo, Collision collision = null)
+    public override void CollisionBreak(MovableObject mo, Collision collision = null, Vector3 point = default)
     {
         if (IsBroken())
         {
@@ -360,7 +360,7 @@ public class BreakablePart : BreakableComponent
         //have original object to keep flying
         if (!RBInConnected(mo.Rb))
         {
-            mo.Rb.velocity = originalSpeed * forceTransfer;
+            mo.CarryOnVelocity(originalSpeed * forceTransfer);
         }
     }
 

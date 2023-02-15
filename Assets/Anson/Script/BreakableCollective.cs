@@ -30,16 +30,16 @@ public class BreakableCollective : BreakableComponent
         {
             if (!bp.Parent.Equals(parent) || bp.BreakableState == BreakableState.FullBreak)
             {
-                CollisionBreak(bp.SelfRb,collision);
+                CollisionBreak(bp.SelfRb, collision);
             }
         }
         else if (collision.gameObject.TryGetComponent(out MovableObject mo))
         {
-            CollisionBreak(mo,collision);
+            CollisionBreak(mo, collision);
         }
         else if (collision.gameObject.TryGetComponent(out Rigidbody rb))
         {
-            CollisionBreak(rb,collision);
+            CollisionBreak(rb, collision);
         }
     }
 
@@ -135,7 +135,7 @@ public class BreakableCollective : BreakableComponent
         fractureParent.SetActive(true);
     }
 
-    public override void CollisionBreak(Rigidbody rb, Collision collision = null)
+    public override void CollisionBreak(Rigidbody rb, Collision collision = null, Vector3 point = default)
     {
         // base.CollisionBreak(rb, collision);
         if (IsBroken())
@@ -149,14 +149,26 @@ public class BreakableCollective : BreakableComponent
         {
             return;
         }
-        Break(new Vector3(),new Vector3());
-        foreach (BreakableComponent breakableComponent in FindBreakablesFromCollision(collision))
+
+        Break(new Vector3(), new Vector3());
+        if (collision!=null)
         {
-            breakableComponent.CollisionBreak(rb,collision);
+            foreach (BreakableComponent breakableComponent in FindBreakablesFromCollision(collision))
+            {
+                breakableComponent.CollisionBreak(rb, collision,point);
+            }
+        }
+
+        if (point != default)
+        {
+            foreach (BreakableComponent breakableComponent in FindBreakablesFromPoint(point))
+            {
+                breakableComponent.CollisionBreak(rb, collision,point);
+            }
         }
     }
 
-    public override void CollisionBreak(MovableObject mo, Collision collision = null)
+    public override void CollisionBreak(MovableObject mo, Collision collision = null, Vector3 point = default)
     {
         if (IsBroken())
         {
@@ -169,11 +181,25 @@ public class BreakableCollective : BreakableComponent
         {
             return;
         }
-        Break(new Vector3(),new Vector3());
-        foreach (BreakableComponent breakableComponent in FindBreakablesFromCollision(collision))
+
+        Break(new Vector3(), new Vector3());
+        if (collision!=null)
         {
-            breakableComponent.CollisionBreak(mo,collision);
+            foreach (BreakableComponent breakableComponent in FindBreakablesFromCollision(collision))
+            {
+                breakableComponent.CollisionBreak(mo, collision,point);
+            }
         }
+
+        if (point != default)
+        {
+            foreach (BreakableComponent breakableComponent in FindBreakablesFromPoint(point))
+            {
+                breakableComponent.CollisionBreak(mo, collision,point);
+            }
+        }
+        
+        
     }
 
     BreakableComponent[] FindBreakablesFromCollision(Collision collision)
@@ -207,6 +233,33 @@ public class BreakableCollective : BreakableComponent
         {
             // Debug.Log($"{this} contacts found {breakableComponents.Count} breakable");
         }
+
+        return breakableComponents.ToArray();
+    }
+
+    BreakableComponent[] FindBreakablesFromPoint(Vector3 point)
+    {
+        List<BreakableComponent> breakableComponents = new List<BreakableComponent>();
+        RaycastHit[] hits;
+        hits = Physics.SphereCastAll(point, contactCastRadius,
+            Vector3.up, 0, castLayer);
+
+        foreach (RaycastHit hit in hits)
+        {
+            if (hit.collider.TryGetComponent(out BreakableComponent breakableComponent))
+            {
+                if (!breakableComponents.Contains(breakableComponent))
+                {
+                    breakableComponents.Add(breakableComponent);
+                }
+            }
+        }
+
+        if (isDebug)
+        {
+            // Debug.Log($"{this} contacts found {breakableComponents.Count} breakable");
+        }
+
         return breakableComponents.ToArray();
     }
 
@@ -222,7 +275,7 @@ public class BreakableCollective : BreakableComponent
         {
             breakableComponent.InitialiseClosest();
         }
-        
+
         fractureParent.SetActive(false);
 
         return base.InitialiseClosest();
