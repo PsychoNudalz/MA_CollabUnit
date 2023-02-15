@@ -54,7 +54,7 @@ public class CatMovementController : MonoBehaviour
 
     public void OnSwipe()
     {
-        quadrupedMovementController.OnSwipe(cameraTransform.forward);
+        quadrupedMovementController.OnSwipe(cameraTransform.forward,cameraTransform.position);
     }
 
     public void OnHardReset()

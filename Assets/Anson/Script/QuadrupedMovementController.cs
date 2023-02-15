@@ -16,7 +16,10 @@ public struct FootCastPair
     private Transform raycastPoint;
 
     [SerializeField]
-    private Transform footMesh;
+    private Transform legRoot;
+
+    // [SerializeField]
+    // private Transform footMesh;
 
     [SerializeField]
     public FootMovementSphere Foot => foot;
@@ -25,15 +28,17 @@ public struct FootCastPair
 
     public Vector3 Position => foot.position;
 
+    public Transform LegRoot => legRoot;
 
-    public Transform FootMesh => footMesh;
+
+    // public Transform FootMesh => footMesh;
 
 
-    public FootCastPair(FootMovementSphere foot, Transform raycastPoint, Transform footMesh)
+    public FootCastPair(FootMovementSphere foot, Transform raycastPoint, Transform legRoot)
     {
         this.foot = foot;
         this.raycastPoint = raycastPoint;
-        this.footMesh = footMesh;
+        this.legRoot = legRoot;
     }
 }
 
@@ -199,7 +204,7 @@ public class QuadrupedMovementController : MonoBehaviour
         foreach (FootCastPair footCastPair in feet)
         {
             FootMovementSphere footMovementSphere = footCastPair.Foot;
-            footMovementSphere.Initialize(this, gravityMultiplier, footCastPair.FootMesh, anchorRange);
+            footMovementSphere.Initialize(this, gravityMultiplier);
         }
     }
 
@@ -870,12 +875,29 @@ public class QuadrupedMovementController : MonoBehaviour
 
 
     //******************SWIPE
-    public void OnSwipe(Vector3 dir)
+    public void OnSwipe(Vector3 dir, Vector3 cam)
     {
         Quaternion angle = Quaternion.AngleAxis(Vector3.SignedAngle(Vector3.forward,dir,Vector3.up), Vector3.up);
-        dir =  angle*Quaternion.AngleAxis(-30, Vector3.right)*Quaternion.AngleAxis(30, Vector3.up) *Vector3.forward;
-        Vector3 sideForce = Quaternion.AngleAxis(-155, Vector3.up) * dir ;
-        frontFeet[0].Foot.Swipe(dir * swipeForce.x, sideForce* swipeForce.y);
+        dir =  angle*Quaternion.AngleAxis(-30, Vector3.right)*Vector3.forward;
+        Vector3 sideForce = Quaternion.AngleAxis(-105, Vector3.up) * dir ;
+        GetClosestFoot(dir,cam).Swipe(dir * swipeForce.x, sideForce* swipeForce.y);
+    }
+
+    public FootMovementSphere GetClosestFoot(Vector3 dir, Vector3 camPos)
+    {
+        float distance = 0f;
+        FootMovementSphere current = feet[0].Foot;
+        foreach (FootCastPair footCastPair in feet)
+        {
+            float d = Vector3.Distance(footCastPair.Position, camPos);
+            if (d > distance)
+            {
+                distance = d;
+                current = footCastPair.Foot;
+            }
+        }
+
+        return current;
     }
 
 

@@ -45,15 +45,7 @@ public class FootMovementSphere : MonoBehaviour
     private float gravityExtra = 0;
     private Vector3 gravityExtra_Vector;
 
-    [Header("Anchor")]
-    [SerializeField]
-    private bool useAnchor = true;
 
-    [SerializeField]
-    private Transform anchorPoint;
-
-    [SerializeField]
-    private float footAnchorRange = 3;
 
 
     [Header("GroundCheck")]
@@ -118,7 +110,6 @@ public class FootMovementSphere : MonoBehaviour
 
     private void Start()
     {
-        transform.position = anchorPoint.position;
         collisionPoint = transform.position;
         worldPosition = transform.position;
         ChangeState(FootState.Idle);
@@ -255,17 +246,17 @@ public class FootMovementSphere : MonoBehaviour
         lastPosition = transform.position;
     }
 
-    private void AnchorFeet()
-    {
-        if (!useAnchor)
-        {
-            return;
-        }
-
-        transform.position =
-            Vector3.ClampMagnitude(transform.position - anchorPoint.position, footAnchorRange) +
-            anchorPoint.position;
-    }
+    // private void AnchorFeet()
+    // {
+    //     if (!useAnchor)
+    //     {
+    //         return;
+    //     }
+    //
+    //     transform.position =
+    //         Vector3.ClampMagnitude(transform.position - anchorPoint.position, footAnchorRange) +
+    //         anchorPoint.position;
+    // }
 
     private bool GroundCheck()
     {
@@ -286,12 +277,10 @@ public class FootMovementSphere : MonoBehaviour
     /// </summary>
     /// <param name="qmc"></param>
     /// <param name="g"></param>
-    public void Initialize(QuadrupedMovementController qmc, float g, Transform a, float anchorRange)
+    public void Initialize(QuadrupedMovementController qmc, float g)
     {
         AwakeBehaviour();
         quadrupedMovementController = qmc;
-        anchorPoint = a;
-        footAnchorRange = anchorRange;
         UpdateGravity(g);
     }
 
