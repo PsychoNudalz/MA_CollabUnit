@@ -46,8 +46,6 @@ public class FootMovementSphere : MonoBehaviour
     private Vector3 gravityExtra_Vector;
 
 
-
-
     [Header("GroundCheck")]
     [SerializeField]
     private LayerMask groundLayer;
@@ -63,6 +61,9 @@ public class FootMovementSphere : MonoBehaviour
 
     [Header("Swipe")]
     [SerializeField]
+    private GameObject swipeCollider;
+
+    [SerializeField]
     private float swipeTime = 0.5f;
 
     private float swipeTime_Now = 0f;
@@ -77,7 +78,7 @@ public class FootMovementSphere : MonoBehaviour
 
     private Vector3 worldPosition = new Vector3();
     private Vector3 lastPosition = new Vector3();
-    
+
     private float gravityFall1;
     public Rigidbody Rb => rb;
 
@@ -86,6 +87,7 @@ public class FootMovementSphere : MonoBehaviour
     // public float GravityAccel => gravityExtra / rb.mass;
     public bool IsIdle => footState == FootState.Idle;
     public bool IsFalling => footState == FootState.Falling;
+    public bool IsSwiping => footState == FootState.Swipe;
 
 
     public Vector3 position
@@ -127,9 +129,9 @@ public class FootMovementSphere : MonoBehaviour
 
             feetParent.parent = null;
         }
-        
-        gravityFall1 = -Physics.gravity.magnitude * rb.mass * gravityMultiplier_Fall;
 
+        gravityFall1 = -Physics.gravity.magnitude * rb.mass * gravityMultiplier_Fall;
+        swipeCollider.SetActive(false);
     }
 
 
@@ -234,11 +236,11 @@ public class FootMovementSphere : MonoBehaviour
                 if (swipeTime_Now < swipeTime)
                 {
                     swipeTime_Now += Time.deltaTime;
-                    rb.AddForce(swipeForce,ForceMode.Acceleration);
-
+                    rb.AddForce(swipeForce, ForceMode.Acceleration);
                 }
+
                 rb.AddForce(new Vector3(0, gravityFall1, 0));
-                Debug.DrawRay(transform.position,swipeForce,Color.blue);
+                Debug.DrawRay(transform.position, swipeForce, Color.blue);
 
                 break;
         }
@@ -352,10 +354,11 @@ public class FootMovementSphere : MonoBehaviour
                 {
                     SetFootFall(collision);
                 }
+
                 break;
-            
+
             case FootState.Swipe:
-                if (Time.time - launchCollisionIgnoreTime_Set > launchCollisionIgnoreTime)
+                if (Time.time - launchCollisionIgnoreTime_Set > launchCollisionIgnoreTime&&swipeTime_Now<0)
                 {
                     // Debug.Log($"{this} collided {collision.collider.name}");
                     if (GroundCheck(transform.position))
@@ -370,8 +373,6 @@ public class FootMovementSphere : MonoBehaviour
 
                 break;
         }
-
-        
     }
 
     public void SetFootIdle(Collision collision = null)
@@ -413,6 +414,23 @@ public class FootMovementSphere : MonoBehaviour
         rb.drag = 0f;
         rb.constraints = RigidbodyConstraints.None;
 
+        switch (footState)
+        {
+            case FootState.Idle:
+                break;
+            case FootState.Move:
+                break;
+            case FootState.Falling:
+                break;
+            case FootState.Free:
+                break;
+            case FootState.Swipe:
+                swipeCollider.SetActive(false);
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+
         switch (fs)
         {
             case FootState.Idle:
@@ -428,11 +446,12 @@ public class FootMovementSphere : MonoBehaviour
             case FootState.Falling:
                 break;
             case FootState.Free:
-                
+
                 break;
 
             case FootState.Swipe:
                 launchCollisionIgnoreTime_Set = Time.time;
+                swipeCollider.SetActive(true);
 
                 break;
         }
@@ -444,9 +463,14 @@ public class FootMovementSphere : MonoBehaviour
     {
         ChangeState(FootState.Swipe);
         print($"{this} Swipe: {initialForce}");
-        rb.AddForce(initialForce,ForceMode.Acceleration);
+
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        
+        
+        rb.AddForce(initialForce, ForceMode.Acceleration);
         swipeForce = sideForce;
-        Debug.DrawRay(transform.position,initialForce,Color.green,2f);
+        Debug.DrawRay(transform.position, initialForce, Color.green, 2f);
         swipeTime_Now = 0f;
     }
 }

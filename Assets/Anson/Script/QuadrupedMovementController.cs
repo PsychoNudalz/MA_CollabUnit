@@ -21,8 +21,7 @@ public struct FootCastPair
     // [SerializeField]
     // private Transform footMesh;
 
-    [SerializeField]
-    public FootMovementSphere Foot => foot;
+    [SerializeField] public FootMovementSphere Foot => foot;
 
     public Transform RaycastPoint => raycastPoint;
 
@@ -189,9 +188,21 @@ public class QuadrupedMovementController : MonoBehaviour
     private Vector3 bodyTarget;
 
     [Space(5)]
+    [Header("Swipe")]
     [SerializeField]
     [Tooltip("X: initial, Y: Side")]
-    private Vector2 swipeForce = new Vector2(200f, 100f);
+    private Vector2 swipe_Force = new Vector2(200f, 100f);
+
+    [SerializeField]
+    float swipe_LaunchAngle = 30;
+
+    [SerializeField]
+    private float swipe_LaunchOffset = 10f;
+
+    [SerializeField]
+    private float swipe_Cooldown = 1f;
+
+    private float swipe_Cooldown_Now = 0f;
 
 
     private void Awake()
@@ -254,6 +265,11 @@ public class QuadrupedMovementController : MonoBehaviour
             case QuadState.Ragdoll:
 
                 break;
+        }
+
+        if (swipe_Cooldown_Now > 0)
+        {
+            swipe_Cooldown_Now -= Time.deltaTime;
         }
     }
 
@@ -877,23 +893,39 @@ public class QuadrupedMovementController : MonoBehaviour
     //******************SWIPE
     public void OnSwipe(Vector3 dir, Vector3 cam)
     {
-        Quaternion angle = Quaternion.AngleAxis(Vector3.SignedAngle(Vector3.forward,dir,Vector3.up), Vector3.up);
-        dir =  angle*Quaternion.AngleAxis(-30, Vector3.right)*Vector3.forward;
-        Vector3 sideForce = Quaternion.AngleAxis(-105, Vector3.up) * dir ;
-        GetClosestFoot(dir,cam).Swipe(dir * swipeForce.x, sideForce* swipeForce.y);
+        FootMovementSphere foot = GetClosestFoot(dir, cam);
+        if (!foot)
+        {
+            return;
+        }
+
+        if (swipe_Cooldown_Now > 0)
+        {
+            return;
+        }
+
+        swipe_Cooldown_Now = swipe_Cooldown;
+        Quaternion angle = Quaternion.AngleAxis(Vector3.SignedAngle(Vector3.forward, dir, Vector3.up), Vector3.up);
+        dir = angle *  Quaternion.AngleAxis(swipe_LaunchOffset, Vector3.up) *Quaternion.AngleAxis(-swipe_LaunchAngle, Vector3.right) * Vector3.forward;
+        Vector3 sideForce = Quaternion.AngleAxis(-105, Vector3.up) * dir;
+        foot.Swipe(dir * swipe_Force.x, sideForce * swipe_Force.y);
     }
 
     public FootMovementSphere GetClosestFoot(Vector3 dir, Vector3 camPos)
     {
         float distance = 0f;
-        FootMovementSphere current = feet[0].Foot;
+        FootMovementSphere current = null;
         foreach (FootCastPair footCastPair in feet)
         {
-            float d = Vector3.Distance(footCastPair.Position, camPos);
-            if (d > distance)
+            if (!footCastPair.Foot.IsSwiping)
             {
-                distance = d;
-                current = footCastPair.Foot;
+                float d = Vector3.Distance(footCastPair.Position, camPos);
+                d *= Vector3.Dot(dir, (footCastPair.LegRoot.position - catTransform.position).normalized);
+                if (d > distance)
+                {
+                    distance = d;
+                    current = footCastPair.Foot;
+                }
             }
         }
 
