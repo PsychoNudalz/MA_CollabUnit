@@ -77,7 +77,10 @@ public class CatInputController : MonoBehaviour
     {
         if (inputValue.Get<float>() > 0.5f)
         {
-            catTelekinesis.UseTelekinesis(cameraTransform.forward,cameraTransform.position);
+            catTelekinesis.OnTelekinesis_Press(cameraTransform.forward,cameraTransform.position);
+        }else
+        {
+            catTelekinesis.OnTelekinesis_Release(cameraTransform.forward,cameraTransform.position);
         }
     }
 

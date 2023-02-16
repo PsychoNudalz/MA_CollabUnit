@@ -85,15 +85,30 @@ public class CatTelekinesis : MonoBehaviour
         }
     }
 
-    public void UseTelekinesis(Vector3 dir,Vector3 castPoint)
+    public void OnTelekinesis_Press(Vector3 dir,Vector3 castPoint)
+    {
+        switch (telekinesisState)
+        {
+            case TelekinesisState.Idle:
+                break;
+            case TelekinesisState.Pull:
+                OnTele_Shoot(dir);
+                break;
+            case TelekinesisState.Shoot:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+    }
+    public void OnTelekinesis_Release(Vector3 dir,Vector3 castPoint)
     {
         switch (telekinesisState)
         {
             case TelekinesisState.Idle:
                 OnTele_Pull(dir,castPoint);
+ 
                 break;
             case TelekinesisState.Pull:
-                OnTele_Shoot(dir);
                 break;
             case TelekinesisState.Shoot:
                 break;
