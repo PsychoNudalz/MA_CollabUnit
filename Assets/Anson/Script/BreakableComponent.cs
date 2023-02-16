@@ -62,7 +62,9 @@ public enum BreakableState
     InitialBreak,
     Free,
     Stay,
-    Despawn
+    Despawn,
+    Telekinesis,
+    Telekinesis_Shoot
 }
 
 
@@ -70,6 +72,9 @@ public class BreakableComponent : MonoBehaviour
 {
     [SerializeField]
     protected Rigidbody selfRB;
+
+    [SerializeField]
+    protected Collider collider;
 
     [SerializeField]
     private PhysicMaterial physicMaterial;
@@ -266,6 +271,11 @@ public class BreakableComponent : MonoBehaviour
             }
         }
 
+        if (!collider)
+        {
+            collider = GetComponent<Collider>();
+        }
+            
         connectedParts = new List<BreakableData>();
         otherConnectedParts = new List<BreakableData>();
 
@@ -288,7 +298,7 @@ public class BreakableComponent : MonoBehaviour
 
     protected bool IsBroken()
     {
-        return breakableState is BreakableState.InitialBreak or BreakableState.Free or BreakableState.Despawn or BreakableState.Stay;
+        return breakableState is not BreakableState.Hold;
     }
 
     public virtual void RemovePart(BreakableComponent part)
@@ -499,8 +509,9 @@ public class BreakableComponent : MonoBehaviour
                 break;
             case BreakableState.Stay:
                 break;
-            default:
-                throw new ArgumentOutOfRangeException();
+
+            
+            
         }
         breakableState = bs;
         switch (bs)
@@ -513,8 +524,8 @@ public class BreakableComponent : MonoBehaviour
                 break;
             case BreakableState.Stay:
                 break;
-            default:
-                throw new ArgumentOutOfRangeException(nameof(bs), bs, null);
+
+            
         }
     }
 

@@ -63,8 +63,18 @@ public class BreakableManager : MonoBehaviour
                 {
                     if (breakableComponent)
                     {
-                        breakableComponent.Despawn();
+                        
                         buffer.Remove(breakableComponent);
+
+                        if (breakableComponent.BreakableState is BreakableState.Telekinesis
+                            or BreakableState.Telekinesis_Shoot)
+                        {
+                            Add(breakableComponent);
+                        }
+                        else
+                        {
+                            breakableComponent.Despawn();
+                        }
                     }
                     else
                     {

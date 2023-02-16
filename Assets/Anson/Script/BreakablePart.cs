@@ -67,20 +67,30 @@ public class BreakablePart : BreakableComponent
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.TryGetComponent(out BreakablePart bp))
+        if (breakableState == BreakableState.Telekinesis_Shoot)
         {
-            if (!bp.Parent.Equals(parent) || bp.BreakableState == BreakableState.Free)
+            ChangeState(BreakableState.Free);
+        }
+        else
+        {
+            if (!IsBroken())
             {
-                CollisionBreak(bp.selfRB);
+                if (collision.gameObject.TryGetComponent(out BreakablePart bp))
+                {
+                    if (!bp.Parent.Equals(parent) || bp.BreakableState == BreakableState.Free)
+                    {
+                        CollisionBreak(bp.selfRB);
+                    }
+                }
+                else if (collision.gameObject.TryGetComponent(out MovableObject mo))
+                {
+                    CollisionBreak(mo.Rb);
+                }
+                else if (collision.gameObject.TryGetComponent(out Rigidbody rb))
+                {
+                    CollisionBreak(rb);
+                }
             }
-        }
-        else if (collision.gameObject.TryGetComponent(out MovableObject mo))
-        {
-            CollisionBreak(mo.Rb);
-        }
-        else if (collision.gameObject.TryGetComponent(out Rigidbody rb))
-        {
-            CollisionBreak(rb);
         }
     }
 
@@ -424,6 +434,8 @@ public class BreakablePart : BreakableComponent
         {
             return;
         }
+
+        selfRB.isKinematic = true;
         breakableState = BreakableState.Despawn;
         despawnEvent.Invoke();
         LeanTween.scale(gameObject, Vector3.zero, despawnTime);
@@ -432,5 +444,19 @@ public class BreakablePart : BreakableComponent
         {
             rendererMaterial.color = Color.yellow;
         }
+    }
+    
+    //************Launching Part
+
+    public void Telekinesis()
+    {
+       ChangeState(BreakableState.Telekinesis);
+       collider.enabled = false;
+    }
+    public void Launch(Vector3 accel)
+    {
+        ChangeState(BreakableState.Telekinesis_Shoot);
+        collider.enabled = true;
+        SelfRb.AddForce(accel,ForceMode.Acceleration);
     }
 }

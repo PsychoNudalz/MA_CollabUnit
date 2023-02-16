@@ -218,6 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462408421033220}
+  collider: {fileID: 0}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts: []
@@ -1268,6 +1269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462408337037494}
+  collider: {fileID: 8327944147605154110}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
@@ -1411,21 +1413,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462407048768650}
+  collider: {fileID: 5092345314671799822}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
   - component: {fileID: 1786462407214014032}
     distance: 4.896741
     dir: {x: -0.23872274, y: -0.9710853, z: -0.0021719295}
-  - component: {fileID: 1786462406697348960}
-    distance: 6.3472023
-    dir: {x: 0.97730714, y: 0.0038793338, z: 0.21179159}
   - component: {fileID: 1786462408591574995}
     distance: 3.0222213
     dir: {x: 0.24173653, y: 0.09618783, z: -0.9655627}
-  - component: {fileID: 1786462408050357061}
-    distance: 8.004865
-    dir: {x: 0.37788385, y: -0.6696238, z: -0.63938075}
+  - component: {fileID: 1786462406697348960}
+    distance: 6.3472023
+    dir: {x: 0.97730714, y: 0.0038793338, z: 0.21179159}
   - component: {fileID: 1786462406976918515}
     distance: 8.325459
     dir: {x: 0.75302356, y: -0.21416645, z: -0.6221642}
@@ -1435,6 +1435,9 @@ MonoBehaviour:
   - component: {fileID: 1786462407930885275}
     distance: 6.7038713
     dir: {x: 0.48724988, y: 0.86431426, z: 0.1246936}
+  - component: {fileID: 1786462408050357061}
+    distance: 8.004865
+    dir: {x: 0.37788385, y: -0.6696238, z: -0.63938075}
   otherConnectedParts:
   - component: {fileID: 1786462406775818268}
     distance: 4.897763
@@ -1537,6 +1540,18 @@ MeshFilter:
     type: 3}
   m_PrefabInstance: {fileID: 1786462406775820230}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &511757304156712196 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: -6930781894190652734, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &552878397461291714 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 2262775006362381572, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &683248414661947373 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: -7948386289828470741, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -1599,9 +1614,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462406775818270}
+  collider: {fileID: 8303778774771745451}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
+  - component: {fileID: 1786462407606996316}
+    distance: 4.540032
+    dir: {x: -0.94715726, y: -0.019155486, z: 0.32019705}
+  - component: {fileID: 1786462408375570204}
+    distance: 5.253791
+    dir: {x: -0.74815106, y: -0.66009736, z: 0.06739083}
   - component: {fileID: 1786462407689320162}
     distance: 3.0247288
     dir: {x: -0.08636477, y: 0.33289197, z: -0.9390016}
@@ -1614,24 +1636,18 @@ MonoBehaviour:
   - component: {fileID: 1786462406697348960}
     distance: 6.6520157
     dir: {x: -0.6591738, y: 0.72606105, z: 0.19576828}
-  - component: {fileID: 1786462407606996316}
-    distance: 4.540032
-    dir: {x: -0.94715726, y: -0.019155486, z: 0.32019705}
-  - component: {fileID: 1786462408375570204}
-    distance: 5.253791
-    dir: {x: -0.74815106, y: -0.66009736, z: 0.06739083}
-  - component: {fileID: 1786462408050357061}
-    distance: 9.172568
-    dir: {x: -0.82453364, y: -0.060517553, z: -0.5625673}
   - component: {fileID: 1786462406707107365}
     distance: 7.2372785
     dir: {x: -0.1535711, y: 0.93942076, z: -0.30643854}
-  - component: {fileID: 1786462407720118821}
-    distance: 8.312385
-    dir: {x: -0.12552737, y: 0.22224145, z: -0.9668773}
   - component: {fileID: 1786462406976918515}
     distance: 7.4197145
     dir: {x: -0.582062, y: 0.40730852, z: -0.7037781}
+  - component: {fileID: 1786462408050357061}
+    distance: 9.172568
+    dir: {x: -0.82453364, y: -0.060517553, z: -0.5625673}
+  - component: {fileID: 1786462407720118821}
+    distance: 8.312385
+    dir: {x: -0.12552737, y: 0.22224145, z: -0.9668773}
   otherConnectedParts:
   - component: {fileID: 1786462407606996316}
     distance: 4.540032
@@ -1725,6 +1741,12 @@ MeshFilter:
     type: 3}
   m_PrefabInstance: {fileID: 1786462406775820230}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &919100060107025703 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: -7778975795316366623, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1016973995263876826 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1646011160366223644, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -1760,6 +1782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462408050357060}
+  collider: {fileID: 919100060107025703}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
@@ -1772,30 +1795,30 @@ MonoBehaviour:
   - component: {fileID: 1786462407214014032}
     distance: 6.6363754
     dir: {x: -0.6319523, y: 0.09117852, z: 0.76962507}
-  - component: {fileID: 1786462406697348960}
-    distance: 8.9922905
-    dir: {x: 0.3534424, y: 0.59883195, z: 0.7186646}
+  - component: {fileID: 1786462407048768651}
+    distance: 8.004865
+    dir: {x: -0.37788385, y: 0.6696238, z: 0.63938075}
   - component: {fileID: 1786462407606996316}
     distance: 7.3898354
     dir: {x: 0.44154805, y: 0.06334849, z: 0.8949985}
   - component: {fileID: 1786462408375570204}
     distance: 7.2171135
     dir: {x: 0.5033123, y: -0.4036118, z: 0.7640512}
-  - component: {fileID: 1786462407048768651}
-    distance: 8.004865
-    dir: {x: -0.37788385, y: 0.6696238, z: 0.63938075}
-  - component: {fileID: 1786462406818277718}
-    distance: 5.465414
-    dir: {x: -0.32172868, y: 0.7702338, z: -0.55066377}
-  - component: {fileID: 1786462407591087989}
-    distance: 4.2912164
-    dir: {x: -0.93232375, y: -0.20016588, z: -0.3011743}
-  - component: {fileID: 1786462407720118821}
-    distance: 7.5202484
-    dir: {x: 0.86694735, y: 0.31946522, z: -0.38254976}
+  - component: {fileID: 1786462406697348960}
+    distance: 8.9922905
+    dir: {x: 0.3534424, y: 0.59883195, z: 0.7186646}
   - component: {fileID: 1786462406976918515}
     distance: 4.829712
     dir: {x: 0.6717497, y: 0.74066824, z: -0.012763807}
+  - component: {fileID: 1786462407591087989}
+    distance: 4.2912164
+    dir: {x: -0.93232375, y: -0.20016588, z: -0.3011743}
+  - component: {fileID: 1786462406818277718}
+    distance: 5.465414
+    dir: {x: -0.32172868, y: 0.7702338, z: -0.55066377}
+  - component: {fileID: 1786462407720118821}
+    distance: 7.5202484
+    dir: {x: 0.86694735, y: 0.31946522, z: -0.38254976}
   otherConnectedParts:
   - component: {fileID: 1786462406775818271}
     distance: 9.172568
@@ -1910,9 +1933,21 @@ MeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 1786462406775820230}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &1096244500243228130 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: -7494994146779764188, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &1202763062549125741 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 611320468020254123, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1314258170736314922 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 790351840986449388, guid: 009d84d3b740dab47ba04d6163e0887b,
     type: 3}
   m_PrefabInstance: {fileID: 1786462406775820230}
   m_PrefabAsset: {fileID: 0}
@@ -1966,27 +2001,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462407630979325}
+  collider: {fileID: 9052287962552214752}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
   - component: {fileID: 1786462406707107365}
     distance: 8.241019
     dir: {x: -0.0744039, y: -0.5224087, z: 0.84944284}
+  - component: {fileID: 1786462406976777200}
+    distance: 6.40288
+    dir: {x: -0.96088755, y: 0.27093586, z: 0.057349622}
+  - component: {fileID: 1786462406645892008}
+    distance: 5.9241223
+    dir: {x: 0.033636447, y: 0.08647252, z: 0.99568623}
   - component: {fileID: 1786462407720118821}
     distance: 9.347618
     dir: {x: -0.05832062, y: -0.99027085, z: 0.12634233}
   - component: {fileID: 1786462406774861216}
     distance: 5.868641
     dir: {x: -0.68569154, y: -0.71855557, z: -0.11621076}
-  - component: {fileID: 1786462406976777200}
-    distance: 6.40288
-    dir: {x: -0.96088755, y: 0.27093586, z: 0.057349622}
   - component: {fileID: 1786462406890772500}
     distance: 5.168519
     dir: {x: -0.5953245, y: 0.27780762, z: 0.7539308}
-  - component: {fileID: 1786462406645892008}
-    distance: 5.9241223
-    dir: {x: 0.033636447, y: 0.08647252, z: 0.99568623}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 5.168519
@@ -2088,24 +2124,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462406697348967}
+  collider: {fileID: 2561166809934519104}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
-  - component: {fileID: 1786462408340813305}
-    distance: 4.263623
-    dir: {x: 0.7054465, y: -0.70810413, z: -0.030559642}
+  - component: {fileID: 1786462407048768651}
+    distance: 6.3472023
+    dir: {x: -0.97730714, y: -0.0038793338, z: -0.21179159}
   - component: {fileID: 1786462406775818271}
     distance: 6.6520157
     dir: {x: 0.6591738, y: -0.72606105, z: -0.19576828}
   - component: {fileID: 1786462407606996316}
     distance: 4.9197974
     dir: {x: 0.01721831, y: -0.9993778, z: 0.030784013}
-  - component: {fileID: 1786462407048768651}
-    distance: 6.3472023
-    dir: {x: -0.97730714, y: -0.0038793338, z: -0.21179159}
-  - component: {fileID: 1786462408050357061}
-    distance: 8.9922905
-    dir: {x: -0.3534424, y: -0.59883195, z: -0.7186646}
+  - component: {fileID: 1786462408340813305}
+    distance: 4.263623
+    dir: {x: 0.7054465, y: -0.70810413, z: -0.030559642}
   - component: {fileID: 1786462406707107365}
     distance: 5.1945214
     dir: {x: 0.6301635, y: 0.3790686, z: -0.6776437}
@@ -2115,6 +2149,9 @@ MonoBehaviour:
   - component: {fileID: 1786462407930885275}
     distance: 6.4939413
     dir: {x: -0.45222235, y: 0.8884633, z: -0.078281306}
+  - component: {fileID: 1786462408050357061}
+    distance: 8.9922905
+    dir: {x: -0.3534424, y: -0.59883195, z: -0.7186646}
   otherConnectedParts:
   - component: {fileID: 1786462406775818271}
     distance: 6.6520157
@@ -2220,6 +2257,12 @@ MeshFilter:
     type: 3}
   m_PrefabInstance: {fileID: 1786462406775820230}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &1607198043711925581 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: -8176531401356565877, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &1677035715270409812 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 1120495811690738066, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -2294,6 +2337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462407689320161}
+  collider: {fileID: 7319769988069300457}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
@@ -2303,12 +2347,12 @@ MonoBehaviour:
   - component: {fileID: 1786462406707107365}
     distance: 5.887009
     dir: {x: -0.14442085, y: 0.9838513, z: 0.105731815}
-  - component: {fileID: 1786462407720118821}
-    distance: 5.3221464
-    dir: {x: -0.1469711, y: 0.15791531, z: -0.9764539}
   - component: {fileID: 1786462406976918515}
     distance: 5.1182456
     dir: {x: -0.79275286, y: 0.39372963, z: -0.46531707}
+  - component: {fileID: 1786462407720118821}
+    distance: 5.3221464
+    dir: {x: -0.1469711, y: 0.15791531, z: -0.9764539}
   otherConnectedParts:
   - component: {fileID: 1786462406775818271}
     distance: 3.0247288
@@ -2416,45 +2460,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462406774861223}
+  collider: {fileID: 8806088968948118127}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
-  - component: {fileID: 1786462406818277718}
-    distance: 6.039428
-    dir: {x: -0.7946317, y: -0.53523946, z: 0.28649446}
   - component: {fileID: 1786462406707107365}
     distance: 8.405917
     dir: {x: 0.40577528, y: -0.010496874, z: 0.91391265}
-  - component: {fileID: 1786462407720118821}
-    distance: 6.400977
-    dir: {x: 0.54349804, y: -0.7873375, z: 0.29104915}
   - component: {fileID: 1786462406976918515}
     distance: 6.0716753
     dir: {x: 0.033535533, y: -0.6365579, z: 0.77049947}
-  - component: {fileID: 1786462407613284640}
-    distance: 8.719358
-    dir: {x: -0.57854843, y: 0.3676323, z: 0.72809905}
-  - component: {fileID: 1786462408066108373}
-    distance: 6.543741
-    dir: {x: -0.823024, y: 0.545313, z: 0.15895045}
   - component: {fileID: 1786462406976777200}
     distance: 6.4073153
     dir: {x: -0.33217815, y: 0.9288937, z: 0.16375063}
+  - component: {fileID: 1786462407613284640}
+    distance: 8.719358
+    dir: {x: -0.57854843, y: 0.3676323, z: 0.72809905}
   - component: {fileID: 1786462407638898833}
     distance: 4.348644
     dir: {x: -0.5233888, y: 0.7445067, z: 0.4144562}
   - component: {fileID: 1786462407630979326}
     distance: 5.868641
     dir: {x: 0.68569154, y: 0.71855557, z: 0.11621076}
-  - component: {fileID: 1786462408368650072}
-    distance: 4.212887
-    dir: {x: 0.015086223, y: 0.47232097, z: 0.8812975}
-  - component: {fileID: 1786462408092026957}
-    distance: 5.0922003
-    dir: {x: -0.039751947, y: 0.4360881, z: 0.89902556}
+  - component: {fileID: 1786462406818277718}
+    distance: 6.039428
+    dir: {x: -0.7946317, y: -0.53523946, z: 0.28649446}
+  - component: {fileID: 1786462407720118821}
+    distance: 6.400977
+    dir: {x: 0.54349804, y: -0.7873375, z: 0.29104915}
+  - component: {fileID: 1786462408066108373}
+    distance: 6.543741
+    dir: {x: -0.823024, y: 0.545313, z: 0.15895045}
   - component: {fileID: 1786462406890772500}
     distance: 7.3359203
     dir: {x: 0.12910876, y: 0.7705643, z: 0.62414867}
+  - component: {fileID: 1786462408092026957}
+    distance: 5.0922003
+    dir: {x: -0.039751947, y: 0.4360881, z: 0.89902556}
+  - component: {fileID: 1786462408368650072}
+    distance: 4.212887
+    dir: {x: 0.015086223, y: 0.47232097, z: 0.8812975}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 7.3359203
@@ -2601,6 +2646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462407259265025}
+  collider: {fileID: 3749115342188151473}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
@@ -2747,6 +2793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462407048382327}
+  collider: {fileID: 2600950618710820258}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
@@ -2759,12 +2806,12 @@ MonoBehaviour:
   - component: {fileID: 1786462408375570204}
     distance: 6.4527946
     dir: {x: 0.9986069, y: 0.01671987, z: 0.050047252}
-  - component: {fileID: 1786462408050357061}
-    distance: 6.6316276
-    dir: {x: 0.4239296, y: 0.45551443, z: -0.78280926}
   - component: {fileID: 1786462407591087989}
     distance: 6.937349
     dir: {x: -0.1714574, y: 0.31162435, z: -0.9346083}
+  - component: {fileID: 1786462408050357061}
+    distance: 6.6316276
+    dir: {x: 0.4239296, y: 0.45551443, z: -0.78280926}
   otherConnectedParts:
   - component: {fileID: 1786462408050357061}
     distance: 6.6316276
@@ -2855,9 +2902,21 @@ MeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 1786462406775820230}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &2561166809934519104 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 4269937724818756742, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &2598200633810360307 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: -4844637700688422859, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &2600950618710820258 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: -4840625407707248028, guid: 009d84d3b740dab47ba04d6163e0887b,
     type: 3}
   m_PrefabInstance: {fileID: 1786462406775820230}
   m_PrefabAsset: {fileID: 0}
@@ -2896,6 +2955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462407214014039}
+  collider: {fileID: 1607198043711925581}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
@@ -2911,12 +2971,12 @@ MonoBehaviour:
   - component: {fileID: 1786462407048768651}
     distance: 4.896741
     dir: {x: 0.23872274, y: 0.9710853, z: 0.0021719295}
-  - component: {fileID: 1786462408050357061}
-    distance: 6.6363754
-    dir: {x: 0.6319523, y: -0.09117852, z: -0.76962507}
   - component: {fileID: 1786462407591087989}
     distance: 6.5680866
     dir: {x: 0.029395085, y: -0.22290358, z: -0.9743972}
+  - component: {fileID: 1786462408050357061}
+    distance: 6.6363754
+    dir: {x: 0.6319523, y: -0.09117852, z: -0.76962507}
   - component: {fileID: 1786462406775818268}
     distance: 3.9570067
     dir: {x: 0.40087536, y: 0.31533825, z: 0.8601516}
@@ -3063,33 +3123,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462406976918514}
+  collider: {fileID: 7135340094753237052}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
+  - component: {fileID: 1786462406775818271}
+    distance: 7.4197145
+    dir: {x: 0.582062, y: -0.40730852, z: 0.7037781}
+  - component: {fileID: 1786462407606996316}
+    distance: 7.3640695
+    dir: {x: 0.0025270868, y: -0.42219582, z: 0.9065011}
   - component: {fileID: 1786462407689320162}
     distance: 5.1182456
     dir: {x: 0.79275286, y: -0.39372963, z: 0.46531707}
   - component: {fileID: 1786462407963490851}
     distance: 4.846827
     dir: {x: 0.59946406, y: -0.16637066, z: 0.78292}
-  - component: {fileID: 1786462406775818271}
-    distance: 7.4197145
-    dir: {x: 0.582062, y: -0.40730852, z: 0.7037781}
   - component: {fileID: 1786462406697348960}
     distance: 6.770206
     dir: {x: -0.009763507, y: 0.26700175, z: 0.9636466}
-  - component: {fileID: 1786462407606996316}
-    distance: 7.3640695
-    dir: {x: 0.0025270868, y: -0.42219582, z: 0.9065011}
-  - component: {fileID: 1786462408050357061}
-    distance: 4.829712
-    dir: {x: -0.6717497, y: -0.74066824, z: 0.012763807}
-  - component: {fileID: 1786462406818277718}
-    distance: 5.841047
-    dir: {x: -0.8564797, y: 0.10827382, z: -0.5046972}
   - component: {fileID: 1786462406707107365}
     distance: 5.7943783
     dir: {x: 0.5535187, y: 0.65179324, z: 0.5184424}
+  - component: {fileID: 1786462406818277718}
+    distance: 5.841047
+    dir: {x: -0.8564797, y: 0.10827382, z: -0.5046972}
+  - component: {fileID: 1786462408050357061}
+    distance: 4.829712
+    dir: {x: -0.6717497, y: -0.74066824, z: 0.012763807}
   - component: {fileID: 1786462407720118821}
     distance: 4.4758396
     dir: {x: 0.73177373, y: -0.2624662, z: -0.62898225}
@@ -3195,6 +3256,12 @@ MonoBehaviour:
   renderer: {fileID: 3366455782400952502}
   meshFilter: {fileID: 1530665216267047814}
   parent: {fileID: 1786462408421033223}
+--- !u!64 &2917644043870733747 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 3510353413227760245, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &2917987010969745434 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: -5713924838893520932, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -3251,21 +3318,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462406908659284}
+  collider: {fileID: 4816989036604465727}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
   - component: {fileID: 1786462407259265026}
     distance: 3.3307657
     dir: {x: -0.45291686, y: -0.8264048, z: 0.33454648}
-  - component: {fileID: 1786462406697348960}
-    distance: 4.9650106
-    dir: {x: 0.65797204, y: 0.75268894, z: 0.023069456}
-  - component: {fileID: 1786462407606996316}
-    distance: 3.5630255
-    dir: {x: 0.9406468, y: -0.33107466, z: 0.074653186}
   - component: {fileID: 1786462407048768651}
     distance: 4.890485
     dir: {x: -0.6004165, y: 0.7591243, z: -0.25145644}
+  - component: {fileID: 1786462407606996316}
+    distance: 3.5630255
+    dir: {x: 0.9406468, y: -0.33107466, z: 0.074653186}
+  - component: {fileID: 1786462406697348960}
+    distance: 4.9650106
+    dir: {x: 0.65797204, y: 0.75268894, z: 0.023069456}
   otherConnectedParts:
   - component: {fileID: 1786462407606996316}
     distance: 3.5630255
@@ -3329,6 +3397,12 @@ MonoBehaviour:
   renderer: {fileID: 889260969620681090}
   meshFilter: {fileID: 485556319213411884}
   parent: {fileID: 1786462408421033223}
+--- !u!64 &2997535136678725962 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: -5669002464929872244, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &3092203780817710974 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 3612868681563119800, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -3385,6 +3459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462407404348234}
+  collider: {fileID: 3949603005440526597}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
@@ -3463,6 +3538,12 @@ MonoBehaviour:
   renderer: {fileID: 3092203780817710974}
   meshFilter: {fileID: 3706600214791605486}
   parent: {fileID: 1786462408421033223}
+--- !u!64 &3280737392939177568 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 3840813325903288742, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &3311746261180765829 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: -5386474798771726013, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -3487,9 +3568,21 @@ MeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 1786462406775820230}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &3576062963185299491 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: -6239050872796381211, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &3706600214791605486 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: 3151032485660066600, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &3749115342188151473 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 3228309703958318455, guid: 009d84d3b740dab47ba04d6163e0887b,
     type: 3}
   m_PrefabInstance: {fileID: 1786462406775820230}
   m_PrefabAsset: {fileID: 0}
@@ -3502,6 +3595,18 @@ MeshFilter:
 --- !u!23 &3932155116477417991 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -5883081933534444095, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &3947376601145651425 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 3318356890790919975, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &3949603005440526597 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 3316062309443389123, guid: 009d84d3b740dab47ba04d6163e0887b,
     type: 3}
   m_PrefabInstance: {fileID: 1786462406775820230}
   m_PrefabAsset: {fileID: 0}
@@ -3526,6 +3631,12 @@ MeshRenderer:
 --- !u!23 &4195959935179337538 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -6705365835930345340, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &4323745246301377524 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 2651438741207751730, guid: 009d84d3b740dab47ba04d6163e0887b,
     type: 3}
   m_PrefabInstance: {fileID: 1786462406775820230}
   m_PrefabAsset: {fileID: 0}
@@ -3597,21 +3708,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462407720118820}
+  collider: {fileID: 1314258170736314922}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
-  - component: {fileID: 1786462408050357061}
-    distance: 7.5202484
-    dir: {x: -0.86694735, y: -0.31946522, z: 0.38254976}
-  - component: {fileID: 1786462406818277718}
-    distance: 8.474049
-    dir: {x: -0.9768695, y: 0.21326157, z: -0.015663847}
   - component: {fileID: 1786462406707107365}
     distance: 7.6410646
     dir: {x: -0.008899949, y: 0.6480109, z: 0.7615791}
   - component: {fileID: 1786462406976918515}
     distance: 4.4758396
     dir: {x: -0.73177373, y: 0.2624662, z: 0.62898225}
+  - component: {fileID: 1786462406818277718}
+    distance: 8.474049
+    dir: {x: -0.9768695, y: 0.21326157, z: -0.015663847}
+  - component: {fileID: 1786462408050357061}
+    distance: 7.5202484
+    dir: {x: -0.86694735, y: -0.31946522, z: 0.38254976}
   - component: {fileID: 1786462406774861216}
     distance: 6.400977
     dir: {x: -0.54349804, y: 0.7873375, z: -0.29104915}
@@ -3693,9 +3805,21 @@ MonoBehaviour:
   renderer: {fileID: 6147064921450022309}
   meshFilter: {fileID: 48706244607747870}
   parent: {fileID: 1786462408421033223}
+--- !u!64 &4509449718334266819 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: -6458721824263187963, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &4534773751387266375 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -6475038633282612607, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &4664645368405211930 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: -2848830059827890980, guid: 009d84d3b740dab47ba04d6163e0887b,
     type: 3}
   m_PrefabInstance: {fileID: 1786462406775820230}
   m_PrefabAsset: {fileID: 0}
@@ -3746,27 +3870,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462407613284647}
+  collider: {fileID: 552878397461291714}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
   - component: {fileID: 1786462407048768651}
     distance: 6.427765
     dir: {x: -0.15885441, y: -0.82259643, z: 0.54598576}
-  - component: {fileID: 1786462406818277718}
-    distance: 7.927009
-    dir: {x: 0.030963732, y: -0.81216735, z: -0.5826023}
   - component: {fileID: 1786462406976918515}
     distance: 8.96244
     dir: {x: 0.5855758, y: -0.78890246, z: -0.18637045}
-  - component: {fileID: 1786462408066108373}
-    distance: 5.331735
-    dir: {x: -0.063972555, y: 0.06805838, z: -0.99562824}
-  - component: {fileID: 1786462408054100199}
-    distance: 5.171491
-    dir: {x: -0.59378093, y: -0.12642425, z: -0.79463273}
   - component: {fileID: 1786462407930885275}
     distance: 4.917424
     dir: {x: 0.45661741, y: 0.10306106, z: 0.8836736}
+  - component: {fileID: 1786462406818277718}
+    distance: 7.927009
+    dir: {x: 0.030963732, y: -0.81216735, z: -0.5826023}
+  - component: {fileID: 1786462408054100199}
+    distance: 5.171491
+    dir: {x: -0.59378093, y: -0.12642425, z: -0.79463273}
+  - component: {fileID: 1786462408066108373}
+    distance: 5.331735
+    dir: {x: -0.063972555, y: 0.06805838, z: -0.99562824}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 6.709848
@@ -3869,6 +3994,12 @@ MonoBehaviour:
   rb: {fileID: 0}
   velocityMultiplier: 1
   isDebug: 0
+--- !u!64 &4816989036604465727 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: -2732655719970705927, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4896519761112691770 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2650046362636567556, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -3919,6 +4050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462406890772491}
+  collider: {fileID: 4664645368405211930}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
@@ -3928,36 +4060,36 @@ MonoBehaviour:
   - component: {fileID: 1786462406976918515}
     distance: 9.547286
     dir: {x: -0.07787707, y: -0.99690855, z: 0.010423677}
-  - component: {fileID: 1786462406774861216}
-    distance: 7.3359203
-    dir: {x: -0.12910876, y: -0.7705643, z: -0.62414867}
-  - component: {fileID: 1786462407613284640}
-    distance: 6.709848
-    dir: {x: -0.89297146, y: -0.3647297, z: 0.26376927}
   - component: {fileID: 1786462406976777200}
     distance: 4.6909966
     dir: {x: -0.6556179, y: 0.06372119, z: -0.7523994}
+  - component: {fileID: 1786462407613284640}
+    distance: 6.709848
+    dir: {x: -0.89297146, y: -0.3647297, z: 0.26376927}
   - component: {fileID: 1786462407930885275}
     distance: 7.429447
     dir: {x: -0.504253, y: -0.26118848, z: 0.8231096}
   - component: {fileID: 1786462407630979326}
     distance: 5.168519
     dir: {x: 0.5953245, y: -0.27780762, z: -0.7539308}
-  - component: {fileID: 1786462408368650072}
-    distance: 3.866237
-    dir: {x: -0.22853616, y: -0.9474235, z: -0.22396407}
-  - component: {fileID: 1786462408092026957}
-    distance: 3.6195498
-    dir: {x: -0.31759652, y: -0.9482259, z: -0.00018970467}
-  - component: {fileID: 1786462408083473025}
-    distance: 2.6118717
-    dir: {x: 0.082211345, y: -0.99076146, z: 0.10785666}
   - component: {fileID: 1786462407042156103}
     distance: 7.0126586
     dir: {x: 0.32643485, y: -0.047939256, z: 0.9440032}
   - component: {fileID: 1786462406645892008}
     distance: 3.9489262
     dir: {x: 0.8296464, y: -0.23388134, z: 0.5069382}
+  - component: {fileID: 1786462406774861216}
+    distance: 7.3359203
+    dir: {x: -0.12910876, y: -0.7705643, z: -0.62414867}
+  - component: {fileID: 1786462408083473025}
+    distance: 2.6118717
+    dir: {x: 0.082211345, y: -0.99076146, z: 0.10785666}
+  - component: {fileID: 1786462408092026957}
+    distance: 3.6195498
+    dir: {x: -0.31759652, y: -0.9482259, z: -0.00018970467}
+  - component: {fileID: 1786462408368650072}
+    distance: 3.866237
+    dir: {x: -0.22853616, y: -0.9474235, z: -0.22396407}
   otherConnectedParts:
   - component: {fileID: 1786462406645892008}
     distance: 3.9489262
@@ -4039,6 +4171,30 @@ MonoBehaviour:
   renderer: {fileID: 4534773751387266375}
   meshFilter: {fileID: 683248414661947373}
   parent: {fileID: 1786462408421033223}
+--- !u!64 &5007206383436411781 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: -2470257702517998525, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &5032296327401309929 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 6709383509325400367, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &5092345314671799822 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: -2422533021399424568, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &5236829115324280482 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: -3429985562941595292, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &5377603191057690159 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: -3284285744092913175, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -4080,21 +4236,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462406645892015}
+  collider: {fileID: 7731609187888420583}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
   - component: {fileID: 1786462406707107365}
     distance: 5.00816
     dir: {x: -0.16222133, y: -0.961921, z: 0.21998248}
+  - component: {fileID: 1786462407042156103}
+    distance: 4.758805
+    dir: {x: -0.20741263, y: 0.123434044, z: 0.97043496}
   - component: {fileID: 1786462406890772500}
     distance: 3.9489262
     dir: {x: -0.8296464, y: 0.23388134, z: -0.5069382}
   - component: {fileID: 1786462408083473025}
     distance: 3.886009
     dir: {x: -0.7878229, y: -0.4282444, z: -0.44265306}
-  - component: {fileID: 1786462407042156103}
-    distance: 4.758805
-    dir: {x: -0.20741263, y: 0.123434044, z: 0.97043496}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 3.9489262
@@ -4247,6 +4404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462408375570195}
+  collider: {fileID: 8033351463555187640}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
@@ -4393,18 +4551,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462407591087988}
+  collider: {fileID: 2917644043870733747}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
   - component: {fileID: 1786462407214014032}
     distance: 6.5680866
     dir: {x: -0.029395085, y: 0.22290358, z: 0.9743972}
-  - component: {fileID: 1786462408050357061}
-    distance: 4.2912164
-    dir: {x: 0.93232375, y: 0.20016588, z: 0.3011743}
   - component: {fileID: 1786462406818277718}
     distance: 5.80241
     dir: {x: 0.386464, y: 0.87353384, z: -0.2959462}
+  - component: {fileID: 1786462408050357061}
+    distance: 4.2912164
+    dir: {x: 0.93232375, y: 0.20016588, z: 0.3011743}
   otherConnectedParts:
   - component: {fileID: 1786462408050357061}
     distance: 4.2912164
@@ -4509,21 +4668,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462407638898832}
+  collider: {fileID: 8357822520477786151}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
-  - component: {fileID: 1786462406774861216}
-    distance: 4.348644
-    dir: {x: 0.5233888, y: -0.7445067, z: -0.4144562}
-  - component: {fileID: 1786462407613284640}
-    distance: 5.322977
-    dir: {x: -0.52011114, y: -0.0060261083, z: 0.85407734}
-  - component: {fileID: 1786462408066108373}
-    distance: 3.2187147
-    dir: {x: -0.9661075, y: 0.10277159, z: -0.23680004}
   - component: {fileID: 1786462406976777200}
     distance: 2.8205392
     dir: {x: 0.052352164, y: 0.96226984, z: -0.26701292}
+  - component: {fileID: 1786462407613284640}
+    distance: 5.322977
+    dir: {x: -0.52011114, y: -0.0060261083, z: 0.85407734}
+  - component: {fileID: 1786462406774861216}
+    distance: 4.348644
+    dir: {x: 0.5233888, y: -0.7445067, z: -0.4144562}
+  - component: {fileID: 1786462408066108373}
+    distance: 3.2187147
+    dir: {x: -0.9661075, y: 0.10277159, z: -0.23680004}
   otherConnectedParts:
   - component: {fileID: 1786462408066108373}
     distance: 3.2187147
@@ -4629,6 +4789,12 @@ MeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 1786462406775820230}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &6039232610780578611 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 5405832583822855413, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6073174975508371807 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3710250935373424999, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -4679,27 +4845,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462408066108372}
+  collider: {fileID: 4509449718334266819}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
+  - component: {fileID: 1786462406976777200}
+    distance: 4.036117
+    dir: {x: 0.8070345, y: 0.5905001, z: 0.0022475438}
+  - component: {fileID: 1786462407613284640}
+    distance: 5.331735
+    dir: {x: 0.063972555, y: -0.06805838, z: 0.99562824}
+  - component: {fileID: 1786462407638898833}
+    distance: 3.2187147
+    dir: {x: 0.9661075, y: -0.10277159, z: 0.23680004}
   - component: {fileID: 1786462406818277718}
     distance: 6.8609705
     dir: {x: 0.085488565, y: -0.99124855, z: 0.10058812}
   - component: {fileID: 1786462406774861216}
     distance: 6.543741
     dir: {x: 0.823024, y: -0.545313, z: -0.15895045}
-  - component: {fileID: 1786462407613284640}
-    distance: 5.331735
-    dir: {x: 0.063972555, y: -0.06805838, z: 0.99562824}
-  - component: {fileID: 1786462406976777200}
-    distance: 4.036117
-    dir: {x: 0.8070345, y: 0.5905001, z: 0.0022475438}
   - component: {fileID: 1786462408054100199}
     distance: 3.1499486
     dir: {x: -0.8665691, y: -0.32275802, z: 0.3806379}
-  - component: {fileID: 1786462407638898833}
-    distance: 3.2187147
-    dir: {x: 0.9661075, y: -0.10277159, z: 0.23680004}
   otherConnectedParts:
   - component: {fileID: 1786462406818277718}
     distance: 6.8609705
@@ -4849,30 +5016,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462406818277717}
+  collider: {fileID: 6039232610780578611}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
-  - component: {fileID: 1786462408050357061}
-    distance: 5.465414
-    dir: {x: 0.32172868, y: -0.7702338, z: 0.55066377}
-  - component: {fileID: 1786462407591087989}
-    distance: 5.80241
-    dir: {x: -0.386464, y: -0.87353384, z: 0.2959462}
   - component: {fileID: 1786462406976918515}
     distance: 5.841047
     dir: {x: 0.8564797, y: -0.10827382, z: 0.5046972}
-  - component: {fileID: 1786462406774861216}
-    distance: 6.039428
-    dir: {x: 0.7946317, y: 0.53523946, z: -0.28649446}
   - component: {fileID: 1786462407613284640}
     distance: 7.927009
     dir: {x: -0.030963732, y: 0.81216735, z: 0.5826023}
-  - component: {fileID: 1786462408066108373}
-    distance: 6.8609705
-    dir: {x: -0.085488565, y: 0.99124855, z: -0.10058812}
+  - component: {fileID: 1786462407591087989}
+    distance: 5.80241
+    dir: {x: -0.386464, y: -0.87353384, z: 0.2959462}
+  - component: {fileID: 1786462408050357061}
+    distance: 5.465414
+    dir: {x: 0.32172868, y: -0.7702338, z: 0.55066377}
+  - component: {fileID: 1786462406774861216}
+    distance: 6.039428
+    dir: {x: 0.7946317, y: 0.53523946, z: -0.28649446}
   - component: {fileID: 1786462408054100199}
     distance: 6.6868243
     dir: {x: -0.49592787, y: 0.8650229, z: 0.07609856}
+  - component: {fileID: 1786462408066108373}
+    distance: 6.8609705
+    dir: {x: -0.085488565, y: 0.99124855, z: -0.10058812}
   otherConnectedParts:
   - component: {fileID: 1786462408066108373}
     distance: 6.8609705
@@ -5004,6 +5172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462406775818259}
+  collider: {fileID: 6538831857531898646}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
@@ -5082,6 +5251,12 @@ MonoBehaviour:
   renderer: {fileID: 6017685633135530857}
   meshFilter: {fileID: 4440914537755711011}
   parent: {fileID: 1786462408421033223}
+--- !u!64 &6538831857531898646 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 4788543521026213072, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6567176021571296734 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4329786818681761256, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -5132,6 +5307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462407042156102}
+  collider: {fileID: 5032296327401309929}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
@@ -5263,18 +5439,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462408340813304}
+  collider: {fileID: 2997535136678725962}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
   - component: {fileID: 1786462406775818271}
     distance: 2.5589824
     dir: {x: 0.53813446, y: -0.7075783, z: -0.45797852}
-  - component: {fileID: 1786462406697348960}
-    distance: 4.263623
-    dir: {x: -0.7054465, y: 0.70810413, z: 0.030559642}
   - component: {fileID: 1786462407606996316}
     distance: 3.4963768
     dir: {x: -0.83602184, y: -0.54274666, z: 0.08058225}
+  - component: {fileID: 1786462406697348960}
+    distance: 4.263623
+    dir: {x: -0.7054465, y: 0.70810413, z: 0.030559642}
   otherConnectedParts:
   - component: {fileID: 1786462406775818271}
     distance: 2.5589824
@@ -5394,6 +5571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462408368650078}
+  collider: {fileID: 3576062963185299491}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
@@ -5403,12 +5581,12 @@ MonoBehaviour:
   - component: {fileID: 1786462406976918515}
     distance: 5.9355216
     dir: {x: 0.023596967, y: -0.9864015, z: 0.16265057}
-  - component: {fileID: 1786462408092026957}
-    distance: 0.93413687
-    dir: {x: -0.28473496, y: 0.24708694, z: 0.9262149}
   - component: {fileID: 1786462406890772500}
     distance: 3.866237
     dir: {x: 0.22853616, y: 0.9474235, z: 0.22396407}
+  - component: {fileID: 1786462408092026957}
+    distance: 0.93413687
+    dir: {x: -0.28473496, y: 0.24708694, z: 0.9262149}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 3.866237
@@ -5546,6 +5724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462408092026956}
+  collider: {fileID: 5007206383436411781}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
@@ -5555,12 +5734,12 @@ MonoBehaviour:
   - component: {fileID: 1786462406976918515}
     distance: 6.099974
     dir: {x: 0.0665645, y: -0.9976469, z: 0.01642703}
-  - component: {fileID: 1786462408368650072}
-    distance: 0.93413687
-    dir: {x: 0.28473496, y: -0.24708694, z: -0.9262149}
   - component: {fileID: 1786462406890772500}
     distance: 3.6195498
     dir: {x: 0.31759652, y: 0.9482259, z: 0.00018970467}
+  - component: {fileID: 1786462408368650072}
+    distance: 0.93413687
+    dir: {x: 0.28473496, y: -0.24708694, z: -0.9262149}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 3.6195498
@@ -5627,6 +5806,12 @@ MonoBehaviour:
   renderer: {fileID: 3932155116477417991}
   meshFilter: {fileID: 819287204573945032}
   parent: {fileID: 1786462408421033223}
+--- !u!64 &6987582837174807177 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: -562339133505280689, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7023242256891147848 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8772268285605722510, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -5677,33 +5862,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462406707107364}
+  collider: {fileID: 1096244500243228130}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
+  - component: {fileID: 1786462406775818271}
+    distance: 7.2372785
+    dir: {x: 0.1535711, y: -0.93942076, z: 0.30643854}
   - component: {fileID: 1786462407689320162}
     distance: 5.887009
     dir: {x: 0.14442085, y: -0.9838513, z: -0.105731815}
   - component: {fileID: 1786462407963490851}
     distance: 4.6605835
     dir: {x: -0.064755484, y: -0.98337615, z: 0.1696411}
-  - component: {fileID: 1786462406775818271}
-    distance: 7.2372785
-    dir: {x: 0.1535711, y: -0.93942076, z: 0.30643854}
   - component: {fileID: 1786462406697348960}
     distance: 5.1945214
     dir: {x: -0.6301635, y: -0.3790686, z: 0.6776437}
-  - component: {fileID: 1786462407720118821}
-    distance: 7.6410646
-    dir: {x: 0.008899949, y: -0.6480109, z: -0.7615791}
   - component: {fileID: 1786462406976918515}
     distance: 5.7943783
     dir: {x: -0.5535187, y: -0.65179324, z: -0.5184424}
   - component: {fileID: 1786462407930885275}
     distance: 7.8790717
     dir: {x: -0.788177, y: 0.48235995, z: 0.382238}
-  - component: {fileID: 1786462408083473025}
-    distance: 4.7921195
-    dir: {x: -0.46932396, y: 0.65801626, z: -0.58885455}
   - component: {fileID: 1786462406645892008}
     distance: 5.00816
     dir: {x: 0.16222133, y: 0.961921, z: -0.21998248}
@@ -5713,6 +5893,12 @@ MonoBehaviour:
   - component: {fileID: 1786462407629668419}
     distance: 4.845932
     dir: {x: -0.4333673, y: 0.702281, z: 0.5647957}
+  - component: {fileID: 1786462407720118821}
+    distance: 7.6410646
+    dir: {x: 0.008899949, y: -0.6480109, z: -0.7615791}
+  - component: {fileID: 1786462408083473025}
+    distance: 4.7921195
+    dir: {x: -0.46932396, y: 0.65801626, z: -0.58885455}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 6.975804
@@ -5871,6 +6057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462407963490850}
+  collider: {fileID: 7236955639787892522}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
@@ -5955,6 +6142,18 @@ MeshFilter:
     type: 3}
   m_PrefabInstance: {fileID: 1786462406775820230}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &7135340094753237052 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 8921375891006171130, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &7236955639787892522 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 8981337468815499500, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &7247188193802442459 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 8960445116385433885, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -5964,6 +6163,12 @@ MeshRenderer:
 --- !u!23 &7316913022393552557 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -198105913729171093, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &7319769988069300457 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 9034157208339339055, guid: 009d84d3b740dab47ba04d6163e0887b,
     type: 3}
   m_PrefabInstance: {fileID: 1786462406775820230}
   m_PrefabAsset: {fileID: 0}
@@ -6017,15 +6222,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462408054100198}
+  collider: {fileID: 8624192950264976584}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
-  - component: {fileID: 1786462406818277718}
-    distance: 6.6868243
-    dir: {x: 0.49592787, y: -0.8650229, z: -0.07609856}
   - component: {fileID: 1786462407613284640}
     distance: 5.171491
     dir: {x: 0.59378093, y: 0.12642425, z: 0.79463273}
+  - component: {fileID: 1786462406818277718}
+    distance: 6.6868243
+    dir: {x: 0.49592787, y: -0.8650229, z: -0.07609856}
   - component: {fileID: 1786462408066108373}
     distance: 3.1499486
     dir: {x: 0.8665691, y: 0.32275802, z: -0.3806379}
@@ -6131,6 +6337,12 @@ MeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 1786462406775820230}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &7731609187888420583 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 8324617555965253921, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &7841837355676262836 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: -857645874639098254, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -6184,24 +6396,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462406976777207}
+  collider: {fileID: 3280737392939177568}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
-  - component: {fileID: 1786462406774861216}
-    distance: 6.4073153
-    dir: {x: 0.33217815, y: -0.9288937, z: -0.16375063}
   - component: {fileID: 1786462407613284640}
     distance: 6.642965
     dir: {x: -0.4389909, y: -0.41339925, z: 0.7977394}
-  - component: {fileID: 1786462408066108373}
-    distance: 4.036117
-    dir: {x: -0.8070345, y: -0.5905001, z: -0.0022475438}
   - component: {fileID: 1786462407638898833}
     distance: 2.8205392
     dir: {x: -0.052352164, y: -0.96226984, z: 0.26701292}
   - component: {fileID: 1786462407630979326}
     distance: 6.40288
     dir: {x: 0.96088755, y: -0.27093586, z: -0.057349622}
+  - component: {fileID: 1786462406774861216}
+    distance: 6.4073153
+    dir: {x: 0.33217815, y: -0.9288937, z: -0.16375063}
+  - component: {fileID: 1786462408066108373}
+    distance: 4.036117
+    dir: {x: -0.8070345, y: -0.5905001, z: -0.0022475438}
   - component: {fileID: 1786462406890772500}
     distance: 4.6909966
     dir: {x: 0.6556179, y: -0.06372119, z: 0.7523994}
@@ -6292,6 +6505,12 @@ MonoBehaviour:
   rb: {fileID: 0}
   velocityMultiplier: 1
   isDebug: 0
+--- !u!64 &8033351463555187640 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: -597016603264807810, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &8046029513141423775 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: 8602991492017733977, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -6348,24 +6567,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462407930885274}
+  collider: {fileID: 3947376601145651425}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
-  - component: {fileID: 1786462406697348960}
-    distance: 6.4939413
-    dir: {x: 0.45222235, y: -0.8884633, z: 0.078281306}
   - component: {fileID: 1786462407048768651}
     distance: 6.7038713
     dir: {x: -0.48724988, y: -0.86431426, z: -0.1246936}
+  - component: {fileID: 1786462406697348960}
+    distance: 6.4939413
+    dir: {x: 0.45222235, y: -0.8884633, z: 0.078281306}
   - component: {fileID: 1786462406707107365}
     distance: 7.8790717
     dir: {x: 0.788177, y: -0.48235995, z: -0.382238}
   - component: {fileID: 1786462407613284640}
     distance: 4.917424
     dir: {x: -0.45661741, y: -0.10306106, z: -0.8836736}
-  - component: {fileID: 1786462406890772500}
-    distance: 7.429447
-    dir: {x: 0.504253, y: 0.26118848, z: -0.8231096}
   - component: {fileID: 1786462407042156103}
     distance: 6.265442
     dir: {x: 0.9632995, y: 0.25605604, z: 0.08055659}
@@ -6375,6 +6592,9 @@ MonoBehaviour:
   - component: {fileID: 1786462407629668419}
     distance: 4.138325
     dir: {x: 0.9931637, y: -0.096015334, z: -0.06638416}
+  - component: {fileID: 1786462406890772500}
+    distance: 7.429447
+    dir: {x: 0.504253, y: 0.26118848, z: -0.8231096}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 7.429447
@@ -6503,6 +6723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462407606996307}
+  collider: {fileID: 511757304156712196}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
@@ -6515,12 +6736,12 @@ MonoBehaviour:
   - component: {fileID: 1786462406775818271}
     distance: 4.540032
     dir: {x: 0.94715726, y: 0.019155486, z: -0.32019705}
-  - component: {fileID: 1786462406697348960}
-    distance: 4.9197974
-    dir: {x: -0.01721831, y: 0.9993778, z: -0.030784013}
   - component: {fileID: 1786462408375570204}
     distance: 3.574525
     dir: {x: 0.103368886, y: -0.9458731, z: -0.30763456}
+  - component: {fileID: 1786462406697348960}
+    distance: 4.9197974
+    dir: {x: -0.01721831, y: 0.9993778, z: -0.030784013}
   - component: {fileID: 1786462408050357061}
     distance: 7.3898354
     dir: {x: -0.44154805, y: -0.06334849, z: -0.8949985}
@@ -6605,6 +6826,24 @@ MonoBehaviour:
   renderer: {fileID: 2530579417363623662}
   meshFilter: {fileID: 5377603191057690159}
   parent: {fileID: 1786462408421033223}
+--- !u!64 &8303778774771745451 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: -1443904143385916051, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &8327944147605154110 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 7734940109123495672, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &8357822520477786151 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 7725425247844888545, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8432083549843576945 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7912276199443863479, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -6640,18 +6879,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462408083473024}
+  collider: {fileID: 4323745246301377524}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
   - component: {fileID: 1786462406707107365}
     distance: 4.7921195
     dir: {x: 0.46932396, y: -0.65801626, z: 0.58885455}
-  - component: {fileID: 1786462406890772500}
-    distance: 2.6118717
-    dir: {x: -0.082211345, y: 0.99076146, z: -0.10785666}
   - component: {fileID: 1786462406645892008}
     distance: 3.886009
     dir: {x: 0.7878229, y: 0.4282444, z: 0.44265306}
+  - component: {fileID: 1786462406890772500}
+    distance: 2.6118717
+    dir: {x: -0.082211345, y: 0.99076146, z: -0.10785666}
   otherConnectedParts:
   - component: {fileID: 1786462406890772500}
     distance: 2.6118717
@@ -6733,6 +6973,12 @@ MonoBehaviour:
   rb: {fileID: 0}
   velocityMultiplier: 1
   isDebug: 0
+--- !u!64 &8624192950264976584 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: -1196405181276841202, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &8711795095186753649 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: 6929994617994512311, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -6789,6 +7035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462407629668418}
+  collider: {fileID: 6987582837174807177}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
@@ -6870,6 +7117,12 @@ MonoBehaviour:
   renderer: {fileID: 6181178635102230813}
   meshFilter: {fileID: 8072916826788899}
   parent: {fileID: 1786462408421033223}
+--- !u!64 &8806088968948118127 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: -2089871047979090519, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &8816999839355192219 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: 7104020200114555997, guid: 009d84d3b740dab47ba04d6163e0887b,
@@ -6932,18 +7185,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRB: {fileID: 1786462408591574994}
+  collider: {fileID: 5236829115324280482}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 1786462407973920947}
   connectedParts:
   - component: {fileID: 1786462407048768651}
     distance: 3.0222213
     dir: {x: -0.24173653, y: -0.09618783, z: 0.9655627}
-  - component: {fileID: 1786462408050357061}
-    distance: 6.4836116
-    dir: {x: 0.35386568, y: -0.8715743, z: -0.33931893}
   - component: {fileID: 1786462407613284640}
     distance: 5.040002
     dir: {x: 0.05763838, y: 0.9914194, z: -0.11732612}
+  - component: {fileID: 1786462408050357061}
+    distance: 6.4836116
+    dir: {x: 0.35386568, y: -0.8715743, z: -0.33931893}
   otherConnectedParts:
   - component: {fileID: 1786462407048768651}
     distance: 3.0222213
@@ -7007,6 +7261,12 @@ MonoBehaviour:
 --- !u!33 &8890113774420063557 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: 7181778472307210883, guid: 009d84d3b740dab47ba04d6163e0887b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1786462406775820230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &9052287962552214752 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: -1915465903339836634, guid: 009d84d3b740dab47ba04d6163e0887b,
     type: 3}
   m_PrefabInstance: {fileID: 1786462406775820230}
   m_PrefabAsset: {fileID: 0}
