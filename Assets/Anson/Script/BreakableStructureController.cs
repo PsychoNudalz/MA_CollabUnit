@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.VFX;
 
 
 /// <summary>
@@ -58,6 +60,23 @@ public class BreakableStructureController : MonoBehaviour
 
     [SerializeField]
     private float minBottomAngle;
+
+    [Space(20f)]
+    [Header("Effects")]
+    [SerializeField]
+    private UnityEvent breakEvent;
+
+    [SerializeField]
+    private VisualEffect vfx_Break;
+    // [SerializeField]
+    
+    
+    [Space(10)]
+    [SerializeField]
+    private float despawnTime = 5f;
+
+    [SerializeField]
+    private UnityEvent despawnEvent;
 
     public BreakableComponent[] AllBreakableComponents => allBreakableComponents;
 
@@ -174,14 +193,14 @@ public class BreakableStructureController : MonoBehaviour
 
     private void SetBP(BreakablePart bp)
     {
-        bp.Initialise(gameObject, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot,
-            minimumPartSize, breakDelay, minBottomAngle, physicMaterial);
+        bp.Initialise(gameObject, this, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot,
+            minimumPartSize, breakDelay, minBottomAngle, physicMaterial,  breakEvent, despawnTime, despawnEvent);
     }
 
     private void SetBC(BreakableCollective breakableCollective)
     {
-        breakableCollective.Initialise(gameObject, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot,
-            minimumPartSize, breakDelay, minBottomAngle, physicMaterial);
+        breakableCollective.Initialise(gameObject, this, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot,
+            minimumPartSize, breakDelay, minBottomAngle, physicMaterial, breakEvent, despawnTime, despawnEvent);
     }
 
     public void ResetConnections()
@@ -217,6 +236,16 @@ public class BreakableStructureController : MonoBehaviour
         {
             c.name = name + "_Cell_" + i;
             i++;
+        }
+    }
+
+    public void PlayBreakEffects(Vector3 position,Mesh mesh)
+    {
+        if (vfx_Break)
+        {
+            vfx_Break.SetVector3("Position",position);
+            vfx_Break.SetMesh("SpawnMesh",mesh);
+            vfx_Break.Play();
         }
     }
 }

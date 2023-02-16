@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 [Serializable]
 public class BreakableCollective : BreakableComponent
@@ -49,10 +50,11 @@ public class BreakableCollective : BreakableComponent
         base.ResetConnections();
     }
 
-    public override void Initialise(GameObject p, float mass, float drag, float affectedRange, Vector2 breakForce,
+    public override void Initialise(GameObject p, BreakableStructureController bsc, float mass, float drag,
+        float affectedRange, Vector2 breakForce,
         float forceTransfer,
         LayerMask bpLayer, AnimationCurve transferToDot, float minSize, float breakDelay, float bottomAngle,
-        PhysicMaterial pm)
+        PhysicMaterial pm, UnityEvent breakEvent1, float despawnTime1, UnityEvent despawnEvent1)
     {
         if (!shell || !fractureParent)
         {
@@ -62,8 +64,8 @@ public class BreakableCollective : BreakableComponent
 
         parent = p;
         Initialise();
-        InitialiseValues(mass, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot, minSize,
-            breakDelay, bottomAngle, pm);
+        InitialiseValues(mass, bsc, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot, minSize,
+            breakDelay, bottomAngle, pm,  breakEvent1, despawnTime1, despawnEvent1);
 
         fractureParent.SetActive(true);
 
@@ -100,21 +102,12 @@ public class BreakableCollective : BreakableComponent
         foreach (BreakableComponent breakableComponent in breakableComponents)
         {
             breakableComponent.AddComponents(pm);
-            breakableComponent.Initialise(gameObject, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer,
+            breakableComponent.Initialise(gameObject, bsc, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer,
                 transferToDot,
-                minimumPartSize, breakDelay, minBottomAngle, pm);
+                minimumPartSize, breakDelay, minBottomAngle, pm, breakEvent, despawnTime, despawnEvent);
         }
 
         fractureParent.SetActive(false);
-    }
-
-    protected override void InitialiseValues(float mass, float drag, float affectedRange, Vector2 breakForce,
-        float forceTransfer,
-        LayerMask bpLayer, AnimationCurve transferToDot, float minSize, float breakDelay, float bottomAngle,
-        PhysicMaterial pm)
-    {
-        base.InitialiseValues(mass, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot, minSize,
-            breakDelay, bottomAngle, pm);
     }
 
     public override void Initialise()

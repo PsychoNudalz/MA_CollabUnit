@@ -7,15 +7,6 @@ using UnityEngine;
 
 
 [Serializable]
-public enum BreakableState
-{
-    Hold,
-    InitialBreak,
-    Free,
-    Stay
-}
-
-[Serializable]
 public class BreakablePart : BreakableComponent
 {
     // [Header("Auto Free time")]
@@ -25,8 +16,8 @@ public class BreakablePart : BreakableComponent
     protected float freeToStayTime_now = 0f;
     protected float moveDistance = 10f;
     protected Vector3 lastPosition;
-        
-        
+
+
     private void Awake()
     {
         if (isDebug)
@@ -39,7 +30,6 @@ public class BreakablePart : BreakableComponent
     {
         if (breakableState == BreakableState.Free)
         {
-            
         }
     }
 
@@ -128,8 +118,13 @@ public class BreakablePart : BreakableComponent
         {
             StartCoroutine(DelayBreak_Recursive(force, originalForce, breakHistory, breakDelay));
         }
-        BreakableManager.Add(this);
+        
+        PlayBreakEffects();
 
+        if (breakableState != BreakableState.Despawn)
+        {
+            BreakableManager.Add(this);
+        }
     }
 
 
@@ -173,13 +168,19 @@ public class BreakablePart : BreakableComponent
         BreakableData[] tempPD = connectedParts.ToArray();
         foreach (BreakableData connectedPart in tempPD)
         {
-            connectedPart.Component.EvaluateBreak(connectedPart, force, this, breakHistory);
+            if (connectedPart.Component)
+            {
+                connectedPart.Component.EvaluateBreak(connectedPart, force, this, breakHistory);
+            }
         }
 
         tempPD = otherConnectedParts.ToArray();
         foreach (BreakableData partDistance in tempPD)
         {
-            partDistance.Component.EvaluateFall();
+            if (partDistance.Component)
+            {
+                partDistance.Component.EvaluateFall();
+            }
         }
 
         ApplyForce(force);
@@ -213,14 +214,13 @@ public class BreakablePart : BreakableComponent
         {
             part.Component.RemovePart(this);
         }
+        
 
         //if piece is too small
         if (meshSize < minimumPartSize)
         {
             gameObject.SetActive(false);
-
-            breakableState = BreakableState.Free;
-
+            Despawn();
             return;
         }
         else
@@ -252,9 +252,9 @@ public class BreakablePart : BreakableComponent
     public override void EvaluateBreak(BreakableData pd, Vector3 force, BreakableComponent originalPart,
         List<BreakableComponent> breakHistory)
     {
-        if (!gameObject.activeSelf)
+        if (gameObject || !gameObject.activeSelf)
         {
-            print($"{this} not active");
+            // print($"{this} not active");
             return;
         }
 
@@ -290,9 +290,12 @@ public class BreakablePart : BreakableComponent
 
     public override void EvaluateFall()
     {
-        if (gameObject.activeSelf)
+        if (gameObject && gameObject.activeSelf)
         {
-            StartCoroutine(DelayBreakBottom());
+            if (breakableState != BreakableState.Despawn)
+            {
+                StartCoroutine(DelayBreakBottom());
+            }
         }
     }
 
@@ -390,10 +393,8 @@ public class BreakablePart : BreakableComponent
         // Debug.Log($"{this} bottom break start.");
 
         yield return new WaitForSeconds(breakDelay);
-
         if (!IsBroken() && !HasBottomPart())
         {
-            // Debug.Log($"{this} break bottom.");
             Break(new Vector3(), new Vector3());
             if (isDebug)
             {
@@ -412,6 +413,24 @@ public class BreakablePart : BreakableComponent
         else
         {
             base.AddDetectedPart(current);
+        }
+    }
+
+
+    //******Despawning
+    public override void Despawn()
+    {
+        if (!gameObject || breakableState == BreakableState.Despawn)
+        {
+            return;
+        }
+        breakableState = BreakableState.Despawn;
+        despawnEvent.Invoke();
+        LeanTween.scale(gameObject, Vector3.zero, despawnTime);
+        Destroy(gameObject, despawnTime + 1f);
+        if (isDebug)
+        {
+            rendererMaterial.color = Color.yellow;
         }
     }
 }

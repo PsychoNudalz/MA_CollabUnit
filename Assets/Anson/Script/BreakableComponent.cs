@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 [Serializable]
 public class BreakableData
@@ -54,6 +55,15 @@ public class BreakableData
         return base.GetHashCode();
     }
 }
+[Serializable]
+public enum BreakableState
+{
+    Hold,
+    InitialBreak,
+    Free,
+    Stay,
+    Despawn
+}
 
 
 public class BreakableComponent : MonoBehaviour
@@ -63,6 +73,9 @@ public class BreakableComponent : MonoBehaviour
 
     [SerializeField]
     private PhysicMaterial physicMaterial;
+
+    [SerializeField]
+    private BreakableStructureController breakableStructureController;
 
     [SerializeField]
     protected List<BreakableData> connectedParts;
@@ -97,6 +110,17 @@ public class BreakableComponent : MonoBehaviour
 
     [SerializeField]
     protected LayerMask castLayer;
+
+    [Header("Break")]
+    [SerializeField]
+    protected UnityEvent breakEvent;
+
+    [Header("Despawning")]
+    [SerializeField]
+    protected UnityEvent despawnEvent;
+
+    [SerializeField]
+    protected float despawnTime = 5f;
 
 
     [Header("Debug")]
@@ -174,9 +198,10 @@ public class BreakableComponent : MonoBehaviour
         otherConnectedParts = new List<BreakableData>();
     }
 
-    public virtual void Initialise(GameObject p, float mass, float drag, float affectedRange, Vector2 breakForce,
+    public virtual void Initialise(GameObject p, BreakableStructureController bsc, float mass, float drag,
+        float affectedRange, Vector2 breakForce,
         float forceTransfer, LayerMask bpLayer, AnimationCurve transferToDot, float minSize, float breakDelay,
-        float bottomAngle, PhysicMaterial pm)
+        float bottomAngle, PhysicMaterial pm, UnityEvent breakEvent1, float despawnTime1, UnityEvent despawnEvent1)
     {
         if (parent && !parent.TryGetComponent(out BreakableCollective _))
         {
@@ -189,15 +214,17 @@ public class BreakableComponent : MonoBehaviour
 
 
         Initialise();
-        InitialiseValues(mass, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot, minSize,
-            breakDelay, bottomAngle, pm);
+        InitialiseValues(mass, bsc, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot, minSize,
+            breakDelay, bottomAngle, pm, breakEvent1, despawnTime1, despawnEvent1);
     }
 
-    protected virtual void InitialiseValues(float mass, float drag, float affectedRange, Vector2 breakForce,
+    protected virtual void InitialiseValues(float mass, BreakableStructureController bsc, float drag,
+        float affectedRange, Vector2 breakForce,
         float forceTransfer,
         LayerMask bpLayer, AnimationCurve transferToDot, float minSize, float breakDelay, float bottomAngle,
-        PhysicMaterial pm)
+        PhysicMaterial pm, UnityEvent breakEvent1, float despawnTime1, UnityEvent despawnEvent1)
     {
+        breakableStructureController = bsc;
         physicMaterial = pm;
         meshSize = meshFilter.sharedMesh.bounds.size.magnitude * transform.lossyScale.x;
         this.AffectiveRange = affectedRange;
@@ -214,6 +241,9 @@ public class BreakableComponent : MonoBehaviour
         selfRB.useGravity = false;
         selfRB.collisionDetectionMode = CollisionDetectionMode.Continuous;
         this.transferToDot = transferToDot;
+        breakEvent = breakEvent1;
+        despawnTime = despawnTime1;
+        despawnEvent = despawnEvent1;
     }
 
     public virtual void Initialise()
@@ -239,9 +269,6 @@ public class BreakableComponent : MonoBehaviour
         connectedParts = new List<BreakableData>();
         otherConnectedParts = new List<BreakableData>();
 
-        // print($"{this} mesh size: {meshSize}");
-        // var tempParts = InitialiseClosest();
-        //
     }
 
 
@@ -261,7 +288,7 @@ public class BreakableComponent : MonoBehaviour
 
     protected bool IsBroken()
     {
-        return breakableState is BreakableState.InitialBreak or BreakableState.Free;
+        return breakableState is BreakableState.InitialBreak or BreakableState.Free or BreakableState.Despawn or BreakableState.Stay;
     }
 
     public virtual void RemovePart(BreakableComponent part)
@@ -453,6 +480,7 @@ public class BreakableComponent : MonoBehaviour
 
     public virtual void Despawn()
     {
+        breakableState = BreakableState.Despawn;
         if (gameObject)
         {
             Destroy(gameObject);
@@ -487,6 +515,15 @@ public class BreakableComponent : MonoBehaviour
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(bs), bs, null);
+        }
+    }
+
+    protected virtual void PlayBreakEffects()
+    {
+        breakEvent.Invoke();
+        if (breakableStructureController)
+        {
+            breakableStructureController.PlayBreakEffects(transform.position,meshFilter.mesh);
         }
     }
 }
