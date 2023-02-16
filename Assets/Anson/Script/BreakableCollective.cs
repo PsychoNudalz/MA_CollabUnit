@@ -28,7 +28,7 @@ public class BreakableCollective : BreakableComponent
     {
         if (collision.gameObject.TryGetComponent(out BreakablePart bp))
         {
-            if (!bp.Parent.Equals(parent) || bp.BreakableState == BreakableState.FullBreak)
+            if (!bp.Parent.Equals(parent) || bp.BreakableState == BreakableState.Free)
             {
                 CollisionBreak(bp.SelfRb, collision);
             }
@@ -310,5 +310,13 @@ public class BreakableCollective : BreakableComponent
     public override string ToString()
     {
         return base.ToString();
+    }
+
+    public override void Despawn()
+    {
+        foreach (BreakableComponent breakableComponent in breakableComponents)
+        {
+            breakableComponent.Despawn();
+        }
     }
 }

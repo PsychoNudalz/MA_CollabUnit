@@ -11,17 +11,35 @@ public enum BreakableState
 {
     Hold,
     InitialBreak,
-    FullBreak
+    Free,
+    Stay
 }
 
 [Serializable]
 public class BreakablePart : BreakableComponent
 {
+    // [Header("Auto Free time")]
+    // [SerializeField]
+
+    protected float freeToStayTime = 5f;
+    protected float freeToStayTime_now = 0f;
+    protected float moveDistance = 10f;
+    protected Vector3 lastPosition;
+        
+        
     private void Awake()
     {
         if (isDebug)
         {
             rendererMaterial = renderer?.material;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (breakableState == BreakableState.Free)
+        {
+            
         }
     }
 
@@ -61,7 +79,7 @@ public class BreakablePart : BreakableComponent
     {
         if (collision.gameObject.TryGetComponent(out BreakablePart bp))
         {
-            if (!bp.Parent.Equals(parent) || bp.BreakableState == BreakableState.FullBreak)
+            if (!bp.Parent.Equals(parent) || bp.BreakableState == BreakableState.Free)
             {
                 CollisionBreak(bp.selfRB);
             }
@@ -110,6 +128,8 @@ public class BreakablePart : BreakableComponent
         {
             StartCoroutine(DelayBreak_Recursive(force, originalForce, breakHistory, breakDelay));
         }
+        BreakableManager.Add(this);
+
     }
 
 
@@ -199,7 +219,7 @@ public class BreakablePart : BreakableComponent
         {
             gameObject.SetActive(false);
 
-            breakableState = BreakableState.FullBreak;
+            breakableState = BreakableState.Free;
 
             return;
         }

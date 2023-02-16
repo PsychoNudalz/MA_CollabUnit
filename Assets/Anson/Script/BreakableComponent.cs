@@ -248,6 +248,7 @@ public class BreakableComponent : MonoBehaviour
     public virtual void Break(Vector3 force, Vector3 originalForce, List<BreakableComponent> breakHistory = null,
         float breakDelay = 0f, bool forceBreak = false, Vector3 originPoint = default)
     {
+        BreakableManager.Add(this);
     }
 
     public virtual void CollisionBreak(Rigidbody rb, Collision collision = null, Vector3 point = default)
@@ -260,7 +261,7 @@ public class BreakableComponent : MonoBehaviour
 
     protected bool IsBroken()
     {
-        return breakableState is BreakableState.InitialBreak or BreakableState.FullBreak;
+        return breakableState is BreakableState.InitialBreak or BreakableState.Free;
     }
 
     public virtual void RemovePart(BreakableComponent part)
@@ -353,7 +354,7 @@ public class BreakableComponent : MonoBehaviour
     protected IEnumerator DelayToFullBreak()
     {
         yield return new WaitForSeconds(fullBreakTime);
-        breakableState = BreakableState.FullBreak;
+        breakableState = BreakableState.Free;
     }
 
     protected bool HasBottomPart()
@@ -448,5 +449,44 @@ public class BreakableComponent : MonoBehaviour
         }
 
         return bc;
+    }
+
+    public virtual void Despawn()
+    {
+        if (gameObject)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    protected virtual void ChangeState(BreakableState bs)
+    {
+        switch (breakableState)
+        {
+            case BreakableState.Hold:
+                break;
+            case BreakableState.InitialBreak:
+                break;
+            case BreakableState.Free:
+                break;
+            case BreakableState.Stay:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+        breakableState = bs;
+        switch (bs)
+        {
+            case BreakableState.Hold:
+                break;
+            case BreakableState.InitialBreak:
+                break;
+            case BreakableState.Free:
+                break;
+            case BreakableState.Stay:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(bs), bs, null);
+        }
     }
 }
