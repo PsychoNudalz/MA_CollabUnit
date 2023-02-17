@@ -21,11 +21,21 @@ public class CatTelekinesis : MonoBehaviour
     [Header("Aim")]
     [SerializeField]
     private Transform camera;
+
+    [SerializeField]
+    private LineRenderer lineBase;
+
+    [SerializeField]
+    private Transform lineParent;
+
+    [SerializeField]
+    private LineRenderer[] lines;
+
     [Header("Pull")]
     [SerializeField]
     private float pullCastRayRange = 20f;
 
-    private float cameraRayCastRange = 200f;
+    private float cameraRayCastRange = 300f;
 
     [SerializeField]
     private float pullCastRadius = 5f;
@@ -52,9 +62,6 @@ public class CatTelekinesis : MonoBehaviour
     [SerializeField]
     private float shootAccel = 100f;
 
-    [Header("Aim")]
-    [SerializeField]
-    private LineRenderer[] lines;
 
     private void Awake()
     {
@@ -68,6 +75,7 @@ public class CatTelekinesis : MonoBehaviour
     void Start()
     {
         camera = Camera.main.transform;
+        InitialiseLines();
     }
 
     // Update is called once per frame
@@ -78,8 +86,12 @@ public class CatTelekinesis : MonoBehaviour
             case TelekinesisState.Idle:
                 break;
             case TelekinesisState.Aim:
+                ShowLines();
+
                 break;
             case TelekinesisState.Pull:
+                ShowLines();
+
                 break;
             case TelekinesisState.Shoot:
                 break;
@@ -96,7 +108,6 @@ public class CatTelekinesis : MonoBehaviour
                 break;
             case TelekinesisState.Aim:
                 FindPiece(camera.forward, camera.position);
-
                 break;
             case TelekinesisState.Pull:
                 if (parts.Count > 0)
@@ -112,6 +123,20 @@ public class CatTelekinesis : MonoBehaviour
         }
     }
 
+    void InitialiseLines()
+    {
+        lines = new LineRenderer[maxPartsSize];
+        if (lineBase)
+        {
+            for (int i = 0; i < maxPartsSize; i++)
+            {
+                lines[i] = Instantiate(lineBase.gameObject, lineParent.position, lineParent.rotation, lineParent)
+                    .GetComponent<LineRenderer>();
+            }
+        }
+        SetLines(false);
+    }
+
     public void OnTelekinesis_Press(Vector3 dir, Vector3 castPoint)
     {
         switch (telekinesisState)
@@ -122,6 +147,7 @@ public class CatTelekinesis : MonoBehaviour
             case TelekinesisState.Aim:
                 break;
             case TelekinesisState.Pull:
+                SetLines(false);
                 OnTele_Shoot(dir);
                 break;
             case TelekinesisState.Shoot:
@@ -136,17 +162,24 @@ public class CatTelekinesis : MonoBehaviour
         switch (telekinesisState)
         {
             case TelekinesisState.Idle:
-
+                
                 break;
             case TelekinesisState.Aim:
-                OnTele_Pull(dir, castPoint);
+                if (parts.Count > 0)
+                {
+                    OnTele_Pull(dir, castPoint);
+                }
+                else
+                {
+                    telekinesisState = TelekinesisState.Idle;
+                }
 
                 break;
             case TelekinesisState.Pull:
                 break;
             case TelekinesisState.Shoot:
                 break;
-            
+
             default:
                 throw new ArgumentOutOfRangeException();
         }
@@ -185,29 +218,61 @@ public class CatTelekinesis : MonoBehaviour
         if (Physics.Raycast(castPoint, dir, out hit, cameraRayCastRange, pullLayer))
         {
             dir = hit.point - transform.position;
-            Debug.DrawLine(castPoint, hit.point, Color.magenta, 5f);
+            // Debug.DrawLine(castPoint, hit.point, Color.magenta, 5f);
             if (Physics.Raycast(transform.position, dir.normalized, out hit, pullCastRayRange, pullLayer))
             {
-                Debug.DrawLine(transform.position, hit.point, Color.magenta, 5f);
+                // Debug.DrawLine(transform.position, hit.point, Color.magenta, 5f);
 
                 Collider[] hits = Physics.OverlapSphere(hit.point, pullCastRadius, pullLayer);
                 foreach (Collider collider in hits)
                 {
                     if (collider.TryGetComponent(out BreakablePart bp))
                     {
-                        parts.Add(bp);
+                        if (bp.CanTelekinesis)
+                        {
+                            parts.Add(bp);
+                        }
                     }
 
                     if (parts.Count >= maxPartsSize)
                     {
                         return;
-                        
                     }
                 }
             }
         }
 
         // Debug.Log($"Tele Parts: {parts.Count}");
+    }
+
+    void ShowLines()
+    {
+        Vector3 pos;
+        for (int i = 0; i < parts.Count; i++)
+        {
+            lines[i].gameObject.SetActive(true);
+            // pos = parts[i].transform.position - lineParent.position;
+            lines[i].SetPosition(0, lineParent.position);
+            lines[i].SetPosition(1, parts[i].transform.position);
+        }
+
+        for (int i = parts.Count; i < lines.Length; i++)
+        {
+            lines[i].gameObject.SetActive(false);
+
+        }
+    }
+
+    void SetLines(bool b)
+    {
+        foreach (LineRenderer lineRenderer in lines)
+        {
+            lineRenderer.gameObject.SetActive(b);
+            if (!b)
+            {
+                lineRenderer.SetPosition(1,Vector3.zero);
+            }
+        }
     }
 
     bool CanCast(Vector3 dir, Vector3 castPoint, out Vector3 point)

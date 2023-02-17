@@ -76,7 +76,7 @@ public class CatInputController : MonoBehaviour
 
     public void OnTelekinesis(InputValue inputValue)
     {
-        print($"{inputValue.isPressed}  {inputValue.Get<float>()}");
+        // print($"{inputValue.isPressed}  {inputValue.Get<float>()}");
 
         if (isTeleOn)
         {

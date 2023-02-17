@@ -17,6 +17,7 @@ public class BreakablePart : BreakableComponent
     protected float moveDistance = 10f;
     protected Vector3 lastPosition;
 
+    public bool CanTelekinesis => breakableState == BreakableState.Free;
 
     private void Awake()
     {
