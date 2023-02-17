@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CatTelekinesis : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class CatTelekinesis : MonoBehaviour
 
     [SerializeField]
     private LineRenderer[] lines;
+    
 
     [Header("Pull")]
     [SerializeField]
@@ -61,6 +63,14 @@ public class CatTelekinesis : MonoBehaviour
     [Header("Shoot")]
     [SerializeField]
     private float shootAccel = 100f;
+
+    [Header("Effects")]
+    [SerializeField]
+    private UnityEvent OnAimEvent;
+    [SerializeField]
+    private UnityEvent OnPullEvent;
+    [SerializeField]
+    private UnityEvent OnShootEvent;
 
 
     private void Awake()
@@ -143,12 +153,14 @@ public class CatTelekinesis : MonoBehaviour
         {
             case TelekinesisState.Idle:
                 OnTele_Aim();
+                OnAimEvent.Invoke();
                 break;
             case TelekinesisState.Aim:
                 break;
             case TelekinesisState.Pull:
                 SetLines(false);
                 OnTele_Shoot(dir);
+                OnShootEvent.Invoke();
                 break;
             case TelekinesisState.Shoot:
                 break;
@@ -162,7 +174,8 @@ public class CatTelekinesis : MonoBehaviour
         switch (telekinesisState)
         {
             case TelekinesisState.Idle:
-                
+                OnShootEvent.Invoke();
+
                 break;
             case TelekinesisState.Aim:
                 if (parts.Count > 0)
