@@ -162,7 +162,7 @@ public class CatTelekinesis : MonoBehaviour
             }
         }
 
-        Debug.Log($"Tele Parts: {parts.Count}");
+        // Debug.Log($"Tele Parts: {parts.Count}");
     }
 
     void MovePieces()
@@ -181,7 +181,7 @@ public class CatTelekinesis : MonoBehaviour
 
     void ShootPieces(Vector3 dir)
     {
-        Debug.Log($"Tele Shoot: {parts.Count}");
+        // Debug.Log($"Tele Shoot: {parts.Count}");
 
         foreach (BreakablePart breakablePart in parts)
         {
