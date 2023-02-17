@@ -18,10 +18,12 @@ public class PauseMenu : MonoBehaviour
     private bool optionsOpen = false;
     [SerializeField] private GameObject confirmBox;
     private bool confirmBoxOpen = false;
+
+    public bool canBePaused = true;
     
     public void Update()
     {
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        if (Keyboard.current.escapeKey.wasPressedThisFrame && canBePaused)
         {
             if (optionsOpen)
             {
