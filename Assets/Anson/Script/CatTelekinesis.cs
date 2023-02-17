@@ -52,6 +52,10 @@ public class CatTelekinesis : MonoBehaviour
     [SerializeField]
     private float shootAccel = 100f;
 
+    [Header("Aim")]
+    [SerializeField]
+    private LineRenderer[] lines;
+
     private void Awake()
     {
         if (!hoverPoint)
@@ -171,7 +175,6 @@ public class CatTelekinesis : MonoBehaviour
     void OnTele_Aim()
     {
         telekinesisState = TelekinesisState.Aim;
-
         // camera
     }
 
@@ -193,6 +196,12 @@ public class CatTelekinesis : MonoBehaviour
                     if (collider.TryGetComponent(out BreakablePart bp))
                     {
                         parts.Add(bp);
+                    }
+
+                    if (parts.Count >= maxPartsSize)
+                    {
+                        return;
+                        
                     }
                 }
             }
