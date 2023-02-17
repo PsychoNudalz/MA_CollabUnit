@@ -17,6 +17,7 @@ public class CatInputController : MonoBehaviour
     [SerializeField]
     private CatTelekinesis catTelekinesis;
 
+    private bool isTeleOn = false;
     private Transform cameraTransform;
 
     private Vector2 moveInput = new Vector2();
@@ -75,12 +76,24 @@ public class CatInputController : MonoBehaviour
 
     public void OnTelekinesis(InputValue inputValue)
     {
-        if (inputValue.Get<float>() > 0.5f)
+        print($"{inputValue.isPressed}  {inputValue.Get<float>()}");
+
+        if (isTeleOn)
         {
-            catTelekinesis.OnTelekinesis_Press(cameraTransform.forward,cameraTransform.position);
-        }else
+            if (inputValue.Get<float>()<0.5f)
+            {
+                catTelekinesis.OnTelekinesis_Release(cameraTransform.forward,cameraTransform.position);
+                isTeleOn = false;
+
+            }
+        }
+        else
         {
-            catTelekinesis.OnTelekinesis_Release(cameraTransform.forward,cameraTransform.position);
+            if (inputValue.Get<float>() >= 0.5f)
+            {
+                catTelekinesis.OnTelekinesis_Press(cameraTransform.forward,cameraTransform.position);
+                isTeleOn = true;
+            }
         }
     }
 
