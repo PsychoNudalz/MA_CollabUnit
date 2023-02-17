@@ -57,16 +57,17 @@ public class MainMenuButtons : MonoBehaviour
         }
         
     }
+
     public void PlayGame(string sceneName)
     {
-        if (sceneName == null)
-        {
-            Debug.Log("No scene name loaded");
-        }
-        else
-        {
-            SceneManager.LoadScene(sceneName);
-        }
+        StartCoroutine(LoadScene(sceneName));
+    }
+
+    private IEnumerator LoadScene(string sceneName)
+    {
+        LeanTween.scale(gameObject, new Vector3(0, 0, 0), 0.3f).setEase(LeanTweenType.easeInOutCubic);
+        yield return new WaitForSeconds(delayTimer);
+        SceneManager.LoadScene(sceneName);
     }
 
     public void Options()
