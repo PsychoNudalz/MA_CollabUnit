@@ -181,10 +181,14 @@ public class CatTelekinesis : MonoBehaviour
                 if (parts.Count > 0)
                 {
                     OnTele_Pull(dir, castPoint);
+                    OnPullEvent.Invoke();
+
                 }
                 else
                 {
                     telekinesisState = TelekinesisState.Idle;
+                    OnShootEvent.Invoke();
+
                 }
 
                 break;
