@@ -21,6 +21,9 @@ public class CatTelekinesis : MonoBehaviour
     private Transform hoverPoint;
 
     [SerializeField]
+    private Transform parent;
+
+    [SerializeField]
     private Vector3 hoverOffset;
     [Header("Aim")]
     [SerializeField]
@@ -85,7 +88,12 @@ public class CatTelekinesis : MonoBehaviour
             hoverPoint = transform;
         }
 
-        hoverOffset = hoverPoint.position - transform.position;
+        if (!parent)
+        {
+            parent = transform.parent;
+        }
+
+        hoverOffset = hoverPoint.position - parent.position;
     }
 
     // Start is called before the first frame update
@@ -358,7 +366,7 @@ public class CatTelekinesis : MonoBehaviour
 
     void UpdateHoverPoint()
     {
-        hoverPoint.position = transform.position + hoverOffset;
+        hoverPoint.position = parent.position + hoverOffset;
         vfx_BlackHole.SetVector3("CentrePosition",hoverPoint.position);
     }
 }
