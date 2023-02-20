@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverPoint: {fileID: 2055172897}
+  hoverOffset: {x: 0, y: 0, z: 0}
   camera: {fileID: 0}
   lineBase: {fileID: 632960379681379344, guid: acf46403466a69e41831c9ddbf6d5142, type: 3}
   lineParent: {fileID: 6759080557896738057}
@@ -62,6 +63,7 @@ MonoBehaviour:
   parts: []
   maxPartsSize: 20
   shootAccel: 10000
+  vfx_BlackHole: {fileID: 2403670581525333688}
   OnAimEvent:
     m_PersistentCalls:
       m_Calls:

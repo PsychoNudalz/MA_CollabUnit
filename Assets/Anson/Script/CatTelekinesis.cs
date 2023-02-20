@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.VFX;
 
 public class CatTelekinesis : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class CatTelekinesis : MonoBehaviour
     [SerializeField]
     private Transform hoverPoint;
 
+    [SerializeField]
+    private Vector3 hoverOffset;
     [Header("Aim")]
     [SerializeField]
     private Transform camera;
@@ -66,6 +69,8 @@ public class CatTelekinesis : MonoBehaviour
 
     [Header("Effects")]
     [SerializeField]
+    private VisualEffect vfx_BlackHole;
+    [SerializeField]
     private UnityEvent OnAimEvent;
     [SerializeField]
     private UnityEvent OnPullEvent;
@@ -79,6 +84,8 @@ public class CatTelekinesis : MonoBehaviour
         {
             hoverPoint = transform;
         }
+
+        hoverOffset = hoverPoint.position - transform.position;
     }
 
     // Start is called before the first frame update
@@ -96,14 +103,17 @@ public class CatTelekinesis : MonoBehaviour
             case TelekinesisState.Idle:
                 break;
             case TelekinesisState.Aim:
+                UpdateHoverPoint();
                 ShowLines();
 
                 break;
             case TelekinesisState.Pull:
+                UpdateHoverPoint();
                 ShowLines();
 
                 break;
             case TelekinesisState.Shoot:
+                UpdateHoverPoint();
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
@@ -343,5 +353,12 @@ public class CatTelekinesis : MonoBehaviour
         }
 
         parts = new List<BreakablePart>();
+    }
+
+
+    void UpdateHoverPoint()
+    {
+        hoverPoint.position = transform.position + hoverOffset;
+        vfx_BlackHole.SetVector3("CentrePosition",hoverPoint.position);
     }
 }
