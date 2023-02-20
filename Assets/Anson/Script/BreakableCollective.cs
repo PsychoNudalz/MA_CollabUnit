@@ -99,12 +99,17 @@ public class BreakableCollective : BreakableComponent
 
 
         breakableComponents = fractureParent.GetComponentsInChildren<BreakableComponent>();
+        
+        
         foreach (BreakableComponent breakableComponent in breakableComponents)
         {
+            
+            
             breakableComponent.AddComponents(pm);
             breakableComponent.Initialise(gameObject, bsc, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer,
                 transferToDot,
                 minimumPartSize, breakDelay, minBottomAngle, pm, breakEvent, despawnTime, despawnEvent);
+            
         }
 
         fractureParent.SetActive(false);

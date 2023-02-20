@@ -127,6 +127,8 @@ public class BreakableStructureController : MonoBehaviour
                 }
 
             }
+
+            c.gameObject.layer = gameObject.layer;
         }
 
         InitialiseComponents(GetComponentsInChildren<BreakableComponent>());
