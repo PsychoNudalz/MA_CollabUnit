@@ -331,9 +331,12 @@ public class QuadrupedMovementController : MonoBehaviour
         {
             inputDir_LastForward = inputDir_World;
         }
+    }
 
-
-        
+    public void OnMove_World(Vector3 world)
+    {
+        world = Quaternion.Euler(0, -transform.eulerAngles.y, 0) * world;
+        OnMove(new Vector2(world.x,world.z));
     }
 
     [ContextMenu("Upright")]
