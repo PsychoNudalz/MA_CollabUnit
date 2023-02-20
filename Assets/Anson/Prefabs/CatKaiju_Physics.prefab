@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverPoint: {fileID: 2055172897}
+  parent: {fileID: 0}
   hoverOffset: {x: 0, y: 0, z: 0}
   camera: {fileID: 0}
   lineBase: {fileID: 632960379681379344, guid: acf46403466a69e41831c9ddbf6d5142, type: 3}
@@ -1427,6 +1428,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2948913357674413528}
+  - component: {fileID: 6177506152722288362}
   m_Layer: 8
   m_Name: PlayerCameraFollow
   m_TagString: Untagged
@@ -1449,6 +1451,14 @@ Transform:
   m_Father: {fileID: 2948913358393695758}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &6177506152722288362
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2948913357674413529}
+  m_Enabled: 1
 --- !u!1 &2948913358045603821
 GameObject:
   m_ObjectHideFlags: 0

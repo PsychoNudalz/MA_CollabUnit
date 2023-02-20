@@ -84,7 +84,7 @@ public class BreakableStructureController : MonoBehaviour
     [ContextMenu("FindAllColliders")]
     public void GetAllColliders()
     {
-        allColliders = GetComponentsInChildren<Collider>();
+        allColliders = GetComponentsInChildren<Collider>(true);
     }
 
     private void Awake()
@@ -249,5 +249,6 @@ public class BreakableStructureController : MonoBehaviour
             vfx_Break.SetMesh("SpawnMesh",mesh);
             vfx_Break.Play();
         }
+        breakEvent.Invoke();
     }
 }
