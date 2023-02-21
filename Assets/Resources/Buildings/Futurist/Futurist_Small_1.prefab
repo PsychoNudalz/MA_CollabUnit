@@ -324,7 +324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4284535985582280801
 Transform:
   m_ObjectHideFlags: 0
@@ -551,8 +551,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   minimumPartSize: 5
-  breakDelay: 1
+  breakDelayRange: {x: 0.2, y: 2}
   minBottomAngle: 110
+  effectsController: {fileID: 0}
   breakEvent:
     m_PersistentCalls:
       m_Calls:
@@ -568,7 +569,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  vfx_Break: {fileID: 7210837317180220492}
   despawnTime: 3
   despawnEvent:
     m_PersistentCalls:
@@ -614,7 +614,7 @@ PrefabInstance:
     - target: {fileID: 6874657499850193236, guid: 6490d45b382cd66488939bfc21b07489,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6874657500036713709, guid: 6490d45b382cd66488939bfc21b07489,
         type: 3}
@@ -678,12 +678,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6490d45b382cd66488939bfc21b07489, type: 3}
---- !u!2083052967 &7210837317180220492 stripped
-VisualEffect:
-  m_CorrespondingSourceObject: {fileID: 6874657499850193237, guid: 6490d45b382cd66488939bfc21b07489,
-    type: 3}
-  m_PrefabInstance: {fileID: 4284535985458634009}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7210837317362782711 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6874657500036713710, guid: 6490d45b382cd66488939bfc21b07489,
