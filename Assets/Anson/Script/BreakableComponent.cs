@@ -55,6 +55,7 @@ public class BreakableData
         return base.GetHashCode();
     }
 }
+
 [Serializable]
 public enum BreakableState
 {
@@ -275,10 +276,9 @@ public class BreakableComponent : MonoBehaviour
         {
             collider = GetComponent<Collider>();
         }
-            
+
         connectedParts = new List<BreakableData>();
         otherConnectedParts = new List<BreakableData>();
-
     }
 
 
@@ -291,6 +291,7 @@ public class BreakableComponent : MonoBehaviour
     public virtual void CollisionBreak(Rigidbody rb, Collision collision = null, Vector3 point = default)
     {
     }
+
     public virtual void CollisionBreak(MovableObject mo, Collision collision = null, Vector3 point = default)
     {
     }
@@ -305,23 +306,37 @@ public class BreakableComponent : MonoBehaviour
     {
         for (int i = 0; i < connectedParts.Count; i++)
         {
-            BreakableData current = connectedParts[i];
-            if (current.Component.Equals(part))
+            try
             {
-                // print($"{this} remove connection: {part}");
-                connectedParts.RemoveAt(i);
-                return;
+                BreakableData current = connectedParts[i];
+                if (current.Component.Equals(part))
+                {
+                    // print($"{this} remove connection: {part}");
+                    connectedParts.RemoveAt(i);
+                    return;
+                }
+            }
+            catch (NullReferenceException e)
+            {
+                Console.WriteLine(e);
             }
         }
 
         for (int i = 0; i < otherConnectedParts.Count; i++)
         {
-            BreakableData current = otherConnectedParts[i];
-            if (current.Component.Equals(part))
+            try
             {
-                // print($"{this} remove connection: {part}");
-                otherConnectedParts.RemoveAt(i);
-                return;
+                BreakableData current = otherConnectedParts[i];
+
+                if (current.Component.Equals(part))
+                {
+                    otherConnectedParts.RemoveAt(i);
+                    return;
+                }
+            }
+            catch (NullReferenceException e)
+            {
+                Console.WriteLine(e);
             }
         }
     }
@@ -509,10 +524,8 @@ public class BreakableComponent : MonoBehaviour
                 break;
             case BreakableState.Stay:
                 break;
-
-            
-            
         }
+
         breakableState = bs;
         switch (bs)
         {
@@ -524,8 +537,6 @@ public class BreakableComponent : MonoBehaviour
                 break;
             case BreakableState.Stay:
                 break;
-
-            
         }
     }
 
@@ -534,7 +545,7 @@ public class BreakableComponent : MonoBehaviour
         breakEvent.Invoke();
         if (breakableStructureController)
         {
-            breakableStructureController.QueueBreakEffects(transform.position,meshFilter.mesh);
+            breakableStructureController.QueueBreakEffects(transform.position, meshFilter.mesh);
         }
     }
 }
