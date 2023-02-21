@@ -32,6 +32,7 @@ public class SoundPool : Sound
     [ContextMenu("Play")]
     public override void Play()
     {
+        print("Play");
         poolIndex = (poolIndex + 1) % sourcePoolSize;
         source = sourcePool[poolIndex];
         base.Play();

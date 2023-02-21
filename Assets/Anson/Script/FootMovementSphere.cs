@@ -77,6 +77,10 @@ public class FootMovementSphere : MonoBehaviour
     private float swipeTime_Now = 0f;
     private Vector3 swipeForce = new Vector3();
 
+    [Header("Footstep")]
+    [SerializeField]
+    private SoundAbstract footstepSound;
+
     [Space(10)]
     [SerializeField]
     private bool isDebug = false;
@@ -348,6 +352,9 @@ public class FootMovementSphere : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        footstepSound.Play();
+        
+        
         switch (footState)
         {
             case FootState.Move:

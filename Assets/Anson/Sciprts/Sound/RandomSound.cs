@@ -78,16 +78,19 @@ public class RandomSound : SoundAbstract
         return GetRandomSound().IsPlaying();
     }
 
+    [ContextMenu("Play")]
     public override void Play()
     {
         GetRandomSound().Play();
         
     }
+    [ContextMenu("PlayF")]
 
     public override void PlayF()
     {
         GetRandomSound().PlayF();        
     }
+    [ContextMenu("Stop")]
 
     public override void Stop()
     {
@@ -110,10 +113,10 @@ public class RandomSound : SoundAbstract
             temp = sounds[(seed + i) % sounds.Length];
             if (!temp.IsPlaying() )
             {
+                print(temp.name);
                 return temp;
             }
         }
-
         return temp;
     } 
 }
