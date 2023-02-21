@@ -153,7 +153,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.481719
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -161,7 +161,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -456,8 +468,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   minimumPartSize: 5
-  breakDelay: 1
+  breakDelayRange: {x: 0.5, y: 1.5}
   minBottomAngle: 110
+  effectsController: {fileID: 4228874921514187632}
   breakEvent:
     m_PersistentCalls:
       m_Calls:
@@ -473,7 +486,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  vfx_Break: {fileID: 4751453390205422072}
   despawnTime: 3
   despawnEvent:
     m_PersistentCalls:
@@ -552,15 +564,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6490d45b382cd66488939bfc21b07489, type: 3}
---- !u!4 &4751453390023130179 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6874657500036713710, guid: 6490d45b382cd66488939bfc21b07489,
+--- !u!114 &4228874921514187632 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2610054135607167965, guid: 6490d45b382cd66488939bfc21b07489,
     type: 3}
   m_PrefabInstance: {fileID: 2204297877861085357}
   m_PrefabAsset: {fileID: 0}
---- !u!2083052967 &4751453390205422072 stripped
-VisualEffect:
-  m_CorrespondingSourceObject: {fileID: 6874657499850193237, guid: 6490d45b382cd66488939bfc21b07489,
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47160d6e28a93e44b92f71b43ea2494a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &4751453390023130179 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6874657500036713710, guid: 6490d45b382cd66488939bfc21b07489,
     type: 3}
   m_PrefabInstance: {fileID: 2204297877861085357}
   m_PrefabAsset: {fileID: 0}
@@ -2620,7 +2638,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.8676876
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -2628,7 +2646,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2848,7 +2878,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.95345414
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -2856,7 +2886,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2940,9 +2982,6 @@ MonoBehaviour:
   - component: {fileID: 5843028041860373424}
     distance: 5.1282635
     dir: {x: -0.68427896, y: 0.72883695, z: -0.023640163}
-  - component: {fileID: 5843028041913610819}
-    distance: 9.387142
-    dir: {x: -0.8474368, y: 0.06829889, z: 0.5264848}
   - component: {fileID: 5843028042014993891}
     distance: 3.726823
     dir: {x: 0.2657702, y: 0.8052272, z: 0.5300711}
@@ -2961,6 +3000,9 @@ MonoBehaviour:
   - component: {fileID: 5843028041302274014}
     distance: 8.5227585
     dir: {x: -0.69224733, y: 0.009564764, z: -0.721597}
+  - component: {fileID: 5843028041913610819}
+    distance: 9.387142
+    dir: {x: -0.8474368, y: 0.06829889, z: 0.5264848}
   otherConnectedParts:
   - component: {fileID: 5843028042014993891}
     distance: 3.726823
@@ -3034,7 +3076,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.93370736
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -3042,7 +3084,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3160,7 +3214,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.93035185
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -3168,7 +3222,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3234,12 +3300,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041679209788}
-    distance: 6.192027
-    dir: {x: -0.007916448, y: 0.97520494, z: -0.22116184}
   - component: {fileID: 5843028041817745560}
     distance: 6.434354
     dir: {x: -0.20802297, y: -0.18182997, z: -0.96107453}
+  - component: {fileID: 5843028041679209788}
+    distance: 6.192027
+    dir: {x: -0.007916448, y: 0.97520494, z: -0.22116184}
   otherConnectedParts:
   - component: {fileID: 5843028041679209788}
     distance: 6.192027
@@ -3286,7 +3352,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.3830146
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -3294,7 +3360,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3432,9 +3510,6 @@ MonoBehaviour:
   - component: {fileID: 5843028041495865555}
     distance: 8.583609
     dir: {x: -0.65977365, y: 0.33038822, z: -0.67493886}
-  - component: {fileID: 5843028041913610819}
-    distance: 9.089884
-    dir: {x: -0.87075, y: 0.48594514, z: -0.07517841}
   - component: {fileID: 5843028040940436637}
     distance: 4.6715217
     dir: {x: 0.5721636, y: -0.7555415, z: -0.31903896}
@@ -3450,6 +3525,9 @@ MonoBehaviour:
   - component: {fileID: 5843028040625983996}
     distance: 8.357983
     dir: {x: 0.5007761, y: 0.81382525, z: -0.29480785}
+  - component: {fileID: 5843028041913610819}
+    distance: 9.089884
+    dir: {x: -0.87075, y: 0.48594514, z: -0.07517841}
   otherConnectedParts:
   - component: {fileID: 5843028040940436637}
     distance: 4.6715217
@@ -3496,7 +3574,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.7697769
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -3504,7 +3582,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3585,15 +3675,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
+  - component: {fileID: 5843028041037554442}
+    distance: 11.662636
+    dir: {x: -0.21825865, y: 0.44466615, z: -0.86869735}
   - component: {fileID: 5843028042029726080}
     distance: 5.7702155
     dir: {x: -0.098324284, y: 0.9820837, z: 0.16076067}
   - component: {fileID: 5843028041913610819}
     distance: 6.7509184
     dir: {x: 0.039764646, y: 0.8539683, z: 0.51880336}
-  - component: {fileID: 5843028041037554442}
-    distance: 11.662636
-    dir: {x: -0.21825865, y: 0.44466615, z: -0.86869735}
   otherConnectedParts:
   - component: {fileID: 5843028041495865555}
     distance: 5.142016
@@ -3637,7 +3727,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.0003976
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -3645,7 +3735,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3787,7 +3889,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.3099865
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -3795,7 +3897,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3846,9 +3960,6 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041913610819}
-    distance: 12.461126
-    dir: {x: -0.97105944, y: -0.19137534, z: 0.14289525}
   - component: {fileID: 5843028040797454159}
     distance: 6.0279703
     dir: {x: -0.68770826, y: -0.50197387, z: -0.5244803}
@@ -3861,6 +3972,9 @@ MonoBehaviour:
   - component: {fileID: 5843028040697478023}
     distance: 9.379024
     dir: {x: -0.2851234, y: -0.29933584, z: -0.9105508}
+  - component: {fileID: 5843028041913610819}
+    distance: 12.461126
+    dir: {x: -0.97105944, y: -0.19137534, z: 0.14289525}
   otherConnectedParts:
   - component: {fileID: 5843028042014993891}
     distance: 3.370675
@@ -3913,7 +4027,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.91123307
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -3921,7 +4035,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3993,18 +4119,18 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028040780642570}
-    distance: 8.317668
-    dir: {x: 0.47581327, y: -0.7792623, z: -0.40786263}
   - component: {fileID: 5843028041198953207}
     distance: 6.7509184
     dir: {x: -0.039764646, y: -0.8539683, z: -0.51880336}
-  - component: {fileID: 5843028041492275430}
-    distance: 3.6461759
-    dir: {x: 0.6910588, y: 0.662949, z: -0.28798673}
+  - component: {fileID: 5843028040780642570}
+    distance: 8.317668
+    dir: {x: 0.47581327, y: -0.7792623, z: -0.40786263}
   - component: {fileID: 5843028041495865555}
     distance: 5.803747
     dir: {x: 0.38798687, y: -0.2724553, z: -0.8804739}
+  - component: {fileID: 5843028041492275430}
+    distance: 3.6461759
+    dir: {x: 0.6910588, y: 0.662949, z: -0.28798673}
   - component: {fileID: 5843028041860373424}
     distance: 7.4156804
     dir: {x: 0.5995197, y: 0.4175661, z: -0.68279916}
@@ -4014,12 +4140,6 @@ MonoBehaviour:
   - component: {fileID: 5843028041207321510}
     distance: 4.7729216
     dir: {x: -0.44987953, y: 0.6343377, z: -0.62866855}
-  - component: {fileID: 5843028042029726080}
-    distance: 2.708815
-    dir: {x: -0.30854824, y: -0.036265332, z: -0.9505172}
-  - component: {fileID: 5843028041881741186}
-    distance: 6.136061
-    dir: {x: 0.09462916, y: 0.41267747, z: -0.90594846}
   - component: {fileID: 5843028040476611946}
     distance: 7.986983
     dir: {x: -0.18140556, y: -0.12535, z: -0.9753868}
@@ -4038,6 +4158,12 @@ MonoBehaviour:
   - component: {fileID: 5843028042091176216}
     distance: 9.791531
     dir: {x: -0.11714004, y: 0.2889275, z: -0.9501574}
+  - component: {fileID: 5843028042029726080}
+    distance: 2.708815
+    dir: {x: -0.30854824, y: -0.036265332, z: -0.9505172}
+  - component: {fileID: 5843028041881741186}
+    distance: 6.136061
+    dir: {x: 0.09462916, y: 0.41267747, z: -0.90594846}
   otherConnectedParts:
   - component: {fileID: 5843028042014993891}
     distance: 9.715544
@@ -4138,7 +4264,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.6228304
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -4146,7 +4272,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4245,15 +4383,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
+  - component: {fileID: 5843028042183625546}
+    distance: 7.2157927
+    dir: {x: 0.9231394, y: 0.22919966, z: -0.3086766}
   - component: {fileID: 5843028040508744943}
     distance: 5.3053446
     dir: {x: 0.6425747, y: 0.75192183, z: 0.1473474}
   - component: {fileID: 5843028041679209788}
     distance: 6.822661
     dir: {x: 0.6843, y: 0.21222231, z: 0.6976354}
-  - component: {fileID: 5843028042183625546}
-    distance: 7.2157927
-    dir: {x: 0.9231394, y: 0.22919966, z: -0.3086766}
   otherConnectedParts:
   - component: {fileID: 5843028041679209788}
     distance: 6.822661
@@ -4306,7 +4444,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.5410181
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -4314,7 +4452,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4416,12 +4566,6 @@ MonoBehaviour:
   - component: {fileID: 5843028041207321510}
     distance: 3.7725441
     dir: {x: -0.7230903, y: 0.13132517, z: 0.678155}
-  - component: {fileID: 5843028042029726080}
-    distance: 4.2226686
-    dir: {x: -0.33543965, y: -0.62293553, z: 0.70670474}
-  - component: {fileID: 5843028041913610819}
-    distance: 6.136061
-    dir: {x: -0.09462916, y: -0.41267747, z: 0.90594846}
   - component: {fileID: 5843028040476611946}
     distance: 4.645765
     dir: {x: -0.4368567, y: -0.7605599, z: -0.48031756}
@@ -4434,6 +4578,12 @@ MonoBehaviour:
   - component: {fileID: 5843028042091176216}
     distance: 4.134537
     dir: {x: -0.41785344, y: 0.07179238, z: -0.9056735}
+  - component: {fileID: 5843028042029726080}
+    distance: 4.2226686
+    dir: {x: -0.33543965, y: -0.62293553, z: 0.70670474}
+  - component: {fileID: 5843028041913610819}
+    distance: 6.136061
+    dir: {x: -0.09462916, y: -0.41267747, z: 0.90594846}
   otherConnectedParts:
   - component: {fileID: 5843028041207321510}
     distance: 3.7725441
@@ -4495,7 +4645,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.0087847
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -4503,7 +4653,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4611,39 +4773,39 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041757370521}
-    distance: 3.0488987
-    dir: {x: -0.49599594, y: -0.23426698, z: -0.83612615}
   - component: {fileID: 5843028041329677089}
     distance: 4.497542
     dir: {x: -0.30498296, y: 0.5045756, z: -0.8077059}
-  - component: {fileID: 5843028041143189747}
-    distance: 6.739541
-    dir: {x: -0.7348145, y: 0.6350873, z: 0.23814218}
-  - component: {fileID: 5843028041679209788}
-    distance: 5.909088
-    dir: {x: -0.84469396, y: 0.15561202, z: -0.51212984}
+  - component: {fileID: 5843028041757370521}
+    distance: 3.0488987
+    dir: {x: -0.49599594, y: -0.23426698, z: -0.83612615}
   - component: {fileID: 5843028041611647364}
     distance: 3.878749
     dir: {x: 0.99277455, y: -0.043665327, z: -0.111767344}
-  - component: {fileID: 5843028041254261247}
-    distance: 5.1006393
-    dir: {x: -0.14395985, y: -0.92290705, z: -0.3570969}
-  - component: {fileID: 5843028040779303526}
-    distance: 4.5820045
-    dir: {x: -0.80715734, y: 0.19533071, z: 0.55708426}
-  - component: {fileID: 5843028041466464958}
-    distance: 4.0743723
-    dir: {x: -0.0073759053, y: 0.9930031, z: -0.117858365}
   - component: {fileID: 5843028041512680964}
     distance: 4.2047977
     dir: {x: 0.35655755, y: -0.12746261, z: 0.9255377}
-  - component: {fileID: 5843028040298839324}
-    distance: 5.445858
-    dir: {x: -0.119563684, y: -0.855077, z: 0.50452733}
+  - component: {fileID: 5843028041466464958}
+    distance: 4.0743723
+    dir: {x: -0.0073759053, y: 0.9930031, z: -0.117858365}
+  - component: {fileID: 5843028041143189747}
+    distance: 6.739541
+    dir: {x: -0.7348145, y: 0.6350873, z: 0.23814218}
+  - component: {fileID: 5843028040779303526}
+    distance: 4.5820045
+    dir: {x: -0.80715734, y: 0.19533071, z: 0.55708426}
   - component: {fileID: 5843028040696891974}
     distance: 6.7576094
     dir: {x: -0.7449973, y: 0.037009727, z: 0.66604}
+  - component: {fileID: 5843028040298839324}
+    distance: 5.445858
+    dir: {x: -0.119563684, y: -0.855077, z: 0.50452733}
+  - component: {fileID: 5843028041254261247}
+    distance: 5.1006393
+    dir: {x: -0.14395985, y: -0.92290705, z: -0.3570969}
+  - component: {fileID: 5843028041679209788}
+    distance: 5.909088
+    dir: {x: -0.84469396, y: 0.15561202, z: -0.51212984}
   otherConnectedParts:
   - component: {fileID: 5843028040658847852}
     distance: 5.7821746
@@ -4735,7 +4897,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.7229588
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -4743,7 +4905,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4884,27 +5058,27 @@ MonoBehaviour:
   - component: {fileID: 5843028041037554442}
     distance: 9.023056
     dir: {x: 0.98459417, y: 0.11414881, z: -0.13245474}
-  - component: {fileID: 5843028040800902883}
-    distance: 3.5218258
-    dir: {x: -0.44681716, y: 0.11037282, z: -0.8877907}
   - component: {fileID: 5843028042147414469}
     distance: 5.403781
     dir: {x: 0.17677504, y: 0.7641001, z: -0.6204044}
   - component: {fileID: 5843028041219032054}
     distance: 4.2943063
     dir: {x: -0.13391884, y: 0.8993887, z: 0.41613188}
-  - component: {fileID: 5843028042201400159}
-    distance: 7.484077
-    dir: {x: -0.19645132, y: 0.9781984, z: 0.06734039}
+  - component: {fileID: 5843028040800902883}
+    distance: 3.5218258
+    dir: {x: -0.44681716, y: 0.11037282, z: -0.8877907}
   - component: {fileID: 5843028041773873100}
     distance: 3.8547106
     dir: {x: -0.9654986, y: 0.25413927, z: 0.056794025}
-  - component: {fileID: 5843028041611647364}
-    distance: 5.897483
-    dir: {x: -0.07984658, y: 0.0130722085, z: 0.99672145}
   - component: {fileID: 5843028041271501809}
     distance: 3.6487038
     dir: {x: -0.20157957, y: -0.8997027, z: 0.38717014}
+  - component: {fileID: 5843028041611647364}
+    distance: 5.897483
+    dir: {x: -0.07984658, y: 0.0130722085, z: 0.99672145}
+  - component: {fileID: 5843028042201400159}
+    distance: 7.484077
+    dir: {x: -0.19645132, y: 0.9781984, z: 0.06734039}
   otherConnectedParts:
   - component: {fileID: 5843028041773873100}
     distance: 3.8547106
@@ -4966,7 +5140,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.5534047
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -4974,7 +5148,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -5052,6 +5238,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
+  - component: {fileID: 5843028040953793380}
+    distance: 8.1825695
+    dir: {x: 0.29990143, y: -0.70030206, z: 0.6477933}
+  - component: {fileID: 5843028040611164022}
+    distance: 8.969762
+    dir: {x: 0.27767396, y: -0.6433402, z: 0.71344984}
   - component: {fileID: 5843028041495865555}
     distance: 9.965856
     dir: {x: 0.50830525, y: -0.10056041, z: 0.8552855}
@@ -5061,18 +5253,6 @@ MonoBehaviour:
   - component: {fileID: 5843028041207321510}
     distance: 11.247938
     dir: {x: 0.059271254, y: 0.32065746, z: 0.9453389}
-  - component: {fileID: 5843028041913610819}
-    distance: 13.933099
-    dir: {x: 0.20195931, y: 0.04156226, z: 0.97851163}
-  - component: {fileID: 5843028041881741186}
-    distance: 9.29542
-    dir: {x: 0.36518732, y: 0.3347138, z: 0.86868}
-  - component: {fileID: 5843028040611164022}
-    distance: 8.969762
-    dir: {x: 0.27767396, y: -0.6433402, z: 0.71344984}
-  - component: {fileID: 5843028040953793380}
-    distance: 8.1825695
-    dir: {x: 0.29990143, y: -0.70030206, z: 0.6477933}
   - component: {fileID: 5843028040476611946}
     distance: 6.0154514
     dir: {x: 0.22692162, y: -0.0701655, z: 0.97138214}
@@ -5106,21 +5286,27 @@ MonoBehaviour:
   - component: {fileID: 5843028041129550754}
     distance: 5.992976
     dir: {x: 0.39726987, y: -0.88482064, z: 0.24345224}
-  - component: {fileID: 5843028041879217728}
-    distance: 9.023056
-    dir: {x: -0.98459417, y: -0.11414881, z: 0.13245474}
   - component: {fileID: 5843028042147414469}
     distance: 8.782042
     dir: {x: -0.90284187, y: 0.35288584, z: -0.24565847}
   - component: {fileID: 5843028041219032054}
     distance: 10.314566
     dir: {x: -0.917066, y: 0.27459025, z: 0.28911972}
-  - component: {fileID: 5843028042201400159}
-    distance: 12.234158
-    dir: {x: -0.84634393, y: 0.51421124, z: 0.13888387}
+  - component: {fileID: 5843028041879217728}
+    distance: 9.023056
+    dir: {x: -0.98459417, y: -0.11414881, z: 0.13245474}
   - component: {fileID: 5843028041271501809}
     distance: 10.859837
     dir: {x: -0.88579166, y: -0.39712566, z: 0.24013397}
+  - component: {fileID: 5843028041881741186}
+    distance: 9.29542
+    dir: {x: 0.36518732, y: 0.3347138, z: 0.86868}
+  - component: {fileID: 5843028041913610819}
+    distance: 13.933099
+    dir: {x: 0.20195931, y: 0.04156226, z: 0.97851163}
+  - component: {fileID: 5843028042201400159}
+    distance: 12.234158
+    dir: {x: -0.84634393, y: 0.51421124, z: 0.13888387}
   otherConnectedParts:
   - component: {fileID: 5843028040328270576}
     distance: 1.9632679
@@ -5224,7 +5410,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.8567096
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -5232,7 +5418,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -5328,33 +5526,33 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028040508744943}
-    distance: 5.0084476
-    dir: {x: -0.64932334, y: 0.46628165, z: 0.6008}
   - component: {fileID: 5843028042147414469}
     distance: 8.729977
     dir: {x: 0.94797575, y: 0.31582075, z: 0.039988883}
-  - component: {fileID: 5843028042201400159}
-    distance: 9.343641
-    dir: {x: 0.62612593, y: 0.6366887, z: 0.4501042}
   - component: {fileID: 5843028040351395954}
     distance: 5.7330437
     dir: {x: 0.38734353, y: -0.53853685, z: 0.74829346}
   - component: {fileID: 5843028041773873100}
     distance: 5.3363156
     dir: {x: 0.67440444, y: -0.073512934, z: 0.7346934}
+  - component: {fileID: 5843028041987139978}
+    distance: 3.2976236
+    dir: {x: 0.019868072, y: 0.6149316, z: 0.78833014}
+  - component: {fileID: 5843028040508744943}
+    distance: 5.0084476
+    dir: {x: -0.64932334, y: 0.46628165, z: 0.6008}
+  - component: {fileID: 5843028041271501809}
+    distance: 9.549078
+    dir: {x: 0.68960047, y: -0.48744708, z: 0.5355806}
   - component: {fileID: 5843028041377794895}
     distance: 7.2157927
     dir: {x: -0.9231394, y: -0.22919966, z: 0.3086766}
   - component: {fileID: 5843028041679209788}
     distance: 7.268524
     dir: {x: -0.2741183, y: -0.028332634, z: 0.96127856}
-  - component: {fileID: 5843028041987139978}
-    distance: 3.2976236
-    dir: {x: 0.019868072, y: 0.6149316, z: 0.78833014}
-  - component: {fileID: 5843028041271501809}
-    distance: 9.549078
-    dir: {x: 0.68960047, y: -0.48744708, z: 0.5355806}
+  - component: {fileID: 5843028042201400159}
+    distance: 9.343641
+    dir: {x: 0.62612593, y: 0.6366887, z: 0.4501042}
   otherConnectedParts:
   - component: {fileID: 5843028041987139978}
     distance: 3.2976236
@@ -5407,7 +5605,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.3433841
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -5415,7 +5613,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -5548,7 +5758,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.9513384
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -5556,7 +5766,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -5646,24 +5868,18 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041757370521}
-    distance: 3.1773386
-    dir: {x: -0.04424073, y: -0.9390269, z: 0.3409857}
   - component: {fileID: 5843028041219032054}
     distance: 5.366984
     dir: {x: 0.9536459, y: 0.25087467, z: -0.16619696}
-  - component: {fileID: 5843028042201400159}
-    distance: 6.7567463
-    dir: {x: 0.62501, y: 0.71115625, z: -0.32189953}
   - component: {fileID: 5843028040351395954}
     distance: 4.7567873
     dir: {x: 0.12474706, y: -0.88953817, z: -0.4394997}
   - component: {fileID: 5843028041773873100}
     distance: 3.506962
     dir: {x: 0.56218827, y: -0.4380363, z: -0.701476}
-  - component: {fileID: 5843028041679209788}
-    distance: 3.9105043
-    dir: {x: -0.92563444, y: -0.34517923, z: 0.15508756}
+  - component: {fileID: 5843028041757370521}
+    distance: 3.1773386
+    dir: {x: -0.04424073, y: -0.9390269, z: 0.3409857}
   - component: {fileID: 5843028041987139978}
     distance: 4.185242
     dir: {x: -0.37315515, y: 0.21120033, z: -0.90341}
@@ -5676,6 +5892,12 @@ MonoBehaviour:
   - component: {fileID: 5843028042305848699}
     distance: 4.497542
     dir: {x: 0.30498296, y: -0.5045756, z: 0.8077059}
+  - component: {fileID: 5843028041679209788}
+    distance: 3.9105043
+    dir: {x: -0.92563444, y: -0.34517923, z: 0.15508756}
+  - component: {fileID: 5843028042201400159}
+    distance: 6.7567463
+    dir: {x: 0.62501, y: 0.71115625, z: -0.32189953}
   otherConnectedParts:
   - component: {fileID: 5843028041679209788}
     distance: 3.9105043
@@ -5755,7 +5977,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.3498008
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -5763,7 +5985,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -5871,24 +6105,24 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028040428649959}
-    distance: 2.943684
-    dir: {x: -0.6377863, y: 0.7612541, z: -0.117136344}
-  - component: {fileID: 5843028041143189747}
-    distance: 3.549106
-    dir: {x: 0.24291985, y: 0.8339833, z: -0.49544093}
   - component: {fileID: 5843028042096472491}
     distance: 3.7940116
     dir: {x: 0.6109801, y: 0.5532996, z: 0.5661827}
-  - component: {fileID: 5843028041679209788}
-    distance: 6.454812
-    dir: {x: 0.12751566, y: -0.062089626, z: -0.9898912}
+  - component: {fileID: 5843028041143189747}
+    distance: 3.549106
+    dir: {x: 0.24291985, y: 0.8339833, z: -0.49544093}
+  - component: {fileID: 5843028040428649959}
+    distance: 2.943684
+    dir: {x: -0.6377863, y: 0.7612541, z: -0.117136344}
   - component: {fileID: 5843028040779303526}
     distance: 2.3056362
     dir: {x: 0.917778, y: -0.18445921, z: -0.3516507}
   - component: {fileID: 5843028040696891974}
     distance: 1.7457751
     dir: {x: 0.4468272, y: -0.61302555, z: 0.6515713}
+  - component: {fileID: 5843028041679209788}
+    distance: 6.454812
+    dir: {x: 0.12751566, y: -0.062089626, z: -0.9898912}
   otherConnectedParts:
   - component: {fileID: 5843028042096472491}
     distance: 3.7940116
@@ -5953,7 +6187,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.7850285
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -5961,7 +6195,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -6129,30 +6375,30 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028040508744943}
-    distance: 3.6518116
-    dir: {x: 0.29253718, y: -0.9408981, z: 0.17068309}
-  - component: {fileID: 5843028040728199408}
-    distance: 3.7885962
-    dir: {x: -0.74195665, y: 0.31759155, z: 0.59045404}
-  - component: {fileID: 5843028040940679623}
-    distance: 5.611853
-    dir: {x: 0.9946914, y: 0.094738096, z: 0.04017263}
   - component: {fileID: 5843028041329677089}
     distance: 8.529156
     dir: {x: 0.6973322, y: -0.5425439, z: 0.46837378}
-  - component: {fileID: 5843028041377794895}
-    distance: 7.787028
-    dir: {x: -0.30060118, y: -0.9535329, z: -0.020344898}
-  - component: {fileID: 5843028041679209788}
-    distance: 7.894244
-    dir: {x: 0.29489297, y: -0.75716764, z: 0.58286816}
-  - component: {fileID: 5843028041987139978}
-    distance: 5.770256
-    dir: {x: 0.76008934, y: -0.648761, z: 0.037059594}
   - component: {fileID: 5843028042183625546}
     distance: 7.59381
     dir: {x: 0.5689361, y: -0.7600045, z: -0.31417334}
+  - component: {fileID: 5843028041987139978}
+    distance: 5.770256
+    dir: {x: 0.76008934, y: -0.648761, z: 0.037059594}
+  - component: {fileID: 5843028040508744943}
+    distance: 3.6518116
+    dir: {x: 0.29253718, y: -0.9408981, z: 0.17068309}
+  - component: {fileID: 5843028040940679623}
+    distance: 5.611853
+    dir: {x: 0.9946914, y: 0.094738096, z: 0.04017263}
+  - component: {fileID: 5843028041377794895}
+    distance: 7.787028
+    dir: {x: -0.30060118, y: -0.9535329, z: -0.020344898}
+  - component: {fileID: 5843028040728199408}
+    distance: 3.7885962
+    dir: {x: -0.74195665, y: 0.31759155, z: 0.59045404}
+  - component: {fileID: 5843028041679209788}
+    distance: 7.894244
+    dir: {x: 0.29489297, y: -0.75716764, z: 0.58286816}
   otherConnectedParts:
   - component: {fileID: 5843028041679209788}
     distance: 7.894244
@@ -6211,7 +6457,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.6611866
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -6219,7 +6465,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -6358,7 +6616,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.1355219
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -6366,7 +6624,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -6438,54 +6708,54 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041908686050}
-    distance: 6.454812
-    dir: {x: -0.12751566, y: 0.062089626, z: 0.9898912}
-  - component: {fileID: 5843028040428649959}
-    distance: 7.1281323
-    dir: {x: -0.37885535, y: 0.37059754, z: 0.84801304}
+  - component: {fileID: 5843028040351395954}
+    distance: 5.773
+    dir: {x: 0.72979265, y: -0.4991372, z: -0.46718818}
+  - component: {fileID: 5843028041329677089}
+    distance: 3.9105043
+    dir: {x: 0.92563444, y: 0.34517923, z: -0.15508756}
+  - component: {fileID: 5843028041773873100}
+    distance: 6.3797007
+    dir: {x: 0.8764158, y: -0.029210113, z: -0.48066837}
   - component: {fileID: 5843028041757370521}
     distance: 3.873122
     dir: {x: 0.8982753, y: -0.42182544, z: 0.1231452}
+  - component: {fileID: 5843028041987139978}
+    distance: 5.336161
+    dir: {x: 0.3856617, y: 0.41860607, z: -0.8222129}
   - component: {fileID: 5843028040508744943}
     distance: 4.8856297
     dir: {x: -0.25783092, y: 0.5201548, z: -0.81422484}
   - component: {fileID: 5843028041041694980}
     distance: 7.894244
     dir: {x: -0.29489297, y: 0.75716764, z: -0.58286816}
-  - component: {fileID: 5843028041329677089}
-    distance: 3.9105043
-    dir: {x: 0.92563444, y: 0.34517923, z: -0.15508756}
-  - component: {fileID: 5843028041143189747}
-    distance: 5.7221985
-    dir: {x: 0.0068258177, y: 0.58730435, z: 0.80933744}
-  - component: {fileID: 5843028040351395954}
-    distance: 5.773
-    dir: {x: 0.72979265, y: -0.4991372, z: -0.46718818}
-  - component: {fileID: 5843028041773873100}
-    distance: 6.3797007
-    dir: {x: 0.8764158, y: -0.029210113, z: -0.48066837}
-  - component: {fileID: 5843028041377794895}
-    distance: 6.822661
-    dir: {x: -0.6843, y: -0.21222231, z: -0.6976354}
-  - component: {fileID: 5843028040484905370}
-    distance: 6.192027
-    dir: {x: 0.007916448, y: -0.97520494, z: 0.22116184}
-  - component: {fileID: 5843028041987139978}
-    distance: 5.336161
-    dir: {x: 0.3856617, y: 0.41860607, z: -0.8222129}
-  - component: {fileID: 5843028040779303526}
-    distance: 5.7267094
-    dir: {x: 0.22577932, y: -0.0042815106, z: 0.9741691}
   - component: {fileID: 5843028041466464958}
     distance: 6.393036
     dir: {x: 0.77605057, y: 0.48902258, z: 0.3982492}
-  - component: {fileID: 5843028042305848699}
-    distance: 5.909088
-    dir: {x: 0.84469396, y: -0.15561202, z: 0.51212984}
+  - component: {fileID: 5843028041908686050}
+    distance: 6.454812
+    dir: {x: -0.12751566, y: 0.062089626, z: 0.9898912}
+  - component: {fileID: 5843028041143189747}
+    distance: 5.7221985
+    dir: {x: 0.0068258177, y: 0.58730435, z: 0.80933744}
+  - component: {fileID: 5843028040428649959}
+    distance: 7.1281323
+    dir: {x: -0.37885535, y: 0.37059754, z: 0.84801304}
+  - component: {fileID: 5843028040779303526}
+    distance: 5.7267094
+    dir: {x: 0.22577932, y: -0.0042815106, z: 0.9741691}
   - component: {fileID: 5843028040696891974}
     distance: 7.5568905
     dir: {x: -0.0056941127, y: -0.08858509, z: 0.9960524}
+  - component: {fileID: 5843028042305848699}
+    distance: 5.909088
+    dir: {x: 0.84469396, y: -0.15561202, z: 0.51212984}
+  - component: {fileID: 5843028040484905370}
+    distance: 6.192027
+    dir: {x: 0.007916448, y: -0.97520494, z: 0.22116184}
+  - component: {fileID: 5843028041377794895}
+    distance: 6.822661
+    dir: {x: -0.6843, y: -0.21222231, z: -0.6976354}
   otherConnectedParts:
   - component: {fileID: 5843028041143189747}
     distance: 5.7221985
@@ -6574,7 +6844,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.3824795
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -6582,7 +6852,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -6718,7 +7000,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.7733056
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -6726,7 +7008,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -6792,18 +7086,18 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041611647364}
-    distance: 6.8344426
-    dir: {x: 0.029372495, y: 0.88096774, z: -0.47226372}
   - component: {fileID: 5843028041271501809}
     distance: 8.140627
     dir: {x: -0.0078453, y: 0.32688904, z: -0.9450301}
-  - component: {fileID: 5843028042305848699}
-    distance: 7.7103353
-    dir: {x: -0.4733878, y: 0.8028562, z: -0.36238915}
+  - component: {fileID: 5843028041611647364}
+    distance: 6.8344426
+    dir: {x: 0.029372495, y: 0.88096774, z: -0.47226372}
   - component: {fileID: 5843028041512680964}
     distance: 6.1483145
     dir: {x: -0.34980747, y: 0.9196563, z: 0.17851348}
+  - component: {fileID: 5843028042305848699}
+    distance: 7.7103353
+    dir: {x: -0.4733878, y: 0.8028562, z: -0.36238915}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 350.18082, y: 525.27124}
@@ -6841,7 +7135,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.86742723
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -6849,7 +7143,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -6939,15 +7245,6 @@ MonoBehaviour:
   - component: {fileID: 5843028041207321510}
     distance: 6.2977242
     dir: {x: -0.110890314, y: 0.63972515, z: 0.76056236}
-  - component: {fileID: 5843028042029726080}
-    distance: 5.3285904
-    dir: {x: 0.11505536, y: 0.16945048, z: 0.97879964}
-  - component: {fileID: 5843028041913610819}
-    distance: 7.986983
-    dir: {x: 0.18140556, y: 0.12535, z: 0.9753868}
-  - component: {fileID: 5843028041881741186}
-    distance: 4.645765
-    dir: {x: 0.4368567, y: 0.7605599, z: 0.48031756}
   - component: {fileID: 5843028041037554442}
     distance: 6.0154514
     dir: {x: -0.22692162, y: 0.0701655, z: -0.97138214}
@@ -6960,6 +7257,15 @@ MonoBehaviour:
   - component: {fileID: 5843028042091176216}
     distance: 4.129301
     dir: {x: 0.07311232, y: 0.92756873, z: -0.36642963}
+  - component: {fileID: 5843028042029726080}
+    distance: 5.3285904
+    dir: {x: 0.11505536, y: 0.16945048, z: 0.97879964}
+  - component: {fileID: 5843028041881741186}
+    distance: 4.645765
+    dir: {x: 0.4368567, y: 0.7605599, z: 0.48031756}
+  - component: {fileID: 5843028041913610819}
+    distance: 7.986983
+    dir: {x: 0.18140556, y: 0.12535, z: 0.9753868}
   otherConnectedParts:
   - component: {fileID: 5843028040328270576}
     distance: 5.5125084
@@ -7030,7 +7336,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.5503112
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -7038,7 +7344,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -7122,15 +7440,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028040351395954}
-    distance: 1.4065481
-    dir: {x: -0.78166753, y: 0.5000184, z: -0.37279695}
-  - component: {fileID: 5843028041094408147}
-    distance: 1.6128461
-    dir: {x: 0.008457941, y: -0.69398516, z: -0.71993965}
   - component: {fileID: 5843028041668076217}
     distance: 2.9042299
     dir: {x: -0.21140997, y: -0.9407773, z: -0.26503578}
+  - component: {fileID: 5843028041094408147}
+    distance: 1.6128461
+    dir: {x: 0.008457941, y: -0.69398516, z: -0.71993965}
+  - component: {fileID: 5843028040351395954}
+    distance: 1.4065481
+    dir: {x: -0.78166753, y: 0.5000184, z: -0.37279695}
   - component: {fileID: 5843028041773873100}
     distance: 3.5250735
     dir: {x: 0.07906918, y: 0.964084, z: -0.25355494}
@@ -7189,7 +7507,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.1069359
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -7197,7 +7515,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -7296,12 +7626,12 @@ MonoBehaviour:
   - component: {fileID: 5843028041329677089}
     distance: 3.1773386
     dir: {x: 0.04424073, y: 0.9390269, z: -0.3409857}
-  - component: {fileID: 5843028041679209788}
-    distance: 3.873122
-    dir: {x: -0.8982753, y: 0.42182544, z: -0.1231452}
   - component: {fileID: 5843028042305848699}
     distance: 3.0488987
     dir: {x: 0.49599594, y: 0.23426698, z: 0.83612615}
+  - component: {fileID: 5843028041679209788}
+    distance: 3.873122
+    dir: {x: -0.8982753, y: 0.42182544, z: -0.1231452}
   otherConnectedParts:
   - component: {fileID: 5843028041679209788}
     distance: 3.873122
@@ -7351,7 +7681,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.8626627
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -7359,7 +7689,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -7488,27 +7830,27 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028042201400159}
-    distance: 9.900016
-    dir: {x: -0.119594425, y: 0.36617914, z: -0.9228272}
   - component: {fileID: 5843028041611647364}
     distance: 5.2230315
     dir: {x: -0.035348002, y: -0.6928237, z: -0.7202402}
-  - component: {fileID: 5843028040658847852}
-    distance: 4.746537
-    dir: {x: -0.9776864, y: 0.18862973, z: 0.09245595}
-  - component: {fileID: 5843028042305848699}
-    distance: 6.265718
-    dir: {x: -0.6440359, y: -0.55049926, z: -0.5311952}
   - component: {fileID: 5843028041512680964}
     distance: 4.7572274
     dir: {x: -0.5331035, y: -0.83772063, z: 0.11842597}
-  - component: {fileID: 5843028040696891974}
-    distance: 9.688645
-    dir: {x: -0.93612134, y: -0.33019847, z: 0.121019885}
   - component: {fileID: 5843028042211139184}
     distance: 8.391028
     dir: {x: -0.8379913, y: 0.5145854, z: 0.18158326}
+  - component: {fileID: 5843028040696891974}
+    distance: 9.688645
+    dir: {x: -0.93612134, y: -0.33019847, z: 0.121019885}
+  - component: {fileID: 5843028042305848699}
+    distance: 6.265718
+    dir: {x: -0.6440359, y: -0.55049926, z: -0.5311952}
+  - component: {fileID: 5843028040658847852}
+    distance: 4.746537
+    dir: {x: -0.9776864, y: 0.18862973, z: 0.09245595}
+  - component: {fileID: 5843028042201400159}
+    distance: 9.900016
+    dir: {x: -0.119594425, y: 0.36617914, z: -0.9228272}
   otherConnectedParts:
   - component: {fileID: 5843028040658847852}
     distance: 4.746537
@@ -7564,7 +7906,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.4870986
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -7572,7 +7914,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -7653,15 +8007,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
+  - component: {fileID: 5843028041668076217}
+    distance: 1.7744606
+    dir: {x: -0.35369876, y: -0.9089761, z: 0.22058931}
   - component: {fileID: 5843028040351395954}
     distance: 2.2285254
     dir: {x: -0.49947572, y: 0.8178463, z: 0.28574726}
   - component: {fileID: 5843028041890508436}
     distance: 1.6128461
     dir: {x: -0.008457941, y: 0.69398516, z: 0.71993965}
-  - component: {fileID: 5843028041668076217}
-    distance: 1.7744606
-    dir: {x: -0.35369876, y: -0.9089761, z: 0.22058931}
   - component: {fileID: 5843028041773873100}
     distance: 4.533419
     dir: {x: 0.058473155, y: 0.9965455, z: 0.058973614}
@@ -7720,7 +8074,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.4486477
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -7728,7 +8082,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -7809,33 +8175,33 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041041694980}
-    distance: 10.333745
-    dir: {x: -0.984221, y: -0.01719231, z: -0.17610648}
-  - component: {fileID: 5843028040940679623}
-    distance: 4.870617
-    dir: {x: -0.9421038, y: 0.07267977, z: -0.32735002}
-  - component: {fileID: 5843028041329677089}
-    distance: 6.7567463
-    dir: {x: -0.62501, y: -0.71115625, z: 0.32189953}
-  - component: {fileID: 5843028041879217728}
-    distance: 7.484077
-    dir: {x: 0.19645132, y: -0.9781984, z: -0.06734039}
   - component: {fileID: 5843028042147414469}
     distance: 5.562723
     dir: {x: 0.43602931, y: -0.57379866, z: -0.69327736}
   - component: {fileID: 5843028041219032054}
     distance: 3.7960246
     dir: {x: 0.23581731, y: -0.9111274, z: 0.3379897}
+  - component: {fileID: 5843028041879217728}
+    distance: 7.484077
+    dir: {x: 0.19645132, y: -0.9781984, z: -0.06734039}
+  - component: {fileID: 5843028041329677089}
+    distance: 6.7567463
+    dir: {x: -0.62501, y: -0.71115625, z: 0.32189953}
   - component: {fileID: 5843028041773873100}
     distance: 6.735143
     dir: {x: -0.33428556, y: -0.94152105, z: -0.04232369}
-  - component: {fileID: 5843028041987139978}
-    distance: 7.170671
-    dir: {x: -0.80672765, y: -0.54683554, z: -0.22396734}
   - component: {fileID: 5843028042183625546}
     distance: 9.343641
     dir: {x: -0.62612593, y: -0.6366887, z: -0.4501042}
+  - component: {fileID: 5843028041987139978}
+    distance: 7.170671
+    dir: {x: -0.80672765, y: -0.54683554, z: -0.22396734}
+  - component: {fileID: 5843028041041694980}
+    distance: 10.333745
+    dir: {x: -0.984221, y: -0.01719231, z: -0.17610648}
+  - component: {fileID: 5843028040940679623}
+    distance: 4.870617
+    dir: {x: -0.9421038, y: 0.07267977, z: -0.32735002}
   - component: {fileID: 5843028041611647364}
     distance: 9.074873
     dir: {x: 0.11012418, y: -0.79822814, z: 0.592203}
@@ -7924,7 +8290,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.5859064
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -7932,7 +8298,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -7998,18 +8376,18 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041041694980}
-    distance: 5.611853
-    dir: {x: -0.9946914, y: -0.094738096, z: -0.04017263}
-  - component: {fileID: 5843028042201400159}
-    distance: 4.870617
-    dir: {x: 0.9421038, y: -0.07267977, z: 0.32735002}
   - component: {fileID: 5843028041773873100}
     distance: 7.2113395
     dir: {x: 0.32409593, y: -0.928437, z: 0.1815669}
   - component: {fileID: 5843028041987139978}
     distance: 4.4393716
     dir: {x: -0.26944166, y: -0.9630132, z: -0.002612879}
+  - component: {fileID: 5843028041041694980}
+    distance: 5.611853
+    dir: {x: -0.9946914, y: -0.094738096, z: -0.04017263}
+  - component: {fileID: 5843028042201400159}
+    distance: 4.870617
+    dir: {x: 0.9421038, y: -0.07267977, z: 0.32735002}
   otherConnectedParts:
   - component: {fileID: 5843028041041694980}
     distance: 5.611853
@@ -8053,7 +8431,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.1864532
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -8061,7 +8439,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -8133,12 +8523,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041913610819}
-    distance: 10.609679
-    dir: {x: 0.9199336, y: 0.37805736, z: -0.103897825}
   - component: {fileID: 5843028041037554442}
     distance: 16.648714
     dir: {x: 0.4172263, y: 0.20614062, z: -0.8851148}
+  - component: {fileID: 5843028041913610819}
+    distance: 10.609679
+    dir: {x: 0.9199336, y: 0.37805736, z: -0.103897825}
   - component: {fileID: 5843028040696891974}
     distance: 11.974776
     dir: {x: -0.9431312, y: 0.24205567, z: -0.2278433}
@@ -8179,7 +8569,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.97795784
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -8187,7 +8577,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -8238,24 +8640,24 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028040508744943}
-    distance: 3.356908
-    dir: {x: -0.98829615, y: 0.09161235, z: 0.12197507}
   - component: {fileID: 5843028041329677089}
     distance: 4.185242
     dir: {x: 0.37315515, y: -0.21120033, z: 0.90341}
-  - component: {fileID: 5843028042201400159}
-    distance: 7.170671
-    dir: {x: 0.80672765, y: 0.54683554, z: 0.22396734}
   - component: {fileID: 5843028041773873100}
     distance: 4.4817524
     dir: {x: 0.7883786, y: -0.53998995, z: 0.2947374}
-  - component: {fileID: 5843028041679209788}
-    distance: 5.336161
-    dir: {x: -0.3856617, y: -0.41860607, z: 0.8222129}
   - component: {fileID: 5843028042183625546}
     distance: 3.2976236
     dir: {x: -0.019868072, y: -0.6149316, z: -0.78833014}
+  - component: {fileID: 5843028040508744943}
+    distance: 3.356908
+    dir: {x: -0.98829615, y: 0.09161235, z: 0.12197507}
+  - component: {fileID: 5843028041679209788}
+    distance: 5.336161
+    dir: {x: -0.3856617, y: -0.41860607, z: 0.8222129}
+  - component: {fileID: 5843028042201400159}
+    distance: 7.170671
+    dir: {x: 0.80672765, y: 0.54683554, z: 0.22396734}
   otherConnectedParts:
   - component: {fileID: 5843028041679209788}
     distance: 5.336161
@@ -8317,7 +8719,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.861534
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -8325,7 +8727,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -8403,12 +8817,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041492275430}
-    distance: 4.4622726
-    dir: {x: 0.7519761, y: 0.5637183, z: 0.34169248}
   - component: {fileID: 5843028041495865555}
     distance: 4.261468
     dir: {x: 0.72453386, y: -0.34800816, z: -0.5949294}
+  - component: {fileID: 5843028041492275430}
+    distance: 4.4622726
+    dir: {x: 0.7519761, y: 0.5637183, z: 0.34169248}
   - component: {fileID: 5843028041860373424}
     distance: 6.655503
     dir: {x: 0.79357594, y: 0.48001975, z: -0.3739229}
@@ -8418,18 +8832,18 @@ MonoBehaviour:
   - component: {fileID: 5843028041207321510}
     distance: 3.416477
     dir: {x: -0.38385728, y: 0.91494256, z: -0.12463433}
-  - component: {fileID: 5843028041913610819}
-    distance: 2.708815
-    dir: {x: 0.30854824, y: 0.036265332, z: 0.9505172}
-  - component: {fileID: 5843028041881741186}
-    distance: 4.2226686
-    dir: {x: 0.33543965, y: 0.62293553, z: -0.70670474}
   - component: {fileID: 5843028040476611946}
     distance: 5.3285904
     dir: {x: -0.11505536, y: -0.16945048, z: -0.97879964}
   - component: {fileID: 5843028041037554442}
     distance: 11.244732
     dir: {x: -0.17591517, y: -0.04276269, z: -0.98347604}
+  - component: {fileID: 5843028041881741186}
+    distance: 4.2226686
+    dir: {x: 0.33543965, y: 0.62293553, z: -0.70670474}
+  - component: {fileID: 5843028041913610819}
+    distance: 2.708815
+    dir: {x: 0.30854824, y: 0.036265332, z: 0.9505172}
   otherConnectedParts:
   - component: {fileID: 5843028041881741186}
     distance: 4.2226686
@@ -8491,7 +8905,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.8225898
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -8499,7 +8913,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -8577,15 +9003,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028042305848699}
-    distance: 5.445858
-    dir: {x: 0.119563684, y: 0.855077, z: -0.50452733}
   - component: {fileID: 5843028041512680964}
     distance: 4.786761
     dir: {x: 0.44923472, y: 0.86084807, z: 0.23901643}
   - component: {fileID: 5843028040696891974}
     distance: 6.809034
     dir: {x: -0.64374393, y: 0.7206199, z: 0.25748938}
+  - component: {fileID: 5843028042305848699}
+    distance: 5.445858
+    dir: {x: 0.119563684, y: 0.855077, z: -0.50452733}
   otherConnectedParts:
   - component: {fileID: 5843028042305848699}
     distance: 5.445858
@@ -8629,7 +9055,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.8066612
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -8637,7 +9063,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -8733,33 +9171,33 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041908686050}
-    distance: 3.549106
-    dir: {x: -0.24291985, y: -0.8339833, z: 0.49544093}
-  - component: {fileID: 5843028040428649959}
-    distance: 3.1655126
-    dir: {x: -0.865449, y: -0.22713657, z: 0.4465501}
   - component: {fileID: 5843028041041694980}
     distance: 9.883737
     dir: {x: -0.23948593, y: 0.26473737, z: -0.9341095}
-  - component: {fileID: 5843028041679209788}
-    distance: 5.7221985
-    dir: {x: -0.0068258177, y: -0.58730435, z: -0.80933744}
-  - component: {fileID: 5843028040779303526}
-    distance: 3.7322583
-    dir: {x: 0.33596653, y: -0.90700877, z: 0.25389284}
   - component: {fileID: 5843028041466464958}
     distance: 5.3508396
     dir: {x: 0.9199043, y: -0.043793693, z: -0.38968986}
-  - component: {fileID: 5843028042305848699}
-    distance: 6.739541
-    dir: {x: 0.7348145, y: -0.6350873, z: -0.23814218}
-  - component: {fileID: 5843028040696891974}
-    distance: 4.9633155
-    dir: {x: -0.01653904, y: -0.8119774, z: 0.5834546}
+  - component: {fileID: 5843028041908686050}
+    distance: 3.549106
+    dir: {x: -0.24291985, y: -0.8339833, z: 0.49544093}
   - component: {fileID: 5843028042211139184}
     distance: 5.150562
     dir: {x: 0.37977427, y: 0.677009, z: 0.6304207}
+  - component: {fileID: 5843028040428649959}
+    distance: 3.1655126
+    dir: {x: -0.865449, y: -0.22713657, z: 0.4465501}
+  - component: {fileID: 5843028040779303526}
+    distance: 3.7322583
+    dir: {x: 0.33596653, y: -0.90700877, z: 0.25389284}
+  - component: {fileID: 5843028040696891974}
+    distance: 4.9633155
+    dir: {x: -0.01653904, y: -0.8119774, z: 0.5834546}
+  - component: {fileID: 5843028042305848699}
+    distance: 6.739541
+    dir: {x: 0.7348145, y: -0.6350873, z: -0.23814218}
+  - component: {fileID: 5843028041679209788}
+    distance: 5.7221985
+    dir: {x: -0.0068258177, y: -0.58730435, z: -0.80933744}
   otherConnectedParts:
   - component: {fileID: 5843028042096472491}
     distance: 4.256877
@@ -8827,7 +9265,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.3876384
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -8835,7 +9273,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -8931,33 +9381,33 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041143189747}
-    distance: 4.8555074
-    dir: {x: -0.8952791, y: -0.013266178, z: -0.44530797}
-  - component: {fileID: 5843028042096472491}
-    distance: 3.5009785
-    dir: {x: -0.82580256, y: -0.26423588, z: 0.49822637}
-  - component: {fileID: 5843028040779303526}
-    distance: 4.7898254
-    dir: {x: -0.64576894, y: -0.7201943, z: -0.2535797}
-  - component: {fileID: 5843028041466464958}
-    distance: 4.296538
-    dir: {x: 0.13388124, y: -0.069532044, z: -0.988555}
-  - component: {fileID: 5843028042305848699}
-    distance: 5.7821746
-    dir: {x: 0.104679994, y: -0.75138015, z: -0.6515136}
   - component: {fileID: 5843028041512680964}
     distance: 5.316435
     dir: {x: 0.3958537, y: -0.91801476, z: 0.023424279}
-  - component: {fileID: 5843028040696891974}
-    distance: 6.07622
-    dir: {x: -0.7289273, y: -0.6738587, z: 0.12074499}
-  - component: {fileID: 5843028042355600175}
-    distance: 4.746537
-    dir: {x: 0.9776864, y: -0.18862973, z: -0.09245595}
+  - component: {fileID: 5843028041466464958}
+    distance: 4.296538
+    dir: {x: 0.13388124, y: -0.069532044, z: -0.988555}
+  - component: {fileID: 5843028042096472491}
+    distance: 3.5009785
+    dir: {x: -0.82580256, y: -0.26423588, z: 0.49822637}
+  - component: {fileID: 5843028041143189747}
+    distance: 4.8555074
+    dir: {x: -0.8952791, y: -0.013266178, z: -0.44530797}
   - component: {fileID: 5843028042211139184}
     distance: 4.3136506
     dir: {x: -0.5542831, y: 0.79342604, z: 0.25148642}
+  - component: {fileID: 5843028040779303526}
+    distance: 4.7898254
+    dir: {x: -0.64576894, y: -0.7201943, z: -0.2535797}
+  - component: {fileID: 5843028040696891974}
+    distance: 6.07622
+    dir: {x: -0.7289273, y: -0.6738587, z: 0.12074499}
+  - component: {fileID: 5843028042305848699}
+    distance: 5.7821746
+    dir: {x: 0.104679994, y: -0.75138015, z: -0.6515136}
+  - component: {fileID: 5843028042355600175}
+    distance: 4.746537
+    dir: {x: 0.9776864, y: -0.18862973, z: -0.09245595}
   otherConnectedParts:
   - component: {fileID: 5843028042096472491}
     distance: 3.5009785
@@ -9010,7 +9460,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.1170207
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -9018,7 +9468,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -9117,21 +9579,21 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041329677089}
-    distance: 5.366984
-    dir: {x: -0.9536459, y: -0.25087467, z: 0.16619696}
   - component: {fileID: 5843028041879217728}
     distance: 4.2943063
     dir: {x: 0.13391884, y: -0.8993887, z: -0.41613188}
-  - component: {fileID: 5843028042201400159}
-    distance: 3.7960246
-    dir: {x: -0.23581731, y: 0.9111274, z: -0.3379897}
+  - component: {fileID: 5843028041329677089}
+    distance: 5.366984
+    dir: {x: -0.9536459, y: -0.25087467, z: 0.16619696}
   - component: {fileID: 5843028041773873100}
     distance: 4.5463843
     dir: {x: -0.69211686, y: -0.634046, z: -0.34490556}
   - component: {fileID: 5843028041611647364}
     distance: 5.5745654
     dir: {x: 0.018691078, y: -0.6790049, z: 0.7338957}
+  - component: {fileID: 5843028042201400159}
+    distance: 3.7960246
+    dir: {x: -0.23581731, y: 0.9111274, z: -0.3379897}
   otherConnectedParts:
   - component: {fileID: 5843028041879217728}
     distance: 4.2943063
@@ -9196,7 +9658,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.4509103
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -9204,7 +9666,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -9261,12 +9735,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041879217728}
-    distance: 3.5218258
-    dir: {x: 0.44681716, y: -0.11037282, z: 0.8877907}
   - component: {fileID: 5843028042147414469}
     distance: 4.5206356
     dir: {x: 0.5594049, y: 0.8273871, z: -0.049967617}
+  - component: {fileID: 5843028041879217728}
+    distance: 3.5218258
+    dir: {x: 0.44681716, y: -0.11037282, z: 0.8877907}
   - component: {fileID: 5843028041773873100}
     distance: 4.0194993
     dir: {x: -0.5344212, y: 0.14701322, z: 0.8323347}
@@ -9322,7 +9796,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.4736098
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -9330,7 +9804,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -9420,12 +9906,12 @@ MonoBehaviour:
   - component: {fileID: 5843028042029726080}
     distance: 4.4622726
     dir: {x: -0.7519761, y: -0.5637183, z: -0.34169248}
-  - component: {fileID: 5843028041913610819}
-    distance: 3.6461759
-    dir: {x: -0.6910588, y: -0.662949, z: 0.28798673}
   - component: {fileID: 5843028041881741186}
     distance: 4.909526
     dir: {x: -0.3949611, y: 0.02342089, z: -0.9183993}
+  - component: {fileID: 5843028041913610819}
+    distance: 3.6461759
+    dir: {x: -0.6910588, y: -0.662949, z: 0.28798673}
   otherConnectedParts:
   - component: {fileID: 5843028041207321510}
     distance: 5.0948725
@@ -9472,7 +9958,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.693208
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -9480,7 +9966,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -9531,27 +10029,27 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
+  - component: {fileID: 5843028041512680964}
+    distance: 6.574641
+    dir: {x: 0.7598357, y: -0.601627, z: -0.24636267}
   - component: {fileID: 5843028041908686050}
     distance: 3.7940116
     dir: {x: -0.6109801, y: -0.5532996, z: -0.5661827}
   - component: {fileID: 5843028041143189747}
     distance: 4.256877
     dir: {x: -0.3420154, y: 0.20218346, z: -0.9176859}
-  - component: {fileID: 5843028040779303526}
-    distance: 3.8947394
-    dir: {x: -0.051865723, y: -0.64818734, z: -0.7597125}
-  - component: {fileID: 5843028040658847852}
-    distance: 3.5009785
-    dir: {x: 0.82580256, y: 0.26423588, z: -0.49822637}
-  - component: {fileID: 5843028041512680964}
-    distance: 6.574641
-    dir: {x: 0.7598357, y: -0.601627, z: -0.24636267}
-  - component: {fileID: 5843028040696891974}
-    distance: 3.6649792
-    dir: {x: -0.41964927, y: -0.86478794, z: -0.27574694}
   - component: {fileID: 5843028042211139184}
     distance: 4.4257255
     dir: {x: 0.113005996, y: 0.982358, z: -0.14900501}
+  - component: {fileID: 5843028040779303526}
+    distance: 3.8947394
+    dir: {x: -0.051865723, y: -0.64818734, z: -0.7597125}
+  - component: {fileID: 5843028040696891974}
+    distance: 3.6649792
+    dir: {x: -0.41964927, y: -0.86478794, z: -0.27574694}
+  - component: {fileID: 5843028040658847852}
+    distance: 3.5009785
+    dir: {x: 0.82580256, y: 0.26423588, z: -0.49822637}
   otherConnectedParts:
   - component: {fileID: 5843028040658847852}
     distance: 3.5009785
@@ -9604,7 +10102,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.4433227
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -9612,7 +10110,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -9678,9 +10188,6 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041913610819}
-    distance: 13.2629175
-    dir: {x: -0.79830784, y: 0.5991678, z: 0.06084894}
   - component: {fileID: 5843028041667813860}
     distance: 3.5283585
     dir: {x: -0.634555, y: 0.24531738, z: -0.7329116}
@@ -9693,6 +10200,9 @@ MonoBehaviour:
   - component: {fileID: 5843028040625983996}
     distance: 10.486899
     dir: {x: 0.14423746, y: 0.9851783, z: -0.09283977}
+  - component: {fileID: 5843028041913610819}
+    distance: 13.2629175
+    dir: {x: -0.79830784, y: 0.5991678, z: 0.06084894}
   otherConnectedParts:
   - component: {fileID: 5843028041667813860}
     distance: 3.5283585
@@ -9736,7 +10246,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.54409385
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -9744,7 +10254,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -9831,15 +10353,15 @@ MonoBehaviour:
   - component: {fileID: 5843028041860373424}
     distance: 5.018541
     dir: {x: -0.8966035, y: 0.14680137, z: -0.41779354}
-  - component: {fileID: 5843028041913610819}
-    distance: 9.715544
-    dir: {x: -0.9207398, y: -0.24288996, z: 0.30535668}
   - component: {fileID: 5843028040797454159}
     distance: 3.726823
     dir: {x: -0.2657702, y: -0.8052272, z: -0.5300711}
   - component: {fileID: 5843028040625983996}
     distance: 3.370675
     dir: {x: 0.9360162, y: 0.0074003884, z: 0.3518792}
+  - component: {fileID: 5843028041913610819}
+    distance: 9.715544
+    dir: {x: -0.9207398, y: -0.24288996, z: 0.30535668}
   otherConnectedParts:
   - component: {fileID: 5843028040797454159}
     distance: 3.726823
@@ -9895,7 +10417,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.0700885
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -9903,7 +10425,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -10024,7 +10558,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.5055218
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -10032,7 +10566,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -10156,7 +10702,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.3325241
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -10164,7 +10710,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -10309,7 +10867,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.1647774
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -10317,7 +10875,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -10395,15 +10965,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041913610819}
-    distance: 11.461246
-    dir: {x: -0.7284508, y: 0.61783385, z: 0.29604194}
   - component: {fileID: 5843028040940436637}
     distance: 3.5283585
     dir: {x: 0.634555, y: -0.24531738, z: 0.7329116}
   - component: {fileID: 5843028040797454159}
     distance: 6.6354294
     dir: {x: -0.05936975, y: 0.9705497, z: -0.23347066}
+  - component: {fileID: 5843028041913610819}
+    distance: 11.461246
+    dir: {x: -0.7284508, y: 0.61783385, z: 0.29604194}
   otherConnectedParts:
   - component: {fileID: 5843028040940436637}
     distance: 3.5283585
@@ -10447,7 +11017,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.57315624
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -10455,7 +11025,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -10582,7 +11164,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.271817
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -10590,7 +11172,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -10683,12 +11277,12 @@ MonoBehaviour:
   - component: {fileID: 5843028040779303526}
     distance: 5.269146
     dir: {x: 0.18390763, y: 0.9819701, z: 0.043735497}
-  - component: {fileID: 5843028041652104454}
-    distance: 0.98567206
-    dir: {x: -0.40333527, y: 0.052319087, z: 0.9135553}
   - component: {fileID: 5843028040696891974}
     distance: 5.039392
     dir: {x: -0.072819546, y: 0.89876616, z: 0.4323387}
+  - component: {fileID: 5843028041652104454}
+    distance: 0.98567206
+    dir: {x: -0.40333527, y: 0.052319087, z: 0.9135553}
   otherConnectedParts:
   - component: {fileID: 5843028041652104454}
     distance: 0.98567206
@@ -10732,7 +11326,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.58966136
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -10740,7 +11334,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -10876,7 +11482,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.0172299
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -10884,7 +11490,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -10968,33 +11586,33 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041329677089}
-    distance: 3.859295
-    dir: {x: -0.3476338, y: -0.4603209, z: -0.816857}
-  - component: {fileID: 5843028041143189747}
-    distance: 5.3508396
-    dir: {x: -0.9199043, y: 0.043793693, z: 0.38968986}
   - component: {fileID: 5843028041219032054}
     distance: 5.5502477
     dir: {x: 0.68043464, y: -0.077487305, z: -0.7287005}
-  - component: {fileID: 5843028042201400159}
-    distance: 6.7717786
-    dir: {x: 0.42550305, y: 0.44723675, z: -0.7867188}
+  - component: {fileID: 5843028041329677089}
+    distance: 3.859295
+    dir: {x: -0.3476338, y: -0.4603209, z: -0.816857}
   - component: {fileID: 5843028041611647364}
     distance: 5.729814
     dir: {x: 0.6772952, y: -0.7356663, z: 0.0081471065}
-  - component: {fileID: 5843028040658847852}
-    distance: 4.296538
-    dir: {x: -0.13388124, y: 0.069532044, z: 0.988555}
+  - component: {fileID: 5843028041143189747}
+    distance: 5.3508396
+    dir: {x: -0.9199043, y: 0.043793693, z: 0.38968986}
+  - component: {fileID: 5843028042211139184}
+    distance: 7.146942
+    dir: {x: -0.41503197, y: 0.52068555, z: 0.74607974}
   - component: {fileID: 5843028042305848699}
     distance: 4.0743723
     dir: {x: 0.0073759053, y: -0.9930031, z: 0.117858365}
   - component: {fileID: 5843028042355600175}
     distance: 5.6025176
     dir: {x: 0.7256379, y: -0.10648623, z: 0.679787}
-  - component: {fileID: 5843028042211139184}
-    distance: 7.146942
-    dir: {x: -0.41503197, y: 0.52068555, z: 0.74607974}
+  - component: {fileID: 5843028040658847852}
+    distance: 4.296538
+    dir: {x: -0.13388124, y: 0.069532044, z: 0.988555}
+  - component: {fileID: 5843028042201400159}
+    distance: 6.7717786
+    dir: {x: 0.42550305, y: 0.44723675, z: -0.7867188}
   otherConnectedParts:
   - component: {fileID: 5843028040658847852}
     distance: 4.296538
@@ -11062,7 +11680,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.88178575
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -11070,7 +11688,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -11200,7 +11830,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.70626485
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -11208,7 +11838,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -11395,7 +12037,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.6192157
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -11403,7 +12045,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -11466,30 +12120,30 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
+  - component: {fileID: 5843028041668076217}
+    distance: 6.3368444
+    dir: {x: 0.94495565, y: 0.14066963, z: 0.29541647}
   - component: {fileID: 5843028040377306940}
     distance: 2.2375917
     dir: {x: 0.59818476, y: -0.013138962, z: 0.80125046}
   - component: {fileID: 5843028040351395954}
     distance: 7.313268
     dir: {x: 0.7524088, y: 0.59165543, z: 0.28952533}
-  - component: {fileID: 5843028041668076217}
-    distance: 6.3368444
-    dir: {x: 0.94495565, y: 0.14066963, z: 0.29541647}
-  - component: {fileID: 5843028041377794895}
-    distance: 6.678789
-    dir: {x: -0.50597084, y: 0.86251163, z: 0.008193661}
-  - component: {fileID: 5843028040484905370}
-    distance: 6.434354
-    dir: {x: 0.20802297, y: 0.18182997, z: 0.96107453}
-  - component: {fileID: 5843028041679209788}
-    distance: 8.7637615
-    dir: {x: 0.1471371, y: 0.8225297, z: 0.54935926}
   - component: {fileID: 5843028042183625546}
     distance: 8.394308
     dir: {x: 0.3909685, y: 0.88326406, z: -0.25882095}
   - component: {fileID: 5843028041271501809}
     distance: 10.659569
     dir: {x: 0.9256433, y: 0.25889602, z: 0.27596596}
+  - component: {fileID: 5843028040484905370}
+    distance: 6.434354
+    dir: {x: 0.20802297, y: 0.18182997, z: 0.96107453}
+  - component: {fileID: 5843028041377794895}
+    distance: 6.678789
+    dir: {x: -0.50597084, y: 0.86251163, z: 0.008193661}
+  - component: {fileID: 5843028041679209788}
+    distance: 8.7637615
+    dir: {x: 0.1471371, y: 0.8225297, z: 0.54935926}
   otherConnectedParts:
   - component: {fileID: 5843028041668076217}
     distance: 6.3368444
@@ -11542,7 +12196,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.6902138
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -11550,7 +12204,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -11667,21 +12333,21 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041041694980}
-    distance: 3.6518116
-    dir: {x: -0.29253718, y: 0.9408981, z: -0.17068309}
   - component: {fileID: 5843028041329677089}
     distance: 6.049379
     dir: {x: 0.80658925, y: -0.19695555, z: 0.557335}
+  - component: {fileID: 5843028041987139978}
+    distance: 3.356908
+    dir: {x: 0.98829615, y: -0.09161235, z: -0.12197507}
+  - component: {fileID: 5843028041041694980}
+    distance: 3.6518116
+    dir: {x: -0.29253718, y: 0.9408981, z: -0.17068309}
   - component: {fileID: 5843028041377794895}
     distance: 5.3053446
     dir: {x: -0.6425747, y: -0.75192183, z: -0.1473474}
   - component: {fileID: 5843028041679209788}
     distance: 4.8856297
     dir: {x: 0.25783092, y: -0.5201548, z: 0.81422484}
-  - component: {fileID: 5843028041987139978}
-    distance: 3.356908
-    dir: {x: 0.98829615, y: -0.09161235, z: -0.12197507}
   otherConnectedParts:
   - component: {fileID: 5843028041679209788}
     distance: 4.8856297
@@ -11734,7 +12400,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.9721602
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -11742,7 +12408,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -11823,12 +12501,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041679209788}
-    distance: 7.8433976
-    dir: {x: -0.006249697, y: 0.9227957, z: 0.38523895}
   - component: {fileID: 5843028041817745560}
     distance: 2.2375917
     dir: {x: -0.59818476, y: 0.013138962, z: -0.80125046}
+  - component: {fileID: 5843028041679209788}
+    distance: 7.8433976
+    dir: {x: -0.006249697, y: 0.9227957, z: 0.38523895}
   otherConnectedParts:
   - component: {fileID: 5843028041817745560}
     distance: 2.2375917
@@ -11869,7 +12547,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.519536
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -11877,7 +12555,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -12007,7 +12697,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.8221707
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -12015,7 +12705,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -12081,45 +12783,45 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041908686050}
-    distance: 7.1916947
-    dir: {x: -0.39186856, y: -0.8964329, z: -0.2069955}
-  - component: {fileID: 5843028040428649959}
-    distance: 6.565127
-    dir: {x: -0.7152399, y: -0.64065486, z: -0.2792727}
   - component: {fileID: 5843028041041694980}
     distance: 13.235737
     dir: {x: -0.3266208, y: -0.06576002, z: -0.942865}
-  - component: {fileID: 5843028041143189747}
-    distance: 5.150562
-    dir: {x: -0.37977427, y: -0.677009, z: -0.6304207}
-  - component: {fileID: 5843028042096472491}
-    distance: 4.4257255
-    dir: {x: -0.113005996, y: -0.982358, z: 0.14900501}
-  - component: {fileID: 5843028042201400159}
-    distance: 12.177979
-    dir: {x: 0.48017997, y: -0.05688311, z: -0.87532365}
-  - component: {fileID: 5843028040779303526}
-    distance: 7.280594
-    dir: {x: -0.096439525, y: -0.9439021, z: -0.3158296}
-  - component: {fileID: 5843028041466464958}
-    distance: 7.146942
-    dir: {x: 0.41503197, y: -0.52068555, z: -0.74607974}
-  - component: {fileID: 5843028040658847852}
-    distance: 4.3136506
-    dir: {x: 0.5542831, y: -0.79342604, z: -0.25148642}
-  - component: {fileID: 5843028042305848699}
-    distance: 9.635786
-    dir: {x: 0.31095144, y: -0.80607575, z: -0.50353855}
   - component: {fileID: 5843028041512680964}
     distance: 9.490719
     dir: {x: 0.47367474, y: -0.8748682, z: -0.1011821}
+  - component: {fileID: 5843028041466464958}
+    distance: 7.146942
+    dir: {x: 0.41503197, y: -0.52068555, z: -0.74607974}
+  - component: {fileID: 5843028041908686050}
+    distance: 7.1916947
+    dir: {x: -0.39186856, y: -0.8964329, z: -0.2069955}
+  - component: {fileID: 5843028042096472491}
+    distance: 4.4257255
+    dir: {x: -0.113005996, y: -0.982358, z: 0.14900501}
+  - component: {fileID: 5843028041143189747}
+    distance: 5.150562
+    dir: {x: -0.37977427, y: -0.677009, z: -0.6304207}
+  - component: {fileID: 5843028040428649959}
+    distance: 6.565127
+    dir: {x: -0.7152399, y: -0.64065486, z: -0.2792727}
+  - component: {fileID: 5843028040779303526}
+    distance: 7.280594
+    dir: {x: -0.096439525, y: -0.9439021, z: -0.3158296}
   - component: {fileID: 5843028040696891974}
     distance: 7.796394
     dir: {x: -0.2614208, y: -0.9641735, z: -0.045040242}
+  - component: {fileID: 5843028042305848699}
+    distance: 9.635786
+    dir: {x: 0.31095144, y: -0.80607575, z: -0.50353855}
   - component: {fileID: 5843028042355600175}
     distance: 8.391028
     dir: {x: 0.8379913, y: -0.5145854, z: -0.18158326}
+  - component: {fileID: 5843028040658847852}
+    distance: 4.3136506
+    dir: {x: 0.5542831, y: -0.79342604, z: -0.25148642}
+  - component: {fileID: 5843028042201400159}
+    distance: 12.177979
+    dir: {x: 0.48017997, y: -0.05688311, z: -0.87532365}
   otherConnectedParts:
   - component: {fileID: 5843028042096472491}
     distance: 4.4257255
@@ -12175,7 +12877,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.97998583
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -12183,7 +12885,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -12343,7 +13057,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.1001288
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -12351,7 +13065,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -12447,9 +13173,6 @@ MonoBehaviour:
   - component: {fileID: 5843028041495865555}
     distance: 6.071934
     dir: {x: 0.032382555, y: -0.16825749, z: 0.9852111}
-  - component: {fileID: 5843028041913610819}
-    distance: 11.294838
-    dir: {x: -0.18195505, y: 0.04954593, z: 0.9820578}
   - component: {fileID: 5843028040476611946}
     distance: 4.8347735
     dir: {x: -0.724757, y: -0.091329, z: 0.6829248}
@@ -12471,6 +13194,9 @@ MonoBehaviour:
   - component: {fileID: 5843028041129550754}
     distance: 5.974015
     dir: {x: -0.416511, y: -0.8908894, z: -0.18120341}
+  - component: {fileID: 5843028041913610819}
+    distance: 11.294838
+    dir: {x: -0.18195505, y: 0.04954593, z: 0.9820578}
   otherConnectedParts:
   - component: {fileID: 5843028040328270576}
     distance: 4.7954617
@@ -12550,7 +13276,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.4740145
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -12558,7 +13284,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -12612,15 +13350,15 @@ MonoBehaviour:
   - component: {fileID: 5843028041495865555}
     distance: 5.406682
     dir: {x: -0.31558794, y: 0.80984235, z: 0.49452966}
-  - component: {fileID: 5843028041913610819}
-    distance: 10.572297
-    dir: {x: -0.37438044, y: 0.5637206, z: 0.7362461}
   - component: {fileID: 5843028041037554442}
     distance: 10.441895
     dir: {x: -0.6485394, y: 0.5153021, z: -0.5602324}
   - component: {fileID: 5843028041302274014}
     distance: 6.6127634
     dir: {x: -0.28776294, y: 0.8166342, z: -0.500301}
+  - component: {fileID: 5843028041913610819}
+    distance: 10.572297
+    dir: {x: -0.37438044, y: 0.5637206, z: 0.7362461}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 556.4861, y: 834.7291}
@@ -12658,7 +13396,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.5598916
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -12666,7 +13404,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -12741,9 +13491,6 @@ MonoBehaviour:
   - component: {fileID: 5843028041860373424}
     distance: 7.489727
     dir: {x: -0.5403927, y: -0.46409598, z: 0.7018481}
-  - component: {fileID: 5843028041913610819}
-    distance: 14.894179
-    dir: {x: -0.5702389, y: -0.44127902, z: 0.69289285}
   - component: {fileID: 5843028040797454159}
     distance: 9.013747
     dir: {x: -0.059712224, y: -0.80029094, z: 0.5966313}
@@ -12768,6 +13515,9 @@ MonoBehaviour:
   - component: {fileID: 5843028042014993894}
     distance: 4.693888
     dir: {x: 0.63062984, y: -0.27516901, z: -0.7256639}
+  - component: {fileID: 5843028041913610819}
+    distance: 14.894179
+    dir: {x: -0.5702389, y: -0.44127902, z: 0.69289285}
   otherConnectedParts:
   - component: {fileID: 5843028041981550434}
     distance: 4.934861
@@ -12820,7 +13570,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.3255603
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -12828,7 +13578,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -12994,7 +13756,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.1629252
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -13002,7 +13764,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -13074,57 +13848,57 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041757370521}
-    distance: 6.280001
-    dir: {x: -0.8118397, y: 0.44824073, z: 0.37416106}
-  - component: {fileID: 5843028041329677089}
-    distance: 7.733464
-    dir: {x: -0.6410823, y: 0.749801, z: 0.16374357}
   - component: {fileID: 5843028041037554442}
     distance: 10.859837
     dir: {x: 0.88579166, y: 0.39712566, z: -0.24013397}
-  - component: {fileID: 5843028040800902883}
-    distance: 5.8980865
-    dir: {x: -0.1420983, y: 0.6224837, z: -0.7696247}
-  - component: {fileID: 5843028041879217728}
-    distance: 3.6487038
-    dir: {x: 0.20157957, y: 0.8997027, z: -0.38717014}
   - component: {fileID: 5843028042147414469}
     distance: 8.972192
     dir: {x: 0.18844423, y: 0.8260833, z: -0.53110754}
   - component: {fileID: 5843028041219032054}
     distance: 7.156596
     dir: {x: 0.022415075, y: 0.9983795, z: 0.052305397}
-  - component: {fileID: 5843028040351395954}
-    distance: 4.7099414
-    dir: {x: -0.9266339, y: 0.33274618, z: -0.17501315}
-  - component: {fileID: 5843028041094408147}
-    distance: 3.573647
-    dir: {x: -0.909798, y: -0.071460985, z: -0.4088531}
-  - component: {fileID: 5843028041890508436}
-    distance: 3.3905957
-    dir: {x: -0.96293944, y: 0.2547974, z: -0.08846377}
+  - component: {fileID: 5843028041879217728}
+    distance: 3.6487038
+    dir: {x: 0.20157957, y: 0.8997027, z: -0.38717014}
+  - component: {fileID: 5843028040800902883}
+    distance: 5.8980865
+    dir: {x: -0.1420983, y: 0.6224837, z: -0.7696247}
   - component: {fileID: 5843028041668076217}
     distance: 4.4363093
     dir: {x: -0.87435776, y: -0.42114255, z: -0.24111703}
+  - component: {fileID: 5843028041094408147}
+    distance: 3.573647
+    dir: {x: -0.909798, y: -0.071460985, z: -0.4088531}
+  - component: {fileID: 5843028040351395954}
+    distance: 4.7099414
+    dir: {x: -0.9266339, y: 0.33274618, z: -0.17501315}
+  - component: {fileID: 5843028041890508436}
+    distance: 3.3905957
+    dir: {x: -0.96293944, y: 0.2547974, z: -0.08846377}
+  - component: {fileID: 5843028041329677089}
+    distance: 7.733464
+    dir: {x: -0.6410823, y: 0.749801, z: 0.16374357}
   - component: {fileID: 5843028041773873100}
     distance: 5.339513
     dir: {x: -0.55926704, y: 0.7982717, z: -0.22356808}
-  - component: {fileID: 5843028041817745560}
-    distance: 10.659569
-    dir: {x: -0.9256433, y: -0.25889602, z: -0.27596596}
-  - component: {fileID: 5843028041611647364}
-    distance: 5.594556
-    dir: {x: 0.04729782, y: 0.6005556, z: 0.79818285}
+  - component: {fileID: 5843028041757370521}
+    distance: 6.280001
+    dir: {x: -0.8118397, y: 0.44824073, z: 0.37416106}
   - component: {fileID: 5843028040321313090}
     distance: 4.421854
     dir: {x: -0.1205353, y: -0.6692179, z: 0.73322487}
-  - component: {fileID: 5843028041254261247}
-    distance: 5.4337363
-    dir: {x: -0.7951067, y: -0.21683191, z: 0.5663825}
+  - component: {fileID: 5843028041611647364}
+    distance: 5.594556
+    dir: {x: 0.04729782, y: 0.6005556, z: 0.79818285}
+  - component: {fileID: 5843028041817745560}
+    distance: 10.659569
+    dir: {x: -0.9256433, y: -0.25889602, z: -0.27596596}
   - component: {fileID: 5843028042305848699}
     distance: 7.0225124
     dir: {x: -0.5106595, y: 0.5025564, z: 0.697613}
+  - component: {fileID: 5843028041254261247}
+    distance: 5.4337363
+    dir: {x: -0.7951067, y: -0.21683191, z: 0.5663825}
   otherConnectedParts:
   - component: {fileID: 5843028041879217728}
     distance: 3.6487038
@@ -13204,7 +13978,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.1832659
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -13212,7 +13986,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -13305,57 +14091,57 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041282896823}
-    distance: 5.039392
-    dir: {x: 0.072819546, y: -0.89876616, z: -0.4323387}
-  - component: {fileID: 5843028041908686050}
-    distance: 1.7457751
-    dir: {x: -0.4468272, y: 0.61302555, z: -0.6515713}
-  - component: {fileID: 5843028040428649959}
-    distance: 4.4969893
-    dir: {x: -0.5909512, y: 0.73629177, z: -0.32962263}
   - component: {fileID: 5843028041329677089}
     distance: 9.145887
     dir: {x: 0.40047807, y: 0.2207826, z: -0.88931006}
-  - component: {fileID: 5843028041143189747}
-    distance: 4.9633155
-    dir: {x: 0.01653904, y: 0.8119774, z: -0.5834546}
-  - component: {fileID: 5843028042096472491}
-    distance: 3.6649792
-    dir: {x: 0.41964927, y: 0.86478794, z: 0.27574694}
-  - component: {fileID: 5843028040484905370}
-    distance: 8.170167
-    dir: {x: 0.011266434, y: -0.6571552, z: -0.75367105}
-  - component: {fileID: 5843028041679209788}
-    distance: 7.5568905
-    dir: {x: 0.0056941127, y: 0.08858509, z: -0.9960524}
-  - component: {fileID: 5843028041254261247}
-    distance: 9.112568
-    dir: {x: 0.47188824, y: -0.5440303, z: -0.69379574}
-  - component: {fileID: 5843028040779303526}
-    distance: 2.4487932
-    dir: {x: 0.5455758, y: 0.26335785, z: -0.79560643}
-  - component: {fileID: 5843028041466464958}
-    distance: 8.016363
-    dir: {x: 0.62426674, y: 0.47350237, z: -0.6213587}
-  - component: {fileID: 5843028040658847852}
-    distance: 6.07622
-    dir: {x: 0.7289273, y: 0.6738587, z: -0.12074499}
-  - component: {fileID: 5843028042305848699}
-    distance: 6.7576094
-    dir: {x: 0.7449973, y: -0.037009727, z: -0.66604}
+  - component: {fileID: 5843028041282896823}
+    distance: 5.039392
+    dir: {x: 0.072819546, y: -0.89876616, z: -0.4323387}
   - component: {fileID: 5843028041512680964}
     distance: 6.6088996
     dir: {x: 0.9886144, y: -0.11893837, z: -0.09216957}
-  - component: {fileID: 5843028040298839324}
-    distance: 6.809034
-    dir: {x: 0.64374393, y: -0.7206199, z: -0.25748938}
-  - component: {fileID: 5843028041652104454}
-    distance: 4.6566477
-    dir: {x: -0.006569116, y: -0.9615641, z: -0.27450183}
+  - component: {fileID: 5843028041466464958}
+    distance: 8.016363
+    dir: {x: 0.62426674, y: 0.47350237, z: -0.6213587}
+  - component: {fileID: 5843028041908686050}
+    distance: 1.7457751
+    dir: {x: -0.4468272, y: 0.61302555, z: -0.6515713}
+  - component: {fileID: 5843028042096472491}
+    distance: 3.6649792
+    dir: {x: 0.41964927, y: 0.86478794, z: 0.27574694}
+  - component: {fileID: 5843028041143189747}
+    distance: 4.9633155
+    dir: {x: 0.01653904, y: 0.8119774, z: -0.5834546}
   - component: {fileID: 5843028042211139184}
     distance: 7.796394
     dir: {x: 0.2614208, y: 0.9641735, z: 0.045040242}
+  - component: {fileID: 5843028040428649959}
+    distance: 4.4969893
+    dir: {x: -0.5909512, y: 0.73629177, z: -0.32962263}
+  - component: {fileID: 5843028040779303526}
+    distance: 2.4487932
+    dir: {x: 0.5455758, y: 0.26335785, z: -0.79560643}
+  - component: {fileID: 5843028042305848699}
+    distance: 6.7576094
+    dir: {x: 0.7449973, y: -0.037009727, z: -0.66604}
+  - component: {fileID: 5843028040298839324}
+    distance: 6.809034
+    dir: {x: 0.64374393, y: -0.7206199, z: -0.25748938}
+  - component: {fileID: 5843028041254261247}
+    distance: 9.112568
+    dir: {x: 0.47188824, y: -0.5440303, z: -0.69379574}
+  - component: {fileID: 5843028040484905370}
+    distance: 8.170167
+    dir: {x: 0.011266434, y: -0.6571552, z: -0.75367105}
+  - component: {fileID: 5843028041652104454}
+    distance: 4.6566477
+    dir: {x: -0.006569116, y: -0.9615641, z: -0.27450183}
+  - component: {fileID: 5843028041679209788}
+    distance: 7.5568905
+    dir: {x: 0.0056941127, y: 0.08858509, z: -0.9960524}
+  - component: {fileID: 5843028040658847852}
+    distance: 6.07622
+    dir: {x: 0.7289273, y: 0.6738587, z: -0.12074499}
   otherConnectedParts:
   - component: {fileID: 5843028042096472491}
     distance: 3.6649792
@@ -13438,7 +14224,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.3445705
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -13446,7 +14232,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -13542,9 +14340,6 @@ MonoBehaviour:
   - component: {fileID: 5843028041207321510}
     distance: 6.384876
     dir: {x: -0.15666075, y: 0.031105025, z: 0.9871626}
-  - component: {fileID: 5843028041881741186}
-    distance: 4.134537
-    dir: {x: 0.41785344, y: -0.07179238, z: 0.9056735}
   - component: {fileID: 5843028040476611946}
     distance: 4.129301
     dir: {x: -0.07311232, y: -0.92756873, z: 0.36642963}
@@ -13560,6 +14355,9 @@ MonoBehaviour:
   - component: {fileID: 5843028041302274014}
     distance: 4.993601
     dir: {x: 0.64124733, y: -0.6785996, z: -0.35819617}
+  - component: {fileID: 5843028041881741186}
+    distance: 4.134537
+    dir: {x: 0.41785344, y: -0.07179238, z: 0.9056735}
   otherConnectedParts:
   - component: {fileID: 5843028040328270576}
     distance: 4.0745325
@@ -13615,7 +14413,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.4651396
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -13623,7 +14421,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -13689,45 +14499,45 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041329677089}
-    distance: 3.506962
-    dir: {x: -0.56218827, y: 0.4380363, z: 0.701476}
-  - component: {fileID: 5843028040800902883}
-    distance: 4.0194993
-    dir: {x: 0.5344212, y: -0.14701322, z: -0.8323347}
-  - component: {fileID: 5843028041879217728}
-    distance: 3.8547106
-    dir: {x: 0.9654986, y: -0.25413927, z: -0.056794025}
   - component: {fileID: 5843028041219032054}
     distance: 4.5463843
     dir: {x: 0.69211686, y: 0.634046, z: 0.34490556}
-  - component: {fileID: 5843028042201400159}
-    distance: 6.735143
-    dir: {x: 0.33428556, y: 0.94152105, z: 0.04232369}
-  - component: {fileID: 5843028040351395954}
-    distance: 3.0495553
-    dir: {x: -0.45192742, y: -0.8837902, z: 0.12114649}
+  - component: {fileID: 5843028041879217728}
+    distance: 3.8547106
+    dir: {x: 0.9654986, y: -0.25413927, z: -0.056794025}
+  - component: {fileID: 5843028040800902883}
+    distance: 4.0194993
+    dir: {x: 0.5344212, y: -0.14701322, z: -0.8323347}
   - component: {fileID: 5843028041094408147}
     distance: 4.533419
     dir: {x: -0.058473155, y: -0.9965455, z: -0.058973614}
+  - component: {fileID: 5843028040351395954}
+    distance: 3.0495553
+    dir: {x: -0.45192742, y: -0.8837902, z: 0.12114649}
   - component: {fileID: 5843028041890508436}
     distance: 3.5250735
     dir: {x: -0.07906918, y: -0.964084, z: 0.25355494}
-  - component: {fileID: 5843028041679209788}
-    distance: 6.3797007
-    dir: {x: -0.8764158, y: 0.029210113, z: 0.48066837}
+  - component: {fileID: 5843028041329677089}
+    distance: 3.506962
+    dir: {x: -0.56218827, y: 0.4380363, z: 0.701476}
   - component: {fileID: 5843028041987139978}
     distance: 4.4817524
     dir: {x: -0.7883786, y: 0.53998995, z: -0.2947374}
-  - component: {fileID: 5843028041611647364}
-    distance: 6.588569
-    dir: {x: 0.49340364, y: -0.13698576, z: 0.85894567}
   - component: {fileID: 5843028041271501809}
     distance: 5.339513
     dir: {x: 0.55926704, y: -0.7982717, z: 0.22356808}
+  - component: {fileID: 5843028041611647364}
+    distance: 6.588569
+    dir: {x: 0.49340364, y: -0.13698576, z: 0.85894567}
   - component: {fileID: 5843028042305848699}
     distance: 6.1659474
     dir: {x: -0.09729231, y: -0.11890685, z: 0.98812723}
+  - component: {fileID: 5843028041679209788}
+    distance: 6.3797007
+    dir: {x: -0.8764158, y: 0.029210113, z: 0.48066837}
+  - component: {fileID: 5843028042201400159}
+    distance: 6.735143
+    dir: {x: 0.33428556, y: 0.94152105, z: 0.04232369}
   otherConnectedParts:
   - component: {fileID: 5843028041879217728}
     distance: 3.8547106
@@ -13810,7 +14620,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.3423059
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -13818,7 +14628,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -13887,21 +14709,21 @@ MonoBehaviour:
   - component: {fileID: 5843028041037554442}
     distance: 8.782042
     dir: {x: 0.90284187, y: -0.35288584, z: 0.24565847}
-  - component: {fileID: 5843028040800902883}
-    distance: 4.5206356
-    dir: {x: -0.5594049, y: -0.8273871, z: 0.049967617}
-  - component: {fileID: 5843028041879217728}
-    distance: 5.403781
-    dir: {x: -0.17677504, y: -0.7641001, z: 0.6204044}
   - component: {fileID: 5843028041219032054}
     distance: 5.3691583
     dir: {x: -0.28502458, y: -0.049687292, z: 0.95723146}
-  - component: {fileID: 5843028042201400159}
-    distance: 5.562723
-    dir: {x: -0.43602931, y: 0.57379866, z: 0.69327736}
+  - component: {fileID: 5843028041879217728}
+    distance: 5.403781
+    dir: {x: -0.17677504, y: -0.7641001, z: 0.6204044}
+  - component: {fileID: 5843028040800902883}
+    distance: 4.5206356
+    dir: {x: -0.5594049, y: -0.8273871, z: 0.049967617}
   - component: {fileID: 5843028041773873100}
     distance: 6.674432
     dir: {x: -0.70072955, y: -0.47185978, z: 0.53509486}
+  - component: {fileID: 5843028042201400159}
+    distance: 5.562723
+    dir: {x: -0.43602931, y: 0.57379866, z: 0.69327736}
   otherConnectedParts:
   - component: {fileID: 5843028041879217728}
     distance: 5.403781
@@ -13957,7 +14779,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.4641247
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -13965,7 +14787,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -14086,7 +14920,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.73587155
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -14094,7 +14928,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -14160,12 +15006,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041495865555}
-    distance: 6.289996
-    dir: {x: 0.41522005, y: 0.7516856, z: 0.5124071}
   - component: {fileID: 5843028040611164022}
     distance: 1.1002142
     dir: {x: 0.0333617, y: -0.036663372, z: 0.99877065}
+  - component: {fileID: 5843028041495865555}
+    distance: 6.289996
+    dir: {x: 0.41522005, y: 0.7516856, z: 0.5124071}
   - component: {fileID: 5843028040476611946}
     distance: 5.445842
     dir: {x: -0.19995591, y: 0.9747241, z: 0.09965197}
@@ -14218,7 +15064,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.0920273
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -14226,7 +15072,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -14377,7 +15235,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.66871786
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -14385,7 +15243,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -14454,39 +15324,39 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041329677089}
-    distance: 6.5920773
-    dir: {x: -0.7922233, y: 0.36994666, z: -0.48530582}
   - component: {fileID: 5843028041037554442}
     distance: 11.766665
     dir: {x: 0.7950377, y: 0.08098114, z: -0.6011299}
-  - component: {fileID: 5843028041879217728}
-    distance: 5.897483
-    dir: {x: 0.07984658, y: -0.0130722085, z: -0.99672145}
   - component: {fileID: 5843028041219032054}
     distance: 5.5745654
     dir: {x: -0.018691078, y: 0.6790049, z: -0.7338957}
-  - component: {fileID: 5843028042201400159}
-    distance: 9.074873
-    dir: {x: -0.11012418, y: 0.79822814, z: -0.592203}
+  - component: {fileID: 5843028041879217728}
+    distance: 5.897483
+    dir: {x: 0.07984658, y: -0.0130722085, z: -0.99672145}
+  - component: {fileID: 5843028041329677089}
+    distance: 6.5920773
+    dir: {x: -0.7922233, y: 0.36994666, z: -0.48530582}
   - component: {fileID: 5843028041773873100}
     distance: 6.588569
     dir: {x: -0.49340364, y: 0.13698576, z: -0.85894567}
   - component: {fileID: 5843028041271501809}
     distance: 5.594556
     dir: {x: -0.04729782, y: -0.6005556, z: -0.79818285}
+  - component: {fileID: 5843028041512680964}
+    distance: 4.9367294
+    dir: {x: -0.4763216, y: -0.07425719, z: 0.8761299}
   - component: {fileID: 5843028041466464958}
     distance: 5.729814
     dir: {x: -0.6772952, y: 0.7356663, z: -0.0081471065}
   - component: {fileID: 5843028042305848699}
     distance: 3.878749
     dir: {x: -0.99277455, y: 0.043665327, z: 0.111767344}
-  - component: {fileID: 5843028041512680964}
-    distance: 4.9367294
-    dir: {x: -0.4763216, y: -0.07425719, z: 0.8761299}
   - component: {fileID: 5843028042355600175}
     distance: 5.2230315
     dir: {x: 0.035348002, y: 0.6928237, z: 0.7202402}
+  - component: {fileID: 5843028042201400159}
+    distance: 9.074873
+    dir: {x: -0.11012418, y: 0.79822814, z: -0.592203}
   otherConnectedParts:
   - component: {fileID: 5843028041879217728}
     distance: 5.897483
@@ -14560,7 +15430,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.52906287
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -14568,7 +15438,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -14713,7 +15595,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.7552057
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -14721,7 +15603,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -14808,21 +15702,21 @@ MonoBehaviour:
   - component: {fileID: 5843028042312940849}
     distance: 2.4847698
     dir: {x: -0.34141096, y: -0.27395672, z: 0.89910305}
-  - component: {fileID: 5843028042029726080}
-    distance: 3.416477
-    dir: {x: 0.38385728, y: -0.91494256, z: 0.12463433}
-  - component: {fileID: 5843028041913610819}
-    distance: 4.7729216
-    dir: {x: 0.44987953, y: -0.6343377, z: 0.62866855}
-  - component: {fileID: 5843028041881741186}
-    distance: 3.7725441
-    dir: {x: 0.7230903, y: -0.13132517, z: -0.678155}
   - component: {fileID: 5843028040476611946}
     distance: 6.2977242
     dir: {x: 0.110890314, y: -0.63972515, z: -0.76056236}
   - component: {fileID: 5843028041037554442}
     distance: 11.247938
     dir: {x: -0.059271254, y: -0.32065746, z: -0.9453389}
+  - component: {fileID: 5843028042029726080}
+    distance: 3.416477
+    dir: {x: 0.38385728, y: -0.91494256, z: 0.12463433}
+  - component: {fileID: 5843028041881741186}
+    distance: 3.7725441
+    dir: {x: 0.7230903, y: -0.13132517, z: -0.678155}
+  - component: {fileID: 5843028041913610819}
+    distance: 4.7729216
+    dir: {x: 0.44987953, y: -0.6343377, z: 0.62866855}
   otherConnectedParts:
   - component: {fileID: 5843028041881741186}
     distance: 3.7725441
@@ -14881,7 +15775,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.5389869
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -14889,7 +15783,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -14988,21 +15894,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028040780642570}
-    distance: 5.465699
-    dir: {x: 0.3121063, y: -0.89657027, z: 0.3142474}
   - component: {fileID: 5843028041198953207}
     distance: 5.142016
     dir: {x: -0.49012402, y: -0.81365144, z: 0.31264952}
-  - component: {fileID: 5843028042029726080}
-    distance: 4.261468
-    dir: {x: -0.72453386, y: 0.34800816, z: 0.5949294}
-  - component: {fileID: 5843028041913610819}
-    distance: 5.803747
-    dir: {x: -0.38798687, y: 0.2724553, z: 0.8804739}
-  - component: {fileID: 5843028041881741186}
-    distance: 4.462608
-    dir: {x: -0.37447327, y: 0.921765, z: -0.10059306}
+  - component: {fileID: 5843028040780642570}
+    distance: 5.465699
+    dir: {x: 0.3121063, y: -0.89657027, z: 0.3142474}
   - component: {fileID: 5843028040476611946}
     distance: 4.6060476
     dir: {x: -0.8034352, y: 0.12594168, z: -0.58191967}
@@ -15015,6 +15912,15 @@ MonoBehaviour:
   - component: {fileID: 5843028041302274014}
     distance: 6.071934
     dir: {x: -0.032382555, y: 0.16825749, z: -0.9852111}
+  - component: {fileID: 5843028042029726080}
+    distance: 4.261468
+    dir: {x: -0.72453386, y: 0.34800816, z: 0.5949294}
+  - component: {fileID: 5843028041881741186}
+    distance: 4.462608
+    dir: {x: -0.37447327, y: 0.921765, z: -0.10059306}
+  - component: {fileID: 5843028041913610819}
+    distance: 5.803747
+    dir: {x: -0.38798687, y: 0.2724553, z: 0.8804739}
   otherConnectedParts:
   - component: {fileID: 5843028041881741186}
     distance: 4.462608
@@ -15091,7 +15997,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.5615649
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -15099,7 +16005,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -15183,12 +16101,12 @@ MonoBehaviour:
   - component: {fileID: 5843028040779303526}
     distance: 5.5548635
     dir: {x: -0.93569374, y: 0.25760502, z: -0.24107453}
-  - component: {fileID: 5843028042305848699}
-    distance: 4.2047977
-    dir: {x: -0.35655755, y: 0.12746261, z: -0.9255377}
   - component: {fileID: 5843028040696891974}
     distance: 6.6088996
     dir: {x: -0.9886144, y: 0.11893837, z: 0.09216957}
+  - component: {fileID: 5843028042305848699}
+    distance: 4.2047977
+    dir: {x: -0.35655755, y: 0.12746261, z: -0.9255377}
   - component: {fileID: 5843028042355600175}
     distance: 4.7572274
     dir: {x: 0.5331035, y: 0.83772063, z: -0.11842597}
@@ -15259,7 +16177,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.4980505
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -15267,7 +16185,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -15444,12 +16374,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041817745560}
-    distance: 8.336479
-    dir: {x: -0.66533583, y: -0.1897099, z: -0.7220376}
   - component: {fileID: 5843028041271501809}
     distance: 5.4337363
     dir: {x: 0.7951067, y: 0.21683191, z: -0.5663825}
+  - component: {fileID: 5843028041817745560}
+    distance: 8.336479
+    dir: {x: -0.66533583, y: -0.1897099, z: -0.7220376}
   - component: {fileID: 5843028042305848699}
     distance: 5.1006393
     dir: {x: 0.14395985, y: 0.92290705, z: 0.3570969}
@@ -15499,7 +16429,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.1511699
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -15507,7 +16437,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -15558,12 +16500,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041611647364}
-    distance: 6.4855704
-    dir: {x: 0.12298067, y: 0.9743207, z: 0.18861336}
   - component: {fileID: 5843028041271501809}
     distance: 4.421854
     dir: {x: 0.1205353, y: 0.6692179, z: -0.73322487}
+  - component: {fileID: 5843028041611647364}
+    distance: 6.4855704
+    dir: {x: 0.12298067, y: 0.9743207, z: 0.18861336}
   otherConnectedParts:
   - component: {fileID: 5843028041271501809}
     distance: 4.421854
@@ -15604,7 +16546,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.9594065
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -15612,7 +16554,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -15690,27 +16644,27 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041329677089}
-    distance: 4.7567873
-    dir: {x: -0.12474706, y: 0.88953817, z: 0.4394997}
+  - component: {fileID: 5843028041668076217}
+    distance: 3.4783297
+    dir: {x: 0.13956982, y: -0.98769635, z: -0.0705419}
   - component: {fileID: 5843028041094408147}
     distance: 2.2285254
     dir: {x: 0.49947572, y: -0.8178463, z: -0.28574726}
   - component: {fileID: 5843028041890508436}
     distance: 1.4065481
     dir: {x: 0.78166753, y: -0.5000184, z: 0.37279695}
-  - component: {fileID: 5843028041668076217}
-    distance: 3.4783297
-    dir: {x: 0.13956982, y: -0.98769635, z: -0.0705419}
+  - component: {fileID: 5843028041329677089}
+    distance: 4.7567873
+    dir: {x: -0.12474706, y: 0.88953817, z: 0.4394997}
   - component: {fileID: 5843028041773873100}
     distance: 3.0495553
     dir: {x: 0.45192742, y: 0.8837902, z: -0.12114649}
-  - component: {fileID: 5843028041679209788}
-    distance: 5.773
-    dir: {x: -0.72979265, y: 0.4991372, z: 0.46718818}
   - component: {fileID: 5843028041271501809}
     distance: 4.7099414
     dir: {x: 0.9266339, y: -0.33274618, z: 0.17501315}
+  - component: {fileID: 5843028041679209788}
+    distance: 5.773
+    dir: {x: -0.72979265, y: 0.4991372, z: 0.46718818}
   otherConnectedParts:
   - component: {fileID: 5843028041890508436}
     distance: 1.4065481
@@ -15775,7 +16729,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.8725873
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -15783,7 +16737,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -15894,30 +16860,30 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028041908686050}
-    distance: 2.3056362
-    dir: {x: -0.917778, y: 0.18445921, z: 0.3516507}
-  - component: {fileID: 5843028041143189747}
-    distance: 3.7322583
-    dir: {x: -0.33596653, y: 0.90700877, z: -0.25389284}
-  - component: {fileID: 5843028042096472491}
-    distance: 3.8947394
-    dir: {x: 0.051865723, y: 0.64818734, z: 0.7597125}
-  - component: {fileID: 5843028041679209788}
-    distance: 5.7267094
-    dir: {x: -0.22577932, y: 0.0042815106, z: -0.9741691}
-  - component: {fileID: 5843028041466464958}
-    distance: 5.7080917
-    dir: {x: 0.6426572, y: 0.5519985, z: -0.5313092}
-  - component: {fileID: 5843028042305848699}
-    distance: 4.5820045
-    dir: {x: 0.80715734, y: -0.19533071, z: -0.55708426}
   - component: {fileID: 5843028041512680964}
     distance: 5.5548635
     dir: {x: 0.93569374, y: -0.25760502, z: 0.24107453}
+  - component: {fileID: 5843028041466464958}
+    distance: 5.7080917
+    dir: {x: 0.6426572, y: 0.5519985, z: -0.5313092}
+  - component: {fileID: 5843028041908686050}
+    distance: 2.3056362
+    dir: {x: -0.917778, y: 0.18445921, z: 0.3516507}
+  - component: {fileID: 5843028042096472491}
+    distance: 3.8947394
+    dir: {x: 0.051865723, y: 0.64818734, z: 0.7597125}
+  - component: {fileID: 5843028041143189747}
+    distance: 3.7322583
+    dir: {x: -0.33596653, y: 0.90700877, z: -0.25389284}
   - component: {fileID: 5843028040696891974}
     distance: 2.4487932
     dir: {x: -0.5455758, y: -0.26335785, z: 0.79560643}
+  - component: {fileID: 5843028042305848699}
+    distance: 4.5820045
+    dir: {x: 0.80715734, y: -0.19533071, z: -0.55708426}
+  - component: {fileID: 5843028041679209788}
+    distance: 5.7267094
+    dir: {x: -0.22577932, y: 0.0042815106, z: -0.9741691}
   otherConnectedParts:
   - component: {fileID: 5843028042096472491}
     distance: 3.8947394
@@ -15988,7 +16954,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.3544239
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -15996,7 +16962,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -16123,7 +17101,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.9244944
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -16131,7 +17109,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -16185,15 +17175,15 @@ MonoBehaviour:
   - component: {fileID: 5843028041495865555}
     distance: 5.1670017
     dir: {x: -0.42463097, y: -0.9053216, z: -0.009024097}
-  - component: {fileID: 5843028041913610819}
-    distance: 7.4156804
-    dir: {x: -0.5995197, y: -0.4175661, z: 0.68279916}
   - component: {fileID: 5843028040797454159}
     distance: 5.1282635
     dir: {x: 0.68427896, y: -0.72883695, z: 0.023640163}
   - component: {fileID: 5843028042014993891}
     distance: 5.018541
     dir: {x: 0.8966035, y: -0.14680137, z: 0.41779354}
+  - component: {fileID: 5843028041913610819}
+    distance: 7.4156804
+    dir: {x: -0.5995197, y: -0.4175661, z: 0.68279916}
   otherConnectedParts:
   - component: {fileID: 5843028042014993891}
     distance: 5.018541
@@ -16255,7 +17245,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 0.6243713
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -16263,7 +17253,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -16359,21 +17361,21 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - component: {fileID: 5843028040351395954}
-    distance: 3.4783297
-    dir: {x: -0.13956982, y: 0.98769635, z: 0.0705419}
   - component: {fileID: 5843028041094408147}
     distance: 1.7744606
     dir: {x: 0.35369876, y: 0.9089761, z: -0.22058931}
+  - component: {fileID: 5843028040351395954}
+    distance: 3.4783297
+    dir: {x: -0.13956982, y: 0.98769635, z: 0.0705419}
   - component: {fileID: 5843028041890508436}
     distance: 2.9042299
     dir: {x: 0.21140997, y: 0.9407773, z: 0.26503578}
-  - component: {fileID: 5843028041817745560}
-    distance: 6.3368444
-    dir: {x: -0.94495565, y: -0.14066963, z: -0.29541647}
   - component: {fileID: 5843028041271501809}
     distance: 4.4363093
     dir: {x: 0.87435776, y: 0.42114255, z: 0.24111703}
+  - component: {fileID: 5843028041817745560}
+    distance: 6.3368444
+    dir: {x: -0.94495565, y: -0.14066963, z: -0.29541647}
   otherConnectedParts:
   - component: {fileID: 5843028041890508436}
     distance: 2.9042299
@@ -16426,7 +17428,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: 1.1374533
   minBottomAngle: 110
   affectiveRange: 0.5
   castLayer:
@@ -16434,7 +17436,19 @@ MonoBehaviour:
     m_Bits: 64
   breakEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4884976103866364311}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using HighlightPlus;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class FootMovementSphere : MonoBehaviour
 {
@@ -80,6 +81,9 @@ public class FootMovementSphere : MonoBehaviour
     [Header("Footstep")]
     [SerializeField]
     private SoundAbstract footstepSound;
+
+    [SerializeField]
+    private VisualEffect vfx_Footstep;
 
     [Space(10)]
     [SerializeField]
@@ -358,7 +362,7 @@ public class FootMovementSphere : MonoBehaviour
         {
             case FootState.Move:
             {
-                footstepSound.PlayF();
+                PlayFootStep();
 
                 if (Time.time - launchCollisionIgnoreTime_Set > launchCollisionIgnoreTime)
                 {
@@ -376,6 +380,7 @@ public class FootMovementSphere : MonoBehaviour
                 break;
             }
             case FootState.Falling:
+                PlayFootStep();
                 if (GroundCheck(transform.position))
                 {
                     SetFootIdle(collision);
@@ -384,7 +389,7 @@ public class FootMovementSphere : MonoBehaviour
                 {
                     SetFootFall(collision);
                 }
-                footstepSound.PlayF();
+
 
                 break;
 
@@ -401,10 +406,17 @@ public class FootMovementSphere : MonoBehaviour
                 //         SetFootFall(collision);
                 //     }
                 // }
-                footstepSound.PlayF();
+                PlayFootStep();
+
 
                 break;
         }
+    }
+
+    private void PlayFootStep()
+    {
+        footstepSound.PlayF();
+        vfx_Footstep.Play();
     }
 
     private void OnTriggerEnter(Collider other)
