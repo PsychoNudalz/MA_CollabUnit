@@ -352,7 +352,7 @@ public class FootMovementSphere : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        footstepSound.Play();
+        footstepSound.PlayF();
         
         
         switch (footState)

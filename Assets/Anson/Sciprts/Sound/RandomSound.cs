@@ -113,7 +113,6 @@ public class RandomSound : SoundAbstract
             temp = sounds[(seed + i) % sounds.Length];
             if (!temp.IsPlaying() )
             {
-                print(temp.name);
                 return temp;
             }
         }

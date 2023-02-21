@@ -68,6 +68,8 @@ public class BreakableStructureController : MonoBehaviour
 
     [SerializeField]
     private VisualEffect vfx_Break;
+
+    private Queue<Tuple<Vector3,Mesh>> breakPosQueue = new Queue<Tuple<Vector3,Mesh>>();
     // [SerializeField]
     
     
@@ -79,6 +81,12 @@ public class BreakableStructureController : MonoBehaviour
     private UnityEvent despawnEvent;
 
     public BreakableComponent[] AllBreakableComponents => allBreakableComponents;
+
+
+    private void FixedUpdate()
+    {
+        PlayBreakEffectsFromQueue();
+    }
 
 
     [ContextMenu("FindAllColliders")]
@@ -241,6 +249,22 @@ public class BreakableStructureController : MonoBehaviour
         }
     }
 
+    public void QueueBreakEffects(Vector3 position,Mesh mesh)
+    {
+        breakPosQueue.Enqueue(new Tuple<Vector3, Mesh>(position,mesh));
+        // print(breakPosQueue.Count);
+    }
+
+    void PlayBreakEffectsFromQueue()
+    {
+        
+        if (breakPosQueue.Count>0)
+        {
+            Tuple<Vector3, Mesh> tuple = breakPosQueue.Dequeue();
+            PlayBreakEffects(tuple.Item1,tuple.Item2);
+        }
+    }
+    
     public void PlayBreakEffects(Vector3 position,Mesh mesh)
     {
         if (vfx_Break)
@@ -251,4 +275,5 @@ public class BreakableStructureController : MonoBehaviour
         }
         breakEvent.Invoke();
     }
+    
 }

@@ -8,16 +8,24 @@ using UnityEngine.Audio;
 public class SoundPool : Sound
 {
     [Header("Pool Handling")]
-    [SerializeField] AudioSource[] sourcePool;
-    [SerializeField] int sourcePoolSize = 6;
-    [SerializeField] int poolIndex = -1;
+    [SerializeField]
+    AudioSource[] sourcePool;
+
+    [SerializeField]
+    int sourcePoolSize = 6;
+
+    [SerializeField]
+    [Min(0)]
+    int poolIndex = 0;
+
+    private bool increasedIndex = false;
 
     private void Awake()
     {
         Initialise();
         sourcePool = new AudioSource[sourcePoolSize];
         AudioSource temp;
-        string[] ignoreList = { "minVolume", "maxVolume", "rolloffFactor" };
+        string[] ignoreList = {"minVolume", "maxVolume", "rolloffFactor"};
         for (int i = 0; i < sourcePoolSize; i++)
         {
             temp = gameObject.AddComponent<AudioSource>();
@@ -25,29 +33,37 @@ public class SoundPool : Sound
 
             DuplicateObjectScript.CopyPropertiesTo(source, temp, new List<string>(ignoreList));
             //source.clip = clip;
-            sourcePool[i] = temp; 
+            sourcePool[i] = temp;
         }
 
+        poolIndex = 0;
     }
+
     [ContextMenu("Play")]
     public override void Play()
     {
-        print("Play");
-        poolIndex = (poolIndex + 1) % sourcePoolSize;
+        increasedIndex = true;
+
         source = sourcePool[poolIndex];
         base.Play();
+        poolIndex = (poolIndex + 1) % sourcePoolSize;
+        increasedIndex = false;
     }
+
     [ContextMenu("PlayF")]
     public override void PlayF()
     {
-        poolIndex = (poolIndex + 1) % sourcePoolSize;
         source = sourcePool[poolIndex];
         base.PlayF();
+        if (!increasedIndex)
+        {
+            poolIndex = (poolIndex + 1) % sourcePoolSize;
+        }
     }
 
     public override void Stop()
     {
-        foreach(AudioSource a in sourcePool)
+        foreach (AudioSource a in sourcePool)
         {
             a.Stop();
         }
@@ -79,6 +95,4 @@ public class SoundPool : Sound
         b.bypassEffects = a.bypassEffects;
         b.bypassListenerEffects = b.bypassListenerEffects;
     }
-
-
 }

@@ -534,7 +534,7 @@ public class BreakableComponent : MonoBehaviour
         breakEvent.Invoke();
         if (breakableStructureController)
         {
-            breakableStructureController.PlayBreakEffects(transform.position,meshFilter.mesh);
+            breakableStructureController.QueueBreakEffects(transform.position,meshFilter.mesh);
         }
     }
 }
