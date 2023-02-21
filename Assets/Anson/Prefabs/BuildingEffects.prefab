@@ -52,7 +52,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0.39
   MinDistance: 20
   MaxDistance: 10000
   Pan2D: 0
@@ -142,10 +142,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 8354225861939562043}
-  volume: 0.5
-  volumeVariance: 0.1
+  volume: 0.7
+  volumeVariance: 0.2
   pitch: 1
-  pitchVariance: 0.1
+  pitchVariance: 0.2
   audioMixer: {fileID: 0}
   sourcePool: []
   sourcePoolSize: 10
@@ -202,7 +202,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0.39
   MinDistance: 20
   MaxDistance: 10000
   Pan2D: 0
@@ -292,10 +292,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 3061903567526905553}
-  volume: 0.5
-  volumeVariance: 0.1
+  volume: 0.7
+  volumeVariance: 0.2
   pitch: 1
-  pitchVariance: 0.1
+  pitchVariance: 0.2
   audioMixer: {fileID: 0}
   sourcePool: []
   sourcePoolSize: 4
@@ -352,7 +352,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0.39
   MinDistance: 20
   MaxDistance: 10000
   Pan2D: 0
@@ -442,10 +442,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 3143665132238843423}
-  volume: 0.5
-  volumeVariance: 0.1
+  volume: 0.7
+  volumeVariance: 0.2
   pitch: 1
-  pitchVariance: 0.1
+  pitchVariance: 0.2
   audioMixer: {fileID: 0}
   sourcePool: []
   sourcePoolSize: 4
@@ -502,7 +502,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0.39
   MinDistance: 20
   MaxDistance: 10000
   Pan2D: 0
@@ -592,10 +592,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 5177936434888262284}
-  volume: 0.5
-  volumeVariance: 0.1
+  volume: 0.7
+  volumeVariance: 0.2
   pitch: 1
-  pitchVariance: 0.1
+  pitchVariance: 0.2
   audioMixer: {fileID: 0}
   sourcePool: []
   sourcePoolSize: 4
@@ -652,7 +652,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0.39
   MinDistance: 20
   MaxDistance: 10000
   Pan2D: 0
@@ -742,10 +742,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 15588573225384705}
-  volume: 0.5
-  volumeVariance: 0.1
+  volume: 0.7
+  volumeVariance: 0.2
   pitch: 1
-  pitchVariance: 0.1
+  pitchVariance: 0.2
   audioMixer: {fileID: 0}
   sourcePool: []
   sourcePoolSize: 4
@@ -802,7 +802,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0.39
   MinDistance: 20
   MaxDistance: 10000
   Pan2D: 0
@@ -892,10 +892,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 6683665019874843830}
-  volume: 0.5
-  volumeVariance: 0.1
+  volume: 0.7
+  volumeVariance: 0.2
   pitch: 1
-  pitchVariance: 0.1
+  pitchVariance: 0.2
   audioMixer: {fileID: 0}
   sourcePool: []
   sourcePoolSize: 4
@@ -1025,7 +1025,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0.39
   MinDistance: 20
   MaxDistance: 10000
   Pan2D: 0
@@ -1115,10 +1115,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 8404947060288816002}
-  volume: 0.5
-  volumeVariance: 0.1
+  volume: 0.7
+  volumeVariance: 0.2
   pitch: 1
-  pitchVariance: 0.1
+  pitchVariance: 0.2
   audioMixer: {fileID: 0}
   sourcePool: []
   sourcePoolSize: 4
@@ -1175,7 +1175,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0.39
   MinDistance: 20
   MaxDistance: 10000
   Pan2D: 0
@@ -1265,10 +1265,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 7402758427096575356}
-  volume: 0.5
-  volumeVariance: 0.1
+  volume: 0.7
+  volumeVariance: 0.2
   pitch: 1
-  pitchVariance: 0.1
+  pitchVariance: 0.2
   audioMixer: {fileID: 0}
   sourcePool: []
   sourcePoolSize: 4
@@ -1323,7 +1323,7 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 3
+      - m_Value: 5
         m_Name: SpawnSphere_sphere_radius
         m_Overridden: 0
     m_Vector2f:
@@ -1331,9 +1331,9 @@ VisualEffect:
       - m_Value: {x: 2, y: 5}
         m_Name: SpawnSize
         m_Overridden: 0
-      - m_Value: {x: 10, y: 15}
+      - m_Value: {x: 25, y: 40}
         m_Name: SpawnAmount
-        m_Overridden: 1
+        m_Overridden: 0
     m_Vector3f:
       m_Array: []
     m_Vector4f:
@@ -1438,6 +1438,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47160d6e28a93e44b92f71b43ea2494a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vfx_Break: {fileID: 6874657499850193237}
+  breakSound: {fileID: 6727769675020058938}
+  soundTime: 0.02
 --- !u!1 &8410439441544741838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,7 +1493,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0.39
   MinDistance: 20
   MaxDistance: 10000
   Pan2D: 0
@@ -1580,10 +1583,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 1744725005946018077}
-  volume: 0.5
-  volumeVariance: 0.1
+  volume: 0.7
+  volumeVariance: 0.2
   pitch: 1
-  pitchVariance: 0.1
+  pitchVariance: 0.2
   audioMixer: {fileID: 0}
   sourcePool: []
   sourcePoolSize: 4

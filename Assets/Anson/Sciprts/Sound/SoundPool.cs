@@ -37,6 +37,8 @@ public class SoundPool : Sound
         }
 
         poolIndex = 0;
+        source = sourcePool[poolIndex];
+
     }
 
     [ContextMenu("Play")]
@@ -44,21 +46,23 @@ public class SoundPool : Sound
     {
         increasedIndex = true;
 
-        source = sourcePool[poolIndex];
         base.Play();
         poolIndex = (poolIndex + 1) % sourcePoolSize;
+        source = sourcePool[poolIndex];
+
         increasedIndex = false;
     }
 
     [ContextMenu("PlayF")]
     public override void PlayF()
     {
-        source = sourcePool[poolIndex];
         base.PlayF();
         if (!increasedIndex)
         {
             poolIndex = (poolIndex + 1) % sourcePoolSize;
         }
+        source = sourcePool[poolIndex];
+
     }
 
     public override void Stop()

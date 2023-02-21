@@ -352,13 +352,14 @@ public class FootMovementSphere : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        footstepSound.PlayF();
         
         
         switch (footState)
         {
             case FootState.Move:
             {
+                footstepSound.PlayF();
+
                 if (Time.time - launchCollisionIgnoreTime_Set > launchCollisionIgnoreTime)
                 {
                     // Debug.Log($"{this} collided {collision.collider.name}");
@@ -383,6 +384,7 @@ public class FootMovementSphere : MonoBehaviour
                 {
                     SetFootFall(collision);
                 }
+                footstepSound.PlayF();
 
                 break;
 
@@ -399,6 +401,7 @@ public class FootMovementSphere : MonoBehaviour
                 //         SetFootFall(collision);
                 //     }
                 // }
+                footstepSound.PlayF();
 
                 break;
         }
@@ -514,7 +517,7 @@ public class FootMovementSphere : MonoBehaviour
     public void Swipe(Vector3 initialForce, Vector3 sideForce)
     {
         ChangeState(FootState.Swipe);
-        print($"{this} Swipe: {initialForce}");
+        // print($"{this} Swipe: {initialForce}");
 
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;

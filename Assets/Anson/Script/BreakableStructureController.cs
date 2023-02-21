@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.VFX;
+using Random = UnityEngine.Random;
 
 
 /// <summary>
@@ -56,7 +57,8 @@ public class BreakableStructureController : MonoBehaviour
     private float minimumPartSize = 2f;
 
     [SerializeField]
-    private float breakDelay;
+    private Vector2 breakDelayRange = new Vector2(0.5f, 1.5f);
+    public float BreakDelay=>Random.Range(breakDelayRange.x,breakDelayRange.y);
 
     [SerializeField]
     private float minBottomAngle;
@@ -64,14 +66,11 @@ public class BreakableStructureController : MonoBehaviour
     [Space(20f)]
     [Header("Effects")]
     [SerializeField]
+    private BreakableStructureEffectsController effectsController;
+    [SerializeField]
     private UnityEvent breakEvent;
 
-    [SerializeField]
-    private VisualEffect vfx_Break;
 
-    private Queue<Tuple<Vector3,Mesh>> breakPosQueue = new Queue<Tuple<Vector3,Mesh>>();
-    // [SerializeField]
-    
     
     [Space(10)]
     [SerializeField]
@@ -82,10 +81,16 @@ public class BreakableStructureController : MonoBehaviour
 
     public BreakableComponent[] AllBreakableComponents => allBreakableComponents;
 
-
+    
+    private void Awake()
+    {
+        if (!effectsController)
+        {
+            effectsController = GetComponentInChildren<BreakableStructureEffectsController>();
+        }
+    }
     private void FixedUpdate()
     {
-        PlayBreakEffectsFromQueue();
     }
 
 
@@ -95,13 +100,7 @@ public class BreakableStructureController : MonoBehaviour
         allColliders = GetComponentsInChildren<Collider>(true);
     }
 
-    private void Awake()
-    {
-        // foreach (BreakableComponent BreakableComponent in BreakableComponents)
-        // {
-        //     SetBP(BreakableComponent);
-        // }
-    }
+
 
     public void AddComponentsToColliders()
     {
@@ -204,13 +203,13 @@ public class BreakableStructureController : MonoBehaviour
     private void SetBP(BreakablePart bp)
     {
         bp.Initialise(gameObject, this, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot,
-            minimumPartSize, breakDelay, minBottomAngle, physicMaterial,  breakEvent, despawnTime, despawnEvent);
+            minimumPartSize, BreakDelay, minBottomAngle, physicMaterial,  breakEvent, despawnTime, despawnEvent);
     }
 
     private void SetBC(BreakableCollective breakableCollective)
     {
         breakableCollective.Initialise(gameObject, this, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot,
-            minimumPartSize, breakDelay, minBottomAngle, physicMaterial, breakEvent, despawnTime, despawnEvent);
+            minimumPartSize, BreakDelay, minBottomAngle, physicMaterial, breakEvent, despawnTime, despawnEvent);
     }
 
     public void ResetConnections()
@@ -224,6 +223,7 @@ public class BreakableStructureController : MonoBehaviour
     [ContextMenu("initialise")]
     public void Initialise()
     {
+        Awake();
         GetAllColliders();
         ResetColliderNames();
         AddComponentsToColliders();
@@ -251,28 +251,12 @@ public class BreakableStructureController : MonoBehaviour
 
     public void QueueBreakEffects(Vector3 position,Mesh mesh)
     {
-        breakPosQueue.Enqueue(new Tuple<Vector3, Mesh>(position,mesh));
-        // print(breakPosQueue.Count);
-    }
-
-    void PlayBreakEffectsFromQueue()
-    {
-        
-        if (breakPosQueue.Count>0)
-        {
-            Tuple<Vector3, Mesh> tuple = breakPosQueue.Dequeue();
-            PlayBreakEffects(tuple.Item1,tuple.Item2);
-        }
+        effectsController.QueueBreakEffects(position,mesh);
     }
     
     public void PlayBreakEffects(Vector3 position,Mesh mesh)
     {
-        if (vfx_Break)
-        {
-            vfx_Break.SetVector3("Position",position);
-            vfx_Break.SetMesh("SpawnMesh",mesh);
-            vfx_Break.Play();
-        }
+        effectsController.PlayBreakEffects(position,mesh);
         breakEvent.Invoke();
     }
     

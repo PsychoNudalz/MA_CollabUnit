@@ -108,7 +108,7 @@ public class BreakableCollective : BreakableComponent
             breakableComponent.AddComponents(pm);
             breakableComponent.Initialise(gameObject, bsc, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer,
                 transferToDot,
-                minimumPartSize, breakDelay, minBottomAngle, pm, breakEvent, despawnTime, despawnEvent);
+                minimumPartSize, bsc.BreakDelay, minBottomAngle, pm, breakEvent, despawnTime, despawnEvent);
             
         }
 
