@@ -33,20 +33,20 @@ public class BreakablePart : BreakableComponent
 
     private void FixedUpdate()
     {
-        if (breakableState == BreakableState.Hold)
-        {
-            CheckBottomTime_now -= Time.deltaTime;
-            if (CheckBottomTime_now < 0)
-            {
-                if (!HasBottomPart())
-                {
-                    Break(new Vector3(), new Vector3());
-
-                }
-
-                CheckBottomTime_now = CheckBottomTime;
-            }
-        }
+        // if (breakableState == BreakableState.Hold)
+        // {
+        //     CheckBottomTime_now -= Time.deltaTime;
+        //     if (CheckBottomTime_now < 0)
+        //     {
+        //         if (!HasBottomPart())
+        //         {
+        //             Break(new Vector3(), new Vector3());
+        //
+        //         }
+        //
+        //         CheckBottomTime_now = CheckBottomTime;
+        //     }
+        // }
     }
 
     private void OnDrawGizmosSelected()

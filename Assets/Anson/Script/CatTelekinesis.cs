@@ -345,9 +345,10 @@ public class CatTelekinesis : MonoBehaviour
             if (displacement.magnitude > pullDeadzone)
             {
                 breakablePart.SelfRb.AddForce(displacement.normalized * pullForce, ForceMode.Impulse);
-                breakablePart.SelfRb.velocity = Vector3.ClampMagnitude(breakablePart.SelfRb.velocity,
-                    Mathf.Min(displacement.magnitude, pullVelocity_Max));
+                
             }
+            breakablePart.SelfRb.velocity = Vector3.ClampMagnitude(breakablePart.SelfRb.velocity,
+                Mathf.Min(displacement.magnitude, pullVelocity_Max));
         }
     }
 
@@ -366,7 +367,8 @@ public class CatTelekinesis : MonoBehaviour
 
     void UpdateHoverPoint()
     {
-        hoverPoint.position = parent.position + hoverOffset;
+        float angle = Vector3.SignedAngle(Vector3.forward, camera.forward, Vector3.up);
+        hoverPoint.position = parent.position + Quaternion.Euler(0,angle,0)*hoverOffset;
         vfx_BlackHole.SetVector3("CentrePosition",hoverPoint.position);
     }
 }
