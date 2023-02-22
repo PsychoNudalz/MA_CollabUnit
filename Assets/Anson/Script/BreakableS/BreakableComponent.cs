@@ -130,7 +130,7 @@ public class BreakableComponent : MonoBehaviour
 
 
     [Header("Debug")]
-    protected bool isDebug = true;
+    protected bool isDebug = false;
 
 
     [SerializeField]

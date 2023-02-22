@@ -25,27 +25,35 @@ public class PauseMenu : MonoBehaviour
     {
         if (Keyboard.current.escapeKey.wasPressedThisFrame && canBePaused)
         {
-            if (optionsOpen)
+            MenuControl();
+        }
+    }
+
+    private void MenuControl()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        if (optionsOpen)
+        {
+            CloseOptions();
+        }
+        else if (confirmBoxOpen)
+        {
+            CloseConfirmBox();
+        }
+        else
+        {
+            switch (gameIsPaused)
             {
-                CloseOptions();
-            }
-            else if (confirmBoxOpen)
-            {
-                CloseConfirmBox();
-            }
-            else
-            {
-                switch (gameIsPaused)
-                {
-                    case false:
-                        LeanTween.color(bg.GetComponent<RectTransform>(), bgOn, 0.2f).setIgnoreTimeScale(true);
-                        PauseGame();
-                        LeanTween.scale(gameObject, new Vector3(1, 1, 1), 0.2f).setEase(LeanTweenType.easeInOutCubic).setIgnoreTimeScale(true);
-                        break;
-                    case true:
-                        Resume();
-                        break;
-                }
+                case false:
+                    LeanTween.color(bg.GetComponent<RectTransform>(), bgOn, 0.2f).setIgnoreTimeScale(true);
+                    PauseGame();
+                    LeanTween.scale(gameObject, new Vector3(1, 1, 1), 0.2f).setEase(LeanTweenType.easeInOutCubic)
+                        .setIgnoreTimeScale(true);
+                    break;
+                case true:
+                    Resume();
+                    break;
             }
         }
     }
@@ -58,6 +66,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         Time.timeScale = 1;
         LeanTween.color(bg.GetComponent<RectTransform>(), bgDefault, 0.2f);
         gameIsPaused = false;
@@ -74,6 +84,7 @@ public class PauseMenu : MonoBehaviour
     public void CloseOptions()
     {
         optionsOpen = false;
+        
         LeanTween.scale(gameObject, new Vector3(1, 1, 1), 0.3f).setEase(LeanTweenType.easeInOutCubic).setIgnoreTimeScale(true);
         LeanTween.scale(optionsMenu, new Vector3(0, 0, 0), 0.3f).setEase(LeanTweenType.easeInOutCubic).setIgnoreTimeScale(true);
     }

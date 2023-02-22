@@ -121,7 +121,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4257116
+  breakDelay: 1.639484
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -148,7 +148,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 0.6698327
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 0}
   meshFilter: {fileID: 8318740989831951191}
@@ -587,7 +587,7 @@ MonoBehaviour:
   bpLayer:
     serializedVersion: 2
     m_Bits: 64
-  minimumPartSize: 5
+  minimumPartSize: 10
   breakDelayRange: {x: 0.2, y: 2}
   minBottomAngle: 120
   effectsController: {fileID: 2255596079943014084}
@@ -4074,15 +4074,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - component: {fileID: 9117184794108697407}
+    distance: 0.63801575
+    dir: {x: 1, y: 0, z: 0}
   - component: {fileID: 1968315733070860923}
     distance: 0.9022905
     dir: {x: 0.70710677, y: -0.000000107346295, z: 0.70710677}
   - component: {fileID: 2620042230153993413}
     distance: 0.63801575
     dir: {x: 0, y: -0.0000001518106, z: 1}
-  - component: {fileID: 9117184794108697407}
-    distance: 0.63801575
-    dir: {x: 1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 1968315733070860923}
     distance: 0.9022905
@@ -4129,7 +4129,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1942077
+  breakDelay: 1.0444927
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -4156,7 +4156,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 6.1004057
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 9196869641458656537}
   meshFilter: {fileID: 1641707629734469230}
@@ -4221,6 +4221,18 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - component: {fileID: 8157960539385025368}
+    distance: 6.8894935
+    dir: {x: 0.48434383, y: 0.4411194, z: -0.75552946}
+  - component: {fileID: 371820359564430556}
+    distance: 7.8050156
+    dir: {x: 0.97382945, y: 0, z: -0.22728023}
+  - component: {fileID: 2166904792743349517}
+    distance: 5.6437087
+    dir: {x: 0.7534213, y: -0.08681419, z: 0.65178186}
+  - component: {fileID: 1485175907727560952}
+    distance: 3.540899
+    dir: {x: -0.86545783, y: 0, z: -0.50098175}
   - component: {fileID: 7507813028458309080}
     distance: 7.8278136
     dir: {x: 0.6380365, y: 0.3882424, z: -0.66496414}
@@ -4230,18 +4242,6 @@ MonoBehaviour:
   - component: {fileID: 2611417522569232689}
     distance: 8.201605
     dir: {x: 0.16975616, y: -0.059739027, z: 0.98367375}
-  - component: {fileID: 2166904792743349517}
-    distance: 5.6437087
-    dir: {x: 0.7534213, y: -0.08681419, z: 0.65178186}
-  - component: {fileID: 8157960539385025368}
-    distance: 6.8894935
-    dir: {x: 0.48434383, y: 0.4411194, z: -0.75552946}
-  - component: {fileID: 371820359564430556}
-    distance: 7.8050156
-    dir: {x: 0.97382945, y: 0, z: -0.22728023}
-  - component: {fileID: 1485175907727560952}
-    distance: 3.540899
-    dir: {x: -0.86545783, y: 0, z: -0.50098175}
   otherConnectedParts:
   - component: {fileID: 2611417522569232689}
     distance: 8.201605
@@ -4288,7 +4288,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.270688
+  breakDelay: 1.1530639
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -4315,7 +4315,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 18.069054
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 371261158095739580}
   meshFilter: {fileID: 526746026172295646}
@@ -4407,18 +4407,18 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 2451700510778715418}
-    distance: 3.3918905
-    dir: {x: 0.7671838, y: -0.14444695, z: -0.62495124}
-  - component: {fileID: 5143529702242597165}
-    distance: 5.105886
-    dir: {x: 0.95226413, y: 0, z: 0.30527523}
   - component: {fileID: 3208071248746664327}
     distance: 3.3631604
     dir: {x: 0.25636083, y: 0.90364313, z: -0.34308633}
   - component: {fileID: 6908200742152729449}
     distance: 4.0327144
     dir: {x: -0.41797212, y: -0.00000094593787, z: 0.90845984}
+  - component: {fileID: 5143529702242597165}
+    distance: 5.105886
+    dir: {x: 0.95226413, y: 0, z: 0.30527523}
+  - component: {fileID: 2451700510778715418}
+    distance: 3.3918905
+    dir: {x: 0.7671838, y: -0.14444695, z: -0.62495124}
   otherConnectedParts:
   - component: {fileID: 2611417522569232689}
     distance: 8.993118
@@ -4474,7 +4474,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.7490904
+  breakDelay: 0.8308653
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -4501,7 +4501,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 15.311726
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3025596692971894721}
   meshFilter: {fileID: 3467308938111548460}
@@ -4566,12 +4566,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 5703489269235440071}
-    distance: 0
-    dir: {x: 0, y: 0, z: 0}
   - component: {fileID: 5069139350308891689}
     distance: 4.2427673
     dir: {x: 1, y: 0, z: 0}
+  - component: {fileID: 5703489269235440071}
+    distance: 0
+    dir: {x: 0, y: 0, z: 0}
   - component: {fileID: 2675367230923914708}
     distance: 0
     dir: {x: 0, y: 0, z: 0}
@@ -4612,7 +4612,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8575058
+  breakDelay: 1.0956837
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -4639,7 +4639,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 9.219671
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8125829662522650339}
   meshFilter: {fileID: 4538324836414291622}
@@ -4683,12 +4683,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 4324402389178213097}
-    distance: 0
-    dir: {x: 0, y: 0, z: 0}
   - component: {fileID: 6071433371138241965}
     distance: 4.0901604
     dir: {x: 0, y: 1, z: 0}
+  - component: {fileID: 4324402389178213097}
+    distance: 0
+    dir: {x: 0, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 4324402389178213097}
     distance: 0
@@ -4729,7 +4729,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.41175848
+  breakDelay: 0.4048137
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -4756,7 +4756,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 9.641218
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2182408238995171342}
   meshFilter: {fileID: 5198972076917788933}
@@ -4867,7 +4867,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.6261766
+  breakDelay: 1.5129265
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -4894,7 +4894,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 8.619264
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 895309366536164028}
   meshFilter: {fileID: 7333633955851023507}
@@ -4965,15 +4965,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 1968315733070860923}
-    distance: 0.63801575
-    dir: {x: 1, y: 0, z: 0}
   - component: {fileID: 9117184794108697407}
     distance: 0.9022905
     dir: {x: 0.70710677, y: 0.000000107346295, z: -0.70710677}
   - component: {fileID: 85904807045093456}
     distance: 0.63801575
     dir: {x: 0, y: 0.0000001518106, z: -1}
+  - component: {fileID: 1968315733070860923}
+    distance: 0.63801575
+    dir: {x: 1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 1968315733070860923}
     distance: 0.63801575
@@ -5020,7 +5020,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0278901
+  breakDelay: 0.25534254
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -5047,7 +5047,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 6.1003504
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1952774682296133153}
   meshFilter: {fileID: 4235983727539312473}
@@ -5106,15 +5106,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 5703489269235440071}
-    distance: 3.9030738
-    dir: {x: -0.34083965, y: 0.05278853, z: -0.9386382}
   - component: {fileID: 6330580359228428798}
     distance: 4.6847157
     dir: {x: 0.62169087, y: 0.043980796, z: -0.782027}
   - component: {fileID: 5069139350308891689}
     distance: 4.6847157
     dir: {x: 0.62169087, y: 0.043980796, z: -0.782027}
+  - component: {fileID: 5703489269235440071}
+    distance: 3.9030738
+    dir: {x: -0.34083965, y: 0.05278853, z: -0.9386382}
   otherConnectedParts:
   - component: {fileID: 3778523702587628009}
     distance: 14.434064
@@ -5155,7 +5155,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.892948
+  breakDelay: 0.39925575
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -5182,7 +5182,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 19.530687
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6477603138499385359}
   meshFilter: {fileID: 4272584638325132407}
@@ -5268,15 +5268,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 4608284873669999144}
-    distance: 0.638031
-    dir: {x: 1, y: 0, z: 0}
   - component: {fileID: 6569621595434964806}
     distance: 0.9023013
     dir: {x: 0.70711523, y: 0.000000107345016, z: -0.7070983}
   - component: {fileID: 1534571558363326290}
     distance: 0.63801575
     dir: {x: 0, y: 0.0000001518106, z: -1}
+  - component: {fileID: 4608284873669999144}
+    distance: 0.638031
+    dir: {x: 1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 4608284873669999144}
     distance: 0.638031
@@ -5323,7 +5323,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5130138
+  breakDelay: 0.40948611
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -5350,7 +5350,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 6.100273
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3177206395721925370}
   meshFilter: {fileID: 7077295755266550329}
@@ -5452,7 +5452,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.551631
+  breakDelay: 1.3863769
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -5479,7 +5479,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 5.3852406
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4166224803206776701}
   meshFilter: {fileID: 1368381133386651760}
@@ -5605,7 +5605,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9831235
+  breakDelay: 0.24188752
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -5632,7 +5632,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 17.022997
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 7542880204975709526}
   meshFilter: {fileID: 6797424558657812299}
@@ -5703,12 +5703,6 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 7797043510308942810}
-    distance: 0.638031
-    dir: {x: 0, y: -0.0000014947146, z: 1}
-  - component: {fileID: 8379277126605818251}
-    distance: 0.9023121
-    dir: {x: -0.70710677, y: -0.0000010569229, z: 0.70710677}
   - component: {fileID: 8248844635417942530}
     distance: 0.638031
     dir: {x: -1, y: 0, z: 0}
@@ -5718,6 +5712,12 @@ MonoBehaviour:
   - component: {fileID: 3970088731203275610}
     distance: 2.2302814
     dir: {x: 0.43812513, y: 0.761291, z: -0.47799823}
+  - component: {fileID: 8379277126605818251}
+    distance: 0.9023121
+    dir: {x: -0.70710677, y: -0.0000010569229, z: 0.70710677}
+  - component: {fileID: 7797043510308942810}
+    distance: 0.638031
+    dir: {x: 0, y: -0.0000014947146, z: 1}
   otherConnectedParts:
   - component: {fileID: 748005452011850484}
     distance: 1.4691658
@@ -5770,7 +5770,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6215867
+  breakDelay: 0.86641467
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -5797,7 +5797,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 6.1000614
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3319518358115377841}
   meshFilter: {fileID: 7091653578136521060}
@@ -5902,7 +5902,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.447768
+  breakDelay: 0.76292604
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -5929,7 +5929,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 15.099128
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6198465400323520467}
   meshFilter: {fileID: 2220271380874839473}
@@ -6070,7 +6070,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.35863143
+  breakDelay: 1.0033495
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -6097,7 +6097,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 7.681326
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4614493596961167545}
   meshFilter: {fileID: 5916111819304801072}
@@ -6240,21 +6240,21 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 4467928726717019497}
-    distance: 2.9424992
-    dir: {x: -0.030590186, y: 0.5649458, z: -0.8245608}
-  - component: {fileID: 2752566471466105893}
-    distance: 1.365036
-    dir: {x: 1, y: 0, z: 0}
   - component: {fileID: 7956554639937110285}
     distance: 4.592115
     dir: {x: -0.59451634, y: -0.8040835, z: -0.00031566827}
-  - component: {fileID: 3722394413924918873}
-    distance: 0
-    dir: {x: 0, y: 0, z: 0}
+  - component: {fileID: 2752566471466105893}
+    distance: 1.365036
+    dir: {x: 1, y: 0, z: 0}
+  - component: {fileID: 4467928726717019497}
+    distance: 2.9424992
+    dir: {x: -0.030590186, y: 0.5649458, z: -0.8245608}
   - component: {fileID: 4079688939489850580}
     distance: 3.2056086
     dir: {x: -0.39775276, y: 0.51857626, z: -0.75688267}
+  - component: {fileID: 3722394413924918873}
+    distance: 0
+    dir: {x: 0, y: 0, z: 0}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1194.3533, y: 1791.5299}
@@ -6292,7 +6292,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4126769
+  breakDelay: 0.33511126
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -6319,7 +6319,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 11.943533
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4715363230783224038}
   meshFilter: {fileID: 5034112522244293831}
@@ -6420,21 +6420,21 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 8379277126605818251}
-    distance: 0.638031
-    dir: {x: -1, y: 0, z: 0}
-  - component: {fileID: 5654495111723904400}
-    distance: 0.638031
-    dir: {x: 0, y: 0.0000014947146, z: -1}
   - component: {fileID: 8248844635417942530}
     distance: 0.9023121
     dir: {x: -0.70710677, y: 0.0000010569229, z: -0.70710677}
+  - component: {fileID: 5654495111723904400}
+    distance: 0.638031
+    dir: {x: 0, y: 0.0000014947146, z: -1}
   - component: {fileID: 748005452011850484}
     distance: 1.9813942
     dir: {x: 0.493159, y: -0.13073617, z: -0.8600595}
   - component: {fileID: 3970088731203275610}
     distance: 2.5964618
     dir: {x: 0.37633613, y: 0.6539261, z: -0.6563168}
+  - component: {fileID: 8379277126605818251}
+    distance: 0.638031
+    dir: {x: -1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 748005452011850484}
     distance: 1.9813942
@@ -6487,7 +6487,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.23868819
+  breakDelay: 0.9992763
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -6514,7 +6514,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 6.099921
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8246489944110850108}
   meshFilter: {fileID: 31709870690470477}
@@ -6558,21 +6558,21 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 8939231003799261585}
-    distance: 6.511384
-    dir: {x: -0.15908653, y: 0.07043328, z: 0.984749}
-  - component: {fileID: 2611417522569232689}
-    distance: 8.6449795
-    dir: {x: 0.699592, y: -0.056673873, z: -0.7122915}
   - component: {fileID: 40973691292326939}
     distance: 8.64393
     dir: {x: 0.50359, y: -0.7819762, z: 0.3673013}
-  - component: {fileID: 7521973058395953645}
-    distance: 4.5174475
-    dir: {x: -0.43227038, y: 0.6727465, z: -0.60046184}
+  - component: {fileID: 8939231003799261585}
+    distance: 6.511384
+    dir: {x: -0.15908653, y: 0.07043328, z: 0.984749}
   - component: {fileID: 5896653940849429348}
     distance: 4.6556854
     dir: {x: 1, y: 0, z: 0}
+  - component: {fileID: 2611417522569232689}
+    distance: 8.6449795
+    dir: {x: 0.699592, y: -0.056673873, z: -0.7122915}
+  - component: {fileID: 7521973058395953645}
+    distance: 4.5174475
+    dir: {x: -0.43227038, y: 0.6727465, z: -0.60046184}
   otherConnectedParts:
   - component: {fileID: 2417032361940656548}
     distance: 10.603628
@@ -6628,7 +6628,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.401409
+  breakDelay: 1.777331
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -6655,7 +6655,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 17.069847
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8343849355216238350}
   meshFilter: {fileID: 2482222749764351403}
@@ -6732,12 +6732,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 4467928726717019497}
-    distance: 1.1850281
-    dir: {x: 1, y: 0, z: 0}
   - component: {fileID: 2752566471466105893}
     distance: 3.9522398
     dir: {x: 0.6679948, y: -0.42061025, z: 0.6138974}
+  - component: {fileID: 4467928726717019497}
+    distance: 1.1850281
+    dir: {x: 1, y: 0, z: 0}
   - component: {fileID: 3722394413924918873}
     distance: 3.2056086
     dir: {x: 0.39775276, y: -0.51857626, z: 0.75688267}
@@ -6805,7 +6805,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.35498598
+  breakDelay: 1.5460796
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -6832,7 +6832,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 11.312495
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 914465584929983260}
   meshFilter: {fileID: 7316952166261603229}
@@ -6927,12 +6927,12 @@ MonoBehaviour:
   - component: {fileID: 6082862326448571849}
     distance: 2.5065117
     dir: {x: 0.7034351, y: 0.04920807, z: 0.70905405}
-  - component: {fileID: 7506000623594730574}
-    distance: 8.542674
-    dir: {x: -0.28128293, y: 0.9368018, z: 0.208044}
   - component: {fileID: 6096389663046696670}
     distance: 0
     dir: {x: 0, y: 0, z: 0}
+  - component: {fileID: 7506000623594730574}
+    distance: 8.542674
+    dir: {x: -0.28128293, y: 0.9368018, z: 0.208044}
   otherConnectedParts:
   - component: {fileID: 6082862326448571849}
     distance: 2.5065117
@@ -6979,7 +6979,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.36442435
+  breakDelay: 0.76665777
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -7006,7 +7006,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 19.356825
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 7776235805378974183}
   meshFilter: {fileID: 6597875542260303365}
@@ -7056,15 +7056,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 5999127302915880084}
-    distance: 0.63801575
-    dir: {x: 0, y: -0.0000001518106, z: 1}
-  - component: {fileID: 4608284873669999144}
-    distance: 0.9023013
-    dir: {x: 0.70711523, y: -0.000000107345016, z: 0.7070983}
   - component: {fileID: 6569621595434964806}
     distance: 0.638031
     dir: {x: 1, y: 0, z: 0}
+  - component: {fileID: 4608284873669999144}
+    distance: 0.9023013
+    dir: {x: 0.70711523, y: -0.000000107345016, z: 0.7070983}
+  - component: {fileID: 5999127302915880084}
+    distance: 0.63801575
+    dir: {x: 0, y: -0.0000001518106, z: 1}
   otherConnectedParts:
   - component: {fileID: 4608284873669999144}
     distance: 0.9023013
@@ -7111,7 +7111,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.9580767
+  breakDelay: 1.481124
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -7138,7 +7138,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 6.1003036
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4426273002104995105}
   meshFilter: {fileID: 2793316299655454665}
@@ -7239,12 +7239,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 8529021361951642264}
-    distance: 8.949237
-    dir: {x: 0.17075785, y: -0.9788487, z: 0.112680845}
   - component: {fileID: 215387430913746149}
     distance: 8.759953
     dir: {x: 0, y: -1, z: 0}
+  - component: {fileID: 8529021361951642264}
+    distance: 8.949237
+    dir: {x: 0.17075785, y: -0.9788487, z: 0.112680845}
   - component: {fileID: 6942206973529517287}
     distance: 10.570646
     dir: {x: 0.8707761, y: 0.00000036087644, z: -0.49167973}
@@ -7291,7 +7291,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1394556
+  breakDelay: 1.6973788
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -7318,7 +7318,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 19.840862
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5005102376678629536}
   meshFilter: {fileID: 4553745440126309}
@@ -7453,7 +7453,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.66540074
+  breakDelay: 0.99062264
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -7480,7 +7480,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 1.9156561
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8685493031239601642}
   meshFilter: {fileID: 8892977084830593550}
@@ -7524,18 +7524,18 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - component: {fileID: 3778523702587628009}
+    distance: 5.4696655
+    dir: {x: -1, y: 0, z: 0}
+  - component: {fileID: 40973691292326939}
+    distance: 7.3336606
+    dir: {x: -0.30712909, y: 0.94041556, z: 0.1459119}
   - component: {fileID: 7131179292189032475}
     distance: 5.4696655
     dir: {x: 1, y: 0, z: 0}
   - component: {fileID: 3415582578659564839}
     distance: 0
     dir: {x: 0, y: 0, z: 0}
-  - component: {fileID: 40973691292326939}
-    distance: 7.3336606
-    dir: {x: -0.30712909, y: 0.94041556, z: 0.1459119}
-  - component: {fileID: 3778523702587628009}
-    distance: 5.4696655
-    dir: {x: -1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 7131179292189032475}
     distance: 5.4696655
@@ -7597,7 +7597,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8944113
+  breakDelay: 1.5525678
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -7624,7 +7624,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 13.970987
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3846359874551835664}
   meshFilter: {fileID: 4675871188803889520}
@@ -7686,12 +7686,12 @@ MonoBehaviour:
   - component: {fileID: 9209415905412491900}
     distance: 0
     dir: {x: 0, y: 0, z: 0}
-  - component: {fileID: 7072025975688666456}
-    distance: 0
-    dir: {x: 0, y: 0, z: 0}
   - component: {fileID: 2965211034836798921}
     distance: 4.6752567
     dir: {x: -0.96260214, y: 0, z: -0.2709192}
+  - component: {fileID: 7072025975688666456}
+    distance: 0
+    dir: {x: 0, y: 0, z: 0}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 876.61383, y: 1314.9207}
@@ -7729,7 +7729,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2668097
+  breakDelay: 1.5896655
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -7756,7 +7756,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 8.766138
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3119980634917500975}
   meshFilter: {fileID: 5288560694558266809}
@@ -7863,15 +7863,15 @@ MonoBehaviour:
   - component: {fileID: 7956554639937110285}
     distance: 8.98414
     dir: {x: 0.91163725, y: -0.41099578, z: -0.00016134932}
-  - component: {fileID: 1097991609658222410}
-    distance: 5.520111
-    dir: {x: 0, y: 0.0000003455272, z: -1}
-  - component: {fileID: 8555066968396404626}
-    distance: 3.692444
-    dir: {x: 0, y: -0.99999994, z: -0.00039258142}
   - component: {fileID: 8663714916025912689}
     distance: 5.438823
     dir: {x: -0.84117407, y: 0.30564564, z: -0.44610193}
+  - component: {fileID: 8555066968396404626}
+    distance: 3.692444
+    dir: {x: 0, y: -0.99999994, z: -0.00039258142}
+  - component: {fileID: 1097991609658222410}
+    distance: 5.520111
+    dir: {x: 0, y: 0.0000003455272, z: -1}
   - component: {fileID: 4079688939489850580}
     distance: 10.083774
     dir: {x: 0.95651937, y: 0.16485421, z: -0.24061127}
@@ -7933,7 +7933,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9244802
+  breakDelay: 1.9877346
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -7960,7 +7960,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 18.761148
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5728249373634079331}
   meshFilter: {fileID: 7782941087528654804}
@@ -8028,15 +8028,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 452839561740149071}
-    distance: 6.5353875
-    dir: {x: 0.20658731, y: 0.2543626, z: -0.9447864}
   - component: {fileID: 8663714916025912689}
     distance: 5.767657
     dir: {x: -0.7932159, y: 0.28821942, z: 0.53641224}
   - component: {fileID: 6434220020019984599}
     distance: 5.520111
     dir: {x: 0, y: -0.0000003455272, z: 1}
+  - component: {fileID: 452839561740149071}
+    distance: 6.5353875
+    dir: {x: 0.20658731, y: 0.2543626, z: -0.9447864}
   otherConnectedParts:
   - component: {fileID: 6434220020019984599}
     distance: 5.520111
@@ -8089,7 +8089,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7495115
+  breakDelay: 1.2603638
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -8116,7 +8116,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 12.74967
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 207516447712290197}
   meshFilter: {fileID: 6479502675661754823}
@@ -8260,7 +8260,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4769849
+  breakDelay: 0.52868176
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -8287,7 +8287,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 10.647441
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8183653432583043727}
   meshFilter: {fileID: 1380150515966199273}
@@ -8361,15 +8361,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 4467928726717019497}
-    distance: 2.9424992
-    dir: {x: -0.030590186, y: 0.5649458, z: -0.8245608}
-  - component: {fileID: 2752566471466105893}
-    distance: 1.365036
-    dir: {x: 1, y: 0, z: 0}
   - component: {fileID: 7956554639937110285}
     distance: 4.592115
     dir: {x: -0.59451634, y: -0.8040835, z: -0.00031566827}
+  - component: {fileID: 2752566471466105893}
+    distance: 1.365036
+    dir: {x: 1, y: 0, z: 0}
+  - component: {fileID: 4467928726717019497}
+    distance: 2.9424992
+    dir: {x: -0.030590186, y: 0.5649458, z: -0.8245608}
   - component: {fileID: 4079688939489850580}
     distance: 3.2056086
     dir: {x: -0.39775276, y: 0.51857626, z: -0.75688267}
@@ -8437,7 +8437,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6035333
+  breakDelay: 1.1163365
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -8464,7 +8464,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 8.891018
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 7727645568689219608}
   meshFilter: {fileID: 1361114005304835000}
@@ -8508,9 +8508,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 343041179824834222}
-    distance: 10.488606
-    dir: {x: -0.5048915, y: 0.24719122, z: -0.8270315}
+  - component: {fileID: 5143529702242597165}
+    distance: 9.411465
+    dir: {x: -0.94767624, y: 0.27548143, z: 0.16130619}
   - component: {fileID: 6364692330658007095}
     distance: 4.183403
     dir: {x: 0.508773, y: 0.7293832, z: -0.4573293}
@@ -8520,9 +8520,9 @@ MonoBehaviour:
   - component: {fileID: 2001598558646462776}
     distance: 0
     dir: {x: 0, y: 0, z: 0}
-  - component: {fileID: 5143529702242597165}
-    distance: 9.411465
-    dir: {x: -0.94767624, y: 0.27548143, z: 0.16130619}
+  - component: {fileID: 343041179824834222}
+    distance: 10.488606
+    dir: {x: -0.5048915, y: 0.24719122, z: -0.8270315}
   otherConnectedParts:
   - component: {fileID: 2411482498407551972}
     distance: 4.0901604
@@ -8578,7 +8578,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.6647383
+  breakDelay: 0.7540827
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -8605,7 +8605,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 19.683708
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 894486707818687045}
   meshFilter: {fileID: 7742531304084833689}
@@ -8691,24 +8691,24 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 3667487919527223957}
-    distance: 5.2050924
-    dir: {x: -0.45533413, y: 0.00000036643897, z: -0.8903206}
-  - component: {fileID: 4183125245030331589}
-    distance: 6.9181614
-    dir: {x: -0.30843297, y: 0.43929034, z: 0.84373754}
-  - component: {fileID: 5658090432644969920}
-    distance: 6.1402726
-    dir: {x: 0.14261365, y: 0.074690506, z: -0.9869563}
-  - component: {fileID: 7507813028458309080}
-    distance: 7.5948825
-    dir: {x: -0.49919817, y: 0.4001486, z: 0.7685586}
-  - component: {fileID: 9109193703964145893}
-    distance: 7.2258134
-    dir: {x: -0.75408787, y: 0.6458279, z: -0.11940638}
   - component: {fileID: 54423406619926628}
     distance: 6.5980835
     dir: {x: -0.07217885, y: 0.46060064, z: 0.8846679}
+  - component: {fileID: 5658090432644969920}
+    distance: 6.1402726
+    dir: {x: 0.14261365, y: 0.074690506, z: -0.9869563}
+  - component: {fileID: 4183125245030331589}
+    distance: 6.9181614
+    dir: {x: -0.30843297, y: 0.43929034, z: 0.84373754}
+  - component: {fileID: 9109193703964145893}
+    distance: 7.2258134
+    dir: {x: -0.75408787, y: 0.6458279, z: -0.11940638}
+  - component: {fileID: 3667487919527223957}
+    distance: 5.2050924
+    dir: {x: -0.45533413, y: 0.00000036643897, z: -0.8903206}
+  - component: {fileID: 7507813028458309080}
+    distance: 7.5948825
+    dir: {x: -0.49919817, y: 0.4001486, z: 0.7685586}
   otherConnectedParts:
   - component: {fileID: 5658090432644969920}
     distance: 6.1402726
@@ -8755,7 +8755,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4533918
+  breakDelay: 0.9916837
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -8782,7 +8782,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 14.826793
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1933163031992398279}
   meshFilter: {fileID: 498353211496817306}
@@ -8841,21 +8841,21 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 4467928726717019497}
-    distance: 3.281366
-    dir: {x: -0.44342738, y: 0.5066038, z: -0.7394084}
-  - component: {fileID: 2752566471466105893}
-    distance: 0
-    dir: {x: 0, y: 0, z: 0}
   - component: {fileID: 7956554639937110285}
     distance: 5.5139985
     dir: {x: -0.7426776, y: -0.66964906, z: -0.0002628918}
-  - component: {fileID: 3722394413924918873}
-    distance: 1.365036
-    dir: {x: -1, y: 0, z: 0}
+  - component: {fileID: 2752566471466105893}
+    distance: 0
+    dir: {x: 0, y: 0, z: 0}
+  - component: {fileID: 4467928726717019497}
+    distance: 3.281366
+    dir: {x: -0.44342738, y: 0.5066038, z: -0.7394084}
   - component: {fileID: 4079688939489850580}
     distance: 3.9522398
     dir: {x: -0.6679948, y: 0.42061025, z: -0.6138974}
+  - component: {fileID: 3722394413924918873}
+    distance: 1.365036
+    dir: {x: -1, y: 0, z: 0}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1107.9647, y: 1661.947}
@@ -8893,7 +8893,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3765074
+  breakDelay: 0.3254261
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -8920,7 +8920,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 11.079647
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2593877603234893350}
   meshFilter: {fileID: 3512550553360761356}
@@ -8985,12 +8985,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 2476157005827770933}
-    distance: 6.89477
-    dir: {x: 0, y: 0.23605575, z: -0.97173953}
   - component: {fileID: 8704220032758035160}
     distance: 8.419537
     dir: {x: -0.7015334, y: -0.55426204, z: -0.44793352}
+  - component: {fileID: 2476157005827770933}
+    distance: 6.89477
+    dir: {x: 0, y: 0.23605575, z: -0.97173953}
   otherConnectedParts:
   - component: {fileID: 5366261655296593346}
     distance: 10.780766
@@ -9034,7 +9034,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.202191
+  breakDelay: 0.7485565
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -9061,7 +9061,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 17.498978
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2140038829226764783}
   meshFilter: {fileID: 6907113732581766110}
@@ -9126,12 +9126,12 @@ MonoBehaviour:
   - component: {fileID: 5703489269235440071}
     distance: 6.0528436
     dir: {x: 0.70095694, y: -0.00000063023225, z: 0.7132036}
-  - component: {fileID: 7764570108315986104}
-    distance: 0
-    dir: {x: 0, y: 0, z: 0}
   - component: {fileID: 2965211034836798921}
     distance: 8.007544
     dir: {x: 0.5298482, y: 0.0000009527759, z: -0.8480925}
+  - component: {fileID: 7764570108315986104}
+    distance: 0
+    dir: {x: 0, y: 0, z: 0}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1665.1992, y: 2497.7988}
@@ -9169,7 +9169,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.746451
+  breakDelay: 1.6386262
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -9196,7 +9196,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 16.651993
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8803938414522064804}
   meshFilter: {fileID: 9094282071026884759}
@@ -9273,15 +9273,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 2620042230153993413}
-    distance: 0.63801575
-    dir: {x: -1, y: 0, z: 0}
   - component: {fileID: 9117184794108697407}
     distance: 0.63801575
     dir: {x: 0, y: 0.0000001518106, z: -1}
   - component: {fileID: 85904807045093456}
     distance: 0.9022905
     dir: {x: -0.70710677, y: 0.000000107346295, z: -0.70710677}
+  - component: {fileID: 2620042230153993413}
+    distance: 0.63801575
+    dir: {x: -1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 2620042230153993413}
     distance: 0.63801575
@@ -9328,7 +9328,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.3429772
+  breakDelay: 0.44447413
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -9355,7 +9355,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 6.100313
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4685496727476585278}
   meshFilter: {fileID: 8312348683987586710}
@@ -9484,7 +9484,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7098577
+  breakDelay: 0.55517596
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -9511,7 +9511,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 14.727694
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2663308223118360101}
   meshFilter: {fileID: 1641217267829099948}
@@ -9573,18 +9573,18 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 4474046994235740601}
-    distance: 0
-    dir: {x: 0, y: 0, z: 0}
-  - component: {fileID: 7131179292189032475}
-    distance: 5.4696655
-    dir: {x: 1, y: 0, z: 0}
-  - component: {fileID: 40973691292326939}
-    distance: 7.3336606
-    dir: {x: -0.30712909, y: 0.94041556, z: 0.1459119}
   - component: {fileID: 3778523702587628009}
     distance: 5.4696655
     dir: {x: -1, y: 0, z: 0}
+  - component: {fileID: 4474046994235740601}
+    distance: 0
+    dir: {x: 0, y: 0, z: 0}
+  - component: {fileID: 40973691292326939}
+    distance: 7.3336606
+    dir: {x: -0.30712909, y: 0.94041556, z: 0.1459119}
+  - component: {fileID: 7131179292189032475}
+    distance: 5.4696655
+    dir: {x: 1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 7131179292189032475}
     distance: 5.4696655
@@ -9631,7 +9631,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.492019
+  breakDelay: 0.9968361
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -9658,7 +9658,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 13.037159
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1149994934272933491}
   meshFilter: {fileID: 2851884008556710708}
@@ -9717,21 +9717,21 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 7797043510308942810}
-    distance: 1.9813942
-    dir: {x: -0.493159, y: 0.13073617, z: 0.8600595}
-  - component: {fileID: 8379277126605818251}
-    distance: 2.3621814
-    dir: {x: -0.68376344, y: 0.109661296, z: 0.7214166}
-  - component: {fileID: 5654495111723904400}
-    distance: 1.4691658
-    dir: {x: -0.6651001, y: 0.17631832, z: 0.72564024}
   - component: {fileID: 8248844635417942530}
     distance: 1.9525435
     dir: {x: -0.827215, y: 0.1326684, z: 0.5459985}
+  - component: {fileID: 5654495111723904400}
+    distance: 1.4691658
+    dir: {x: -0.6651001, y: 0.17631832, z: 0.72564024}
   - component: {fileID: 3970088731203275610}
     distance: 1.956934
     dir: {x: 0, y: 1, z: 0.000007797294}
+  - component: {fileID: 8379277126605818251}
+    distance: 2.3621814
+    dir: {x: -0.68376344, y: 0.109661296, z: 0.7214166}
+  - component: {fileID: 7797043510308942810}
+    distance: 1.9813942
+    dir: {x: -0.493159, y: 0.13073617, z: 0.8600595}
   otherConnectedParts:
   - component: {fileID: 3970088731203275610}
     distance: 1.956934
@@ -9784,7 +9784,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.68741477
+  breakDelay: 1.8506143
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -9811,7 +9811,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 9.774882
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 7995823211030886462}
   meshFilter: {fileID: 2644251175735658039}
@@ -9876,21 +9876,21 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 3948446990940891589}
-    distance: 1.6575623
-    dir: {x: -1, y: 0, z: 0}
   - component: {fileID: 4258581655049990845}
     distance: 3.0669794
     dir: {x: -0.5404543, y: 0.8413734, z: 0}
+  - component: {fileID: 6908200742152729449}
+    distance: 6.360419
+    dir: {x: -0.40056244, y: -0.072105624, z: -0.9134279}
   - component: {fileID: 5143529702242597165}
     distance: 8.879846
     dir: {x: 0.45045483, y: -0.051647086, z: -0.8913041}
   - component: {fileID: 5954430356329523691}
     distance: 3.6954927
     dir: {x: -0.91360915, y: 0, z: -0.40659353}
-  - component: {fileID: 6908200742152729449}
-    distance: 6.360419
-    dir: {x: -0.40056244, y: -0.072105624, z: -0.9134279}
+  - component: {fileID: 3948446990940891589}
+    distance: 1.6575623
+    dir: {x: -1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 5954430356329523691}
     distance: 3.6954927
@@ -9949,7 +9949,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.776675
+  breakDelay: 0.4822407
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -9976,7 +9976,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 16.12084
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1377300210970179101}
   meshFilter: {fileID: 7519767700602548901}
@@ -10068,21 +10068,21 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 4467928726717019497}
-    distance: 3.281366
-    dir: {x: -0.44342738, y: 0.5066038, z: -0.7394084}
-  - component: {fileID: 2752566471466105893}
-    distance: 0
-    dir: {x: 0, y: 0, z: 0}
   - component: {fileID: 7956554639937110285}
     distance: 5.5139985
     dir: {x: -0.7426776, y: -0.66964906, z: -0.0002628918}
-  - component: {fileID: 3722394413924918873}
-    distance: 1.365036
-    dir: {x: -1, y: 0, z: 0}
+  - component: {fileID: 2752566471466105893}
+    distance: 0
+    dir: {x: 0, y: 0, z: 0}
+  - component: {fileID: 4467928726717019497}
+    distance: 3.281366
+    dir: {x: -0.44342738, y: 0.5066038, z: -0.7394084}
   - component: {fileID: 4079688939489850580}
     distance: 3.9522398
     dir: {x: -0.6679948, y: 0.42061025, z: -0.6138974}
+  - component: {fileID: 3722394413924918873}
+    distance: 1.365036
+    dir: {x: -1, y: 0, z: 0}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1356.8788, y: 2035.3181}
@@ -10120,7 +10120,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.38129437
+  breakDelay: 0.66994053
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -10147,7 +10147,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 13.568788
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5833297673068347192}
   meshFilter: {fileID: 3203856476577364788}
@@ -10227,12 +10227,12 @@ MonoBehaviour:
   - component: {fileID: 2317207562742585135}
     distance: 4.6752567
     dir: {x: -0.96260214, y: 0, z: -0.2709192}
-  - component: {fileID: 7072025975688666456}
-    distance: 0
-    dir: {x: 0, y: 0, z: 0}
   - component: {fileID: 2965211034836798921}
     distance: 4.6752567
     dir: {x: -0.96260214, y: 0, z: -0.2709192}
+  - component: {fileID: 7072025975688666456}
+    distance: 0
+    dir: {x: 0, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 8634947312480924971}
     distance: 0
@@ -10282,7 +10282,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1140295
+  breakDelay: 0.54674244
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -10309,7 +10309,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 10.791961
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3046938844718788770}
   meshFilter: {fileID: 4190821130220401008}
@@ -10386,12 +10386,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 6082862326448571849}
-    distance: 2.5065117
-    dir: {x: 0.7034351, y: 0.04920807, z: 0.70905405}
   - component: {fileID: 7105830099053758279}
     distance: 0
     dir: {x: 0, y: 0, z: 0}
+  - component: {fileID: 6082862326448571849}
+    distance: 2.5065117
+    dir: {x: 0.7034351, y: 0.04920807, z: 0.70905405}
   otherConnectedParts:
   - component: {fileID: 7105830099053758279}
     distance: 0
@@ -10432,7 +10432,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.86020803
+  breakDelay: 0.394349
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -10459,7 +10459,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 4.805205
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5683984331576052218}
   meshFilter: {fileID: 6505076287098890795}
@@ -10506,12 +10506,12 @@ MonoBehaviour:
   - component: {fileID: 425866970223642951}
     distance: 3.0669794
     dir: {x: 0.5404543, y: -0.8413734, z: 0}
-  - component: {fileID: 3948446990940891589}
-    distance: 2.5804749
-    dir: {x: 0, y: -1, z: 0}
   - component: {fileID: 5954430356329523691}
     distance: 3.4453428
     dir: {x: -0.49883968, y: -0.7489748, z: -0.43611437}
+  - component: {fileID: 3948446990940891589}
+    distance: 2.5804749
+    dir: {x: 0, y: -1, z: 0}
   otherConnectedParts:
   - component: {fileID: 5954430356329523691}
     distance: 3.4453428
@@ -10561,7 +10561,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.22744887
+  breakDelay: 1.3325969
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -10588,7 +10588,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 7.428879
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3662876222028053877}
   meshFilter: {fileID: 5995784092418564338}
@@ -10668,21 +10668,21 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 5325757901176578714}
-    distance: 5.380488
-    dir: {x: 0.90119654, y: 0.26081568, z: 0.34615025}
   - component: {fileID: 5640847991620776903}
     distance: 2.266744
     dir: {x: -0.46662703, y: 0.74904495, z: -0.47030923}
+  - component: {fileID: 7567880840385501436}
+    distance: 0.63801575
+    dir: {x: -1, y: 0, z: 0}
   - component: {fileID: 7741656725158164163}
     distance: 0.638031
     dir: {x: 0, y: -0.0000014947146, z: 1}
   - component: {fileID: 3639471407833069939}
     distance: 0.9023013
     dir: {x: -0.7070983, y: -0.0000010569355, z: 0.70711523}
-  - component: {fileID: 7567880840385501436}
-    distance: 0.63801575
-    dir: {x: -1, y: 0, z: 0}
+  - component: {fileID: 5325757901176578714}
+    distance: 5.380488
+    dir: {x: 0.90119654, y: 0.26081568, z: 0.34615025}
   otherConnectedParts:
   - component: {fileID: 5640847991620776903}
     distance: 2.266744
@@ -10732,7 +10732,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0263368
+  breakDelay: 0.9412174
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -10759,7 +10759,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 6.100429
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 355051753578823474}
   meshFilter: {fileID: 4573728378769772266}
@@ -10921,7 +10921,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2885871
+  breakDelay: 1.9612255
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -10948,7 +10948,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 19.751762
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3859020090816930285}
   meshFilter: {fileID: 5352124855417486355}
@@ -11007,15 +11007,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 248891995970817058}
-    distance: 0
-    dir: {x: 0, y: 0, z: 0}
-  - component: {fileID: 3911961840589856886}
-    distance: 6.8252106
-    dir: {x: 1, y: 0, z: 0}
   - component: {fileID: 2752566471466105893}
     distance: 8.190277
     dir: {x: -1, y: 0, z: 0}
+  - component: {fileID: 3911961840589856886}
+    distance: 6.8252106
+    dir: {x: 1, y: 0, z: 0}
+  - component: {fileID: 248891995970817058}
+    distance: 0
+    dir: {x: 0, y: 0, z: 0}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1740.7976, y: 2611.1965}
@@ -11053,7 +11053,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.87327343
+  breakDelay: 1.7729875
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -11080,7 +11080,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 17.407976
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6674315691552842454}
   meshFilter: {fileID: 2924650203610676332}
@@ -11151,21 +11151,21 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 6082862326448571849}
-    distance: 8.913022
-    dir: {x: 0.46741462, y: -0.88403815, z: 0}
   - component: {fileID: 7105830099053758279}
     distance: 8.542674
     dir: {x: 0.28128293, y: -0.9368018, z: -0.208044}
-  - component: {fileID: 989129862519887501}
-    distance: 6.132397
-    dir: {x: 0.39183834, y: 0.87319654, z: -0.28981113}
-  - component: {fileID: 357824366485851299}
-    distance: 0
-    dir: {x: 0, y: 0, z: 0}
+  - component: {fileID: 6082862326448571849}
+    distance: 8.913022
+    dir: {x: 0.46741462, y: -0.88403815, z: 0}
   - component: {fileID: 3805225845491860453}
     distance: 5.6434107
     dir: {x: 0.02224436, y: 0.94885665, z: -0.31492248}
+  - component: {fileID: 357824366485851299}
+    distance: 0
+    dir: {x: 0, y: 0, z: 0}
+  - component: {fileID: 989129862519887501}
+    distance: 6.132397
+    dir: {x: 0.39183834, y: 0.87319654, z: -0.28981113}
   otherConnectedParts:
   - component: {fileID: 6408206062217556737}
     distance: 5.6434107
@@ -11224,7 +11224,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9067404
+  breakDelay: 1.9106532
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -11251,7 +11251,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 17.43552
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4922643564522843397}
   meshFilter: {fileID: 1867975692169437688}
@@ -11331,12 +11331,12 @@ MonoBehaviour:
   - component: {fileID: 8157960539385025368}
     distance: 7.187541
     dir: {x: 0.890622, y: 0.42282712, z: 0.16736063}
-  - component: {fileID: 6954506081739496993}
-    distance: 4.8210573
-    dir: {x: -0.7350971, y: 0.63037777, z: 0.24951194}
   - component: {fileID: 1485175907727560952}
     distance: 4.634201
     dir: {x: 0, y: -0.00000041158088, z: 1}
+  - component: {fileID: 6954506081739496993}
+    distance: 4.8210573
+    dir: {x: -0.7350971, y: 0.63037777, z: 0.24951194}
   otherConnectedParts:
   - component: {fileID: 92236867783749830}
     distance: 7.103185
@@ -11389,7 +11389,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.8735659
+  breakDelay: 0.7296233
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -11416,7 +11416,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 12.524075
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8444070534147568058}
   meshFilter: {fileID: 1210149489563094430}
@@ -11484,12 +11484,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 7072025975688666456}
-    distance: 4.6752567
-    dir: {x: 0.96260214, y: 0, z: 0.2709192}
   - component: {fileID: 2965211034836798921}
     distance: 0
     dir: {x: 0, y: 0, z: 0}
+  - component: {fileID: 7072025975688666456}
+    distance: 4.6752567
+    dir: {x: 0.96260214, y: 0, z: 0.2709192}
   otherConnectedParts:
   - component: {fileID: 2965211034836798921}
     distance: 0
@@ -11536,7 +11536,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.9770539
+  breakDelay: 0.2611928
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -11563,7 +11563,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 7.6827974
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 766001479112319690}
   meshFilter: {fileID: 6718917990110555312}
@@ -11640,18 +11640,18 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 3667487919527223957}
-    distance: 4.677123
-    dir: {x: 0.94732827, y: -0.09805561, z: 0.30488393}
-  - component: {fileID: 5114945731822534642}
-    distance: 7.6218553
-    dir: {x: 0.6123231, y: 0.7656353, z: -0.1971368}
   - component: {fileID: 9109193703964145893}
     distance: 6.8225913
     dir: {x: 0.19815473, y: 0.61677617, z: 0.7617886}
+  - component: {fileID: 3667487919527223957}
+    distance: 4.677123
+    dir: {x: 0.94732827, y: -0.09805561, z: 0.30488393}
   - component: {fileID: 3346178984811108852}
     distance: 5.2669473
     dir: {x: -0.95870596, y: -0.08707476, z: 0.2707412}
+  - component: {fileID: 5114945731822534642}
+    distance: 7.6218553
+    dir: {x: 0.6123231, y: 0.7656353, z: -0.1971368}
   otherConnectedParts:
   - component: {fileID: 3346178984811108852}
     distance: 5.2669473
@@ -11704,7 +11704,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.66537046
+  breakDelay: 1.477454
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -11731,7 +11731,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 15.138008
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8656931604863323279}
   meshFilter: {fileID: 5331920624881130288}
@@ -11796,12 +11796,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 5703489269235440071}
-    distance: 0
-    dir: {x: 0, y: 0, z: 0}
   - component: {fileID: 5069139350308891689}
     distance: 4.2427673
     dir: {x: 1, y: 0, z: 0}
+  - component: {fileID: 5703489269235440071}
+    distance: 0
+    dir: {x: 0, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 5703489269235440071}
     distance: 0
@@ -11845,7 +11845,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.40910137
+  breakDelay: 1.0714908
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -11872,7 +11872,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 8.8245945
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2906203626777708857}
   meshFilter: {fileID: 4770496836240194916}
@@ -11937,18 +11937,18 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 2992463245359860191}
-    distance: 10.965175
-    dir: {x: -0.75582755, y: -0.2353328, z: -0.6110181}
-  - component: {fileID: 9104296287396794227}
-    distance: 4.8210573
-    dir: {x: 0.7350971, y: -0.63037777, z: -0.24951194}
   - component: {fileID: 8157960539385025368}
     distance: 9.945328
     dir: {x: 1, y: 0, z: 0}
   - component: {fileID: 1485175907727560952}
     distance: 5.793907
     dir: {x: 0.61166763, y: -0.5245319, z: 0.59222376}
+  - component: {fileID: 2992463245359860191}
+    distance: 10.965175
+    dir: {x: -0.75582755, y: -0.2353328, z: -0.6110181}
+  - component: {fileID: 9104296287396794227}
+    distance: 4.8210573
+    dir: {x: 0.7350971, y: -0.63037777, z: -0.24951194}
   otherConnectedParts:
   - component: {fileID: 1485175907727560952}
     distance: 5.793907
@@ -11992,7 +11992,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3893095
+  breakDelay: 1.8479801
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -12019,7 +12019,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 21.435457
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5236048346826680778}
   meshFilter: {fileID: 6096317339158351512}
@@ -12078,12 +12078,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 8529021361951642264}
-    distance: 11.88111
-    dir: {x: 0.12862034, y: 0.0000006421449, z: -0.9916939}
   - component: {fileID: 8663714916025912689}
     distance: 10.805591
     dir: {x: 0.54662454, y: -0.49554878, z: -0.675006}
+  - component: {fileID: 8529021361951642264}
+    distance: 11.88111
+    dir: {x: 0.12862034, y: 0.0000006421449, z: -0.9916939}
   - component: {fileID: 6434220020019984599}
     distance: 13.520211
     dir: {x: 0.775254, y: -0.51900446, z: -0.36002168}
@@ -12130,7 +12130,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5230365
+  breakDelay: 0.34149018
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -12157,7 +12157,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 26.918598
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 362598435882613598}
   meshFilter: {fileID: 827258083770784575}
@@ -12231,15 +12231,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 5999127302915880084}
-    distance: 0.9023013
-    dir: {x: -0.70711523, y: -0.000000107345016, z: 0.7070983}
-  - component: {fileID: 4608284873669999144}
-    distance: 0.63801575
-    dir: {x: 0, y: -0.0000001518106, z: 1}
   - component: {fileID: 1534571558363326290}
     distance: 0.638031
     dir: {x: -1, y: 0, z: 0}
+  - component: {fileID: 4608284873669999144}
+    distance: 0.63801575
+    dir: {x: 0, y: -0.0000001518106, z: 1}
+  - component: {fileID: 5999127302915880084}
+    distance: 0.9023013
+    dir: {x: -0.70711523, y: -0.000000107345016, z: 0.7070983}
   otherConnectedParts:
   - component: {fileID: 4608284873669999144}
     distance: 0.63801575
@@ -12286,7 +12286,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8201122
+  breakDelay: 0.5837299
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -12313,7 +12313,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 6.100253
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4255411230698683968}
   meshFilter: {fileID: 7253955359036974791}
@@ -12414,15 +12414,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 343041179824834222}
-    distance: 10.051881
-    dir: {x: -0.7385694, y: -0.04562454, z: -0.67263186}
-  - component: {fileID: 4324402389178213097}
-    distance: 7.6935635
-    dir: {x: -0.27664718, y: -0.9282388, z: 0.24867447}
   - component: {fileID: 6071433371138241965}
     distance: 4.183403
     dir: {x: -0.508773, y: -0.7293832, z: 0.4573293}
+  - component: {fileID: 4324402389178213097}
+    distance: 7.6935635
+    dir: {x: -0.27664718, y: -0.9282388, z: 0.24867447}
+  - component: {fileID: 343041179824834222}
+    distance: 10.051881
+    dir: {x: -0.7385694, y: -0.04562454, z: -0.67263186}
   otherConnectedParts:
   - component: {fileID: 6071433371138241965}
     distance: 4.183403
@@ -12469,7 +12469,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6873317
+  breakDelay: 0.91714257
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -12496,7 +12496,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 21.18867
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5248614503884979298}
   meshFilter: {fileID: 7901632618622572300}
@@ -12607,7 +12607,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8239878
+  breakDelay: 1.0690532
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -12634,7 +12634,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 7.901625
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3908565851032268294}
   meshFilter: {fileID: 5157070687446615381}
@@ -12735,9 +12735,6 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 9104296287396794227}
-    distance: 4.634201
-    dir: {x: 0, y: 0.00000041158088, z: -1}
   - component: {fileID: 8157960539385025368}
     distance: 7.8732147
     dir: {x: 0.81305826, y: 0.38600358, z: -0.43581814}
@@ -12747,6 +12744,9 @@ MonoBehaviour:
   - component: {fileID: 6954506081739496993}
     distance: 5.793907
     dir: {x: -0.61166763, y: 0.5245319, z: -0.59222376}
+  - component: {fileID: 9104296287396794227}
+    distance: 4.634201
+    dir: {x: 0, y: 0.00000041158088, z: -1}
   otherConnectedParts:
   - component: {fileID: 92236867783749830}
     distance: 3.540899
@@ -12793,7 +12793,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.69310534
+  breakDelay: 1.4181404
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -12820,7 +12820,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 18.941587
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 9213021782408992441}
   meshFilter: {fileID: 6147030470520003082}
@@ -12897,15 +12897,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - component: {fileID: 3778523702587628009}
+    distance: 0
+    dir: {x: 0, y: 0, z: 0}
   - component: {fileID: 4474046994235740601}
     distance: 5.4696655
     dir: {x: 1, y: 0, z: 0}
   - component: {fileID: 40973691292326939}
     distance: 7.6850686
     dir: {x: 0.41864103, y: 0.897414, z: 0.13923992}
-  - component: {fileID: 3778523702587628009}
-    distance: 0
-    dir: {x: 0, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 3778523702587628009}
     distance: 0
@@ -12946,7 +12946,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.41282344
+  breakDelay: 0.7277773
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -12973,7 +12973,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 14.314057
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 913288883300312870}
   meshFilter: {fileID: 4096354622473059589}
@@ -13056,15 +13056,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - component: {fileID: 54423406619926628}
+    distance: 4.6381235
+    dir: {x: 0.15281741, y: 0.65524113, z: -0.7398013}
   - component: {fileID: 4183125245030331589}
     distance: 4.6808076
     dir: {x: -0.20269173, y: 0.649266, z: -0.73305506}
   - component: {fileID: 7507813028458309080}
     distance: 5.2728295
     dir: {x: -0.4942931, y: 0.5763678, z: -0.6507492}
-  - component: {fileID: 54423406619926628}
-    distance: 4.6381235
-    dir: {x: 0.15281741, y: 0.65524113, z: -0.7398013}
   - component: {fileID: 2938783003935117370}
     distance: 2.4643505
     dir: {x: 0.6941452, y: 0, z: 0.71983504}
@@ -13123,7 +13123,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.71984977
+  breakDelay: 0.88754296
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -13150,7 +13150,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 10.833955
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4727524623106334294}
   meshFilter: {fileID: 4869316454731854760}
@@ -13288,7 +13288,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5882095
+  breakDelay: 0.27642837
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -13315,7 +13315,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 9.888336
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5656079503888200477}
   meshFilter: {fileID: 1554572632643552779}
@@ -13410,15 +13410,15 @@ MonoBehaviour:
   - component: {fileID: 7956554639937110285}
     distance: 8.190277
     dir: {x: 1, y: 0, z: 0}
-  - component: {fileID: 3772092784473082784}
-    distance: 8.411225
-    dir: {x: 0.16051504, y: -0.951441, z: 0.26266873}
   - component: {fileID: 8663714916025912689}
     distance: 7.4487715
     dir: {x: -0.6141948, y: 0.71888316, z: -0.32553288}
   - component: {fileID: 6434220020019984599}
     distance: 3.692444
     dir: {x: 0, y: 0.99999994, z: 0.00039258142}
+  - component: {fileID: 3772092784473082784}
+    distance: 8.411225
+    dir: {x: 0.16051504, y: -0.951441, z: 0.26266873}
   otherConnectedParts:
   - component: {fileID: 6434220020019984599}
     distance: 3.692444
@@ -13471,7 +13471,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6835715
+  breakDelay: 1.7881119
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -13498,7 +13498,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 16.424448
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 9136252087515362867}
   meshFilter: {fileID: 5363230693516665198}
@@ -13557,12 +13557,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 425866970223642951}
-    distance: 1.6575623
-    dir: {x: 1, y: 0, z: 0}
   - component: {fileID: 4258581655049990845}
     distance: 2.5804749
     dir: {x: 0, y: 1, z: 0}
+  - component: {fileID: 425866970223642951}
+    distance: 1.6575623
+    dir: {x: 1, y: 0, z: 0}
   - component: {fileID: 5954430356329523691}
     distance: 2.2828789
     dir: {x: -0.75285363, y: 0, z: -0.658188}
@@ -13624,7 +13624,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9038627
+  breakDelay: 1.7936214
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -13651,7 +13651,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 5.61624
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6793163816542425651}
   meshFilter: {fileID: 2633070271500598058}
@@ -13830,12 +13830,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 7455795382102283016}
-    distance: 2.9527738
-    dir: {x: -0.0800153, y: -0.099763006, z: 0.99178874}
   - component: {fileID: 443671032546646631}
     distance: 1.657547
     dir: {x: 1, y: 0, z: 0}
+  - component: {fileID: 7455795382102283016}
+    distance: 2.9527738
+    dir: {x: -0.0800153, y: -0.099763006, z: 0.99178874}
   otherConnectedParts:
   - component: {fileID: 443671032546646631}
     distance: 1.657547
@@ -13888,7 +13888,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2973083
+  breakDelay: 1.4790998
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -13915,7 +13915,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 6.7474017
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6464786585661488918}
   meshFilter: {fileID: 7804219256696452923}
@@ -13977,12 +13977,12 @@ MonoBehaviour:
   - component: {fileID: 9109193703964145893}
     distance: 8.773741
     dir: {x: 0.729607, y: 0.531886, z: 0.42985004}
-  - component: {fileID: 3651917252674304389}
-    distance: 5.2669473
-    dir: {x: 0.95870596, y: 0.08707476, z: -0.2707412}
   - component: {fileID: 6942206973529517287}
     distance: 3.024102
     dir: {x: -0.8687075, y: 0.15165433, z: -0.47153822}
+  - component: {fileID: 3651917252674304389}
+    distance: 5.2669473
+    dir: {x: 0.95870596, y: 0.08707476, z: -0.2707412}
   - component: {fileID: 9104296287396794227}
     distance: 9.268402
     dir: {x: 0, y: -0.00000082316177, z: 1}
@@ -14029,7 +14029,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2284696
+  breakDelay: 1.8463354
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -14056,7 +14056,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 17.15546
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 9209369154232283945}
   meshFilter: {fileID: 3477828244562329946}
@@ -14118,18 +14118,18 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 2451700510778715418}
-    distance: 4.0515203
-    dir: {x: 0.42947352, y: -0.8710422, z: -0.23840725}
+  - component: {fileID: 6908200742152729449}
+    distance: 6.2397604
+    dir: {x: -0.40830812, y: -0.48705405, z: 0.77205104}
   - component: {fileID: 5143529702242597165}
     distance: 5.7091
     dir: {x: 0.7006305, y: -0.532325, z: 0.47512832}
   - component: {fileID: 7237649592791334300}
     distance: 3.3631604
     dir: {x: -0.25636083, y: -0.90364313, z: 0.34308633}
-  - component: {fileID: 6908200742152729449}
-    distance: 6.2397604
-    dir: {x: -0.40830812, y: -0.48705405, z: 0.77205104}
+  - component: {fileID: 2451700510778715418}
+    distance: 4.0515203
+    dir: {x: 0.42947352, y: -0.8710422, z: -0.23840725}
   otherConnectedParts:
   - component: {fileID: 2611417522569232689}
     distance: 9.891974
@@ -14185,7 +14185,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.70091015
+  breakDelay: 0.76496065
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -14212,7 +14212,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 15.008092
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8499630379107794674}
   meshFilter: {fileID: 7490062896066063876}
@@ -14289,15 +14289,15 @@ MonoBehaviour:
   - component: {fileID: 3228834847745476716}
     distance: 4.471298
     dir: {x: -0.8177428, y: -0.42739207, z: -0.3855292}
+  - component: {fileID: 4324402389178213097}
+    distance: 7.7470164
+    dir: {x: -0.4719933, y: 0.8680156, z: 0.15417904}
   - component: {fileID: 4512252430546434401}
     distance: 1.9109974
     dir: {x: 0, y: -1, z: 0}
   - component: {fileID: 989129862519887501}
     distance: 7.6260777
     dir: {x: -0.77452475, y: -0.032606676, z: 0.63170266}
-  - component: {fileID: 4324402389178213097}
-    distance: 7.7470164
-    dir: {x: -0.4719933, y: 0.8680156, z: 0.15417904}
   otherConnectedParts:
   - component: {fileID: 3228834847745476716}
     distance: 4.471298
@@ -14350,7 +14350,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.72481745
+  breakDelay: 0.33065343
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -14377,7 +14377,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 16.840748
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3575685699717102781}
   meshFilter: {fileID: 6446132008006903942}
@@ -14503,7 +14503,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.8063246
+  breakDelay: 1.6757823
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -14530,7 +14530,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 7.9401054
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6878414339455774654}
   meshFilter: {fileID: 4485843668383043491}
@@ -14598,12 +14598,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 3228834847745476716}
-    distance: 4.042351
-    dir: {x: -0.9045163, y: 0, z: -0.426439}
   - component: {fileID: 4879380522416911853}
     distance: 1.9109974
     dir: {x: 0, y: 1, z: 0}
+  - component: {fileID: 3228834847745476716}
+    distance: 4.042351
+    dir: {x: -0.9045163, y: 0, z: -0.426439}
   otherConnectedParts:
   - component: {fileID: 3228834847745476716}
     distance: 4.042351
@@ -14656,7 +14656,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.66890174
+  breakDelay: 1.078384
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -14683,7 +14683,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 11.573999
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4847370432805285042}
   meshFilter: {fileID: 2056572228671921668}
@@ -14763,15 +14763,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - component: {fileID: 3805225845491860453}
+    distance: 0
+    dir: {x: 0, y: 0, z: 0}
   - component: {fileID: 7506000623594730574}
     distance: 5.6434107
     dir: {x: -0.02224436, y: -0.94885665, z: 0.31492248}
   - component: {fileID: 989129862519887501}
     distance: 2.2773743
     dir: {x: 1, y: 0, z: 0}
-  - component: {fileID: 3805225845491860453}
-    distance: 0
-    dir: {x: 0, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 3228834847745476716}
     distance: 8.127121
@@ -14821,7 +14821,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.384612
+  breakDelay: 1.2837151
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -14848,7 +14848,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 12.311348
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8543034404437427894}
   meshFilter: {fileID: 9180068559889253196}
@@ -14904,15 +14904,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - component: {fileID: 6519635801400932267}
+    distance: 1.657547
+    dir: {x: -1, y: 0, z: 0}
   - component: {fileID: 7455795382102283016}
     distance: 3.4999404
     dir: {x: -0.54109895, y: -0.08416646, z: 0.8367365}
   - component: {fileID: 716027961259430928}
     distance: 5.2816787
     dir: {x: -0.034720045, y: 0.9580521, z: 0.28448308}
-  - component: {fileID: 6519635801400932267}
-    distance: 1.657547
-    dir: {x: -1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 7455795382102283016}
     distance: 3.4999404
@@ -14965,7 +14965,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3323666
+  breakDelay: 0.3553293
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -14992,7 +14992,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 9.104276
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8357381101229109296}
   meshFilter: {fileID: 8570470996380617185}
@@ -15051,36 +15051,36 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 3228834847745476716}
-    distance: 9.11529
-    dir: {x: 0.000018413752, y: -0.9473674, z: -0.32014817}
-  - component: {fileID: 6408206062217556737}
-    distance: 9.069121
-    dir: {x: -0.49921265, y: -0.7688939, z: 0.39948586}
-  - component: {fileID: 989129862519887501}
-    distance: 8.173992
-    dir: {x: -0.27526888, y: -0.85309505, z: 0.44323334}
+  - component: {fileID: 6071433371138241965}
+    distance: 4.0901604
+    dir: {x: 0, y: 1, z: 0}
+  - component: {fileID: 5143529702242597165}
+    distance: 11.247847
+    dir: {x: -0.7929537, y: 0.59414434, z: 0.1349705}
   - component: {fileID: 4879380522416911853}
     distance: 7.7470164
     dir: {x: 0.4719933, y: -0.8680156, z: -0.15417904}
   - component: {fileID: 6364692330658007095}
     distance: 7.6935635
     dir: {x: 0.27664718, y: 0.9282388, z: -0.24867447}
-  - component: {fileID: 2411482498407551972}
-    distance: 0
-    dir: {x: 0, y: 0, z: 0}
-  - component: {fileID: 2001598558646462776}
-    distance: 4.0901604
-    dir: {x: 0, y: 1, z: 0}
   - component: {fileID: 3805225845491860453}
     distance: 9.069121
     dir: {x: -0.49921265, y: -0.7688939, z: 0.39948586}
-  - component: {fileID: 5143529702242597165}
-    distance: 11.247847
-    dir: {x: -0.7929537, y: 0.59414434, z: 0.1349705}
-  - component: {fileID: 6071433371138241965}
+  - component: {fileID: 2411482498407551972}
+    distance: 0
+    dir: {x: 0, y: 0, z: 0}
+  - component: {fileID: 3228834847745476716}
+    distance: 9.11529
+    dir: {x: 0.000018413752, y: -0.9473674, z: -0.32014817}
+  - component: {fileID: 2001598558646462776}
     distance: 4.0901604
     dir: {x: 0, y: 1, z: 0}
+  - component: {fileID: 6408206062217556737}
+    distance: 9.069121
+    dir: {x: -0.49921265, y: -0.7688939, z: 0.39948586}
+  - component: {fileID: 989129862519887501}
+    distance: 8.173992
+    dir: {x: -0.27526888, y: -0.85309505, z: 0.44323334}
   otherConnectedParts:
   - component: {fileID: 2411482498407551972}
     distance: 0
@@ -15136,7 +15136,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.7331561
+  breakDelay: 1.0813103
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -15163,7 +15163,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 22.057545
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1533058745375986797}
   meshFilter: {fileID: 3890885803791239943}
@@ -15267,18 +15267,18 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 5325757901176578714}
-    distance: 9.268387
-    dir: {x: 0, y: 0.00000082316313, z: -1}
-  - component: {fileID: 1097991609658222410}
-    distance: 5.767657
-    dir: {x: 0.7932159, y: -0.28821942, z: -0.53641224}
-  - component: {fileID: 8529021361951642264}
-    distance: 8.24567
-    dir: {x: -0.5309997, y: 0.64939594, z: -0.54435676}
   - component: {fileID: 8555066968396404626}
     distance: 7.4487715
     dir: {x: 0.6141948, y: -0.71888316, z: 0.32553288}
+  - component: {fileID: 1097991609658222410}
+    distance: 5.767657
+    dir: {x: 0.7932159, y: -0.28821942, z: -0.53641224}
+  - component: {fileID: 5325757901176578714}
+    distance: 9.268387
+    dir: {x: 0, y: 0.00000082316313, z: -1}
+  - component: {fileID: 8529021361951642264}
+    distance: 8.24567
+    dir: {x: -0.5309997, y: 0.64939594, z: -0.54435676}
   - component: {fileID: 6434220020019984599}
     distance: 5.438823
     dir: {x: 0.84117407, y: -0.30564564, z: 0.44610193}
@@ -15340,7 +15340,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.30477202
+  breakDelay: 0.6261717
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -15367,7 +15367,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 21.289837
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4366956569891516855}
   meshFilter: {fileID: 370949746595689585}
@@ -15472,7 +15472,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5000869
+  breakDelay: 1.8626256
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -15499,7 +15499,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 11.760761
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 693898701944702936}
   meshFilter: {fileID: 8545099113587201332}
@@ -15573,21 +15573,21 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 7797043510308942810}
-    distance: 0.638031
-    dir: {x: 1, y: 0, z: 0}
-  - component: {fileID: 5654495111723904400}
-    distance: 0.9023121
-    dir: {x: 0.70710677, y: 0.0000010569229, z: -0.70710677}
   - component: {fileID: 8248844635417942530}
     distance: 0.638031
     dir: {x: 0, y: 0.0000014947146, z: -1}
+  - component: {fileID: 5654495111723904400}
+    distance: 0.9023121
+    dir: {x: 0.70710677, y: 0.0000010569229, z: -0.70710677}
   - component: {fileID: 748005452011850484}
     distance: 2.3621814
     dir: {x: 0.68376344, y: -0.109661296, z: -0.7214166}
   - component: {fileID: 3970088731203275610}
     distance: 2.8975146
     dir: {x: 0.5574341, y: 0.5859829, z: -0.5881253}
+  - component: {fileID: 7797043510308942810}
+    distance: 0.638031
+    dir: {x: 1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 748005452011850484}
     distance: 2.3621814
@@ -15640,7 +15640,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8577255
+  breakDelay: 0.49711087
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -15667,7 +15667,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 6.1001463
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2301535684720795012}
   meshFilter: {fileID: 6463918214940303259}
@@ -15726,18 +15726,18 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - component: {fileID: 6908200742152729449}
+    distance: 7.712152
+    dir: {x: 0.96203464, y: -0.0000004946346, z: 0.2729275}
+  - component: {fileID: 40973691292326939}
+    distance: 7.4739923
+    dir: {x: -0.040498916, y: -0.9043825, z: 0.42479664}
   - component: {fileID: 7548612203259747909}
     distance: 4.6556854
     dir: {x: -1, y: 0, z: 0}
   - component: {fileID: 2611417522569232689}
     distance: 6.332164
     dir: {x: 0.21987318, y: -0.07737394, z: -0.97245514}
-  - component: {fileID: 40973691292326939}
-    distance: 7.4739923
-    dir: {x: -0.040498916, y: -0.9043825, z: 0.42479664}
-  - component: {fileID: 6908200742152729449}
-    distance: 7.712152
-    dir: {x: 0.96203464, y: -0.0000004946346, z: 0.2729275}
   otherConnectedParts:
   - component: {fileID: 8939231003799261585}
     distance: 8.585973
@@ -15793,7 +15793,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4773754
+  breakDelay: 0.32069427
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -15820,7 +15820,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 14.11037
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8664372841485170442}
   meshFilter: {fileID: 1424686746845111654}
@@ -15919,7 +15919,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9669517
+  breakDelay: 0.90313715
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -15946,7 +15946,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 4.563806
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1613232344286552350}
   meshFilter: {fileID: 2691094290436851494}
@@ -16047,18 +16047,18 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 7455795382102283016}
-    distance: 5.7992954
-    dir: {x: -0.29493824, y: -0.9233365, z: 0.24588843}
-  - component: {fileID: 6519635801400932267}
-    distance: 5.4804807
-    dir: {x: -0.26898497, y: -0.9232992, z: -0.27416357}
-  - component: {fileID: 7052976346530365106}
-    distance: 3.4735253
-    dir: {x: -0.90159965, y: -0.000001647331, z: -0.43257156}
   - component: {fileID: 443671032546646631}
     distance: 5.2816787
     dir: {x: 0.034720045, y: -0.9580521, z: -0.28448308}
+  - component: {fileID: 6519635801400932267}
+    distance: 5.4804807
+    dir: {x: -0.26898497, y: -0.9232992, z: -0.27416357}
+  - component: {fileID: 7455795382102283016}
+    distance: 5.7992954
+    dir: {x: -0.29493824, y: -0.9233365, z: 0.24588843}
+  - component: {fileID: 7052976346530365106}
+    distance: 3.4735253
+    dir: {x: -0.90159965, y: -0.000001647331, z: -0.43257156}
   otherConnectedParts:
   - component: {fileID: 443671032546646631}
     distance: 5.2816787
@@ -16105,7 +16105,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.610304
+  breakDelay: 0.6755751
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -16132,7 +16132,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 13.514487
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3073536961131541279}
   meshFilter: {fileID: 7801810795280748935}
@@ -16306,7 +16306,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.53031534
+  breakDelay: 1.0244083
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -16333,7 +16333,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 14.020901
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8350376392892871694}
   meshFilter: {fileID: 6366082521836807142}
@@ -16417,7 +16417,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6651307
+  breakDelay: 1.502829
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -16444,7 +16444,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 2.5881243
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1796424839146778935}
   meshFilter: {fileID: 58757596878155910}
@@ -16530,30 +16530,30 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 2451700510778715418}
-    distance: 10.1367655
-    dir: {x: 0.7354449, y: -0.00000056448437, z: 0.67758447}
-  - component: {fileID: 2611417522569232689}
-    distance: 5.2386975
-    dir: {x: -0.5459024, y: -0.00000036408832, z: 0.8378488}
-  - component: {fileID: 8157960539385025368}
-    distance: 9.602685
-    dir: {x: -0.095307395, y: 0.36750588, z: -0.9251248}
-  - component: {fileID: 92236867783749830}
-    distance: 5.6437087
-    dir: {x: -0.7534213, y: 0.08681419, z: -0.65178186}
-  - component: {fileID: 7237649592791334300}
-    distance: 10.226397
-    dir: {x: 0.4745395, y: 0.0479096, z: 0.87892944}
-  - component: {fileID: 2938783003935117370}
-    distance: 6.274352
-    dir: {x: 0.8063431, y: 0.07808838, z: -0.5862704}
-  - component: {fileID: 371820359564430556}
-    distance: 6.4173346
-    dir: {x: 0.5218153, y: 0.07634852, z: -0.84963506}
   - component: {fileID: 3208071248746664327}
     distance: 10.319579
     dir: {x: 0.5538028, y: 0.34197512, z: 0.75918084}
+  - component: {fileID: 8157960539385025368}
+    distance: 9.602685
+    dir: {x: -0.095307395, y: 0.36750588, z: -0.9251248}
+  - component: {fileID: 7237649592791334300}
+    distance: 10.226397
+    dir: {x: 0.4745395, y: 0.0479096, z: 0.87892944}
+  - component: {fileID: 371820359564430556}
+    distance: 6.4173346
+    dir: {x: 0.5218153, y: 0.07634852, z: -0.84963506}
+  - component: {fileID: 2451700510778715418}
+    distance: 10.1367655
+    dir: {x: 0.7354449, y: -0.00000056448437, z: 0.67758447}
+  - component: {fileID: 92236867783749830}
+    distance: 5.6437087
+    dir: {x: -0.7534213, y: 0.08681419, z: -0.65178186}
+  - component: {fileID: 2938783003935117370}
+    distance: 6.274352
+    dir: {x: 0.8063431, y: 0.07808838, z: -0.5862704}
+  - component: {fileID: 2611417522569232689}
+    distance: 5.2386975
+    dir: {x: -0.5459024, y: -0.00000036408832, z: 0.8378488}
   otherConnectedParts:
   - component: {fileID: 2938783003935117370}
     distance: 6.274352
@@ -16606,7 +16606,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.401877
+  breakDelay: 1.6960601
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -16633,7 +16633,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 19.097452
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3700792248286586347}
   meshFilter: {fileID: 1901012499557621855}
@@ -16683,9 +16683,6 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 7507813028458309080}
-    distance: 1.6575623
-    dir: {x: -1, y: 0, z: 0}
   - component: {fileID: 54423406619926628}
     distance: 1.657547
     dir: {x: 1, y: 0, z: 0}
@@ -16695,6 +16692,9 @@ MonoBehaviour:
   - component: {fileID: 371820359564430556}
     distance: 4.6808076
     dir: {x: 0.20269173, y: -0.649266, z: 0.73305506}
+  - component: {fileID: 7507813028458309080}
+    distance: 1.6575623
+    dir: {x: -1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 371820359564430556}
     distance: 4.6808076
@@ -16753,7 +16753,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.5263761
+  breakDelay: 0.68936807
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -16780,7 +16780,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 9.010089
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 107931968718279007}
   meshFilter: {fileID: 5331280252991522719}
@@ -16863,9 +16863,18 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - component: {fileID: 3778523702587628009}
+    distance: 7.6850686
+    dir: {x: -0.41864103, y: -0.897414, z: -0.13923992}
+  - component: {fileID: 6908200742152729449}
+    distance: 10.318129
+    dir: {x: 0.748396, y: 0.65509397, z: -0.103707604}
   - component: {fileID: 4474046994235740601}
     distance: 7.3336606
     dir: {x: 0.30712909, y: -0.94041556, z: -0.1459119}
+  - component: {fileID: 1233991648445993418}
+    distance: 9.370722
+    dir: {x: 0.38839826, y: 0.7702679, z: 0.5058005}
   - component: {fileID: 1287421637430596199}
     distance: 0
     dir: {x: 0, y: 0, z: 0}
@@ -16875,18 +16884,9 @@ MonoBehaviour:
   - component: {fileID: 8939231003799261585}
     distance: 9.571735
     dir: {x: -0.56299824, y: 0.7540917, z: 0.33819908}
-  - component: {fileID: 3778523702587628009}
-    distance: 7.6850686
-    dir: {x: -0.41864103, y: -0.897414, z: -0.13923992}
-  - component: {fileID: 1233991648445993418}
-    distance: 9.370722
-    dir: {x: 0.38839826, y: 0.7702679, z: 0.5058005}
   - component: {fileID: 5896653940849429348}
     distance: 7.4739923
     dir: {x: 0.040498916, y: 0.9043825, z: -0.42479664}
-  - component: {fileID: 6908200742152729449}
-    distance: 10.318129
-    dir: {x: 0.748396, y: 0.65509397, z: -0.103707604}
   otherConnectedParts:
   - component: {fileID: 7548612203259747909}
     distance: 8.64393
@@ -16948,7 +16948,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5687203
+  breakDelay: 0.8015505
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -16975,7 +16975,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 19.660385
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2160543480710034090}
   meshFilter: {fileID: 3472953809803191378}
@@ -17149,7 +17149,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9871387
+  breakDelay: 0.5397511
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -17176,7 +17176,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 0.018151851
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4719034931958900829}
   meshFilter: {fileID: 5288943626835748196}
@@ -17322,6 +17322,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - component: {fileID: 4879380522416911853}
+    distance: 4.471298
+    dir: {x: 0.8177428, y: 0.42739207, z: 0.3855292}
   - component: {fileID: 3228834847745476716}
     distance: 0
     dir: {x: 0, y: 0, z: 0}
@@ -17331,9 +17334,6 @@ MonoBehaviour:
   - component: {fileID: 989129862519887501}
     distance: 7.114387
     dir: {x: -0.3162906, y: 0.2336584, z: 0.9194368}
-  - component: {fileID: 4879380522416911853}
-    distance: 4.471298
-    dir: {x: 0.8177428, y: 0.42739207, z: 0.3855292}
   otherConnectedParts:
   - component: {fileID: 3228834847745476716}
     distance: 0
@@ -17374,7 +17374,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2563
+  breakDelay: 1.9458357
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -17401,7 +17401,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 15.005222
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5437257650272333614}
   meshFilter: {fileID: 5334633395401136774}
@@ -17505,12 +17505,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 3911961840589856886}
-    distance: 6.8252106
-    dir: {x: 1, y: 0, z: 0}
   - component: {fileID: 2752566471466105893}
     distance: 8.190277
     dir: {x: -1, y: 0, z: 0}
+  - component: {fileID: 3911961840589856886}
+    distance: 6.8252106
+    dir: {x: 1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 3911961840589856886}
     distance: 6.8252106
@@ -17554,7 +17554,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.43131736
+  breakDelay: 1.9162456
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -17581,7 +17581,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 17.16031
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6843314316585589451}
   meshFilter: {fileID: 1326975285665819366}
@@ -17715,12 +17715,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 3228834847745476716}
-    distance: 13.77095
-    dir: {x: 0, y: -0.00000013850523, z: 1}
   - component: {fileID: 248891995970817058}
     distance: 6.8252106
     dir: {x: -1, y: 0, z: 0}
+  - component: {fileID: 3228834847745476716}
+    distance: 13.77095
+    dir: {x: 0, y: -0.00000013850523, z: 1}
   - component: {fileID: 952285867036419544}
     distance: 12.9796
     dir: {x: -0.52584136, y: 0.00000022042458, z: -0.8505826}
@@ -17767,7 +17767,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1970482
+  breakDelay: 1.7178456
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -17794,7 +17794,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 27.207766
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4848949301850571351}
   meshFilter: {fileID: 7713809606396333812}
@@ -17883,27 +17883,27 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 4467928726717019497}
-    distance: 6.4438806
-    dir: {x: 0.40970278, y: 0.8309894, z: -0.3762981}
   - component: {fileID: 2752566471466105893}
     distance: 5.5139985
     dir: {x: 0.7426776, y: 0.66964906, z: 0.0002628918}
+  - component: {fileID: 2951904663280759401}
+    distance: 8.352431
+    dir: {x: -0.10954996, y: -0.95813835, z: 0.2645177}
+  - component: {fileID: 4467928726717019497}
+    distance: 6.4438806
+    dir: {x: 0.40970278, y: 0.8309894, z: -0.3762981}
   - component: {fileID: 8555066968396404626}
     distance: 8.190277
     dir: {x: -1, y: 0, z: 0}
-  - component: {fileID: 3722394413924918873}
-    distance: 4.592115
-    dir: {x: 0.59451634, y: 0.8040835, z: 0.00031566827}
   - component: {fileID: 4079688939489850580}
     distance: 6.055639
     dir: {x: 0.2402798, y: 0.88426614, z: -0.40042347}
   - component: {fileID: 6434220020019984599}
     distance: 8.98414
     dir: {x: -0.91163725, y: 0.41099578, z: 0.00016134932}
-  - component: {fileID: 2951904663280759401}
-    distance: 8.352431
-    dir: {x: -0.10954996, y: -0.95813835, z: 0.2645177}
+  - component: {fileID: 3722394413924918873}
+    distance: 4.592115
+    dir: {x: 0.59451634, y: 0.8040835, z: 0.00031566827}
   otherConnectedParts:
   - component: {fileID: 6434220020019984599}
     distance: 8.98414
@@ -17971,7 +17971,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9442223
+  breakDelay: 1.6542692
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -17998,7 +17998,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 16.42438
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3112883650576690668}
   meshFilter: {fileID: 675929874802853490}
@@ -18109,7 +18109,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6417451
+  breakDelay: 1.2445238
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -18136,7 +18136,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 11.542873
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2776426346651202135}
   meshFilter: {fileID: 4094678906417981863}
@@ -18210,21 +18210,21 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 5325757901176578714}
-    distance: 5.1942396
-    dir: {x: 0.9335104, y: 0.27016783, z: 0.23572773}
   - component: {fileID: 5640847991620776903}
     distance: 2.6278484
     dir: {x: -0.40250573, y: 0.6461157, z: -0.6484779}
+  - component: {fileID: 7567880840385501436}
+    distance: 0.9023013
+    dir: {x: -0.7070983, y: 0.0000010569355, z: -0.70711523}
   - component: {fileID: 3639471407833069939}
     distance: 0.63801575
     dir: {x: -1, y: 0, z: 0}
   - component: {fileID: 8156964180493781277}
     distance: 0.638031
     dir: {x: 0, y: 0.0000014947146, z: -1}
-  - component: {fileID: 7567880840385501436}
-    distance: 0.9023013
-    dir: {x: -0.7070983, y: 0.0000010569355, z: -0.70711523}
+  - component: {fileID: 5325757901176578714}
+    distance: 5.1942396
+    dir: {x: 0.9335104, y: 0.27016783, z: 0.23572773}
   otherConnectedParts:
   - component: {fileID: 5640847991620776903}
     distance: 2.6278484
@@ -18274,7 +18274,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.37396657
+  breakDelay: 0.4294207
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -18301,7 +18301,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 6.1004186
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2292620707907272324}
   meshFilter: {fileID: 4287916412218765386}
@@ -18375,18 +18375,18 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 4467928726717019497}
-    distance: 3.281366
-    dir: {x: -0.44342738, y: 0.5066038, z: -0.7394084}
   - component: {fileID: 7956554639937110285}
     distance: 5.5139985
     dir: {x: -0.7426776, y: -0.66964906, z: -0.0002628918}
-  - component: {fileID: 3722394413924918873}
-    distance: 1.365036
-    dir: {x: -1, y: 0, z: 0}
+  - component: {fileID: 4467928726717019497}
+    distance: 3.281366
+    dir: {x: -0.44342738, y: 0.5066038, z: -0.7394084}
   - component: {fileID: 4079688939489850580}
     distance: 3.9522398
     dir: {x: -0.6679948, y: 0.42061025, z: -0.6138974}
+  - component: {fileID: 3722394413924918873}
+    distance: 1.365036
+    dir: {x: -1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 248891995970817058}
     distance: 8.190277
@@ -18454,7 +18454,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5480974
+  breakDelay: 0.5688213
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -18481,7 +18481,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 13.290782
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1719091833212932736}
   meshFilter: {fileID: 8353436330552138800}
@@ -18594,15 +18594,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 1097991609658222410}
-    distance: 5.520111
-    dir: {x: 0, y: 0.0000003455272, z: -1}
-  - component: {fileID: 8555066968396404626}
-    distance: 3.692444
-    dir: {x: 0, y: -0.99999994, z: -0.00039258142}
   - component: {fileID: 8663714916025912689}
     distance: 5.438823
     dir: {x: -0.84117407, y: 0.30564564, z: -0.44610193}
+  - component: {fileID: 8555066968396404626}
+    distance: 3.692444
+    dir: {x: 0, y: -0.99999994, z: -0.00039258142}
+  - component: {fileID: 1097991609658222410}
+    distance: 5.520111
+    dir: {x: 0, y: 0.0000003455272, z: -1}
   - component: {fileID: 6434220020019984599}
     distance: 0
     dir: {x: 0, y: 0, z: 0}
@@ -18643,7 +18643,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.449019
+  breakDelay: 0.61258835
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -18670,7 +18670,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 11.091109
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3678311990384404790}
   meshFilter: {fileID: 4862192171220295680}
@@ -18750,21 +18750,21 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 5325757901176578714}
-    distance: 8.40774
-    dir: {x: 0.52076405, y: -0.6368771, z: -0.56850004}
   - component: {fileID: 5640847991620776903}
     distance: 9.346571
     dir: {x: -0.16349873, y: -0.5413878, z: -0.8247226}
   - component: {fileID: 215387430913746149}
     distance: 1.8308839
     dir: {x: -0.83465284, y: -0.0000020835278, z: -0.55077636}
-  - component: {fileID: 2992463245359860191}
-    distance: 8.949237
-    dir: {x: -0.17075785, y: 0.9788487, z: -0.112680845}
   - component: {fileID: 8663714916025912689}
     distance: 8.24567
     dir: {x: 0.5309997, y: -0.64939594, z: 0.54435676}
+  - component: {fileID: 5325757901176578714}
+    distance: 8.40774
+    dir: {x: 0.52076405, y: -0.6368771, z: -0.56850004}
+  - component: {fileID: 2992463245359860191}
+    distance: 8.949237
+    dir: {x: -0.17075785, y: 0.9788487, z: -0.112680845}
   otherConnectedParts:
   - component: {fileID: 2992463245359860191}
     distance: 8.949237
@@ -18814,7 +18814,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.29510576
+  breakDelay: 1.5253332
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -18841,7 +18841,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 19.143139
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 599962535875027184}
   meshFilter: {fileID: 3638164170520698519}
@@ -18972,15 +18972,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 3667487919527223957}
-    distance: 6.9461355
-    dir: {x: -0.034014177, y: -0.9061412, z: 0.42160535}
   - component: {fileID: 5658090432644969920}
     distance: 6.7356052
     dir: {x: 0.4468011, y: -0.86637527, z: 0.22307546}
   - component: {fileID: 9109193703964145893}
     distance: 7.6503468
     dir: {x: -0.43332797, y: -0.212742, z: 0.87576693}
+  - component: {fileID: 3667487919527223957}
+    distance: 6.9461355
+    dir: {x: -0.034014177, y: -0.9061412, z: 0.42160535}
   - component: {fileID: 3651917252674304389}
     distance: 7.6218553
     dir: {x: -0.6123231, y: -0.7656353, z: 0.1971368}
@@ -19033,7 +19033,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.31633
+  breakDelay: 1.4784718
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -19060,7 +19060,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 13.606775
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1110919078519347747}
   meshFilter: {fileID: 7249593264818856777}
@@ -19119,21 +19119,21 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 5114945731822534642}
-    distance: 6.9461355
-    dir: {x: 0.034014177, y: 0.9061412, z: -0.42160535}
   - component: {fileID: 5658090432644969920}
     distance: 3.574716
     dir: {x: 0.9079722, y: 0.12829499, z: -0.3989071}
-  - component: {fileID: 9109193703964145893}
-    distance: 6.743894
-    dir: {x: -0.45653775, y: 0.6919785, z: 0.55923074}
   - component: {fileID: 4392270868034393889}
     distance: 5.2050924
     dir: {x: 0.45533413, y: -0.00000036643897, z: 0.8903206}
+  - component: {fileID: 9109193703964145893}
+    distance: 6.743894
+    dir: {x: -0.45653775, y: 0.6919785, z: 0.55923074}
   - component: {fileID: 3651917252674304389}
     distance: 4.677123
     dir: {x: -0.94732827, y: 0.09805561, z: -0.30488393}
+  - component: {fileID: 5114945731822534642}
+    distance: 6.9461355
+    dir: {x: 0.034014177, y: 0.9061412, z: -0.42160535}
   otherConnectedParts:
   - component: {fileID: 5658090432644969920}
     distance: 3.574716
@@ -19186,7 +19186,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0597867
+  breakDelay: 0.3821724
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -19213,7 +19213,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 13.171235
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 440028596898183577}
   meshFilter: {fileID: 3908161801518489081}
@@ -19302,30 +19302,30 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - component: {fileID: 4879380522416911853}
+    distance: 4.471298
+    dir: {x: 0.8177428, y: 0.42739207, z: 0.3855292}
+  - component: {fileID: 2075417234430530532}
+    distance: 4.042351
+    dir: {x: 0.9045163, y: 0, z: 0.426439}
   - component: {fileID: 7506000623594730574}
     distance: 10.221674
     dir: {x: -0.45522112, y: -0.36123747, z: 0.81380665}
   - component: {fileID: 9161296684294060614}
     distance: 0
     dir: {x: 0, y: 0, z: 0}
-  - component: {fileID: 2075417234430530532}
+  - component: {fileID: 4324402389178213097}
+    distance: 9.11529
+    dir: {x: -0.000018413752, y: 0.9473674, z: 0.32014817}
+  - component: {fileID: 4512252430546434401}
     distance: 4.042351
     dir: {x: 0.9045163, y: 0, z: 0.426439}
   - component: {fileID: 6408206062217556737}
     distance: 8.127121
     dir: {x: -0.5570962, y: 0.20454185, z: 0.8048643}
-  - component: {fileID: 4512252430546434401}
-    distance: 4.042351
-    dir: {x: 0.9045163, y: 0, z: 0.426439}
   - component: {fileID: 989129862519887501}
     distance: 7.114387
     dir: {x: -0.3162906, y: 0.2336584, z: 0.9194368}
-  - component: {fileID: 4879380522416911853}
-    distance: 4.471298
-    dir: {x: 0.8177428, y: 0.42739207, z: 0.3855292}
-  - component: {fileID: 4324402389178213097}
-    distance: 9.11529
-    dir: {x: -0.000018413752, y: 0.9473674, z: 0.32014817}
   otherConnectedParts:
   - component: {fileID: 3911961840589856886}
     distance: 13.77095
@@ -19381,7 +19381,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3847828
+  breakDelay: 1.245859
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -19408,7 +19408,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 22.883276
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1788398841775993515}
   meshFilter: {fileID: 3681274272096924048}
@@ -19452,18 +19452,18 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - component: {fileID: 443671032546646631}
+    distance: 6.049359
+    dir: {x: 0.54801, y: -0.83647174, z: 0}
+  - component: {fileID: 6519635801400932267}
+    distance: 5.324688
+    dir: {x: 0.31129754, y: -0.95031255, z: 0}
   - component: {fileID: 7455795382102283016}
     distance: 6.2665076
     dir: {x: 0.22680818, y: -0.85449433, z: 0.46733013}
   - component: {fileID: 716027961259430928}
     distance: 3.4735253
     dir: {x: 0.90159965, y: 0.000001647331, z: 0.43257156}
-  - component: {fileID: 6519635801400932267}
-    distance: 5.324688
-    dir: {x: 0.31129754, y: -0.95031255, z: 0}
-  - component: {fileID: 443671032546646631}
-    distance: 6.049359
-    dir: {x: 0.54801, y: -0.83647174, z: 0}
   otherConnectedParts:
   - component: {fileID: 7455795382102283016}
     distance: 6.2665076
@@ -19507,7 +19507,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.96827143
+  breakDelay: 1.5743128
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -19534,7 +19534,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 12.068859
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6966773124889038657}
   meshFilter: {fileID: 518582350164636677}
@@ -19614,27 +19614,27 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 3667487919527223957}
-    distance: 6.743894
-    dir: {x: 0.45653775, y: -0.6919785, z: -0.55923074}
-  - component: {fileID: 5114945731822534642}
-    distance: 7.6503468
-    dir: {x: 0.43332797, y: 0.212742, z: -0.87576693}
-  - component: {fileID: 4183125245030331589}
-    distance: 7.6503468
-    dir: {x: 0.43332797, y: -0.212742, z: 0.87576693}
-  - component: {fileID: 7507813028458309080}
-    distance: 7.091214
-    dir: {x: 0.23374657, y: -0.22951643, z: 0.9448199}
   - component: {fileID: 4392270868034393889}
     distance: 7.2258134
     dir: {x: 0.75408787, y: -0.6458279, z: 0.11940638}
-  - component: {fileID: 3651917252674304389}
-    distance: 6.8225913
-    dir: {x: -0.19815473, y: -0.61677617, z: -0.7617886}
+  - component: {fileID: 4183125245030331589}
+    distance: 7.6503468
+    dir: {x: 0.43332797, y: -0.212742, z: 0.87576693}
   - component: {fileID: 8157960539385025368}
     distance: 6.89477
     dir: {x: 0, y: -0.23605575, z: 0.97173953}
+  - component: {fileID: 3667487919527223957}
+    distance: 6.743894
+    dir: {x: 0.45653775, y: -0.6919785, z: -0.55923074}
+  - component: {fileID: 3651917252674304389}
+    distance: 6.8225913
+    dir: {x: -0.19815473, y: -0.61677617, z: -0.7617886}
+  - component: {fileID: 7507813028458309080}
+    distance: 7.091214
+    dir: {x: 0.23374657, y: -0.22951643, z: 0.9448199}
+  - component: {fileID: 5114945731822534642}
+    distance: 7.6503468
+    dir: {x: 0.43332797, y: 0.212742, z: -0.87576693}
   otherConnectedParts:
   - component: {fileID: 3346178984811108852}
     distance: 8.773741
@@ -19687,7 +19687,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9389336
+  breakDelay: 0.71909535
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -19714,7 +19714,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 15.552216
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1128293128936113563}
   meshFilter: {fileID: 7989845188182295778}
@@ -19776,25 +19776,25 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - component: {fileID: 3208071248746664327}
+    distance: 5.7091
+    dir: {x: -0.7006305, y: 0.532325, z: -0.47512832}
   - component: {fileID: 425866970223642951}
     distance: 8.879846
     dir: {x: -0.45045483, y: 0.051647086, z: 0.8913041}
-  - component: {fileID: 2451700510778715418}
-    distance: 4.3449435
-    dir: {x: -0.5201331, y: -0.11276286, z: -0.84660864}
-  - component: {fileID: 2001598558646462776}
+  - component: {fileID: 6908200742152729449}
+    distance: 6.877717
+    dir: {x: -0.95201856, y: -0.00000055464585, z: 0.3060403}
+  - component: {fileID: 6071433371138241965}
     distance: 9.411465
     dir: {x: 0.94767624, y: -0.27548143, z: -0.16130619}
   - component: {fileID: 7237649592791334300}
     distance: 5.105886
     dir: {x: -0.95226413, y: 0, z: -0.30527523}
-  - component: {fileID: 3208071248746664327}
-    distance: 5.7091
-    dir: {x: -0.7006305, y: 0.532325, z: -0.47512832}
-  - component: {fileID: 6908200742152729449}
-    distance: 6.877717
-    dir: {x: -0.95201856, y: -0.00000055464585, z: 0.3060403}
-  - component: {fileID: 6071433371138241965}
+  - component: {fileID: 2451700510778715418}
+    distance: 4.3449435
+    dir: {x: -0.5201331, y: -0.11276286, z: -0.84660864}
+  - component: {fileID: 2001598558646462776}
     distance: 9.411465
     dir: {x: 0.94767624, y: -0.27548143, z: -0.16130619}
   otherConnectedParts:
@@ -19855,7 +19855,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.6137331
+  breakDelay: 1.0789741
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -19882,7 +19882,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 19.660673
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2314485320539183260}
   meshFilter: {fileID: 6117135322755805537}
@@ -19947,21 +19947,21 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 2489181021053704702}
-    distance: 4.91151
-    dir: {x: -0.8638449, y: 0.0000003883426, z: -0.503758}
+  - component: {fileID: 6071433371138241965}
+    distance: 10.488606
+    dir: {x: 0.5048915, y: -0.24719122, z: 0.8270315}
   - component: {fileID: 6364692330658007095}
     distance: 10.051881
     dir: {x: 0.7385694, y: 0.04562454, z: 0.67263186}
+  - component: {fileID: 2489181021053704702}
+    distance: 4.91151
+    dir: {x: -0.8638449, y: 0.0000003883426, z: -0.503758}
   - component: {fileID: 9051583583845381451}
     distance: 4.1629286
     dir: {x: 0.24796782, y: 0.00000091634945, z: -0.9687683}
   - component: {fileID: 2451700510778715418}
     distance: 8.791307
     dir: {x: -0.6692249, y: -0.05573186, z: 0.740967}
-  - component: {fileID: 6071433371138241965}
-    distance: 10.488606
-    dir: {x: 0.5048915, y: -0.24719122, z: 0.8270315}
   otherConnectedParts:
   - component: {fileID: 9051583583845381451}
     distance: 4.1629286
@@ -20014,7 +20014,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.25261036
+  breakDelay: 1.9865503
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -20041,7 +20041,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 19.337837
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3333725656733975315}
   meshFilter: {fileID: 4072420411012338679}
@@ -20127,12 +20127,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 5703489269235440071}
-    distance: 4.2427673
-    dir: {x: -1, y: 0, z: 0}
   - component: {fileID: 5069139350308891689}
     distance: 0
     dir: {x: 0, y: 0, z: 0}
+  - component: {fileID: 5703489269235440071}
+    distance: 4.2427673
+    dir: {x: -1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 5703489269235440071}
     distance: 4.2427673
@@ -20179,7 +20179,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8596735
+  breakDelay: 0.5708036
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -20206,7 +20206,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 9.065943
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8530702701953608230}
   meshFilter: {fileID: 5516144582734410979}
@@ -20277,18 +20277,18 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 5066785321447759560}
-    distance: 3.785904
-    dir: {x: 0.62895936, y: 0.07780905, z: -0.77353466}
-  - component: {fileID: 1097991609658222410}
-    distance: 7.862509
-    dir: {x: 0.58187497, y: -0.21142848, z: 0.7853149}
-  - component: {fileID: 452839561740149071}
-    distance: 5.925125
-    dir: {x: 1, y: 0, z: 0}
   - component: {fileID: 5640847991620776903}
     distance: 6.599317
     dir: {x: -0.89503217, y: 0.044637587, z: -0.44376224}
+  - component: {fileID: 1097991609658222410}
+    distance: 7.862509
+    dir: {x: 0.58187497, y: -0.21142848, z: 0.7853149}
+  - component: {fileID: 5066785321447759560}
+    distance: 3.785904
+    dir: {x: 0.62895936, y: 0.07780905, z: -0.77353466}
+  - component: {fileID: 452839561740149071}
+    distance: 5.925125
+    dir: {x: 1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 5066785321447759560}
     distance: 3.785904
@@ -20344,7 +20344,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5096744
+  breakDelay: 1.8782116
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -20371,7 +20371,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 14.665868
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3079012859920209855}
   meshFilter: {fileID: 4499971721928911153}
@@ -20439,21 +20439,21 @@ MonoBehaviour:
   - component: {fileID: 8294520783408055611}
     distance: 8.419537
     dir: {x: 0.7015334, y: 0.55426204, z: 0.44793352}
-  - component: {fileID: 2476157005827770933}
-    distance: 9.114863
-    dir: {x: 0.6480169, y: 0.69054025, z: -0.32129148}
-  - component: {fileID: 3456954635976197940}
-    distance: 10.600765
-    dir: {x: 0.5571848, y: -0.7830884, z: -0.27625626}
-  - component: {fileID: 6007898105634752906}
-    distance: 7.3391414
-    dir: {x: -0.32444936, y: 0.85761803, z: -0.39902866}
   - component: {fileID: 8590748844524511329}
     distance: 3.8021872
     dir: {x: -0.6262658, y: 0.12062107, z: -0.7702219}
+  - component: {fileID: 2476157005827770933}
+    distance: 9.114863
+    dir: {x: 0.6480169, y: 0.69054025, z: -0.32129148}
+  - component: {fileID: 6007898105634752906}
+    distance: 7.3391414
+    dir: {x: -0.32444936, y: 0.85761803, z: -0.39902866}
   - component: {fileID: 5366261655296593346}
     distance: 11.160396
     dir: {x: -0.2133598, y: 0.2723093, z: 0.9382565}
+  - component: {fileID: 3456954635976197940}
+    distance: 10.600765
+    dir: {x: 0.5571848, y: -0.7830884, z: -0.27625626}
   otherConnectedParts:
   - component: {fileID: 8294520783408055611}
     distance: 8.419537
@@ -20497,7 +20497,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.35833383
+  breakDelay: 1.6383513
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -20524,7 +20524,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 21.261177
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1767125858231140011}
   meshFilter: {fileID: 9049852921310062261}
@@ -20583,15 +20583,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - component: {fileID: 4392270868034393889}
+    distance: 6.1402726
+    dir: {x: -0.14261365, y: -0.074690506, z: 0.9869563}
   - component: {fileID: 3667487919527223957}
     distance: 3.574716
     dir: {x: -0.9079722, y: -0.12829499, z: 0.3989071}
   - component: {fileID: 5114945731822534642}
     distance: 6.7356052
     dir: {x: -0.4468011, y: 0.86637527, z: -0.22307546}
-  - component: {fileID: 4392270868034393889}
-    distance: 6.1402726
-    dir: {x: -0.14261365, y: -0.074690506, z: 0.9869563}
   otherConnectedParts:
   - component: {fileID: 4392270868034393889}
     distance: 6.1402726
@@ -20638,7 +20638,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.764486
+  breakDelay: 1.2650692
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -20665,7 +20665,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 14.528695
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 145181020869954855}
   meshFilter: {fileID: 3097985118882427362}
@@ -20742,24 +20742,24 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 343041179824834222}
-    distance: 4.91151
-    dir: {x: 0.8638449, y: -0.0000003883426, z: 0.503758}
+  - component: {fileID: 54423406619926628}
+    distance: 8.964915
+    dir: {x: -0.5619866, y: 0.33899832, z: -0.75448745}
   - component: {fileID: 9051583583845381451}
     distance: 5.500523
     dir: {x: 0.9590097, y: 0.00000034675767, z: -0.28337315}
   - component: {fileID: 2451700510778715418}
     distance: 9.149905
     dir: {x: -0.17930013, y: -0.053547855, z: 0.982336}
-  - component: {fileID: 54423406619926628}
-    distance: 8.964915
-    dir: {x: -0.5619866, y: 0.33899832, z: -0.75448745}
-  - component: {fileID: 2938783003935117370}
-    distance: 4.3268366
-    dir: {x: -0.93285966, y: 0.00000044081827, z: -0.36024022}
+  - component: {fileID: 343041179824834222}
+    distance: 4.91151
+    dir: {x: 0.8638449, y: -0.0000003883426, z: 0.503758}
   - component: {fileID: 5366261655296593346}
     distance: 8.891957
     dir: {x: 0.55186564, y: 0.34177977, z: -0.760678}
+  - component: {fileID: 2938783003935117370}
+    distance: 4.3268366
+    dir: {x: -0.93285966, y: 0.00000044081827, z: -0.36024022}
   otherConnectedParts:
   - component: {fileID: 2938783003935117370}
     distance: 4.3268366
@@ -20812,7 +20812,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1096816
+  breakDelay: 1.9630432
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -20839,7 +20839,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 18.474678
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6828982589259697748}
   meshFilter: {fileID: 2221652936939709986}
@@ -20962,7 +20962,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.49129927
+  breakDelay: 0.680844
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -20989,7 +20989,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 3.8768425
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 7947764867851703216}
   meshFilter: {fileID: 5317940336804255421}
@@ -21066,21 +21066,21 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 716027961259430928}
-    distance: 5.7992954
-    dir: {x: 0.29493824, y: 0.9233365, z: -0.24588843}
+  - component: {fileID: 443671032546646631}
+    distance: 3.4999404
+    dir: {x: 0.54109895, y: 0.08416646, z: -0.8367365}
   - component: {fileID: 6519635801400932267}
     distance: 2.9527738
     dir: {x: 0.0800153, y: 0.099763006, z: -0.99178874}
+  - component: {fileID: 716027961259430928}
+    distance: 5.7992954
+    dir: {x: 0.29493824, y: 0.9233365, z: -0.24588843}
   - component: {fileID: 7052976346530365106}
     distance: 6.2665076
     dir: {x: -0.22680818, y: 0.85449433, z: -0.46733013}
   - component: {fileID: 8171377626494596388}
     distance: 5.811482
     dir: {x: -0.81500804, y: -0.2860469, z: -0.50392365}
-  - component: {fileID: 443671032546646631}
-    distance: 3.4999404
-    dir: {x: 0.54109895, y: 0.08416646, z: -0.8367365}
   otherConnectedParts:
   - component: {fileID: 443671032546646631}
     distance: 3.4999404
@@ -21133,7 +21133,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.01194
+  breakDelay: 0.6460346
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -21160,7 +21160,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 12.669831
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 9101888577037622414}
   meshFilter: {fileID: 7308621343382318861}
@@ -21225,21 +21225,21 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 4467928726717019497}
-    distance: 2.9424992
-    dir: {x: -0.030590186, y: 0.5649458, z: -0.8245608}
-  - component: {fileID: 2752566471466105893}
-    distance: 1.365036
-    dir: {x: 1, y: 0, z: 0}
   - component: {fileID: 7956554639937110285}
     distance: 4.592115
     dir: {x: -0.59451634, y: -0.8040835, z: -0.00031566827}
-  - component: {fileID: 3722394413924918873}
-    distance: 0
-    dir: {x: 0, y: 0, z: 0}
+  - component: {fileID: 2752566471466105893}
+    distance: 1.365036
+    dir: {x: 1, y: 0, z: 0}
+  - component: {fileID: 4467928726717019497}
+    distance: 2.9424992
+    dir: {x: -0.030590186, y: 0.5649458, z: -0.8245608}
   - component: {fileID: 4079688939489850580}
     distance: 3.2056086
     dir: {x: -0.39775276, y: 0.51857626, z: -0.75688267}
+  - component: {fileID: 3722394413924918873}
+    distance: 0
+    dir: {x: 0, y: 0, z: 0}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 726.3181, y: 1089.4772}
@@ -21277,7 +21277,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.8538536
+  breakDelay: 0.604684
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -21304,7 +21304,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 7.263181
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2554980427902123043}
   meshFilter: {fileID: 3866464667754388825}
@@ -21363,21 +21363,21 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 425866970223642951}
-    distance: 3.6954927
-    dir: {x: 0.91360915, y: 0, z: 0.40659353}
-  - component: {fileID: 3948446990940891589}
-    distance: 2.2828789
-    dir: {x: 0.75285363, y: 0, z: 0.658188}
   - component: {fileID: 4258581655049990845}
     distance: 3.4453428
     dir: {x: 0.49883968, y: 0.7489748, z: 0.43611437}
-  - component: {fileID: 1233991648445993418}
-    distance: 3.5841455
-    dir: {x: -0.9078824, y: 0, z: 0.419225}
+  - component: {fileID: 425866970223642951}
+    distance: 3.6954927
+    dir: {x: 0.91360915, y: 0, z: 0.40659353}
   - component: {fileID: 6908200742152729449}
     distance: 4.4100885
     dir: {x: 0.18786271, y: -0.103993826, z: -0.9766744}
+  - component: {fileID: 1233991648445993418}
+    distance: 3.5841455
+    dir: {x: -0.9078824, y: 0, z: 0.419225}
+  - component: {fileID: 3948446990940891589}
+    distance: 2.2828789
+    dir: {x: 0.75285363, y: 0, z: 0.658188}
   otherConnectedParts:
   - component: {fileID: 3948446990940891589}
     distance: 2.2828789
@@ -21433,7 +21433,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0881939
+  breakDelay: 1.3865526
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -21460,7 +21460,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 9.670171
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8243803579529492249}
   meshFilter: {fileID: 7813461531815773623}
@@ -21580,7 +21580,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5287279
+  breakDelay: 1.4514936
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -21607,7 +21607,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 6.1003947
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6987417890585392896}
   meshFilter: {fileID: 2743490475702569309}
@@ -21666,12 +21666,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 7455795382102283016}
-    distance: 5.811482
-    dir: {x: 0.81500804, y: 0.2860469, z: 0.50392365}
   - component: {fileID: 6519635801400932267}
     distance: 5.3438797
     dir: {x: 0.93053585, y: 0.36620098, z: 0.0000028553766}
+  - component: {fileID: 7455795382102283016}
+    distance: 5.811482
+    dir: {x: 0.81500804, y: 0.2860469, z: 0.50392365}
   - component: {fileID: 452839561740149071}
     distance: 5.8175273
     dir: {x: -0.8154358, y: 0.28574964, z: 0.50339997}
@@ -21718,7 +21718,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8432397
+  breakDelay: 0.28116775
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -21745,7 +21745,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 10.049818
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1152069763943267366}
   meshFilter: {fileID: 8448602810919782398}
@@ -21816,6 +21816,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - component: {fileID: 7567880840385501436}
+    distance: 2.0482926
+    dir: {x: 0.20490639, y: -0.8289309, z: 0.5204679}
   - component: {fileID: 7741656725158164163}
     distance: 2.6278484
     dir: {x: 0.40250573, y: -0.6461157, z: 0.6484779}
@@ -21825,9 +21828,6 @@ MonoBehaviour:
   - component: {fileID: 8156964180493781277}
     distance: 2.266744
     dir: {x: 0.46662703, y: -0.74904495, z: 0.47030923}
-  - component: {fileID: 7567880840385501436}
-    distance: 2.0482926
-    dir: {x: 0.20490639, y: -0.8289309, z: 0.5204679}
   otherConnectedParts:
   - component: {fileID: 5325757901176578714}
     distance: 6.599317
@@ -21883,7 +21883,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9631666
+  breakDelay: 1.0993795
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -21910,7 +21910,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 10.494542
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 231867234596361474}
   meshFilter: {fileID: 2829403776692140267}
@@ -22029,12 +22029,6 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 7797043510308942810}
-    distance: 0.9023121
-    dir: {x: 0.70710677, y: -0.0000010569229, z: 0.70710677}
-  - component: {fileID: 8379277126605818251}
-    distance: 0.638031
-    dir: {x: 0, y: -0.0000014947146, z: 1}
   - component: {fileID: 5654495111723904400}
     distance: 0.638031
     dir: {x: 1, y: 0, z: 0}
@@ -22044,6 +22038,12 @@ MonoBehaviour:
   - component: {fileID: 3970088731203275610}
     distance: 2.574516
     dir: {x: 0.6273697, y: 0.65949994, z: -0.4140858}
+  - component: {fileID: 8379277126605818251}
+    distance: 0.638031
+    dir: {x: 0, y: -0.0000014947146, z: 1}
+  - component: {fileID: 7797043510308942810}
+    distance: 0.9023121
+    dir: {x: 0.70710677, y: -0.0000010569229, z: 0.70710677}
   otherConnectedParts:
   - component: {fileID: 748005452011850484}
     distance: 1.9525435
@@ -22096,7 +22096,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.84735644
+  breakDelay: 1.3186327
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -22123,7 +22123,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 6.0998144
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 7066383553579902352}
   meshFilter: {fileID: 4399609269805537557}
@@ -22231,7 +22231,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0330466
+  breakDelay: 0.23568583
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -22258,7 +22258,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 9.871291
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1451337371562085419}
   meshFilter: {fileID: 1490879012652042270}
@@ -22378,7 +22378,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.4223045
+  breakDelay: 1.4410414
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -22405,7 +22405,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 16.935781
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6998405755103322508}
   meshFilter: {fileID: 5895271714817082615}
@@ -22536,11 +22536,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 4183125245030331589}
-    distance: 1.6575623
-    dir: {x: 1, y: 0, z: 0}
   - component: {fileID: 54423406619926628}
     distance: 3.3151093
+    dir: {x: 1, y: 0, z: 0}
+  - component: {fileID: 4183125245030331589}
+    distance: 1.6575623
     dir: {x: 1, y: 0, z: 0}
   - component: {fileID: 8157960539385025368}
     distance: 1.657547
@@ -22609,7 +22609,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.9378348
+  breakDelay: 0.24328613
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -22636,7 +22636,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 9.820904
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4810167665495579623}
   meshFilter: {fileID: 1306559661271536628}
@@ -22765,7 +22765,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.9244607
+  breakDelay: 1.897169
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -22792,7 +22792,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 11.521497
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4326516464038262920}
   meshFilter: {fileID: 8743983420265986741}
@@ -22909,7 +22909,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4008651
+  breakDelay: 1.2041254
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -22936,7 +22936,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 11.575426
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 7814126963274665018}
   meshFilter: {fileID: 3056858757505524716}
@@ -23080,7 +23080,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9655802
+  breakDelay: 1.5891838
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -23107,7 +23107,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 11.218204
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5050024312976587445}
   meshFilter: {fileID: 8723026533987920204}
@@ -23191,7 +23191,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4121611
+  breakDelay: 1.6357708
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -23218,7 +23218,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 6.428425
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5460662961341836835}
   meshFilter: {fileID: 3565332586940970119}
@@ -23307,12 +23307,12 @@ MonoBehaviour:
   - component: {fileID: 2752566471466105893}
     distance: 3.281366
     dir: {x: 0.44342738, y: -0.5066038, z: 0.7394084}
-  - component: {fileID: 3722394413924918873}
-    distance: 2.9424992
-    dir: {x: 0.030590186, y: -0.5649458, z: 0.8245608}
   - component: {fileID: 4079688939489850580}
     distance: 1.1850281
     dir: {x: -1, y: 0, z: 0}
+  - component: {fileID: 3722394413924918873}
+    distance: 2.9424992
+    dir: {x: 0.030590186, y: -0.5649458, z: 0.8245608}
   otherConnectedParts:
   - component: {fileID: 2752566471466105893}
     distance: 3.281366
@@ -23374,7 +23374,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4438558
+  breakDelay: 1.0911877
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -23401,7 +23401,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 9.396933
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2730850766553511495}
   meshFilter: {fileID: 1958054063651216645}
@@ -23547,12 +23547,12 @@ MonoBehaviour:
   - component: {fileID: 9209415905412491900}
     distance: 0
     dir: {x: 0, y: 0, z: 0}
-  - component: {fileID: 7072025975688666456}
-    distance: 0
-    dir: {x: 0, y: 0, z: 0}
   - component: {fileID: 2965211034836798921}
     distance: 4.6752567
     dir: {x: -0.96260214, y: 0, z: -0.2709192}
+  - component: {fileID: 7072025975688666456}
+    distance: 0
+    dir: {x: 0, y: 0, z: 0}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 907.8004, y: 1361.7006}
@@ -23590,7 +23590,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.2430795
+  breakDelay: 0.42807811
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -23617,7 +23617,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 9.078004
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5235813623852534522}
   meshFilter: {fileID: 2843983576675335659}
@@ -23673,15 +23673,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 3772092784473082784}
-    distance: 5.9251404
-    dir: {x: -1, y: 0, z: 0}
-  - component: {fileID: 7072025975688666456}
-    distance: 5.1282744
-    dir: {x: 0.44052634, y: 0.040175658, z: 0.8968403}
   - component: {fileID: 2965211034836798921}
     distance: 4.021461
     dir: {x: -0.5573278, y: 0.05123307, z: 0.8287103}
+  - component: {fileID: 7072025975688666456}
+    distance: 5.1282744
+    dir: {x: 0.44052634, y: 0.040175658, z: 0.8968403}
+  - component: {fileID: 3772092784473082784}
+    distance: 5.9251404
+    dir: {x: -1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 7956554639937110285}
     distance: 8.352431
@@ -23725,7 +23725,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1336726
+  breakDelay: 1.6871064
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -23752,7 +23752,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 14.263077
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3384303090659974782}
   meshFilter: {fileID: 8132683732283926862}
@@ -23826,15 +23826,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - component: {fileID: 85904807045093456}
+    distance: 0.63801575
+    dir: {x: -1, y: 0, z: 0}
   - component: {fileID: 1968315733070860923}
     distance: 0.63801575
     dir: {x: 0, y: -0.0000001518106, z: 1}
   - component: {fileID: 2620042230153993413}
     distance: 0.9022905
     dir: {x: -0.70710677, y: -0.000000107346295, z: 0.70710677}
-  - component: {fileID: 85904807045093456}
-    distance: 0.63801575
-    dir: {x: -1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 1968315733070860923}
     distance: 0.63801575
@@ -23881,7 +23881,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4654735
+  breakDelay: 0.29729939
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -23908,7 +23908,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 6.0999694
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1082707538573043512}
   meshFilter: {fileID: 3417976498636167448}
@@ -23955,12 +23955,12 @@ MonoBehaviour:
   - component: {fileID: 4183125245030331589}
     distance: 1.657547
     dir: {x: -1, y: 0, z: 0}
-  - component: {fileID: 7507813028458309080}
-    distance: 3.3151093
-    dir: {x: -1, y: 0, z: 0}
   - component: {fileID: 371820359564430556}
     distance: 4.6381235
     dir: {x: -0.15281741, y: -0.65524113, z: 0.7398013}
+  - component: {fileID: 7507813028458309080}
+    distance: 3.3151093
+    dir: {x: -1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 371820359564430556}
     distance: 4.6381235
@@ -24019,7 +24019,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.41987336
+  breakDelay: 0.588421
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -24046,7 +24046,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 10.482797
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4595025332907669373}
   meshFilter: {fileID: 8643432172781614064}
@@ -24160,7 +24160,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7790163
+  breakDelay: 1.494519
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -24187,7 +24187,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 17.355152
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5180041778867386664}
   meshFilter: {fileID: 2366869363343203619}
@@ -24301,7 +24301,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.35486045
+  breakDelay: 1.2796929
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -24328,7 +24328,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 1.5786225
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2142335035771080632}
   meshFilter: {fileID: 912794561535164042}
@@ -24405,15 +24405,15 @@ MonoBehaviour:
   - component: {fileID: 5640847991620776903}
     distance: 2.4419177
     dir: {x: -0.17187649, y: 0.6953118, z: -0.6978538}
+  - component: {fileID: 7567880840385501436}
+    distance: 0.638031
+    dir: {x: 0, y: 0.0000014947146, z: -1}
   - component: {fileID: 7741656725158164163}
     distance: 0.63801575
     dir: {x: 1, y: 0, z: 0}
   - component: {fileID: 8156964180493781277}
     distance: 0.9023013
     dir: {x: 0.7070983, y: 0.0000010569355, z: -0.70711523}
-  - component: {fileID: 7567880840385501436}
-    distance: 0.638031
-    dir: {x: 0, y: 0.0000014947146, z: -1}
   otherConnectedParts:
   - component: {fileID: 5640847991620776903}
     distance: 2.4419177
@@ -24463,7 +24463,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.60970676
+  breakDelay: 0.37410992
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -24490,7 +24490,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 6.1000395
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3614217860064052474}
   meshFilter: {fileID: 5927940196207059615}
@@ -24540,27 +24540,27 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 7548612203259747909}
-    distance: 8.6449795
-    dir: {x: -0.699592, y: 0.056673873, z: 0.7122915}
-  - component: {fileID: 2166904792743349517}
-    distance: 5.2386975
-    dir: {x: 0.5459024, y: 0.00000036408832, z: -0.8378488}
-  - component: {fileID: 7521973058395953645}
-    distance: 9.398667
-    dir: {x: -0.8512608, y: 0.37548316, z: 0.3665616}
-  - component: {fileID: 92236867783749830}
-    distance: 8.201605
-    dir: {x: -0.16975616, y: 0.059739027, z: -0.98367375}
-  - component: {fileID: 7237649592791334300}
-    distance: 8.993118
-    dir: {x: 0.8576165, y: 0.05447993, z: 0.511396}
-  - component: {fileID: 5896653940849429348}
-    distance: 6.332164
-    dir: {x: -0.21987318, y: 0.07737394, z: 0.97245514}
   - component: {fileID: 3208071248746664327}
     distance: 9.891974
     dir: {x: 0.8668471, y: 0.35675803, z: 0.34828138}
+  - component: {fileID: 7237649592791334300}
+    distance: 8.993118
+    dir: {x: 0.8576165, y: 0.05447993, z: 0.511396}
+  - component: {fileID: 7548612203259747909}
+    distance: 8.6449795
+    dir: {x: -0.699592, y: 0.056673873, z: 0.7122915}
+  - component: {fileID: 5896653940849429348}
+    distance: 6.332164
+    dir: {x: -0.21987318, y: 0.07737394, z: 0.97245514}
+  - component: {fileID: 2166904792743349517}
+    distance: 5.2386975
+    dir: {x: 0.5459024, y: 0.00000036408832, z: -0.8378488}
+  - component: {fileID: 92236867783749830}
+    distance: 8.201605
+    dir: {x: -0.16975616, y: 0.059739027, z: -0.98367375}
+  - component: {fileID: 7521973058395953645}
+    distance: 9.398667
+    dir: {x: -0.8512608, y: 0.37548316, z: 0.3665616}
   otherConnectedParts:
   - component: {fileID: 92236867783749830}
     distance: 8.201605
@@ -24613,7 +24613,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.283337
+  breakDelay: 1.0436512
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -24640,7 +24640,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 20.259281
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3373454505914526286}
   meshFilter: {fileID: 737713089892254656}
@@ -24717,27 +24717,27 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 343041179824834222}
-    distance: 8.791307
-    dir: {x: 0.6692249, y: 0.05573186, z: -0.740967}
-  - component: {fileID: 2489181021053704702}
-    distance: 9.149905
-    dir: {x: 0.17930013, y: 0.053547855, z: -0.982336}
-  - component: {fileID: 2166904792743349517}
-    distance: 10.1367655
-    dir: {x: -0.7354449, y: 0.00000056448437, z: -0.67758447}
-  - component: {fileID: 5143529702242597165}
-    distance: 4.3449435
-    dir: {x: 0.5201331, y: 0.11276286, z: 0.84660864}
-  - component: {fileID: 7237649592791334300}
-    distance: 3.3918905
-    dir: {x: -0.7671838, y: 0.14444695, z: 0.62495124}
   - component: {fileID: 3208071248746664327}
     distance: 4.0515203
     dir: {x: -0.42947352, y: 0.8710422, z: 0.23840725}
   - component: {fileID: 6908200742152729449}
     distance: 7.216081
     dir: {x: -0.59419584, y: 0.067896195, z: 0.8014496}
+  - component: {fileID: 5143529702242597165}
+    distance: 4.3449435
+    dir: {x: 0.5201331, y: 0.11276286, z: 0.84660864}
+  - component: {fileID: 2489181021053704702}
+    distance: 9.149905
+    dir: {x: 0.17930013, y: 0.053547855, z: -0.982336}
+  - component: {fileID: 7237649592791334300}
+    distance: 3.3918905
+    dir: {x: -0.7671838, y: 0.14444695, z: 0.62495124}
+  - component: {fileID: 2166904792743349517}
+    distance: 10.1367655
+    dir: {x: -0.7354449, y: 0.00000056448437, z: -0.67758447}
+  - component: {fileID: 343041179824834222}
+    distance: 8.791307
+    dir: {x: 0.6692249, y: 0.05573186, z: -0.740967}
   otherConnectedParts:
   - component: {fileID: 7237649592791334300}
     distance: 3.3918905
@@ -24793,7 +24793,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4080489
+  breakDelay: 1.8325585
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -24820,7 +24820,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 19.170332
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2996818692570179606}
   meshFilter: {fileID: 1321443012244605295}
@@ -24970,7 +24970,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0152357
+  breakDelay: 0.76566684
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -24997,7 +24997,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 12.339309
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4370059385295576201}
   meshFilter: {fileID: 656186391741946022}
@@ -25077,12 +25077,12 @@ MonoBehaviour:
   - component: {fileID: 4474046994235740601}
     distance: 5.4696655
     dir: {x: -1, y: 0, z: 0}
-  - component: {fileID: 3415582578659564839}
-    distance: 5.4696655
-    dir: {x: -1, y: 0, z: 0}
   - component: {fileID: 5524257750948768735}
     distance: 0
     dir: {x: 0, y: 0, z: 0}
+  - component: {fileID: 3415582578659564839}
+    distance: 5.4696655
+    dir: {x: -1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 6945614642652917101}
     distance: 5.4696655
@@ -25135,7 +25135,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.6083451
+  breakDelay: 1.6792374
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -25162,7 +25162,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 18.251831
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 9068290695456883717}
   meshFilter: {fileID: 640645286859596949}
@@ -25221,24 +25221,24 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - component: {fileID: 54423406619926628}
+    distance: 6.110155
+    dir: {x: -0.16396163, y: 0.49738333, z: -0.8518958}
   - component: {fileID: 2489181021053704702}
     distance: 4.3268366
     dir: {x: 0.93285966, y: -0.00000044081827, z: 0.36024022}
   - component: {fileID: 4183125245030331589}
     distance: 6.5880666
     dir: {x: -0.40366593, y: 0.46130213, z: -0.7900976}
-  - component: {fileID: 7507813028458309080}
-    distance: 7.4139266
-    dir: {x: -0.5822745, y: 0.40991628, z: -0.7020862}
-  - component: {fileID: 54423406619926628}
-    distance: 6.110155
-    dir: {x: -0.16396163, y: 0.49738333, z: -0.8518958}
-  - component: {fileID: 2166904792743349517}
-    distance: 6.274352
-    dir: {x: -0.8063431, y: -0.07808838, z: 0.5862704}
   - component: {fileID: 371820359564430556}
     distance: 2.4643505
     dir: {x: -0.6941452, y: 0, z: -0.71983504}
+  - component: {fileID: 2166904792743349517}
+    distance: 6.274352
+    dir: {x: -0.8063431, y: -0.07808838, z: 0.5862704}
+  - component: {fileID: 7507813028458309080}
+    distance: 7.4139266
+    dir: {x: -0.5822745, y: 0.40991628, z: -0.7020862}
   otherConnectedParts:
   - component: {fileID: 371820359564430556}
     distance: 2.4643505
@@ -25285,7 +25285,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.7810709
+  breakDelay: 1.2841833
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -25312,7 +25312,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 17.583113
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 7228298931150858304}
   meshFilter: {fileID: 3463796688892174821}
@@ -25420,7 +25420,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.7135487
+  breakDelay: 1.5875438
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -25447,7 +25447,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 6.784013
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 832054003768400861}
   meshFilter: {fileID: 4063640854247343329}
@@ -25537,7 +25537,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0825669
+  breakDelay: 1.4343687
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -25564,7 +25564,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 16.591808
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8168119364659873154}
   meshFilter: {fileID: 8153948660075684574}
@@ -25641,12 +25641,12 @@ MonoBehaviour:
   - component: {fileID: 7548612203259747909}
     distance: 10.603628
     dir: {x: 0.9657581, y: -0.04325142, z: 0.25581384}
-  - component: {fileID: 3665726400187976563}
-    distance: 2.5804749
-    dir: {x: 0, y: 1, z: 0}
   - component: {fileID: 7521973058395953645}
     distance: 8.680217
     dir: {x: 0.9547896, y: 0.2972823, z: 0}
+  - component: {fileID: 3665726400187976563}
+    distance: 2.5804749
+    dir: {x: 0, y: 1, z: 0}
   otherConnectedParts:
   - component: {fileID: 3665726400187976563}
     distance: 2.5804749
@@ -25693,7 +25693,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4324129
+  breakDelay: 0.94987684
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -25720,7 +25720,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 23.613491
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1324974953484961591}
   meshFilter: {fileID: 5976404634177233783}
@@ -25764,24 +25764,24 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 7762348455872454067}
-    distance: 0
-    dir: {x: 0, y: 0, z: 0}
-  - component: {fileID: 1543610065088716264}
-    distance: 14.434064
-    dir: {x: 0.37894148, y: -0.9254206, z: -0.0000010571374}
   - component: {fileID: 4474046994235740601}
     distance: 5.4696655
     dir: {x: 1, y: 0, z: 0}
-  - component: {fileID: 3415582578659564839}
-    distance: 5.4696655
-    dir: {x: 1, y: 0, z: 0}
-  - component: {fileID: 1287421637430596199}
-    distance: 7.6850686
-    dir: {x: 0.41864103, y: 0.897414, z: 0.13923992}
+  - component: {fileID: 1543610065088716264}
+    distance: 14.434064
+    dir: {x: 0.37894148, y: -0.9254206, z: -0.0000010571374}
   - component: {fileID: 40973691292326939}
     distance: 7.6850686
     dir: {x: 0.41864103, y: 0.897414, z: 0.13923992}
+  - component: {fileID: 1287421637430596199}
+    distance: 7.6850686
+    dir: {x: 0.41864103, y: 0.897414, z: 0.13923992}
+  - component: {fileID: 7762348455872454067}
+    distance: 0
+    dir: {x: 0, y: 0, z: 0}
+  - component: {fileID: 3415582578659564839}
+    distance: 5.4696655
+    dir: {x: 1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 40973691292326939}
     distance: 7.6850686
@@ -25834,7 +25834,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3007605
+  breakDelay: 0.21227916
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -25861,7 +25861,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 27.046637
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2244664002296534629}
   meshFilter: {fileID: 1592484554824709694}
@@ -26038,7 +26038,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.912666
+  breakDelay: 1.7243212
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -26065,7 +26065,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 9.782956
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5648224213682459562}
   meshFilter: {fileID: 2064889948253798262}
@@ -26163,15 +26163,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 425866970223642951}
-    distance: 6.360419
-    dir: {x: 0.40056244, y: 0.072105624, z: 0.9134279}
-  - component: {fileID: 3948446990940891589}
-    distance: 5.8954515
-    dir: {x: 0.1509948, y: 0.07779251, z: 0.98546886}
   - component: {fileID: 4258581655049990845}
     distance: 6.616806
     dir: {x: 0.13453357, y: 0.45929968, z: 0.8780345}
+  - component: {fileID: 3208071248746664327}
+    distance: 6.2397604
+    dir: {x: 0.40830812, y: 0.48705405, z: -0.77205104}
+  - component: {fileID: 425866970223642951}
+    distance: 6.360419
+    dir: {x: 0.40056244, y: 0.072105624, z: 0.9134279}
   - component: {fileID: 5143529702242597165}
     distance: 6.877717
     dir: {x: 0.95201856, y: 0.00000055464585, z: -0.3060403}
@@ -26181,12 +26181,12 @@ MonoBehaviour:
   - component: {fileID: 5896653940849429348}
     distance: 7.712152
     dir: {x: -0.96203464, y: 0.0000004946346, z: -0.2729275}
-  - component: {fileID: 3208071248746664327}
-    distance: 6.2397604
-    dir: {x: 0.40830812, y: 0.48705405, z: -0.77205104}
   - component: {fileID: 5954430356329523691}
     distance: 4.4100885
     dir: {x: -0.18786271, y: 0.103993826, z: 0.9766744}
+  - component: {fileID: 3948446990940891589}
+    distance: 5.8954515
+    dir: {x: 0.1509948, y: 0.07779251, z: 0.98546886}
   otherConnectedParts:
   - component: {fileID: 5954430356329523691}
     distance: 4.4100885
@@ -26248,7 +26248,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.46628672
+  breakDelay: 1.5575209
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -26275,7 +26275,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 14.854224
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5686640277407406641}
   meshFilter: {fileID: 8063839732542739691}
@@ -26358,18 +26358,18 @@ MonoBehaviour:
   - component: {fileID: 7548612203259747909}
     distance: 4.5174475
     dir: {x: 0.43227038, y: -0.6727465, z: 0.60046184}
-  - component: {fileID: 3665726400187976563}
-    distance: 8.287781
-    dir: {x: -1, y: 0, z: 0}
+  - component: {fileID: 5896653940849429348}
+    distance: 7.763092
+    dir: {x: 0.8512644, y: -0.3914802, z: 0.34941682}
   - component: {fileID: 2417032361940656548}
     distance: 8.680217
     dir: {x: -0.9547896, y: -0.2972823, z: 0}
   - component: {fileID: 2611417522569232689}
     distance: 9.398667
     dir: {x: 0.8512608, y: -0.37548316, z: -0.3665616}
-  - component: {fileID: 5896653940849429348}
-    distance: 7.763092
-    dir: {x: 0.8512644, y: -0.3914802, z: 0.34941682}
+  - component: {fileID: 3665726400187976563}
+    distance: 8.287781
+    dir: {x: -1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 2417032361940656548}
     distance: 8.680217
@@ -26419,7 +26419,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.84668267
+  breakDelay: 1.511179
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -26446,7 +26446,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 17.926905
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2018203812223505689}
   meshFilter: {fileID: 8061043157949217582}
@@ -26517,18 +26517,18 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 7548612203259747909}
-    distance: 6.511384
-    dir: {x: 0.15908653, y: -0.07043328, z: -0.984749}
   - component: {fileID: 1233991648445993418}
     distance: 9.152621
     dir: {x: 0.98643243, y: 0, z: 0.16416755}
-  - component: {fileID: 6313449811394682017}
-    distance: 1.7602204
-    dir: {x: -0.5208924, y: 0, z: 0.8536224}
+  - component: {fileID: 7548612203259747909}
+    distance: 6.511384
+    dir: {x: 0.15908653, y: -0.07043328, z: -0.984749}
   - component: {fileID: 5896653940849429348}
     distance: 8.585973
     dir: {x: 0.6628904, y: -0.053414818, z: -0.74680865}
+  - component: {fileID: 6313449811394682017}
+    distance: 1.7602204
+    dir: {x: -0.5208924, y: 0, z: 0.8536224}
   otherConnectedParts:
   - component: {fileID: 40973691292326939}
     distance: 9.571735
@@ -26575,7 +26575,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.683597
+  breakDelay: 1.6147949
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -26602,7 +26602,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 16.50624
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 514895213661892010}
   meshFilter: {fileID: 2913784790553974244}
@@ -26770,7 +26770,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5194114
+  breakDelay: 1.268498
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -26797,7 +26797,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 13.673875
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4783899746091678057}
   meshFilter: {fileID: 4497464431626370051}
@@ -26923,7 +26923,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3452039
+  breakDelay: 1.258247
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -26950,7 +26950,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 7.065602
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2939632917219966665}
   meshFilter: {fileID: 4006159298729248769}
@@ -27085,7 +27085,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.72445
+  breakDelay: 1.532003
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -27112,7 +27112,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 13.954587
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 7127120172182054718}
   meshFilter: {fileID: 7552675143508016847}
@@ -27180,24 +27180,24 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 7797043510308942810}
-    distance: 2.5964618
-    dir: {x: -0.37633613, y: -0.6539261, z: 0.6563168}
-  - component: {fileID: 8379277126605818251}
-    distance: 2.8975146
-    dir: {x: -0.5574341, y: -0.5859829, z: 0.5881253}
-  - component: {fileID: 5654495111723904400}
-    distance: 2.2302814
-    dir: {x: -0.43812513, y: -0.761291, z: 0.47799823}
   - component: {fileID: 8248844635417942530}
     distance: 2.574516
     dir: {x: -0.6273697, y: -0.65949994, z: 0.4140858}
-  - component: {fileID: 3456954635976197940}
-    distance: 5.0601177
-    dir: {x: 0, y: 1, z: 0}
+  - component: {fileID: 5654495111723904400}
+    distance: 2.2302814
+    dir: {x: -0.43812513, y: -0.761291, z: 0.47799823}
   - component: {fileID: 748005452011850484}
     distance: 1.956934
     dir: {x: 0, y: -1, z: -0.000007797294}
+  - component: {fileID: 8379277126605818251}
+    distance: 2.8975146
+    dir: {x: -0.5574341, y: -0.5859829, z: 0.5881253}
+  - component: {fileID: 7797043510308942810}
+    distance: 2.5964618
+    dir: {x: -0.37633613, y: -0.6539261, z: 0.6563168}
+  - component: {fileID: 3456954635976197940}
+    distance: 5.0601177
+    dir: {x: 0, y: 1, z: 0}
   otherConnectedParts:
   - component: {fileID: 3456954635976197940}
     distance: 5.0601177
@@ -27253,7 +27253,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.24673675
+  breakDelay: 0.83595383
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -27280,7 +27280,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 11.067686
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1014233110732481620}
   meshFilter: {fileID: 2883581832235563557}
@@ -27457,7 +27457,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.3226087
+  breakDelay: 0.21959193
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -27484,7 +27484,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 6.4888268
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6234903435004868640}
   meshFilter: {fileID: 1885065609769388448}
@@ -27534,28 +27534,28 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 7506000623594730574}
+  - component: {fileID: 4879380522416911853}
+    distance: 7.6260777
+    dir: {x: 0.77452475, y: 0.032606676, z: -0.63170266}
+  - component: {fileID: 3805225845491860453}
+    distance: 2.2773743
+    dir: {x: -1, y: 0, z: 0}
+  - component: {fileID: 357824366485851299}
     distance: 6.132397
     dir: {x: -0.39183834, y: -0.87319654, z: 0.28981113}
   - component: {fileID: 3228834847745476716}
     distance: 7.114387
     dir: {x: 0.3162906, y: -0.2336584, z: -0.9194368}
-  - component: {fileID: 6408206062217556737}
-    distance: 2.2773743
-    dir: {x: -1, y: 0, z: 0}
-  - component: {fileID: 4512252430546434401}
-    distance: 7.8011913
-    dir: {x: 0.7571389, y: -0.2130875, z: -0.6175228}
-  - component: {fileID: 357824366485851299}
+  - component: {fileID: 7506000623594730574}
     distance: 6.132397
     dir: {x: -0.39183834, y: -0.87319654, z: 0.28981113}
-  - component: {fileID: 4879380522416911853}
-    distance: 7.6260777
-    dir: {x: 0.77452475, y: 0.032606676, z: -0.63170266}
   - component: {fileID: 4324402389178213097}
     distance: 8.173992
     dir: {x: 0.27526888, y: 0.85309505, z: -0.44323334}
-  - component: {fileID: 3805225845491860453}
+  - component: {fileID: 4512252430546434401}
+    distance: 7.8011913
+    dir: {x: 0.7571389, y: -0.2130875, z: -0.6175228}
+  - component: {fileID: 6408206062217556737}
     distance: 2.2773743
     dir: {x: -1, y: 0, z: 0}
   otherConnectedParts:
@@ -27616,7 +27616,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.45868403
+  breakDelay: 0.982841
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -27643,7 +27643,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 17.37635
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 9076801831605124740}
   meshFilter: {fileID: 3305261432808521999}
@@ -27708,12 +27708,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 5157666708723130968}
-    distance: 0
-    dir: {x: 0, y: 0, z: 0}
   - component: {fileID: 5069139350308891689}
     distance: 7.1679187
     dir: {x: -0.9549475, y: -0.0249105, z: 0.29572755}
+  - component: {fileID: 5157666708723130968}
+    distance: 0
+    dir: {x: 0, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 5816816037004262263}
     distance: 0
@@ -27760,7 +27760,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5394258
+  breakDelay: 0.56034017
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -27787,7 +27787,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 12.539516
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 7233344464544834108}
   meshFilter: {fileID: 8631192803152999300}
@@ -27846,15 +27846,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 5325757901176578714}
-    distance: 5.925125
-    dir: {x: -1, y: 0, z: 0}
-  - component: {fileID: 5066785321447759560}
-    distance: 4.606799
-    dir: {x: -0.76928586, y: 0.063944094, z: -0.6356969}
   - component: {fileID: 1097991609658222410}
     distance: 6.5353875
     dir: {x: -0.20658731, y: -0.2543626, z: 0.9447864}
+  - component: {fileID: 5066785321447759560}
+    distance: 4.606799
+    dir: {x: -0.76928586, y: 0.063944094, z: -0.6356969}
+  - component: {fileID: 5325757901176578714}
+    distance: 5.925125
+    dir: {x: -1, y: 0, z: 0}
   - component: {fileID: 8171377626494596388}
     distance: 5.8175273
     dir: {x: 0.8154358, y: -0.28574964, z: -0.50339997}
@@ -27907,7 +27907,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9824734
+  breakDelay: 1.0203891
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -27934,7 +27934,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 13.614024
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1412611835844349763}
   meshFilter: {fileID: 5599529885418692715}
@@ -28069,7 +28069,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2970605
+  breakDelay: 0.45663357
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -28096,7 +28096,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 5.63295
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1310426262557232159}
   meshFilter: {fileID: 5788109718386731797}
@@ -28176,15 +28176,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 5999127302915880084}
-    distance: 0.638031
-    dir: {x: -1, y: 0, z: 0}
   - component: {fileID: 6569621595434964806}
     distance: 0.63801575
     dir: {x: 0, y: 0.0000001518106, z: -1}
   - component: {fileID: 1534571558363326290}
     distance: 0.9023013
     dir: {x: -0.70711523, y: 0.000000107345016, z: -0.7070983}
+  - component: {fileID: 5999127302915880084}
+    distance: 0.638031
+    dir: {x: -1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 5999127302915880084}
     distance: 0.638031
@@ -28231,7 +28231,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7198771
+  breakDelay: 0.6752809
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -28258,7 +28258,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 6.100296
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3950086302308852298}
   meshFilter: {fileID: 4908928907750640916}
@@ -28360,7 +28360,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8032969
+  breakDelay: 1.6240479
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -28387,7 +28387,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 14.0797615
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5157364796560176227}
   meshFilter: {fileID: 1239814824922551780}
@@ -28519,7 +28519,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.451214
+  breakDelay: 0.34770304
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -28546,7 +28546,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 18.388247
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4764160984372425393}
   meshFilter: {fileID: 5222933242219919592}
@@ -28626,12 +28626,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 3948446990940891589}
-    distance: 2.2828789
-    dir: {x: 0.75285363, y: 0, z: 0.658188}
   - component: {fileID: 5954430356329523691}
     distance: 0
     dir: {x: 0, y: 0, z: 0}
+  - component: {fileID: 3948446990940891589}
+    distance: 2.2828789
+    dir: {x: 0.75285363, y: 0, z: 0.658188}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 332.18292, y: 498.27435}
@@ -28669,7 +28669,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9663726
+  breakDelay: 1.7593235
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -28696,7 +28696,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 3.321829
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 508623642695645300}
   meshFilter: {fileID: 4037282603192109252}
@@ -28813,7 +28813,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.36135763
+  breakDelay: 1.2483709
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -28840,7 +28840,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 15.549341
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5450380280583037919}
   meshFilter: {fileID: 4915347413300301371}
@@ -28902,12 +28902,12 @@ MonoBehaviour:
   - component: {fileID: 5069139350308891689}
     distance: 4.2427673
     dir: {x: 1, y: 0, z: 0}
-  - component: {fileID: 6328790307385030958}
-    distance: 4.2427673
-    dir: {x: 1, y: 0, z: 0}
   - component: {fileID: 2675367230923914708}
     distance: 0
     dir: {x: 0, y: 0, z: 0}
+  - component: {fileID: 6328790307385030958}
+    distance: 4.2427673
+    dir: {x: 1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 1543610065088716264}
     distance: 3.9030738
@@ -28969,7 +28969,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1864314
+  breakDelay: 0.5807387
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -28996,7 +28996,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 10.038333
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6133051441808235504}
   meshFilter: {fileID: 7019078565969572010}
@@ -29055,12 +29055,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 5703489269235440071}
-    distance: 4.2427673
-    dir: {x: -1, y: 0, z: 0}
   - component: {fileID: 5069139350308891689}
     distance: 0
     dir: {x: 0, y: 0, z: 0}
+  - component: {fileID: 5703489269235440071}
+    distance: 4.2427673
+    dir: {x: -1, y: 0, z: 0}
   - component: {fileID: 6328790307385030958}
     distance: 0
     dir: {x: 0, y: 0, z: 0}
@@ -29104,7 +29104,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.37552935
+  breakDelay: 1.5215368
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -29131,7 +29131,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 8.554363
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8599008429247838361}
   meshFilter: {fileID: 3797248220533374631}
@@ -29178,15 +29178,15 @@ MonoBehaviour:
   - component: {fileID: 8294520783408055611}
     distance: 10.780766
     dir: {x: 0.76875484, y: 0.15096796, z: -0.62146986}
+  - component: {fileID: 54423406619926628}
+    distance: 9.945328
+    dir: {x: -1, y: 0, z: 0}
   - component: {fileID: 2489181021053704702}
     distance: 8.891957
     dir: {x: -0.55186564, y: -0.34177977, z: 0.760678}
   - component: {fileID: 9051583583845381451}
     distance: 6.0386815
     dir: {x: 0.060922142, y: -0.5032703, z: 0.8619788}
-  - component: {fileID: 54423406619926628}
-    distance: 9.945328
-    dir: {x: -1, y: 0, z: 0}
   otherConnectedParts:
   - component: {fileID: 9051583583845381451}
     distance: 6.0386815
@@ -29233,7 +29233,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7932242
+  breakDelay: 0.52884954
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -29260,7 +29260,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 20.230766
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 9180874206426556754}
   meshFilter: {fileID: 795033107903475598}
@@ -29352,15 +29352,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - component: {fileID: 3778523702587628009}
+    distance: 5.4696655
+    dir: {x: -1, y: 0, z: 0}
   - component: {fileID: 4474046994235740601}
     distance: 0
     dir: {x: 0, y: 0, z: 0}
   - component: {fileID: 7131179292189032475}
     distance: 5.4696655
     dir: {x: 1, y: 0, z: 0}
-  - component: {fileID: 3778523702587628009}
-    distance: 5.4696655
-    dir: {x: -1, y: 0, z: 0}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1244.6987, y: 1867.0481}
@@ -29398,7 +29398,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.857549
+  breakDelay: 1.558016
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -29425,7 +29425,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 12.446987
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8617497939662502569}
   meshFilter: {fileID: 4730274527290018447}
@@ -29556,12 +29556,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - component: {fileID: 343041179824834222}
-    distance: 4.1629286
-    dir: {x: -0.24796782, y: -0.00000091634945, z: 0.9687683}
   - component: {fileID: 2489181021053704702}
     distance: 5.500523
     dir: {x: -0.9590097, y: -0.00000034675767, z: 0.28337315}
+  - component: {fileID: 343041179824834222}
+    distance: 4.1629286
+    dir: {x: -0.24796782, y: -0.00000091634945, z: 0.9687683}
   - component: {fileID: 5366261655296593346}
     distance: 6.0386815
     dir: {x: -0.060922142, y: 0.5032703, z: -0.8619788}
@@ -29611,7 +29611,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.7563731
+  breakDelay: 1.2801849
   minBottomAngle: 120
   affectiveRange: 0.5
   castLayer:
@@ -29638,7 +29638,7 @@ MonoBehaviour:
   despawnTime: 3
   forceShowConnection: 0
   meshSize: 20.068876
-  minimumPartSize: 5
+  minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6190673571806942774}
   meshFilter: {fileID: 2443560442134903262}
