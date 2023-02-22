@@ -14,6 +14,10 @@ public class BreakablePart : BreakableComponent
 
     protected float freeToStayTime = 5f;
     protected float freeToStayTime_now = 0f;
+    
+    protected float CheckBottomTime = 5f;
+    protected float CheckBottomTime_now = 0f;
+    
     protected float moveDistance = 10f;
     protected Vector3 lastPosition;
 
@@ -29,8 +33,19 @@ public class BreakablePart : BreakableComponent
 
     private void FixedUpdate()
     {
-        if (breakableState == BreakableState.Free)
+        if (breakableState == BreakableState.Hold)
         {
+            CheckBottomTime_now -= Time.deltaTime;
+            if (CheckBottomTime_now < 0)
+            {
+                if (!HasBottomPart())
+                {
+                    Break(new Vector3(), new Vector3());
+
+                }
+
+                CheckBottomTime_now = CheckBottomTime;
+            }
         }
     }
 
@@ -44,8 +59,11 @@ public class BreakablePart : BreakableComponent
                 {
                     foreach (BreakableData connectedPart in otherConnectedParts)
                     {
-                        Gizmos.color = Color.magenta;
-                        Gizmos.DrawLine(transform.position, connectedPart.Component.transform.position);
+                        if (connectedPart.Component)
+                        {
+                            Gizmos.color = Color.magenta;
+                            Gizmos.DrawLine(transform.position, connectedPart.Component.transform.position);
+                        }
                     }
                 }
 
@@ -53,9 +71,11 @@ public class BreakablePart : BreakableComponent
                 {
                     foreach (BreakableData connectedPart in connectedParts)
                     {
-                        Gizmos.color = Color.white;
-
-                        Gizmos.DrawLine(transform.position, connectedPart.Component.transform.position);
+                        if (connectedPart.Component)
+                        {
+                            Gizmos.color = Color.white;
+                            Gizmos.DrawLine(transform.position, connectedPart.Component.transform.position);
+                        }
                     }
                 }
             }

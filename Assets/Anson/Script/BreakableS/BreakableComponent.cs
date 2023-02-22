@@ -419,15 +419,9 @@ public class BreakableComponent : MonoBehaviour
 
         foreach (BreakableData connectedPart in connectedParts)
         {
-            // float dot = Vector3.Dot(Vector3.up, connectedPart.Dir);
-            //
-            // if(dot>cos)
-            // {
-            //     return true;
-            // }
-
             //sht makes no sense but it's dotting the other way
-            if (Vector3.Angle(Vector3.up, connectedPart.Dir) > minBottomAngle)
+            Vector3 dir = connectedPart.Component.transform.position - transform.position;
+            if (Vector3.Angle(Vector3.up, dir) > minBottomAngle)
             {
                 return true;
             }

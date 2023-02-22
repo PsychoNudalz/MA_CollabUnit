@@ -77,6 +77,10 @@ public class Sound : SoundAbstract
 
     public override bool IsPlaying()
     {
+        if (!source)
+        {
+            return false;
+        }
         return source.isPlaying;
     }
 
