@@ -77,6 +77,10 @@ public class Sound : SoundAbstract
 
     public override bool IsPlaying()
     {
+        if (!source)
+        {
+            return false;
+        }
         return source.isPlaying;
     }
 
@@ -90,7 +94,6 @@ public class Sound : SoundAbstract
         source.UnPause();
     }
 
-    [ContextMenu("Play")]
     public override void Play()
     {
         if (!source.isPlaying)
@@ -99,7 +102,6 @@ public class Sound : SoundAbstract
         }
     }
 
-    [ContextMenu("PlayF")]
     public override void PlayF()
     {
         source.volume = baseVolume * (1f + UnityEngine.Random.Range(-volumeVariance / 2f, volumeVariance / 2f));
@@ -108,7 +110,6 @@ public class Sound : SoundAbstract
         source.Play();
     }
 
-    [ContextMenu("Stop")]
     public override void Stop()
     {
         source.Stop();
@@ -155,6 +156,10 @@ public class Sound : SoundAbstract
 
     public override void SetClip(AudioClip audioClip)
     {
+        if (!source)
+        {
+            source = GetComponent<AudioSource>();
+        }
         source.clip = audioClip;
     }
 }

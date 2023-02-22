@@ -78,16 +78,19 @@ public class RandomSound : SoundAbstract
         return GetRandomSound().IsPlaying();
     }
 
+    [ContextMenu("Play")]
     public override void Play()
     {
         GetRandomSound().Play();
         
     }
+    [ContextMenu("PlayF")]
 
     public override void PlayF()
     {
         GetRandomSound().PlayF();        
     }
+    [ContextMenu("Stop")]
 
     public override void Stop()
     {
@@ -113,7 +116,6 @@ public class RandomSound : SoundAbstract
                 return temp;
             }
         }
-
         return temp;
     } 
 }

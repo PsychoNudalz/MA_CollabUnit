@@ -124,4 +124,13 @@ public class CatInputController : MonoBehaviour
         float angle = Vector3.SignedAngle(Vector3.forward, cameraForward, transform.up);
         return Quaternion.Euler(0, 0, -angle);
     }
+    
+    public static Quaternion GetAngle_World_Static()
+    {
+        Vector3 cameraForward = Camera.main.transform.forward;
+        cameraForward.y = 0;
+        cameraForward = cameraForward.normalized;
+        float angle = Vector3.SignedAngle(Vector3.forward, cameraForward, Vector3.up);
+        return Quaternion.Euler(0, 0, -angle);
+    }
 }

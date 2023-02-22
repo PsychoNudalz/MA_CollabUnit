@@ -317,6 +317,11 @@ public class QuadrupedMovementController : MonoBehaviour
 
     public void OnMove(Vector2 moveDir)
     {
+        bool startToMove = moveDir.magnitude - inputDir_Local.magnitude > 0.1f&&moveDir.magnitude > 0.1f;
+        if (startToMove && isGrounded && quadState == QuadState.Ragdoll)
+        {
+            ChangeQuadState(QuadState.Upright);
+        }
         if (!moveDir.Equals(inputDir_Local))
         {
             inputDir_Local = moveDir;
@@ -326,6 +331,12 @@ public class QuadrupedMovementController : MonoBehaviour
         {
             inputDir_LastForward = inputDir_World;
         }
+    }
+
+    public void OnMove_World(Vector3 world)
+    {
+        world = Quaternion.Euler(0, -transform.eulerAngles.y, 0) * world;
+        OnMove(new Vector2(world.x,world.z));
     }
 
     [ContextMenu("Upright")]

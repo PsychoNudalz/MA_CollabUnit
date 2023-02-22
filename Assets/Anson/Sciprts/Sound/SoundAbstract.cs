@@ -12,13 +12,10 @@ public abstract class SoundAbstract : MonoBehaviour
         set => soundManager = value;
     }
     
-    [ContextMenu("Play")]
     public abstract void Play();
 
-    [ContextMenu("PlayF")]
     public abstract void PlayF();
 
-    [ContextMenu("Stop")]
     public abstract void Stop();
     
     public abstract bool IsPlaying();

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using HighlightPlus;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class FootMovementSphere : MonoBehaviour
 {
@@ -76,6 +77,13 @@ public class FootMovementSphere : MonoBehaviour
     
     private float swipeTime_Now = 0f;
     private Vector3 swipeForce = new Vector3();
+
+    [Header("Footstep")]
+    [SerializeField]
+    private SoundAbstract footstepSound;
+
+    [SerializeField]
+    private VisualEffect vfx_Footstep;
 
     [Space(10)]
     [SerializeField]
@@ -348,10 +356,14 @@ public class FootMovementSphere : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        
+        
         switch (footState)
         {
             case FootState.Move:
             {
+                PlayFootStep();
+
                 if (Time.time - launchCollisionIgnoreTime_Set > launchCollisionIgnoreTime)
                 {
                     // Debug.Log($"{this} collided {collision.collider.name}");
@@ -368,6 +380,7 @@ public class FootMovementSphere : MonoBehaviour
                 break;
             }
             case FootState.Falling:
+                PlayFootStep();
                 if (GroundCheck(transform.position))
                 {
                     SetFootIdle(collision);
@@ -376,6 +389,7 @@ public class FootMovementSphere : MonoBehaviour
                 {
                     SetFootFall(collision);
                 }
+
 
                 break;
 
@@ -392,9 +406,17 @@ public class FootMovementSphere : MonoBehaviour
                 //         SetFootFall(collision);
                 //     }
                 // }
+                PlayFootStep();
+
 
                 break;
         }
+    }
+
+    private void PlayFootStep()
+    {
+        footstepSound.PlayF();
+        vfx_Footstep.Play();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -507,7 +529,7 @@ public class FootMovementSphere : MonoBehaviour
     public void Swipe(Vector3 initialForce, Vector3 sideForce)
     {
         ChangeState(FootState.Swipe);
-        print($"{this} Swipe: {initialForce}");
+        // print($"{this} Swipe: {initialForce}");
 
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
