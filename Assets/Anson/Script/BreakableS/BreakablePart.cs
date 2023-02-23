@@ -91,6 +91,11 @@ public class BreakablePart : BreakableComponent
 
     private void OnCollisionEnter(Collision collision)
     {
+        CollisionEnterBehaviour(collision);
+    }
+
+    protected virtual void CollisionEnterBehaviour(Collision collision)
+    {
         if (breakableState == BreakableState.Telekinesis_Shoot)
         {
             ChangeState(BreakableState.Free);
@@ -103,7 +108,6 @@ public class BreakablePart : BreakableComponent
             }
         }
     }
-
 
 
     bool RBInConnected(Rigidbody rb)
@@ -142,6 +146,8 @@ public class BreakablePart : BreakableComponent
         
         AddScore();
         PlayBreakEffects();
+        breakEvent.Invoke();
+
 
         if (breakableState != BreakableState.Despawn)
         {
@@ -247,13 +253,6 @@ public class BreakablePart : BreakableComponent
         }
         else
         {
-            // if (finalBrokeForce < breakingForce.x)
-            // {
-            //     Debug.LogWarning($"{this} break force {finalBrokeForce} not reaching limit.");
-            //     return;
-            // }
-            // print($"{this} Breaking with {finalBrokeForce}");
-
             breakableState = BreakableState.InitialBreak;
             StartCoroutine(DelayToFullBreak());
             selfRB.isKinematic = false;

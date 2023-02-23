@@ -265,6 +265,7 @@ public class BreakableComponent : MonoBehaviour
         originalNoBottom = !HasBottomPart();
     }
 
+    [ContextMenu("Initialise")]
     public virtual void Initialise()
     {
         if (!selfRB)
@@ -568,7 +569,6 @@ public class BreakableComponent : MonoBehaviour
 
     protected virtual void PlayBreakEffects()
     {
-        breakEvent.Invoke();
         if (breakableStructureController)
         {
             breakableStructureController.QueueBreakEffects(transform.position, meshFilter.mesh);
