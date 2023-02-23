@@ -27,21 +27,7 @@ public class BreakableCollective : BreakableComponent
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.TryGetComponent(out BreakablePart bp))
-        {
-            if (!bp.Parent.Equals(parent) || bp.BreakableState == BreakableState.Free)
-            {
-                CollisionBreak(bp.SelfRb, collision);
-            }
-        }
-        else if (collision.gameObject.TryGetComponent(out MovableObject mo))
-        {
-            CollisionBreak(mo, collision);
-        }
-        else if (collision.gameObject.TryGetComponent(out Rigidbody rb))
-        {
-            CollisionBreak(rb, collision);
-        }
+        EvaluateCollisionBreak(collision);
     }
 
 
@@ -54,7 +40,7 @@ public class BreakableCollective : BreakableComponent
         float affectedRange, Vector2 breakForce,
         float forceTransfer,
         LayerMask bpLayer, AnimationCurve transferToDot, float minSize, float breakDelay, float bottomAngle,
-        PhysicMaterial pm, UnityEvent breakEvent1, float despawnTime1, UnityEvent despawnEvent1)
+        PhysicMaterial pm, UnityEvent breakEvent1, float despawnTime1, UnityEvent despawnEvent1, LayerMask groundLayer1)
     {
         if (!shell || !fractureParent)
         {
@@ -65,7 +51,7 @@ public class BreakableCollective : BreakableComponent
         parent = p;
         Initialise();
         InitialiseValues(mass, bsc, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot, minSize,
-            breakDelay, bottomAngle, pm,  breakEvent1, despawnTime1, despawnEvent1);
+            breakDelay, bottomAngle, pm,  breakEvent1, despawnTime1, despawnEvent1, groundLayer1);
 
         fractureParent.SetActive(true);
 
@@ -108,7 +94,7 @@ public class BreakableCollective : BreakableComponent
             breakableComponent.AddComponents(pm);
             breakableComponent.Initialise(gameObject, bsc, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer,
                 transferToDot,
-                minimumPartSize, bsc.BreakDelay, minBottomAngle, pm, breakEvent, despawnTime, despawnEvent);
+                minimumPartSize, bsc.BreakDelay, minBottomAngle, pm, breakEvent, despawnTime, despawnEvent, groundLayer);
             
         }
 

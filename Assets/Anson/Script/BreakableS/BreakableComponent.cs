@@ -110,6 +110,15 @@ public class BreakableComponent : MonoBehaviour
     [SerializeField]
     protected float minBottomAngle = 80f;
 
+    [SerializeField]
+    protected LayerMask groundLayer;
+
+    [SerializeField]
+    protected bool isGroundPiece = false;
+
+    [SerializeField]
+    protected bool originalNoBottom = false;
+
     [Header("Connection")]
     [SerializeField]
     protected float affectiveRange = 10f;
@@ -207,7 +216,8 @@ public class BreakableComponent : MonoBehaviour
     public virtual void Initialise(GameObject p, BreakableStructureController bsc, float mass, float drag,
         float affectedRange, Vector2 breakForce,
         float forceTransfer, LayerMask bpLayer, AnimationCurve transferToDot, float minSize, float breakDelay,
-        float bottomAngle, PhysicMaterial pm, UnityEvent breakEvent1, float despawnTime1, UnityEvent despawnEvent1)
+        float bottomAngle, PhysicMaterial pm, UnityEvent breakEvent1, float despawnTime1, UnityEvent despawnEvent1,
+        LayerMask groundLayer1)
     {
         if (parent && !parent.TryGetComponent(out BreakableCollective _))
         {
@@ -221,14 +231,14 @@ public class BreakableComponent : MonoBehaviour
 
         Initialise();
         InitialiseValues(mass, bsc, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot, minSize,
-            breakDelay, bottomAngle, pm, breakEvent1, despawnTime1, despawnEvent1);
+            breakDelay, bottomAngle, pm, breakEvent1, despawnTime1, despawnEvent1, groundLayer1);
     }
 
     protected virtual void InitialiseValues(float mass, BreakableStructureController bsc, float drag,
         float affectedRange, Vector2 breakForce,
         float forceTransfer,
         LayerMask bpLayer, AnimationCurve transferToDot, float minSize, float breakDelay, float bottomAngle,
-        PhysicMaterial pm, UnityEvent breakEvent1, float despawnTime1, UnityEvent despawnEvent1)
+        PhysicMaterial pm, UnityEvent breakEvent1, float despawnTime1, UnityEvent despawnEvent1, LayerMask groundLayer1)
     {
         breakableStructureController = bsc;
         physicMaterial = pm;
@@ -250,6 +260,9 @@ public class BreakableComponent : MonoBehaviour
         breakEvent = breakEvent1;
         despawnTime = despawnTime1;
         despawnEvent = despawnEvent1;
+        groundLayer = groundLayer1;
+        isGroundPiece = GroundCheck();
+        originalNoBottom = !HasBottomPart();
     }
 
     public virtual void Initialise()
@@ -279,6 +292,20 @@ public class BreakableComponent : MonoBehaviour
 
         connectedParts = new List<BreakableData>();
         otherConnectedParts = new List<BreakableData>();
+    }
+
+    protected virtual bool GroundCheck()
+    {
+        bool b = false;
+        if (breakableStructureController)
+        {
+            b =  Physics.CheckSphere(transform.position + Vector3.down * meshSize, meshSize,
+                groundLayer);
+        }
+
+        // b = b || !HasBottomPart();
+
+        return b;
     }
 
 
@@ -415,6 +442,11 @@ public class BreakableComponent : MonoBehaviour
         {
             return false;
         }
+
+        if (isGroundPiece)
+        {
+            return true;
+        }
         // double cos = Math.Cos(minBottomAngle*Mathf.Deg2Rad);
 
         foreach (BreakableData connectedPart in connectedParts)
@@ -548,6 +580,25 @@ public class BreakableComponent : MonoBehaviour
         if (breakableStructureController)
         {
             breakableStructureController.AddScore(meshSize);
+        }
+    }
+
+    protected void EvaluateCollisionBreak(Collision collision)
+    {
+        if (collision.gameObject.TryGetComponent(out BreakablePart bp))
+        {
+            if (!bp.Parent.Equals(parent) || bp.BreakableState == BreakableState.Free)
+            {
+                CollisionBreak(bp.selfRB);
+            }
+        }
+        else if (collision.gameObject.TryGetComponent(out MovableObject mo))
+        {
+            CollisionBreak(mo.Rb);
+        }
+        else if (collision.gameObject.TryGetComponent(out Rigidbody rb))
+        {
+            CollisionBreak(rb);
         }
     }
 }

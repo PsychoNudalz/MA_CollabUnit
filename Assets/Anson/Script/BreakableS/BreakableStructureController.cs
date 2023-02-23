@@ -62,6 +62,10 @@ public class BreakableStructureController : MonoBehaviour
 
     [SerializeField]
     private float minBottomAngle;
+    [SerializeField]
+    private LayerMask groundLayerMask;
+
+    public LayerMask GroundLayerMask => groundLayerMask;
 
     [Header("Score")]
     private float scorePerMass = 10f;
@@ -205,13 +209,13 @@ public class BreakableStructureController : MonoBehaviour
     private void SetBP(BreakablePart bp)
     {
         bp.Initialise(gameObject, this, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot,
-            minimumPartSize, BreakDelay, minBottomAngle, physicMaterial,  breakEvent, despawnTime, despawnEvent);
+            minimumPartSize, BreakDelay, minBottomAngle, physicMaterial,  breakEvent, despawnTime, despawnEvent, groundLayerMask);
     }
 
     private void SetBC(BreakableCollective breakableCollective)
     {
         breakableCollective.Initialise(gameObject, this, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot,
-            minimumPartSize, BreakDelay, minBottomAngle, physicMaterial, breakEvent, despawnTime, despawnEvent);
+            minimumPartSize, BreakDelay, minBottomAngle, physicMaterial, breakEvent, despawnTime, despawnEvent, groundLayerMask);
     }
 
     public void ResetConnections()

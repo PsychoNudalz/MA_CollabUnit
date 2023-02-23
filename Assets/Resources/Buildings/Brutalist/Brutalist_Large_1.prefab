@@ -496,6 +496,9 @@ MonoBehaviour:
   minimumPartSize: 10
   breakDelayRange: {x: 0.2, y: 2}
   minBottomAngle: 120
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
   effectsController: {fileID: 2267191065708741401}
   breakEvent:
     m_PersistentCalls:
@@ -593,8 +596,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4230047
+  breakDelay: 1.1375782
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -9480,8 +9488,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2179042
+  breakDelay: 0.49852258
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -9633,8 +9646,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.96504766
+  breakDelay: 1.6256433
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -9831,8 +9849,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.55230796
+  breakDelay: 0.33742845
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -9996,8 +10019,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.7520275
+  breakDelay: 1.3477013
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -10143,8 +10171,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1623552
+  breakDelay: 1.0283061
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -10344,8 +10377,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.92945474
+  breakDelay: 0.33115637
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -10500,8 +10538,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7416046
+  breakDelay: 1.9078691
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -10653,8 +10696,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.63015056
+  breakDelay: 0.33166257
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -10785,8 +10833,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6994059
+  breakDelay: 0.6653718
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -10950,8 +11003,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3319489
+  breakDelay: 0.78019947
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -11169,8 +11227,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1125703
+  breakDelay: 0.7955582
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -11316,8 +11379,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0269237
+  breakDelay: 0.2938842
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -11499,8 +11567,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.9426791
+  breakDelay: 0.5097458
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -11694,8 +11767,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.32366872
+  breakDelay: 1.4650967
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -11868,8 +11946,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.5112843
+  breakDelay: 0.40028098
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -12060,8 +12143,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7275833
+  breakDelay: 0.9282722
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -12246,8 +12334,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.925474
+  breakDelay: 1.6600285
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -12477,8 +12570,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.586129
+  breakDelay: 0.36815798
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -12657,8 +12755,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8297347
+  breakDelay: 0.68924147
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -12816,8 +12919,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6088983
+  breakDelay: 1.5454744
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -12960,8 +13068,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.52550924
+  breakDelay: 0.2888545
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -13158,8 +13271,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.46937555
+  breakDelay: 1.3868668
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -13302,8 +13420,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5439091
+  breakDelay: 1.6988088
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -13488,8 +13611,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0922457
+  breakDelay: 0.9981704
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -13650,8 +13778,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.9151047
+  breakDelay: 0.5944197
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -13797,8 +13930,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5566021
+  breakDelay: 1.047991
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -13965,8 +14103,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1378367
+  breakDelay: 0.54223466
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -14121,8 +14264,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.38439846
+  breakDelay: 0.74903095
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -14262,8 +14410,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.31651044
+  breakDelay: 0.42535427
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -14439,8 +14592,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.49205974
+  breakDelay: 1.175925
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -14628,8 +14786,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.74182415
+  breakDelay: 1.7879944
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -14796,8 +14959,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.871994
+  breakDelay: 0.8450845
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -14943,8 +15111,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4558603
+  breakDelay: 0.64033824
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -15117,8 +15290,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.46304488
+  breakDelay: 1.9707079
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -15240,8 +15418,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3851669
+  breakDelay: 1.6546801
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -15375,8 +15558,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.8382906
+  breakDelay: 1.2952089
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -15537,8 +15725,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0293295
+  breakDelay: 1.1576247
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -15687,8 +15880,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.056219
+  breakDelay: 0.62475955
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -15909,8 +16107,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.97015005
+  breakDelay: 0.8813138
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -16050,8 +16253,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8289182
+  breakDelay: 1.9755836
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -16209,8 +16417,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5965939
+  breakDelay: 1.1852703
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -16380,8 +16593,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0615722
+  breakDelay: 1.8174279
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -16560,8 +16778,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5223013
+  breakDelay: 0.66307855
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -16719,8 +16942,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4602374
+  breakDelay: 0.24433349
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -16905,8 +17133,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.73258597
+  breakDelay: 1.919567
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -17046,8 +17279,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.49005085
+  breakDelay: 0.7375994
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -17268,8 +17506,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0595891
+  breakDelay: 0.21151784
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -17487,8 +17730,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.40938333
+  breakDelay: 0.6543801
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -17649,8 +17897,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.607283
+  breakDelay: 1.0680647
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -17814,8 +18067,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.6160484
+  breakDelay: 0.98924464
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -17958,8 +18216,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.81119853
+  breakDelay: 0.931781
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -18090,8 +18353,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.38073197
+  breakDelay: 1.620612
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -18285,8 +18553,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.79265
+  breakDelay: 0.94169825
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -18450,8 +18723,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.42003965
+  breakDelay: 0.65829545
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -18675,8 +18953,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7367914
+  breakDelay: 0.390009
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -18831,8 +19114,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1526585
+  breakDelay: 1.5268012
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -18999,8 +19287,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.75656813
+  breakDelay: 0.87894315
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -19155,8 +19448,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.38168728
+  breakDelay: 0.9524921
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -19320,8 +19618,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.7953602
+  breakDelay: 1.6980329
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -19470,8 +19773,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1030335
+  breakDelay: 1.999029
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -19632,8 +19940,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.86148995
+  breakDelay: 1.5064362
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -19770,8 +20083,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1323767
+  breakDelay: 1.537497
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -19896,8 +20214,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2912943
+  breakDelay: 1.6510452
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -20037,8 +20360,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2920383
+  breakDelay: 1.9519923
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -20208,8 +20536,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4555888
+  breakDelay: 0.20376754
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -20370,8 +20703,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7456949
+  breakDelay: 1.9826925
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -20547,8 +20885,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6542324
+  breakDelay: 0.7495013
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -20688,8 +21031,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.9247257
+  breakDelay: 0.8978437
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -20859,8 +21207,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9668927
+  breakDelay: 1.9895973
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -21024,8 +21377,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7133371
+  breakDelay: 1.8204306
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -21174,8 +21532,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1575035
+  breakDelay: 1.0912246
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -21429,8 +21792,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8711681
+  breakDelay: 1.22645
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -21597,8 +21965,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.25570476
+  breakDelay: 0.23133679
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -21750,8 +22123,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9528255
+  breakDelay: 1.830334
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -21906,8 +22284,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.6633528
+  breakDelay: 0.9598624
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -22068,8 +22451,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5165904
+  breakDelay: 1.0331273
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -22206,8 +22594,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.280574
+  breakDelay: 0.5922649
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -22407,8 +22800,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5399598
+  breakDelay: 1.0342636
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -22548,8 +22946,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9643936
+  breakDelay: 0.5439903
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -22716,8 +23119,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6378057
+  breakDelay: 1.0790973
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -22863,8 +23271,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1827598
+  breakDelay: 1.8808303
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -22995,8 +23408,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4397997
+  breakDelay: 1.6107533
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -23148,8 +23566,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9885641
+  breakDelay: 0.8814016
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -23283,8 +23706,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.360071
+  breakDelay: 0.7532156
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -23427,8 +23855,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2607342
+  breakDelay: 1.46615
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -23601,8 +24034,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7770035
+  breakDelay: 1.7504376
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -23832,8 +24270,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3575417
+  breakDelay: 1.9826238
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -24087,8 +24530,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6938722
+  breakDelay: 1.4741439
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -24237,8 +24685,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.69349635
+  breakDelay: 1.0904872
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -24429,8 +24882,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2527161
+  breakDelay: 1.5718995
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -24570,8 +25028,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.97155875
+  breakDelay: 0.4284519
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -24741,8 +25204,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.038729
+  breakDelay: 0.23329459
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -24900,8 +25368,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.270158
+  breakDelay: 1.8818039
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -25083,8 +25556,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.7436699
+  breakDelay: 0.57994545
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -25335,8 +25813,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.57768273
+  breakDelay: 1.7261245
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -25470,8 +25953,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.5182791
+  breakDelay: 0.8745298
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -25671,8 +26159,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8504134
+  breakDelay: 0.26447302
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -25872,8 +26365,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.833959
+  breakDelay: 1.141307
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -26007,8 +26505,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5127199
+  breakDelay: 1.9439161
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -26193,8 +26696,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5247619
+  breakDelay: 1.3038977
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -26361,8 +26869,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.20115335
+  breakDelay: 1.1410158
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -26487,8 +27000,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7365279
+  breakDelay: 1.1866508
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -26655,8 +27173,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.23302035
+  breakDelay: 1.4846667
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -26841,8 +27364,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3794113
+  breakDelay: 0.90927404
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -26991,8 +27519,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7960244
+  breakDelay: 0.52105784
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -27123,8 +27656,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8544331
+  breakDelay: 0.58205557
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -27264,8 +27802,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.8770476
+  breakDelay: 0.92622
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -27489,8 +28032,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.35037535
+  breakDelay: 0.95035964
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -27702,8 +28250,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0041382
+  breakDelay: 0.32856643
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -27843,8 +28396,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7658738
+  breakDelay: 0.4258362
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -28002,8 +28560,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9825008
+  breakDelay: 1.1372702
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -28146,8 +28709,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5766755
+  breakDelay: 0.4231143
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -28329,8 +28897,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1342654
+  breakDelay: 1.6569828
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -28485,8 +29058,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.3937499
+  breakDelay: 1.4405376
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -28611,8 +29189,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6923412
+  breakDelay: 0.71143174
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -28776,8 +29359,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.826843
+  breakDelay: 0.24834672
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -28935,8 +29523,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.36646926
+  breakDelay: 0.90986365
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -29109,8 +29702,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3837155
+  breakDelay: 1.448117
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -29277,8 +29875,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7576822
+  breakDelay: 0.57829857
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -29481,8 +30084,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2397809
+  breakDelay: 1.1482537
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -29670,8 +30278,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1109997
+  breakDelay: 1.9264892
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -29856,8 +30469,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3922071
+  breakDelay: 0.89167637
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -30099,8 +30717,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.45159853
+  breakDelay: 0.5711452
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -30243,8 +30866,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6237963
+  breakDelay: 0.97141373
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -30399,8 +31027,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.9587174
+  breakDelay: 1.7459903
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -30561,8 +31194,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0812703
+  breakDelay: 0.8561026
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -30711,8 +31349,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.5264096
+  breakDelay: 0.46260458
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -30903,8 +31546,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3143451
+  breakDelay: 0.2483143
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -31044,8 +31692,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.93284696
+  breakDelay: 0.77855563
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -31290,8 +31943,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.2932911
+  breakDelay: 0.8337263
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -31515,8 +32173,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5135752
+  breakDelay: 1.917959
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -31653,8 +32316,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2187198
+  breakDelay: 0.45550144
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -31824,8 +32492,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9657265
+  breakDelay: 1.7114067
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -31986,8 +32659,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.5571479
+  breakDelay: 0.5124428
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -32187,8 +32865,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.6439296
+  breakDelay: 1.2612766
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -32316,8 +32999,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3667768
+  breakDelay: 0.21009885
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -32538,8 +33226,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.9236361
+  breakDelay: 0.8149598
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -32721,8 +33414,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.8942412
+  breakDelay: 0.68665326
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -32913,8 +33611,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.5554749
+  breakDelay: 0.7638522
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -33063,8 +33766,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4047036
+  breakDelay: 1.034946
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -33213,8 +33921,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9633889
+  breakDelay: 1.3588523
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -33342,8 +34055,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0283954
+  breakDelay: 1.7687558
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -33537,8 +34255,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0547961
+  breakDelay: 1.3792194
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -33720,8 +34443,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.56857693
+  breakDelay: 1.0364077
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -33870,8 +34598,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.8095598
+  breakDelay: 1.3057028
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -33990,8 +34723,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9280726
+  breakDelay: 0.994682
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -34143,8 +34881,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2388723
+  breakDelay: 0.5582094
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -34335,8 +35078,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.9394257
+  breakDelay: 0.80983233
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -34476,8 +35224,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.9449126
+  breakDelay: 1.1496212
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -34620,8 +35373,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.8943717
+  breakDelay: 1.747411
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -34830,8 +35588,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.661023
+  breakDelay: 1.957465
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -35001,8 +35764,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.8455527
+  breakDelay: 0.5862126
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -35139,8 +35907,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.125144
+  breakDelay: 0.80955553
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -35325,8 +36098,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6751829
+  breakDelay: 1.2608917
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -35469,8 +36247,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6056546
+  breakDelay: 1.684905
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -35610,8 +36393,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.786846
+  breakDelay: 1.7538159
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -35847,8 +36635,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2506676
+  breakDelay: 1.436384
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -36087,8 +36880,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.67469555
+  breakDelay: 1.4629751
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -36225,8 +37023,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9038737
+  breakDelay: 0.3385183
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -36399,8 +37202,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.44191122
+  breakDelay: 0.9909505
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -36558,8 +37366,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6521342
+  breakDelay: 1.2806797
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -36804,8 +37617,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6683292
+  breakDelay: 1.0414771
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -36930,8 +37748,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.6570511
+  breakDelay: 1.1765265
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -37092,8 +37915,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.8176742
+  breakDelay: 1.2903619
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -37215,8 +38043,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1398841
+  breakDelay: 0.58034325
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -37392,8 +38225,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.7486226
+  breakDelay: 1.1827128
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -37572,8 +38410,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.57618195
+  breakDelay: 1.7919136
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -37779,8 +38622,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0722785
+  breakDelay: 1.5240984
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -37926,8 +38774,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3705204
+  breakDelay: 0.6497262
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -38076,8 +38929,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.29453695
+  breakDelay: 0.727169
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -38247,8 +39105,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.95978814
+  breakDelay: 0.88076663
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -38409,8 +39272,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.8817565
+  breakDelay: 0.7853922
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -38589,8 +39457,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.39690012
+  breakDelay: 1.9228463
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -38793,8 +39666,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.62533545
+  breakDelay: 1.5203553
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -39006,8 +39884,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.929397
+  breakDelay: 1.6686845
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -39174,8 +40057,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.9524355
+  breakDelay: 1.1202066
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -39348,8 +40236,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.40408695
+  breakDelay: 0.8560427
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -39555,8 +40448,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.28897983
+  breakDelay: 1.6684183
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -39711,8 +40609,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.29586238
+  breakDelay: 0.789408
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -39891,8 +40794,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.24583788
+  breakDelay: 0.25259042
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -40068,8 +40976,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1125832
+  breakDelay: 0.97903377
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -40200,8 +41113,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.91630465
+  breakDelay: 0.5809454
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -40437,8 +41355,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.8086015
+  breakDelay: 1.6145084
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -40605,8 +41528,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.37045848
+  breakDelay: 0.7400032
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -40812,8 +41740,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.63583535
+  breakDelay: 0.21734595
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -40965,8 +41898,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7070485
+  breakDelay: 1.0121698
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -41115,8 +42053,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4720383
+  breakDelay: 1.6534058
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -41256,8 +42199,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4355377
+  breakDelay: 1.9775491
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -41415,8 +42363,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5978884
+  breakDelay: 1.5912337
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -41667,8 +42620,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.23671536
+  breakDelay: 1.2982693
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -41853,8 +42811,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2797337
+  breakDelay: 0.755332
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -42030,8 +42993,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.39771485
+  breakDelay: 1.7842678
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -42162,8 +43130,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.92075497
+  breakDelay: 1.1676259
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -42321,8 +43294,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.5745231
+  breakDelay: 0.3861807
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -42465,8 +43443,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.3256115
+  breakDelay: 0.88698334
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -42705,8 +43688,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0286055
+  breakDelay: 0.6137569
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -42843,8 +43831,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5457323
+  breakDelay: 0.4533943
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -42990,8 +43983,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4298362
+  breakDelay: 1.1984268
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -43122,8 +44120,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7233366
+  breakDelay: 0.97934705
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -43320,8 +44323,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.25496686
+  breakDelay: 0.60934305
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -43473,8 +44481,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.85591054
+  breakDelay: 0.5265034
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -43623,8 +44636,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.5649085
+  breakDelay: 1.7149086
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -43746,8 +44764,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7897444
+  breakDelay: 0.9248761
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -43941,8 +44964,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0634366
+  breakDelay: 1.1590517
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -44070,8 +45098,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.43467808
+  breakDelay: 0.6066199
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -44253,8 +45286,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0106862
+  breakDelay: 0.372224
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -44391,8 +45429,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.4441679
+  breakDelay: 0.50127625
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -44550,8 +45593,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.5808589
+  breakDelay: 0.5427348
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -44673,8 +45721,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.7538797
+  breakDelay: 0.99534655
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -44811,8 +45864,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.6695015
+  breakDelay: 1.4684817
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -44937,8 +45995,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.20505972
+  breakDelay: 1.6888685
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -45102,8 +46165,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8377575
+  breakDelay: 1.7814978
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -45444,8 +46512,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.3394609
+  breakDelay: 0.6726508
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -45573,8 +46646,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9478165
+  breakDelay: 0.34217316
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -45789,8 +46867,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.9908561
+  breakDelay: 0.9597755
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -45948,8 +47031,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4235469
+  breakDelay: 1.2650161
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -46128,8 +47216,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7682445
+  breakDelay: 1.644202
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -46299,8 +47392,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.74514127
+  breakDelay: 1.972437
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -46434,8 +47532,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.5962726
+  breakDelay: 0.65339345
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -46581,8 +47684,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3457979
+  breakDelay: 1.6921144
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -46710,8 +47818,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9480064
+  breakDelay: 0.63516587
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -46854,8 +47967,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3416162
+  breakDelay: 1.6053314
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -47094,8 +48212,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.48474717
+  breakDelay: 1.5874186
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -47235,8 +48358,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8665636
+  breakDelay: 0.5412117
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -47373,8 +48501,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6619003
+  breakDelay: 1.3211716
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -47508,8 +48641,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8877753
+  breakDelay: 1.1192678
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -47649,8 +48787,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.7397893
+  breakDelay: 1.2073994
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -47802,8 +48945,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6428963
+  breakDelay: 1.9281301
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -47976,8 +49124,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0474544
+  breakDelay: 0.48267758
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -48222,8 +49375,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.984079
+  breakDelay: 0.8227786
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -48354,8 +49512,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.8474714
+  breakDelay: 0.69001055
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -48495,8 +49658,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.750068
+  breakDelay: 1.0772374
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -48684,8 +49852,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.48885933
+  breakDelay: 1.1233236
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -48831,8 +50004,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.76546407
+  breakDelay: 0.51434827
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -48984,8 +50162,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.96021044
+  breakDelay: 1.9291806
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -49188,8 +50371,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1643348
+  breakDelay: 0.57213867
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -49473,8 +50661,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.9800026
+  breakDelay: 0.9872287
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -49635,8 +50828,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1597703
+  breakDelay: 1.3085451
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -49851,8 +51049,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.74269575
+  breakDelay: 0.7391733
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -50019,8 +51222,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.5743602
+  breakDelay: 1.3463075
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -50205,8 +51413,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.73048764
+  breakDelay: 1.7952249
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -50352,8 +51565,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.5886596
+  breakDelay: 1.7849969
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -50535,8 +51753,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.9044291
+  breakDelay: 0.8499783
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -50712,8 +51935,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4936934
+  breakDelay: 1.6590255
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -50937,8 +52165,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.9192134
+  breakDelay: 1.1045058
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -51108,8 +52341,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1104656
+  breakDelay: 1.3539101
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -51243,8 +52481,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5378431
+  breakDelay: 1.9017758
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -51462,8 +52705,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.82215804
+  breakDelay: 1.5626463
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -51636,8 +52884,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5304012
+  breakDelay: 1.008299
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -51843,8 +53096,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.39236847
+  breakDelay: 1.1679201
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -51996,8 +53254,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6215202
+  breakDelay: 0.3054885
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -52131,8 +53394,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.38889277
+  breakDelay: 1.2143141
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -52326,8 +53594,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6208354
+  breakDelay: 1.5687402
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -52491,8 +53764,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4010718
+  breakDelay: 1.2028835
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -52629,8 +53907,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6428407
+  breakDelay: 0.40087366
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -52758,8 +54041,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.5287024
+  breakDelay: 0.8211714
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -52932,8 +54220,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.36777604
+  breakDelay: 0.94285697
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -53094,8 +54387,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3236631
+  breakDelay: 0.9381616
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -53232,8 +54530,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6231642
+  breakDelay: 1.9872998
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -53355,8 +54658,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.5108719
+  breakDelay: 0.42393637
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -53535,8 +54843,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.7266613
+  breakDelay: 0.908152
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -53682,8 +54995,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8907909
+  breakDelay: 1.7285626
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -53820,8 +55138,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3845944
+  breakDelay: 0.3482399
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -53991,8 +55314,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0348239
+  breakDelay: 1.7196392
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -54153,8 +55481,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3234078
+  breakDelay: 0.34168267
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -54330,8 +55663,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.6690204
+  breakDelay: 1.8042271
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -54468,8 +55806,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.45532036
+  breakDelay: 0.39444578
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -54597,8 +55940,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.648786
+  breakDelay: 1.8080047
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -54828,8 +56176,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8854707
+  breakDelay: 0.34734598
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -54996,8 +56349,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9631524
+  breakDelay: 1.0949072
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -55218,8 +56576,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9445152
+  breakDelay: 0.75804615
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -55368,8 +56731,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6317966
+  breakDelay: 0.649064
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -55518,8 +56886,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0406593
+  breakDelay: 1.5499749
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -55653,8 +57026,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8837091
+  breakDelay: 1.9994885
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -55818,8 +57196,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.7743718
+  breakDelay: 0.6473564
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -55965,8 +57348,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8237097
+  breakDelay: 0.71451604
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -56100,8 +57488,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.39086795
+  breakDelay: 0.66347337
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -56241,8 +57634,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.7699369
+  breakDelay: 1.692827
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -56391,8 +57789,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.786687
+  breakDelay: 1.9463612
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -56538,8 +57941,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.22550051
+  breakDelay: 1.2827429
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -56709,8 +58117,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.38590586
+  breakDelay: 1.1713877
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -56856,8 +58269,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.3188532
+  breakDelay: 1.9576439
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -57003,8 +58421,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.35511625
+  breakDelay: 0.8370404
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -57144,8 +58567,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8159938
+  breakDelay: 1.9885494
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -57315,8 +58743,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6349874
+  breakDelay: 0.68078953
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -57462,8 +58895,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1562718
+  breakDelay: 1.6086655
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -57642,8 +59080,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5172294
+  breakDelay: 1.861312
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -57900,8 +59343,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8746269
+  breakDelay: 1.9287487
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -58110,8 +59558,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.7619358
+  breakDelay: 0.7841717
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -58242,8 +59695,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9585807
+  breakDelay: 0.4551242
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -58386,8 +59844,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.5311466
+  breakDelay: 0.8246553
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -58602,8 +60065,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6276705
+  breakDelay: 0.2880612
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -58824,8 +60292,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7466418
+  breakDelay: 1.606995
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -58971,8 +60444,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.35344297
+  breakDelay: 1.3396621
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -59184,8 +60662,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5851548
+  breakDelay: 1.326567
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -59331,8 +60814,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1676165
+  breakDelay: 1.4577936
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -59538,8 +61026,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.51807654
+  breakDelay: 1.650188
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -59733,8 +61226,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.94514394
+  breakDelay: 1.2831918
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -59919,8 +61417,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.80208826
+  breakDelay: 0.6720301
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -60096,8 +61599,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.6840513
+  breakDelay: 1.8692517
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -60225,8 +61733,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.78782874
+  breakDelay: 0.5008168
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -60408,8 +61921,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.335446
+  breakDelay: 0.40780985
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -60558,8 +62076,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.103014
+  breakDelay: 1.350631
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -60702,8 +62225,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.359882
+  breakDelay: 0.73266256
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -60837,8 +62365,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8117564
+  breakDelay: 0.7941221
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -61035,8 +62568,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.9305967
+  breakDelay: 1.6658577
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -61194,8 +62732,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7420037
+  breakDelay: 0.5349933
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -61338,8 +62881,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.101639
+  breakDelay: 1.2051957
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -61524,8 +63072,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.6830162
+  breakDelay: 1.0498971
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -61686,8 +63239,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4596437
+  breakDelay: 1.4710413
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -61827,8 +63385,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1349508
+  breakDelay: 0.4195652
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -61992,8 +63555,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7572459
+  breakDelay: 1.2773969
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -62136,8 +63704,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.164936
+  breakDelay: 0.6035763
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -62295,8 +63868,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.50315917
+  breakDelay: 0.29296625
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -62454,8 +64032,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.81172013
+  breakDelay: 1.6887492
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -62598,8 +64181,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4478604
+  breakDelay: 1.4658123
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -62751,8 +64339,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2960372
+  breakDelay: 1.6831453
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -62901,8 +64494,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1205832
+  breakDelay: 1.8569146
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -63060,8 +64658,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.4961661
+  breakDelay: 1.9511787
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -63231,8 +64834,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7910339
+  breakDelay: 0.7055324
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -63426,8 +65034,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7100414
+  breakDelay: 1.8849871
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -63576,8 +65189,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.6631436
+  breakDelay: 0.49187565
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -63708,8 +65326,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.20455419
+  breakDelay: 1.0667706
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -63993,8 +65616,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4697142
+  breakDelay: 1.0518792
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -64122,8 +65750,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.9731975
+  breakDelay: 0.8858474
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -64272,8 +65905,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9303683
+  breakDelay: 1.8923852
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -64401,8 +66039,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.27179414
+  breakDelay: 0.6180452
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -64545,8 +66188,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.127698
+  breakDelay: 1.0461615
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -64710,8 +66358,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.8355594
+  breakDelay: 1.672384
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -64920,8 +66573,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.37672883
+  breakDelay: 0.38587493
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -65097,8 +66755,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2903192
+  breakDelay: 0.39984626
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -65274,8 +66937,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7851821
+  breakDelay: 0.65735644
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -65439,8 +67107,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.47374347
+  breakDelay: 0.98710614
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -65586,8 +67259,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4936938
+  breakDelay: 1.9829274
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -65730,8 +67408,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.7438463
+  breakDelay: 0.33325535
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -65892,8 +67575,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.46554512
+  breakDelay: 1.8526652
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -66054,8 +67742,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0475965
+  breakDelay: 1.1771836
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -66231,8 +67924,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0404434
+  breakDelay: 1.2210021
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -66399,8 +68097,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9004831
+  breakDelay: 1.3854603
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -66522,8 +68225,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7050059
+  breakDelay: 1.1772875
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -66672,8 +68380,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4795997
+  breakDelay: 1.0668918
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -66894,8 +68607,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.4662204
+  breakDelay: 0.66468316
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -67062,8 +68780,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.88708013
+  breakDelay: 0.8480705
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -67350,8 +69073,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4925244
+  breakDelay: 1.8018153
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -67548,8 +69276,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2384998
+  breakDelay: 1.2212853
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -67740,8 +69473,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.704443
+  breakDelay: 0.91542506
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -67893,8 +69631,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.82545304
+  breakDelay: 0.7926297
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -68070,8 +69813,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.4660288
+  breakDelay: 1.5180604
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -68331,8 +70079,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1527098
+  breakDelay: 0.7102779
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -68514,8 +70267,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9246452
+  breakDelay: 1.5445049
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -68637,8 +70395,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.1963784
+  breakDelay: 1.0763898
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -68802,8 +70565,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.010909
+  breakDelay: 1.1355445
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -68958,8 +70726,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.66577625
+  breakDelay: 1.3408399
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -69093,8 +70866,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0159186
+  breakDelay: 1.8977864
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -69234,8 +71012,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.55688334
+  breakDelay: 1.9544421
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -69408,8 +71191,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5953306
+  breakDelay: 1.0816032
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -69603,8 +71391,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7741706
+  breakDelay: 0.3906203
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -69816,8 +71609,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.5983147
+  breakDelay: 1.4387926
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -69978,8 +71776,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2336587
+  breakDelay: 1.2689621
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -70194,8 +71997,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.3531372
+  breakDelay: 0.3447513
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -70338,8 +72146,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.0612304
+  breakDelay: 0.6142749
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -70482,8 +72295,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2441564
+  breakDelay: 1.3947995
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -70617,8 +72435,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.8566879
+  breakDelay: 1.032897
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -70815,8 +72638,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.6665391
+  breakDelay: 0.9091298
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -70962,8 +72790,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4449329
+  breakDelay: 1.2589356
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -71160,8 +72993,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.58603466
+  breakDelay: 1.8234345
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -71304,8 +73142,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3444698
+  breakDelay: 0.84424204
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -71496,8 +73339,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6078207
+  breakDelay: 0.77735376
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -71655,8 +73503,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.815781
+  breakDelay: 1.9572504
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -71835,8 +73688,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2510716
+  breakDelay: 1.2794852
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -71994,8 +73852,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6811888
+  breakDelay: 1.7083364
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -72159,8 +74022,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.3649576
+  breakDelay: 1.9573574
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -72348,8 +74216,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.49328926
+  breakDelay: 0.24021704
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -72525,8 +74398,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7415632
+  breakDelay: 1.9823502
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -72720,8 +74598,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.9572934
+  breakDelay: 0.38934892
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -72849,8 +74732,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.24496026
+  breakDelay: 1.210868
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -72987,8 +74875,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4504274
+  breakDelay: 1.8828287
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -73203,8 +75096,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.41754967
+  breakDelay: 1.5287648
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -73407,8 +75305,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.5661049
+  breakDelay: 1.8117248
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -73572,8 +75475,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.2178417
+  breakDelay: 1.2442371
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -73719,8 +75627,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.7347808
+  breakDelay: 0.41993773
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -73893,8 +75806,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.393678
+  breakDelay: 0.6707248
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -74082,8 +76000,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4017423
+  breakDelay: 1.949364
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -74241,8 +76164,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.20342658
+  breakDelay: 1.169287
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -74403,8 +76331,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.6513394
+  breakDelay: 0.29964235
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -74550,8 +76483,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1.4740901
+  breakDelay: 0.9201142
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -74745,8 +76683,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.9937728
+  breakDelay: 1.8950269
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -74934,8 +76877,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.7730719
+  breakDelay: 0.5989846
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -75129,8 +77077,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.3007337
+  breakDelay: 1.7620546
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -75312,8 +77265,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.3293314
+  breakDelay: 1.928403
   minBottomAngle: 120
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  isGroundPiece: 1
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2

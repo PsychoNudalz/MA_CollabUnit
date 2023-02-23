@@ -33,20 +33,23 @@ public class BreakablePart : BreakableComponent
 
     private void FixedUpdate()
     {
-        // if (breakableState == BreakableState.Hold)
-        // {
-        //     CheckBottomTime_now -= Time.deltaTime;
-        //     if (CheckBottomTime_now < 0)
-        //     {
-        //         if (!HasBottomPart())
-        //         {
-        //             Break(new Vector3(), new Vector3());
-        //
-        //         }
-        //
-        //         CheckBottomTime_now = CheckBottomTime;
-        //     }
-        // }
+        if (breakableState == BreakableState.Hold)
+        {
+            if (!originalNoBottom)
+            {
+                CheckBottomTime_now -= Time.deltaTime;
+                if (CheckBottomTime_now < 0)
+                {
+                    if (!HasBottomPart())
+                    {
+                        Break(new Vector3(), new Vector3());
+        
+                    }
+        
+                    CheckBottomTime_now = CheckBottomTime;
+                }
+            }
+        }
     }
 
     private void OnDrawGizmosSelected()
@@ -96,24 +99,11 @@ public class BreakablePart : BreakableComponent
         {
             if (!IsBroken())
             {
-                if (collision.gameObject.TryGetComponent(out BreakablePart bp))
-                {
-                    if (!bp.Parent.Equals(parent) || bp.BreakableState == BreakableState.Free)
-                    {
-                        CollisionBreak(bp.selfRB);
-                    }
-                }
-                else if (collision.gameObject.TryGetComponent(out MovableObject mo))
-                {
-                    CollisionBreak(mo.Rb);
-                }
-                else if (collision.gameObject.TryGetComponent(out Rigidbody rb))
-                {
-                    CollisionBreak(rb);
-                }
+                EvaluateCollisionBreak(collision);
             }
         }
     }
+
 
 
     bool RBInConnected(Rigidbody rb)
