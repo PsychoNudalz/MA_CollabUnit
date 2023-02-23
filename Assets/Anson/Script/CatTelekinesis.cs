@@ -25,6 +25,7 @@ public class CatTelekinesis : MonoBehaviour
 
     [SerializeField]
     private Vector3 hoverOffset;
+
     [Header("Aim")]
     [SerializeField]
     private Transform camera;
@@ -37,7 +38,7 @@ public class CatTelekinesis : MonoBehaviour
 
     [SerializeField]
     private LineRenderer[] lines;
-    
+
 
     [Header("Pull")]
     [SerializeField]
@@ -73,10 +74,13 @@ public class CatTelekinesis : MonoBehaviour
     [Header("Effects")]
     [SerializeField]
     private VisualEffect vfx_BlackHole;
+
     [SerializeField]
     private UnityEvent OnAimEvent;
+
     [SerializeField]
     private UnityEvent OnPullEvent;
+
     [SerializeField]
     private UnityEvent OnShootEvent;
 
@@ -111,8 +115,6 @@ public class CatTelekinesis : MonoBehaviour
             case TelekinesisState.Idle:
                 break;
             case TelekinesisState.Aim:
-                UpdateHoverPoint();
-                ShowLines();
 
                 break;
             case TelekinesisState.Pull:
@@ -121,7 +123,6 @@ public class CatTelekinesis : MonoBehaviour
 
                 break;
             case TelekinesisState.Shoot:
-                UpdateHoverPoint();
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
@@ -135,13 +136,16 @@ public class CatTelekinesis : MonoBehaviour
             case TelekinesisState.Idle:
                 break;
             case TelekinesisState.Aim:
-                FindPiece(camera.forward, camera.position);
                 break;
             case TelekinesisState.Pull:
+                // FindPiece(camera.forward, camera.position);
+                FindPiece_AOE();
                 if (parts.Count > 0)
                 {
                     MovePieces();
+                    OnTele_Pull();
                 }
+
 
                 break;
             case TelekinesisState.Shoot:
@@ -162,6 +166,7 @@ public class CatTelekinesis : MonoBehaviour
                     .GetComponent<LineRenderer>();
             }
         }
+
         SetLines(false);
     }
 
@@ -170,15 +175,15 @@ public class CatTelekinesis : MonoBehaviour
         switch (telekinesisState)
         {
             case TelekinesisState.Idle:
-                OnTele_Aim();
+                telekinesisState = TelekinesisState.Pull;
                 OnAimEvent.Invoke();
+                OnPullEvent.Invoke();
+
                 break;
             case TelekinesisState.Aim:
                 break;
             case TelekinesisState.Pull:
-                SetLines(false);
-                OnTele_Shoot(dir);
-                OnShootEvent.Invoke();
+                
                 break;
             case TelekinesisState.Shoot:
                 break;
@@ -192,25 +197,15 @@ public class CatTelekinesis : MonoBehaviour
         switch (telekinesisState)
         {
             case TelekinesisState.Idle:
-                OnShootEvent.Invoke();
 
                 break;
             case TelekinesisState.Aim:
-                if (parts.Count > 0)
-                {
-                    OnTele_Pull(dir, castPoint);
-                    OnPullEvent.Invoke();
 
-                }
-                else
-                {
-                    telekinesisState = TelekinesisState.Idle;
-                    OnShootEvent.Invoke();
-
-                }
 
                 break;
             case TelekinesisState.Pull:
+                OnTele_Shoot(dir);
+
                 break;
             case TelekinesisState.Shoot:
                 break;
@@ -221,7 +216,7 @@ public class CatTelekinesis : MonoBehaviour
     }
 
 
-    void OnTele_Pull(Vector3 dir, Vector3 castPoint)
+    void OnTele_Pull()
     {
         if (parts.Count == 0)
         {
@@ -234,10 +229,12 @@ public class CatTelekinesis : MonoBehaviour
 
     void OnTele_Shoot(Vector3 dir)
     {
-        telekinesisState = TelekinesisState.Shoot;
 
         ShootPieces(dir);
         telekinesisState = TelekinesisState.Idle;
+        SetLines(false);
+        OnShootEvent.Invoke();
+        parts = new List<BreakablePart>();
     }
 
     void OnTele_Aim()
@@ -280,6 +277,31 @@ public class CatTelekinesis : MonoBehaviour
         // Debug.Log($"Tele Parts: {parts.Count}");
     }
 
+    void FindPiece_AOE()
+    {
+        if (parts.Count >= maxPartsSize)
+        {
+            return;
+        }
+
+        Collider[] hits = Physics.OverlapSphere(transform.position, pullCastRadius, pullLayer);
+        foreach (Collider collider in hits)
+        {
+            if (parts.Count >= maxPartsSize)
+            {
+                return;
+            }
+            if (collider.TryGetComponent(out BreakablePart bp))
+            {
+                if (bp.CanTelekinesis)
+                {
+                    parts.Add(bp);
+                }
+            }
+
+        }
+    }
+
     void ShowLines()
     {
         Vector3 pos;
@@ -294,7 +316,6 @@ public class CatTelekinesis : MonoBehaviour
         for (int i = parts.Count; i < lines.Length; i++)
         {
             lines[i].gameObject.SetActive(false);
-
         }
     }
 
@@ -305,7 +326,7 @@ public class CatTelekinesis : MonoBehaviour
             lineRenderer.gameObject.SetActive(b);
             if (!b)
             {
-                lineRenderer.SetPosition(1,Vector3.zero);
+                lineRenderer.SetPosition(1, Vector3.zero);
             }
         }
     }
@@ -345,8 +366,8 @@ public class CatTelekinesis : MonoBehaviour
             if (displacement.magnitude > pullDeadzone)
             {
                 breakablePart.SelfRb.AddForce(displacement.normalized * pullForce, ForceMode.Impulse);
-                
             }
+
             breakablePart.SelfRb.velocity = Vector3.ClampMagnitude(breakablePart.SelfRb.velocity,
                 Mathf.Min(displacement.magnitude, pullVelocity_Max));
         }
@@ -368,7 +389,7 @@ public class CatTelekinesis : MonoBehaviour
     void UpdateHoverPoint()
     {
         float angle = Vector3.SignedAngle(Vector3.forward, camera.forward, Vector3.up);
-        hoverPoint.position = parent.position + Quaternion.Euler(0,angle,0)*hoverOffset;
-        vfx_BlackHole.SetVector3("CentrePosition",hoverPoint.position);
+        hoverPoint.position = parent.position + Quaternion.Euler(0, angle, 0) * hoverOffset;
+        vfx_BlackHole.SetVector3("CentrePosition", hoverPoint.position);
     }
 }
