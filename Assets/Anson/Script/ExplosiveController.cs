@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ExplosiveController : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class ExplosiveController : MonoBehaviour
 
     [SerializeField]
     private LayerMask layerMask;
+
+    [SerializeField]
+    private UnityEvent explodeEffectEvent;
 
     [ContextMenu("Explode")]
     public void OnExplode()
@@ -46,8 +50,9 @@ public class ExplosiveController : MonoBehaviour
                 i++;
             }
         }
+        
+        explodeEffectEvent.Invoke();
 
-        print($"{this} exploded {i} parts");
     }
 
     Vector3 GetForce(Vector3 target)
