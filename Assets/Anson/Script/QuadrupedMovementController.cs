@@ -914,6 +914,10 @@ public class QuadrupedMovementController : MonoBehaviour
         {
             return;
         }
+        if (inputDir_World.magnitude > 0.1f)
+        {
+            dir = inputDir_World;
+        }
 
         swipe_Cooldown_Now = swipe_Cooldown;
         Quaternion angle = Quaternion.AngleAxis(Vector3.SignedAngle(Vector3.forward, dir, Vector3.up), Vector3.up);
@@ -926,6 +930,10 @@ public class QuadrupedMovementController : MonoBehaviour
     {
         float distance = 0f;
         FootMovementSphere current = null;
+        if (inputDir_World.magnitude > 0.1f)
+        {
+            dir = inputDir_World;
+        }
         foreach (FootCastPair footCastPair in feet)
         {
             footCastPair.Foot.SetHighlight(false);
