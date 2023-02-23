@@ -20,6 +20,7 @@ public class BreakablePart : BreakableComponent
     
     protected float moveDistance = 10f;
     protected Vector3 lastPosition;
+    protected LayerMask partLayer;
 
     public virtual bool CanTelekinesis => breakableState == BreakableState.Free;
 
@@ -29,6 +30,8 @@ public class BreakablePart : BreakableComponent
         {
             rendererMaterial = renderer?.material;
         }
+
+        partLayer = LayerMask.NameToLayer("Breakable_Part");
     }
 
     private void FixedUpdate()
@@ -147,7 +150,7 @@ public class BreakablePart : BreakableComponent
         AddScore();
         PlayBreakEffects();
         breakEvent.Invoke();
-
+        gameObject.layer = partLayer;
 
         if (breakableState != BreakableState.Despawn)
         {
