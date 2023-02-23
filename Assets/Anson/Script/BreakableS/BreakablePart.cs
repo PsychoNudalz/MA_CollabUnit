@@ -21,7 +21,7 @@ public class BreakablePart : BreakableComponent
     protected float moveDistance = 10f;
     protected Vector3 lastPosition;
 
-    public bool CanTelekinesis => breakableState == BreakableState.Free;
+    public virtual bool CanTelekinesis => breakableState == BreakableState.Free;
 
     private void Awake()
     {
@@ -459,12 +459,12 @@ public class BreakablePart : BreakableComponent
     
     //************Launching Part
 
-    public void Telekinesis()
+    public virtual void Telekinesis()
     {
        ChangeState(BreakableState.Telekinesis);
        collider.enabled = false;
     }
-    public void Launch(Vector3 accel)
+    public virtual void Launch(Vector3 accel,List<BreakablePart> parts = null)
     {
         ChangeState(BreakableState.Telekinesis_Shoot);
         collider.enabled = true;

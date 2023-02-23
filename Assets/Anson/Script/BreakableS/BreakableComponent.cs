@@ -172,6 +172,8 @@ public class BreakableComponent : MonoBehaviour
 
     public Rigidbody SelfRb => selfRB;
 
+    public Vector3 Position => transform.position;
+
 
     public Vector2 BreakingForce
     {
@@ -205,6 +207,8 @@ public class BreakableComponent : MonoBehaviour
     }
 
     public BreakableState BreakableState => breakableState;
+
+    public bool isTelekinesis => breakableState is BreakableState.Telekinesis or BreakableState.Telekinesis_Shoot;
 
 
     public virtual void ResetConnections()
@@ -600,5 +604,14 @@ public class BreakableComponent : MonoBehaviour
         {
             CollisionBreak(rb);
         }
+    }
+
+    public virtual void ExplodeBreak(Vector3 force, Vector3 point)
+    {
+        if (force.magnitude > breakingForce.x)
+        {
+            Break(force, force);
+        }
+        selfRB.AddForce(force);
     }
 }

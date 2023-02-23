@@ -59,6 +59,9 @@ public class CatTelekinesis : MonoBehaviour
     private float pullForce = 100000f;
 
     [SerializeField]
+    private float pullTorque = 3f;
+
+    [SerializeField]
     private float pullVelocity_Max = 2f;
 
     [SerializeField]
@@ -366,7 +369,9 @@ public class CatTelekinesis : MonoBehaviour
             if (displacement.magnitude > pullDeadzone)
             {
                 breakablePart.SelfRb.AddForce(displacement.normalized * pullForce, ForceMode.Impulse);
+                breakablePart.SelfRb.AddTorque(displacement*pullTorque);
             }
+            
 
             breakablePart.SelfRb.velocity = Vector3.ClampMagnitude(breakablePart.SelfRb.velocity,
                 Mathf.Min(displacement.magnitude, pullVelocity_Max));
@@ -379,7 +384,7 @@ public class CatTelekinesis : MonoBehaviour
 
         foreach (BreakablePart breakablePart in parts)
         {
-            breakablePart.Launch(dir * shootAccel);
+            breakablePart.Launch(dir * shootAccel,parts);
         }
 
         parts = new List<BreakablePart>();

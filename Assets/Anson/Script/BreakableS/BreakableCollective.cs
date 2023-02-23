@@ -51,7 +51,7 @@ public class BreakableCollective : BreakableComponent
         parent = p;
         Initialise();
         InitialiseValues(mass, bsc, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot, minSize,
-            breakDelay, bottomAngle, pm,  breakEvent1, despawnTime1, despawnEvent1, groundLayer1);
+            breakDelay, bottomAngle, pm, breakEvent1, despawnTime1, despawnEvent1, groundLayer1);
 
         fractureParent.SetActive(true);
 
@@ -85,17 +85,16 @@ public class BreakableCollective : BreakableComponent
 
 
         breakableComponents = fractureParent.GetComponentsInChildren<BreakableComponent>();
-        
-        
+
+
         foreach (BreakableComponent breakableComponent in breakableComponents)
         {
-            
-            
             breakableComponent.AddComponents(pm);
-            breakableComponent.Initialise(gameObject, bsc, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer,
+            breakableComponent.Initialise(gameObject, bsc, mass, drag, affectedRange, breakForce, forceTransfer,
+                bpLayer,
                 transferToDot,
-                minimumPartSize, bsc.BreakDelay, minBottomAngle, pm, breakEvent, despawnTime, despawnEvent, groundLayer);
-            
+                minimumPartSize, bsc.BreakDelay, minBottomAngle, pm, breakEvent, despawnTime, despawnEvent,
+                groundLayer);
         }
 
         fractureParent.SetActive(false);
@@ -135,11 +134,11 @@ public class BreakableCollective : BreakableComponent
         }
 
         Break(new Vector3(), new Vector3());
-        if (collision!=null)
+        if (collision != null)
         {
             foreach (BreakableComponent breakableComponent in FindBreakablesFromCollision(collision))
             {
-                breakableComponent.CollisionBreak(rb, collision,point);
+                breakableComponent.CollisionBreak(rb, collision, point);
             }
         }
 
@@ -147,7 +146,7 @@ public class BreakableCollective : BreakableComponent
         {
             foreach (BreakableComponent breakableComponent in FindBreakablesFromPoint(point))
             {
-                breakableComponent.CollisionBreak(rb, collision,point);
+                breakableComponent.CollisionBreak(rb, collision, point);
             }
         }
     }
@@ -167,11 +166,11 @@ public class BreakableCollective : BreakableComponent
         }
 
         Break(new Vector3(), new Vector3());
-        if (collision!=null)
+        if (collision != null)
         {
             foreach (BreakableComponent breakableComponent in FindBreakablesFromCollision(collision))
             {
-                breakableComponent.CollisionBreak(mo, collision,point);
+                breakableComponent.CollisionBreak(mo, collision, point);
             }
         }
 
@@ -179,11 +178,15 @@ public class BreakableCollective : BreakableComponent
         {
             foreach (BreakableComponent breakableComponent in FindBreakablesFromPoint(point))
             {
-                breakableComponent.CollisionBreak(mo, collision,point);
+                breakableComponent.CollisionBreak(mo, collision, point);
             }
         }
-        
-        
+    }
+
+    public override void ExplodeBreak(Vector3 force, Vector3 point)
+    {
+        Break(force, force);
+        selfRB.AddForce(force);
     }
 
     BreakableComponent[] FindBreakablesFromCollision(Collision collision)
