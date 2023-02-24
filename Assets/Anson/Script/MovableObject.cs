@@ -52,14 +52,7 @@ public class MovableObject : MonoBehaviour
         previousPosition = tempPosition;
         tempPosition = transform.position;
     }
-
-    private void Update()
-    {
-        if (isDebug)
-        {
-            Debug.Log($"{this} position difference: {(transform.position - previousPosition).magnitude}, {Velocity}");
-        }
-    }
+    
 
     public void CarryOnVelocity(Vector3 velocity)
     {

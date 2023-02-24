@@ -254,8 +254,8 @@ public class LeanTween : MonoBehaviour {
     private static int[] tweensFinishedIds;
     private static LTDescr tween;
     private static int tweenMaxSearch = -1;
-    private static int maxTweens = 400;
-    private static int maxSequences = 400;
+    private static int maxTweens = 800;
+    private static int maxSequences = 800;
     private static int frameRendered= -1;
     private static GameObject _tweenEmpty;
     public static float dtEstimated = -1f;

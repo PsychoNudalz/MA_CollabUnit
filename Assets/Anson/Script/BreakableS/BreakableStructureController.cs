@@ -80,7 +80,7 @@ public class BreakableStructureController : MonoBehaviour
     
     [Space(10)]
     [SerializeField]
-    private float despawnTime = 5f;
+    private float despawnTime = 1f;
 
     [SerializeField]
     private UnityEvent despawnEvent;
