@@ -2,18 +2,22 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class TutorialMenu : MonoBehaviour
 {
-    [SerializeField] private bool controllerConnected;
+    private bool controllerConnected;
     [SerializeField] private GameObject tutorialMenuKeyboard, tutorialMenuController;
 
+    private EventSystem eventSystem;
+    
     [SerializeField] private PauseMenu pm;
     
     // Start is called before the first frame update
     void Start()
     {
+        eventSystem = EventSystem.current;
         StartCoroutine(StartGame());
     }
 
@@ -41,6 +45,7 @@ public class TutorialMenu : MonoBehaviour
             tutorialMenuController.SetActive(true);
             LeanTween.scale(tutorialMenuController, new Vector3(1, 1, 1), 0.2f).setEase(LeanTweenType.easeInOutCubic)
                 .setIgnoreTimeScale(true);
+            eventSystem.SetSelectedGameObject(tutorialMenuController);
         }
         else
         {
