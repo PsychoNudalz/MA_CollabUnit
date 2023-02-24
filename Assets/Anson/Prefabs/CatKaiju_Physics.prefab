@@ -1052,15 +1052,15 @@ MonoBehaviour:
   footUpdateDistance: 10
   groundCheckTime: 1
   catRigidbody: {fileID: 682585319747038410}
-  move_Y: 30
+  move_Y: 60
   move_XZ: 0.6
   maxVelocity: 60
-  moveTorque: {x: 0.2, y: 0.05, z: 0.2}
+  moveTorque: {x: 0.4, y: 0.1, z: 0.4}
   maxRotation: {x: 30, y: 30}
   maxAngular: {x: 3, y: 3}
-  jumpForce_Y: 500
-  jumpForce_XZ: {x: 200, y: 200}
-  jumpForceRandom_XZ: {x: 20, y: 20}
+  jumpForce_Y: 600
+  jumpForce_XZ: {x: 350, y: 350}
+  jumpForceRandom_XZ: {x: 40, y: 40}
   jumpBodyMultiplier: {x: 0.85, y: 1.15}
   rigidbodies:
   - {fileID: 682585319747038410}
