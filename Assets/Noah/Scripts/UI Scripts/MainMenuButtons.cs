@@ -31,7 +31,7 @@ public class MainMenuButtons : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current.anyKey.wasPressedThisFrame || Mouse.current.leftButton.wasPressedThisFrame || Mouse.current.rightButton.wasPressedThisFrame)
+        if (Keyboard.current.anyKey.wasPressedThisFrame || Mouse.current.leftButton.wasPressedThisFrame || Mouse.current.rightButton.wasPressedThisFrame || Gamepad.current.rightStick.IsActuated())
         {
             if(canStartMenu)
                 ChangeMenu();

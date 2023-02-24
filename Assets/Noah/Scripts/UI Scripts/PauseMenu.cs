@@ -24,9 +24,10 @@ public class PauseMenu : MonoBehaviour
     
     public void Update()
     {
-        if (Keyboard.current.escapeKey.wasPressedThisFrame && canBePaused)
+        if (Keyboard.current.escapeKey.wasPressedThisFrame || Gamepad.current.startButton.wasPressedThisFrame)
         {
-            MenuControl();
+            if(canBePaused)
+                MenuControl();
         }
         
     }
@@ -138,10 +139,10 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
         Time.timeScale = 1;
-        if (Application.isEditor)
-        {
-            UnityEditor.EditorApplication.isPlaying = false;
-        }
+        // if (Application.isEditor)
+        // {
+        //     UnityEditor.EditorApplication.isPlaying = false;
+        // }
         
     }
     
