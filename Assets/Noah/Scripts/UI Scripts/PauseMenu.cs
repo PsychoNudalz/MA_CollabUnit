@@ -15,6 +15,7 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField] private Color bgDefault, bgOn;
     [SerializeField] private GameObject optionsMenu;
+    [SerializeField] private GameObject pauseMenu;
     private bool optionsOpen = false;
     [SerializeField] private GameObject confirmBox;
     private bool confirmBoxOpen = false;
@@ -27,12 +28,14 @@ public class PauseMenu : MonoBehaviour
         {
             MenuControl();
         }
+        
     }
 
     private void MenuControl()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        
         if (optionsOpen)
         {
             CloseOptions();
@@ -43,23 +46,42 @@ public class PauseMenu : MonoBehaviour
         }
         else
         {
-            switch (gameIsPaused)
-            {
-                case false:
-                    LeanTween.color(bg.GetComponent<RectTransform>(), bgOn, 0.2f).setIgnoreTimeScale(true);
-                    PauseGame();
-                    LeanTween.scale(gameObject, new Vector3(1, 1, 1), 0.2f).setEase(LeanTweenType.easeInOutCubic)
-                        .setIgnoreTimeScale(true);
-                    break;
-                case true:
-                    Resume();
-                    break;
-            }
+            SwitchPauseMenuState();
         }
     }
 
-    public void PauseGame()
+    private void SwitchPauseMenuState()
     {
+        if (!gameIsPaused)
+        {
+            pauseMenu.SetActive(true);
+            PauseGame();
+
+        }
+        else
+        {
+            Resume();
+        }
+        
+        // switch (gameIsPaused)
+        // {
+        //     case false:
+        //         LeanTween.color(bg.GetComponent<RectTransform>(), bgOn, 0.2f).setIgnoreTimeScale(true);
+        //         PauseGame();
+        //         LeanTween.scale(pauseMenu, new Vector3(1, 1, 1), 0.2f).setEase(LeanTweenType.easeInOutCubic)
+        //             .setIgnoreTimeScale(true);
+        //         break;
+        //     case true:
+        //         Resume();
+        //         break;
+        // }
+    }
+
+    private void PauseGame()
+    {
+        LeanTween.color(bg.GetComponent<RectTransform>(), bgOn, 0.2f).setIgnoreTimeScale(true);
+        LeanTween.scale(pauseMenu, new Vector3(1, 1, 1), 0.2f).setEase(LeanTweenType.easeInOutCubic)
+            .setIgnoreTimeScale(true);
         gameIsPaused = true;
         Time.timeScale = 0;
     }
@@ -71,22 +93,33 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         LeanTween.color(bg.GetComponent<RectTransform>(), bgDefault, 0.2f);
         gameIsPaused = false;
-        LeanTween.scale(gameObject, new Vector3(0, 0, 0), 0.2f).setEase(LeanTweenType.easeInOutCubic);
+        LeanTween.scale(pauseMenu, new Vector3(0, 0, 0), 0.2f).setEase(LeanTweenType.easeInOutCubic).setOnComplete(TurnOffPauseMenu);
+    }
+
+    private void TurnOffPauseMenu()
+    {
+        pauseMenu.SetActive(false);
+    }
+
+    private void TurnOffOptions()
+    {
+        optionsMenu.SetActive(false);
     }
     
     public void Options()
     {
         optionsOpen = true;
-        LeanTween.scale(gameObject, new Vector3(0, 0, 0), 0.3f).setEase(LeanTweenType.easeInOutCubic).setIgnoreTimeScale(true);
+        optionsMenu.SetActive(true);
+        LeanTween.scale(pauseMenu, new Vector3(0, 0, 0), 0.3f).setEase(LeanTweenType.easeInOutCubic).setIgnoreTimeScale(true).setOnComplete(TurnOffPauseMenu);
         LeanTween.scale(optionsMenu, new Vector3(1, 1, 1), 0.3f).setEase(LeanTweenType.easeInOutCubic).setIgnoreTimeScale(true);
     }
     
     public void CloseOptions()
     {
         optionsOpen = false;
-        
-        LeanTween.scale(gameObject, new Vector3(1, 1, 1), 0.3f).setEase(LeanTweenType.easeInOutCubic).setIgnoreTimeScale(true);
-        LeanTween.scale(optionsMenu, new Vector3(0, 0, 0), 0.3f).setEase(LeanTweenType.easeInOutCubic).setIgnoreTimeScale(true);
+        pauseMenu.SetActive(true);
+        LeanTween.scale(pauseMenu, new Vector3(1, 1, 1), 0.3f).setEase(LeanTweenType.easeInOutCubic).setIgnoreTimeScale(true);
+        LeanTween.scale(optionsMenu, new Vector3(0, 0, 0), 0.3f).setEase(LeanTweenType.easeInOutCubic).setIgnoreTimeScale(true).setOnComplete(TurnOffOptions);
     }
     
     public void QuitGame()
@@ -104,10 +137,12 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+        Time.timeScale = 1;
         if (Application.isEditor)
         {
             UnityEditor.EditorApplication.isPlaying = false;
         }
+        
     }
     
 }
