@@ -10,6 +10,8 @@ public class TutorialMenu : MonoBehaviour
     private bool controllerConnected;
     [SerializeField] private GameObject tutorialMenuKeyboard, tutorialMenuController;
 
+    [SerializeField] private bool isLevel1;
+
     private EventSystem eventSystem;
     
     [SerializeField] private PauseMenu pm;
@@ -20,7 +22,8 @@ public class TutorialMenu : MonoBehaviour
     void Start()
     {
         eventSystem = EventSystem.current;
-        StartCoroutine(StartGame());
+        if(isLevel1)
+            StartCoroutine(StartGame());
     }
 
     // Update is called once per frame
