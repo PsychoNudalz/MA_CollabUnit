@@ -13,6 +13,8 @@ public class TutorialMenu : MonoBehaviour
     private EventSystem eventSystem;
     
     [SerializeField] private PauseMenu pm;
+
+    private bool TutorialOpen = false; 
     
     // Start is called before the first frame update
     void Start()
@@ -40,6 +42,7 @@ public class TutorialMenu : MonoBehaviour
 
     private void OpenTutorial()
     {
+        TutorialOpen = true;
         if (controllerConnected)
         {
             tutorialMenuController.SetActive(true);
@@ -52,6 +55,20 @@ public class TutorialMenu : MonoBehaviour
             tutorialMenuKeyboard.SetActive(true);
             LeanTween.scale(tutorialMenuKeyboard, new Vector3(1, 1, 1), 0.2f).setEase(LeanTweenType.easeInOutCubic)
                 .setIgnoreTimeScale(true);
+        }
+    }
+
+    private void Update()
+    {
+        if (TutorialOpen)
+        {
+            if (controllerConnected)
+            {
+                if (Gamepad.current.aButton.wasPressedThisFrame)
+                {
+                    CloseTutorial();
+                }
+            }
         }
     }
 
@@ -72,6 +89,7 @@ public class TutorialMenu : MonoBehaviour
         pm.canBePaused = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        TutorialOpen = false;
     }
     
 }

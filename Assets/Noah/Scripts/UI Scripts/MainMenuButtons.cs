@@ -13,7 +13,7 @@ public class MainMenuButtons : MonoBehaviour
     [SerializeField] public GameObject[] menuButtons;
     [SerializeField] public GameObject optionsMenu;
     private bool introMenuActive;
-    [SerializeField] public GameObject introMenu, mainMenu, gameLogo, menuFrame;
+    [SerializeField] public GameObject introMenu, mainMenu, menuFrame;
     
 
     private bool canStartMenu;
@@ -25,13 +25,11 @@ public class MainMenuButtons : MonoBehaviour
 
         canStartMenu = false;
         StartCoroutine(IntroStart());
-
-        LeanTween.scale(gameLogo, new Vector3(1, 1, 1), 1.5f).setEase(LeanTweenType.easeInOutCubic);
     }
 
     private void Update()
     {
-        if (Keyboard.current.anyKey.wasPressedThisFrame || Mouse.current.leftButton.wasPressedThisFrame || Mouse.current.rightButton.wasPressedThisFrame || Gamepad.current.rightStick.IsActuated())
+        if (Keyboard.current.anyKey.wasPressedThisFrame || Mouse.current.leftButton.wasPressedThisFrame || Mouse.current.rightButton.wasPressedThisFrame || ((Gamepad.current != null && Gamepad.current.rightStick.IsActuated())))
         {
             if(canStartMenu)
                 ChangeMenu();
