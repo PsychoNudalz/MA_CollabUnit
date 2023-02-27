@@ -14,10 +14,10 @@ public class BreakablePart : BreakableComponent
 
     protected float freeToStayTime = 5f;
     protected float freeToStayTime_now = 0f;
-    
+
     protected float CheckBottomTime = 5f;
     protected float CheckBottomTime_now = 0f;
-    
+
     protected float moveDistance = 10f;
     protected Vector3 lastPosition;
     protected LayerMask partLayer;
@@ -46,9 +46,8 @@ public class BreakablePart : BreakableComponent
                     if (!HasBottomPart())
                     {
                         Break(new Vector3(), new Vector3());
-        
                     }
-        
+
                     CheckBottomTime_now = CheckBottomTime;
                 }
             }
@@ -138,6 +137,11 @@ public class BreakablePart : BreakableComponent
     public override void Break(Vector3 force, Vector3 originalForce, List<BreakableComponent> breakHistory = null,
         float breakDelay = 0f, bool forceBreak = false, Vector3 originPoint = default)
     {
+        if (collectiveParent && collectiveParent.BreakableState == BreakableState.Hold)
+        {
+            collectiveParent.Break(Vector3.zero, Vector3.zero);
+        }
+
         if (breakDelay == 0f)
         {
             Break_Recursive(force, originalForce, breakHistory, breakDelay, forceBreak);
@@ -146,7 +150,7 @@ public class BreakablePart : BreakableComponent
         {
             StartCoroutine(DelayBreak_Recursive(force, originalForce, breakHistory, breakDelay));
         }
-        
+
         AddScore();
         PlayBreakEffects();
         breakEvent.Invoke();
@@ -208,7 +212,7 @@ public class BreakablePart : BreakableComponent
         tempPD = otherConnectedParts.ToArray();
         foreach (BreakableData partDistance in tempPD)
         {
-            if (partDistance.Component && partDistance.Component.gameObject.activeSelf)
+            if (partDistance.Component)
             {
                 partDistance.Component.EvaluateFall();
             }
@@ -245,7 +249,7 @@ public class BreakablePart : BreakableComponent
         {
             part.Component.RemovePart(this);
         }
-        
+
 
         //if piece is too small
         if (meshSize < minimumPartSize)
@@ -278,8 +282,15 @@ public class BreakablePart : BreakableComponent
     {
         if (gameObject || !gameObject.activeSelf)
         {
-            // print($"{this} not active");
-            return;
+            
+            if (collectiveParent&&collectiveParent.BreakableState == BreakableState.Hold)
+            {
+                collectiveParent.Break(Vector3.zero,Vector3.zero);
+            }
+            else
+            {
+                return;
+            }
         }
 
         Vector3 newForce = force * forceTransfer;
@@ -314,11 +325,20 @@ public class BreakablePart : BreakableComponent
 
     public override void EvaluateFall()
     {
-        if (gameObject && gameObject.activeSelf)
+        if (breakableState != BreakableState.Despawn)
         {
-            if (breakableState != BreakableState.Despawn)
+            if (collectiveParent && collectiveParent.BreakableState == BreakableState.Hold)
+            {
+                collectiveParent.Break(Vector3.zero, Vector3.zero);
+            }
+
+            try
             {
                 StartCoroutine(DelayBreakBottom());
+            }
+            catch (Exception e)
+            {
+                return;
             }
         }
     }
@@ -459,18 +479,19 @@ public class BreakablePart : BreakableComponent
             rendererMaterial.color = Color.yellow;
         }
     }
-    
+
     //************Launching Part
 
     public virtual void Telekinesis()
     {
-       ChangeState(BreakableState.Telekinesis);
-       collider.enabled = false;
+        ChangeState(BreakableState.Telekinesis);
+        collider.enabled = false;
     }
-    public virtual void Launch(Vector3 accel,List<BreakablePart> parts = null)
+
+    public virtual void Launch(Vector3 accel, List<BreakablePart> parts = null)
     {
         ChangeState(BreakableState.Telekinesis_Shoot);
         collider.enabled = true;
-        SelfRb.AddForce(accel,ForceMode.Acceleration);
+        SelfRb.AddForce(accel, ForceMode.Acceleration);
     }
 }

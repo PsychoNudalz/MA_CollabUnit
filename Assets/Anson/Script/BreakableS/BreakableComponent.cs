@@ -170,6 +170,8 @@ public class BreakableComponent : MonoBehaviour
 
     [SerializeField]
     protected GameObject parent;
+    [SerializeField]
+    protected BreakableCollective collectiveParent;
 
     protected Material rendererMaterial;
 
@@ -226,9 +228,16 @@ public class BreakableComponent : MonoBehaviour
         float bottomAngle, PhysicMaterial pm, UnityEvent breakEvent1, float despawnTime1, UnityEvent despawnEvent1,
         LayerMask groundLayer1, bool ignoreParent1)
     {
-        if (parent && !parent.TryGetComponent(out BreakableCollective _))
+        if (parent)
         {
-            parent = p;
+            bool hasCollective = parent.TryGetComponent(out BreakableCollective breakableCollective);
+            if (!hasCollective)
+            {
+                parent = p;
+            }else if (hasCollective)
+            {
+                collectiveParent = breakableCollective;
+            }
         }
         else if (!parent)
         {
