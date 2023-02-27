@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -37,6 +38,8 @@ public class BreakableStructureController : MonoBehaviour
     private PhysicMaterial physicMaterial;
 
     [Header("Break Part")]
+    [SerializeField]
+    private bool ignoreParent = false;
     [SerializeField]
     private float affectedRange = 20f;
 
@@ -116,7 +119,7 @@ public class BreakableStructureController : MonoBehaviour
         List<BreakableComponent> tempBPs = new List<BreakableComponent>();
         foreach (Collider c in allColliders)
         {
-            if (c.transform.parent.Equals(transform))
+            if (ignoreParent||c.transform.parent.Equals(transform))
             {
                 if (c is MeshCollider mc)
                 {
@@ -154,7 +157,7 @@ public class BreakableStructureController : MonoBehaviour
 
         foreach (BreakableComponent component in bcs)
         {
-            if (component.transform.parent.Equals(transform))
+            if (ignoreParent||component.transform.parent.Equals(transform))
             {
                 if (component is BreakablePart bp)
                 {
@@ -200,9 +203,24 @@ public class BreakableStructureController : MonoBehaviour
 
     private void Initialise_BreakCollective()
     {
+
+        List<BreakablePart> tempBP = new List<BreakablePart>(breakableParts);
         foreach (BreakableCollective collective in breakableCollectives)
         {
             SetBC(collective);
+            if (breakableParts.Length > 0)
+            {
+                foreach (BreakableComponent breakableComponent in collective.BreakableComponents)
+                {
+                    if (breakableComponent is BreakablePart part)
+                    {
+                        if (tempBP.Contains(part))
+                        {
+                            tempBP.Remove(part);
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -240,8 +258,8 @@ public class BreakableStructureController : MonoBehaviour
     {
         Initialise_BreakCollective();
         Initialise_BreakParts();
-        SetBreakConnections_Parts();
         SetBreakConnections_Collectives();
+        SetBreakConnections_Parts();
     }
 
     [ContextMenu("Reset collider names")]

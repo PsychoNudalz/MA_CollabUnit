@@ -24,6 +24,8 @@ public class BreakableCollective : BreakableComponent
     [SerializeField]
     private bool onlyConnectToCollectives = true;
 
+    public BreakableComponent[] BreakableComponents => breakableComponents;
+
 
     private void OnCollisionEnter(Collision collision)
     {
