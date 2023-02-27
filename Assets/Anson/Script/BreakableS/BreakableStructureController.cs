@@ -14,7 +14,6 @@ using Random = UnityEngine.Random;
 /// </summary>
 public class BreakableStructureController : MonoBehaviour
 {
-    [SerializeField]
     private Collider[] allColliders;
 
 
@@ -40,6 +39,7 @@ public class BreakableStructureController : MonoBehaviour
     [Header("Break Part")]
     [SerializeField]
     private bool ignoreParent = false;
+
     [SerializeField]
     private float affectedRange = 20f;
 
@@ -61,10 +61,12 @@ public class BreakableStructureController : MonoBehaviour
 
     [SerializeField]
     private Vector2 breakDelayRange = new Vector2(0.5f, 1.5f);
-    public float BreakDelay=>Random.Range(breakDelayRange.x,breakDelayRange.y);
+
+    public float BreakDelay => Random.Range(breakDelayRange.x, breakDelayRange.y);
 
     [SerializeField]
     private float minBottomAngle;
+
     [SerializeField]
     private LayerMask groundLayerMask;
 
@@ -72,15 +74,16 @@ public class BreakableStructureController : MonoBehaviour
 
     [Header("Score")]
     private float scorePerMass = 10f;
+
     [Space(20f)]
     [Header("Effects")]
     [SerializeField]
     private BreakableStructureEffectsController effectsController;
+
     [SerializeField]
     private UnityEvent breakEvent;
 
 
-    
     [Space(10)]
     [SerializeField]
     private float despawnTime = 1f;
@@ -90,7 +93,11 @@ public class BreakableStructureController : MonoBehaviour
 
     public BreakableComponent[] AllBreakableComponents => allBreakableComponents;
 
-    
+
+    public BreakablePart[] BreakableParts => breakableParts;
+
+    public BreakableCollective[] BreakableCollectives => breakableCollectives;
+
     private void Awake()
     {
         if (!effectsController)
@@ -98,6 +105,7 @@ public class BreakableStructureController : MonoBehaviour
             effectsController = GetComponentInChildren<BreakableStructureEffectsController>();
         }
     }
+
     private void FixedUpdate()
     {
     }
@@ -110,7 +118,6 @@ public class BreakableStructureController : MonoBehaviour
     }
 
 
-
     public void AddComponentsToColliders()
     {
         Rigidbody rb;
@@ -119,7 +126,7 @@ public class BreakableStructureController : MonoBehaviour
         List<BreakableComponent> tempBPs = new List<BreakableComponent>();
         foreach (Collider c in allColliders)
         {
-            if (ignoreParent||c.transform.parent.Equals(transform))
+            if (ignoreParent || c.transform.parent.Equals(transform))
             {
                 if (c is MeshCollider mc)
                 {
@@ -127,21 +134,26 @@ public class BreakableStructureController : MonoBehaviour
                 }
 
                 c.material = physicMaterial;
-                if (!c.TryGetComponent(out rb))
-                {
-                    rb = c.AddComponent<Rigidbody>();
-                }
 
-                if (!c.TryGetComponent(out MovableObject mo))
-                {
-                    mo = c.AddComponent<MovableObject>();
-                }
-                
-                if (!c.TryGetComponent(out bc))
-                {
-                    bp = c.AddComponent<BreakablePart>();
-                }
 
+                bc = c.GetComponentInParent<BreakableComponent>();
+                if (!bc)
+                {
+                    if (!c.TryGetComponent(out rb))
+                    {
+                        rb = c.AddComponent<Rigidbody>();
+                    }
+
+                    if (!c.TryGetComponent(out MovableObject mo))
+                    {
+                        mo = c.AddComponent<MovableObject>();
+                    }
+
+                    if (!c.TryGetComponent(out bc))
+                    {
+                        bp = c.AddComponent<BreakablePart>();
+                    }
+                }
             }
 
             c.gameObject.layer = gameObject.layer;
@@ -157,7 +169,7 @@ public class BreakableStructureController : MonoBehaviour
 
         foreach (BreakableComponent component in bcs)
         {
-            if (ignoreParent||component.transform.parent.Equals(transform))
+            if (ignoreParent || component.transform.parent.Equals(transform))
             {
                 if (component is BreakablePart bp)
                 {
@@ -183,7 +195,7 @@ public class BreakableStructureController : MonoBehaviour
         }
     }
 
-    
+
     private void SetBreakConnections_Collectives()
     {
         foreach (BreakableCollective collective in breakableCollectives)
@@ -203,7 +215,6 @@ public class BreakableStructureController : MonoBehaviour
 
     private void Initialise_BreakCollective()
     {
-
         List<BreakablePart> tempBP = new List<BreakablePart>(breakableParts);
         foreach (BreakableCollective collective in breakableCollectives)
         {
@@ -227,13 +238,16 @@ public class BreakableStructureController : MonoBehaviour
     private void SetBP(BreakablePart bp)
     {
         bp.Initialise(gameObject, this, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot,
-            minimumPartSize, BreakDelay, minBottomAngle, physicMaterial,  breakEvent, despawnTime, despawnEvent, groundLayerMask);
+            minimumPartSize, BreakDelay, minBottomAngle, physicMaterial, breakEvent, despawnTime, despawnEvent,
+            groundLayerMask, ignoreParent);
     }
 
     private void SetBC(BreakableCollective breakableCollective)
     {
-        breakableCollective.Initialise(gameObject, this, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot,
-            minimumPartSize, BreakDelay, minBottomAngle, physicMaterial, breakEvent, despawnTime, despawnEvent, groundLayerMask);
+        breakableCollective.Initialise(gameObject, this, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer,
+            transferToDot,
+            minimumPartSize, BreakDelay, minBottomAngle, physicMaterial, breakEvent, despawnTime, despawnEvent,
+            groundLayerMask, ignoreParent);
     }
 
     public void ResetConnections()
@@ -241,6 +255,19 @@ public class BreakableStructureController : MonoBehaviour
         foreach (BreakableComponent breakableComponent in allBreakableComponents)
         {
             breakableComponent.ResetConnections();
+        }
+    }
+
+    void InitialiseGround()
+    {
+        foreach (BreakableCollective breakableCollective in breakableCollectives)
+        {
+            breakableCollective.InitialiseGround();
+        }
+
+        foreach (BreakablePart breakablePart in breakableParts)
+        {
+            breakablePart.InitialiseGround();
         }
     }
 
@@ -256,10 +283,13 @@ public class BreakableStructureController : MonoBehaviour
     [ContextMenu("Update Building")]
     public void UpdateValues()
     {
+
         Initialise_BreakCollective();
         Initialise_BreakParts();
         SetBreakConnections_Collectives();
         SetBreakConnections_Parts();
+        InitialiseGround();
+
     }
 
     [ContextMenu("Reset collider names")]
@@ -273,20 +303,19 @@ public class BreakableStructureController : MonoBehaviour
         }
     }
 
-    public void QueueBreakEffects(Vector3 position,Mesh mesh)
+    public void QueueBreakEffects(Vector3 position, Mesh mesh)
     {
-        effectsController.QueueBreakEffects(position,mesh);
+        effectsController.QueueBreakEffects(position, mesh);
     }
-    
-    public void PlayBreakEffects(Vector3 position,Mesh mesh)
+
+    public void PlayBreakEffects(Vector3 position, Mesh mesh)
     {
-        effectsController.PlayBreakEffects(position,mesh);
+        effectsController.PlayBreakEffects(position, mesh);
         breakEvent.Invoke();
     }
 
     public void AddScore(float meshSize)
     {
-        ScoreManager.AddScore_BySize(scorePerMass,meshSize);
+        ScoreManager.AddScore_BySize(scorePerMass, meshSize);
     }
-    
 }

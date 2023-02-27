@@ -208,7 +208,7 @@ public class BreakablePart : BreakableComponent
         tempPD = otherConnectedParts.ToArray();
         foreach (BreakableData partDistance in tempPD)
         {
-            if (partDistance.Component)
+            if (partDistance.Component && partDistance.Component.gameObject.activeSelf)
             {
                 partDistance.Component.EvaluateFall();
             }
