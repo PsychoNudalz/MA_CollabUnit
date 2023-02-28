@@ -99,10 +99,10 @@ public class MainMenuButtons : MonoBehaviour
         yield return new WaitForSeconds(delayTimer);
         Application.Quit();
 
-        if (Application.isEditor)
-        {
-            UnityEditor.EditorApplication.isPlaying = false;
-        }
+        // if (Application.isEditor)
+        // {
+        //     UnityEditor.EditorApplication.isPlaying = false;
+        // }
     }
     
 }
