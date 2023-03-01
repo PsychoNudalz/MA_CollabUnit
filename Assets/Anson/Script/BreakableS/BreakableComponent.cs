@@ -126,6 +126,9 @@ public class BreakableComponent : MonoBehaviour
     [SerializeField]
     protected LayerMask castLayer;
 
+    [SerializeField]
+    private bool ignoreParent = false;
+
     [Header("Break")]
     [SerializeField]
     protected UnityEvent breakEvent;
@@ -167,6 +170,8 @@ public class BreakableComponent : MonoBehaviour
 
     [SerializeField]
     protected GameObject parent;
+    [SerializeField]
+    protected BreakableCollective collectiveParent;
 
     protected Material rendererMaterial;
 
@@ -221,11 +226,18 @@ public class BreakableComponent : MonoBehaviour
         float affectedRange, Vector2 breakForce,
         float forceTransfer, LayerMask bpLayer, AnimationCurve transferToDot, float minSize, float breakDelay,
         float bottomAngle, PhysicMaterial pm, UnityEvent breakEvent1, float despawnTime1, UnityEvent despawnEvent1,
-        LayerMask groundLayer1)
+        LayerMask groundLayer1, bool ignoreParent1)
     {
-        if (parent && !parent.TryGetComponent(out BreakableCollective _))
+        if (parent)
         {
-            parent = p;
+            bool hasCollective = parent.TryGetComponent(out BreakableCollective breakableCollective);
+            if (!hasCollective)
+            {
+                parent = p;
+            }else if (hasCollective)
+            {
+                collectiveParent = breakableCollective;
+            }
         }
         else if (!parent)
         {
@@ -235,14 +247,15 @@ public class BreakableComponent : MonoBehaviour
 
         Initialise();
         InitialiseValues(mass, bsc, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot, minSize,
-            breakDelay, bottomAngle, pm, breakEvent1, despawnTime1, despawnEvent1, groundLayer1);
+            breakDelay, bottomAngle, pm, breakEvent1, despawnTime1, despawnEvent1, groundLayer1, ignoreParent1);
     }
 
     protected virtual void InitialiseValues(float mass, BreakableStructureController bsc, float drag,
         float affectedRange, Vector2 breakForce,
         float forceTransfer,
         LayerMask bpLayer, AnimationCurve transferToDot, float minSize, float breakDelay, float bottomAngle,
-        PhysicMaterial pm, UnityEvent breakEvent1, float despawnTime1, UnityEvent despawnEvent1, LayerMask groundLayer1)
+        PhysicMaterial pm, UnityEvent breakEvent1, float despawnTime1, UnityEvent despawnEvent1, LayerMask groundLayer1,
+        bool ignoreParent1)
     {
         breakableStructureController = bsc;
         physicMaterial = pm;
@@ -265,6 +278,12 @@ public class BreakableComponent : MonoBehaviour
         despawnTime = despawnTime1;
         despawnEvent = despawnEvent1;
         groundLayer = groundLayer1;
+        InitialiseGround();
+        ignoreParent = ignoreParent1;
+    }
+
+    public virtual void InitialiseGround()
+    {
         isGroundPiece = GroundCheck();
         originalNoBottom = !HasBottomPart();
     }
@@ -304,7 +323,7 @@ public class BreakableComponent : MonoBehaviour
         bool b = false;
         if (breakableStructureController)
         {
-            b =  Physics.CheckSphere(transform.position + Vector3.down * meshSize, meshSize,
+            b =  Physics.CheckSphere(transform.position + Vector3.down * meshSize, meshSize/2f,
                 groundLayer);
         }
 
@@ -405,23 +424,41 @@ public class BreakableComponent : MonoBehaviour
     {
         float CastSizeMultiplier = .25f;
         float range = affectiveRange + meshSize * CastSizeMultiplier;
-        RaycastHit[] hits = Physics.SphereCastAll(transform.position, range,
-            Vector3.up, 0, castLayer);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, range,
+             castLayer);
         // List<PartDistance> tempParts = new List<PartDistance>();
-        foreach (RaycastHit currentHit in hits)
+        BreakableCollective bcTemp;
+        foreach (Collider collider in colliders)
         {
-            if (currentHit.collider.TryGetComponent(out Rigidbody rigidbody))
+            if (collider.TryGetComponent(out Rigidbody rigidbody))
             {
                 if (!rigidbody.Equals(selfRB))
                 {
-                    if (currentHit.collider.TryGetComponent(out BreakableComponent current))
+                    if (collider.TryGetComponent(out BreakableComponent current))
                     {
-                        if (current.parent.Equals(parent) && !current.Equals(this))
+                        if (current is BreakableCollective breakableCollective)
+                        {
+                            print("collective found");
+                        }
+                        if ((ignoreParent||current.parent.Equals(parent)) && !current.Equals(this))
                         {
                             AddDetectedPart(current);
                         }
                     }
                 }
+            }
+            else
+            {
+                bcTemp =collider.GetComponentInParent<BreakableCollective>();
+                if (bcTemp)
+                {
+                    if (!bcTemp.parent.Equals(parent))
+                    {
+                        AddDetectedPart(bcTemp);
+                    }
+                }
+                
+               
             }
         }
 
@@ -456,11 +493,14 @@ public class BreakableComponent : MonoBehaviour
 
         foreach (BreakableData connectedPart in connectedParts)
         {
-            //sht makes no sense but it's dotting the other way
-            Vector3 dir = connectedPart.Component.transform.position - transform.position;
-            if (Vector3.Angle(Vector3.up, dir) > minBottomAngle)
+            if (!connectedPart.Component.IsBroken())
             {
-                return true;
+                //sht makes no sense but it's dotting the other way
+                Vector3 dir = connectedPart.Component.transform.position - transform.position;
+                if (Vector3.Angle(Vector3.up, dir) > minBottomAngle)
+                {
+                    return true;
+                }
             }
         }
 

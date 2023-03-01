@@ -310,10 +310,18 @@ public class CatTelekinesis : MonoBehaviour
         Vector3 pos;
         for (int i = 0; i < parts.Count; i++)
         {
-            lines[i].gameObject.SetActive(true);
-            // pos = parts[i].transform.position - lineParent.position;
-            lines[i].SetPosition(0, lineParent.position);
-            lines[i].SetPosition(1, parts[i].transform.position);
+            if (parts[i].gameObject)
+            {
+                lines[i].gameObject.SetActive(true);
+                // pos = parts[i].transform.position - lineParent.position;
+                lines[i].SetPosition(0, lineParent.position);
+                lines[i].SetPosition(1, parts[i].transform.position);
+            }
+            else
+            {
+                lines[i].gameObject.SetActive(false);
+
+            }
         }
 
         for (int i = parts.Count; i < lines.Length; i++)

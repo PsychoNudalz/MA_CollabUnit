@@ -44,17 +44,28 @@ public class DestructiveControllerWindow : EditorWindow
         {
             DestructiveController.Initialise(controlledbreakableStructure);
         }
-        
+
         if (GUILayout.Button("Update All Breakable Objects"))
         {
             DestructiveController.UpdateObjects(controlledbreakableStructure);
         }
-        
+
         if (GUILayout.Button("Reset Connection All Breakable Objects"))
         {
             DestructiveController.ResetConnections(controlledbreakableStructure);
         }
-        
+
+        GUILayout.Space(15f);
+        if (GUILayout.Button("Show Shells"))
+        {
+            DestructiveController.ShowCollectiveFractures(controlledbreakableStructure);
+        }
+
+        if (GUILayout.Button("Hide Shells"))
+        {
+            DestructiveController.HideCollectiveFractures(controlledbreakableStructure);
+        }
+
         GUILayout.Space(15f);
 
         if (GUILayout.Button("Count All Breakable Parts"))
@@ -94,13 +105,16 @@ public class DestructiveController
         // {
         //     temp.Add(g.GetComponent<breakableStructure>());
         // }
-        BreakableStructureController[] temp = GameObject.FindObjectsOfType<BreakableStructureController>(includeInactive);
+        BreakableStructureController[] temp =
+            GameObject.FindObjectsOfType<BreakableStructureController>(includeInactive);
         Debug.Log($"Window hooked to {temp.Length} objects");
         return temp;
     }
 
     public static void UpdateObjects(BreakableStructureController[] breakableStructures)
     {
+        ShowCollectiveFractures(breakableStructures);
+
         foreach (BreakableStructureController breakableStructure in breakableStructures)
         {
             try
@@ -117,12 +131,14 @@ public class DestructiveController
                 Debug.LogError(e);
             }
         }
-        EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
+        HideCollectiveFractures(breakableStructures);
 
+        EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
     }
 
     public static void Initialise(BreakableStructureController[] breakableStructures)
     {
+        ShowCollectiveFractures(breakableStructures);
         foreach (BreakableStructureController breakableStructure in breakableStructures)
         {
             try
@@ -138,8 +154,10 @@ public class DestructiveController
                 Debug.LogError(e);
             }
         }
-        EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
+        HideCollectiveFractures(breakableStructures);
 
+
+        EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
     }
 
     public static void ResetConnections(BreakableStructureController[] breakableStructures)
@@ -161,6 +179,7 @@ public class DestructiveController
                 Debug.LogError(e);
             }
         }
+
         EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
     }
 
@@ -172,6 +191,35 @@ public class DestructiveController
             EditorUtility.SetDirty(breakableComponent);
             // PrefabUtility.RecordPrefabInstancePropertyModifications(breakableComponent.gameObject);
             // PrefabUtility.RecordPrefabInstancePropertyModifications(breakableComponent);
+        }
+    }
+
+    public static void ShowCollectiveFractures(BreakableStructureController[] breakableStructures)
+    {
+        foreach (BreakableStructureController structure in breakableStructures)
+        {
+            foreach (BreakableComponent breakableComponent in structure.BreakableCollectives)
+            {
+                if (breakableComponent is BreakableCollective bc)
+                {
+                    bc.FlipShell(true);
+                }
+            }
+        }
+        
+    }
+
+    public static void HideCollectiveFractures(BreakableStructureController[] breakableStructures)
+    {
+        foreach (BreakableStructureController structure in breakableStructures)
+        {
+            foreach (BreakableComponent breakableComponent in structure.BreakableCollectives)
+            {
+                if (breakableComponent is BreakableCollective bc)
+                {
+                    bc.FlipShell(false);
+                }
+            }
         }
     }
 }

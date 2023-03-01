@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,6 +13,13 @@ public class CatInputController : MonoBehaviour
 
     [SerializeField]
     private QuadrupedMovementController quadrupedMovementController;
+
+    [Header("Look")]
+    [SerializeField]
+    private CinemachineFreeLook originalCinemachine;
+
+    [SerializeField]
+    private CinemachineFreeLook aimCinemachine;
 
     [Header("Telekinesis")]
     [SerializeField]
@@ -43,13 +51,11 @@ public class CatInputController : MonoBehaviour
     void Update()
     {
         MoveCat();
-        
     }
 
     private void FixedUpdate()
     {
         quadrupedMovementController.GetClosestFoot(cameraTransform.forward, cameraTransform.position);
-
     }
 
     public void OnMove(InputValue inputValue)
@@ -66,7 +72,7 @@ public class CatInputController : MonoBehaviour
 
     public void OnSwipe()
     {
-        quadrupedMovementController.OnSwipe(cameraTransform.forward,cameraTransform.position);
+        quadrupedMovementController.OnSwipe(cameraTransform.forward, cameraTransform.position);
     }
 
     public void OnHardReset()
@@ -80,20 +86,35 @@ public class CatInputController : MonoBehaviour
 
         if (isTeleOn)
         {
-            if (inputValue.Get<float>()<0.5f)
+            if (inputValue.Get<float>() < 0.5f)
             {
-                catTelekinesis.OnTelekinesis_Release(cameraTransform.forward,cameraTransform.position);
+                catTelekinesis.OnTelekinesis_Release(cameraTransform.forward, cameraTransform.position);
                 isTeleOn = false;
-
             }
         }
         else
         {
             if (inputValue.Get<float>() >= 0.5f)
             {
-                catTelekinesis.OnTelekinesis_Press(cameraTransform.forward,cameraTransform.position);
+                catTelekinesis.OnTelekinesis_Press(cameraTransform.forward, cameraTransform.position);
                 isTeleOn = true;
             }
+        }
+    }
+
+    public void OnAim(InputValue inputValue)
+    {
+        if (inputValue.Get<float>() < 0.5f)
+        {
+            aimCinemachine.Priority = 0;
+            originalCinemachine.m_XAxis.Value = aimCinemachine.m_XAxis.Value;
+            originalCinemachine.m_YAxis.Value = aimCinemachine.m_YAxis.Value;
+        }
+        else
+        {
+            aimCinemachine.Priority = 20;
+            aimCinemachine.m_XAxis.Value = originalCinemachine.m_XAxis.Value;
+            aimCinemachine.m_YAxis.Value = originalCinemachine.m_YAxis.Value;
         }
     }
 
@@ -124,7 +145,7 @@ public class CatInputController : MonoBehaviour
         float angle = Vector3.SignedAngle(Vector3.forward, cameraForward, transform.up);
         return Quaternion.Euler(0, 0, -angle);
     }
-    
+
     public static Quaternion GetAngle_World_Static()
     {
         Vector3 cameraForward = Camera.main.transform.forward;

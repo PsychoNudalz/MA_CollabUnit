@@ -24,6 +24,8 @@ public class BreakableCollective : BreakableComponent
     [SerializeField]
     private bool onlyConnectToCollectives = true;
 
+    public BreakableComponent[] BreakableComponents => breakableComponents;
+
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -40,7 +42,8 @@ public class BreakableCollective : BreakableComponent
         float affectedRange, Vector2 breakForce,
         float forceTransfer,
         LayerMask bpLayer, AnimationCurve transferToDot, float minSize, float breakDelay, float bottomAngle,
-        PhysicMaterial pm, UnityEvent breakEvent1, float despawnTime1, UnityEvent despawnEvent1, LayerMask groundLayer1)
+        PhysicMaterial pm, UnityEvent breakEvent1, float despawnTime1, UnityEvent despawnEvent1, LayerMask groundLayer1,
+        bool ignoreParent1)
     {
         if (!shell || !fractureParent)
         {
@@ -51,9 +54,9 @@ public class BreakableCollective : BreakableComponent
         parent = p;
         Initialise();
         InitialiseValues(mass, bsc, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot, minSize,
-            breakDelay, bottomAngle, pm, breakEvent1, despawnTime1, despawnEvent1, groundLayer1);
+            breakDelay, bottomAngle, pm, breakEvent1, despawnTime1, despawnEvent1, groundLayer1, ignoreParent1);
 
-        fractureParent.SetActive(true);
+        // fractureParent.SetActive(true);
 
 
         Rigidbody rb;
@@ -94,10 +97,10 @@ public class BreakableCollective : BreakableComponent
                 bpLayer,
                 transferToDot,
                 minimumPartSize, bsc.BreakDelay, minBottomAngle, pm, breakEvent, despawnTime, despawnEvent,
-                groundLayer);
+                groundLayer, ignoreParent1);
         }
 
-        fractureParent.SetActive(false);
+        // fractureParent.SetActive(false);
     }
 
     public override void Initialise()
@@ -114,8 +117,8 @@ public class BreakableCollective : BreakableComponent
         bool forceBreak = false, Vector3 originPoint = default)
     {
         // base.Break(force, originalForce, breakHistory, breakDelay, forceBreak);
-        shell.SetActive(false);
-        fractureParent.SetActive(true);
+        ChangeState(BreakableState.Free);
+        FlipShell(true);
     }
 
     public override void CollisionBreak(Rigidbody rb, Collision collision = null, Vector3 point = default)
@@ -257,13 +260,13 @@ public class BreakableCollective : BreakableComponent
 
     public override List<BreakableData> InitialiseClosest()
     {
-        fractureParent.SetActive(true);
+        // fractureParent.SetActive(true);
         foreach (BreakableComponent breakableComponent in breakableComponents)
         {
             breakableComponent.InitialiseClosest();
         }
 
-        fractureParent.SetActive(false);
+        // fractureParent.SetActive(false);
 
         return base.InitialiseClosest();
     }
@@ -304,6 +307,21 @@ public class BreakableCollective : BreakableComponent
         foreach (BreakableComponent breakableComponent in breakableComponents)
         {
             breakableComponent.Despawn();
+        }
+    }
+
+    public void FlipShell(bool b)
+    {
+        shell.SetActive(!b);
+        fractureParent.SetActive(b);
+    }
+
+    public override void InitialiseGround()
+    {
+        base.InitialiseGround();
+        foreach (BreakableComponent breakableComponent in breakableComponents)
+        {
+            breakableComponent.InitialiseGround();
         }
     }
 }
