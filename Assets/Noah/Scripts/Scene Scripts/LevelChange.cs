@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,13 +7,38 @@ using UnityEngine.SceneManagement;
 
 public class LevelChange : MonoBehaviour
 {
-    
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        if (Keyboard.current.enterKey.wasPressedThisFrame)
+        StartCoroutine(LoadNextScene());
+    }
+
+    IEnumerator LoadNextScene()
+    {
+        yield return null;
+
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(2);
+        asyncOperation.allowSceneActivation = false;
+
+        while (!asyncOperation.isDone)
         {
-            SceneManager.LoadScene(2);
+           
+            if (asyncOperation.progress >= 0.9f)
+            {
+                if (Keyboard.current.enterKey.wasPressedThisFrame)
+                {
+                    asyncOperation.allowSceneActivation = true;
+                }
+                if (Gamepad.current != null)
+                {
+                    if (Gamepad.current.selectButton.wasPressedThisFrame)
+                    {
+                        asyncOperation.allowSceneActivation = true;
+                    }
+                }
+            }
+
+            yield return null;
         }
     }
+    
 }
