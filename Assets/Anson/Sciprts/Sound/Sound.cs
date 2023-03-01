@@ -45,6 +45,7 @@ public class Sound : SoundAbstract
 
 
 
+    
     protected virtual void StartBehaviour()
     {
         if (!source)
@@ -54,7 +55,7 @@ public class Sound : SoundAbstract
     }
 
 
-    protected virtual void Initialise()
+    protected override void Initialise()
     {
         if (source == null && gameObject.TryGetComponent(out source))
         {
@@ -66,6 +67,10 @@ public class Sound : SoundAbstract
             soundManager = SoundManager.current;
         }
 
+        if (volume == 0)
+        {
+            print("Volume 0");
+        }
         baseVolume = volume;
         basePitch = pitch;
         if (source)

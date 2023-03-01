@@ -25,6 +25,11 @@ public class CatInputController : MonoBehaviour
     [SerializeField]
     private CatTelekinesis catTelekinesis;
 
+    [Header("Sounds For now")]
+    [SerializeField]
+    private SoundAbstract meowSound;
+
+
     private bool isTeleOn = false;
     private Transform cameraTransform;
 
@@ -72,6 +77,7 @@ public class CatInputController : MonoBehaviour
 
     public void OnSwipe()
     {
+        meowSound?.Play();
         quadrupedMovementController.OnSwipe(cameraTransform.forward, cameraTransform.position);
     }
 

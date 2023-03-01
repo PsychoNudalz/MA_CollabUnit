@@ -136,6 +136,7 @@ MonoBehaviour:
   swipeCollider: {fileID: 5517710512814078331}
   swipeTime: 0.5
   highlight: {fileID: 4597079352232196621}
+  swipeSound: {fileID: 943971597940232096}
   footstepSound: {fileID: 6083037139928057008}
   vfx_Footstep: {fileID: 6179470101543582095}
   isDebug: 0
@@ -409,18 +410,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8763417208126062221, guid: f41b9acd6cdea2c4cbde02edb7db89dd,
-        type: 3}
-      propertyPath: m_InitialEventName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8763417208126062221, guid: f41b9acd6cdea2c4cbde02edb7db89dd,
-        type: 3}
-      propertyPath: m_InitialEventNameOverriden
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f41b9acd6cdea2c4cbde02edb7db89dd, type: 3}
+--- !u!114 &943971597940232096 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2397502691166767266, guid: f41b9acd6cdea2c4cbde02edb7db89dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 3196441741213353730}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7298e42ea783c7e45ae2b7251c1f406d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5146823416515442076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7724019109386547870, guid: f41b9acd6cdea2c4cbde02edb7db89dd,

@@ -79,6 +79,12 @@ public class CatTelekinesis : MonoBehaviour
     private VisualEffect vfx_BlackHole;
 
     [SerializeField]
+    private SoundAbstract sfx_tele_Pull;
+    [SerializeField]
+    private SoundAbstract sfx_tele_Shoot;
+
+
+    [SerializeField]
     private UnityEvent OnAimEvent;
 
     [SerializeField]
@@ -181,7 +187,7 @@ public class CatTelekinesis : MonoBehaviour
                 telekinesisState = TelekinesisState.Pull;
                 OnAimEvent.Invoke();
                 OnPullEvent.Invoke();
-
+                sfx_tele_Pull.Play();
                 break;
             case TelekinesisState.Aim:
                 break;
@@ -208,6 +214,8 @@ public class CatTelekinesis : MonoBehaviour
                 break;
             case TelekinesisState.Pull:
                 OnTele_Shoot(dir);
+                sfx_tele_Pull.Stop();
+                sfx_tele_Shoot.PlayF();
 
                 break;
             case TelekinesisState.Shoot:

@@ -74,6 +74,9 @@ public class FootMovementSphere : MonoBehaviour
 
     [SerializeField]
     private HighlightEffect highlight;
+
+    [SerializeField]
+    private SoundAbstract swipeSound;
     
     private float swipeTime_Now = 0f;
     private Vector3 swipeForce = new Vector3();
@@ -539,6 +542,7 @@ public class FootMovementSphere : MonoBehaviour
         swipeForce = sideForce;
         Debug.DrawRay(transform.position, initialForce, Color.green, 2f);
         swipeTime_Now = 0f;
+        swipeSound.PlayF();
     }
 
     public void SetHighlight(bool b)
