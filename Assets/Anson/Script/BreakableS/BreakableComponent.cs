@@ -5,56 +5,56 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-[Serializable]
-public class BreakableData
-{
-    [SerializeField]
-    private BreakableComponent component;
-
-    [SerializeField]
-    private float distance;
-
-    // [SerializeField]
-    // [Tooltip("Min, Max")]
-    // private Vector2 breakForceLimit;
-
-
-    [SerializeField]
-    private Vector3 dir;
-
-    public BreakableComponent Component => component;
-    // public BreakableComponent Part => component as BreakableComponent;
-
-    public float Distance => distance;
-
-    // public Vector2 BreakForceLimit => breakForceLimit;
-
-    public Vector3 Dir => dir;
-
-    public BreakableData(BreakableComponent component, float distance, Vector2 breakForceLimit, Vector3 dir)
-    {
-        this.component = component;
-        this.distance = distance;
-        // this.breakForceLimit = breakForceLimit;
-        this.dir = dir;
-    }
-
-    public override bool Equals(object obj)
-    {
-        if (obj is BreakableComponent other)
-        {
-            other.Equals(component);
-            return true;
-        }
-
-        return base.Equals(obj);
-    }
-
-    public override int GetHashCode()
-    {
-        return base.GetHashCode();
-    }
-}
+// [Serializable]
+// public class BreakableData
+// {
+//     [SerializeField]
+//     private BreakableComponent component;
+//
+//     [SerializeField]
+//     private float distance;
+//
+//     // [SerializeField]
+//     // [Tooltip("Min, Max")]
+//     // private Vector2 breakForceLimit;
+//
+//
+//     [SerializeField]
+//     private Vector3 dir;
+//
+//     public BreakableComponent Component => component;
+//     // public BreakableComponent Part => component as BreakableComponent;
+//
+//     public float Distance => distance;
+//
+//     // public Vector2 BreakForceLimit => breakForceLimit;
+//
+//     public Vector3 Dir => dir;
+//
+//     public BreakableData(BreakableComponent component, float distance, Vector2 breakForceLimit, Vector3 dir)
+//     {
+//         this.component = component;
+//         this.distance = distance;
+//         // this.breakForceLimit = breakForceLimit;
+//         this.dir = dir;
+//     }
+//
+//     public override bool Equals(object obj)
+//     {
+//         if (obj is BreakableComponent other)
+//         {
+//             other.Equals(component);
+//             return true;
+//         }
+//
+//         return base.Equals(obj);
+//     }
+//
+//     public override int GetHashCode()
+//     {
+//         return base.GetHashCode();
+//     }
+// }
 
 [Serializable]
 public enum BreakableState
@@ -84,10 +84,10 @@ public class BreakableComponent : MonoBehaviour
     private BreakableStructureController breakableStructureController;
 
     [SerializeField]
-    protected List<BreakableData> connectedParts;
+    protected List<BreakableComponent> connectedParts;
 
     [SerializeField]
-    protected List<BreakableData> otherConnectedParts;
+    protected List<BreakableComponent> otherConnectedParts;
 
     [SerializeField]
     protected BreakableState breakableState = BreakableState.Hold;
@@ -221,8 +221,8 @@ public class BreakableComponent : MonoBehaviour
 
     public virtual void ResetConnections()
     {
-        connectedParts = new List<BreakableData>();
-        otherConnectedParts = new List<BreakableData>();
+        connectedParts = new List<BreakableComponent>();
+        otherConnectedParts = new List<BreakableComponent>();
     }
 
     public virtual void Initialise(GameObject p, BreakableStructureController bsc, float mass, float drag,
@@ -321,8 +321,8 @@ public class BreakableComponent : MonoBehaviour
             collider = GetComponent<Collider>();
         }
 
-        connectedParts = new List<BreakableData>();
-        otherConnectedParts = new List<BreakableData>();
+        connectedParts = new List<BreakableComponent>();
+        otherConnectedParts = new List<BreakableComponent>();
     }
 
     protected virtual bool GroundCheck()
@@ -366,8 +366,8 @@ public class BreakableComponent : MonoBehaviour
         {
             try
             {
-                BreakableData current = connectedParts[i];
-                if (current.Component.Equals(part))
+                BreakableComponent current = connectedParts[i];
+                if (current.Equals(part))
                 {
                     // print($"{this} remove connection: {part}");
                     connectedParts.RemoveAt(i);
@@ -384,9 +384,9 @@ public class BreakableComponent : MonoBehaviour
         {
             try
             {
-                BreakableData current = otherConnectedParts[i];
+                BreakableComponent current = otherConnectedParts[i];
 
-                if (current.Component.Equals(part))
+                if (current.Equals(part))
                 {
                     otherConnectedParts.RemoveAt(i);
                     return;
@@ -401,33 +401,33 @@ public class BreakableComponent : MonoBehaviour
 
     protected void AddPart(BreakableComponent current)
     {
-        BreakableData item = CalculatePartDistance(current);
+        // BreakableComponent item = CalculatePartDistance(current);
 
-        if (!connectedParts.Contains(item))
+        if (!connectedParts.Contains(current))
         {
-            connectedParts.Add(item);
+            connectedParts.Add(current);
         }
     }
 
     protected void AddOtherPart(BreakableComponent current)
     {
-        BreakableData item = CalculatePartDistance(current);
+        // BreakableData item = CalculatePartDistance(current);
 
-        if (!otherConnectedParts.Contains(item) && !connectedParts.Contains(item))
+        if (!otherConnectedParts.Contains(current) && !connectedParts.Contains(current))
         {
-            otherConnectedParts.Add(item);
+            otherConnectedParts.Add(current);
         }
     }
 
-    protected BreakableData CalculatePartDistance(BreakableComponent bp)
-    {
-        float d = Mathf.Abs((bp.transform.position - transform.position).magnitude);
-        // float f = Mathf.Lerp(breakingForce, bp.breakingForce, d / affectiveRange);
-        Vector2 f = bp.breakingForce;
-        return new BreakableData(bp, d, f, (bp.transform.position - transform.position).normalized);
-    }
+    // protected BreakableData CalculatePartDistance(BreakableComponent bp)
+    // {
+    //     float d = Mathf.Abs((bp.transform.position - transform.position).magnitude);
+    //     // float f = Mathf.Lerp(breakingForce, bp.breakingForce, d / affectiveRange);
+    //     Vector2 f = bp.breakingForce;
+    //     return new BreakableData(bp, d, f, (bp.transform.position - transform.position).normalized);
+    // }
 
-    public virtual List<BreakableData> InitialiseClosest(bool ignoreTooSmall = false)
+    public virtual List<BreakableComponent> InitialiseClosest(bool ignoreTooSmall = false)
     {
         float CastSizeMultiplier = .25f;
         float range = affectiveRange + meshSize * CastSizeMultiplier;
@@ -501,12 +501,12 @@ public class BreakableComponent : MonoBehaviour
         }
         // double cos = Math.Cos(minBottomAngle*Mathf.Deg2Rad);
 
-        foreach (BreakableData connectedPart in connectedParts)
+        foreach (BreakableComponent connectedPart in connectedParts)
         {
-            if (!connectedPart.Component.IsBroken())
+            if (!connectedPart.IsBroken())
             {
                 //sht makes no sense but it's dotting the other way
-                Vector3 dir = connectedPart.Component.transform.position - transform.position;
+                Vector3 dir = connectedPart.transform.position - transform.position;
                 if (Vector3.Angle(Vector3.up, dir) > minBottomAngle)
                 {
                     return true;
@@ -517,7 +517,7 @@ public class BreakableComponent : MonoBehaviour
         return false;
     }
 
-    public virtual void EvaluateBreak(BreakableData pd, Vector3 force, BreakableComponent originalPart,
+    public virtual void EvaluateBreak(BreakableComponent pd, Vector3 force, BreakableComponent originalPart,
         List<BreakableComponent> breakHistory)
     {
     }
@@ -663,5 +663,10 @@ public class BreakableComponent : MonoBehaviour
             Break(force, force);
         }
         selfRB.AddForce(force);
+    }
+
+    protected Vector3 Dir(BreakableComponent target)
+    {
+        return (target.transform.position - transform.position).normalized;
     }
 }

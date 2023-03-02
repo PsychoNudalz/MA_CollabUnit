@@ -273,7 +273,7 @@ public class BreakableCollective : BreakableComponent
         base.RemovePart(part);
     }
 
-    public override List<BreakableData> InitialiseClosest(bool ignoreTooSmall = false)
+    public override List<BreakableComponent> InitialiseClosest(bool ignoreTooSmall = false)
     {
         // fractureParent.SetActive(true);
         foreach (BreakableComponent breakableComponent in breakableComponents)
@@ -291,7 +291,7 @@ public class BreakableCollective : BreakableComponent
         base.AddDetectedPart(current);
     }
 
-    public override void EvaluateBreak(BreakableData pd, Vector3 force, BreakableComponent originalPart,
+    public override void EvaluateBreak(BreakableComponent pd, Vector3 force, BreakableComponent originalPart,
         List<BreakableComponent> breakHistory)
     {
         base.EvaluateBreak(pd, force, originalPart, breakHistory);

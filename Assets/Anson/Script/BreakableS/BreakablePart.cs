@@ -63,24 +63,24 @@ public class BreakablePart : BreakableComponent
             {
                 if (otherConnectedParts?.Count > 0)
                 {
-                    foreach (BreakableData connectedPart in otherConnectedParts)
+                    foreach (BreakableComponent connectedPart in otherConnectedParts)
                     {
-                        if (connectedPart.Component)
+                        if (connectedPart)
                         {
                             Gizmos.color = Color.magenta;
-                            Gizmos.DrawLine(transform.position, connectedPart.Component.transform.position);
+                            Gizmos.DrawLine(transform.position, connectedPart.transform.position);
                         }
                     }
                 }
 
                 if (connectedParts?.Count > 0)
                 {
-                    foreach (BreakableData connectedPart in connectedParts)
+                    foreach (BreakableComponent connectedPart in connectedParts)
                     {
-                        if (connectedPart.Component)
+                        if (connectedPart)
                         {
                             Gizmos.color = Color.white;
-                            Gizmos.DrawLine(transform.position, connectedPart.Component.transform.position);
+                            Gizmos.DrawLine(transform.position, connectedPart.transform.position);
                         }
                     }
                 }
@@ -115,9 +115,9 @@ public class BreakablePart : BreakableComponent
 
     bool RBInConnected(Rigidbody rb)
     {
-        foreach (BreakableData connectedPart in connectedParts)
+        foreach (BreakableComponent connectedPart in connectedParts)
         {
-            if (connectedPart.Component.SelfRb.Equals(rb))
+            if (connectedPart.SelfRb.Equals(rb))
             {
                 return true;
             }
@@ -201,21 +201,21 @@ public class BreakablePart : BreakableComponent
 
         // print($"{this} Force: {force}");
         Vector3 newForce = force * forceTransfer;
-        BreakableData[] tempPD = connectedParts.ToArray();
-        foreach (BreakableData connectedPart in tempPD)
+        BreakableComponent[] tempPD = connectedParts.ToArray();
+        foreach (BreakableComponent connectedPart in tempPD)
         {
-            if (connectedPart.Component)
+            if (connectedPart)
             {
-                connectedPart.Component.EvaluateBreak(connectedPart, force, this, breakHistory);
+                connectedPart.EvaluateBreak(connectedPart, force, this, breakHistory);
             }
         }
 
         tempPD = otherConnectedParts.ToArray();
-        foreach (BreakableData partDistance in tempPD)
+        foreach (BreakableComponent partDistance in tempPD)
         {
-            if (partDistance.Component)
+            if (partDistance)
             {
-                partDistance.Component.EvaluateFall();
+                partDistance.EvaluateFall();
             }
         }
 
@@ -246,9 +246,9 @@ public class BreakablePart : BreakableComponent
         }
 
         finalBrokeForce = force.magnitude;
-        foreach (BreakableData part in otherConnectedParts)
+        foreach (BreakableComponent part in otherConnectedParts)
         {
-            part.Component.RemovePart(this);
+            part.RemovePart(this);
         }
 
 
@@ -278,7 +278,7 @@ public class BreakablePart : BreakableComponent
     /// </summary>
     /// <param name="pd"></param>
     /// <param name="force"></param>
-    public override void EvaluateBreak(BreakableData pd, Vector3 force, BreakableComponent originalPart,
+    public override void EvaluateBreak(BreakableComponent pd, Vector3 force, BreakableComponent originalPart,
         List<BreakableComponent> breakHistory)
     {
         if (gameObject || !gameObject.activeSelf)
@@ -297,9 +297,9 @@ public class BreakablePart : BreakableComponent
         Vector3 newForce = force * forceTransfer;
 
         float LerpForce = .5f;
-        float dotValue = Mathf.Abs(Vector3.Dot(pd.Dir, newForce.normalized));
+        float dotValue = Mathf.Abs(Vector3.Dot(Dir(pd), newForce.normalized));
         // print(dotValue);
-        newForce = Vector3.Lerp(pd.Dir, newForce.normalized, LerpForce) *
+        newForce = Vector3.Lerp(Dir(pd), newForce.normalized, LerpForce) *
                    (newForce.magnitude * transferToDot.Evaluate(dotValue));
         RemovePart(originalPart);
 
