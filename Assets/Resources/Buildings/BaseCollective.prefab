@@ -151,12 +151,18 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 1
+  breakDelay: {x: 0, y: 0}
   minBottomAngle: 110
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  isGroundPiece: 0
+  originalNoBottom: 0
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
     m_Bits: 64
+  ignoreParent: 0
   breakEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -171,6 +177,7 @@ MonoBehaviour:
   renderer: {fileID: 0}
   meshFilter: {fileID: 0}
   parent: {fileID: 4099058805237396103}
+  collectiveParent: {fileID: 0}
   shell: {fileID: 4099058803282501500}
   fractureParent: {fileID: 4099058803885111177}
   breakableComponents:
@@ -321,6 +328,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  tooSmallComponents: []
   contactCastRadius: 0.5
   onlyConnectToCollectives: 1
 --- !u!54 &4099058804619286334
@@ -385,162 +393,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891472fc62454ea45acddf92a5499c51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allColliders:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  allBreakableComponents:
-  - {fileID: 4099058804619286335}
   breakableParts: []
   breakableCollectives:
   - {fileID: 4099058804619286335}
   mass: 10
   drag: 0
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
+  ignoreParent: 0
   affectedRange: 0.5
   breakForce: {x: 100, y: 150}
   forceTransfer: 0.5
@@ -581,12 +440,15 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   minimumPartSize: 5
-  breakDelay: 1
+  breakDelayRange: {x: 0.5, y: 1.5}
   minBottomAngle: 110
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  effectsController: {fileID: 0}
   breakEvent:
     m_PersistentCalls:
       m_Calls: []
-  vfx_Break: {fileID: 2317104601343539567}
   despawnTime: 3
   despawnEvent:
     m_PersistentCalls:
@@ -598,11 +460,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4099058805237396102}
     m_Modifications:
-    - target: {fileID: 6874657499850193236, guid: 6490d45b382cd66488939bfc21b07489,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6874657500036713709, guid: 6490d45b382cd66488939bfc21b07489,
         type: 3}
       propertyPath: m_Name
@@ -668,12 +525,6 @@ PrefabInstance:
 --- !u!4 &2317104600490134740 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6874657500036713710, guid: 6490d45b382cd66488939bfc21b07489,
-    type: 3}
-  m_PrefabInstance: {fileID: 9173747543032102970}
-  m_PrefabAsset: {fileID: 0}
---- !u!2083052967 &2317104601343539567 stripped
-VisualEffect:
-  m_CorrespondingSourceObject: {fileID: 6874657499850193237, guid: 6490d45b382cd66488939bfc21b07489,
     type: 3}
   m_PrefabInstance: {fileID: 9173747543032102970}
   m_PrefabAsset: {fileID: 0}
