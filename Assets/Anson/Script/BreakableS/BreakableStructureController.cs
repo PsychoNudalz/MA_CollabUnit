@@ -14,10 +14,10 @@ using Random = UnityEngine.Random;
 /// </summary>
 public class BreakableStructureController : MonoBehaviour
 {
-    private Collider[] allColliders;
+    private Collider[] allColliders = Array.Empty<Collider>();
 
 
-    private BreakableComponent[] allBreakableComponents;
+    private BreakableComponent[] allBreakableComponents = Array.Empty<BreakableComponent>();
 
     [SerializeField]
     private BreakablePart[] breakableParts;
