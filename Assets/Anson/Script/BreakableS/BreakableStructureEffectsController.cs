@@ -8,10 +8,13 @@ public class BreakableStructureEffectsController : MonoBehaviour
 {
     [Header("VFX")]
     [SerializeField]
-    private VisualEffect vfx_Break;
-    private float vfxTime = 0.1f;
+    private VisualEffect[] vfx_Breaks;
+    private float breakTime = 0.1f;
 
-    private float vfxTime_Now = -1;   
+    private float breakTime_Now = -1;
+
+    [SerializeField]
+    private VisualEffect[] vfx_Collision;
 
     [Header("SFX")]
     [SerializeField]
@@ -59,12 +62,16 @@ public class BreakableStructureEffectsController : MonoBehaviour
     
     public void PlayBreakEffects(Vector3 position,Mesh mesh)
     {
-        if (vfx_Break)
+        foreach (VisualEffect vfx_Break in vfx_Breaks)
         {
-            vfx_Break.SetVector3("Position",position);
-            vfx_Break.SetMesh("SpawnMesh",mesh);
-            vfx_Break.Play();
+            if (vfx_Break)
+            {
+                vfx_Break.SetVector3("Position",position);
+                vfx_Break.SetMesh("SpawnMesh",mesh);
+                vfx_Break.Play();
+            }
         }
+
         breakSound.Play();
 
         if (soundTime_Now <= 0)
