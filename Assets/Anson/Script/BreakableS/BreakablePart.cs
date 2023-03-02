@@ -482,10 +482,10 @@ public class BreakablePart : BreakableComponent
                 rendererMaterial.color = Color.yellow;
             }
         }
-        catch (NullReferenceException e)
+        catch (MissingReferenceException e)
         {
-            Console.WriteLine(e);
-            throw;
+            // Console.WriteLine(e);
+            return;
         }
         
     }
