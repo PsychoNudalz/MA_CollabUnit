@@ -422,6 +422,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6429530270991942161}
     m_Modifications:
+    - target: {fileID: 5116765940060849912, guid: 6490d45b382cd66488939bfc21b07489,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6874657499850193236, guid: 6490d45b382cd66488939bfc21b07489,
         type: 3}
       propertyPath: m_Enabled
@@ -2478,11 +2483,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - {fileID: 5843028042399559170}
-  - {fileID: 5843028040697478023}
-  - {fileID: 5843028041921770102}
-  - {fileID: 5843028041981550434}
   - {fileID: 5843028042014993894}
+  - {fileID: 5843028041981550434}
+  - {fileID: 5843028040697478023}
+  - {fileID: 5843028042399559170}
+  - {fileID: 5843028041921770102}
   otherConnectedParts:
   - {fileID: 5843028040697478023}
   - {fileID: 5843028042399559170}
@@ -2687,12 +2692,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
+  - {fileID: 5843028042014993894}
+  - {fileID: 5843028040797454159}
+  - {fileID: 5843028041981550434}
   - {fileID: 5843028042399559170}
   - {fileID: 5843028040582454791}
-  - {fileID: 5843028040797454159}
   - {fileID: 5843028040625983996}
-  - {fileID: 5843028041981550434}
-  - {fileID: 5843028042014993894}
   otherConnectedParts:
   - {fileID: 5843028040797454159}
   - {fileID: 5843028041921770102}
@@ -2839,12 +2844,12 @@ MonoBehaviour:
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
   - {fileID: 5843028042014993891}
-  - {fileID: 5843028041913610819}
-  - {fileID: 5843028042399559170}
   - {fileID: 5843028040697478023}
+  - {fileID: 5843028042399559170}
+  - {fileID: 5843028040625983996}
   - {fileID: 5843028041302274014}
   - {fileID: 5843028041495865555}
-  - {fileID: 5843028040625983996}
+  - {fileID: 5843028041913610819}
   otherConnectedParts:
   - {fileID: 5843028042014993891}
   - {fileID: 5843028040940436637}
@@ -3291,11 +3296,11 @@ MonoBehaviour:
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
   - {fileID: 5843028042014993891}
-  - {fileID: 5843028041913610819}
-  - {fileID: 5843028041495865555}
-  - {fileID: 5843028040940436637}
   - {fileID: 5843028040797454159}
   - {fileID: 5843028040625983996}
+  - {fileID: 5843028040940436637}
+  - {fileID: 5843028041495865555}
+  - {fileID: 5843028041913610819}
   otherConnectedParts:
   - {fileID: 5843028040940436637}
   - {fileID: 5843028040625983996}
@@ -3713,10 +3718,10 @@ MonoBehaviour:
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
   - {fileID: 5843028042014993891}
+  - {fileID: 5843028040797454159}
+  - {fileID: 5843028040697478023}
   - {fileID: 5843028041472834321}
   - {fileID: 5843028041913610819}
-  - {fileID: 5843028040697478023}
-  - {fileID: 5843028040797454159}
   otherConnectedParts:
   - {fileID: 5843028042014993891}
   - {fileID: 5843028040797454159}
@@ -3857,13 +3862,13 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - {fileID: 5843028042014993891}
-  - {fileID: 5843028041472834321}
-  - {fileID: 5843028041037554442}
   - {fileID: 5843028042029726080}
+  - {fileID: 5843028042014993891}
+  - {fileID: 5843028040797454159}
+  - {fileID: 5843028041472834321}
   - {fileID: 5843028041495865555}
   - {fileID: 5843028040476611946}
-  - {fileID: 5843028040797454159}
+  - {fileID: 5843028041037554442}
   otherConnectedParts:
   - {fileID: 5843028042014993891}
   - {fileID: 5843028040797454159}
@@ -4371,12 +4376,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
+  - {fileID: 5843028041611647364}
+  - {fileID: 5843028041512680964}
   - {fileID: 5843028040696891974}
   - {fileID: 5843028041143189747}
   - {fileID: 5843028041329677089}
   - {fileID: 5843028041679209788}
-  - {fileID: 5843028041512680964}
-  - {fileID: 5843028041611647364}
   otherConnectedParts:
   - {fileID: 5843028041679209788}
   - {fileID: 5843028041143189747}
@@ -4587,13 +4592,13 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - {fileID: 5843028041219032054}
-  - {fileID: 5843028041037554442}
-  - {fileID: 5843028042201400159}
-  - {fileID: 5843028041773873100}
   - {fileID: 5843028042147414469}
+  - {fileID: 5843028041219032054}
+  - {fileID: 5843028042201400159}
   - {fileID: 5843028041611647364}
   - {fileID: 5843028041271501809}
+  - {fileID: 5843028041773873100}
+  - {fileID: 5843028041037554442}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1367.6324, y: 2051.4485}
@@ -4736,19 +4741,19 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
+  - {fileID: 5843028042147414469}
   - {fileID: 5843028041219032054}
-  - {fileID: 5843028041913610819}
+  - {fileID: 5843028042201400159}
+  - {fileID: 5843028041271501809}
+  - {fileID: 5843028041879217728}
   - {fileID: 5843028040550990922}
+  - {fileID: 5843028042014993894}
   - {fileID: 5843028042399559170}
   - {fileID: 5843028040582454791}
-  - {fileID: 5843028042201400159}
   - {fileID: 5843028041302274014}
   - {fileID: 5843028041495865555}
+  - {fileID: 5843028041913610819}
   - {fileID: 5843028040476611946}
-  - {fileID: 5843028042014993894}
-  - {fileID: 5843028041879217728}
-  - {fileID: 5843028042147414469}
-  - {fileID: 5843028041271501809}
   otherConnectedParts:
   - {fileID: 5843028040476611946}
   - {fileID: 5843028042029726080}
@@ -4918,12 +4923,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
+  - {fileID: 5843028042147414469}
   - {fileID: 5843028042201400159}
+  - {fileID: 5843028041271501809}
+  - {fileID: 5843028041773873100}
   - {fileID: 5843028041679209788}
   - {fileID: 5843028041377794895}
-  - {fileID: 5843028041773873100}
-  - {fileID: 5843028042147414469}
-  - {fileID: 5843028041271501809}
   otherConnectedParts:
   - {fileID: 5843028041377794895}
   - {fileID: 5843028041041694980}
@@ -5225,10 +5230,10 @@ MonoBehaviour:
   connectedParts:
   - {fileID: 5843028041219032054}
   - {fileID: 5843028042201400159}
-  - {fileID: 5843028041679209788}
-  - {fileID: 5843028041773873100}
   - {fileID: 5843028041611647364}
   - {fileID: 5843028042305848699}
+  - {fileID: 5843028041773873100}
+  - {fileID: 5843028041679209788}
   otherConnectedParts:
   - {fileID: 5843028041679209788}
   - {fileID: 5843028041271501809}
@@ -5637,9 +5642,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - {fileID: 5843028042183625546}
   - {fileID: 5843028040728199408}
   - {fileID: 5843028041329677089}
+  - {fileID: 5843028042183625546}
   - {fileID: 5843028041679209788}
   - {fileID: 5843028041377794895}
   otherConnectedParts:
@@ -5930,13 +5935,13 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
+  - {fileID: 5843028042305848699}
   - {fileID: 5843028040696891974}
+  - {fileID: 5843028041773873100}
   - {fileID: 5843028041143189747}
+  - {fileID: 5843028041041694980}
   - {fileID: 5843028041329677089}
   - {fileID: 5843028041377794895}
-  - {fileID: 5843028041041694980}
-  - {fileID: 5843028041773873100}
-  - {fileID: 5843028042305848699}
   otherConnectedParts:
   - {fileID: 5843028042183625546}
   - {fileID: 5843028041817745560}
@@ -6371,11 +6376,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
+  - {fileID: 5843028042029726080}
+  - {fileID: 5843028041302274014}
+  - {fileID: 5843028041495865555}
   - {fileID: 5843028041913610819}
   - {fileID: 5843028041037554442}
-  - {fileID: 5843028041302274014}
-  - {fileID: 5843028042029726080}
-  - {fileID: 5843028041495865555}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1204.378, y: 1806.567}
@@ -7167,15 +7172,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - {fileID: 5843028041219032054}
-  - {fileID: 5843028042183625546}
-  - {fileID: 5843028041329677089}
-  - {fileID: 5843028041041694980}
-  - {fileID: 5843028041879217728}
-  - {fileID: 5843028041773873100}
   - {fileID: 5843028042147414469}
+  - {fileID: 5843028041219032054}
   - {fileID: 5843028041611647364}
   - {fileID: 5843028042305848699}
+  - {fileID: 5843028041879217728}
+  - {fileID: 5843028041773873100}
+  - {fileID: 5843028041041694980}
+  - {fileID: 5843028041329677089}
+  - {fileID: 5843028042183625546}
   otherConnectedParts:
   - {fileID: 5843028041879217728}
   - {fileID: 5843028041329677089}
@@ -7708,10 +7713,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - {fileID: 5843028041913610819}
-  - {fileID: 5843028041037554442}
   - {fileID: 5843028041495865555}
+  - {fileID: 5843028041913610819}
   - {fileID: 5843028040476611946}
+  - {fileID: 5843028041037554442}
   otherConnectedParts:
   - {fileID: 5843028040476611946}
   breakableState: 0
@@ -8015,11 +8020,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - {fileID: 5843028042211139184}
-  - {fileID: 5843028040696891974}
-  - {fileID: 5843028041679209788}
-  - {fileID: 5843028041041694980}
   - {fileID: 5843028042305848699}
+  - {fileID: 5843028040696891974}
+  - {fileID: 5843028042211139184}
+  - {fileID: 5843028041041694980}
+  - {fileID: 5843028041679209788}
   otherConnectedParts:
   - {fileID: 5843028041679209788}
   breakableState: 0
@@ -8345,10 +8350,10 @@ MonoBehaviour:
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
   - {fileID: 5843028042201400159}
-  - {fileID: 5843028041329677089}
+  - {fileID: 5843028041611647364}
   - {fileID: 5843028041879217728}
   - {fileID: 5843028041773873100}
-  - {fileID: 5843028041611647364}
+  - {fileID: 5843028041329677089}
   otherConnectedParts:
   - {fileID: 5843028041879217728}
   - {fileID: 5843028041329677089}
@@ -8866,10 +8871,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - {fileID: 5843028041472834321}
-  - {fileID: 5843028041913610819}
   - {fileID: 5843028040797454159}
   - {fileID: 5843028040625983996}
+  - {fileID: 5843028041472834321}
+  - {fileID: 5843028041913610819}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1321.4796, y: 1982.2194}
@@ -9018,9 +9023,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - {fileID: 5843028041913610819}
   - {fileID: 5843028040797454159}
   - {fileID: 5843028040625983996}
+  - {fileID: 5843028041913610819}
   otherConnectedParts:
   - {fileID: 5843028041472834321}
   - {fileID: 5843028040550990922}
@@ -10034,9 +10039,9 @@ MonoBehaviour:
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
   - {fileID: 5843028040550990922}
-  - {fileID: 5843028041981550434}
   - {fileID: 5843028042315514418}
   - {fileID: 5843028042014993894}
+  - {fileID: 5843028041981550434}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1964.037, y: 2946.0554}
@@ -10494,12 +10499,12 @@ MonoBehaviour:
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
   - {fileID: 5843028040550990922}
-  - {fileID: 5843028040962689742}
-  - {fileID: 5843028042399559170}
-  - {fileID: 5843028040697478023}
-  - {fileID: 5843028040582454791}
-  - {fileID: 5843028041981550434}
   - {fileID: 5843028042315514418}
+  - {fileID: 5843028040962689742}
+  - {fileID: 5843028041981550434}
+  - {fileID: 5843028040697478023}
+  - {fileID: 5843028042399559170}
+  - {fileID: 5843028040582454791}
   otherConnectedParts:
   - {fileID: 5843028040697478023}
   - {fileID: 5843028042399559170}
@@ -10635,10 +10640,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
+  - {fileID: 5843028041271501809}
   - {fileID: 5843028042183625546}
   - {fileID: 5843028041679209788}
   - {fileID: 5843028041377794895}
-  - {fileID: 5843028041271501809}
   otherConnectedParts:
   - {fileID: 5843028041271501809}
   breakableState: 0
@@ -11239,11 +11244,11 @@ MonoBehaviour:
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
   - {fileID: 5843028042201400159}
+  - {fileID: 5843028042305848699}
+  - {fileID: 5843028041512680964}
   - {fileID: 5843028040696891974}
   - {fileID: 5843028041143189747}
-  - {fileID: 5843028041512680964}
   - {fileID: 5843028041041694980}
-  - {fileID: 5843028042305848699}
   otherConnectedParts:
   - {fileID: 5843028041143189747}
   - {fileID: 5843028040696891974}
@@ -11382,12 +11387,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
+  - {fileID: 5843028042014993894}
+  - {fileID: 5843028040797454159}
+  - {fileID: 5843028041981550434}
   - {fileID: 5843028040697478023}
   - {fileID: 5843028040582454791}
   - {fileID: 5843028041302274014}
-  - {fileID: 5843028040797454159}
-  - {fileID: 5843028041981550434}
-  - {fileID: 5843028042014993894}
   otherConnectedParts:
   - {fileID: 5843028040797454159}
   - {fileID: 5843028041302274014}
@@ -11551,11 +11556,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - {fileID: 5843028041913610819}
-  - {fileID: 5843028041037554442}
   - {fileID: 5843028042399559170}
   - {fileID: 5843028041495865555}
+  - {fileID: 5843028041913610819}
   - {fileID: 5843028040476611946}
+  - {fileID: 5843028041037554442}
   otherConnectedParts:
   - {fileID: 5843028040797454159}
   - {fileID: 5843028040476611946}
@@ -11812,14 +11817,14 @@ MonoBehaviour:
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
   - {fileID: 5843028042014993891}
-  - {fileID: 5843028041913610819}
+  - {fileID: 5843028042315514418}
   - {fileID: 5843028040962689742}
-  - {fileID: 5843028042399559170}
-  - {fileID: 5843028040697478023}
+  - {fileID: 5843028042014993894}
   - {fileID: 5843028040797454159}
   - {fileID: 5843028041981550434}
-  - {fileID: 5843028042315514418}
-  - {fileID: 5843028042014993894}
+  - {fileID: 5843028040697478023}
+  - {fileID: 5843028042399559170}
+  - {fileID: 5843028041913610819}
   otherConnectedParts:
   - {fileID: 5843028041981550434}
   - {fileID: 5843028040962689742}
@@ -11978,11 +11983,11 @@ MonoBehaviour:
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
   - {fileID: 5843028040550990922}
-  - {fileID: 5843028042399559170}
+  - {fileID: 5843028042014993894}
   - {fileID: 5843028040697478023}
+  - {fileID: 5843028042399559170}
   - {fileID: 5843028040582454791}
   - {fileID: 5843028041302274014}
-  - {fileID: 5843028042014993894}
   otherConnectedParts:
   - {fileID: 5843028040697478023}
   - {fileID: 5843028042399559170}
@@ -12122,15 +12127,15 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - {fileID: 5843028041219032054}
-  - {fileID: 5843028041037554442}
-  - {fileID: 5843028041329677089}
-  - {fileID: 5843028041817745560}
-  - {fileID: 5843028041879217728}
-  - {fileID: 5843028041773873100}
   - {fileID: 5843028042147414469}
+  - {fileID: 5843028041219032054}
   - {fileID: 5843028041611647364}
   - {fileID: 5843028042305848699}
+  - {fileID: 5843028041879217728}
+  - {fileID: 5843028041773873100}
+  - {fileID: 5843028041329677089}
+  - {fileID: 5843028041817745560}
+  - {fileID: 5843028041037554442}
   otherConnectedParts:
   - {fileID: 5843028041879217728}
   - {fileID: 5843028041773873100}
@@ -12292,12 +12297,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
+  - {fileID: 5843028042305848699}
+  - {fileID: 5843028041512680964}
   - {fileID: 5843028042211139184}
   - {fileID: 5843028041143189747}
   - {fileID: 5843028041329677089}
   - {fileID: 5843028041679209788}
-  - {fileID: 5843028041512680964}
-  - {fileID: 5843028042305848699}
   otherConnectedParts:
   - {fileID: 5843028041679209788}
   - {fileID: 5843028041143189747}
@@ -12591,12 +12596,12 @@ MonoBehaviour:
   connectedParts:
   - {fileID: 5843028041219032054}
   - {fileID: 5843028042201400159}
-  - {fileID: 5843028041329677089}
-  - {fileID: 5843028041679209788}
-  - {fileID: 5843028041879217728}
   - {fileID: 5843028041611647364}
   - {fileID: 5843028042305848699}
   - {fileID: 5843028041271501809}
+  - {fileID: 5843028041879217728}
+  - {fileID: 5843028041329677089}
+  - {fileID: 5843028041679209788}
   otherConnectedParts:
   - {fileID: 5843028041879217728}
   - {fileID: 5843028041679209788}
@@ -12733,10 +12738,10 @@ MonoBehaviour:
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
   - {fileID: 5843028041219032054}
-  - {fileID: 5843028041037554442}
   - {fileID: 5843028042201400159}
   - {fileID: 5843028041879217728}
   - {fileID: 5843028041773873100}
+  - {fileID: 5843028041037554442}
   otherConnectedParts:
   - {fileID: 5843028041879217728}
   - {fileID: 5843028041271501809}
@@ -13151,8 +13156,8 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - {fileID: 5843028042399559170}
   - {fileID: 5843028040697478023}
+  - {fileID: 5843028042399559170}
   - {fileID: 5843028040582454791}
   otherConnectedParts: []
   breakableState: 0
@@ -13288,14 +13293,14 @@ MonoBehaviour:
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
   - {fileID: 5843028041219032054}
-  - {fileID: 5843028041037554442}
   - {fileID: 5843028042201400159}
-  - {fileID: 5843028041329677089}
+  - {fileID: 5843028042305848699}
   - {fileID: 5843028041512680964}
+  - {fileID: 5843028041271501809}
   - {fileID: 5843028041879217728}
   - {fileID: 5843028041773873100}
-  - {fileID: 5843028042305848699}
-  - {fileID: 5843028041271501809}
+  - {fileID: 5843028041329677089}
+  - {fileID: 5843028041037554442}
   otherConnectedParts:
   - {fileID: 5843028041879217728}
   - {fileID: 5843028041329677089}
@@ -13752,12 +13757,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - {fileID: 5843028041913610819}
-  - {fileID: 5843028041037554442}
-  - {fileID: 5843028041302274014}
   - {fileID: 5843028042029726080}
-  - {fileID: 5843028040476611946}
   - {fileID: 5843028040797454159}
+  - {fileID: 5843028041302274014}
+  - {fileID: 5843028041913610819}
+  - {fileID: 5843028040476611946}
+  - {fileID: 5843028041037554442}
   otherConnectedParts:
   - {fileID: 5843028040797454159}
   - {fileID: 5843028040476611946}
@@ -13904,9 +13909,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 6429530270991942174}
   connectedParts:
-  - {fileID: 5843028040696891974}
   - {fileID: 5843028041611647364}
   - {fileID: 5843028042305848699}
+  - {fileID: 5843028040696891974}
   otherConnectedParts:
   - {fileID: 5843028042211139184}
   breakableState: 0

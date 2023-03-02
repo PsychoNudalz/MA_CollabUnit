@@ -105,7 +105,7 @@ public class BreakableComponent : MonoBehaviour
     protected AnimationCurve transferToDot;
 
     [SerializeField]
-    protected Vector2 breakDelay = new Vector2(0,1);
+    protected Vector2 breakDelay;
 
     [SerializeField]
     protected float minBottomAngle = 80f;
