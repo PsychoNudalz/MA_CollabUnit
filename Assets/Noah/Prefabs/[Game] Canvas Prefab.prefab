@@ -165,7 +165,7 @@ RectTransform:
   - {fileID: 805329280635803936}
   - {fileID: 805329281384851671}
   m_Father: {fileID: 3465256077271375055}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -4061,7 +4061,7 @@ RectTransform:
   - {fileID: 3465256076819162838}
   - {fileID: 3465256076412523067}
   m_Father: {fileID: 3465256077271375055}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4203,7 +4203,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3465256077271375055}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5946,13 +5946,13 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 805329279609205142}
   - {fileID: 3465256076418907838}
   - {fileID: 3607933404505419817}
   - {fileID: 3465256076380884486}
   - {fileID: 3465256077384682216}
   - {fileID: 7305145274876503713}
   - {fileID: 7250338965868173009}
-  - {fileID: 805329279609205142}
   - {fileID: 8513861111860926877}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -6069,6 +6069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02ca2dc28b55464e95f336603afab5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllerConnected: 0
   tutorialMenuKeyboard: {fileID: 6182831675742440081}
   tutorialMenuController: {fileID: 5269300778465683431}
   isLevel1: 0
@@ -6337,7 +6338,7 @@ RectTransform:
   m_Children:
   - {fileID: 3465256075674372914}
   m_Father: {fileID: 3465256077271375055}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6359,6 +6360,7 @@ MonoBehaviour:
   tut1: {fileID: 3465256075945841509}
   tut2: {fileID: 3465256077594893999}
   tut3: {fileID: 3465256076200508406}
+  tutorialRect: {fileID: 0}
   pm: {fileID: 0}
 --- !u!1 &3465256077464769119
 GameObject:
@@ -8128,7 +8130,7 @@ RectTransform:
   m_Children:
   - {fileID: 3567713673182724113}
   m_Father: {fileID: 3465256077271375055}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8594,7 +8596,7 @@ RectTransform:
   m_Children:
   - {fileID: 4905960161535613404}
   m_Father: {fileID: 3465256077271375055}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10702,7 +10704,7 @@ PrefabInstance:
     - target: {fileID: 146055114142108911, guid: eefd89eaa5af53b4cb8ede30c48e4d61,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 146055114142108911, guid: eefd89eaa5af53b4cb8ede30c48e4d61,
         type: 3}

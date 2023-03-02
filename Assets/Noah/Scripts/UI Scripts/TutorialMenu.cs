@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 public class TutorialMenu : MonoBehaviour
 {
-    private bool controllerConnected;
+    [HideInInspector] public bool controllerConnected;
     [SerializeField] private GameObject tutorialMenuKeyboard, tutorialMenuController;
 
     [SerializeField] private bool isLevel1;
@@ -87,11 +87,7 @@ public class TutorialMenu : MonoBehaviour
             LeanTween.scale(tutorialMenuKeyboard, new Vector3(0, 0, 0), 0.2f).setEase(LeanTweenType.easeInOutCubic).setIgnoreTimeScale(true);
             tutorialMenuKeyboard.SetActive(false);
         }
-
-        Time.timeScale = 1f;
-        pm.canBePaused = true;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        GetComponent<GameplayTutorialUI>().StartTutorialUI();
         TutorialOpen = false;
     }
     
