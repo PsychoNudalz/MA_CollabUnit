@@ -17,7 +17,6 @@ public class BreakableStructureController : MonoBehaviour
     private Collider[] allColliders;
 
 
-    [SerializeField]
     private BreakableComponent[] allBreakableComponents;
 
     [SerializeField]
@@ -90,6 +89,8 @@ public class BreakableStructureController : MonoBehaviour
 
     [SerializeField]
     private UnityEvent despawnEvent;
+
+    public bool IgnoreParent => ignoreParent;
 
     public BreakableComponent[] AllBreakableComponents => allBreakableComponents;
 
@@ -238,7 +239,7 @@ public class BreakableStructureController : MonoBehaviour
     private void SetBP(BreakablePart bp)
     {
         bp.Initialise(gameObject, this, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer, transferToDot,
-            minimumPartSize, BreakDelay, minBottomAngle, physicMaterial, breakEvent, despawnTime, despawnEvent,
+            minimumPartSize, breakDelayRange, minBottomAngle, physicMaterial, breakEvent, despawnTime, despawnEvent,
             groundLayerMask, ignoreParent);
     }
 
@@ -246,7 +247,7 @@ public class BreakableStructureController : MonoBehaviour
     {
         breakableCollective.Initialise(gameObject, this, mass, drag, affectedRange, breakForce, forceTransfer, bpLayer,
             transferToDot,
-            minimumPartSize, BreakDelay, minBottomAngle, physicMaterial, breakEvent, despawnTime, despawnEvent,
+            minimumPartSize, breakDelayRange, minBottomAngle, physicMaterial, breakEvent, despawnTime, despawnEvent,
             groundLayerMask, ignoreParent);
     }
 
@@ -283,13 +284,11 @@ public class BreakableStructureController : MonoBehaviour
     [ContextMenu("Update Building")]
     public void UpdateValues()
     {
-
         Initialise_BreakCollective();
         Initialise_BreakParts();
         SetBreakConnections_Collectives();
         SetBreakConnections_Parts();
         InitialiseGround();
-
     }
 
     [ContextMenu("Reset collider names")]

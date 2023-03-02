@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -17,6 +18,9 @@ public class BreakableCollective : BreakableComponent
 
     [SerializeField]
     private BreakableComponent[] breakableComponents;
+
+    [SerializeField]
+    private List<BreakableComponent> tooSmallComponents;
 
     [SerializeField]
     private float contactCastRadius = 0.5f;
@@ -41,7 +45,7 @@ public class BreakableCollective : BreakableComponent
     public override void Initialise(GameObject p, BreakableStructureController bsc, float mass, float drag,
         float affectedRange, Vector2 breakForce,
         float forceTransfer,
-        LayerMask bpLayer, AnimationCurve transferToDot, float minSize, float breakDelay, float bottomAngle,
+        LayerMask bpLayer, AnimationCurve transferToDot, float minSize, Vector2 breakDelay, float bottomAngle,
         PhysicMaterial pm, UnityEvent breakEvent1, float despawnTime1, UnityEvent despawnEvent1, LayerMask groundLayer1,
         bool ignoreParent1)
     {
@@ -87,18 +91,25 @@ public class BreakableCollective : BreakableComponent
         }
 
 
-        breakableComponents = fractureParent.GetComponentsInChildren<BreakableComponent>();
+        List<BreakableComponent> foundComponents = new List<BreakableComponent>(fractureParent.GetComponentsInChildren<BreakableComponent>()) ;
+        tooSmallComponents = new List<BreakableComponent>();
 
-
-        foreach (BreakableComponent breakableComponent in breakableComponents)
+        foreach (BreakableComponent breakableComponent in foundComponents.ToArray())
         {
             breakableComponent.AddComponents(pm);
             breakableComponent.Initialise(gameObject, bsc, mass, drag, affectedRange, breakForce, forceTransfer,
                 bpLayer,
                 transferToDot,
-                minimumPartSize, bsc.BreakDelay, minBottomAngle, pm, breakEvent, despawnTime, despawnEvent,
+                minimumPartSize, breakDelay, minBottomAngle, pm, breakEvent, despawnTime, despawnEvent,
                 groundLayer, ignoreParent1);
+            if (breakableComponent.IsTooSmall)
+            {
+                tooSmallComponents.Add(breakableComponent);
+                foundComponents.Remove(breakableComponent);
+            }
         }
+
+        breakableComponents = foundComponents.ToArray();
 
         // fractureParent.SetActive(false);
     }
@@ -119,6 +130,10 @@ public class BreakableCollective : BreakableComponent
         // base.Break(force, originalForce, breakHistory, breakDelay, forceBreak);
         ChangeState(BreakableState.Free);
         FlipShell(true);
+        foreach (BreakableComponent breakableComponent in tooSmallComponents)
+        {
+            breakableComponent.Despawn();
+        }
     }
 
     public override void CollisionBreak(Rigidbody rb, Collision collision = null, Vector3 point = default)
@@ -258,17 +273,17 @@ public class BreakableCollective : BreakableComponent
         base.RemovePart(part);
     }
 
-    public override List<BreakableData> InitialiseClosest()
+    public override List<BreakableData> InitialiseClosest(bool ignoreTooSmall = false)
     {
         // fractureParent.SetActive(true);
         foreach (BreakableComponent breakableComponent in breakableComponents)
         {
-            breakableComponent.InitialiseClosest();
+            breakableComponent.InitialiseClosest(true);
         }
 
         // fractureParent.SetActive(false);
 
-        return base.InitialiseClosest();
+        return base.InitialiseClosest(ignoreTooSmall);
     }
 
     protected override void AddDetectedPart(BreakableComponent current)

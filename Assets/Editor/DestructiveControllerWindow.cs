@@ -27,15 +27,22 @@ public class DestructiveControllerWindow : EditorWindow
         scrollPos = EditorGUILayout.BeginScrollView(scrollPos);
         GUILayout.Label("I have no idea what I am doing", EditorStyles.boldLabel);
 
-        if (GUILayout.Button("Refresh Active Breakable Objects"))
+        if (GUILayout.Button("Refresh Active Breakables"))
         {
             controlledbreakableStructure = DestructiveController.GetActivebreakableStructures();
         }
+        if (GUILayout.Button("Refresh Active IgnoreParent Breakables"))
+        {
+            controlledbreakableStructure = DestructiveController.GetActivebreakableStructures(false,true
+            );
+        }
 
-        if (GUILayout.Button("Refresh ALL Breakable Objects"))
+        if (GUILayout.Button("Refresh ALL Breakables"))
         {
             controlledbreakableStructure = DestructiveController.GetActivebreakableStructures(true);
         }
+        
+
 
         GUILayout.Label($"Number of Breakable Objects:{controlledbreakableStructure.Length}", EditorStyles.boldLabel);
 
@@ -98,7 +105,7 @@ public class DestructiveControllerWindow : EditorWindow
 
 public class DestructiveController
 {
-    public static BreakableStructureController[] GetActivebreakableStructures(bool includeInactive = false)
+    public static BreakableStructureController[] GetActivebreakableStructures(bool includeInactive = false, bool ignoreParent = false)
     {
         // List<breakableStructure> temp = new List<breakableStructure>();
         // foreach (GameObject g in GameObject.FindObjectsOfType<breakableStructure>(false))
@@ -107,6 +114,21 @@ public class DestructiveController
         // }
         BreakableStructureController[] temp =
             GameObject.FindObjectsOfType<BreakableStructureController>(includeInactive);
+
+        if (ignoreParent)
+        {
+            List<BreakableStructureController> temp2 = new List<BreakableStructureController>();
+
+            foreach (BreakableStructureController b in temp)
+            {
+                if (b.IgnoreParent)
+                {
+                    temp2.Add(b);
+                }
+            }
+
+            temp = temp2.ToArray();
+        }
         Debug.Log($"Window hooked to {temp.Length} objects");
         return temp;
     }

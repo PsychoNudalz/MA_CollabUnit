@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = Unity.Mathematics.Random;
 
 
 [Serializable]
@@ -315,7 +316,7 @@ public class BreakablePart : BreakableComponent
         else if (newForce.magnitude > breakingForce.x)
         {
             // print($"{this} recursive to: {connectedPart.Part}");
-            Break(newForce, force, breakHistory, this.breakDelay);
+            Break(newForce, force, breakHistory, BreakDelay);
         }
         else
         {
@@ -436,7 +437,7 @@ public class BreakablePart : BreakableComponent
     {
         // Debug.Log($"{this} bottom break start.");
 
-        yield return new WaitForSeconds(breakDelay);
+        yield return new WaitForSeconds(BreakDelay);
         if (!IsBroken() && !HasBottomPart())
         {
             Break(new Vector3(), new Vector3());
@@ -464,20 +465,29 @@ public class BreakablePart : BreakableComponent
     //******Despawning
     public override void Despawn()
     {
-        if (!gameObject || breakableState == BreakableState.Despawn)
+        try
         {
-            return;
-        }
+            if (!gameObject || breakableState == BreakableState.Despawn)
+            {
+                return;
+            }
 
-        selfRB.isKinematic = true;
-        breakableState = BreakableState.Despawn;
-        despawnEvent.Invoke();
-        LeanTween.scale(gameObject, Vector3.zero, despawnTime);
-        Destroy(gameObject, despawnTime + 1f);
-        if (isDebug)
-        {
-            rendererMaterial.color = Color.yellow;
+            selfRB.isKinematic = true;
+            breakableState = BreakableState.Despawn;
+            despawnEvent.Invoke();
+            LeanTween.scale(gameObject, Vector3.zero, despawnTime);
+            Destroy(gameObject, despawnTime + 1f);
+            if (isDebug)
+            {
+                rendererMaterial.color = Color.yellow;
+            }
         }
+        catch (NullReferenceException e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+        
     }
 
     //************Launching Part

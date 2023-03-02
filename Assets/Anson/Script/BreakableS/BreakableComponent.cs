@@ -105,7 +105,7 @@ public class BreakableComponent : MonoBehaviour
     protected AnimationCurve transferToDot;
 
     [SerializeField]
-    protected float breakDelay = .5f;
+    protected Vector2 breakDelay = new Vector2(0,1);
 
     [SerializeField]
     protected float minBottomAngle = 80f;
@@ -179,6 +179,9 @@ public class BreakableComponent : MonoBehaviour
 
     public Vector3 Position => transform.position;
 
+    public float BreakDelay => UnityEngine.Random.Range(breakDelay.x, breakDelay.y);
+
+    public bool IsTooSmall => meshSize < minimumPartSize;
 
     public Vector2 BreakingForce
     {
@@ -224,7 +227,7 @@ public class BreakableComponent : MonoBehaviour
 
     public virtual void Initialise(GameObject p, BreakableStructureController bsc, float mass, float drag,
         float affectedRange, Vector2 breakForce,
-        float forceTransfer, LayerMask bpLayer, AnimationCurve transferToDot, float minSize, float breakDelay,
+        float forceTransfer, LayerMask bpLayer, AnimationCurve transferToDot, float minSize, Vector2 breakDelay,
         float bottomAngle, PhysicMaterial pm, UnityEvent breakEvent1, float despawnTime1, UnityEvent despawnEvent1,
         LayerMask groundLayer1, bool ignoreParent1)
     {
@@ -253,7 +256,7 @@ public class BreakableComponent : MonoBehaviour
     protected virtual void InitialiseValues(float mass, BreakableStructureController bsc, float drag,
         float affectedRange, Vector2 breakForce,
         float forceTransfer,
-        LayerMask bpLayer, AnimationCurve transferToDot, float minSize, float breakDelay, float bottomAngle,
+        LayerMask bpLayer, AnimationCurve transferToDot, float minSize, Vector2 breakDelay, float bottomAngle,
         PhysicMaterial pm, UnityEvent breakEvent1, float despawnTime1, UnityEvent despawnEvent1, LayerMask groundLayer1,
         bool ignoreParent1)
     {
@@ -267,7 +270,11 @@ public class BreakableComponent : MonoBehaviour
         minimumPartSize = minSize;
         this.breakDelay = breakDelay;
         minBottomAngle = bottomAngle;
-        selfRB.mass = mass * meshSize;
+        float massSum = Mathf.RoundToInt(mass * meshSize);
+        if (Math.Abs(mass - selfRB.mass) > .1f)
+        {
+            selfRB.mass = massSum;
+        }
         selfRB.drag = drag;
         selfRB.angularDrag = drag;
         selfRB.isKinematic = true;
@@ -323,7 +330,7 @@ public class BreakableComponent : MonoBehaviour
         bool b = false;
         if (breakableStructureController)
         {
-            b =  Physics.CheckSphere(transform.position + Vector3.down * meshSize, meshSize/2f,
+            b =  Physics.CheckSphere(transform.position + Vector3.down * meshSize*.4f, meshSize/2f,
                 groundLayer);
         }
 
@@ -420,7 +427,7 @@ public class BreakableComponent : MonoBehaviour
         return new BreakableData(bp, d, f, (bp.transform.position - transform.position).normalized);
     }
 
-    public virtual List<BreakableData> InitialiseClosest()
+    public virtual List<BreakableData> InitialiseClosest(bool ignoreTooSmall = false)
     {
         float CastSizeMultiplier = .25f;
         float range = affectiveRange + meshSize * CastSizeMultiplier;
@@ -442,7 +449,10 @@ public class BreakableComponent : MonoBehaviour
                         }
                         if ((ignoreParent||current.parent.Equals(parent)) && !current.Equals(this))
                         {
-                            AddDetectedPart(current);
+                            if (!(ignoreTooSmall && current.IsTooSmall))
+                            {
+                                AddDetectedPart(current);
+                            }
                         }
                     }
                 }
