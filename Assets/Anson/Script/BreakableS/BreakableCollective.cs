@@ -36,7 +36,6 @@ public class BreakableCollective : BreakableComponent
         EvaluateCollisionBreak(collision);
     }
 
-    
 
     public override void Initialise(GameObject p, BreakableStructureController bsc, float mass, float drag,
         float affectedRange, Vector2 breakForce,
@@ -87,7 +86,8 @@ public class BreakableCollective : BreakableComponent
         }
 
 
-        List<BreakableComponent> foundComponents = new List<BreakableComponent>(fractureParent.GetComponentsInChildren<BreakableComponent>()) ;
+        List<BreakableComponent> foundComponents =
+            new List<BreakableComponent>(fractureParent.GetComponentsInChildren<BreakableComponent>());
         tooSmallComponents = new List<BreakableComponent>();
 
         foreach (BreakableComponent breakableComponent in foundComponents.ToArray())
@@ -327,12 +327,15 @@ public class BreakableCollective : BreakableComponent
         fractureParent.SetActive(b);
     }
 
-    public override void InitialiseGround()
+    public override int InitialiseGround()
     {
+        int i = 0;
         base.InitialiseGround();
         foreach (BreakableComponent breakableComponent in breakableComponents)
         {
-            breakableComponent.InitialiseGround();
+            i += breakableComponent.InitialiseGround();
         }
+
+        return i;
     }
 }

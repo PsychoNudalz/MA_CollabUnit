@@ -63,11 +63,21 @@ public class BreakableStructureController : MonoBehaviour
 
     public float BreakDelay => Random.Range(breakDelayRange.x, breakDelayRange.y);
 
+    [Header("Ground Checks")]
     [SerializeField]
     private float minBottomAngle;
 
     [SerializeField]
     private LayerMask groundLayerMask;
+
+    [SerializeField]
+    private int groundCounter = 0;
+
+    [SerializeField]
+    private int minimumGroundParts = 10;
+
+    [SerializeField]
+    private BreakableComponent[] noBottomComponents;
 
     public LayerMask GroundLayerMask => groundLayerMask;
 
@@ -261,15 +271,31 @@ public class BreakableStructureController : MonoBehaviour
 
     void InitialiseGround()
     {
+        groundCounter = 0;
+        List<BreakableComponent> tempNoBottom = new List<BreakableComponent>();
         foreach (BreakableCollective breakableCollective in breakableCollectives)
         {
-            breakableCollective.InitialiseGround();
+            groundCounter+=breakableCollective.InitialiseGround();
+            foreach (BreakableComponent current in breakableCollective.BreakableComponents)
+            {
+                if (current.OriginalNoBottom)
+                {
+                    tempNoBottom.Add(current);
+                }
+            }
         }
 
         foreach (BreakablePart breakablePart in breakableParts)
         {
-            breakablePart.InitialiseGround();
+            groundCounter+=breakablePart.InitialiseGround();
+            if (breakablePart.OriginalNoBottom)
+            {
+                tempNoBottom.Add(breakablePart);
+            }
         }
+        noBottomComponents = tempNoBottom.ToArray();
+
+        
     }
 
     [ContextMenu("initialise")]
@@ -316,5 +342,20 @@ public class BreakableStructureController : MonoBehaviour
     public void AddScore(float meshSize)
     {
         ScoreManager.AddScore_BySize(scorePerMass, meshSize);
+    }
+
+
+
+    
+    public void RemoveGroundPiece()
+    {
+        groundCounter--;
+        if (groundCounter <= minimumGroundParts)
+        {
+            foreach (BreakableComponent part in noBottomComponents)
+            {
+                part.SetOriginalNoBottom(false);
+            }
+        }
     }
 }

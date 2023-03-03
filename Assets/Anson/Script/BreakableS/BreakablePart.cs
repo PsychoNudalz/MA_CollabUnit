@@ -156,6 +156,10 @@ public class BreakablePart : BreakableComponent
         PlayBreakEffects();
         breakEvent.Invoke();
         gameObject.layer = partLayer;
+        if (isGroundPiece)
+        {
+            breakableStructureController.RemoveGroundPiece();
+        }
 
         if (breakableState != BreakableState.Despawn)
         {
@@ -504,4 +508,6 @@ public class BreakablePart : BreakableComponent
         collider.enabled = true;
         SelfRb.AddForce(accel, ForceMode.Acceleration);
     }
+    
+    
 }

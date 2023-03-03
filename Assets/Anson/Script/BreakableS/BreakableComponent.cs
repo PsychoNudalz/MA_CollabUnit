@@ -77,10 +77,10 @@ public class BreakableComponent : MonoBehaviour
     protected Collider collider;
 
     [SerializeField]
-    private PhysicMaterial physicMaterial;
+    protected PhysicMaterial physicMaterial;
 
     [SerializeField]
-    private BreakableStructureController breakableStructureController;
+    protected BreakableStructureController breakableStructureController;
 
     [SerializeField]
     protected List<BreakableComponent> connectedParts;
@@ -117,6 +117,10 @@ public class BreakableComponent : MonoBehaviour
 
     [SerializeField]
     protected bool originalNoBottom = false;
+
+    public bool IsGroundPiece => isGroundPiece;
+
+    public bool OriginalNoBottom => originalNoBottom;
 
     [Header("Connection")]
     [SerializeField]
@@ -287,10 +291,18 @@ public class BreakableComponent : MonoBehaviour
         ignoreParent = ignoreParent1;
     }
 
-    public virtual void InitialiseGround()
+    public virtual int InitialiseGround()
     {
         isGroundPiece = GroundCheck();
         originalNoBottom = !HasBottomPart();
+        if (isGroundPiece)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
     }
 
     [ContextMenu("Initialise")]
@@ -666,5 +678,10 @@ public class BreakableComponent : MonoBehaviour
     protected Vector3 Dir(BreakableComponent target)
     {
         return (target.transform.position - transform.position).normalized;
+    }
+
+    public void SetOriginalNoBottom(bool b)
+    {
+        originalNoBottom = b;
     }
 }

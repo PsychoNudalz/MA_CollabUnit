@@ -83,7 +83,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  breakDelay: 0.5
+  breakDelay: {x: 0, y: 0}
   minBottomAngle: 80
   groundLayer:
     serializedVersion: 2
@@ -94,6 +94,7 @@ MonoBehaviour:
   castLayer:
     serializedVersion: 2
     m_Bits: 0
+  ignoreParent: 0
   breakEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -108,6 +109,7 @@ MonoBehaviour:
   renderer: {fileID: 0}
   meshFilter: {fileID: 0}
   parent: {fileID: 0}
+  collectiveParent: {fileID: 0}
   destroyVelocity: 10
   destroyEvent:
     m_PersistentCalls:
@@ -310,15 +312,15 @@ VisualEffect:
       m_Array: []
     m_Vector2f:
       m_Array:
-      - m_Value: {x: 80, y: 100}
+      - m_Value: {x: 5, y: 10}
         m_Name: SpawnAmount
-        m_Overridden: 1
-      - m_Value: {x: 10, y: 15}
+        m_Overridden: 0
+      - m_Value: {x: 200, y: 300}
         m_Name: SpawnSize
-        m_Overridden: 1
-      - m_Value: {x: 0.05, y: 0.4}
+        m_Overridden: 0
+      - m_Value: {x: 0.04, y: 0.5}
         m_Name: Lifetime
-        m_Overridden: 1
+        m_Overridden: 0
     m_Vector3f:
       m_Array:
       - m_Value: {x: -200, y: -200, z: -200}
