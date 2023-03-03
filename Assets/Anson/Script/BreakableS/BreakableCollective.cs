@@ -36,11 +36,7 @@ public class BreakableCollective : BreakableComponent
         EvaluateCollisionBreak(collision);
     }
 
-
-    public override void ResetConnections()
-    {
-        base.ResetConnections();
-    }
+    
 
     public override void Initialise(GameObject p, BreakableStructureController bsc, float mass, float drag,
         float affectedRange, Vector2 breakForce,

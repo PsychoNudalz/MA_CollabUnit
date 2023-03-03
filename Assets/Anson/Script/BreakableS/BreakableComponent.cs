@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -170,6 +169,7 @@ public class BreakableComponent : MonoBehaviour
 
     [SerializeField]
     protected GameObject parent;
+
     [SerializeField]
     protected BreakableCollective collectiveParent;
 
@@ -211,7 +211,6 @@ public class BreakableComponent : MonoBehaviour
     public GameObject Parent
     {
         get => parent;
-        set => parent = value;
     }
 
     public BreakableState BreakableState => breakableState;
@@ -221,6 +220,8 @@ public class BreakableComponent : MonoBehaviour
 
     public virtual void ResetConnections()
     {
+        parent = null;
+        collectiveParent = null;
         connectedParts = new List<BreakableComponent>();
         otherConnectedParts = new List<BreakableComponent>();
     }
@@ -231,18 +232,14 @@ public class BreakableComponent : MonoBehaviour
         float bottomAngle, PhysicMaterial pm, UnityEvent breakEvent1, float despawnTime1, UnityEvent despawnEvent1,
         LayerMask groundLayer1, bool ignoreParent1)
     {
-        if (parent)
+        bool hasCollective = parent.TryGetComponent(out BreakableCollective breakableCollective);
+
+        if (hasCollective)
         {
-            bool hasCollective = parent.TryGetComponent(out BreakableCollective breakableCollective);
-            if (!hasCollective)
-            {
-                parent = p;
-            }else if (hasCollective)
-            {
-                collectiveParent = breakableCollective;
-            }
+            parent = breakableCollective.parent;
+            collectiveParent = breakableCollective;
         }
-        else if (!parent)
+        else
         {
             parent = p;
         }
@@ -275,6 +272,7 @@ public class BreakableComponent : MonoBehaviour
         {
             selfRB.mass = massSum;
         }
+
         selfRB.drag = drag;
         selfRB.angularDrag = drag;
         selfRB.isKinematic = true;
@@ -330,7 +328,7 @@ public class BreakableComponent : MonoBehaviour
         bool b = false;
         if (breakableStructureController)
         {
-            b =  Physics.CheckSphere(transform.position + Vector3.down * meshSize*.4f, meshSize/2f,
+            b = Physics.CheckSphere(transform.position + Vector3.down * meshSize * .4f, meshSize / 2f,
                 groundLayer);
         }
 
@@ -432,7 +430,7 @@ public class BreakableComponent : MonoBehaviour
         float CastSizeMultiplier = .25f;
         float range = affectiveRange + meshSize * CastSizeMultiplier;
         Collider[] colliders = Physics.OverlapSphere(transform.position, range,
-             castLayer);
+            castLayer);
         // List<PartDistance> tempParts = new List<PartDistance>();
         BreakableCollective bcTemp;
         foreach (Collider collider in colliders)
@@ -447,7 +445,8 @@ public class BreakableComponent : MonoBehaviour
                         {
                             print("collective found");
                         }
-                        if ((ignoreParent||current.parent.Equals(parent)) && !current.Equals(this))
+
+                        if ((ignoreParent || current.parent.Equals(parent)) && !current.Equals(this))
                         {
                             if (!(ignoreTooSmall && current.IsTooSmall))
                             {
@@ -459,7 +458,7 @@ public class BreakableComponent : MonoBehaviour
             }
             else
             {
-                bcTemp =collider.GetComponentInParent<BreakableCollective>();
+                bcTemp = collider.GetComponentInParent<BreakableCollective>();
                 if (bcTemp)
                 {
                     if (!bcTemp.parent.Equals(parent))
@@ -467,8 +466,6 @@ public class BreakableComponent : MonoBehaviour
                         AddDetectedPart(bcTemp);
                     }
                 }
-                
-               
             }
         }
 
@@ -662,6 +659,7 @@ public class BreakableComponent : MonoBehaviour
         {
             Break(force, force);
         }
+
         selfRB.AddForce(force);
     }
 
