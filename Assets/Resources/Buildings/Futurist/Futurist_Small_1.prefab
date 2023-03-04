@@ -83,7 +83,8 @@ MonoBehaviour:
   collider: {fileID: 0}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
-  connectedParts: []
+  connectedParts:
+  - {fileID: 7072025975688666456}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 66.98327, y: 100.47491}
@@ -127,7 +128,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   isGroundPiece: 1
-  originalNoBottom: 1
+  originalNoBottom: 0
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -4132,7 +4133,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 9196869641458656537}
   meshFilter: {fileID: 1641707629734469230}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &1881747520943622137
 MonoBehaviour:
@@ -4141,7 +4142,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11922447075977441}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -4194,12 +4195,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 9104296287396794227}
+  - {fileID: 2611417522569232689}
+  - {fileID: 371820359564430556}
+  - {fileID: 1485175907727560952}
   - {fileID: 2166904792743349517}
   - {fileID: 8157960539385025368}
-  - {fileID: 371820359564430556}
-  - {fileID: 2611417522569232689}
-  - {fileID: 1485175907727560952}
-  - {fileID: 9104296287396794227}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1806.9054, y: 2710.3582}
@@ -4274,7 +4275,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 371261158095739580}
   meshFilter: {fileID: 526746026172295646}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &4995972229546058953
 MonoBehaviour:
@@ -4283,7 +4284,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35341041709040892}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -4338,7 +4339,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115755612473523475}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -4363,8 +4364,8 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 2451700510778715418}
   - {fileID: 5143529702242597165}
+  - {fileID: 2451700510778715418}
   - {fileID: 6908200742152729449}
   - {fileID: 3208071248746664327}
   otherConnectedParts:
@@ -4443,7 +4444,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 3025596692971894721}
   meshFilter: {fileID: 3467308938111548460}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &145181020869954855 stripped
 MeshRenderer:
@@ -4480,7 +4481,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153378000359051225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -4579,7 +4580,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 8125829662522650339}
   meshFilter: {fileID: 4538324836414291622}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &169538927136125537 stripped
 GameObject:
@@ -4694,7 +4695,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 2182408238995171342}
   meshFilter: {fileID: 5198972076917788933}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &7004242904117595667
 MonoBehaviour:
@@ -4703,7 +4704,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 169538927136125537}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -4830,7 +4831,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 895309366536164028}
   meshFilter: {fileID: 7333633955851023507}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5189729590567766490
 MonoBehaviour:
@@ -4839,7 +4840,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219035676785708722}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -4972,7 +4973,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 1952774682296133153}
   meshFilter: {fileID: 4235983727539312473}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &4939341792623890512
 MonoBehaviour:
@@ -4981,7 +4982,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 271221385109777368}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -5104,7 +5105,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 6477603138499385359}
   meshFilter: {fileID: 4272584638325132407}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &4457875529112575444
 MonoBehaviour:
@@ -5113,7 +5114,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330560824098054184}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -5162,7 +5163,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367074778318112663}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -5261,7 +5262,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 3177206395721925370}
   meshFilter: {fileID: 7077295755266550329}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &367591037306789751 stripped
 MeshCollider:
@@ -5394,7 +5395,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 4166224803206776701}
   meshFilter: {fileID: 1368381133386651760}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8773753384348384339
 MonoBehaviour:
@@ -5403,7 +5404,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374336534511389433}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -5440,7 +5441,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429670866648366651}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -5540,7 +5541,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 7542880204975709526}
   meshFilter: {fileID: 6797424558657812299}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &440028596898183577 stripped
 MeshRenderer:
@@ -5583,7 +5584,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452983430528036257}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -5682,7 +5683,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 3319518358115377841}
   meshFilter: {fileID: 7091653578136521060}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &479443039239536029 stripped
 GameObject:
@@ -5713,7 +5714,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479443039239536029}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -5814,7 +5815,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 6198465400323520467}
   meshFilter: {fileID: 2220271380874839473}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &480440369270738714 stripped
 MeshCollider:
@@ -5887,7 +5888,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538600697181557837}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -5986,7 +5987,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 4614493596961167545}
   meshFilter: {fileID: 5916111819304801072}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &539752016976172265 stripped
 MeshCollider:
@@ -6101,7 +6102,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815906720592275723}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -6126,9 +6127,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 2752566471466105893}
   - {fileID: 4079688939489850580}
   - {fileID: 7956554639937110285}
-  - {fileID: 2752566471466105893}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1194.3533, y: 1791.5299}
@@ -6203,7 +6204,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 4715363230783224038}
   meshFilter: {fileID: 5034112522244293831}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &827258083770784575 stripped
 MeshFilter:
@@ -6276,7 +6277,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902740715868569468}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -6375,7 +6376,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 8246489944110850108}
   meshFilter: {fileID: 31709870690470477}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &911777811068741221 stripped
 GameObject:
@@ -6416,11 +6417,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 5896653940849429348}
-  - {fileID: 40973691292326939}
-  - {fileID: 2611417522569232689}
   - {fileID: 8939231003799261585}
+  - {fileID: 2611417522569232689}
+  - {fileID: 40973691292326939}
   - {fileID: 7521973058395953645}
+  - {fileID: 5896653940849429348}
   otherConnectedParts:
   - {fileID: 2417032361940656548}
   - {fileID: 8939231003799261585}
@@ -6500,7 +6501,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 8343849355216238350}
   meshFilter: {fileID: 2482222749764351403}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8470270264407733956
 MonoBehaviour:
@@ -6509,7 +6510,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911777811068741221}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -6655,7 +6656,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 914465584929983260}
   meshFilter: {fileID: 7316952166261603229}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5721262364012486677
 MonoBehaviour:
@@ -6664,7 +6665,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 955383042473781909}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -6719,7 +6720,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034380130384927715}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -6819,7 +6820,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 7776235805378974183}
   meshFilter: {fileID: 6597875542260303365}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &1082707538573043512 stripped
 MeshRenderer:
@@ -6940,7 +6941,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 4426273002104995105}
   meshFilter: {fileID: 2793316299655454665}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &6085068673316058264
 MonoBehaviour:
@@ -6949,7 +6950,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1101183543443973900}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -7038,9 +7039,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 8529021361951642264}
-  - {fileID: 215387430913746149}
   - {fileID: 6942206973529517287}
+  - {fileID: 215387430913746149}
+  - {fileID: 8529021361951642264}
   otherConnectedParts:
   - {fileID: 6954506081739496993}
   breakableState: 0
@@ -7116,7 +7117,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 5005102376678629536}
   meshFilter: {fileID: 4553745440126309}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &3632370786841535121
 MonoBehaviour:
@@ -7125,7 +7126,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1218099323690804493}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -7180,7 +7181,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1243325226230510310}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -7279,7 +7280,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 8685493031239601642}
   meshFilter: {fileID: 8892977084830593550}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &1261806135252453177 stripped
 GameObject:
@@ -7320,10 +7321,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 3778523702587628009}
   - {fileID: 7131179292189032475}
-  - {fileID: 3415582578659564839}
   - {fileID: 40973691292326939}
+  - {fileID: 3415582578659564839}
+  - {fileID: 3778523702587628009}
   otherConnectedParts:
   - {fileID: 7131179292189032475}
   - {fileID: 40973691292326939}
@@ -7405,7 +7406,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 3846359874551835664}
   meshFilter: {fileID: 4675871188803889520}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &7424075184475893064
 MonoBehaviour:
@@ -7414,7 +7415,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1261806135252453177}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -7535,7 +7536,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 3119980634917500975}
   meshFilter: {fileID: 5288560694558266809}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &2112570962633336708
 MonoBehaviour:
@@ -7544,7 +7545,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264332466293241936}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -7611,7 +7612,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335784595515547980}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -7636,11 +7637,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 1097991609658222410}
   - {fileID: 4079688939489850580}
   - {fileID: 7956554639937110285}
-  - {fileID: 8663714916025912689}
   - {fileID: 8555066968396404626}
-  - {fileID: 1097991609658222410}
+  - {fileID: 8663714916025912689}
   otherConnectedParts:
   - {fileID: 3930279726573970448}
   - {fileID: 3727647901418037206}
@@ -7717,7 +7718,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 5728249373634079331}
   meshFilter: {fileID: 7782941087528654804}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &1361114005304835000 stripped
 MeshFilter:
@@ -7782,9 +7783,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 452839561740149071}
-  - {fileID: 8663714916025912689}
   - {fileID: 6434220020019984599}
+  - {fileID: 8663714916025912689}
+  - {fileID: 452839561740149071}
   otherConnectedParts:
   - {fileID: 6434220020019984599}
   - {fileID: 5325757901176578714}
@@ -7862,7 +7863,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 207516447712290197}
   meshFilter: {fileID: 6479502675661754823}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &4502971392236370222
 MonoBehaviour:
@@ -7871,7 +7872,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399697646532783557}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -8014,7 +8015,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 8183653432583043727}
   meshFilter: {fileID: 1380150515966199273}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5447116987777781133
 MonoBehaviour:
@@ -8023,7 +8024,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1458488235133479476}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -8060,7 +8061,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481735069897441927}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -8159,7 +8160,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 7727645568689219608}
   meshFilter: {fileID: 1361114005304835000}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &1486749239298417707 stripped
 GameObject:
@@ -8200,10 +8201,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 6364692330658007095}
+  - {fileID: 5143529702242597165}
   - {fileID: 343041179824834222}
   - {fileID: 4324402389178213097}
-  - {fileID: 5143529702242597165}
-  - {fileID: 6364692330658007095}
   otherConnectedParts:
   - {fileID: 6364692330658007095}
   breakableState: 0
@@ -8279,7 +8280,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 894486707818687045}
   meshFilter: {fileID: 7742531304084833689}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &6862483284993530915
 MonoBehaviour:
@@ -8288,7 +8289,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1486749239298417707}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -8337,7 +8338,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504801670414924359}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -8362,10 +8363,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 9109193703964145893}
+  - {fileID: 5658090432644969920}
   - {fileID: 54423406619926628}
   - {fileID: 3667487919527223957}
-  - {fileID: 5658090432644969920}
-  - {fileID: 9109193703964145893}
   otherConnectedParts:
   - {fileID: 5658090432644969920}
   breakableState: 0
@@ -8441,7 +8442,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 1933163031992398279}
   meshFilter: {fileID: 498353211496817306}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &1509603833561644116 stripped
 GameObject:
@@ -8472,7 +8473,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509603833561644116}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -8497,9 +8498,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 2752566471466105893}
   - {fileID: 4079688939489850580}
   - {fileID: 7956554639937110285}
-  - {fileID: 2752566471466105893}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1107.9647, y: 1661.947}
@@ -8574,7 +8575,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 2593877603234893350}
   meshFilter: {fileID: 3512550553360761356}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &1533058745375986797 stripped
 MeshRenderer:
@@ -8611,7 +8612,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546265682982784043}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -8713,7 +8714,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 2140038829226764783}
   meshFilter: {fileID: 6907113732581766110}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &1554572632643552779 stripped
 MeshFilter:
@@ -8772,9 +8773,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 2965211034836798921}
   - {fileID: 5703489269235440071}
   - {fileID: 7764570108315986104}
+  - {fileID: 2965211034836798921}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1665.1992, y: 2497.7988}
@@ -8849,7 +8850,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 8803938414522064804}
   meshFilter: {fileID: 9094282071026884759}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &6982943552252623586
 MonoBehaviour:
@@ -8858,7 +8859,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636049264528905380}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -8997,7 +8998,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 4685496727476585278}
   meshFilter: {fileID: 8312348683987586710}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &2399128074382576201
 MonoBehaviour:
@@ -9006,7 +9007,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759613189228803437}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -9049,7 +9050,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786467933610505924}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -9074,8 +9075,8 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 6007898105634752906}
   - {fileID: 8704220032758035160}
+  - {fileID: 6007898105634752906}
   otherConnectedParts:
   - {fileID: 8704220032758035160}
   breakableState: 0
@@ -9151,7 +9152,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 2663308223118360101}
   meshFilter: {fileID: 1641217267829099948}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &1788398841775993515 stripped
 MeshRenderer:
@@ -9210,10 +9211,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 3778523702587628009}
   - {fileID: 7131179292189032475}
   - {fileID: 40973691292326939}
   - {fileID: 4474046994235740601}
+  - {fileID: 3778523702587628009}
   otherConnectedParts:
   - {fileID: 7131179292189032475}
   - {fileID: 3778523702587628009}
@@ -9291,7 +9292,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 1149994934272933491}
   meshFilter: {fileID: 2851884008556710708}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &6131943657646507975
 MonoBehaviour:
@@ -9300,7 +9301,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840467755376297812}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -9421,7 +9422,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 7995823211030886462}
   meshFilter: {fileID: 2644251175735658039}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &1374861195471364583
 MonoBehaviour:
@@ -9430,7 +9431,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864890625675934617}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -9559,7 +9560,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 1377300210970179101}
   meshFilter: {fileID: 7519767700602548901}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &7126404915021557403
 MonoBehaviour:
@@ -9568,7 +9569,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870612367224056755}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -9623,7 +9624,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917344193911373471}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -9648,9 +9649,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 2752566471466105893}
   - {fileID: 4079688939489850580}
   - {fileID: 7956554639937110285}
-  - {fileID: 2752566471466105893}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1356.8788, y: 2035.3181}
@@ -9725,7 +9726,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 5833297673068347192}
   meshFilter: {fileID: 3203856476577364788}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &1933163031992398279 stripped
 MeshRenderer:
@@ -9774,7 +9775,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1957182872549781207}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -9876,7 +9877,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 3046938844718788770}
   meshFilter: {fileID: 4190821130220401008}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &1958054063651216645 stripped
 MeshFilter:
@@ -9925,7 +9926,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998611238054307023}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -10024,7 +10025,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 5683984331576052218}
   meshFilter: {fileID: 6505076287098890795}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &2013020277613746108 stripped
 GameObject:
@@ -10139,7 +10140,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 3662876222028053877}
   meshFilter: {fileID: 5995784092418564338}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5580937500400086623
 MonoBehaviour:
@@ -10148,7 +10149,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013020277613746108}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -10191,7 +10192,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020730620910632056}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -10290,7 +10291,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 355051753578823474}
   meshFilter: {fileID: 4573728378769772266}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &2056572228671921668 stripped
 MeshFilter:
@@ -10375,7 +10376,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2207308433773351069}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -10477,7 +10478,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 3859020090816930285}
   meshFilter: {fileID: 5352124855417486355}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &2212074550056212667 stripped
 GameObject:
@@ -10508,7 +10509,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2212074550056212667}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -10533,9 +10534,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 3911961840589856886}
-  - {fileID: 248891995970817058}
   - {fileID: 2752566471466105893}
+  - {fileID: 248891995970817058}
+  - {fileID: 3911961840589856886}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1740.7976, y: 2611.1965}
@@ -10610,7 +10611,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 6674315691552842454}
   meshFilter: {fileID: 2924650203610676332}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &2220271380874839473 stripped
 MeshFilter:
@@ -10653,7 +10654,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2229560824444623651}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -10679,8 +10680,8 @@ MonoBehaviour:
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
   - {fileID: 3805225845491860453}
-  - {fileID: 7105830099053758279}
   - {fileID: 989129862519887501}
+  - {fileID: 7105830099053758279}
   otherConnectedParts:
   - {fileID: 6408206062217556737}
   - {fileID: 3228834847745476716}
@@ -10760,7 +10761,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 4922643564522843397}
   meshFilter: {fileID: 1867975692169437688}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &2244664002296534629 stripped
 MeshRenderer:
@@ -10809,7 +10810,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2261523168366386122}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -10834,9 +10835,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 8157960539385025368}
-  - {fileID: 6954506081739496993}
   - {fileID: 1485175907727560952}
+  - {fileID: 6954506081739496993}
+  - {fileID: 8157960539385025368}
   otherConnectedParts:
   - {fileID: 92236867783749830}
   - {fileID: 3346178984811108852}
@@ -10915,7 +10916,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 8444070534147568058}
   meshFilter: {fileID: 1210149489563094430}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &2292620707907272324 stripped
 MeshRenderer:
@@ -11054,7 +11055,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 766001479112319690}
   meshFilter: {fileID: 6718917990110555312}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8167240958015502171
 MonoBehaviour:
@@ -11063,7 +11064,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2327119983134246633}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -11128,10 +11129,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 5114945731822534642}
-  - {fileID: 3667487919527223957}
   - {fileID: 9109193703964145893}
   - {fileID: 3346178984811108852}
+  - {fileID: 3667487919527223957}
+  - {fileID: 5114945731822534642}
   otherConnectedParts:
   - {fileID: 3346178984811108852}
   - {fileID: 6942206973529517287}
@@ -11209,7 +11210,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 8656931604863323279}
   meshFilter: {fileID: 5331920624881130288}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &3913440841795626695
 MonoBehaviour:
@@ -11218,7 +11219,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2362720038393082588}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -11345,7 +11346,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 2906203626777708857}
   meshFilter: {fileID: 4770496836240194916}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5313262187169002263
 MonoBehaviour:
@@ -11354,7 +11355,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2373719075565698065}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -11407,10 +11408,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 8157960539385025368}
-  - {fileID: 1485175907727560952}
   - {fileID: 2992463245359860191}
   - {fileID: 9104296287396794227}
+  - {fileID: 1485175907727560952}
+  - {fileID: 8157960539385025368}
   otherConnectedParts:
   - {fileID: 1485175907727560952}
   breakableState: 0
@@ -11486,7 +11487,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 5236048346826680778}
   meshFilter: {fileID: 6096317339158351512}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &7893550835349032207
 MonoBehaviour:
@@ -11495,7 +11496,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2399585138481693011}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -11542,10 +11543,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 8529021361951642264}
-  - {fileID: 8663714916025912689}
   - {fileID: 2417032361940656548}
   - {fileID: 6434220020019984599}
+  - {fileID: 8663714916025912689}
+  - {fileID: 8529021361951642264}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 2691.8599, y: 4037.7898}
@@ -11620,7 +11621,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 362598435882613598}
   meshFilter: {fileID: 827258083770784575}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &4785906076028350339
 MonoBehaviour:
@@ -11629,7 +11630,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2438426097494744177}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -11666,7 +11667,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2439098587369338795}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -11765,7 +11766,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 4255411230698683968}
   meshFilter: {fileID: 7253955359036974791}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &2443560442134903262 stripped
 MeshFilter:
@@ -11838,7 +11839,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2544995805644865200}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -11940,7 +11941,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 5248614503884979298}
   meshFilter: {fileID: 7901632618622572300}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &2548424060774772177 stripped
 MeshCollider:
@@ -12079,7 +12080,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 3908565851032268294}
   meshFilter: {fileID: 5157070687446615381}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &6007487374160609604
 MonoBehaviour:
@@ -12088,7 +12089,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2593447699980322523}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -12177,10 +12178,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 8157960539385025368}
-  - {fileID: 6954506081739496993}
-  - {fileID: 92236867783749830}
   - {fileID: 9104296287396794227}
+  - {fileID: 92236867783749830}
+  - {fileID: 6954506081739496993}
+  - {fileID: 8157960539385025368}
   otherConnectedParts:
   - {fileID: 92236867783749830}
   breakableState: 0
@@ -12256,7 +12257,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 9213021782408992441}
   meshFilter: {fileID: 6147030470520003082}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &4655194582345447874
 MonoBehaviour:
@@ -12265,7 +12266,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2722172497481197946}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -12330,9 +12331,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 3778523702587628009}
   - {fileID: 40973691292326939}
   - {fileID: 4474046994235740601}
+  - {fileID: 3778523702587628009}
   otherConnectedParts:
   - {fileID: 3778523702587628009}
   breakableState: 0
@@ -12408,7 +12409,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 913288883300312870}
   meshFilter: {fileID: 4096354622473059589}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8343800295793455412
 MonoBehaviour:
@@ -12417,7 +12418,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2743251032101060940}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -12488,8 +12489,8 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 54423406619926628}
   - {fileID: 2938783003935117370}
+  - {fileID: 54423406619926628}
   otherConnectedParts:
   - {fileID: 92236867783749830}
   - {fileID: 2166904792743349517}
@@ -12566,7 +12567,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 4727524623106334294}
   meshFilter: {fileID: 4869316454731854760}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5830371286258732520
 MonoBehaviour:
@@ -12575,7 +12576,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2822902483861914538}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -12726,7 +12727,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 5656079503888200477}
   meshFilter: {fileID: 1554572632643552779}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &3058358199270706159
 MonoBehaviour:
@@ -12735,7 +12736,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2912817284490893096}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -12790,7 +12791,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2939721600584820122}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -12815,9 +12816,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 6434220020019984599}
   - {fileID: 7956554639937110285}
   - {fileID: 8663714916025912689}
-  - {fileID: 6434220020019984599}
   otherConnectedParts:
   - {fileID: 6434220020019984599}
   - {fileID: 7956554639937110285}
@@ -12895,7 +12896,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 9136252087515362867}
   meshFilter: {fileID: 5363230693516665198}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &2993868620782312385 stripped
 GameObject:
@@ -12926,7 +12927,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2993868620782312385}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -13025,7 +13026,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 6793163816542425651}
   meshFilter: {fileID: 2633070271500598058}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &2996818692570179606 stripped
 MeshRenderer:
@@ -13176,7 +13177,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3296134470018731937}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -13275,7 +13276,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 6464786585661488918}
   meshFilter: {fileID: 7804219256696452923}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &3299179895548637917 stripped
 GameObject:
@@ -13306,7 +13307,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3299179895548637917}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -13331,10 +13332,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 3651917252674304389}
   - {fileID: 9109193703964145893}
   - {fileID: 6942206973529517287}
   - {fileID: 9104296287396794227}
+  - {fileID: 3651917252674304389}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1715.546, y: 2573.319}
@@ -13409,7 +13410,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 9209369154232283945}
   meshFilter: {fileID: 3477828244562329946}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &3305261432808521999 stripped
 MeshFilter:
@@ -13468,10 +13469,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 2451700510778715418}
-  - {fileID: 5143529702242597165}
-  - {fileID: 6908200742152729449}
   - {fileID: 7237649592791334300}
+  - {fileID: 5143529702242597165}
+  - {fileID: 2451700510778715418}
+  - {fileID: 6908200742152729449}
   otherConnectedParts:
   - {fileID: 2611417522569232689}
   - {fileID: 7237649592791334300}
@@ -13549,7 +13550,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 8499630379107794674}
   meshFilter: {fileID: 7490062896066063876}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &4465819572213050228
 MonoBehaviour:
@@ -13558,7 +13559,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3348487856700563815}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -13595,7 +13596,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3352276647754162013}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -13620,10 +13621,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 4324402389178213097}
-  - {fileID: 989129862519887501}
   - {fileID: 4512252430546434401}
   - {fileID: 3228834847745476716}
+  - {fileID: 4324402389178213097}
+  - {fileID: 989129862519887501}
   otherConnectedParts:
   - {fileID: 3228834847745476716}
   - {fileID: 4512252430546434401}
@@ -13702,7 +13703,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 3575685699717102781}
   meshFilter: {fileID: 6446132008006903942}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &3373454505914526286 stripped
 MeshRenderer:
@@ -13757,7 +13758,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3426738897515780644}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -13856,7 +13857,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 6878414339455774654}
   meshFilter: {fileID: 4485843668383043491}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &3463796688892174821 stripped
 MeshFilter:
@@ -13921,8 +13922,8 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 4879380522416911853}
   - {fileID: 3228834847745476716}
+  - {fileID: 4879380522416911853}
   otherConnectedParts:
   - {fileID: 3228834847745476716}
   - {fileID: 989129862519887501}
@@ -14000,7 +14001,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 4847370432805285042}
   meshFilter: {fileID: 2056572228671921668}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8073865124892470079
 MonoBehaviour:
@@ -14009,7 +14010,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3507980972954639912}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -14052,7 +14053,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3530739099893186968}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -14078,8 +14079,8 @@ MonoBehaviour:
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
   - {fileID: 3805225845491860453}
-  - {fileID: 989129862519887501}
   - {fileID: 7506000623594730574}
+  - {fileID: 989129862519887501}
   otherConnectedParts:
   - {fileID: 3228834847745476716}
   - {fileID: 4324402389178213097}
@@ -14156,7 +14157,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 8543034404437427894}
   meshFilter: {fileID: 9180068559889253196}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &3565332586940970119 stripped
 MeshFilter:
@@ -14283,7 +14284,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 8357381101229109296}
   meshFilter: {fileID: 8570470996380617185}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &9100449765622053966
 MonoBehaviour:
@@ -14292,7 +14293,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3579474981125736673}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -14339,14 +14340,14 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 6408206062217556737}
+  - {fileID: 3228834847745476716}
+  - {fileID: 6364692330658007095}
   - {fileID: 3805225845491860453}
+  - {fileID: 5143529702242597165}
   - {fileID: 6071433371138241965}
   - {fileID: 4879380522416911853}
-  - {fileID: 5143529702242597165}
   - {fileID: 989129862519887501}
-  - {fileID: 6364692330658007095}
-  - {fileID: 3228834847745476716}
-  - {fileID: 6408206062217556737}
   otherConnectedParts:
   - {fileID: 3228834847745476716}
   - {fileID: 6364692330658007095}
@@ -14426,7 +14427,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 1533058745375986797}
   meshFilter: {fileID: 3890885803791239943}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8476520626080298571
 MonoBehaviour:
@@ -14435,7 +14436,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3581151395639331765}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -14502,7 +14503,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3670989246630162782}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -14527,12 +14528,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 8529021361951642264}
-  - {fileID: 3930279726573970448}
-  - {fileID: 8555066968396404626}
-  - {fileID: 6434220020019984599}
   - {fileID: 1097991609658222410}
   - {fileID: 5325757901176578714}
+  - {fileID: 6434220020019984599}
+  - {fileID: 8555066968396404626}
+  - {fileID: 8529021361951642264}
+  - {fileID: 3930279726573970448}
   otherConnectedParts:
   - {fileID: 6434220020019984599}
   - {fileID: 1097991609658222410}
@@ -14613,7 +14614,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 4366956569891516855}
   meshFilter: {fileID: 370949746595689585}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &3678311990384404790 stripped
 MeshRenderer:
@@ -14666,8 +14667,8 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 452839561740149071}
   - {fileID: 5325757901176578714}
+  - {fileID: 452839561740149071}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1176.0762, y: 1764.1141}
@@ -14742,7 +14743,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 693898701944702936}
   meshFilter: {fileID: 8545099113587201332}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &7923465208088770520
 MonoBehaviour:
@@ -14751,7 +14752,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3687403495647842984}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -14788,7 +14789,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3690577922956889129}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -14887,7 +14888,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 2301535684720795012}
   meshFilter: {fileID: 6463918214940303259}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &3696926225039222227 stripped
 GameObject:
@@ -14918,7 +14919,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3696926225039222227}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -14943,10 +14944,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 2611417522569232689}
+  - {fileID: 40973691292326939}
   - {fileID: 6908200742152729449}
   - {fileID: 7548612203259747909}
-  - {fileID: 40973691292326939}
-  - {fileID: 2611417522569232689}
   otherConnectedParts:
   - {fileID: 8939231003799261585}
   - {fileID: 2611417522569232689}
@@ -15027,7 +15028,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 8664372841485170442}
   meshFilter: {fileID: 1424686746845111654}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &3700792248286586347 stripped
 MeshRenderer:
@@ -15148,7 +15149,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 1613232344286552350}
   meshFilter: {fileID: 2691094290436851494}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &7265689829053376094
 MonoBehaviour:
@@ -15157,7 +15158,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3743768563661473016}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -15246,8 +15247,8 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 7455795382102283016}
   - {fileID: 7052976346530365106}
+  - {fileID: 7455795382102283016}
   otherConnectedParts:
   - {fileID: 7455795382102283016}
   - {fileID: 7052976346530365106}
@@ -15324,7 +15325,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 3073536961131541279}
   meshFilter: {fileID: 7801810795280748935}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &1956721492424270574
 MonoBehaviour:
@@ -15333,7 +15334,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3880467150479959098}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -15412,7 +15413,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3994024197654202796}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -15437,9 +15438,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 989129862519887501}
   - {fileID: 6408206062217556737}
   - {fileID: 7506000623594730574}
+  - {fileID: 989129862519887501}
   otherConnectedParts:
   - {fileID: 6408206062217556737}
   - {fileID: 989129862519887501}
@@ -15517,7 +15518,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 8350376392892871694}
   meshFilter: {fileID: 6366082521836807142}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &4005516131594946928 stripped
 GameObject:
@@ -15632,7 +15633,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 1796424839146778935}
   meshFilter: {fileID: 58757596878155910}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &6679616968950256933
 MonoBehaviour:
@@ -15641,7 +15642,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4005516131594946928}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -15690,7 +15691,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4060371277716173183}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -15715,14 +15716,14 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 2451700510778715418}
-  - {fileID: 8157960539385025368}
-  - {fileID: 371820359564430556}
   - {fileID: 7237649592791334300}
-  - {fileID: 3208071248746664327}
-  - {fileID: 2938783003935117370}
   - {fileID: 2611417522569232689}
+  - {fileID: 2938783003935117370}
+  - {fileID: 371820359564430556}
   - {fileID: 92236867783749830}
+  - {fileID: 2451700510778715418}
+  - {fileID: 3208071248746664327}
+  - {fileID: 8157960539385025368}
   otherConnectedParts:
   - {fileID: 2938783003935117370}
   - {fileID: 92236867783749830}
@@ -15800,7 +15801,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 3700792248286586347}
   meshFilter: {fileID: 1901012499557621855}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &4063640854247343329 stripped
 MeshFilter:
@@ -15921,7 +15922,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 107931968718279007}
   meshFilter: {fileID: 5331280252991522719}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5909201989563628143
 MonoBehaviour:
@@ -15930,7 +15931,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4064830870684149771}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -16001,13 +16002,13 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 6908200742152729449}
-  - {fileID: 1287421637430596199}
-  - {fileID: 5896653940849429348}
-  - {fileID: 7548612203259747909}
-  - {fileID: 3778523702587628009}
-  - {fileID: 4474046994235740601}
   - {fileID: 8939231003799261585}
+  - {fileID: 1287421637430596199}
+  - {fileID: 4474046994235740601}
+  - {fileID: 6908200742152729449}
+  - {fileID: 3778523702587628009}
+  - {fileID: 7548612203259747909}
+  - {fileID: 5896653940849429348}
   otherConnectedParts:
   - {fileID: 3415582578659564839}
   - {fileID: 7762348455872454067}
@@ -16084,7 +16085,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 2160543480710034090}
   meshFilter: {fileID: 3472953809803191378}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &155589067167195296
 MonoBehaviour:
@@ -16093,7 +16094,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4113100918060700287}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -16286,7 +16287,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 4719034931958900829}
   meshFilter: {fileID: 5288943626835748196}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5820337402024092627
 MonoBehaviour:
@@ -16295,7 +16296,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4361949409826258386}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -16404,7 +16405,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4588830706187876647}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -16429,10 +16430,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 4879380522416911853}
-  - {fileID: 989129862519887501}
   - {fileID: 4512252430546434401}
   - {fileID: 3228834847745476716}
+  - {fileID: 4879380522416911853}
+  - {fileID: 989129862519887501}
   otherConnectedParts:
   - {fileID: 3228834847745476716}
   breakableState: 0
@@ -16508,7 +16509,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 5437257650272333614}
   meshFilter: {fileID: 5334633395401136774}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &4595025332907669373 stripped
 MeshRenderer:
@@ -16609,8 +16610,8 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 3911961840589856886}
   - {fileID: 2752566471466105893}
+  - {fileID: 3911961840589856886}
   otherConnectedParts:
   - {fileID: 3911961840589856886}
   - {fileID: 7911607097263341876}
@@ -16687,7 +16688,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 6843314316585589451}
   meshFilter: {fileID: 1326975285665819366}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &1890333423790323050
 MonoBehaviour:
@@ -16696,7 +16697,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4723272970842674010}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -16793,7 +16794,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4835329902786385497}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -16818,9 +16819,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 952285867036419544}
-  - {fileID: 3228834847745476716}
   - {fileID: 248891995970817058}
+  - {fileID: 3228834847745476716}
+  - {fileID: 952285867036419544}
   otherConnectedParts:
   - {fileID: 7911607097263341876}
   breakableState: 0
@@ -16896,7 +16897,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 4848949301850571351}
   meshFilter: {fileID: 7713809606396333812}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &4847370432805285042 stripped
 MeshRenderer:
@@ -16957,7 +16958,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4879761962205085364}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -16982,11 +16983,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 2752566471466105893}
+  - {fileID: 6434220020019984599}
   - {fileID: 4079688939489850580}
   - {fileID: 2951904663280759401}
   - {fileID: 8555066968396404626}
-  - {fileID: 2752566471466105893}
-  - {fileID: 6434220020019984599}
   otherConnectedParts:
   - {fileID: 6434220020019984599}
   - {fileID: 2752566471466105893}
@@ -17067,7 +17068,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 3112883650576690668}
   meshFilter: {fileID: 675929874802853490}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &4908928907750640916 stripped
 MeshFilter:
@@ -17207,7 +17208,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 2776426346651202135}
   meshFilter: {fileID: 4094678906417981863}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &1939633368919178648
 MonoBehaviour:
@@ -17216,7 +17217,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5010884345250595315}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -17253,7 +17254,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5020985030052892538}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -17352,7 +17353,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 2292620707907272324}
   meshFilter: {fileID: 4287916412218765386}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &5034112522244293831 stripped
 MeshFilter:
@@ -17504,7 +17505,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 1719091833212932736}
   meshFilter: {fileID: 8353436330552138800}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5789056594205052152
 MonoBehaviour:
@@ -17513,7 +17514,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5093467453082073677}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -17614,10 +17615,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 8663714916025912689}
-  - {fileID: 8555066968396404626}
-  - {fileID: 6434220020019984599}
   - {fileID: 1097991609658222410}
+  - {fileID: 6434220020019984599}
+  - {fileID: 8555066968396404626}
+  - {fileID: 8663714916025912689}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1109.111, y: 1663.6664}
@@ -17692,7 +17693,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 3678311990384404790}
   meshFilter: {fileID: 4862192171220295680}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &4505687104025752594
 MonoBehaviour:
@@ -17701,7 +17702,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5246910390908085183}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -17744,7 +17745,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5255890800546436968}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -17769,11 +17770,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 5640847991620776903}
-  - {fileID: 215387430913746149}
-  - {fileID: 8663714916025912689}
-  - {fileID: 5325757901176578714}
   - {fileID: 2992463245359860191}
+  - {fileID: 5325757901176578714}
+  - {fileID: 8663714916025912689}
+  - {fileID: 215387430913746149}
+  - {fileID: 5640847991620776903}
   otherConnectedParts:
   - {fileID: 2992463245359860191}
   - {fileID: 3930279726573970448}
@@ -17850,7 +17851,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 599962535875027184}
   meshFilter: {fileID: 3638164170520698519}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &5288560694558266809 stripped
 MeshFilter:
@@ -17953,7 +17954,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5398720181325815070}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -17978,10 +17979,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 9109193703964145893}
+  - {fileID: 5658090432644969920}
   - {fileID: 3667487919527223957}
   - {fileID: 3651917252674304389}
-  - {fileID: 5658090432644969920}
-  - {fileID: 9109193703964145893}
   otherConnectedParts:
   - {fileID: 5658090432644969920}
   - {fileID: 9109193703964145893}
@@ -18060,7 +18061,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 1110919078519347747}
   meshFilter: {fileID: 7249593264818856777}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &5402144306421819418 stripped
 GameObject:
@@ -18091,7 +18092,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5402144306421819418}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -18116,11 +18117,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 5114945731822534642}
-  - {fileID: 3651917252674304389}
+  - {fileID: 9109193703964145893}
   - {fileID: 4392270868034393889}
   - {fileID: 5658090432644969920}
-  - {fileID: 9109193703964145893}
+  - {fileID: 5114945731822534642}
+  - {fileID: 3651917252674304389}
   otherConnectedParts:
   - {fileID: 5658090432644969920}
   - {fileID: 4392270868034393889}
@@ -18199,7 +18200,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 440028596898183577}
   meshFilter: {fileID: 3908161801518489081}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &5411584531048271489 stripped
 MeshCollider:
@@ -18260,7 +18261,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5470985302845683583}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -18285,13 +18286,13 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 9161296684294060614}
-  - {fileID: 4324402389178213097}
-  - {fileID: 4879380522416911853}
-  - {fileID: 989129862519887501}
   - {fileID: 4512252430546434401}
   - {fileID: 6408206062217556737}
+  - {fileID: 9161296684294060614}
   - {fileID: 7506000623594730574}
+  - {fileID: 4879380522416911853}
+  - {fileID: 4324402389178213097}
+  - {fileID: 989129862519887501}
   otherConnectedParts:
   - {fileID: 3911961840589856886}
   breakableState: 0
@@ -18367,7 +18368,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 1788398841775993515}
   meshFilter: {fileID: 3681274272096924048}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &5486385228529833405 stripped
 GameObject:
@@ -18485,7 +18486,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 6966773124889038657}
   meshFilter: {fileID: 518582350164636677}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &7896957016803752726
 MonoBehaviour:
@@ -18494,7 +18495,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5486385228529833405}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -18537,7 +18538,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5498736166661561698}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -18562,11 +18563,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 5114945731822534642}
-  - {fileID: 3667487919527223957}
-  - {fileID: 3651917252674304389}
-  - {fileID: 8157960539385025368}
   - {fileID: 4392270868034393889}
+  - {fileID: 3667487919527223957}
+  - {fileID: 5114945731822534642}
+  - {fileID: 8157960539385025368}
+  - {fileID: 3651917252674304389}
   otherConnectedParts:
   - {fileID: 3346178984811108852}
   - {fileID: 4392270868034393889}
@@ -18643,7 +18644,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 1128293128936113563}
   meshFilter: {fileID: 7989845188182295778}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &5516144582734410979 stripped
 MeshFilter:
@@ -18702,11 +18703,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 2451700510778715418}
-  - {fileID: 6071433371138241965}
-  - {fileID: 6908200742152729449}
   - {fileID: 425866970223642951}
   - {fileID: 7237649592791334300}
+  - {fileID: 6071433371138241965}
+  - {fileID: 2451700510778715418}
+  - {fileID: 6908200742152729449}
   - {fileID: 3208071248746664327}
   otherConnectedParts:
   - {fileID: 7237649592791334300}
@@ -18789,7 +18790,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 2314485320539183260}
   meshFilter: {fileID: 6117135322755805537}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5562316784205722440
 MonoBehaviour:
@@ -18798,7 +18799,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5611129503514866683}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -18851,11 +18852,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 2451700510778715418}
-  - {fileID: 6071433371138241965}
-  - {fileID: 2489181021053704702}
   - {fileID: 9051583583845381451}
   - {fileID: 6364692330658007095}
+  - {fileID: 6071433371138241965}
+  - {fileID: 2451700510778715418}
+  - {fileID: 2489181021053704702}
   otherConnectedParts:
   - {fileID: 9051583583845381451}
   - {fileID: 6364692330658007095}
@@ -18934,7 +18935,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 3333725656733975315}
   meshFilter: {fileID: 4072420411012338679}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &7573283567500607899
 MonoBehaviour:
@@ -18943,7 +18944,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5633280625772895405}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -18992,7 +18993,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5662068822505728951}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -19091,7 +19092,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 8530702701953608230}
   meshFilter: {fileID: 5516144582734410979}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &5683984331576052218 stripped
 MeshRenderer:
@@ -19134,7 +19135,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5702530398389827114}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -19159,10 +19160,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 1097991609658222410}
+  - {fileID: 5066785321447759560}
   - {fileID: 452839561740149071}
   - {fileID: 5640847991620776903}
-  - {fileID: 5066785321447759560}
-  - {fileID: 1097991609658222410}
   otherConnectedParts:
   - {fileID: 5066785321447759560}
   - {fileID: 8529021361951642264}
@@ -19240,7 +19241,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 3079012859920209855}
   meshFilter: {fileID: 4499971721928911153}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &5728249373634079331 stripped
 MeshRenderer:
@@ -19277,7 +19278,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5735537168357561924}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -19302,11 +19303,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 8294520783408055611}
-  - {fileID: 8590748844524511329}
-  - {fileID: 6007898105634752906}
   - {fileID: 5366261655296593346}
   - {fileID: 3456954635976197940}
+  - {fileID: 8590748844524511329}
+  - {fileID: 8294520783408055611}
+  - {fileID: 6007898105634752906}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 2126.1177, y: 3189.1765}
@@ -19381,7 +19382,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 1767125858231140011}
   meshFilter: {fileID: 9049852921310062261}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &5778186583022128373 stripped
 GameObject:
@@ -19412,7 +19413,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5778186583022128373}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -19437,9 +19438,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 5114945731822534642}
-  - {fileID: 3667487919527223957}
   - {fileID: 4392270868034393889}
+  - {fileID: 3667487919527223957}
+  - {fileID: 5114945731822534642}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1452.8695, y: 2179.3042}
@@ -19514,7 +19515,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 145181020869954855}
   meshFilter: {fileID: 3097985118882427362}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &5788109718386731797 stripped
 MeshFilter:
@@ -19563,7 +19564,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5836976557338120292}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -19588,12 +19589,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 54423406619926628}
-  - {fileID: 2451700510778715418}
-  - {fileID: 343041179824834222}
   - {fileID: 5366261655296593346}
   - {fileID: 9051583583845381451}
   - {fileID: 2938783003935117370}
+  - {fileID: 343041179824834222}
+  - {fileID: 2451700510778715418}
+  - {fileID: 54423406619926628}
   otherConnectedParts:
   - {fileID: 2938783003935117370}
   - {fileID: 9051583583845381451}
@@ -19673,7 +19674,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 6828982589259697748}
   meshFilter: {fileID: 2221652936939709986}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &5860467871986696481 stripped
 MeshCollider:
@@ -19728,7 +19729,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5907072911662279341}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -19827,7 +19828,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 7947764867851703216}
   meshFilter: {fileID: 5317940336804255421}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &5916111819304801072 stripped
 MeshFilter:
@@ -19876,7 +19877,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5994238046368165590}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -19901,9 +19902,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 716027961259430928}
-  - {fileID: 8171377626494596388}
   - {fileID: 7052976346530365106}
+  - {fileID: 8171377626494596388}
+  - {fileID: 716027961259430928}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1266.9832, y: 1900.4747}
@@ -19978,7 +19979,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 9101888577037622414}
   meshFilter: {fileID: 7308621343382318861}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &5995784092418564338 stripped
 MeshFilter:
@@ -20015,7 +20016,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6021130746099325016}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -20114,7 +20115,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 2554980427902123043}
   meshFilter: {fileID: 3866464667754388825}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &6028662223684973064 stripped
 GameObject:
@@ -20145,7 +20146,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6028662223684973064}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -20244,7 +20245,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 8243803579529492249}
   meshFilter: {fileID: 7813461531815773623}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &6035342870047259143 stripped
 GameObject:
@@ -20275,7 +20276,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6035342870047259143}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -20374,7 +20375,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 6987417890585392896}
   meshFilter: {fileID: 2743490475702569309}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &6047690458339132895 stripped
 GameObject:
@@ -20405,7 +20406,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6047690458339132895}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -20430,8 +20431,8 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 452839561740149071}
   - {fileID: 7455795382102283016}
+  - {fileID: 452839561740149071}
   otherConnectedParts:
   - {fileID: 7455795382102283016}
   breakableState: 0
@@ -20507,7 +20508,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 1152069763943267366}
   meshFilter: {fileID: 8448602810919782398}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &6063395407099538451 stripped
 MeshCollider:
@@ -20550,7 +20551,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6081881592052608775}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -20651,7 +20652,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 231867234596361474}
   meshFilter: {fileID: 2829403776692140267}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &6093240893313408038 stripped
 MeshCollider:
@@ -20742,7 +20743,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6188426457506074807}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -20841,7 +20842,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 7066383553579902352}
   meshFilter: {fileID: 4399609269805537557}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &6190673571806942774 stripped
 MeshRenderer:
@@ -20968,7 +20969,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 1451337371562085419}
   meshFilter: {fileID: 1490879012652042270}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &4605998785367290743
 MonoBehaviour:
@@ -20977,7 +20978,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6214037770797778734}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -21118,7 +21119,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 6998405755103322508}
   meshFilter: {fileID: 5895271714817082615}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8390275543610179427
 MonoBehaviour:
@@ -21127,7 +21128,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6242278996943292851}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -21320,7 +21321,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 4810167665495579623}
   meshFilter: {fileID: 1306559661271536628}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8005401262329844099
 MonoBehaviour:
@@ -21329,7 +21330,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6565520056034909503}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -21477,7 +21478,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 4326516464038262920}
   meshFilter: {fileID: 8743983420265986741}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &6920283925736065916
 MonoBehaviour:
@@ -21486,7 +21487,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6779575550493706615}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -21523,7 +21524,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6788760699546038345}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -21624,7 +21625,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 7814126963274665018}
   meshFilter: {fileID: 3056858757505524716}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &6793163816542425651 stripped
 MeshRenderer:
@@ -21673,7 +21674,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6812770300417352369}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -21778,7 +21779,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 5050024312976587445}
   meshFilter: {fileID: 8723026533987920204}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &6814270832268260711 stripped
 GameObject:
@@ -21893,7 +21894,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 5460662961341836835}
   meshFilter: {fileID: 3565332586940970119}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &6564914525385803338
 MonoBehaviour:
@@ -21902,7 +21903,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6814270832268260711}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -21951,7 +21952,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6850032357867899701}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -22050,7 +22051,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 2730850766553511495}
   meshFilter: {fileID: 1958054063651216645}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &6878414339455774654 stripped
 MeshRenderer:
@@ -22165,7 +22166,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7170793532117479533}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -22264,7 +22265,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 5235813623852534522}
   meshFilter: {fileID: 2843983576675335659}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &7177676565521691714 stripped
 MeshCollider:
@@ -22394,7 +22395,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 3384303090659974782}
   meshFilter: {fileID: 8132683732283926862}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8843358159420624612
 MonoBehaviour:
@@ -22403,7 +22404,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7201743914657840026}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -22440,7 +22441,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7205166936685678649}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -22539,7 +22540,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 1082707538573043512}
   meshFilter: {fileID: 3417976498636167448}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &7222672542891900874 stripped
 GameObject:
@@ -22660,7 +22661,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 4595025332907669373}
   meshFilter: {fileID: 8643432172781614064}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &3083688407344047747
 MonoBehaviour:
@@ -22669,7 +22670,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7222672542891900874}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -22803,7 +22804,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 5180041778867386664}
   meshFilter: {fileID: 2366869363343203619}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5781333532898152244
 MonoBehaviour:
@@ -22812,7 +22813,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7236048085175847319}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -22945,7 +22946,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 2142335035771080632}
   meshFilter: {fileID: 912794561535164042}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &7713773527105615237
 MonoBehaviour:
@@ -22954,7 +22955,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7262710813062173334}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -22991,7 +22992,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7291847417201319834}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -23090,7 +23091,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 3614217860064052474}
   meshFilter: {fileID: 5927940196207059615}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &7308621343382318861 stripped
 MeshFilter:
@@ -23137,13 +23138,13 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 2166904792743349517}
-  - {fileID: 5896653940849429348}
-  - {fileID: 7548612203259747909}
   - {fileID: 7237649592791334300}
+  - {fileID: 92236867783749830}
+  - {fileID: 2166904792743349517}
   - {fileID: 3208071248746664327}
   - {fileID: 7521973058395953645}
-  - {fileID: 92236867783749830}
+  - {fileID: 7548612203259747909}
+  - {fileID: 5896653940849429348}
   otherConnectedParts:
   - {fileID: 92236867783749830}
   breakableState: 0
@@ -23219,7 +23220,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 3373454505914526286}
   meshFilter: {fileID: 737713089892254656}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5849007433252483428
 MonoBehaviour:
@@ -23228,7 +23229,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7310456503045826158}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -23293,12 +23294,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 7237649592791334300}
+  - {fileID: 5143529702242597165}
   - {fileID: 343041179824834222}
   - {fileID: 2489181021053704702}
   - {fileID: 2166904792743349517}
-  - {fileID: 5143529702242597165}
   - {fileID: 6908200742152729449}
-  - {fileID: 7237649592791334300}
   - {fileID: 3208071248746664327}
   otherConnectedParts:
   - {fileID: 7237649592791334300}
@@ -23377,7 +23378,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 2996818692570179606}
   meshFilter: {fileID: 1321443012244605295}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &7843189521901573864
 MonoBehaviour:
@@ -23386,7 +23387,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7338097812354740206}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -23453,7 +23454,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7528109749161505717}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -23555,7 +23556,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 4370059385295576201}
   meshFilter: {fileID: 656186391741946022}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &7542880204975709526 stripped
 MeshRenderer:
@@ -23604,7 +23605,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7577664573521571404}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -23708,7 +23709,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 9068290695456883717}
   meshFilter: {fileID: 640645286859596949}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &7598333520046316368 stripped
 GameObject:
@@ -23739,7 +23740,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7598333520046316368}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -23764,10 +23765,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 54423406619926628}
-  - {fileID: 2489181021053704702}
-  - {fileID: 2166904792743349517}
   - {fileID: 371820359564430556}
+  - {fileID: 2489181021053704702}
+  - {fileID: 54423406619926628}
+  - {fileID: 2166904792743349517}
   otherConnectedParts:
   - {fileID: 371820359564430556}
   breakableState: 0
@@ -23843,7 +23844,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 7228298931150858304}
   meshFilter: {fileID: 3463796688892174821}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &7605771709036979630 stripped
 GameObject:
@@ -23874,7 +23875,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7605771709036979630}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -23973,7 +23974,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 832054003768400861}
   meshFilter: {fileID: 4063640854247343329}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &7622059748680862339 stripped
 MeshCollider:
@@ -24094,7 +24095,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 8168119364659873154}
   meshFilter: {fileID: 8153948660075684574}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &6330833190005701004
 MonoBehaviour:
@@ -24103,7 +24104,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7629398032626405002}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -24140,7 +24141,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7693626676687064581}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -24165,9 +24166,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 7548612203259747909}
   - {fileID: 3665726400187976563}
   - {fileID: 7521973058395953645}
+  - {fileID: 7548612203259747909}
   otherConnectedParts:
   - {fileID: 3930279726573970448}
   breakableState: 0
@@ -24243,7 +24244,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 1324974953484961591}
   meshFilter: {fileID: 5976404634177233783}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &7710701439525826285 stripped
 GameObject:
@@ -24284,10 +24285,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 1287421637430596199}
   - {fileID: 1543610065088716264}
-  - {fileID: 3415582578659564839}
   - {fileID: 40973691292326939}
+  - {fileID: 1287421637430596199}
+  - {fileID: 3415582578659564839}
   - {fileID: 4474046994235740601}
   - {fileID: 7762348455872454067}
   otherConnectedParts:
@@ -24366,7 +24367,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 2244664002296534629}
   meshFilter: {fileID: 1592484554824709694}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5722088314539560557
 MonoBehaviour:
@@ -24375,7 +24376,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7710701439525826285}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -24448,7 +24449,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7791439641189539150}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -24547,7 +24548,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 5648224213682459562}
   meshFilter: {fileID: 2064889948253798262}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &7800959038150914350 stripped
 MeshCollider:
@@ -24642,11 +24643,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 5143529702242597165}
-  - {fileID: 5896653940849429348}
   - {fileID: 425866970223642951}
   - {fileID: 7237649592791334300}
+  - {fileID: 5143529702242597165}
   - {fileID: 3208071248746664327}
+  - {fileID: 5896653940849429348}
   otherConnectedParts:
   - {fileID: 40973691292326939}
   - {fileID: 7237649592791334300}
@@ -24726,7 +24727,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 5686640277407406641}
   meshFilter: {fileID: 8063839732542739691}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8629980648346987073
 MonoBehaviour:
@@ -24735,7 +24736,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7943892988009395421}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -24778,7 +24779,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7981854995641472953}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -24803,11 +24804,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 5896653940849429348}
-  - {fileID: 7548612203259747909}
-  - {fileID: 2611417522569232689}
   - {fileID: 2417032361940656548}
+  - {fileID: 2611417522569232689}
   - {fileID: 3665726400187976563}
+  - {fileID: 7548612203259747909}
+  - {fileID: 5896653940849429348}
   otherConnectedParts:
   - {fileID: 2417032361940656548}
   - {fileID: 2611417522569232689}
@@ -24885,7 +24886,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 2018203812223505689}
   meshFilter: {fileID: 8061043157949217582}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &7989845188182295778 stripped
 MeshFilter:
@@ -24928,7 +24929,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8046731351923954418}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -24953,9 +24954,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 5896653940849429348}
   - {fileID: 6313449811394682017}
   - {fileID: 7548612203259747909}
+  - {fileID: 5896653940849429348}
   otherConnectedParts:
   - {fileID: 40973691292326939}
   breakableState: 0
@@ -25031,7 +25032,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 514895213661892010}
   meshFilter: {fileID: 2913784790553974244}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &8061043157949217582 stripped
 MeshFilter:
@@ -25128,7 +25129,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8240019920769416678}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -25229,7 +25230,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 4783899746091678057}
   meshFilter: {fileID: 4497464431626370051}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &8241459350398624580 stripped
 MeshCollider:
@@ -25284,7 +25285,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8256320344503608318}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -25383,7 +25384,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 2939632917219966665}
   meshFilter: {fileID: 4006159298729248769}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &8312348683987586710 stripped
 MeshFilter:
@@ -25426,7 +25427,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8341633240629168159}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -25457,6 +25458,7 @@ MonoBehaviour:
   - {fileID: 2965211034836798921}
   - {fileID: 2951904663280759401}
   - {fileID: 9209415905412491900}
+  - {fileID: 4284535985476114454}
   breakableState: 0
   breakingForce: {x: 1395.4587, y: 2093.188}
   forceTransfer: 0.5
@@ -25530,7 +25532,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 7127120172182054718}
   meshFilter: {fileID: 7552675143508016847}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &8343849355216238350 stripped
 MeshRenderer:
@@ -25671,7 +25673,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 1014233110732481620}
   meshFilter: {fileID: 2883581832235563557}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &4309874223988341423
 MonoBehaviour:
@@ -25680,7 +25682,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8381563056770148647}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -25777,7 +25779,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8561176652845498806}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -25876,7 +25878,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 6234903435004868640}
   meshFilter: {fileID: 1885065609769388448}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &8570470996380617185 stripped
 MeshFilter:
@@ -25923,13 +25925,13 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 3805225845491860453}
-  - {fileID: 4324402389178213097}
-  - {fileID: 4879380522416911853}
   - {fileID: 4512252430546434401}
-  - {fileID: 3228834847745476716}
   - {fileID: 6408206062217556737}
+  - {fileID: 3228834847745476716}
+  - {fileID: 3805225845491860453}
   - {fileID: 7506000623594730574}
+  - {fileID: 4879380522416911853}
+  - {fileID: 4324402389178213097}
   otherConnectedParts:
   - {fileID: 6408206062217556737}
   - {fileID: 3228834847745476716}
@@ -26007,7 +26009,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 9076801831605124740}
   meshFilter: {fileID: 3305261432808521999}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &2544351005162757327
 MonoBehaviour:
@@ -26016,7 +26018,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8570945794653930410}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -26145,7 +26147,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 7233344464544834108}
   meshFilter: {fileID: 8631192803152999300}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8981908067357840930
 MonoBehaviour:
@@ -26154,7 +26156,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8611505385847907049}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -26202,8 +26204,8 @@ MonoBehaviour:
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
   - {fileID: 8171377626494596388}
-  - {fileID: 5066785321447759560}
   - {fileID: 1097991609658222410}
+  - {fileID: 5066785321447759560}
   - {fileID: 5325757901176578714}
   otherConnectedParts:
   - {fileID: 8171377626494596388}
@@ -26283,7 +26285,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 1412611835844349763}
   meshFilter: {fileID: 5599529885418692715}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &9090539256928851112
 MonoBehaviour:
@@ -26292,7 +26294,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8613703845109001780}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -26449,7 +26451,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 1310426262557232159}
   meshFilter: {fileID: 5788109718386731797}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &6809725957536147003
 MonoBehaviour:
@@ -26458,7 +26460,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8675472652468197014}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -26501,7 +26503,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8687145192115836495}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -26600,7 +26602,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 3950086302308852298}
   meshFilter: {fileID: 4908928907750640916}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &8714879959142423472 stripped
 MeshCollider:
@@ -26730,7 +26732,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 5157364796560176227}
   meshFilter: {fileID: 1239814824922551780}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &486523848672322321
 MonoBehaviour:
@@ -26739,7 +26741,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8725389459203252395}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -26810,8 +26812,8 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 3651917252674304389}
   - {fileID: 3346178984811108852}
+  - {fileID: 3651917252674304389}
   otherConnectedParts:
   - {fileID: 3346178984811108852}
   - {fileID: 2992463245359860191}
@@ -26888,7 +26890,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 4764160984372425393}
   meshFilter: {fileID: 5222933242219919592}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &9156083940239247155
 MonoBehaviour:
@@ -26897,7 +26899,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8802932240987816441}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -26940,7 +26942,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8852662812524388021}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -27039,7 +27041,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 508623642695645300}
   meshFilter: {fileID: 4037282603192109252}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &8855868638702647634 stripped
 MeshCollider:
@@ -27082,7 +27084,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8923731922034186641}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -27184,7 +27186,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 5450380280583037919}
   meshFilter: {fileID: 4915347413300301371}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &8941009535861829701 stripped
 GameObject:
@@ -27215,7 +27217,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8941009535861829701}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -27317,7 +27319,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 6133051441808235504}
   meshFilter: {fileID: 7019078565969572010}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &9008435323035434163 stripped
 GameObject:
@@ -27348,7 +27350,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9008435323035434163}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -27447,7 +27449,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 8599008429247838361}
   meshFilter: {fileID: 3797248220533374631}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &9046489656959550380 stripped
 GameObject:
@@ -27488,10 +27490,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 9051583583845381451}
+  - {fileID: 2489181021053704702}
   - {fileID: 8294520783408055611}
   - {fileID: 54423406619926628}
-  - {fileID: 2489181021053704702}
-  - {fileID: 9051583583845381451}
   otherConnectedParts:
   - {fileID: 9051583583845381451}
   - {fileID: 8704220032758035160}
@@ -27568,7 +27570,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 9180874206426556754}
   meshFilter: {fileID: 795033107903475598}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5664255923191841170
 MonoBehaviour:
@@ -27577,7 +27579,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9046489656959550380}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -27632,7 +27634,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9084427626087915974}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -27657,9 +27659,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 3778523702587628009}
   - {fileID: 7131179292189032475}
   - {fileID: 4474046994235740601}
+  - {fileID: 3778523702587628009}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1244.6987, y: 1867.0481}
@@ -27734,7 +27736,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 8617497939662502569}
   meshFilter: {fileID: 4730274527290018447}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &9087296634865588080 stripped
 MeshCollider:
@@ -27837,7 +27839,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9223327814002470810}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f00aea79ded79f64ea32ad7b7cb23322, type: 3}
   m_Name: 
@@ -27862,9 +27864,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 5366261655296593346}
   - {fileID: 343041179824834222}
   - {fileID: 2489181021053704702}
-  - {fileID: 5366261655296593346}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 2006.8876, y: 3010.3315}
@@ -27939,7 +27941,7 @@ MonoBehaviour:
   finalBrokeForce: 0
   renderer: {fileID: 6190673571806942774}
   meshFilter: {fileID: 2443560442134903262}
-  parent: {fileID: 4284535985476114453}
+  parent: {fileID: 4284535985582280830}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1001 &4718426687602751980
 PrefabInstance:

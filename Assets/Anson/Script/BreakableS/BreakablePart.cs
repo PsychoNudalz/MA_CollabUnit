@@ -22,6 +22,7 @@ public class BreakablePart : BreakableComponent
     protected float moveDistance = 10f;
     protected Vector3 lastPosition;
     protected LayerMask partLayer;
+    protected MovableObject movableObject;
 
     public virtual bool CanTelekinesis => breakableState == BreakableState.Free;
 
@@ -33,6 +34,15 @@ public class BreakablePart : BreakableComponent
         }
 
         partLayer = LayerMask.NameToLayer("Breakable_Part");
+        if (!movableObject)
+        {
+            movableObject = GetComponent<MovableObject>();
+        }
+
+        if (movableObject)
+        {
+            movableObject.enabled = false;
+        }
     }
 
     private void FixedUpdate()
@@ -123,6 +133,19 @@ public class BreakablePart : BreakableComponent
         }
     }
 
+    public override void Initialise()
+    {
+        base.Initialise();
+        if (!movableObject)
+        {
+            movableObject = GetComponent<MovableObject>();
+        }
+
+        if (movableObject)
+        {
+            movableObject.enabled = false;
+        }
+    }
 
     bool RBInConnected(Rigidbody rb)
     {
@@ -163,6 +186,7 @@ public class BreakablePart : BreakableComponent
             StartCoroutine(DelayBreak_Recursive(force, originalForce, breakHistory, breakDelay));
         }
 
+        movableObject.enabled = true;
         AddScore();
         PlayBreakEffects();
         breakEvent.Invoke();
