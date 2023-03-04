@@ -15,14 +15,31 @@ public class CatInputController : MonoBehaviour
     private QuadrupedMovementController quadrupedMovementController;
 
     [Header("Look")]
+    private bool isAim = false;
+
     [SerializeField]
     private CinemachineFreeLook originalCinemachine;
 
     [SerializeField]
-    private CinemachineFreeLook aimCinemachine;
+    private CinemachineVirtualCamera aimCinemachine;
+
+    [SerializeField]
+    private Vector2 aimSpeed = new Vector2(10f, 10f);
 
     [SerializeField]
     private float cameraCastRange = 1000f;
+
+    [SerializeField]
+    private float originalFOV;
+
+    [SerializeField]
+    private float aimFOV = 20f;
+
+    [SerializeField]
+    private float FOVSpeed = 50f;
+
+    private float targetFOV = 0;
+    private float FOVDeadzone = 1f;
 
     [SerializeField]
     private LayerMask cameraLayer;
@@ -56,12 +73,35 @@ public class CatInputController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        originalFOV = originalCinemachine.m_Lens.FieldOfView;
+        targetFOV = originalFOV;
     }
 
     // Update is called once per frame
     void Update()
     {
         MoveCat();
+        UpdateFOV();
+    }
+
+    private void UpdateFOV()
+    {
+        float currentFOV = originalCinemachine.m_Lens.FieldOfView;
+        if (Mathf.Abs(targetFOV - currentFOV) < 0.01f)
+        {
+            return;
+        }
+
+        else if (Mathf.Abs(targetFOV - currentFOV) < FOVDeadzone)
+        {
+            currentFOV = targetFOV;
+        }
+        else
+        {
+            currentFOV = Mathf.Lerp(currentFOV, targetFOV, FOVSpeed * Time.deltaTime);
+        }
+
+        originalCinemachine.m_Lens.FieldOfView = currentFOV;
     }
 
     private void FixedUpdate()
@@ -100,7 +140,8 @@ public class CatInputController : MonoBehaviour
         {
             if (inputValue.Get<float>() < 0.5f)
             {
-                catTelekinesis.OnTelekinesis_Release(GetDirToTarget(cameraTransform.position), cameraTransform.position);
+                catTelekinesis.OnTelekinesis_Release(GetDirToTarget(cameraTransform.position),
+                    cameraTransform.position);
                 isTeleOn = false;
             }
         }
@@ -118,19 +159,17 @@ public class CatInputController : MonoBehaviour
     {
         if (inputValue.Get<float>() < 0.5f)
         {
-            aimCinemachine.Priority = 0;
-            originalCinemachine.m_XAxis.Value = aimCinemachine.m_XAxis.Value;
-            originalCinemachine.m_YAxis.Value = aimCinemachine.m_YAxis.Value;
+            isAim = false;
+            targetFOV = originalFOV;
         }
         else
         {
-            aimCinemachine.Priority = 20;
-            aimCinemachine.m_XAxis.Value = originalCinemachine.m_XAxis.Value;
-            aimCinemachine.m_YAxis.Value = originalCinemachine.m_YAxis.Value;
+            isAim = true;
+            targetFOV = aimFOV;
         }
     }
 
-    public void OnLook()
+    public void OnLook(InputValue inputValue)
     {
     }
 
@@ -181,7 +220,7 @@ public class CatInputController : MonoBehaviour
     public Vector3 GetDirToTarget(Vector3 origin)
     {
         Vector3 target = GetCameraTarget();
-        if (!target.Equals(default) )
+        if (!target.Equals(default))
         {
             return (target - origin).normalized;
         }
