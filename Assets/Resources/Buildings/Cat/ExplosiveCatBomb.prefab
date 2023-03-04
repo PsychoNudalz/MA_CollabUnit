@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 4831523760799784303}
   - component: {fileID: 4831523760799784299}
   m_Layer: 6
-  m_Name: ExplosiveTank
+  m_Name: ExplosiveCatBomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
   breakableStructureController: {fileID: 0}
   connectedParts: []
   otherConnectedParts: []
-  breakableState: 0
+  breakableState: 2
   breakingForce: {x: 100, y: 200}
   forceTransfer: 0.5
   transferToDot:
@@ -661,6 +661,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4831523762645586498}
     m_Modifications:
+    - target: {fileID: -8863667214212606868, guid: b1eabf3b6f092a14dae95e273106300c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2db41b1e177d5744bba1de34750703d2, type: 2}
     - target: {fileID: -8679921383154817045, guid: b1eabf3b6f092a14dae95e273106300c,
         type: 3}
       propertyPath: m_RootOrder
@@ -716,11 +721,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -895306380916907690, guid: b1eabf3b6f092a14dae95e273106300c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2db41b1e177d5744bba1de34750703d2, type: 2}
     - target: {fileID: 919132149155446097, guid: b1eabf3b6f092a14dae95e273106300c,
         type: 3}
       propertyPath: m_Name
       value: ExplosiveBarrel
       objectReference: {fileID: 0}
+    - target: {fileID: 3509130420081911515, guid: b1eabf3b6f092a14dae95e273106300c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2db41b1e177d5744bba1de34750703d2, type: 2}
+    - target: {fileID: 7202271454713460447, guid: b1eabf3b6f092a14dae95e273106300c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2db41b1e177d5744bba1de34750703d2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1eabf3b6f092a14dae95e273106300c, type: 3}
 --- !u!4 &4938122491231932274 stripped

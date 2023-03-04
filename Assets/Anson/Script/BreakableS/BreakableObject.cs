@@ -41,6 +41,8 @@ public class BreakableObject : BreakablePart
                 meshSize = 1;
             }
         }
+        
+        ChangeState(breakableState);
     }
 
     // Update is called once per frame

@@ -31,6 +31,8 @@ public class ExplosiveController : MonoBehaviour
         BreakableCollective currentCollective;
         BreakablePart currentPart;
         Vector3 force;
+        explodeEffectEvent.Invoke();
+
         //Break all collectives
         Collider[] overlapSphere1 = Physics.OverlapSphere(transform.position, range, layerMask);
         foreach (Collider collider in overlapSphere1)
@@ -58,7 +60,6 @@ public class ExplosiveController : MonoBehaviour
             }
         }
 
-        explodeEffectEvent.Invoke();
     }
 
     Vector3 GetForce(Vector3 target)

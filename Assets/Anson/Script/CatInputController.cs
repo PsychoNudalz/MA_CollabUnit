@@ -48,6 +48,10 @@ public class CatInputController : MonoBehaviour
     [SerializeField]
     private CatTelekinesis catTelekinesis;
 
+    [Header("Shoot")]
+    [SerializeField]
+    private LauncherScript launcherScript;
+
     [Header("Sounds For now")]
     [SerializeField]
     private SoundAbstract meowSound;
@@ -67,13 +71,14 @@ public class CatInputController : MonoBehaviour
         }
 
         cameraTransform = camera.transform;
+        originalFOV = originalCinemachine.m_Lens.FieldOfView;
+
     }
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        originalFOV = originalCinemachine.m_Lens.FieldOfView;
         targetFOV = originalFOV;
     }
 
@@ -171,6 +176,12 @@ public class CatInputController : MonoBehaviour
 
     public void OnLook(InputValue inputValue)
     {
+    }
+
+    public void OnShoot(InputValue inputValue)
+    {
+        launcherScript.transform.forward = GetDirToTarget(launcherScript.transform.position);
+        launcherScript.Fire();
     }
 
     private void MoveCat()
