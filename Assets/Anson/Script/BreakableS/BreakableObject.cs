@@ -124,10 +124,10 @@ public class BreakableObject : BreakablePart
     void OnBreakableDestroy()
     {
         destroyEvent.Invoke();
-        Despawn();
+        Despawn(false);
     }
 
-    public override void Despawn()
+    public override void Despawn(bool instant)
     {
         if (!gameObject || breakableState == BreakableState.Despawn)
         {

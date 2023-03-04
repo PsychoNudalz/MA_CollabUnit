@@ -445,11 +445,14 @@ MonoBehaviour:
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 512
+  groundCounter: 0
+  minimumGroundParts: 10
+  noBottomComponents: []
   effectsController: {fileID: 3074925373807752239}
   breakEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 3
+  despawnTime: 0.5
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []

@@ -73,7 +73,16 @@ public class BreakableManager : MonoBehaviour
                         }
                         else
                         {
-                            breakableComponent.Despawn();
+                            try
+                            {
+                                breakableComponent.Despawn(false);
+
+                            }
+                            catch (Exception e)
+                            {
+                                breakableComponent.Despawn(true);
+
+                            }
                         }
                     }
                     else

@@ -597,7 +597,7 @@ public class BreakableComponent : MonoBehaviour
         return bc;
     }
 
-    public virtual void Despawn()
+    public virtual void Despawn(bool instant)
     {
         breakableState = BreakableState.Despawn;
         if (gameObject)

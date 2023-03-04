@@ -83,8 +83,7 @@ MonoBehaviour:
   collider: {fileID: 0}
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
-  connectedParts:
-  - {fileID: 7072025975688666456}
+  connectedParts: []
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 66.98327, y: 100.47491}
@@ -128,7 +127,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   isGroundPiece: 1
-  originalNoBottom: 0
+  originalNoBottom: 1
   affectiveRange: 0.5
   castLayer:
     serializedVersion: 2
@@ -152,7 +151,7 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 0.6698327
   minimumPartSize: 10
@@ -504,7 +503,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  despawnTime: 1
+  despawnTime: 0.5
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4126,14 +4125,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 6.1004057
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 9196869641458656537}
   meshFilter: {fileID: 1641707629734469230}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &1881747520943622137
 MonoBehaviour:
@@ -4195,12 +4194,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 9104296287396794227}
-  - {fileID: 2611417522569232689}
-  - {fileID: 371820359564430556}
-  - {fileID: 1485175907727560952}
   - {fileID: 2166904792743349517}
   - {fileID: 8157960539385025368}
+  - {fileID: 1485175907727560952}
+  - {fileID: 2611417522569232689}
+  - {fileID: 371820359564430556}
+  - {fileID: 9104296287396794227}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1806.9054, y: 2710.3582}
@@ -4268,14 +4267,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 18.069054
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 371261158095739580}
   meshFilter: {fileID: 526746026172295646}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &4995972229546058953
 MonoBehaviour:
@@ -4365,8 +4364,8 @@ MonoBehaviour:
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
   - {fileID: 5143529702242597165}
-  - {fileID: 2451700510778715418}
   - {fileID: 6908200742152729449}
+  - {fileID: 2451700510778715418}
   - {fileID: 3208071248746664327}
   otherConnectedParts:
   - {fileID: 2611417522569232689}
@@ -4437,14 +4436,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 15.311726
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3025596692971894721}
   meshFilter: {fileID: 3467308938111548460}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &145181020869954855 stripped
 MeshRenderer:
@@ -4573,14 +4572,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 9.219671
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8125829662522650339}
   meshFilter: {fileID: 4538324836414291622}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &169538927136125537 stripped
 GameObject:
@@ -4688,14 +4687,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 9.641218
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2182408238995171342}
   meshFilter: {fileID: 5198972076917788933}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &7004242904117595667
 MonoBehaviour:
@@ -4824,14 +4823,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 8.619264
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 895309366536164028}
   meshFilter: {fileID: 7333633955851023507}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5189729590567766490
 MonoBehaviour:
@@ -4966,14 +4965,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 6.1003504
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1952774682296133153}
   meshFilter: {fileID: 4235983727539312473}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &4939341792623890512
 MonoBehaviour:
@@ -5098,14 +5097,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 19.530687
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6477603138499385359}
   meshFilter: {fileID: 4272584638325132407}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &4457875529112575444
 MonoBehaviour:
@@ -5255,14 +5254,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 6.100273
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3177206395721925370}
   meshFilter: {fileID: 7077295755266550329}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &367591037306789751 stripped
 MeshCollider:
@@ -5388,14 +5387,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 5.3852406
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4166224803206776701}
   meshFilter: {fileID: 1368381133386651760}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8773753384348384339
 MonoBehaviour:
@@ -5534,14 +5533,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 17.022997
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 7542880204975709526}
   meshFilter: {fileID: 6797424558657812299}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &440028596898183577 stripped
 MeshRenderer:
@@ -5676,14 +5675,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 6.1000614
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3319518358115377841}
   meshFilter: {fileID: 7091653578136521060}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &479443039239536029 stripped
 GameObject:
@@ -5808,14 +5807,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 15.099128
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6198465400323520467}
   meshFilter: {fileID: 2220271380874839473}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &480440369270738714 stripped
 MeshCollider:
@@ -5980,14 +5979,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 7.681326
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4614493596961167545}
   meshFilter: {fileID: 5916111819304801072}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &539752016976172265 stripped
 MeshCollider:
@@ -6127,9 +6126,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 2752566471466105893}
-  - {fileID: 4079688939489850580}
   - {fileID: 7956554639937110285}
+  - {fileID: 4079688939489850580}
+  - {fileID: 2752566471466105893}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1194.3533, y: 1791.5299}
@@ -6197,14 +6196,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 11.943533
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4715363230783224038}
   meshFilter: {fileID: 5034112522244293831}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &827258083770784575 stripped
 MeshFilter:
@@ -6369,14 +6368,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 6.099921
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8246489944110850108}
   meshFilter: {fileID: 31709870690470477}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &911777811068741221 stripped
 GameObject:
@@ -6417,11 +6416,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 5896653940849429348}
   - {fileID: 8939231003799261585}
-  - {fileID: 2611417522569232689}
   - {fileID: 40973691292326939}
   - {fileID: 7521973058395953645}
-  - {fileID: 5896653940849429348}
+  - {fileID: 2611417522569232689}
   otherConnectedParts:
   - {fileID: 2417032361940656548}
   - {fileID: 8939231003799261585}
@@ -6494,14 +6493,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 17.069847
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8343849355216238350}
   meshFilter: {fileID: 2482222749764351403}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8470270264407733956
 MonoBehaviour:
@@ -6649,14 +6648,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 11.312495
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 914465584929983260}
   meshFilter: {fileID: 7316952166261603229}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5721262364012486677
 MonoBehaviour:
@@ -6813,14 +6812,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 19.356825
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 7776235805378974183}
   meshFilter: {fileID: 6597875542260303365}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &1082707538573043512 stripped
 MeshRenderer:
@@ -6934,14 +6933,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 6.1003036
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4426273002104995105}
   meshFilter: {fileID: 2793316299655454665}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &6085068673316058264
 MonoBehaviour:
@@ -7039,9 +7038,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 6942206973529517287}
-  - {fileID: 215387430913746149}
   - {fileID: 8529021361951642264}
+  - {fileID: 215387430913746149}
+  - {fileID: 6942206973529517287}
   otherConnectedParts:
   - {fileID: 6954506081739496993}
   breakableState: 0
@@ -7110,14 +7109,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 19.840862
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5005102376678629536}
   meshFilter: {fileID: 4553745440126309}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &3632370786841535121
 MonoBehaviour:
@@ -7273,14 +7272,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 1.9156561
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8685493031239601642}
   meshFilter: {fileID: 8892977084830593550}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &1261806135252453177 stripped
 GameObject:
@@ -7321,10 +7320,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 7131179292189032475}
+  - {fileID: 3778523702587628009}
   - {fileID: 40973691292326939}
   - {fileID: 3415582578659564839}
-  - {fileID: 3778523702587628009}
+  - {fileID: 7131179292189032475}
   otherConnectedParts:
   - {fileID: 7131179292189032475}
   - {fileID: 40973691292326939}
@@ -7399,14 +7398,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 13.970987
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3846359874551835664}
   meshFilter: {fileID: 4675871188803889520}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &7424075184475893064
 MonoBehaviour:
@@ -7529,14 +7528,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 8.766138
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3119980634917500975}
   meshFilter: {fileID: 5288560694558266809}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &2112570962633336708
 MonoBehaviour:
@@ -7637,11 +7636,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 1097991609658222410}
-  - {fileID: 4079688939489850580}
-  - {fileID: 7956554639937110285}
   - {fileID: 8555066968396404626}
+  - {fileID: 7956554639937110285}
+  - {fileID: 4079688939489850580}
   - {fileID: 8663714916025912689}
+  - {fileID: 1097991609658222410}
   otherConnectedParts:
   - {fileID: 3930279726573970448}
   - {fileID: 3727647901418037206}
@@ -7711,14 +7710,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 18.761148
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5728249373634079331}
   meshFilter: {fileID: 7782941087528654804}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &1361114005304835000 stripped
 MeshFilter:
@@ -7783,9 +7782,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 6434220020019984599}
-  - {fileID: 8663714916025912689}
   - {fileID: 452839561740149071}
+  - {fileID: 8663714916025912689}
+  - {fileID: 6434220020019984599}
   otherConnectedParts:
   - {fileID: 6434220020019984599}
   - {fileID: 5325757901176578714}
@@ -7856,14 +7855,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 12.74967
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 207516447712290197}
   meshFilter: {fileID: 6479502675661754823}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &4502971392236370222
 MonoBehaviour:
@@ -8008,14 +8007,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 10.647441
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8183653432583043727}
   meshFilter: {fileID: 1380150515966199273}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5447116987777781133
 MonoBehaviour:
@@ -8153,14 +8152,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 8.891018
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 7727645568689219608}
   meshFilter: {fileID: 1361114005304835000}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &1486749239298417707 stripped
 GameObject:
@@ -8201,10 +8200,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 6364692330658007095}
   - {fileID: 5143529702242597165}
-  - {fileID: 343041179824834222}
   - {fileID: 4324402389178213097}
+  - {fileID: 343041179824834222}
+  - {fileID: 6364692330658007095}
   otherConnectedParts:
   - {fileID: 6364692330658007095}
   breakableState: 0
@@ -8273,14 +8272,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 19.683708
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 894486707818687045}
   meshFilter: {fileID: 7742531304084833689}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &6862483284993530915
 MonoBehaviour:
@@ -8363,10 +8362,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 9109193703964145893}
-  - {fileID: 5658090432644969920}
   - {fileID: 54423406619926628}
   - {fileID: 3667487919527223957}
+  - {fileID: 5658090432644969920}
+  - {fileID: 9109193703964145893}
   otherConnectedParts:
   - {fileID: 5658090432644969920}
   breakableState: 0
@@ -8435,14 +8434,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 14.826793
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1933163031992398279}
   meshFilter: {fileID: 498353211496817306}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &1509603833561644116 stripped
 GameObject:
@@ -8498,9 +8497,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 2752566471466105893}
-  - {fileID: 4079688939489850580}
   - {fileID: 7956554639937110285}
+  - {fileID: 4079688939489850580}
+  - {fileID: 2752566471466105893}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1107.9647, y: 1661.947}
@@ -8568,14 +8567,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 11.079647
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2593877603234893350}
   meshFilter: {fileID: 3512550553360761356}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &1533058745375986797 stripped
 MeshRenderer:
@@ -8707,14 +8706,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 17.498978
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2140038829226764783}
   meshFilter: {fileID: 6907113732581766110}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &1554572632643552779 stripped
 MeshFilter:
@@ -8773,9 +8772,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 2965211034836798921}
   - {fileID: 5703489269235440071}
   - {fileID: 7764570108315986104}
-  - {fileID: 2965211034836798921}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1665.1992, y: 2497.7988}
@@ -8843,14 +8842,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 16.651993
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8803938414522064804}
   meshFilter: {fileID: 9094282071026884759}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &6982943552252623586
 MonoBehaviour:
@@ -8991,14 +8990,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 6.100313
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4685496727476585278}
   meshFilter: {fileID: 8312348683987586710}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &2399128074382576201
 MonoBehaviour:
@@ -9075,8 +9074,8 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 8704220032758035160}
   - {fileID: 6007898105634752906}
+  - {fileID: 8704220032758035160}
   otherConnectedParts:
   - {fileID: 8704220032758035160}
   breakableState: 0
@@ -9145,14 +9144,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 14.727694
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2663308223118360101}
   meshFilter: {fileID: 1641217267829099948}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &1788398841775993515 stripped
 MeshRenderer:
@@ -9211,10 +9210,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 7131179292189032475}
+  - {fileID: 3778523702587628009}
   - {fileID: 40973691292326939}
   - {fileID: 4474046994235740601}
-  - {fileID: 3778523702587628009}
+  - {fileID: 7131179292189032475}
   otherConnectedParts:
   - {fileID: 7131179292189032475}
   - {fileID: 3778523702587628009}
@@ -9285,14 +9284,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 13.037159
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1149994934272933491}
   meshFilter: {fileID: 2851884008556710708}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &6131943657646507975
 MonoBehaviour:
@@ -9415,14 +9414,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 9.774882
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 7995823211030886462}
   meshFilter: {fileID: 2644251175735658039}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &1374861195471364583
 MonoBehaviour:
@@ -9553,14 +9552,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 16.12084
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1377300210970179101}
   meshFilter: {fileID: 7519767700602548901}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &7126404915021557403
 MonoBehaviour:
@@ -9649,9 +9648,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 2752566471466105893}
-  - {fileID: 4079688939489850580}
   - {fileID: 7956554639937110285}
+  - {fileID: 4079688939489850580}
+  - {fileID: 2752566471466105893}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1356.8788, y: 2035.3181}
@@ -9719,14 +9718,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 13.568788
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5833297673068347192}
   meshFilter: {fileID: 3203856476577364788}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &1933163031992398279 stripped
 MeshRenderer:
@@ -9870,14 +9869,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 10.791961
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3046938844718788770}
   meshFilter: {fileID: 4190821130220401008}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &1958054063651216645 stripped
 MeshFilter:
@@ -10018,14 +10017,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 4.805205
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5683984331576052218}
   meshFilter: {fileID: 6505076287098890795}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &2013020277613746108 stripped
 GameObject:
@@ -10133,14 +10132,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 7.428879
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3662876222028053877}
   meshFilter: {fileID: 5995784092418564338}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5580937500400086623
 MonoBehaviour:
@@ -10284,14 +10283,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 6.100429
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 355051753578823474}
   meshFilter: {fileID: 4573728378769772266}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &2056572228671921668 stripped
 MeshFilter:
@@ -10471,14 +10470,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 19.751762
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3859020090816930285}
   meshFilter: {fileID: 5352124855417486355}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &2212074550056212667 stripped
 GameObject:
@@ -10604,14 +10603,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 17.407976
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6674315691552842454}
   meshFilter: {fileID: 2924650203610676332}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &2220271380874839473 stripped
 MeshFilter:
@@ -10679,9 +10678,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 7105830099053758279}
   - {fileID: 3805225845491860453}
   - {fileID: 989129862519887501}
-  - {fileID: 7105830099053758279}
   otherConnectedParts:
   - {fileID: 6408206062217556737}
   - {fileID: 3228834847745476716}
@@ -10754,14 +10753,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 17.43552
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4922643564522843397}
   meshFilter: {fileID: 1867975692169437688}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &2244664002296534629 stripped
 MeshRenderer:
@@ -10835,9 +10834,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 1485175907727560952}
-  - {fileID: 6954506081739496993}
   - {fileID: 8157960539385025368}
+  - {fileID: 6954506081739496993}
+  - {fileID: 1485175907727560952}
   otherConnectedParts:
   - {fileID: 92236867783749830}
   - {fileID: 3346178984811108852}
@@ -10909,14 +10908,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 12.524075
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8444070534147568058}
   meshFilter: {fileID: 1210149489563094430}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &2292620707907272324 stripped
 MeshRenderer:
@@ -11048,14 +11047,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 7.6827974
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 766001479112319690}
   meshFilter: {fileID: 6718917990110555312}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8167240958015502171
 MonoBehaviour:
@@ -11129,10 +11128,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 9109193703964145893}
-  - {fileID: 3346178984811108852}
   - {fileID: 3667487919527223957}
   - {fileID: 5114945731822534642}
+  - {fileID: 9109193703964145893}
+  - {fileID: 3346178984811108852}
   otherConnectedParts:
   - {fileID: 3346178984811108852}
   - {fileID: 6942206973529517287}
@@ -11203,14 +11202,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 15.138008
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8656931604863323279}
   meshFilter: {fileID: 5331920624881130288}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &3913440841795626695
 MonoBehaviour:
@@ -11339,14 +11338,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 8.8245945
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2906203626777708857}
   meshFilter: {fileID: 4770496836240194916}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5313262187169002263
 MonoBehaviour:
@@ -11408,10 +11407,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 2992463245359860191}
-  - {fileID: 9104296287396794227}
-  - {fileID: 1485175907727560952}
   - {fileID: 8157960539385025368}
+  - {fileID: 1485175907727560952}
+  - {fileID: 9104296287396794227}
+  - {fileID: 2992463245359860191}
   otherConnectedParts:
   - {fileID: 1485175907727560952}
   breakableState: 0
@@ -11480,14 +11479,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 21.435457
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5236048346826680778}
   meshFilter: {fileID: 6096317339158351512}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &7893550835349032207
 MonoBehaviour:
@@ -11543,10 +11542,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 8529021361951642264}
+  - {fileID: 8663714916025912689}
   - {fileID: 2417032361940656548}
   - {fileID: 6434220020019984599}
-  - {fileID: 8663714916025912689}
-  - {fileID: 8529021361951642264}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 2691.8599, y: 4037.7898}
@@ -11614,14 +11613,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 26.918598
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 362598435882613598}
   meshFilter: {fileID: 827258083770784575}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &4785906076028350339
 MonoBehaviour:
@@ -11759,14 +11758,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 6.100253
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4255411230698683968}
   meshFilter: {fileID: 7253955359036974791}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &2443560442134903262 stripped
 MeshFilter:
@@ -11865,8 +11864,8 @@ MonoBehaviour:
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
   - {fileID: 6071433371138241965}
-  - {fileID: 343041179824834222}
   - {fileID: 4324402389178213097}
+  - {fileID: 343041179824834222}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 2118.867, y: 3178.3003}
@@ -11934,14 +11933,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 21.18867
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5248614503884979298}
   meshFilter: {fileID: 7901632618622572300}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &2548424060774772177 stripped
 MeshCollider:
@@ -12073,14 +12072,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 7.901625
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3908565851032268294}
   meshFilter: {fileID: 5157070687446615381}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &6007487374160609604
 MonoBehaviour:
@@ -12178,10 +12177,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 8157960539385025368}
+  - {fileID: 6954506081739496993}
   - {fileID: 9104296287396794227}
   - {fileID: 92236867783749830}
-  - {fileID: 6954506081739496993}
-  - {fileID: 8157960539385025368}
   otherConnectedParts:
   - {fileID: 92236867783749830}
   breakableState: 0
@@ -12250,14 +12249,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 18.941587
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 9213021782408992441}
   meshFilter: {fileID: 6147030470520003082}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &4655194582345447874
 MonoBehaviour:
@@ -12331,9 +12330,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 3778523702587628009}
   - {fileID: 40973691292326939}
   - {fileID: 4474046994235740601}
-  - {fileID: 3778523702587628009}
   otherConnectedParts:
   - {fileID: 3778523702587628009}
   breakableState: 0
@@ -12402,14 +12401,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 14.314057
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 913288883300312870}
   meshFilter: {fileID: 4096354622473059589}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8343800295793455412
 MonoBehaviour:
@@ -12489,8 +12488,8 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 2938783003935117370}
   - {fileID: 54423406619926628}
+  - {fileID: 2938783003935117370}
   otherConnectedParts:
   - {fileID: 92236867783749830}
   - {fileID: 2166904792743349517}
@@ -12560,14 +12559,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 10.833955
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4727524623106334294}
   meshFilter: {fileID: 4869316454731854760}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5830371286258732520
 MonoBehaviour:
@@ -12720,14 +12719,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 9.888336
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5656079503888200477}
   meshFilter: {fileID: 1554572632643552779}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &3058358199270706159
 MonoBehaviour:
@@ -12816,9 +12815,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 6434220020019984599}
   - {fileID: 7956554639937110285}
   - {fileID: 8663714916025912689}
+  - {fileID: 6434220020019984599}
   otherConnectedParts:
   - {fileID: 6434220020019984599}
   - {fileID: 7956554639937110285}
@@ -12889,14 +12888,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 16.424448
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 9136252087515362867}
   meshFilter: {fileID: 5363230693516665198}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &2993868620782312385 stripped
 GameObject:
@@ -13019,14 +13018,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 5.61624
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6793163816542425651}
   meshFilter: {fileID: 2633070271500598058}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &2996818692570179606 stripped
 MeshRenderer:
@@ -13269,14 +13268,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 6.7474017
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6464786585661488918}
   meshFilter: {fileID: 7804219256696452923}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &3299179895548637917 stripped
 GameObject:
@@ -13332,10 +13331,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 3651917252674304389}
+  - {fileID: 9104296287396794227}
   - {fileID: 9109193703964145893}
   - {fileID: 6942206973529517287}
-  - {fileID: 9104296287396794227}
-  - {fileID: 3651917252674304389}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1715.546, y: 2573.319}
@@ -13403,14 +13402,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 17.15546
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 9209369154232283945}
   meshFilter: {fileID: 3477828244562329946}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &3305261432808521999 stripped
 MeshFilter:
@@ -13469,10 +13468,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 7237649592791334300}
   - {fileID: 5143529702242597165}
-  - {fileID: 2451700510778715418}
   - {fileID: 6908200742152729449}
+  - {fileID: 2451700510778715418}
+  - {fileID: 7237649592791334300}
   otherConnectedParts:
   - {fileID: 2611417522569232689}
   - {fileID: 7237649592791334300}
@@ -13543,14 +13542,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 15.008092
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8499630379107794674}
   meshFilter: {fileID: 7490062896066063876}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &4465819572213050228
 MonoBehaviour:
@@ -13621,10 +13620,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 4512252430546434401}
-  - {fileID: 3228834847745476716}
   - {fileID: 4324402389178213097}
   - {fileID: 989129862519887501}
+  - {fileID: 4512252430546434401}
+  - {fileID: 3228834847745476716}
   otherConnectedParts:
   - {fileID: 3228834847745476716}
   - {fileID: 4512252430546434401}
@@ -13696,14 +13695,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 16.840748
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3575685699717102781}
   meshFilter: {fileID: 6446132008006903942}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &3373454505914526286 stripped
 MeshRenderer:
@@ -13850,14 +13849,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 7.9401054
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6878414339455774654}
   meshFilter: {fileID: 4485843668383043491}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &3463796688892174821 stripped
 MeshFilter:
@@ -13922,8 +13921,8 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 3228834847745476716}
   - {fileID: 4879380522416911853}
+  - {fileID: 3228834847745476716}
   otherConnectedParts:
   - {fileID: 3228834847745476716}
   - {fileID: 989129862519887501}
@@ -13994,14 +13993,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 11.573999
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4847370432805285042}
   meshFilter: {fileID: 2056572228671921668}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8073865124892470079
 MonoBehaviour:
@@ -14079,8 +14078,8 @@ MonoBehaviour:
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
   - {fileID: 3805225845491860453}
-  - {fileID: 7506000623594730574}
   - {fileID: 989129862519887501}
+  - {fileID: 7506000623594730574}
   otherConnectedParts:
   - {fileID: 3228834847745476716}
   - {fileID: 4324402389178213097}
@@ -14150,14 +14149,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 12.311348
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8543034404437427894}
   meshFilter: {fileID: 9180068559889253196}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &3565332586940970119 stripped
 MeshFilter:
@@ -14277,14 +14276,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 9.104276
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8357381101229109296}
   meshFilter: {fileID: 8570470996380617185}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &9100449765622053966
 MonoBehaviour:
@@ -14340,14 +14339,14 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 6408206062217556737}
-  - {fileID: 3228834847745476716}
-  - {fileID: 6364692330658007095}
-  - {fileID: 3805225845491860453}
   - {fileID: 5143529702242597165}
   - {fileID: 6071433371138241965}
-  - {fileID: 4879380522416911853}
+  - {fileID: 3805225845491860453}
   - {fileID: 989129862519887501}
+  - {fileID: 4879380522416911853}
+  - {fileID: 6364692330658007095}
+  - {fileID: 6408206062217556737}
+  - {fileID: 3228834847745476716}
   otherConnectedParts:
   - {fileID: 3228834847745476716}
   - {fileID: 6364692330658007095}
@@ -14420,14 +14419,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 22.057545
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1533058745375986797}
   meshFilter: {fileID: 3890885803791239943}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8476520626080298571
 MonoBehaviour:
@@ -14528,12 +14527,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 1097991609658222410}
-  - {fileID: 5325757901176578714}
-  - {fileID: 6434220020019984599}
+  - {fileID: 3930279726573970448}
   - {fileID: 8555066968396404626}
   - {fileID: 8529021361951642264}
-  - {fileID: 3930279726573970448}
+  - {fileID: 6434220020019984599}
+  - {fileID: 1097991609658222410}
+  - {fileID: 5325757901176578714}
   otherConnectedParts:
   - {fileID: 6434220020019984599}
   - {fileID: 1097991609658222410}
@@ -14607,14 +14606,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 21.289837
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4366956569891516855}
   meshFilter: {fileID: 370949746595689585}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &3678311990384404790 stripped
 MeshRenderer:
@@ -14667,8 +14666,8 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 5325757901176578714}
   - {fileID: 452839561740149071}
+  - {fileID: 5325757901176578714}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1176.0762, y: 1764.1141}
@@ -14736,14 +14735,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 11.760761
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 693898701944702936}
   meshFilter: {fileID: 8545099113587201332}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &7923465208088770520
 MonoBehaviour:
@@ -14881,14 +14880,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 6.1001463
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2301535684720795012}
   meshFilter: {fileID: 6463918214940303259}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &3696926225039222227 stripped
 GameObject:
@@ -14944,10 +14943,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 2611417522569232689}
-  - {fileID: 40973691292326939}
   - {fileID: 6908200742152729449}
   - {fileID: 7548612203259747909}
+  - {fileID: 40973691292326939}
+  - {fileID: 2611417522569232689}
   otherConnectedParts:
   - {fileID: 8939231003799261585}
   - {fileID: 2611417522569232689}
@@ -15021,14 +15020,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 14.11037
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8664372841485170442}
   meshFilter: {fileID: 1424686746845111654}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &3700792248286586347 stripped
 MeshRenderer:
@@ -15142,14 +15141,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 4.563806
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1613232344286552350}
   meshFilter: {fileID: 2691094290436851494}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &7265689829053376094
 MonoBehaviour:
@@ -15318,14 +15317,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 13.514487
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3073536961131541279}
   meshFilter: {fileID: 7801810795280748935}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &1956721492424270574
 MonoBehaviour:
@@ -15438,9 +15437,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 989129862519887501}
   - {fileID: 6408206062217556737}
   - {fileID: 7506000623594730574}
-  - {fileID: 989129862519887501}
   otherConnectedParts:
   - {fileID: 6408206062217556737}
   - {fileID: 989129862519887501}
@@ -15511,14 +15510,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 14.020901
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8350376392892871694}
   meshFilter: {fileID: 6366082521836807142}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &4005516131594946928 stripped
 GameObject:
@@ -15626,14 +15625,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 2.5881243
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1796424839146778935}
   meshFilter: {fileID: 58757596878155910}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &6679616968950256933
 MonoBehaviour:
@@ -15716,14 +15715,14 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 7237649592791334300}
-  - {fileID: 2611417522569232689}
-  - {fileID: 2938783003935117370}
-  - {fileID: 371820359564430556}
-  - {fileID: 92236867783749830}
   - {fileID: 2451700510778715418}
-  - {fileID: 3208071248746664327}
   - {fileID: 8157960539385025368}
+  - {fileID: 7237649592791334300}
+  - {fileID: 3208071248746664327}
+  - {fileID: 2611417522569232689}
+  - {fileID: 371820359564430556}
+  - {fileID: 2938783003935117370}
+  - {fileID: 92236867783749830}
   otherConnectedParts:
   - {fileID: 2938783003935117370}
   - {fileID: 92236867783749830}
@@ -15794,14 +15793,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 19.097452
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3700792248286586347}
   meshFilter: {fileID: 1901012499557621855}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &4063640854247343329 stripped
 MeshFilter:
@@ -15915,14 +15914,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 9.010089
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 107931968718279007}
   meshFilter: {fileID: 5331280252991522719}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5909201989563628143
 MonoBehaviour:
@@ -16002,13 +16001,13 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 8939231003799261585}
-  - {fileID: 1287421637430596199}
-  - {fileID: 4474046994235740601}
   - {fileID: 6908200742152729449}
-  - {fileID: 3778523702587628009}
   - {fileID: 7548612203259747909}
+  - {fileID: 3778523702587628009}
   - {fileID: 5896653940849429348}
+  - {fileID: 1287421637430596199}
+  - {fileID: 8939231003799261585}
+  - {fileID: 4474046994235740601}
   otherConnectedParts:
   - {fileID: 3415582578659564839}
   - {fileID: 7762348455872454067}
@@ -16078,14 +16077,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 19.660385
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2160543480710034090}
   meshFilter: {fileID: 3472953809803191378}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &155589067167195296
 MonoBehaviour:
@@ -16280,14 +16279,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 0.018151851
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4719034931958900829}
   meshFilter: {fileID: 5288943626835748196}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5820337402024092627
 MonoBehaviour:
@@ -16430,10 +16429,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 989129862519887501}
+  - {fileID: 4879380522416911853}
   - {fileID: 4512252430546434401}
   - {fileID: 3228834847745476716}
-  - {fileID: 4879380522416911853}
-  - {fileID: 989129862519887501}
   otherConnectedParts:
   - {fileID: 3228834847745476716}
   breakableState: 0
@@ -16502,14 +16501,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 15.005222
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5437257650272333614}
   meshFilter: {fileID: 5334633395401136774}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &4595025332907669373 stripped
 MeshRenderer:
@@ -16681,14 +16680,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 17.16031
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6843314316585589451}
   meshFilter: {fileID: 1326975285665819366}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &1890333423790323050
 MonoBehaviour:
@@ -16819,8 +16818,8 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 248891995970817058}
   - {fileID: 3228834847745476716}
+  - {fileID: 248891995970817058}
   - {fileID: 952285867036419544}
   otherConnectedParts:
   - {fileID: 7911607097263341876}
@@ -16890,14 +16889,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 27.207766
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4848949301850571351}
   meshFilter: {fileID: 7713809606396333812}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &4847370432805285042 stripped
 MeshRenderer:
@@ -16983,11 +16982,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 2752566471466105893}
-  - {fileID: 6434220020019984599}
+  - {fileID: 8555066968396404626}
   - {fileID: 4079688939489850580}
   - {fileID: 2951904663280759401}
-  - {fileID: 8555066968396404626}
+  - {fileID: 6434220020019984599}
+  - {fileID: 2752566471466105893}
   otherConnectedParts:
   - {fileID: 6434220020019984599}
   - {fileID: 2752566471466105893}
@@ -17061,14 +17060,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 16.42438
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3112883650576690668}
   meshFilter: {fileID: 675929874802853490}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &4908928907750640916 stripped
 MeshFilter:
@@ -17201,14 +17200,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 11.542873
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2776426346651202135}
   meshFilter: {fileID: 4094678906417981863}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &1939633368919178648
 MonoBehaviour:
@@ -17346,14 +17345,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 6.1004186
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2292620707907272324}
   meshFilter: {fileID: 4287916412218765386}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &5034112522244293831 stripped
 MeshFilter:
@@ -17424,8 +17423,8 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 4079688939489850580}
   - {fileID: 7956554639937110285}
+  - {fileID: 4079688939489850580}
   otherConnectedParts:
   - {fileID: 248891995970817058}
   - {fileID: 7911607097263341876}
@@ -17498,14 +17497,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 13.290782
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1719091833212932736}
   meshFilter: {fileID: 8353436330552138800}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5789056594205052152
 MonoBehaviour:
@@ -17615,10 +17614,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 1097991609658222410}
-  - {fileID: 6434220020019984599}
   - {fileID: 8555066968396404626}
   - {fileID: 8663714916025912689}
+  - {fileID: 6434220020019984599}
+  - {fileID: 1097991609658222410}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1109.111, y: 1663.6664}
@@ -17686,14 +17685,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 11.091109
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3678311990384404790}
   meshFilter: {fileID: 4862192171220295680}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &4505687104025752594
 MonoBehaviour:
@@ -17770,11 +17769,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 2992463245359860191}
-  - {fileID: 5325757901176578714}
-  - {fileID: 8663714916025912689}
-  - {fileID: 215387430913746149}
   - {fileID: 5640847991620776903}
+  - {fileID: 215387430913746149}
+  - {fileID: 8663714916025912689}
+  - {fileID: 5325757901176578714}
+  - {fileID: 2992463245359860191}
   otherConnectedParts:
   - {fileID: 2992463245359860191}
   - {fileID: 3930279726573970448}
@@ -17844,14 +17843,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 19.143139
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 599962535875027184}
   meshFilter: {fileID: 3638164170520698519}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &5288560694558266809 stripped
 MeshFilter:
@@ -17979,10 +17978,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 9109193703964145893}
-  - {fileID: 5658090432644969920}
-  - {fileID: 3667487919527223957}
   - {fileID: 3651917252674304389}
+  - {fileID: 3667487919527223957}
+  - {fileID: 5658090432644969920}
+  - {fileID: 9109193703964145893}
   otherConnectedParts:
   - {fileID: 5658090432644969920}
   - {fileID: 9109193703964145893}
@@ -18054,14 +18053,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 13.606775
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1110919078519347747}
   meshFilter: {fileID: 7249593264818856777}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &5402144306421819418 stripped
 GameObject:
@@ -18117,11 +18116,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 9109193703964145893}
-  - {fileID: 4392270868034393889}
-  - {fileID: 5658090432644969920}
-  - {fileID: 5114945731822534642}
   - {fileID: 3651917252674304389}
+  - {fileID: 5114945731822534642}
+  - {fileID: 5658090432644969920}
+  - {fileID: 4392270868034393889}
+  - {fileID: 9109193703964145893}
   otherConnectedParts:
   - {fileID: 5658090432644969920}
   - {fileID: 4392270868034393889}
@@ -18193,14 +18192,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 13.171235
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 440028596898183577}
   meshFilter: {fileID: 3908161801518489081}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &5411584531048271489 stripped
 MeshCollider:
@@ -18286,13 +18285,13 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 4512252430546434401}
-  - {fileID: 6408206062217556737}
-  - {fileID: 9161296684294060614}
-  - {fileID: 7506000623594730574}
-  - {fileID: 4879380522416911853}
   - {fileID: 4324402389178213097}
   - {fileID: 989129862519887501}
+  - {fileID: 9161296684294060614}
+  - {fileID: 4879380522416911853}
+  - {fileID: 4512252430546434401}
+  - {fileID: 6408206062217556737}
+  - {fileID: 7506000623594730574}
   otherConnectedParts:
   - {fileID: 3911961840589856886}
   breakableState: 0
@@ -18361,14 +18360,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 22.883276
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1788398841775993515}
   meshFilter: {fileID: 3681274272096924048}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &5486385228529833405 stripped
 GameObject:
@@ -18479,14 +18478,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 12.068859
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6966773124889038657}
   meshFilter: {fileID: 518582350164636677}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &7896957016803752726
 MonoBehaviour:
@@ -18563,11 +18562,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 4392270868034393889}
+  - {fileID: 3651917252674304389}
+  - {fileID: 8157960539385025368}
   - {fileID: 3667487919527223957}
   - {fileID: 5114945731822534642}
-  - {fileID: 8157960539385025368}
-  - {fileID: 3651917252674304389}
+  - {fileID: 4392270868034393889}
   otherConnectedParts:
   - {fileID: 3346178984811108852}
   - {fileID: 4392270868034393889}
@@ -18637,14 +18636,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 15.552216
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1128293128936113563}
   meshFilter: {fileID: 7989845188182295778}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &5516144582734410979 stripped
 MeshFilter:
@@ -18703,12 +18702,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 425866970223642951}
-  - {fileID: 7237649592791334300}
   - {fileID: 6071433371138241965}
-  - {fileID: 2451700510778715418}
   - {fileID: 6908200742152729449}
+  - {fileID: 2451700510778715418}
+  - {fileID: 7237649592791334300}
   - {fileID: 3208071248746664327}
+  - {fileID: 425866970223642951}
   otherConnectedParts:
   - {fileID: 7237649592791334300}
   - {fileID: 425866970223642951}
@@ -18783,14 +18782,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 19.660673
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2314485320539183260}
   meshFilter: {fileID: 6117135322755805537}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5562316784205722440
 MonoBehaviour:
@@ -18852,11 +18851,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 9051583583845381451}
-  - {fileID: 6364692330658007095}
   - {fileID: 6071433371138241965}
   - {fileID: 2451700510778715418}
   - {fileID: 2489181021053704702}
+  - {fileID: 9051583583845381451}
+  - {fileID: 6364692330658007095}
   otherConnectedParts:
   - {fileID: 9051583583845381451}
   - {fileID: 6364692330658007095}
@@ -18928,14 +18927,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 19.337837
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3333725656733975315}
   meshFilter: {fileID: 4072420411012338679}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &7573283567500607899
 MonoBehaviour:
@@ -19085,14 +19084,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 9.065943
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8530702701953608230}
   meshFilter: {fileID: 5516144582734410979}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &5683984331576052218 stripped
 MeshRenderer:
@@ -19160,10 +19159,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 1097991609658222410}
-  - {fileID: 5066785321447759560}
   - {fileID: 452839561740149071}
   - {fileID: 5640847991620776903}
+  - {fileID: 1097991609658222410}
+  - {fileID: 5066785321447759560}
   otherConnectedParts:
   - {fileID: 5066785321447759560}
   - {fileID: 8529021361951642264}
@@ -19234,14 +19233,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 14.665868
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3079012859920209855}
   meshFilter: {fileID: 4499971721928911153}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &5728249373634079331 stripped
 MeshRenderer:
@@ -19303,11 +19302,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 5366261655296593346}
-  - {fileID: 3456954635976197940}
-  - {fileID: 8590748844524511329}
   - {fileID: 8294520783408055611}
+  - {fileID: 8590748844524511329}
   - {fileID: 6007898105634752906}
+  - {fileID: 3456954635976197940}
+  - {fileID: 5366261655296593346}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 2126.1177, y: 3189.1765}
@@ -19375,14 +19374,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 21.261177
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1767125858231140011}
   meshFilter: {fileID: 9049852921310062261}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &5778186583022128373 stripped
 GameObject:
@@ -19438,9 +19437,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 4392270868034393889}
   - {fileID: 3667487919527223957}
   - {fileID: 5114945731822534642}
+  - {fileID: 4392270868034393889}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1452.8695, y: 2179.3042}
@@ -19508,14 +19507,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 14.528695
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 145181020869954855}
   meshFilter: {fileID: 3097985118882427362}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &5788109718386731797 stripped
 MeshFilter:
@@ -19589,12 +19588,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 5366261655296593346}
-  - {fileID: 9051583583845381451}
-  - {fileID: 2938783003935117370}
   - {fileID: 343041179824834222}
   - {fileID: 2451700510778715418}
   - {fileID: 54423406619926628}
+  - {fileID: 9051583583845381451}
+  - {fileID: 2938783003935117370}
+  - {fileID: 5366261655296593346}
   otherConnectedParts:
   - {fileID: 2938783003935117370}
   - {fileID: 9051583583845381451}
@@ -19667,14 +19666,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 18.474678
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6828982589259697748}
   meshFilter: {fileID: 2221652936939709986}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &5860467871986696481 stripped
 MeshCollider:
@@ -19821,14 +19820,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 3.8768425
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 7947764867851703216}
   meshFilter: {fileID: 5317940336804255421}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &5916111819304801072 stripped
 MeshFilter:
@@ -19972,14 +19971,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 12.669831
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 9101888577037622414}
   meshFilter: {fileID: 7308621343382318861}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &5995784092418564338 stripped
 MeshFilter:
@@ -20108,14 +20107,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 7.263181
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2554980427902123043}
   meshFilter: {fileID: 3866464667754388825}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &6028662223684973064 stripped
 GameObject:
@@ -20238,14 +20237,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 9.670171
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8243803579529492249}
   meshFilter: {fileID: 7813461531815773623}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &6035342870047259143 stripped
 GameObject:
@@ -20368,14 +20367,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 6.1003947
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6987417890585392896}
   meshFilter: {fileID: 2743490475702569309}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &6047690458339132895 stripped
 GameObject:
@@ -20431,8 +20430,8 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 7455795382102283016}
   - {fileID: 452839561740149071}
+  - {fileID: 7455795382102283016}
   otherConnectedParts:
   - {fileID: 7455795382102283016}
   breakableState: 0
@@ -20501,14 +20500,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 10.049818
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1152069763943267366}
   meshFilter: {fileID: 8448602810919782398}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &6063395407099538451 stripped
 MeshCollider:
@@ -20645,14 +20644,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 10.494542
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 231867234596361474}
   meshFilter: {fileID: 2829403776692140267}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &6093240893313408038 stripped
 MeshCollider:
@@ -20835,14 +20834,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 6.0998144
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 7066383553579902352}
   meshFilter: {fileID: 4399609269805537557}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &6190673571806942774 stripped
 MeshRenderer:
@@ -20962,14 +20961,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 9.871291
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1451337371562085419}
   meshFilter: {fileID: 1490879012652042270}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &4605998785367290743
 MonoBehaviour:
@@ -21112,14 +21111,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 16.935781
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6998405755103322508}
   meshFilter: {fileID: 5895271714817082615}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8390275543610179427
 MonoBehaviour:
@@ -21314,14 +21313,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 9.820904
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4810167665495579623}
   meshFilter: {fileID: 1306559661271536628}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8005401262329844099
 MonoBehaviour:
@@ -21471,14 +21470,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 11.521497
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4326516464038262920}
   meshFilter: {fileID: 8743983420265986741}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &6920283925736065916
 MonoBehaviour:
@@ -21549,8 +21548,8 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 7131179292189032475}
   - {fileID: 4474046994235740601}
+  - {fileID: 7131179292189032475}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1157.5426, y: 1736.314}
@@ -21618,14 +21617,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 11.575426
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 7814126963274665018}
   meshFilter: {fileID: 3056858757505524716}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &6793163816542425651 stripped
 MeshRenderer:
@@ -21772,14 +21771,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 11.218204
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5050024312976587445}
   meshFilter: {fileID: 8723026533987920204}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &6814270832268260711 stripped
 GameObject:
@@ -21887,14 +21886,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 6.428425
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5460662961341836835}
   meshFilter: {fileID: 3565332586940970119}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &6564914525385803338
 MonoBehaviour:
@@ -22044,14 +22043,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 9.396933
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2730850766553511495}
   meshFilter: {fileID: 1958054063651216645}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &6878414339455774654 stripped
 MeshRenderer:
@@ -22258,14 +22257,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 9.078004
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5235813623852534522}
   meshFilter: {fileID: 2843983576675335659}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &7177676565521691714 stripped
 MeshCollider:
@@ -22388,14 +22387,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 14.263077
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3384303090659974782}
   meshFilter: {fileID: 8132683732283926862}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8843358159420624612
 MonoBehaviour:
@@ -22533,14 +22532,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 6.0999694
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1082707538573043512}
   meshFilter: {fileID: 3417976498636167448}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &7222672542891900874 stripped
 GameObject:
@@ -22654,14 +22653,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 10.482797
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4595025332907669373}
   meshFilter: {fileID: 8643432172781614064}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &3083688407344047747
 MonoBehaviour:
@@ -22797,14 +22796,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 17.355152
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5180041778867386664}
   meshFilter: {fileID: 2366869363343203619}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5781333532898152244
 MonoBehaviour:
@@ -22939,14 +22938,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 1.5786225
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2142335035771080632}
   meshFilter: {fileID: 912794561535164042}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &7713773527105615237
 MonoBehaviour:
@@ -23084,14 +23083,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 6.1000395
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3614217860064052474}
   meshFilter: {fileID: 5927940196207059615}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &7308621343382318861 stripped
 MeshFilter:
@@ -23138,13 +23137,13 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 7237649592791334300}
-  - {fileID: 92236867783749830}
-  - {fileID: 2166904792743349517}
-  - {fileID: 3208071248746664327}
-  - {fileID: 7521973058395953645}
   - {fileID: 7548612203259747909}
   - {fileID: 5896653940849429348}
+  - {fileID: 2166904792743349517}
+  - {fileID: 7237649592791334300}
+  - {fileID: 3208071248746664327}
+  - {fileID: 7521973058395953645}
+  - {fileID: 92236867783749830}
   otherConnectedParts:
   - {fileID: 92236867783749830}
   breakableState: 0
@@ -23213,14 +23212,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 20.259281
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3373454505914526286}
   meshFilter: {fileID: 737713089892254656}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5849007433252483428
 MonoBehaviour:
@@ -23294,12 +23293,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 7237649592791334300}
   - {fileID: 5143529702242597165}
   - {fileID: 343041179824834222}
+  - {fileID: 6908200742152729449}
   - {fileID: 2489181021053704702}
   - {fileID: 2166904792743349517}
-  - {fileID: 6908200742152729449}
+  - {fileID: 7237649592791334300}
   - {fileID: 3208071248746664327}
   otherConnectedParts:
   - {fileID: 7237649592791334300}
@@ -23371,14 +23370,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 19.170332
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2996818692570179606}
   meshFilter: {fileID: 1321443012244605295}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &7843189521901573864
 MonoBehaviour:
@@ -23549,14 +23548,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 12.339309
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4370059385295576201}
   meshFilter: {fileID: 656186391741946022}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &7542880204975709526 stripped
 MeshRenderer:
@@ -23631,8 +23630,8 @@ MonoBehaviour:
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
   - {fileID: 5524257750948768735}
-  - {fileID: 3415582578659564839}
   - {fileID: 4474046994235740601}
+  - {fileID: 3415582578659564839}
   otherConnectedParts:
   - {fileID: 6945614642652917101}
   - {fileID: 5667504053247954336}
@@ -23702,14 +23701,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 18.251831
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 9068290695456883717}
   meshFilter: {fileID: 640645286859596949}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &7598333520046316368 stripped
 GameObject:
@@ -23765,10 +23764,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 371820359564430556}
   - {fileID: 2489181021053704702}
-  - {fileID: 54423406619926628}
   - {fileID: 2166904792743349517}
+  - {fileID: 54423406619926628}
+  - {fileID: 371820359564430556}
   otherConnectedParts:
   - {fileID: 371820359564430556}
   breakableState: 0
@@ -23837,14 +23836,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 17.583113
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 7228298931150858304}
   meshFilter: {fileID: 3463796688892174821}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &7605771709036979630 stripped
 GameObject:
@@ -23967,14 +23966,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 6.784013
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 832054003768400861}
   meshFilter: {fileID: 4063640854247343329}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &7622059748680862339 stripped
 MeshCollider:
@@ -24088,14 +24087,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 16.591808
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8168119364659873154}
   meshFilter: {fileID: 8153948660075684574}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &6330833190005701004
 MonoBehaviour:
@@ -24166,9 +24165,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 7548612203259747909}
   - {fileID: 3665726400187976563}
   - {fileID: 7521973058395953645}
-  - {fileID: 7548612203259747909}
   otherConnectedParts:
   - {fileID: 3930279726573970448}
   breakableState: 0
@@ -24237,14 +24236,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 23.613491
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1324974953484961591}
   meshFilter: {fileID: 5976404634177233783}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &7710701439525826285 stripped
 GameObject:
@@ -24285,12 +24284,12 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 1543610065088716264}
-  - {fileID: 40973691292326939}
   - {fileID: 1287421637430596199}
-  - {fileID: 3415582578659564839}
-  - {fileID: 4474046994235740601}
+  - {fileID: 40973691292326939}
   - {fileID: 7762348455872454067}
+  - {fileID: 4474046994235740601}
+  - {fileID: 3415582578659564839}
+  - {fileID: 1543610065088716264}
   otherConnectedParts:
   - {fileID: 40973691292326939}
   - {fileID: 6945614642652917101}
@@ -24360,14 +24359,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 27.046637
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2244664002296534629}
   meshFilter: {fileID: 1592484554824709694}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5722088314539560557
 MonoBehaviour:
@@ -24541,14 +24540,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 9.782956
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5648224213682459562}
   meshFilter: {fileID: 2064889948253798262}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &7800959038150914350 stripped
 MeshCollider:
@@ -24643,11 +24642,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 425866970223642951}
-  - {fileID: 7237649592791334300}
   - {fileID: 5143529702242597165}
-  - {fileID: 3208071248746664327}
   - {fileID: 5896653940849429348}
+  - {fileID: 7237649592791334300}
+  - {fileID: 3208071248746664327}
+  - {fileID: 425866970223642951}
   otherConnectedParts:
   - {fileID: 40973691292326939}
   - {fileID: 7237649592791334300}
@@ -24720,14 +24719,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 14.854224
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5686640277407406641}
   meshFilter: {fileID: 8063839732542739691}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8629980648346987073
 MonoBehaviour:
@@ -24804,11 +24803,11 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 2417032361940656548}
-  - {fileID: 2611417522569232689}
-  - {fileID: 3665726400187976563}
   - {fileID: 7548612203259747909}
   - {fileID: 5896653940849429348}
+  - {fileID: 2417032361940656548}
+  - {fileID: 3665726400187976563}
+  - {fileID: 2611417522569232689}
   otherConnectedParts:
   - {fileID: 2417032361940656548}
   - {fileID: 2611417522569232689}
@@ -24879,14 +24878,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 17.926905
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2018203812223505689}
   meshFilter: {fileID: 8061043157949217582}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &7989845188182295778 stripped
 MeshFilter:
@@ -25025,14 +25024,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 16.50624
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 514895213661892010}
   meshFilter: {fileID: 2913784790553974244}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &8061043157949217582 stripped
 MeshFilter:
@@ -25223,14 +25222,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 13.673875
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4783899746091678057}
   meshFilter: {fileID: 4497464431626370051}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &8241459350398624580 stripped
 MeshCollider:
@@ -25377,14 +25376,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 7.065602
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 2939632917219966665}
   meshFilter: {fileID: 4006159298729248769}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &8312348683987586710 stripped
 MeshFilter:
@@ -25458,7 +25457,6 @@ MonoBehaviour:
   - {fileID: 2965211034836798921}
   - {fileID: 2951904663280759401}
   - {fileID: 9209415905412491900}
-  - {fileID: 4284535985476114454}
   breakableState: 0
   breakingForce: {x: 1395.4587, y: 2093.188}
   forceTransfer: 0.5
@@ -25525,14 +25523,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 13.954587
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 7127120172182054718}
   meshFilter: {fileID: 7552675143508016847}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!23 &8343849355216238350 stripped
 MeshRenderer:
@@ -25666,14 +25664,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 11.067686
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1014233110732481620}
   meshFilter: {fileID: 2883581832235563557}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &4309874223988341423
 MonoBehaviour:
@@ -25871,14 +25869,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 6.4888268
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6234903435004868640}
   meshFilter: {fileID: 1885065609769388448}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!33 &8570470996380617185 stripped
 MeshFilter:
@@ -25925,13 +25923,13 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
+  - {fileID: 4324402389178213097}
+  - {fileID: 3805225845491860453}
+  - {fileID: 4879380522416911853}
   - {fileID: 4512252430546434401}
   - {fileID: 6408206062217556737}
-  - {fileID: 3228834847745476716}
-  - {fileID: 3805225845491860453}
   - {fileID: 7506000623594730574}
-  - {fileID: 4879380522416911853}
-  - {fileID: 4324402389178213097}
+  - {fileID: 3228834847745476716}
   otherConnectedParts:
   - {fileID: 6408206062217556737}
   - {fileID: 3228834847745476716}
@@ -26002,14 +26000,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 17.37635
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 9076801831605124740}
   meshFilter: {fileID: 3305261432808521999}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &2544351005162757327
 MonoBehaviour:
@@ -26140,14 +26138,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 12.539516
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 7233344464544834108}
   meshFilter: {fileID: 8631192803152999300}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &8981908067357840930
 MonoBehaviour:
@@ -26278,14 +26276,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 13.614024
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1412611835844349763}
   meshFilter: {fileID: 5599529885418692715}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &9090539256928851112
 MonoBehaviour:
@@ -26444,14 +26442,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 5.63295
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 1310426262557232159}
   meshFilter: {fileID: 5788109718386731797}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &6809725957536147003
 MonoBehaviour:
@@ -26595,14 +26593,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 6.100296
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 3950086302308852298}
   meshFilter: {fileID: 4908928907750640916}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &8714879959142423472 stripped
 MeshCollider:
@@ -26725,14 +26723,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 14.0797615
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5157364796560176227}
   meshFilter: {fileID: 1239814824922551780}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &486523848672322321
 MonoBehaviour:
@@ -26812,8 +26810,8 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 3346178984811108852}
   - {fileID: 3651917252674304389}
+  - {fileID: 3346178984811108852}
   otherConnectedParts:
   - {fileID: 3346178984811108852}
   - {fileID: 2992463245359860191}
@@ -26883,14 +26881,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 18.388247
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 4764160984372425393}
   meshFilter: {fileID: 5222933242219919592}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &9156083940239247155
 MonoBehaviour:
@@ -27034,14 +27032,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 3.321829
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 508623642695645300}
   meshFilter: {fileID: 4037282603192109252}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &8855868638702647634 stripped
 MeshCollider:
@@ -27109,8 +27107,8 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 7131179292189032475}
   - {fileID: 4474046994235740601}
+  - {fileID: 7131179292189032475}
   otherConnectedParts:
   - {fileID: 7131179292189032475}
   breakableState: 0
@@ -27179,14 +27177,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 15.549341
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 5450380280583037919}
   meshFilter: {fileID: 4915347413300301371}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &8941009535861829701 stripped
 GameObject:
@@ -27312,14 +27310,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 10.038333
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6133051441808235504}
   meshFilter: {fileID: 7019078565969572010}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &9008435323035434163 stripped
 GameObject:
@@ -27442,14 +27440,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 8.554363
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8599008429247838361}
   meshFilter: {fileID: 3797248220533374631}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1 &9046489656959550380 stripped
 GameObject:
@@ -27490,10 +27488,10 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 9051583583845381451}
-  - {fileID: 2489181021053704702}
   - {fileID: 8294520783408055611}
+  - {fileID: 2489181021053704702}
   - {fileID: 54423406619926628}
+  - {fileID: 9051583583845381451}
   otherConnectedParts:
   - {fileID: 9051583583845381451}
   - {fileID: 8704220032758035160}
@@ -27563,14 +27561,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 20.230766
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 9180874206426556754}
   meshFilter: {fileID: 795033107903475598}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!114 &5664255923191841170
 MonoBehaviour:
@@ -27659,9 +27657,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 7131179292189032475}
-  - {fileID: 4474046994235740601}
   - {fileID: 3778523702587628009}
+  - {fileID: 4474046994235740601}
+  - {fileID: 7131179292189032475}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 1244.6987, y: 1867.0481}
@@ -27729,14 +27727,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 12.446987
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 8617497939662502569}
   meshFilter: {fileID: 4730274527290018447}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!64 &9087296634865588080 stripped
 MeshCollider:
@@ -27864,9 +27862,9 @@ MonoBehaviour:
   physicMaterial: {fileID: 13400000, guid: e06c160b837a4cb4b9ce937493341920, type: 2}
   breakableStructureController: {fileID: 4284535985582280800}
   connectedParts:
-  - {fileID: 5366261655296593346}
   - {fileID: 343041179824834222}
   - {fileID: 2489181021053704702}
+  - {fileID: 5366261655296593346}
   otherConnectedParts: []
   breakableState: 0
   breakingForce: {x: 2006.8876, y: 3010.3315}
@@ -27934,14 +27932,14 @@ MonoBehaviour:
   despawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  despawnTime: 1
+  despawnTime: 0.5
   forceShowConnection: 0
   meshSize: 20.068876
   minimumPartSize: 10
   finalBrokeForce: 0
   renderer: {fileID: 6190673571806942774}
   meshFilter: {fileID: 2443560442134903262}
-  parent: {fileID: 4284535985582280830}
+  parent: {fileID: 4284535985476114453}
   collectiveParent: {fileID: 4284535985476114454}
 --- !u!1001 &4718426687602751980
 PrefabInstance:

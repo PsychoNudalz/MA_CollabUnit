@@ -128,7 +128,7 @@ public class BreakableCollective : BreakableComponent
         FlipShell(true);
         foreach (BreakableComponent breakableComponent in tooSmallComponents)
         {
-            breakableComponent.Despawn();
+            breakableComponent.Despawn(false);
         }
     }
 
@@ -313,11 +313,11 @@ public class BreakableCollective : BreakableComponent
         return base.ToString();
     }
 
-    public override void Despawn()
+    public override void Despawn(bool instant)
     {
         foreach (BreakableComponent breakableComponent in breakableComponents)
         {
-            breakableComponent.Despawn();
+            breakableComponent.Despawn(instant);
         }
     }
 

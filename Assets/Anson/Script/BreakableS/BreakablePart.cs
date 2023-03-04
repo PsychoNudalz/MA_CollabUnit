@@ -295,7 +295,7 @@ public class BreakablePart : BreakableComponent
         if (meshSize < minimumPartSize)
         {
             gameObject.SetActive(false);
-            Despawn();
+            Despawn(false);
             return;
         }
         else
@@ -502,7 +502,7 @@ public class BreakablePart : BreakableComponent
 
 
     //******Despawning
-    public override void Despawn()
+    public override void Despawn(bool instant)
     {
         try
         {
@@ -514,8 +514,17 @@ public class BreakablePart : BreakableComponent
             selfRB.isKinematic = true;
             breakableState = BreakableState.Despawn;
             despawnEvent.Invoke();
-            LeanTween.scale(gameObject, Vector3.zero, despawnTime);
-            Destroy(gameObject, despawnTime + 1f);
+            if (instant)
+            {
+                Destroy(gameObject);
+
+            }
+            else
+            {
+                LeanTween.scale(gameObject, Vector3.zero, despawnTime);
+                Destroy(gameObject, despawnTime + .1f);
+            }
+
             if (isDebug)
             {
                 rendererMaterial.color = Color.yellow;

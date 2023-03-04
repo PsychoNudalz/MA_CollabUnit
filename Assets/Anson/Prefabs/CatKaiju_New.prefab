@@ -1298,7 +1298,7 @@ MonoBehaviour:
   camera: {fileID: 0}
   quadrupedMovementController: {fileID: 2948913357585096109}
   originalCinemachine: {fileID: 1408494242491426252}
-  aimCinemachine: {fileID: 1412759164696969051}
+  aimCinemachine: {fileID: 0}
   aimSpeed: {x: 10, y: 10}
   cameraCastRange: 1000
   originalFOV: 0
@@ -2292,7 +2292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchGO: {fileID: 4831523760799784081, guid: 70f9c89f8ae270649823fc1bd49fb745,
     type: 3}
-  speed: 500
+  speed: 200
   fireOnAwake: 0
   fireDelay: 0
 --- !u!1 &4634410472395598984
@@ -5328,12 +5328,12 @@ PrefabInstance:
     - target: {fileID: 3676416217061960640, guid: 6a7fb89b719c6584f8e2454126fc30f1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.0000000010753978
+      value: 0.0000000010753978
       objectReference: {fileID: 0}
     - target: {fileID: 3676416217061960640, guid: 6a7fb89b719c6584f8e2454126fc30f1,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 1.645358e-12
+      value: -1.645358e-12
       objectReference: {fileID: 0}
     - target: {fileID: 3676416217061960640, guid: 6a7fb89b719c6584f8e2454126fc30f1,
         type: 3}
@@ -5453,12 +5453,12 @@ PrefabInstance:
     - target: {fileID: 6527627644092689017, guid: 6a7fb89b719c6584f8e2454126fc30f1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -5.3769883e-10
+      value: 5.3769883e-10
       objectReference: {fileID: 0}
     - target: {fileID: 6527627644092689017, guid: 6a7fb89b719c6584f8e2454126fc30f1,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 8.226772e-13
+      value: -8.226772e-13
       objectReference: {fileID: 0}
     - target: {fileID: 6527627644092689017, guid: 6a7fb89b719c6584f8e2454126fc30f1,
         type: 3}
@@ -5483,12 +5483,12 @@ PrefabInstance:
     - target: {fileID: 8765705395060225947, guid: 6a7fb89b719c6584f8e2454126fc30f1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.000000017203055
+      value: -0.000000017203051
       objectReference: {fileID: 0}
     - target: {fileID: 8765705395060225947, guid: 6a7fb89b719c6584f8e2454126fc30f1,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -3.384699e-10
+      value: 3.3846975e-10
       objectReference: {fileID: 0}
     - target: {fileID: 8765705395060225947, guid: 6a7fb89b719c6584f8e2454126fc30f1,
         type: 3}
@@ -5498,7 +5498,7 @@ PrefabInstance:
     - target: {fileID: 8765705395060225947, guid: 6a7fb89b719c6584f8e2454126fc30f1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.019671181
+      value: 0.01967118
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a7fb89b719c6584f8e2454126fc30f1, type: 3}
@@ -5518,18 +5518,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 319d2fe34a804e245819465c9505ea59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1412759164696969051 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3681019684974558774, guid: 6a7fb89b719c6584f8e2454126fc30f1,
-    type: 3}
-  m_PrefabInstance: {fileID: 2346018198443278701}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2795304350833597056
