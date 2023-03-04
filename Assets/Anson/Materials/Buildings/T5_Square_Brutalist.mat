@@ -99,7 +99,7 @@ Material:
     - _OutlineDepthSensitivity: 1
     - _OutlineNormalsSensitivity: 1
     - _OutlineThickness: 1
-    - _PixelTiling: 16
+    - _PixelTiling: 100
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RedAsAlpha: 0
@@ -108,14 +108,16 @@ Material:
     - _RedAsAlpha_3: 0
     - _RedAsAlpha_4: 1
     - _Smoothness: 0
-    - _UsePixel: 0
+    - _UsePixel: 1
+    - _UseToon: 1
     - _Use_5Tex: 1
     m_Colors:
     - _MainColor: {r: 1, g: 1, b: 1, a: 0}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
-    - _SecondaryColour: {r: 1, g: 1, b: 1, a: 0}
+    - _Remap: {r: 0.5, g: 1, b: 0, a: 0}
+    - _SecondaryColour: {r: 0, g: 0, b: 0, a: 0}
     - _SpecularColor: {r: 0, g: 0, b: 0, a: 0}
-    - _Texture_Colour: {r: 0, g: 1.9999998, b: 1.9685862, a: 0}
+    - _Texture_Colour: {r: 0, g: 2.9960785, b: 2.9490197, a: 0}
     - _Texture_Colour_1: {r: 0.081999995, g: 0.081999995, b: 0.081999995, a: 1}
     - _Texture_Colour_2: {r: 0.038, g: 0.038, b: 0.038, a: 0}
     - _Texture_Colour_3: {r: 0.012920754, g: 0.042601943, b: 0.064, a: 0}

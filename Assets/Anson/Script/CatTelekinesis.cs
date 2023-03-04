@@ -147,8 +147,12 @@ public class CatTelekinesis : MonoBehaviour
             case TelekinesisState.Aim:
                 break;
             case TelekinesisState.Pull:
-                // FindPiece(camera.forward, camera.position);
-                FindPiece_AOE();
+                if (parts.Count < maxPartsSize)
+                {
+                    FindPiece(camera.forward, camera.position);
+                    FindPiece_AOE();
+                }
+                
                 if (parts.Count > 0)
                 {
                     MovePieces();
@@ -184,10 +188,7 @@ public class CatTelekinesis : MonoBehaviour
         switch (telekinesisState)
         {
             case TelekinesisState.Idle:
-                telekinesisState = TelekinesisState.Pull;
-                OnAimEvent.Invoke();
-                OnPullEvent.Invoke();
-                sfx_tele_Pull.Play();
+                OnTele_Pull();
                 break;
             case TelekinesisState.Aim:
                 break;
@@ -200,6 +201,7 @@ public class CatTelekinesis : MonoBehaviour
                 throw new ArgumentOutOfRangeException();
         }
     }
+
 
     public void OnTelekinesis_Release(Vector3 dir, Vector3 castPoint)
     {
@@ -214,8 +216,7 @@ public class CatTelekinesis : MonoBehaviour
                 break;
             case TelekinesisState.Pull:
                 OnTele_Shoot(dir);
-                sfx_tele_Pull.Stop();
-                sfx_tele_Shoot.PlayF();
+
 
                 break;
             case TelekinesisState.Shoot:
@@ -229,12 +230,9 @@ public class CatTelekinesis : MonoBehaviour
 
     void OnTele_Pull()
     {
-        if (parts.Count == 0)
-        {
-            return;
-        }
-
-        TelekinesisParts();
+        OnAimEvent.Invoke();
+        OnPullEvent.Invoke();
+        sfx_tele_Pull.Play();
         telekinesisState = TelekinesisState.Pull;
     }
 
@@ -246,6 +244,8 @@ public class CatTelekinesis : MonoBehaviour
         SetLines(false);
         OnShootEvent.Invoke();
         parts = new List<BreakablePart>();
+        sfx_tele_Pull.Stop();
+        sfx_tele_Shoot.PlayF();
     }
 
     void OnTele_Aim()
@@ -256,7 +256,10 @@ public class CatTelekinesis : MonoBehaviour
 
     void FindPiece(Vector3 dir, Vector3 castPoint)
     {
-        parts = new List<BreakablePart>();
+        if (parts.Count >= maxPartsSize)
+        {
+            return;
+        }
         RaycastHit hit;
         if (Physics.Raycast(castPoint, dir, out hit, cameraRayCastRange, pullLayer))
         {
@@ -273,7 +276,7 @@ public class CatTelekinesis : MonoBehaviour
                     {
                         if (bp.CanTelekinesis)
                         {
-                            parts.Add(bp);
+                            AddPart(bp);
                         }
                     }
 
@@ -286,6 +289,12 @@ public class CatTelekinesis : MonoBehaviour
         }
 
         // Debug.Log($"Tele Parts: {parts.Count}");
+    }
+
+    private void AddPart(BreakablePart bp)
+    {
+        parts.Add(bp);
+        bp.Telekinesis();
     }
 
     void FindPiece_AOE()
@@ -306,7 +315,7 @@ public class CatTelekinesis : MonoBehaviour
             {
                 if (bp.CanTelekinesis)
                 {
-                    parts.Add(bp);
+                    AddPart(bp);
                 }
             }
 

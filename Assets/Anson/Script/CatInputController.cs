@@ -21,6 +21,12 @@ public class CatInputController : MonoBehaviour
     [SerializeField]
     private CinemachineFreeLook aimCinemachine;
 
+    [SerializeField]
+    private float cameraCastRange = 1000f;
+
+    [SerializeField]
+    private LayerMask cameraLayer;
+
     [Header("Telekinesis")]
     [SerializeField]
     private CatTelekinesis catTelekinesis;
@@ -94,7 +100,7 @@ public class CatInputController : MonoBehaviour
         {
             if (inputValue.Get<float>() < 0.5f)
             {
-                catTelekinesis.OnTelekinesis_Release(cameraTransform.forward, cameraTransform.position);
+                catTelekinesis.OnTelekinesis_Release(GetDirToTarget(cameraTransform.position), cameraTransform.position);
                 isTeleOn = false;
             }
         }
@@ -102,7 +108,7 @@ public class CatInputController : MonoBehaviour
         {
             if (inputValue.Get<float>() >= 0.5f)
             {
-                catTelekinesis.OnTelekinesis_Press(cameraTransform.forward, cameraTransform.position);
+                catTelekinesis.OnTelekinesis_Press(GetDirToTarget(cameraTransform.position), cameraTransform.position);
                 isTeleOn = true;
             }
         }
@@ -159,5 +165,27 @@ public class CatInputController : MonoBehaviour
         cameraForward = cameraForward.normalized;
         float angle = Vector3.SignedAngle(Vector3.forward, cameraForward, Vector3.up);
         return Quaternion.Euler(0, 0, -angle);
+    }
+
+    public Vector3 GetCameraTarget()
+    {
+        if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out RaycastHit hit, cameraCastRange,
+                cameraLayer))
+        {
+            return hit.point;
+        }
+
+        return default;
+    }
+
+    public Vector3 GetDirToTarget(Vector3 origin)
+    {
+        Vector3 target = GetCameraTarget();
+        if (!target.Equals(default) )
+        {
+            return (target - origin).normalized;
+        }
+
+        return cameraTransform.forward;
     }
 }
