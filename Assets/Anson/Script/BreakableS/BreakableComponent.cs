@@ -136,6 +136,10 @@ public class BreakableComponent : MonoBehaviour
     [SerializeField]
     protected UnityEvent breakEvent;
 
+    protected bool isStoredExplosive = false;
+    protected Vector3 storedExplosiveForce = new Vector3();
+    protected Vector3 storedExplosiveVelocity = new Vector3();
+
     [Header("Despawning")]
     [SerializeField]
     protected UnityEvent despawnEvent;
@@ -665,14 +669,28 @@ public class BreakableComponent : MonoBehaviour
         }
     }
 
-    public virtual void ExplodeBreak(Vector3 force, Vector3 point)
+    public virtual void ExplodeBreak(Vector3 force, Vector3 point, Vector3 velocity = new Vector3())
     {
-        if (force.magnitude > breakingForce.x)
+        switch (breakableState)
         {
-            Break(force, force);
-        }
+            case BreakableState.Hold:
+                if (force.magnitude > breakingForce.x)
+                {
+                    Break(force, force);
+                }
 
-        selfRB.AddForce(force);
+                DelayAddForce(force, velocity);
+
+                break;
+            case BreakableState.InitialBreak:
+                DelayAddForce(force, velocity);
+
+                break;
+            case BreakableState.Free:
+                DelayAddForce(force, velocity);
+                ApplyStoredForce();
+                break;
+        }
     }
 
     protected Vector3 Dir(BreakableComponent target)
@@ -683,5 +701,21 @@ public class BreakableComponent : MonoBehaviour
     public void SetOriginalNoBottom(bool b)
     {
         originalNoBottom = b;
+    }
+
+    protected void DelayAddForce(Vector3 force, Vector3 velocity)
+    {
+        isStoredExplosive = true;
+        storedExplosiveForce += force;
+        storedExplosiveVelocity += velocity;
+    }
+
+    protected void ApplyStoredForce()
+    {
+        isStoredExplosive = false;
+        selfRB.AddForce(storedExplosiveForce);
+        selfRB.AddForce(storedExplosiveVelocity, ForceMode.VelocityChange);
+        storedExplosiveForce = new Vector3();
+        storedExplosiveVelocity = new Vector3();
     }
 }

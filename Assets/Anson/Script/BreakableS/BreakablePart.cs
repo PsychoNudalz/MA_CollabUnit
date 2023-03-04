@@ -37,21 +37,32 @@ public class BreakablePart : BreakableComponent
 
     private void FixedUpdate()
     {
-        if (breakableState == BreakableState.Hold)
-        {
-            if (!originalNoBottom)
-            {
-                CheckBottomTime_now -= Time.deltaTime;
-                if (CheckBottomTime_now < 0)
-                {
-                    if (!HasBottomPart())
-                    {
-                        Break(new Vector3(), new Vector3());
-                    }
 
-                    CheckBottomTime_now = CheckBottomTime;
+        switch (breakableState)
+        {
+            case BreakableState.Hold:
+                if (!originalNoBottom)
+                {
+                    CheckBottomTime_now -= Time.deltaTime;
+                    if (CheckBottomTime_now < 0)
+                    {
+                        if (!HasBottomPart())
+                        {
+                            Break(new Vector3(), new Vector3());
+                        }
+
+                        CheckBottomTime_now = CheckBottomTime;
+                    }
                 }
-            }
+                break;
+            case BreakableState.Free:
+                if (isStoredExplosive)
+                {
+                    ApplyStoredForce();
+                }
+                break;
+
+
         }
     }
 

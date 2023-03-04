@@ -17,6 +17,9 @@ public class ExplosiveController : MonoBehaviour
     private float maxForce = 3000f;
 
     [SerializeField]
+    private float maxVelocity = 0f;
+
+    [SerializeField]
     private LayerMask layerMask;
 
     [SerializeField]
@@ -29,7 +32,8 @@ public class ExplosiveController : MonoBehaviour
         BreakablePart currentPart;
         Vector3 force;
         //Break all collectives
-        foreach (Collider collider in Physics.OverlapSphere(transform.position, range, layerMask))
+        Collider[] overlapSphere1 = Physics.OverlapSphere(transform.position, range, layerMask);
+        foreach (Collider collider in overlapSphere1)
         {
             currentCollective = collider.GetComponentInParent<BreakableCollective>();
             if (currentCollective)
@@ -40,19 +44,21 @@ public class ExplosiveController : MonoBehaviour
             }
         }
 
+        //Recast again so it will hit the activated parts
+        Collider[] overlapSphere2 = Physics.OverlapSphere(transform.position, range, layerMask);
+
         int i = 0;
-        foreach (Collider collider in Physics.OverlapSphere(transform.position, range, layerMask))
+        foreach (Collider collider in overlapSphere2)
         {
             if (collider.TryGetComponent(out currentPart))
             {
                 force = GetForce(currentPart.Position);
-                currentPart.ExplodeBreak(force, transform.position);
+                currentPart.ExplodeBreak(force, transform.position,GetVelocity(currentPart.Position));
                 i++;
             }
         }
-        
-        explodeEffectEvent.Invoke();
 
+        explodeEffectEvent.Invoke();
     }
 
     Vector3 GetForce(Vector3 target)
@@ -60,6 +66,14 @@ public class ExplosiveController : MonoBehaviour
         Vector3 dir = target - transform.position;
 
         return dir.normalized * (rangeCurve.Evaluate(dir.magnitude / range) * maxForce);
+        // return new Tuple<Vector3,float>(temp.normalized,temp.magnitude);
+    }
+
+    Vector3 GetVelocity(Vector3 target)
+    {
+        Vector3 dir = target - transform.position;
+
+        return dir.normalized * (rangeCurve.Evaluate(dir.magnitude / range) * maxVelocity);
         // return new Tuple<Vector3,float>(temp.normalized,temp.magnitude);
     }
 }

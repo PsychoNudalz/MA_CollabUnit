@@ -197,10 +197,10 @@ public class BreakableCollective : BreakableComponent
         }
     }
 
-    public override void ExplodeBreak(Vector3 force, Vector3 point)
+    public override void ExplodeBreak(Vector3 force, Vector3 point,Vector3 velocity=new Vector3())
     {
         Break(force, force);
-        selfRB.AddForce(force);
+        // selfRB.AddForce(force);
     }
 
     BreakableComponent[] FindBreakablesFromCollision(Collision collision)

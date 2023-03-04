@@ -110,7 +110,7 @@ MonoBehaviour:
   meshFilter: {fileID: 0}
   parent: {fileID: 0}
   collectiveParent: {fileID: 0}
-  destroyVelocity: 10
+  destroyVelocity: 2
   destroyEvent:
     m_PersistentCalls:
       m_Calls:
@@ -194,7 +194,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  maxForce: 500000
+  maxForce: 1000000
+  maxVelocity: 20
   layerMask:
     serializedVersion: 2
     m_Bits: 1088
@@ -325,10 +326,10 @@ VisualEffect:
       m_Array:
       - m_Value: {x: -200, y: -200, z: -200}
         m_Name: VelocityMin
-        m_Overridden: 1
+        m_Overridden: 0
       - m_Value: {x: 200, y: 200, z: 200}
         m_Name: VelocityMax
-        m_Overridden: 1
+        m_Overridden: 0
     m_Vector4f:
       m_Array: []
     m_Uint:
