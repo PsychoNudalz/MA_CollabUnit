@@ -317,20 +317,22 @@ public class QuadrupedMovementController : MonoBehaviour
 
     public void OnMove(Vector2 moveDir)
     {
-        bool startToMove = moveDir.magnitude - inputDir_Local.magnitude > 0.1f&&moveDir.magnitude > 0.1f;
-        if (startToMove && isGrounded && quadState == QuadState.Ragdoll)
-        {
-            ChangeQuadState(QuadState.Upright);
-        }
         if (!moveDir.Equals(inputDir_Local))
         {
             inputDir_Local = moveDir;
         }
-
         if (moveDir.magnitude > 0.1f)
         {
             inputDir_LastForward = inputDir_World;
         }
+        bool startToMove = inputDir_Local.magnitude > 0.1f;
+        if (startToMove && isGrounded && quadState == QuadState.Ragdoll)
+        {
+            ChangeQuadState(QuadState.Upright);
+        }
+        
+
+        
     }
 
     public void OnMove_World(Vector3 world)

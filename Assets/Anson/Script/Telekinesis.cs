@@ -280,7 +280,8 @@ public class Telekinesis : MonoBehaviour
         Vector3 pos;
         for (int i = 0; i < parts.Count; i++)
         {
-            if (parts[i].gameObject)
+            
+            if (parts[i]&&parts[i].gameObject)
             {
                 lines[i].gameObject.SetActive(true);
                 // pos = parts[i].transform.position - lineParent.position;
