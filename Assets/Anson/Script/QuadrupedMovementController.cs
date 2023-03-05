@@ -21,7 +21,8 @@ public struct FootCastPair
     // [SerializeField]
     // private Transform footMesh;
 
-    [SerializeField] public FootMovementSphere Foot => foot;
+    [SerializeField]
+    public FootMovementSphere Foot => foot;
 
     public Transform RaycastPoint => raycastPoint;
 
@@ -321,24 +322,23 @@ public class QuadrupedMovementController : MonoBehaviour
         {
             inputDir_Local = moveDir;
         }
+
         if (moveDir.magnitude > 0.1f)
         {
             inputDir_LastForward = inputDir_World;
         }
+
         bool startToMove = inputDir_Local.magnitude > 0.1f;
         if (startToMove && isGrounded && quadState == QuadState.Ragdoll)
         {
             ChangeQuadState(QuadState.Upright);
         }
-        
-
-        
     }
 
     public void OnMove_World(Vector3 world)
     {
         world = Quaternion.Euler(0, -transform.eulerAngles.y, 0) * world;
-        OnMove(new Vector2(world.x,world.z));
+        OnMove(new Vector2(world.x, world.z));
     }
 
     [ContextMenu("Upright")]
@@ -603,27 +603,34 @@ public class QuadrupedMovementController : MonoBehaviour
     Vector3 TargetLocalRotation()
     {
         Vector3 rotation = new Vector3();
+        Vector3 up = Vector3.up;
 
-        Vector3 forward = ((frontFeet[0].Position - backFeet[0].Position) +
-                           (frontFeet[1].Position - backFeet[1].Position)) / 2f;
-        Vector3 right = ((frontFeet[1].Position - frontFeet[0].Position) +
-                         (backFeet[1].Position - backFeet[0].Position)) / 2f;
-        Vector3 up = Vector3.Cross(forward, right);
+        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, castDistance, castLayer))
+        {
+            up = hit.normal;
+        }
+        else
+        {
+            // Vector3 forward = ((frontFeet[0].Position - backFeet[0].Position) +
+            //                    (frontFeet[1].Position - backFeet[1].Position)) / 2f;
+            // Vector3 right = ((frontFeet[1].Position - frontFeet[0].Position) +
+            //                  (backFeet[1].Position - backFeet[0].Position)) / 2f;
+            up = Vector3.Cross(frontFeet[0].Position - backFeet[1].Position,
+                frontFeet[1].Position - backFeet[0].Position);
+            //DEBUG
+            Vector3 pos = AverageFeetPosition();
+            // Debug.DrawRay(pos, forward.normalized * 10f, Color.blue);
+            // Debug.DrawRay(pos, right.normalized * 10f, Color.red);
 
-        //DEBUG
-        Vector3 pos = AverageFeetPosition();
-        Debug.DrawRay(pos, forward.normalized * 10f, Color.blue);
-        Debug.DrawRay(pos, right.normalized * 10f, Color.red);
 
+            // print($"rotation: {rotation}");
+        }
 
         rotation.x = Vector3.SignedAngle(catTransform.up, up, catTransform.right);
         rotation.z = Vector3.SignedAngle(catTransform.up, up, catTransform.forward);
 
         rotation.y = Vector3.SignedAngle(catTransform.forward, inputDir_LastForward,
             catTransform.up);
-
-
-        // print($"rotation: {rotation}");
         return rotation;
     }
 
@@ -773,11 +780,14 @@ public class QuadrupedMovementController : MonoBehaviour
     {
         Vector3 targetRotation = TargetLocalRotation();
 
-        targetRotation = new Vector3(targetRotation.x * moveTorque.x, targetRotation.y * moveTorque.y,
-            targetRotation.z * moveTorque.z);
+        Vector3 localTorque = Quaternion.Inverse(catRigidbody.rotation) * catRigidbody.angularVelocity;
+        Vector3 localVelocityDif = targetRotation - localTorque;
+
+        targetRotation = new Vector3(localVelocityDif.x * moveTorque.x, localVelocityDif.y * moveTorque.y,
+            localVelocityDif.z * moveTorque.z);
         targetRotation = catRigidbody.rotation * targetRotation;
 
-        catRigidbody.AddTorque(targetRotation, ForceMode.Acceleration);
+        catRigidbody.AddTorque(targetRotation, ForceMode.VelocityChange);
     }
 
     void MoveModel_ClampRotation()
@@ -916,6 +926,7 @@ public class QuadrupedMovementController : MonoBehaviour
         {
             return;
         }
+
         if (inputDir_World.magnitude > 0.1f)
         {
             dir = inputDir_World;
@@ -923,7 +934,8 @@ public class QuadrupedMovementController : MonoBehaviour
 
         swipe_Cooldown_Now = swipe_Cooldown;
         Quaternion angle = Quaternion.AngleAxis(Vector3.SignedAngle(Vector3.forward, dir, Vector3.up), Vector3.up);
-        dir = angle *  Quaternion.AngleAxis(swipe_LaunchOffset, Vector3.up) *Quaternion.AngleAxis(-swipe_LaunchAngle, Vector3.right) * Vector3.forward;
+        dir = angle * Quaternion.AngleAxis(swipe_LaunchOffset, Vector3.up) *
+              Quaternion.AngleAxis(-swipe_LaunchAngle, Vector3.right) * Vector3.forward;
         Vector3 sideForce = Quaternion.AngleAxis(-105, Vector3.up) * dir;
         foot.Swipe(dir * swipe_Force.x, sideForce * swipe_Force.y);
     }
@@ -936,6 +948,7 @@ public class QuadrupedMovementController : MonoBehaviour
         {
             dir = inputDir_World;
         }
+
         foreach (FootCastPair footCastPair in feet)
         {
             footCastPair.Foot.SetHighlight(false);
@@ -950,6 +963,7 @@ public class QuadrupedMovementController : MonoBehaviour
                 }
             }
         }
+
         current?.SetHighlight(true);
 
         return current;

@@ -1207,7 +1207,7 @@ MonoBehaviour:
   move_Y: 100
   move_XZ: 0.6
   maxVelocity: 100
-  moveTorque: {x: 1, y: 0.1, z: 1}
+  moveTorque: {x: 0.05, y: 0.05, z: 0.05}
   maxRotation: {x: 30, y: 30}
   maxAngular: {x: 3, y: 3}
   jumpForce_Y: 600
@@ -5459,17 +5459,17 @@ PrefabInstance:
     - target: {fileID: 4450433388294030650, guid: 6a7fb89b719c6584f8e2454126fc30f1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.0000000010752496
+      value: -0.0000000010752496
       objectReference: {fileID: 0}
     - target: {fileID: 4450433388294030650, guid: 6a7fb89b719c6584f8e2454126fc30f1,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 1.7915851e-11
+      value: -1.7915848e-11
       objectReference: {fileID: 0}
     - target: {fileID: 4450433388294030650, guid: 6a7fb89b719c6584f8e2454126fc30f1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.016659727
+      value: -0.016659725
       objectReference: {fileID: 0}
     - target: {fileID: 6527627644092689017, guid: 6a7fb89b719c6584f8e2454126fc30f1,
         type: 3}
@@ -5499,12 +5499,12 @@ PrefabInstance:
     - target: {fileID: 8765705395060225947, guid: 6a7fb89b719c6584f8e2454126fc30f1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.000000017325839
+      value: 0.000000017325839
       objectReference: {fileID: 0}
     - target: {fileID: 8765705395060225947, guid: 6a7fb89b719c6584f8e2454126fc30f1,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 7.076333e-10
+      value: -7.0763334e-10
       objectReference: {fileID: 0}
     - target: {fileID: 8765705395060225947, guid: 6a7fb89b719c6584f8e2454126fc30f1,
         type: 3}
@@ -5514,7 +5514,7 @@ PrefabInstance:
     - target: {fileID: 8765705395060225947, guid: 6a7fb89b719c6584f8e2454126fc30f1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.04080863
+      value: 0.040808633
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a7fb89b719c6584f8e2454126fc30f1, type: 3}
