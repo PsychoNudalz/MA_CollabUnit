@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BreakableManager : MonoBehaviour
 {
     [SerializeField]
-    private Queue<BreakableComponent> debris = new Queue<BreakableComponent>();
+    private List<BreakableComponent> debris = new List<BreakableComponent>();
 
     [SerializeField]
     private List<BreakableComponent> buffer = new List<BreakableComponent>();
@@ -21,6 +23,9 @@ public class BreakableManager : MonoBehaviour
     [SerializeField]
     private float bufferCheckTime = 1f;
     private float bufferCheckTime_now = 1f;
+
+    [SerializeField]
+    private AnimationCurve indexDistribution;
     
     public static BreakableManager current;
 
@@ -39,6 +44,7 @@ public class BreakableManager : MonoBehaviour
     private void FixedUpdate()
     {
         debrisClearTime_Now -= Time.deltaTime;
+        int r = 0;
         if (debrisClearTime_Now < 0)
         {
             debrisClearTime_Now = debrisClearTime;
@@ -47,7 +53,9 @@ public class BreakableManager : MonoBehaviour
                 int x = debris.Count - (int) debrisSize.x;
                 for (int i = 0; i < x; i++)
                 {
-                    buffer.Add(debris.Dequeue());
+                    r = GetRandomIndex();
+                    buffer.Add(debris[r]);
+                    debris.RemoveAt(r);
                 }
             }
         }
@@ -103,12 +111,22 @@ public class BreakableManager : MonoBehaviour
             return;
             
         }
-        current.debris.Enqueue(bc);
+        current.debris.Add(bc);
         if (current.debris.Count > current.debrisSize.y)
         {
-            current.buffer.Add(current.debris.Dequeue());
+            int r = GetRandomIndex_S();
+            current.buffer.Add(current.debris[r]);
+            current.debris.RemoveAt(r);
 
         }
     }
+
+    public int GetRandomIndex()
+    {
+        return Mathf.FloorToInt(indexDistribution.Evaluate(Random.Range(0f, .999f)) * debris.Count);
+    }    public static int GetRandomIndex_S()
+    {
+        return Mathf.FloorToInt(current.indexDistribution.Evaluate(Random.Range(0f, .999f)) * current.debris.Count);
+    } 
     
 }
