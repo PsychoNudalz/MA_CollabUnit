@@ -8,6 +8,11 @@ public class Flock : MonoBehaviour
     List<FlockAgent> agents = new List<FlockAgent>();
     public FlockBehavior behavior;
 
+    [SerializeField]
+    private bool setManagerAsParent = false;
+
+    [Space(10f)]
+    [Header("Settings")]
     [Range(10, 500)]
     public int startingCount = 50;
     const float AgentDensity = 2f;
@@ -32,6 +37,15 @@ public class Flock : MonoBehaviour
         squareMaxSpeed = maxspeed * maxspeed;
         squareNaighborRadius = neighborRadius * neighborRadius;
         squareAvoidenceRadius = squareNaighborRadius * avoidenceRadiusMultiplier * avoidenceRadiusMultiplier;
+        Transform parent;
+        if (setManagerAsParent&&FlockManager.current)
+        {
+            parent = FlockManager.current.transform;
+        }
+        else
+        {
+            parent = transform;
+        }
 
         for (int i=0; i < startingCount; i++)
         {
@@ -39,7 +53,7 @@ public class Flock : MonoBehaviour
                 agentPrefab,
                 (Random.insideUnitSphere * startingCount * AgentDensity)+transform.position, 
                 Quaternion.Euler(Vector3.forward * Random.Range(0f, 360f)),
-                transform
+                parent
                 );
             newAgent.name = "Agent " + i;
             newAgent.Initialize(this);

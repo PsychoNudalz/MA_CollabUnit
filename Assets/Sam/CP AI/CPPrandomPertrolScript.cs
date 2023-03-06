@@ -10,25 +10,46 @@ public class CPPrandomPertrolScript : MonoBehaviour
 
     public Transform centrePoint;
 
+    [SerializeField]
+    private LayerMask layerMask;
 
-    void Start()
-    {
-        agent = GetComponent<NavMeshAgent>();
-    }
+    [SerializeField]
+    private float castRange = 10f;
 
-   
-    void Update()
+    public bool inStop => agent.remainingDistance <= agent.stoppingDistance;
+
+    void Awake()
     {
-        if(agent.remainingDistance <= agent.stoppingDistance)
+        if (!agent)
         {
-            Vector3 point;
-            if (RandomPoint(centrePoint.position, range, out point))
-            {
-                Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
-                agent.SetDestination(point);
-            }
+            agent = GetComponent<NavMeshAgent>();
+        }
+
+        if (!centrePoint)
+        {
+            centrePoint = transform;
+        }
+
+        if (Physics.Raycast(transform.position + new Vector3(0, 1f, 0), Vector3.down, out RaycastHit hit, castRange,
+                layerMask))
+        {
+            transform.position = hit.point;
+        }
+
+        Vector3 point;
+        if (RandomPoint(centrePoint.position, range, out point))
+        {
+            Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
+            agent.SetDestination(point);
         }
     }
+
+
+    void Update()
+    {
+        
+    }
+
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
         Vector3 randomPoint = center + Random.insideUnitSphere * range;
@@ -38,7 +59,13 @@ public class CPPrandomPertrolScript : MonoBehaviour
             result = hit.position;
             return true;
         }
+
         result = Vector3.zero;
         return false;
+    }
+
+    public void SetDestination(Vector3 pos)
+    {
+        agent.SetDestination(pos);
     }
 }
