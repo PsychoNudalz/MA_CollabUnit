@@ -25,6 +25,8 @@ public class BreakableStructureEffectsController : MonoBehaviour
 
     private float soundTime_Now = -1;    
     private Queue<Tuple<Vector3, Mesh>> breakPosQueue = new Queue<Tuple<Vector3, Mesh>>();
+
+    private int QUEUESIZE = 20;
     // [SerializeField]
 
     // Start is called before the first frame update
@@ -44,7 +46,10 @@ public class BreakableStructureEffectsController : MonoBehaviour
     
     public void QueueBreakEffects(Vector3 position,Mesh mesh)
     {
-        breakPosQueue.Enqueue(new Tuple<Vector3, Mesh>(position,mesh));
+        if (breakPosQueue.Count > QUEUESIZE)
+        {
+            breakPosQueue.Enqueue(new Tuple<Vector3, Mesh>(position,mesh));
+        }
         // print(breakPosQueue.Count);
     }
 
