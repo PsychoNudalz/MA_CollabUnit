@@ -92,6 +92,9 @@ public class BreakableStructureController : MonoBehaviour
     [SerializeField]
     private UnityEvent breakEvent;
 
+    [SerializeField]
+    private UnityEvent noGroundBreakEvent;
+
 
     [Space(10)]
     [SerializeField]
@@ -275,7 +278,7 @@ public class BreakableStructureController : MonoBehaviour
         List<BreakableComponent> tempNoBottom = new List<BreakableComponent>();
         foreach (BreakableCollective breakableCollective in breakableCollectives)
         {
-            groundCounter+=breakableCollective.InitialiseGround();
+            groundCounter += breakableCollective.InitialiseGround();
             foreach (BreakableComponent current in breakableCollective.BreakableComponents)
             {
                 if (current.OriginalNoBottom)
@@ -287,15 +290,14 @@ public class BreakableStructureController : MonoBehaviour
 
         foreach (BreakablePart breakablePart in breakableParts)
         {
-            groundCounter+=breakablePart.InitialiseGround();
+            groundCounter += breakablePart.InitialiseGround();
             if (breakablePart.OriginalNoBottom)
             {
                 tempNoBottom.Add(breakablePart);
             }
         }
-        noBottomComponents = tempNoBottom.ToArray();
 
-        
+        noBottomComponents = tempNoBottom.ToArray();
     }
 
     [ContextMenu("initialise")]
@@ -345,8 +347,6 @@ public class BreakableStructureController : MonoBehaviour
     }
 
 
-
-    
     public void RemoveGroundPiece()
     {
         groundCounter--;
@@ -356,6 +356,7 @@ public class BreakableStructureController : MonoBehaviour
             {
                 part.SetOriginalNoBottom(false);
             }
+            // noGroundBreakEvent.Invoke();
         }
     }
 }

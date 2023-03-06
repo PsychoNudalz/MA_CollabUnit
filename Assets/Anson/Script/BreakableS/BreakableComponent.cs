@@ -240,12 +240,18 @@ public class BreakableComponent : MonoBehaviour
         float bottomAngle, PhysicMaterial pm, UnityEvent breakEvent1, float despawnTime1, UnityEvent despawnEvent1,
         LayerMask groundLayer1, bool ignoreParent1)
     {
-        bool hasCollective = parent.TryGetComponent(out BreakableCollective breakableCollective);
-
-        if (hasCollective)
+        if (parent)
         {
-            parent = breakableCollective.parent;
-            collectiveParent = breakableCollective;
+            bool hasCollective = parent.TryGetComponent(out BreakableCollective breakableCollective);
+            if (hasCollective)
+            {
+                parent = breakableCollective.parent;
+                collectiveParent = breakableCollective;
+            }
+            else
+            {
+                parent = p;
+            }
         }
         else
         {
