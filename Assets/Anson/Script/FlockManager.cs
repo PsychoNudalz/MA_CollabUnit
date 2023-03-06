@@ -16,6 +16,7 @@ public class FlockManager : MonoBehaviour
 
     [SerializeField]
     private float newPosTime = 4f;
+
     private float newPosTime_Now = 0f;
 
     [Header("Settings")]
@@ -23,12 +24,12 @@ public class FlockManager : MonoBehaviour
     private float posRange = 50f;
 
     private CatPlayerController currentCat;
-    
+
 
     private void Awake()
     {
         current = this;
-        if (flockMasters.Length == 0)
+        if (flockMasters is {Length: 0})
         {
             SetFlockMaster();
         }
@@ -46,14 +47,29 @@ public class FlockManager : MonoBehaviour
     {
         foreach (CPPrandomPertrolScript cpPrandomPertrolScript in flockMasters)
         {
-            
             Vector3 point;
-            if (RandomPoint(currentCat.transform.position, posRange, out point))
+            if (RandomPoint(currentCat.transform.position, posRange,cpPrandomPertrolScript.transform.position.y, out point))
             {
                 cpPrandomPertrolScript.SetDestination(point);
-
             }
         }
+    }
+
+    bool RandomPoint(Vector3 center, float range, float floor, out Vector3 result)
+    {
+        Vector2 random = Random.insideUnitCircle;
+        Vector3 randomPoint = center + new Vector3(random.x, 0, random.y) * range;
+        randomPoint.y = floor;
+        UnityEngine.AI.NavMeshHit hit;
+
+        if (UnityEngine.AI.NavMesh.SamplePosition(randomPoint, out hit, 5f, UnityEngine.AI.NavMesh.AllAreas))
+        {
+            result = hit.position;
+            return true;
+        }
+
+        result = Vector3.zero;
+        return false;
     }
 
     private void FixedUpdate()
@@ -62,32 +78,14 @@ public class FlockManager : MonoBehaviour
         if (newPosTime_Now < 0)
         {
             newPosTime_Now = newPosTime;
-            
+
             Vector3 point;
-            if (flockMasters[index].inStop)
+            if (RandomPoint(currentCat.transform.position, posRange,flockMasters[index].transform.position.y, out point))
             {
-                if (RandomPoint(currentCat.transform.position, posRange, out point))
-                {
-                    flockMasters[index].SetDestination(point);
-                }
+                flockMasters[index].SetDestination(point);
             }
 
             index = (index + 1) % flockMasters.Length;
         }
-    }
-
-
-    bool RandomPoint(Vector3 center, float range, out Vector3 result)
-    {
-        Vector3 randomPoint = center + Random.insideUnitSphere * range;
-        UnityEngine.AI.NavMeshHit hit;
-        if (UnityEngine.AI.NavMesh.SamplePosition(randomPoint, out hit, 1.0f, UnityEngine.AI.NavMesh.AllAreas))
-        {
-            result = hit.position;
-            return true;
-        }
-
-        result = Vector3.zero;
-        return false;
     }
 }

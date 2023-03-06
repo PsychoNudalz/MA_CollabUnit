@@ -17,6 +17,7 @@ public class CPPrandomPertrolScript : MonoBehaviour
     private float castRange = 10f;
 
     public bool inStop => agent.remainingDistance <= agent.stoppingDistance;
+    // public bool inStop => true;
 
     void Awake()
     {
@@ -35,13 +36,6 @@ public class CPPrandomPertrolScript : MonoBehaviour
         {
             transform.position = hit.point;
         }
-
-        Vector3 point;
-        if (RandomPoint(centrePoint.position, range, out point))
-        {
-            Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
-            agent.SetDestination(point);
-        }
     }
 
 
@@ -52,15 +46,16 @@ public class CPPrandomPertrolScript : MonoBehaviour
 
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
-        Vector3 randomPoint = center + Random.insideUnitSphere * range;
+        // Vector3 randomPoint = center + Random.insideUnitSphere * range;
         NavMeshHit hit;
-        if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas))
+        if (NavMesh.SamplePosition(center, out hit, range, NavMesh.AllAreas))
         {
             result = hit.position;
             return true;
         }
 
         result = Vector3.zero;
+        Debug.LogWarning($"Failed find {center}");
         return false;
     }
 

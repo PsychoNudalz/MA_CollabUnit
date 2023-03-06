@@ -49,7 +49,7 @@ NavMeshAgent:
   m_Acceleration: 15
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 1
+  m_StoppingDistance: 20
   m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
   m_AutoRepath: 0
@@ -238,12 +238,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5875023875578848638, guid: 084f2c0da6935cd46a3318642ed822fb,
         type: 3}
+      propertyPath: behavior
+      value: 
+      objectReference: {fileID: 11400000, guid: 5092c5f6bbb07bd40a8697e4fcd76d60,
+        type: 2}
+    - target: {fileID: 5875023875578848638, guid: 084f2c0da6935cd46a3318642ed822fb,
+        type: 3}
+      propertyPath: maxspeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5875023875578848638, guid: 084f2c0da6935cd46a3318642ed822fb,
+        type: 3}
       propertyPath: startingCount
-      value: 50
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5875023875578848638, guid: 084f2c0da6935cd46a3318642ed822fb,
+        type: 3}
+      propertyPath: neighborRadius
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5875023875578848638, guid: 084f2c0da6935cd46a3318642ed822fb,
         type: 3}
       propertyPath: setManagerAsParent
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5875023875578848638, guid: 084f2c0da6935cd46a3318642ed822fb,
+        type: 3}
+      propertyPath: avoidenceRadiusMultiplier
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5875023875578848639, guid: 084f2c0da6935cd46a3318642ed822fb,
