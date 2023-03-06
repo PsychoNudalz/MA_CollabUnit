@@ -752,7 +752,6 @@ GameObject:
   - component: {fileID: 484970337}
   - component: {fileID: 484970336}
   - component: {fileID: 484970335}
-  - component: {fileID: 484970334}
   m_Layer: 8
   m_Name: building  (4)
   m_TagString: Untagged
@@ -760,18 +759,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &484970334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484970333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f4d8f01f426856459999954bf4c6609, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &484970335
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -862,7 +849,6 @@ GameObject:
   - component: {fileID: 517946602}
   - component: {fileID: 517946601}
   - component: {fileID: 517946600}
-  - component: {fileID: 517946599}
   m_Layer: 8
   m_Name: building  (1)
   m_TagString: Untagged
@@ -870,18 +856,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &517946599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517946598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f4d8f01f426856459999954bf4c6609, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &517946600
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -972,7 +946,6 @@ GameObject:
   - component: {fileID: 803599835}
   - component: {fileID: 803599834}
   - component: {fileID: 803599833}
-  - component: {fileID: 803599832}
   m_Layer: 8
   m_Name: building  (6)
   m_TagString: Untagged
@@ -980,18 +953,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &803599832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 803599831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f4d8f01f426856459999954bf4c6609, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &803599833
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1131,7 +1092,6 @@ GameObject:
   - component: {fileID: 1135849217}
   - component: {fileID: 1135849216}
   - component: {fileID: 1135849215}
-  - component: {fileID: 1135849214}
   m_Layer: 8
   m_Name: building  (5)
   m_TagString: Untagged
@@ -1139,18 +1099,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &1135849214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135849213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f4d8f01f426856459999954bf4c6609, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1135849215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1240,7 +1188,7 @@ GameObject:
   - component: {fileID: 1303086392}
   - component: {fileID: 1303086391}
   m_Layer: 8
-  m_Name: Flock Orange
+  m_Name: Flock main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1258,7 +1206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c01010267b0c764da776f15258915ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentPrefab: {fileID: 2352960342508694547, guid: b1f6d69237b9ef04c929797fd322d2a0,
+  agentPrefab: {fileID: 8208138402324541291, guid: a39cb22c4bdd52344873ab271c5ccbe4,
     type: 3}
   behavior: {fileID: 11400000, guid: 5092c5f6bbb07bd40a8697e4fcd76d60, type: 2}
   startingCount: 100
@@ -1293,7 +1241,6 @@ GameObject:
   - component: {fileID: 1429826408}
   - component: {fileID: 1429826407}
   - component: {fileID: 1429826406}
-  - component: {fileID: 1429826405}
   m_Layer: 8
   m_Name: building  (2)
   m_TagString: Untagged
@@ -1301,18 +1248,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &1429826405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429826404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f4d8f01f426856459999954bf4c6609, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1429826406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1403,7 +1338,6 @@ GameObject:
   - component: {fileID: 1441949508}
   - component: {fileID: 1441949507}
   - component: {fileID: 1441949506}
-  - component: {fileID: 1441949505}
   m_Layer: 8
   m_Name: building  (3)
   m_TagString: Untagged
@@ -1411,18 +1345,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &1441949505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441949504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f4d8f01f426856459999954bf4c6609, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1441949506
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1513,7 +1435,6 @@ GameObject:
   - component: {fileID: 1950529192}
   - component: {fileID: 1950529191}
   - component: {fileID: 1950529190}
-  - component: {fileID: 1950529189}
   m_Layer: 8
   m_Name: 'building '
   m_TagString: Untagged
@@ -1521,18 +1442,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &1950529189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950529188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f4d8f01f426856459999954bf4c6609, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1950529190
 BoxCollider:
   m_ObjectHideFlags: 0
