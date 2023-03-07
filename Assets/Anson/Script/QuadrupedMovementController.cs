@@ -204,6 +204,7 @@ public class QuadrupedMovementController : MonoBehaviour
     private float swipe_Cooldown = 1f;
 
     private float swipe_Cooldown_Now = 0f;
+    private float explosiveMultiplier = 5f;
 
 
     private void Awake()
@@ -981,5 +982,13 @@ public class QuadrupedMovementController : MonoBehaviour
             rb.velocity = new Vector3();
             rb.angularVelocity = new Vector3();
         }
+    }
+    
+    //***********EXPlODE
+    public void Explode(Vector3 force,Vector3 velocity)
+    {
+        ChangeQuadState(QuadState.Ragdoll);
+        catRigidbody.AddForce(force*explosiveMultiplier);
+        catRigidbody.AddForce(velocity*explosiveMultiplier, ForceMode.VelocityChange);
     }
 }

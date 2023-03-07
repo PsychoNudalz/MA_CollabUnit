@@ -44,6 +44,14 @@ public class ExplosiveController : MonoBehaviour
                 currentCollective.ExplodeBreak((currentCollective.Position - transform.position).normalized * maxForce,
                     transform.position);
             }
+            else
+            {
+                if (collider.TryGetComponent(out CatPlayerController catPlayerController))
+                {
+                    Vector3 position = catPlayerController.transform.position;
+                    catPlayerController.QuadrupedMovementController.Explode(GetForce(position),GetVelocity(position));
+                }
+            }
         }
 
         //Recast again so it will hit the activated parts

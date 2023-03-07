@@ -258,6 +258,7 @@ MonoBehaviour:
   meshFilter: {fileID: 0}
   parent: {fileID: 0}
   collectiveParent: {fileID: 0}
+  ignoreTele: 0
   destroyVelocity: 2
   destroyEvent:
     m_PersistentCalls:
@@ -358,7 +359,7 @@ MonoBehaviour:
   maxVelocity: 30
   layerMask:
     serializedVersion: 2
-    m_Bits: 1088
+    m_Bits: 1344
   explodeEffectEvent:
     m_PersistentCalls:
       m_Calls:

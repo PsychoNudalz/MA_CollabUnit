@@ -7,7 +7,7 @@ public class KittenObjCollect : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("PlayerCat"))
+        if (other.gameObject.tag.Equals("Player"))
         {
             IncreaseKittenScore();
         }
