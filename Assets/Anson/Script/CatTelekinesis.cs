@@ -389,8 +389,13 @@ public class CatTelekinesis : MonoBehaviour
 
     void MovePieces()
     {
-        foreach (BreakablePart breakablePart in parts)
+        foreach (BreakablePart breakablePart in parts.ToArray())
         {
+            if (!breakablePart)
+            {
+                parts.Remove(breakablePart);
+                break;
+            }
             Vector3 displacement = hoverPoint.position - breakablePart.transform.position;
             if (displacement.magnitude > pullDeadzone)
             {

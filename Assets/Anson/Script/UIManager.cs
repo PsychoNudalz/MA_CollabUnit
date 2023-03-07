@@ -8,11 +8,14 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager current;
 
+    [Header("Score")]
     [SerializeField]
     private TextMeshProUGUI scoreText;
 
     [SerializeField]
     private float scoreIncreaseAmount = 10f;
+
+    
 
     private float score_Target = 0;
     private float score_Current = 0;
@@ -23,9 +26,10 @@ public class UIManager : MonoBehaviour
         {
             Destroy(current.gameObject);
         }
-
         current = this;
+
     }
+
 
     void FixedUpdate()
     {
@@ -58,9 +62,9 @@ public class UIManager : MonoBehaviour
         current.score_Target = score;
     }
 
-    void Start()
-    {
-    }
+
 
     // Update is called once per frame
+    
+    
 }

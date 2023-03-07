@@ -46,7 +46,7 @@ public class BreakableStructureEffectsController : MonoBehaviour
     
     public void QueueBreakEffects(Vector3 position,Mesh mesh)
     {
-        if (breakPosQueue.Count > QUEUESIZE)
+        if (breakPosQueue.Count < QUEUESIZE)
         {
             breakPosQueue.Enqueue(new Tuple<Vector3, Mesh>(position,mesh));
         }

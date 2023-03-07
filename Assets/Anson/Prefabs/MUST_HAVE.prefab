@@ -345,6 +345,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  kittenManager: {fileID: 0}
+  startingScore: 100000
+  scoreAmount: 70000
+  scoreThresholds:
+  - 100000
+  - 170000
+  - 240000
+  - 310000
+  - 380000
+  - 450000
+  - 520000
+  - 590000
 --- !u!1 &805329281118251440
 GameObject:
   m_ObjectHideFlags: 0
