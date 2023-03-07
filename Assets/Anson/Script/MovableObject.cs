@@ -29,7 +29,7 @@ public class MovableObject : MonoBehaviour
     private float checkTimeNow = 0f;
     private Vector3 GetVelocity()
     {
-        Vector3 temp = (transform.position - previousPosition) / checkTime;
+        Vector3 temp = (transform.position - previousPosition) / Time.deltaTime;
         return temp*velocityMultiplier;
     }
 
@@ -52,16 +52,16 @@ public class MovableObject : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (checkTimeNow < 0)
-        {
-            checkTimeNow = checkTime;
-            previousPosition = tempPosition;
-            tempPosition = transform.position;
-        }
-        else
-        {
-            checkTimeNow -= Time.deltaTime;
-        }
+        previousPosition = tempPosition;
+        tempPosition = transform.position;
+        // if (checkTimeNow < 0)
+        // {
+        //     checkTimeNow = checkTime;
+        // }
+        // else
+        // {
+        //     checkTimeNow -= Time.deltaTime;
+        // }
     }
     
 
