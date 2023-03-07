@@ -53,8 +53,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 30
-  MaxDistance: 1000
+  MinDistance: 60
+  MaxDistance: 2000
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -263,18 +263,6 @@ MonoBehaviour:
   destroyEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4831523760799784303}
-        m_TargetAssemblyTypeName: ExplosiveController, Assembly-CSharp
-        m_MethodName: OnExplode
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 3206113459434687532}
         m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
         m_MethodName: Play
@@ -365,6 +353,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8973188156156515924}
         m_TargetAssemblyTypeName: UnityEngine.VFX.VisualEffect, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3206113459434687532}
+        m_TargetAssemblyTypeName: RandomSound, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -493,7 +493,7 @@ VisualEffect:
         m_Overridden: 0
     m_Vector4f:
       m_Array:
-      - m_Value: {x: 4, y: 2.6387432, z: 0, w: 1}
+      - m_Value: {x: 3.9999995, y: 0.6799837, z: 0, w: 1}
         m_Name: SphereColour1
         m_Overridden: 0
       - m_Value: {x: 2, y: 0.21989529, z: 0, w: 1}
