@@ -3553,9 +3553,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  m_text: free the kittens with your destruction and retrieve them!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e02657f45da461d479af7c548da79f29, type: 2}
   m_sharedMaterial: {fileID: 4926453084185223104, guid: e02657f45da461d479af7c548da79f29,
@@ -4088,9 +4086,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  m_text: COLLECT ALL KITTENS TO MOVE TO THE NEXT CITY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e02657f45da461d479af7c548da79f29, type: 2}
   m_sharedMaterial: {fileID: 4926453084185223104, guid: e02657f45da461d479af7c548da79f29,
@@ -4124,7 +4120,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -6375,6 +6371,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kittenCollectedUI: {fileID: 5865340656723185973}
+  pm: {fileID: 0}
+  isLevel1: 0
 --- !u!1 &3465256077340459844
 GameObject:
   m_ObjectHideFlags: 0
@@ -7347,9 +7345,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  m_text: destroy all buildings in your way!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e02657f45da461d479af7c548da79f29, type: 2}
   m_sharedMaterial: {fileID: 4926453084185223104, guid: e02657f45da461d479af7c548da79f29,
@@ -7383,7 +7379,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
