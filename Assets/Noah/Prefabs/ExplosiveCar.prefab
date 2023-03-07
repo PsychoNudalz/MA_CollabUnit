@@ -273,26 +273,35 @@ VisualEffect:
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
-      m_Array: []
+      m_Array:
+      - m_Value: 1
+        m_Name: Size 1
+        m_Overridden: 1
     m_Vector2f:
       m_Array:
-      - m_Value: {x: 80, y: 100}
+      - m_Value: {x: 30, y: 50}
         m_Name: SpawnAmount
-        m_Overridden: 1
-      - m_Value: {x: 10, y: 15}
+        m_Overridden: 0
+      - m_Value: {x: 20, y: 50}
         m_Name: SpawnSize
         m_Overridden: 1
-      - m_Value: {x: 0.05, y: 0.4}
+      - m_Value: {x: 0.04, y: 0.5}
         m_Name: Lifetime
+        m_Overridden: 0
+      - m_Value: {x: 50, y: 100}
+        m_Name: Smoke SpawnSize 1
+        m_Overridden: 1
+      - m_Value: {x: 0, y: 1}
+        m_Name: Smoke Lifetime 1
         m_Overridden: 1
     m_Vector3f:
       m_Array:
       - m_Value: {x: -200, y: -200, z: -200}
         m_Name: VelocityMin
-        m_Overridden: 1
+        m_Overridden: 0
       - m_Value: {x: 200, y: 200, z: 200}
         m_Name: VelocityMax
-        m_Overridden: 1
+        m_Overridden: 0
     m_Vector4f:
       m_Array:
       - m_Value: {x: 2, y: 0.21989529, z: 0, w: 1}
@@ -627,7 +636,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   maxForce: 500000
-  maxVelocity: 0
+  maxVelocity: 15
   layerMask:
     serializedVersion: 2
     m_Bits: 1344

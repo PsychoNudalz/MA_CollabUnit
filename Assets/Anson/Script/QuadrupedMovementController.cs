@@ -330,7 +330,7 @@ public class QuadrupedMovementController : MonoBehaviour
         }
 
         bool startToMove = inputDir_Local.magnitude > 0.1f;
-        if (startToMove && isGrounded && quadState == QuadState.Ragdoll)
+        if (startToMove  && quadState == QuadState.Ragdoll&& GroundCheck_Feet())
         {
             ChangeQuadState(QuadState.Upright);
         }
@@ -906,6 +906,20 @@ public class QuadrupedMovementController : MonoBehaviour
         {
             if (footCastPair.Foot.IsIdle)
             {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    bool GroundCheck_Feet()
+    {
+        foreach (FootCastPair footCastPair in feet)
+        {
+            if (footCastPair.Foot.GroundCheck())
+            {
+                isGrounded = true;
                 return true;
             }
         }

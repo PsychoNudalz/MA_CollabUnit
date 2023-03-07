@@ -293,7 +293,7 @@ public class FootMovementSphere : MonoBehaviour
     //         anchorPoint.position;
     // }
 
-    private bool GroundCheck()
+    public bool GroundCheck()
     {
         // Debug.DrawRay(transform.position, Vector3.down * groundRange, Color.magenta, 2f);
 
