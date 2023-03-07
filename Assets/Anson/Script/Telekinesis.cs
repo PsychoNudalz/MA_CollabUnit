@@ -103,7 +103,6 @@ public class Telekinesis : MonoBehaviour
         switch (telekinesisState)
         {
             case TelekinesisState.Pull:
-                UpdateHoverPoint();
                 ShowLines();
 
                 break;

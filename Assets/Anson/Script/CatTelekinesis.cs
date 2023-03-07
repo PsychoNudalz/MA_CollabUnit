@@ -157,7 +157,6 @@ public class CatTelekinesis : MonoBehaviour
                 if (parts.Count > 0)
                 {
                     MovePieces();
-                    OnTele_Pull();
                 }
 
 
