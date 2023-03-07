@@ -7,6 +7,10 @@ using UnityEngine.Events;
 
 public class BreakableObject : BreakablePart
 {
+    [Space(10)]
+    [SerializeField]
+    bool ignoreTele = false;
+
     [Header("Destroy")]
     [SerializeField]
     private float destroyVelocity = 20f;
@@ -24,7 +28,7 @@ public class BreakableObject : BreakablePart
     private List<BreakablePart> launchedParts;
 
 
-    public override bool CanTelekinesis => breakableState is BreakableState.Free or BreakableState.Hold;
+    public override bool CanTelekinesis => !ignoreTele && breakableState is BreakableState.Free or BreakableState.Hold;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +45,7 @@ public class BreakableObject : BreakablePart
                 meshSize = 1;
             }
         }
-        
+
         ChangeState(breakableState);
     }
 
@@ -101,8 +105,8 @@ public class BreakableObject : BreakablePart
                             }
                         }
                     }
-                    return;
 
+                    return;
                 }
 
                 if (destroyOnTelekinesisCollision)
