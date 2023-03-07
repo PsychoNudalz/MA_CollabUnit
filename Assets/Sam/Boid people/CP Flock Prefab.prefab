@@ -47,8 +47,10 @@ MonoBehaviour:
   agentPrefab: {fileID: 8208138402324541291, guid: a39cb22c4bdd52344873ab271c5ccbe4,
     type: 3}
   behavior: {fileID: 11400000, guid: 5092c5f6bbb07bd40a8697e4fcd76d60, type: 2}
-  startingCount: 100
+  setManagerAsParent: 0
+  startingCount: 20
   drivefactor: 100
   maxspeed: 20
   neighborRadius: 5
   avoidenceRadiusMultiplier: 0.5
+  flockUpdateTime: 2

@@ -9,7 +9,7 @@ public class FlockManager : MonoBehaviour
     public static FlockManager current;
 
     [SerializeField]
-    private CPPrandomPertrolScript[] flockMasters;
+    private FlockMasterController[] flockMasters;
 
     [SerializeField]
     private int index = 0;
@@ -40,12 +40,12 @@ public class FlockManager : MonoBehaviour
     [ContextMenu("set list")]
     public void SetFlockMaster()
     {
-        flockMasters = GetComponentsInChildren<CPPrandomPertrolScript>();
+        flockMasters = GetComponentsInChildren<FlockMasterController>();
     }
 
     private void Start()
     {
-        foreach (CPPrandomPertrolScript cpPrandomPertrolScript in flockMasters)
+        foreach (FlockMasterController cpPrandomPertrolScript in flockMasters)
         {
             Vector3 point;
             if (RandomPoint(currentCat.transform.position, posRange,cpPrandomPertrolScript.transform.position.y, out point))

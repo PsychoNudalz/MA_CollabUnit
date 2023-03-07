@@ -26,6 +26,12 @@ public class Flock : MonoBehaviour
     [Range(0f, 1f)]
     public float avoidenceRadiusMultiplier = 0.5f;
 
+    [Space(15f)]
+    [SerializeField]
+    private float flockUpdateTime = 2f;
+
+    private float flockUpdateTime_now = 0;
+    
     float squareMaxSpeed;
     float squareNaighborRadius;
     float squareAvoidenceRadius;
@@ -34,6 +40,7 @@ public class Flock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        flockUpdateTime_now = Random.Range(0, flockUpdateTime);
         squareMaxSpeed = maxspeed * maxspeed;
         squareNaighborRadius = neighborRadius * neighborRadius;
         squareAvoidenceRadius = squareNaighborRadius * avoidenceRadiusMultiplier * avoidenceRadiusMultiplier;
@@ -62,23 +69,28 @@ public class Flock : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        foreach (FlockAgent agent in agents)
+        flockUpdateTime_now -= Time.deltaTime;
+        if (flockUpdateTime_now < 0)
         {
-            List<Transform> context = GetNearbyObjects(agent);
-
-
-            //FOR DEMO ONLY
-            //agent.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, context.Count / 6f);
-
-            Vector3 move = behavior.CalculateMove(agent, context, this);
-            move *= drivefactor;
-            if (move.sqrMagnitude > squareMaxSpeed)
+            flockUpdateTime_now = flockUpdateTime;
+            foreach (FlockAgent agent in agents)
             {
-                move = move.normalized * maxspeed;
+                List<Transform> context = GetNearbyObjects(agent);
+
+
+                //FOR DEMO ONLY
+                //agent.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, context.Count / 6f);
+
+                Vector3 move = behavior.CalculateMove(agent, context, this);
+                move *= drivefactor;
+                if (move.sqrMagnitude > squareMaxSpeed)
+                {
+                    move = move.normalized * maxspeed;
+                }
+                agent.Move(move);
             }
-            agent.Move(move);
         }
     }
 

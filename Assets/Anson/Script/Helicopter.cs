@@ -33,6 +33,10 @@ public class Helicopter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (!target)
+        {
+            target = CatPlayerController.current.transform;
+        }
     }
 
     // Update is called once per frame

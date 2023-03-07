@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class CPPrandomPertrolScript : MonoBehaviour
+public class FlockMasterController : MonoBehaviour
 {
     public NavMeshAgent agent;
     public float range;
