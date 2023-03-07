@@ -1360,6 +1360,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quadrupedMovementController: {fileID: 2948913357585096109}
+  catInputController: {fileID: 0}
+  AP_current: 0
+  AP_range: {x: 0, y: 100}
+  scoreToAPMultiplier: 0.0005
+  teleBombCost: 25
 --- !u!114 &2948913358393695744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1374,6 +1379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
   quadrupedMovementController: {fileID: 2948913357585096109}
+  catPlayerController: {fileID: 0}
   originalCinemachine: {fileID: 1408494242491426252}
   aimCinemachine: {fileID: 0}
   aimSpeed: {x: 10, y: 10}

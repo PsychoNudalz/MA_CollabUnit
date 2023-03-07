@@ -15,6 +15,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private float scoreIncreaseAmount = 10f;
 
+    [Header("AP")]
+    [SerializeField]
+    private Transform APBar;
     
 
     private float score_Target = 0;
@@ -62,9 +65,13 @@ public class UIManager : MonoBehaviour
         current.score_Target = score;
     }
 
-
-
-    // Update is called once per frame
-    
-    
+    public static void SetAPUI(float scale)
+    {
+        if (current.APBar)
+        {
+            Vector3 transformLocalScale = current.APBar.transform.localScale;
+            transformLocalScale.x = scale;
+            current.APBar.transform.localScale = transformLocalScale;
+        }
+    }
 }

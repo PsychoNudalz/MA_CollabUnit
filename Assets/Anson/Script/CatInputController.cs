@@ -14,6 +14,15 @@ public class CatInputController : MonoBehaviour
     [SerializeField]
     private QuadrupedMovementController quadrupedMovementController;
 
+    [SerializeField]
+    private CatPlayerController catPlayerController;
+
+    public CatPlayerController CatPlayerController
+    {
+        get => catPlayerController;
+        set => catPlayerController = value;
+    }
+
     [Header("Look")]
     private bool isAim = false;
 
@@ -72,7 +81,6 @@ public class CatInputController : MonoBehaviour
 
         cameraTransform = camera.transform;
         originalFOV = originalCinemachine.m_Lens.FieldOfView;
-
     }
 
     void Start()
@@ -141,6 +149,7 @@ public class CatInputController : MonoBehaviour
     {
         // print($"{inputValue.isPressed}  {inputValue.Get<float>()}");
 
+
         if (isTeleOn)
         {
             if (inputValue.Get<float>() < 0.5f)
@@ -180,8 +189,11 @@ public class CatInputController : MonoBehaviour
 
     public void OnShoot(InputValue inputValue)
     {
-        launcherScript.transform.forward = GetDirToTarget(launcherScript.transform.position);
-        launcherScript.Fire();
+        if (!catPlayerController || catPlayerController.UseTeleBomb())
+        {
+            launcherScript.transform.forward = GetDirToTarget(launcherScript.transform.position);
+            launcherScript.Fire();
+        }
     }
 
     private void MoveCat()

@@ -107,6 +107,7 @@ public class ScoreManager : MonoBehaviour
     {
         current.score += score;
         current.CheckScore();
+        CatPlayerController.current.AddAP(score);
         UIManager.SetScoreUI(current.score);
     }
 
