@@ -63,9 +63,12 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
-        if (scoreThresholds.Length != kittenManager.kittenObjects.Count)
+        if (kittenManager)
         {
-            Debug.LogWarning($"{scoreThresholds.Length} != {kittenManager.kittenObjects.Count}");
+            if (scoreThresholds.Length != kittenManager.kittenObjects.Count)
+            {
+                Debug.LogWarning($"{scoreThresholds.Length} != {kittenManager.kittenObjects.Count}");
+            }
         }
 
         scoreThresholds_current = scoreThresholds[scoreThreshold_Index];
@@ -83,6 +86,10 @@ public class ScoreManager : MonoBehaviour
 
     void CheckScore()
     {
+        if (!kittenManager)
+        {
+            return;
+        }
         while (scoreThreshold_Index < scoreThresholds.Length && score > scoreThresholds_current)
         {
             kittenManager.SpawnKitten();

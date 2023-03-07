@@ -1555,7 +1555,6 @@ Transform:
   - {fileID: 4831523762645586498}
   - {fileID: 7564675785619289890}
   - {fileID: 8924898192738987573}
-  - {fileID: 3684203663888922119}
   - {fileID: 7860407181664855553}
   - {fileID: 4166826709954443952}
   m_Father: {fileID: 0}
@@ -1806,6 +1805,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4938122491231932274}
+  - {fileID: 3684203663888922119}
   m_Father: {fileID: 4831523760799784080}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2007,7 +2007,7 @@ VisualEffect:
   m_GameObject: {fileID: 5480827524338304313}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: 2275e9d24cc7d4d4fad4c6f6b55a5d48, type: 3}
-  m_InitialEventName: 
+  m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 1
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
@@ -2179,15 +2179,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5892164560790843272}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3531121330362680053}
   - {fileID: 497633219175112133}
-  m_Father: {fileID: 4831523760799784080}
-  m_RootOrder: 3
+  m_Father: {fileID: 4831523762645586498}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7513372928203819814
 MonoBehaviour:
@@ -2312,7 +2312,7 @@ Transform:
   - {fileID: 4181086486392447172}
   - {fileID: 167872338072670258}
   m_Father: {fileID: 4831523760799784080}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4992629203651623868
 MonoBehaviour:
@@ -2821,7 +2821,7 @@ Transform:
   - {fileID: 4344320352894400099}
   - {fileID: 4405009954330932937}
   m_Father: {fileID: 4831523760799784080}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8027084400176243488
 MonoBehaviour:

@@ -59,9 +59,17 @@ public class MainMenuButtons : MonoBehaviour
     public void PlayGame(string sceneName)
     {
         StartCoroutine(LoadScene(sceneName));
+    } public void PlayGame_I(int sceneIndex)
+    {
+        StartCoroutine(LoadScene(sceneIndex));
     }
 
     private IEnumerator LoadScene(string sceneName)
+    {
+        LeanTween.scale(gameObject, new Vector3(0, 0, 0), 0.3f).setEase(LeanTweenType.easeInOutCubic);
+        yield return new WaitForSeconds(delayTimer);
+        SceneManager.LoadScene(sceneName);
+    }    private IEnumerator LoadScene(int sceneName)
     {
         LeanTween.scale(gameObject, new Vector3(0, 0, 0), 0.3f).setEase(LeanTweenType.easeInOutCubic);
         yield return new WaitForSeconds(delayTimer);
