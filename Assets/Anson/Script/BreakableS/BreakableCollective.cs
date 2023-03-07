@@ -286,12 +286,7 @@ public class BreakableCollective : BreakableComponent
     {
         base.AddDetectedPart(current);
     }
-
-    public override void EvaluateBreak(BreakableComponent pd, Vector3 force, BreakableComponent originalPart,
-        List<BreakableComponent> breakHistory)
-    {
-        base.EvaluateBreak(pd, force, originalPart, breakHistory);
-    }
+    
 
     public override void EvaluateFall()
     {

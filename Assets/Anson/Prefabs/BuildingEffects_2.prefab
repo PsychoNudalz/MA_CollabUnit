@@ -54,7 +54,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 0
   MinDistance: 20
-  MaxDistance: 10000
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 7630731856012402786}
-  volume: 0.5
+  volume: 0.4
   volumeVariance: 0.2
   pitch: 0.5
   pitchVariance: 0.2
@@ -204,7 +204,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 0
   MinDistance: 20
-  MaxDistance: 10000
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 6528575829768380780}
-  volume: 0.5
+  volume: 0.4
   volumeVariance: 0.2
   pitch: 0.5
   pitchVariance: 0.2
@@ -354,7 +354,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 0
   MinDistance: 20
-  MaxDistance: 10000
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 8286432127946931800}
-  volume: 0.5
+  volume: 0.4
   volumeVariance: 0.2
   pitch: 0.5
   pitchVariance: 0.2
@@ -640,7 +640,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 0
   MinDistance: 20
-  MaxDistance: 10000
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -728,7 +728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 3317207103111059951}
-  volume: 0.5
+  volume: 0.4
   volumeVariance: 0.2
   pitch: 0.5
   pitchVariance: 0.2
@@ -790,7 +790,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 0
   MinDistance: 20
-  MaxDistance: 10000
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -878,7 +878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 306357900140373055}
-  volume: 0.5
+  volume: 0.4
   volumeVariance: 0.2
   pitch: 0.5
   pitchVariance: 0.2
@@ -940,7 +940,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 0
   MinDistance: 20
-  MaxDistance: 10000
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -1028,13 +1028,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 6759441081797649621}
-  volume: 0.5
+  volume: 0.4
   volumeVariance: 0.2
   pitch: 0.5
   pitchVariance: 0.2
   audioMixer: {fileID: 0}
   sourcePool: []
-  sourcePoolSize: 10
+  sourcePoolSize: 4
   poolIndex: -1
 --- !u!1 &4189696449434309420
 GameObject:
@@ -1090,7 +1090,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 0
   MinDistance: 20
-  MaxDistance: 10000
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -1178,7 +1178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 405039439124991217}
-  volume: 0.5
+  volume: 0.4
   volumeVariance: 0.2
   pitch: 0.5
   pitchVariance: 0.2
@@ -1240,7 +1240,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 0
   MinDistance: 20
-  MaxDistance: 10000
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -1328,7 +1328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 3893632183119018995}
-  volume: 0.5
+  volume: 0.4
   volumeVariance: 0.2
   pitch: 0.5
   pitchVariance: 0.2
@@ -1445,10 +1445,10 @@ VisualEffect:
         m_Overridden: 0
     m_Vector2f:
       m_Array:
-      - m_Value: {x: 4, y: 10}
+      - m_Value: {x: 30, y: 40}
         m_Name: SpawnSize
         m_Overridden: 0
-      - m_Value: {x: 10, y: 15}
+      - m_Value: {x: 1, y: 3}
         m_Name: SpawnAmount
         m_Overridden: 0
     m_Vector3f:
@@ -1563,7 +1563,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 0
   MinDistance: 20
-  MaxDistance: 10000
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -1651,7 +1651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 5225748282230165394}
-  volume: 0.5
+  volume: 0.4
   volumeVariance: 0.2
   pitch: 0.5
   pitchVariance: 0.2
@@ -1714,10 +1714,10 @@ VisualEffect:
         m_Overridden: 0
     m_Vector2f:
       m_Array:
-      - m_Value: {x: 5, y: 10}
+      - m_Value: {x: 100, y: 200}
         m_Name: SpawnSize
         m_Overridden: 0
-      - m_Value: {x: 8, y: 16}
+      - m_Value: {x: 4, y: 8}
         m_Name: SpawnAmount
         m_Overridden: 0
     m_Vector3f:

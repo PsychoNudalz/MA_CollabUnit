@@ -320,46 +320,52 @@ public class BreakablePart : BreakableComponent
     public override void EvaluateBreak(BreakableComponent pd, Vector3 force, BreakableComponent originalPart,
         List<BreakableComponent> breakHistory)
     {
-        if (gameObject || !gameObject.activeSelf)
+        try
         {
-            
-            if (collectiveParent&&collectiveParent.BreakableState == BreakableState.Hold)
+            if (gameObject || !gameObject.activeSelf)
             {
-                collectiveParent.Break(Vector3.zero,Vector3.zero);
+
+                if (collectiveParent && collectiveParent.BreakableState == BreakableState.Hold)
+                {
+                    collectiveParent.Break(Vector3.zero, Vector3.zero);
+                }
+                else
+                {
+                    return;
+                }
+            }
+
+            Vector3 newForce = force * forceTransfer;
+            float LerpForce = .5f;
+            float dotValue = Mathf.Abs(Vector3.Dot(Dir(pd), newForce.normalized));
+            // print(dotValue);
+            newForce = Vector3.Lerp(Dir(pd), newForce.normalized, LerpForce) *
+                       (newForce.magnitude * transferToDot.Evaluate(dotValue));
+            RemovePart(originalPart);
+            if (isDebug)
+            {
+                // Debug.DrawRay(transform.position,newForce,new Color(1-dotValue,dotValue,0),10f);
+            }
+
+            if (newForce.magnitude > breakingForce.y)
+            {
+                // print($"{this} recursive to: {connectedPart.Part}");
+                Break(newForce, force, breakHistory);
+            }
+            else if (newForce.magnitude > breakingForce.x)
+            {
+                // print($"{this} recursive to: {connectedPart.Part}");
+                Break(newForce, force, breakHistory, BreakDelay);
             }
             else
             {
-                return;
+                EvaluateFall();
             }
         }
-
-        Vector3 newForce = force * forceTransfer;
-
-        float LerpForce = .5f;
-        float dotValue = Mathf.Abs(Vector3.Dot(Dir(pd), newForce.normalized));
-        // print(dotValue);
-        newForce = Vector3.Lerp(Dir(pd), newForce.normalized, LerpForce) *
-                   (newForce.magnitude * transferToDot.Evaluate(dotValue));
-        RemovePart(originalPart);
-
-        if (isDebug)
+        catch (Exception e)
         {
-            // Debug.DrawRay(transform.position,newForce,new Color(1-dotValue,dotValue,0),10f);
-        }
-
-        if (newForce.magnitude > breakingForce.y)
-        {
-            // print($"{this} recursive to: {connectedPart.Part}");
-            Break(newForce, force, breakHistory);
-        }
-        else if (newForce.magnitude > breakingForce.x)
-        {
-            // print($"{this} recursive to: {connectedPart.Part}");
-            Break(newForce, force, breakHistory, BreakDelay);
-        }
-        else
-        {
-            EvaluateFall();
+            Debug.LogError(e);
+            Debug.LogError(e.StackTrace);
         }
     }
 
@@ -506,7 +512,7 @@ public class BreakablePart : BreakableComponent
     {
         try
         {
-            if (!gameObject || breakableState == BreakableState.Despawn)
+            if (!this||!gameObject || breakableState == BreakableState.Despawn)
             {
                 return;
             }
@@ -535,6 +541,15 @@ public class BreakablePart : BreakableComponent
             // Console.WriteLine(e);
             return;
         }
+        catch (NullReferenceException n)
+        {
+            Debug.LogError($"Null ref error from {this}");
+
+            Debug.LogError(n);
+            Debug.LogError(n.StackTrace);
+            Destroy(gameObject);
+
+        }
         
     }
 
@@ -542,16 +557,29 @@ public class BreakablePart : BreakableComponent
 
     public virtual void Telekinesis()
     {
+        if (breakableState is BreakableState.Despawn)
+        {
+            return;
+        }
         ChangeState(BreakableState.Telekinesis);
         collider.enabled = false;
     }
 
     public virtual void Launch(Vector3 accel, List<BreakablePart> parts = null)
     {
+        if (breakableState is BreakableState.Despawn)
+        {
+            return;
+        }
         ChangeState(BreakableState.Telekinesis_Shoot);
         collider.enabled = true;
         SelfRb.AddForce(accel, ForceMode.Acceleration);
     }
-    
-    
+
+    private void OnEnable() {
+        if (!selfRB)
+        {
+            selfRB = GetComponent<Rigidbody>();
+        }
+    }
 }

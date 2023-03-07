@@ -133,16 +133,26 @@ public class BreakableObject : BreakablePart
 
     public override void Despawn(bool instant)
     {
-        if (!gameObject || breakableState == BreakableState.Despawn)
+        try
         {
-            return;
-        }
+            if (!gameObject || breakableState == BreakableState.Despawn)
+            {
+                return;
+            }
 
-        selfRB.isKinematic = true;
-        breakableState = BreakableState.Despawn;
-        despawnEvent.Invoke();
-        modelGameObject.SetActive(false);
-        Destroy(gameObject, despawnTime + 1f);
+            selfRB.isKinematic = true;
+            breakableState = BreakableState.Despawn;
+            despawnEvent.Invoke();
+            modelGameObject.SetActive(false);
+            Destroy(gameObject, despawnTime + 1f);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError(e);
+            Debug.LogError(e.StackTrace);
+
+
+        }
     }
 
     public override void Telekinesis()

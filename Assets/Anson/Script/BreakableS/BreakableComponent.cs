@@ -658,20 +658,55 @@ public class BreakableComponent : MonoBehaviour
 
     protected void EvaluateCollisionBreak(Collision collision)
     {
+        if (breakableState is BreakableState.Despawn)
+        {
+            return;
+        }
+
         if (collision.gameObject.TryGetComponent(out BreakablePart bp))
         {
-            if (!bp.Parent.Equals(parent) || bp.BreakableState == BreakableState.Free)
+            try
             {
-                CollisionBreak(bp.selfRB);
+                if (!bp.Parent.Equals(parent) || bp.BreakableState == BreakableState.Free)
+                {
+                    CollisionBreak(bp.selfRB);
+                }
+            }
+            catch (NullReferenceException e)
+            {
+                Debug.LogError($"Null ref error from {this}");
+
+                Debug.LogError(e);
+                Debug.LogError(e.StackTrace);
             }
         }
         else if (collision.gameObject.TryGetComponent(out MovableObject mo))
         {
-            CollisionBreak(mo.Rb);
+            try
+            {
+                CollisionBreak(mo.Rb);
+            }
+            catch (NullReferenceException e)
+            {
+                Debug.LogError($"Null ref error from {this}");
+
+                Debug.LogError(e);
+                Debug.LogError(e.StackTrace);
+            }
         }
         else if (collision.gameObject.TryGetComponent(out Rigidbody rb))
         {
-            CollisionBreak(rb);
+            try
+            {
+                CollisionBreak(rb);
+            }
+            catch (NullReferenceException e)
+            {
+                Debug.LogError($"Null ref error from {this}");
+
+                Debug.LogError(e);
+                Debug.LogError(e.StackTrace);
+            }
         }
     }
 

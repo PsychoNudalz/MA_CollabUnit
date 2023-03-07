@@ -340,8 +340,13 @@ public class Telekinesis : MonoBehaviour
 
     void MovePieces()
     {
-        foreach (BreakablePart breakablePart in parts)
+        foreach (BreakablePart breakablePart in parts.ToArray())
         {
+            if (!breakablePart)
+            {
+                parts.Remove(null);
+                break;
+            }
             Vector3 displacement = transform.position - breakablePart.transform.position;
             if (displacement.magnitude > pullDeadzone)
             {
