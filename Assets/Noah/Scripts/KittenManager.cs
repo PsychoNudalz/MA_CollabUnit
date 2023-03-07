@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class KittenManager : MonoBehaviour
@@ -12,6 +13,12 @@ public class KittenManager : MonoBehaviour
 
     [SerializeField]
     private int kittenScore = 0;
+
+    [SerializeField]
+    private UnityEvent onCollectKitten;
+
+    [SerializeField]
+    private UnityEvent onCollectedAllKitten;
     
     private int i = 0;
 
@@ -51,5 +58,10 @@ public class KittenManager : MonoBehaviour
     {
         kittenScore++;
         Debug.Log("Current kitten score: " + kittenScore);
+        onCollectKitten.Invoke();
+        if (kittenScore >= kittenObjects.Count)
+        {
+            onCollectedAllKitten.Invoke();
+        }
     }
 }
