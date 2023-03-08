@@ -32,7 +32,7 @@ public class TempKittensCollected : MonoBehaviour
         }
     }
 
-    private void ContinueGame()
+    public void ContinueGame()
     {
         pm.canBePaused = false;
         Cursor.lockState = CursorLockMode.None;
