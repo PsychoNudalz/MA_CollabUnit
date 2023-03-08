@@ -23,6 +23,12 @@ public class BreakableStructureEffectsController : MonoBehaviour
     [SerializeField]
     private float soundTime = 0.1f;
 
+    [Header("Rubble")]
+    [SerializeField]
+    private GameObject rubbleGO;
+
+    [SerializeField]
+    private float rubbleSpawnTime = 1.5f;
     private float soundTime_Now = -1;    
     private Queue<Tuple<Vector3, Mesh>> breakPosQueue = new Queue<Tuple<Vector3, Mesh>>();
 
@@ -32,6 +38,11 @@ public class BreakableStructureEffectsController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (rubbleGO)
+        {
+            rubbleGO.transform.localScale = Vector3.zero;
+            rubbleGO.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -83,5 +94,19 @@ public class BreakableStructureEffectsController : MonoBehaviour
         {
             soundTime_Now = soundTime;
         }
+    }
+
+    public void ShowRubble()
+    {
+        if (!rubbleGO)
+        {
+            return;
+        }
+        if (rubbleGO.activeSelf)
+        {
+            return;
+        }
+        rubbleGO.SetActive(true);
+        LeanTween.scale(rubbleGO, Vector3.one, rubbleSpawnTime);
     }
 }

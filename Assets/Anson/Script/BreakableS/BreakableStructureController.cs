@@ -356,6 +356,7 @@ public class BreakableStructureController : MonoBehaviour
             {
                 part.SetOriginalNoBottom(false);
             }
+            effectsController.ShowRubble();
             // noGroundBreakEvent.Invoke();
         }
     }

@@ -50,9 +50,9 @@ public class KittenManager : MonoBehaviour
 
     private IEnumerator KittenText()
     {
-        text.SetActive(true);
+        text?.SetActive(true);
         yield return new WaitForSeconds(4f);
-        text.SetActive(false);
+        text?.SetActive(false);
     }
     public void IncreaseKittenScore()
     {
