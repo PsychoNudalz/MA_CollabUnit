@@ -40,6 +40,7 @@ public class Flock : MonoBehaviour
     float squareNaighborRadius;
     float squareAvoidenceRadius;
     private List<Transform> context;
+
     public float SquareAvoidenceRadius
     {
         get { return squareAvoidenceRadius; }
@@ -67,15 +68,15 @@ public class Flock : MonoBehaviour
             FlockAgent newAgent = Instantiate(
                 agentPrefab,
                 (Random.insideUnitSphere * startingCount * AgentDensity) + transform.position,
-                Quaternion.Euler(Vector3.forward * Random.Range(0f, 360f)),
+                Quaternion.Euler(Vector3.up * Random.Range(0f, 360f)),
                 parent
             );
             newAgent.name = "Agent " + i;
             newAgent.Initialize(this);
             agents.Add(newAgent);
         }
-        context = GetNearbyObjects();
 
+        context = GetNearbyObjects();
     }
 
     // Update is called once per frame
@@ -87,7 +88,6 @@ public class Flock : MonoBehaviour
         //     flockUpdateTime_now = flockUpdateTime;
         //     context = GetNearbyObjects();
         //
-        // }
         foreach (FlockAgent agent in agents)
         {
             context = GetNearbyObjects(agent);
@@ -101,6 +101,8 @@ public class Flock : MonoBehaviour
 
             agent.Move(move);
         }
+
+        // }
     }
 
     List<Transform> GetNearbyObjects(FlockAgent agent)
