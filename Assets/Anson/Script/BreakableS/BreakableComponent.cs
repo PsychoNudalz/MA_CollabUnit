@@ -363,7 +363,7 @@ public class BreakableComponent : MonoBehaviour
     public virtual void Break(Vector3 force, Vector3 originalForce, List<BreakableComponent> breakHistory = null,
         float breakDelay = 0f, bool forceBreak = false, Vector3 originPoint = default)
     {
-        BreakableManager.Add(this);
+        DebrisManager.Add(this);
     }
 
     public virtual void CollisionBreak(Rigidbody rb, Collision collision = null, Vector3 point = default)

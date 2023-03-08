@@ -198,7 +198,7 @@ public class BreakablePart : BreakableComponent
 
         if (breakableState != BreakableState.Despawn)
         {
-            BreakableManager.Add(this);
+            DebrisManager.Add(this);
         }
     }
 

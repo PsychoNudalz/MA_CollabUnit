@@ -24,7 +24,7 @@ public class LevelChange : MonoBehaviour
            
             if (asyncOperation.progress >= 0.9f)
             {
-                if (Keyboard.current.enterKey.wasPressedThisFrame)
+                if (Keyboard.current.f4Key.wasPressedThisFrame)
                 {
                     asyncOperation.allowSceneActivation = true;
                 }
