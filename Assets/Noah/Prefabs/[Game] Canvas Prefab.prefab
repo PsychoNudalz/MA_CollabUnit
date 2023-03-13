@@ -1027,10 +1027,10 @@ RectTransform:
   m_Father: {fileID: 7183912224147062873}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 496, y: -67.21875}
+  m_SizeDelta: {x: 310.66666, y: 104.4375}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1325953603833918815
 CanvasRenderer:
@@ -1159,10 +1159,10 @@ RectTransform:
   m_Father: {fileID: 7183912224147062873}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 816.6666, y: -67.21875}
+  m_SizeDelta: {x: 300.66666, y: 104.4375}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1995474811751554433
 CanvasRenderer:
@@ -1340,10 +1340,10 @@ RectTransform:
   m_Father: {fileID: 7183912224147062873}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 170.33333, y: -67.21875}
+  m_SizeDelta: {x: 310.66666, y: 104.4375}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5403140995743757801
 CanvasRenderer:
@@ -6237,6 +6237,7 @@ RectTransform:
   - {fileID: 7305145274876503713}
   - {fileID: 7250338965868173009}
   - {fileID: 8513861111860926877}
+  - {fileID: 2145256622377257246}
   - {fileID: 5865340656723185973}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -8281,7 +8282,7 @@ MonoBehaviour:
 
     Shift - Swipe
 
-    Telekinesis Projectile - F'
+    F - Tele-Bomb (25% Gauge)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e02657f45da461d479af7c548da79f29, type: 2}
   m_sharedMaterial: {fileID: 4926453084185223104, guid: e02657f45da461d479af7c548da79f29,
@@ -8389,7 +8390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5865340656723185973
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8405,7 +8406,7 @@ RectTransform:
   - {fileID: 3640975369481192337}
   - {fileID: 7183912224147062873}
   m_Father: {fileID: 3465256077271375055}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8606,7 +8607,7 @@ RectTransform:
   m_GameObject: {fileID: 5269300778465683431}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3567713673182724113}
@@ -9121,10 +9122,10 @@ RectTransform:
   m_Father: {fileID: 5865340656723185973}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 506, y: -487.65625}
+  m_SizeDelta: {x: 982, y: 134.4375}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7936898492823224829
 CanvasRenderer:
@@ -9498,10 +9499,10 @@ RectTransform:
   m_Father: {fileID: 5865340656723185973}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 506, y: -210.21875}
+  m_SizeDelta: {x: 982, y: 390.4375}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5769382911241226268
 CanvasRenderer:
@@ -10898,7 +10899,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Right Click (Hold) - Ain
+  m_text: 'Right Click (Hold) - Aim
 
     Spacebar (While ragdolled) - Reset Character'
   m_isRightToLeft: 0
